@@ -1,0 +1,86 @@
+{
+ "ran_at": "2026-10-01T00:13:35",
+ "prereg": "plans/kline-entry-timing-prereg-20261001.md",
+ "params": {
+  "d_win": 10,
+  "cost": 0.003,
+  "bar": 0.005,
+  "theta": 2.0,
+  "unbuyable": "high==low & pct_chg>5",
+  "roll_days": 5
+ },
+ "k_delta_monthly_top6": {
+  "1": -0.00616,
+  "2": -0.00687,
+  "3": -0.00641,
+  "4": -0.00506,
+  "5": -0.00782,
+  "6": -0.00988,
+  "7": -0.01327,
+  "8": -0.0145,
+  "9": -0.01784,
+  "10": -0.0196
+ },
+ "results": {
+  "top6": {
+   "n_stock_months": 688,
+   "prod": {
+    "years": 7.03,
+    "base_ann": 0.3478,
+    "oracle_env_ann": 1.3913,
+    "oracle_delta_ann": 1.0435,
+    "cond_ann": 0.258,
+    "cond_delta_ann": -0.0898,
+    "base_mdd": -0.266,
+    "cond_mdd": -0.2984,
+    "cond_delta_mdd": -0.0324
+   },
+   "full": {
+    "years": 9.51,
+    "base_ann": 0.2041,
+    "oracle_env_ann": 1.1571,
+    "oracle_delta_ann": 0.953,
+    "cond_ann": 0.1464,
+    "cond_delta_ann": -0.0577,
+    "base_mdd": -0.4271,
+    "cond_mdd": -0.4224,
+    "cond_delta_mdd": 0.0047
+   }
+  },
+  "top20": {
+   "n_stock_months": 2291,
+   "prod": {
+    "years": 7.03,
+    "base_ann": 0.1939,
+    "oracle_env_ann": 1.1313,
+    "oracle_delta_ann": 0.9373,
+    "cond_ann": 0.1316,
+    "cond_delta_ann": -0.0623,
+    "base_mdd": -0.2892,
+    "cond_mdd": -0.316,
+    "cond_delta_mdd": -0.0268
+   },
+   "full": {
+    "years": 9.51,
+    "base_ann": 0.1025,
+    "oracle_env_ann": 0.9824,
+    "oracle_delta_ann": 0.8799,
+    "cond_ann": 0.0563,
+    "cond_delta_ann": -0.0462,
+    "base_mdd": -0.4147,
+    "cond_mdd": -0.442,
+    "cond_delta_mdd": -0.0273
+   }
+  }
+ },
+ "e_gate": true,
+ "checks": {
+  "p1": false,
+  "p2": false,
+  "d_prod": -0.0898,
+  "d_full": -0.0577,
+  "bar": 0.005
+ },
+ "verdict": "REJECT（线结清）",
+ "runtime_sec": 24.8
+}

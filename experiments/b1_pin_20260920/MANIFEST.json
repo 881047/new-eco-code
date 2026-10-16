@@ -1,0 +1,61 @@
+{
+  "sha_scheme": "canonical = sha256(json.dumps(json.load(f), indent=2, ensure_ascii=False, default=str))[:16]",
+  "why": "logs/ 被 .gitignore:56 忽略 ⇒ 承载 pin 决策的证据此前不在版本控制内；本目录是被跟踪副本。哈希先解析再重序列化，避免 CRLF/BOM 口径混用（14 号 1488 行 `66bf3049a59b8704` 就是这么对不上的）。",
+  "generator": "scripts/oneoff/track_b1_evidence.py",
+  "artifacts": [
+    {
+      "file": "ab_bench_tr_real_index.json",
+      "bytes": 8165,
+      "canonical_sha16": "c3a99e24aa68b5b8",
+      "bytes_sha16": "3aa098d585455fe3",
+      "source_in_logs": "logs/ab_bench_tr_real_index.json",
+      "cited_in": "14 号三补二十七 §⑤ / 三补二十八 ① / 三补二十九·补「留在台账里的可信部分」",
+      "what": "真尺 A/B（价格指数 vs `H00906.CSI` 全收益）两窗四臂 ⇒ 抬高量 2.22pp/年、C3 决策与回撤逐位不变"
+    },
+    {
+      "file": "b1_pin_evidence_before.json",
+      "bytes": 15367,
+      "canonical_sha16": "306a8a00ecb5b852",
+      "bytes_sha16": "bba96ec9c5fec179",
+      "source_in_logs": "logs/b1_pin_evidence_before.json",
+      "cited_in": "14 号三补二十八 §① 三道门",
+      "what": "换 pin 之前的留证：基准腿指纹 + 金标准未动（P-a/P-b 的改前侧）"
+    },
+    {
+      "file": "b1_pin_evidence_after.json",
+      "bytes": 15457,
+      "canonical_sha16": "4397fa51a466374a",
+      "bytes_sha16": "22be1bf710874473",
+      "source_in_logs": "logs/b1_pin_evidence_after.json",
+      "cited_in": "14 号三补二十八 §① 三道门",
+      "what": "换 pin 之后的留证：与改前逐位比对（P-a/P-b 的改后侧）"
+    },
+    {
+      "file": "ab_bench_total_return.json",
+      "bytes": 9539,
+      "canonical_sha16": "7a8bbfd613e77e8c",
+      "bytes_sha16": "8701ef5f58eb8a86",
+      "source_in_logs": "logs/ab_bench_total_return.json",
+      "cited_in": "14 号三补二十七 §① / 02 号 §二 基准尺注",
+      "what": "合成全收益尺的四臂 A/B（抬高量估成 2.37pp/年，后被实测指数取代）"
+    },
+    {
+      "file": "audit_bench_total_return_gap.json",
+      "bytes": 2314,
+      "canonical_sha16": "52dfaea378ba4f2f",
+      "bytes_sha16": "bd3f233777f9cc2f",
+      "source_in_logs": "logs/audit_bench_total_return_gap.json",
+      "cited_in": "14 号三补二十五 §② B1",
+      "what": "B1 一阶估计：中证800 成分股 dv_ttm 算术 2.24pp/年、复利上界 2.27pp/年"
+    },
+    {
+      "file": "audit_alpha_panel_adj.json",
+      "bytes": 8998,
+      "canonical_sha16": "73e018983a61765c",
+      "bytes_sha16": "9c75989f638dd7af",
+      "source_in_logs": "logs/audit_alpha_panel_adj.json",
+      "cited_in": "14 号三补二十五 §② B2 / 三补三十 §③ Q1 行",
+      "what": "B2 静态量级：Alpha158 里 133/158 条踩价格水平、代表 14 条除权窗秩相关 ≈0.85"
+    }
+  ]
+}

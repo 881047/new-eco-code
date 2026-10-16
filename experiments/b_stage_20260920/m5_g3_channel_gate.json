@@ -1,0 +1,125 @@
+{
+  "criteria": "本文件 docstring + plans/ledger-settlement-criteria-20260920.md §M5",
+  "source_artifact": "experiments/b_stage_20260920/_mech.json（批次 4 机制归因臂，未重跑）",
+  "thresholds": {
+    "i_channel_ratio<=": 1e-06,
+    "ii_value_rel_mean<=": 0.001,
+    "iii_min_spearman>=": 0.999
+  },
+  "per_factor": [
+    {
+      "name": "HIGH0",
+      "channel_ratio": 2.2368076014125813e-07,
+      "i_channel_ok": true,
+      "value_rel_mean": 0.0001779060548869893,
+      "ii_value_ok": true,
+      "min_spearman": 0.9999385297478592,
+      "iii_rank_ok": true,
+      "pass": true,
+      "negative_control_ratio_if_second_channel_existed": 0.0012285991607211928,
+      "boundary_gap_min_rms": 0.0,
+      "months_with_headset_diff": 3,
+      "n_dates": 71
+    },
+    {
+      "name": "KLEN",
+      "channel_ratio": 2.7729076268688075e-07,
+      "i_channel_ok": true,
+      "value_rel_mean": 0.00021694762108381838,
+      "ii_value_ok": true,
+      "min_spearman": 0.999910839396973,
+      "iii_rank_ok": true,
+      "pass": true,
+      "negative_control_ratio_if_second_channel_existed": 0.006974569495825696,
+      "boundary_gap_min_rms": 3.6432433262234554e-05,
+      "months_with_headset_diff": 5,
+      "n_dates": 71
+    },
+    {
+      "name": "KMID",
+      "channel_ratio": 4.980004700273979e-07,
+      "i_channel_ok": true,
+      "value_rel_mean": 0.00021038754493929446,
+      "ii_value_ok": true,
+      "min_spearman": 0.9999524770990594,
+      "iii_rank_ok": true,
+      "pass": true,
+      "negative_control_ratio_if_second_channel_existed": 0.023036481349761672,
+      "boundary_gap_min_rms": 0.0,
+      "months_with_headset_diff": 7,
+      "n_dates": 71
+    },
+    {
+      "name": "KSFT",
+      "channel_ratio": 4.398632770188177e-07,
+      "i_channel_ok": true,
+      "value_rel_mean": 0.00020142488938290626,
+      "ii_value_ok": true,
+      "min_spearman": 0.999953168793568,
+      "iii_rank_ok": true,
+      "pass": true,
+      "negative_control_ratio_if_second_channel_existed": 0.07589458560479556,
+      "boundary_gap_min_rms": 3.272983803981333e-06,
+      "months_with_headset_diff": 4,
+      "n_dates": 71
+    },
+    {
+      "name": "LOW0",
+      "channel_ratio": 4.2138524708310236e-07,
+      "i_channel_ok": true,
+      "value_rel_mean": 0.00021986481442581862,
+      "ii_value_ok": true,
+      "min_spearman": 0.9997152046421235,
+      "iii_rank_ok": true,
+      "pass": true,
+      "negative_control_ratio_if_second_channel_existed": 0.0,
+      "boundary_gap_min_rms": 0.0,
+      "months_with_headset_diff": 16,
+      "n_dates": 71
+    },
+    {
+      "name": "OPEN0",
+      "channel_ratio": 9.391544403436267e-07,
+      "i_channel_ok": true,
+      "value_rel_mean": 0.00020556579693220556,
+      "ii_value_ok": true,
+      "min_spearman": 0.9999575887206079,
+      "iii_rank_ok": true,
+      "pass": true,
+      "negative_control_ratio_if_second_channel_existed": 0.023796646320692092,
+      "boundary_gap_min_rms": 0.0,
+      "months_with_headset_diff": 6,
+      "n_dates": 71
+    },
+    {
+      "name": "VWAP0",
+      "channel_ratio": 4.7545874645522484e-07,
+      "i_channel_ok": true,
+      "value_rel_mean": 0.0002477155940141529,
+      "ii_value_ok": true,
+      "min_spearman": 0.9999684321304109,
+      "iii_rank_ok": true,
+      "pass": true,
+      "negative_control_ratio_if_second_channel_existed": 0.10014365308220156,
+      "boundary_gap_min_rms": 2.2603671823162585e-05,
+      "months_with_headset_diff": 7,
+      "n_dates": 71
+    }
+  ],
+  "gate_G3_1_prime": "PASS",
+  "negative_control": {
+    "design": "用两臂**读数差**冒充恒等式残差喂同一条 (i) ⇒ 门必须判红",
+    "factors_that_turn_it_red": [
+      "HIGH0",
+      "KLEN",
+      "KMID",
+      "KSFT",
+      "OPEN0",
+      "VWAP0"
+    ],
+    "pass_gate_is_falsifiable": true
+  },
+  "separation_orders_of_magnitude": 210625.3,
+  "verdict": "G3-①′ 达 ⇒ 批次 4 的 G1/G2 解除'不可引用'：G1 两臂 PASS 均 0、G2 翻动 16/158 条可用（幅度 6e-5~5.8e-4，全在零次齐次族的 float32 尾数区间）",
+  "honesty_note": "阈值在看到 _mech.json 读数之后设定 ⇒ 重判不是独立确认；效力仅在'门改成测它本来想测的量' + 阴性对照可红 + 恒等式残差与读数差差 3~5 个数量级"
+}

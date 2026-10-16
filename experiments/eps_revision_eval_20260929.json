@@ -1,0 +1,100 @@
+{
+ "ran_at": "2026-09-29T08:21:59",
+ "prereg": "plans/eps-revision-prereg-20260929.md",
+ "n_candidates": 3,
+ "semantics_note": "fy1=FY2026/fy2=FY2027（采集时点重映射，预注册 §0 四证据）",
+ "rows": [
+  {
+   "factor": "rev_fy1_1m",
+   "sparse_ratio": 0.2244,
+   "anchors_ACTIVE": 28,
+   "anchors_DEAD": 0,
+   "ACTIVE_head": -0.0065,
+   "ACTIVE_head_t": -2.01,
+   "DEAD_head": null,
+   "p_adj": null,
+   "cost_per_month": 0.001494666666666667,
+   "shadow_rho_max": 0.0564,
+   "shadow_with": "netprofit_yoy",
+   "gate6_PASS": false,
+   "s1_s5": {
+    "s1": false,
+    "s2": false,
+    "s3": false,
+    "s4_decor": true,
+    "s5": null,
+    "PASS_single": false
+   },
+   "downgraded": {
+    "aS1_head": true,
+    "aS2_t": true,
+    "s4_decor": true,
+    "fire_AB": true
+   }
+  },
+  {
+   "factor": "rev_fy1_3m",
+   "sparse_ratio": 0.4578,
+   "anchors_ACTIVE": 25,
+   "anchors_DEAD": 0,
+   "ACTIVE_head": 0.0048,
+   "ACTIVE_head_t": 1.41,
+   "DEAD_head": null,
+   "p_adj": null,
+   "cost_per_month": 0.0010048888888888891,
+   "shadow_rho_max": 0.1374,
+   "shadow_with": "netprofit_yoy",
+   "gate6_PASS": false,
+   "s1_s5": {
+    "s1": false,
+    "s2": false,
+    "s3": false,
+    "s4_decor": true,
+    "s5": null,
+    "PASS_single": false
+   },
+   "downgraded": {
+    "aS1_head": true,
+    "aS2_t": false,
+    "s4_decor": true,
+    "fire_AB": false
+   }
+  },
+  {
+   "factor": "rev_fy2_3m",
+   "sparse_ratio": 0.4513,
+   "anchors_ACTIVE": 13,
+   "anchors_DEAD": 0,
+   "ACTIVE_head": 0.0128,
+   "ACTIVE_head_t": 1.68,
+   "DEAD_head": null,
+   "p_adj": null,
+   "cost_per_month": 0.0010431372549019608,
+   "shadow_rho_max": 0.1311,
+   "shadow_with": "low_52w",
+   "gate6_PASS": false,
+   "s1_s5": {
+    "s1": false,
+    "s2": false,
+    "s3": false,
+    "s4_decor": true,
+    "s5": null,
+    "PASS_single": false
+   },
+   "downgraded": {
+    "aS1_head": true,
+    "aS2_t": false,
+    "s4_decor": true,
+    "fire_AB": false
+   }
+  }
+ ],
+ "verdict": {
+  "n_fire": 1,
+  "triggered": [
+   "rev_fy1_1m"
+  ],
+  "note": "触发 ⇒ 剔除器 A/B（chase2 框架，单窗结构性条款：判决上限=候选登记，不进生产）"
+ },
+ "runtime_sec": 76.0
+}

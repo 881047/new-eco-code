@@ -1,0 +1,102 @@
+{
+  "ran_at": "2026-09-27T23:26:58",
+  "prereg": "plans/text-factor-llm-labeling-prereg-20260927.md",
+  "runs": {
+    "tfab_d1_sa_prod": {
+      "sys_ann_return": 0.2434,
+      "sys_max_drawdown": -0.2112,
+      "avg_turnover": 0.921
+    },
+    "tfab_d1_sa_full": {
+      "sys_ann_return": 0.1356,
+      "sys_max_drawdown": -0.4188,
+      "avg_turnover": 0.9203
+    },
+    "tfab_d1_sc_prod": {
+      "sys_ann_return": 0.2099,
+      "sys_max_drawdown": -0.149,
+      "avg_turnover": 0.9298
+    },
+    "tfab_d1_sc_full": {
+      "sys_ann_return": 0.146,
+      "sys_max_drawdown": -0.2985,
+      "avg_turnover": 0.9279
+    },
+    "tfab_d2_sa_prod": {
+      "sys_ann_return": 0.1828,
+      "sys_max_drawdown": -0.2312,
+      "avg_turnover": 0.9216
+    },
+    "tfab_d2_sa_full": {
+      "sys_ann_return": 0.0944,
+      "sys_max_drawdown": -0.4339,
+      "avg_turnover": 0.9208
+    },
+    "tfab_d2_sc_prod": {
+      "sys_ann_return": 0.2346,
+      "sys_max_drawdown": -0.2404,
+      "avg_turnover": 0.919
+    },
+    "tfab_d2_sc_full": {
+      "sys_ann_return": 0.1633,
+      "sys_max_drawdown": -0.2985,
+      "avg_turnover": 0.92
+    },
+    "tfab_base_sc_prod": {
+      "sys_ann_return": 0.1267,
+      "sys_max_drawdown": -0.1911,
+      "avg_turnover": 0.9002
+    },
+    "tfab_base_sc_full": {
+      "sys_ann_return": 0.0873,
+      "sys_max_drawdown": -0.2985,
+      "avg_turnover": 0.9061
+    },
+    "tfab_p2_sc_prod": {
+      "sys_ann_return": 0.1692,
+      "sys_max_drawdown": -0.1634,
+      "avg_turnover": 0.9187
+    },
+    "tfab_p2_sc_full": {
+      "sys_ann_return": 0.1174,
+      "sys_max_drawdown": -0.2985,
+      "avg_turnover": 0.9197
+    },
+    "nfab2_ctrl_sa_prod": {
+      "sys_ann_return": 0.1704,
+      "sys_max_drawdown": -0.2266,
+      "avg_turnover": 0.8946
+    },
+    "nfab2_ctrl_sa_full": {
+      "sys_ann_return": 0.086,
+      "sys_max_drawdown": -0.4188,
+      "avg_turnover": 0.9009
+    }
+  },
+  "deltas": {
+    "d1_vs_31sa": {
+      "sys_ann_prod": 0.073,
+      "sys_mdd_prod": 0.0154,
+      "sys_ann_full": 0.0496,
+      "sys_mdd_full": 0.0,
+      "turnover": 0.0264
+    },
+    "d2_vs_31sa": {
+      "sys_ann_prod": 0.0124,
+      "sys_mdd_prod": -0.0046,
+      "sys_ann_full": 0.0084,
+      "sys_mdd_full": -0.0151,
+      "turnover": 0.027
+    },
+    "p2_vs_31sc": {
+      "sys_ann_prod": 0.0425,
+      "sys_mdd_prod": 0.0277,
+      "sys_ann_full": 0.0301,
+      "sys_mdd_full": 0.0,
+      "turnover": 0.0185
+    }
+  },
+  "dose_ok": true,
+  "sc_third_seed_ok": true,
+  "ADOPT_PACKAGE": true
+}

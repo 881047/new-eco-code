@@ -1,0 +1,43 @@
+{
+ "asof": "2026-10-02T16:47:47",
+ "criteria_file": "plans/gold-grid-prereg-20261002.md",
+ "benchmark": {
+  "bh_ann": 0.1546,
+  "bh_mdd": -0.3052,
+  "cash_ann": 0.02
+ },
+ "arms": {
+  "grid_free5": {
+   "final_nav": 20214.82,
+   "n_trades": 8,
+   "open_layers": 0,
+   "win_rate_per_trade": 0.5,
+   "ann": 0.0952,
+   "mdd": -0.2465,
+   "monthly_win_rate": 0.5317
+  },
+  "grid_std_min5": {
+   "final_nav": 20175.02,
+   "n_trades": 8,
+   "open_layers": 0,
+   "win_rate_per_trade": 0.5,
+   "ann": 0.0949,
+   "mdd": -0.2468,
+   "monthly_win_rate": 0.5317
+  }
+ },
+ "criteria": {
+  "D1_net_vs_cash_ge2pp": true,
+  "D2_winrates": false,
+  "D3_mdd_bound": false,
+  "verdict": "NO-GO"
+ },
+ "segments": {
+  "2019_2023": {
+   "bh_ann": 0.104
+  },
+  "2024_2026": {
+   "bh_ann": 0.2514
+  }
+ }
+}

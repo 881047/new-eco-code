@@ -1,0 +1,223 @@
+{
+ "ran_at": "2026-10-03T17:19:32",
+ "kind": "volscale quarterly recheck (判据逐字同源 plans/volscale-overlay-prereg-20260927.md §二)",
+ "pin_runs": {
+  "prod": "20260928_exe",
+  "full": "20260928_exe_full"
+ },
+ "runs": {
+  "prod": {
+   "run_date": "20260928_exe",
+   "base": {
+    "n_days": 1717,
+    "ann_return": 0.327,
+    "mdd": -0.3993,
+    "vol_ann": 0.2813,
+    "sharpe": 1.091
+   },
+   "overlay": {
+    "n_days": 1717,
+    "ann_return": 0.3113,
+    "mdd": -0.3338,
+    "vol_ann": 0.254,
+    "sharpe": 1.147
+   },
+   "mdd_improvement": 0.0655,
+   "ann_gap": -0.0157,
+   "w_coverage": 0.458,
+   "avg_w_when_active": 0.806,
+   "n_periods": 72,
+   "window_days": 1717,
+   "w_series_sample": [
+    {
+     "period": "2025-09",
+     "w": 1.0,
+     "sigma_est": 0.1871,
+     "sigma_base": 0.3649
+    },
+    {
+     "period": "2025-10",
+     "w": 1.0,
+     "sigma_est": 0.1894,
+     "sigma_base": 0.3503
+    },
+    {
+     "period": "2025-11",
+     "w": 1.0,
+     "sigma_est": 0.1804,
+     "sigma_base": 0.335
+    },
+    {
+     "period": "2025-12",
+     "w": 1.0,
+     "sigma_est": 0.1848,
+     "sigma_base": 0.3101
+    },
+    {
+     "period": "2026-01",
+     "w": 1.0,
+     "sigma_est": 0.1713,
+     "sigma_base": 0.2801
+    },
+    {
+     "period": "2026-02",
+     "w": 1.0,
+     "sigma_est": 0.2528,
+     "sigma_base": 0.2611
+    },
+    {
+     "period": "2026-03",
+     "w": 1.0,
+     "sigma_est": 0.241,
+     "sigma_base": 0.2544
+    },
+    {
+     "period": "2026-04",
+     "w": 0.843,
+     "sigma_est": 0.2942,
+     "sigma_base": 0.2481
+    },
+    {
+     "period": "2026-05",
+     "w": 0.984,
+     "sigma_est": 0.2474,
+     "sigma_base": 0.2434
+    },
+    {
+     "period": "2026-06",
+     "w": 1.0,
+     "sigma_est": 0.2162,
+     "sigma_base": 0.2351
+    },
+    {
+     "period": "2026-07",
+     "w": 1.0,
+     "sigma_est": 0.0918,
+     "sigma_base": 0.2214
+    },
+    {
+     "period": "2026-08",
+     "w": 0.883,
+     "sigma_est": 0.2368,
+     "sigma_base": 0.2091
+    }
+   ]
+  },
+  "full": {
+   "run_date": "20260928_exe_full",
+   "base": {
+    "n_days": 2327,
+    "ann_return": 0.1949,
+    "mdd": -0.4251,
+    "vol_ann": 0.2645,
+    "sharpe": 0.661
+   },
+   "overlay": {
+    "n_days": 2327,
+    "ann_return": 0.1901,
+    "mdd": -0.3958,
+    "vol_ann": 0.23,
+    "sharpe": 0.74
+   },
+   "mdd_improvement": 0.0293,
+   "ann_gap": -0.0048,
+   "w_coverage": 0.52,
+   "avg_w_when_active": 0.792,
+   "n_periods": 102,
+   "window_days": 2327,
+   "w_series_sample": [
+    {
+     "period": "2025-09",
+     "w": 1.0,
+     "sigma_est": 0.1871,
+     "sigma_base": 0.3649
+    },
+    {
+     "period": "2025-10",
+     "w": 1.0,
+     "sigma_est": 0.1894,
+     "sigma_base": 0.3503
+    },
+    {
+     "period": "2025-11",
+     "w": 1.0,
+     "sigma_est": 0.1804,
+     "sigma_base": 0.335
+    },
+    {
+     "period": "2025-12",
+     "w": 1.0,
+     "sigma_est": 0.1848,
+     "sigma_base": 0.3101
+    },
+    {
+     "period": "2026-01",
+     "w": 1.0,
+     "sigma_est": 0.1713,
+     "sigma_base": 0.2801
+    },
+    {
+     "period": "2026-02",
+     "w": 1.0,
+     "sigma_est": 0.2528,
+     "sigma_base": 0.2611
+    },
+    {
+     "period": "2026-03",
+     "w": 1.0,
+     "sigma_est": 0.241,
+     "sigma_base": 0.2544
+    },
+    {
+     "period": "2026-04",
+     "w": 0.843,
+     "sigma_est": 0.2942,
+     "sigma_base": 0.2481
+    },
+    {
+     "period": "2026-05",
+     "w": 0.984,
+     "sigma_est": 0.2474,
+     "sigma_base": 0.2434
+    },
+    {
+     "period": "2026-06",
+     "w": 1.0,
+     "sigma_est": 0.2162,
+     "sigma_base": 0.2351
+    },
+    {
+     "period": "2026-07",
+     "w": 1.0,
+     "sigma_est": 0.0918,
+     "sigma_base": 0.2214
+    },
+    {
+     "period": "2026-08",
+     "w": 0.883,
+     "sigma_est": 0.2368,
+     "sigma_base": 0.2091
+    }
+   ]
+  }
+ },
+ "checks": {
+  "prod": {
+   "p1_mdd_improve_ge_5pp": true,
+   "p2_ann_non_inferior": false,
+   "p3_coverage_ok": true
+  },
+  "full": {
+   "p1_mdd_improve_ge_5pp": false,
+   "p2_ann_non_inferior": true,
+   "p3_coverage_ok": true
+  }
+ },
+ "checks_summary": {
+  "p1": true,
+  "p2": false,
+  "p3": true
+ },
+ "verdict": "REJECT（线结清）",
+ "runtime_sec": 0.1
+}

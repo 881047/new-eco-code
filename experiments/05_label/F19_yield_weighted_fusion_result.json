@@ -1,0 +1,392 @@
+{
+ "script_sha": "6def9d587c6d92f0",
+ "w5_scores": "F4_scores_seedA.npz",
+ "trail": 104,
+ "refit": 26,
+ "cap": 0.5,
+ "common_window": 491,
+ "weight_log": [
+  {
+   "at_anchor": "20140103",
+   "weights": {
+    "W5": 0.125,
+    "M": 0.125,
+    "margin_net_share": 0.125,
+    "flow": 0.125,
+    "h10": 0.125,
+    "head_vt": 0.125,
+    "snap": 0.125,
+    "pit": 0.125
+   }
+  },
+  {
+   "at_anchor": "20140704",
+   "weights": {
+    "W5": 0.125,
+    "M": 0.125,
+    "margin_net_share": 0.125,
+    "flow": 0.125,
+    "h10": 0.125,
+    "head_vt": 0.125,
+    "snap": 0.125,
+    "pit": 0.125
+   }
+  },
+  {
+   "at_anchor": "20141231",
+   "weights": {
+    "W5": 0.125,
+    "M": 0.125,
+    "margin_net_share": 0.125,
+    "flow": 0.125,
+    "h10": 0.125,
+    "head_vt": 0.125,
+    "snap": 0.125,
+    "pit": 0.125
+   }
+  },
+  {
+   "at_anchor": "20150703",
+   "weights": {
+    "W5": 1.0,
+    "M": 0.0,
+    "margin_net_share": 0.0,
+    "flow": 0.0,
+    "h10": 0.0,
+    "head_vt": 0.0,
+    "snap": 0.0,
+    "pit": 0.0
+   }
+  },
+  {
+   "at_anchor": "20151231",
+   "weights": {
+    "W5": 1.0,
+    "M": 0.0,
+    "margin_net_share": 0.0,
+    "flow": 0.0,
+    "h10": 0.0,
+    "head_vt": 0.0,
+    "snap": 0.0,
+    "pit": 0.0
+   }
+  },
+  {
+   "at_anchor": "20160708",
+   "weights": {
+    "W5": 1.0,
+    "M": 0.0,
+    "margin_net_share": 0.0,
+    "flow": 0.0,
+    "h10": 0.0,
+    "head_vt": 0.0,
+    "snap": 0.0,
+    "pit": 0.0
+   }
+  },
+  {
+   "at_anchor": "20170113",
+   "weights": {
+    "W5": 1.0,
+    "M": 0.0,
+    "margin_net_share": 0.0,
+    "flow": 0.0,
+    "h10": 0.0,
+    "head_vt": 0.0,
+    "snap": 0.0,
+    "pit": 0.0
+   }
+  },
+  {
+   "at_anchor": "20170714",
+   "weights": {
+    "W5": 0.5874,
+    "M": 0.0028,
+    "margin_net_share": 0.0,
+    "flow": 0.0041,
+    "h10": 0.2266,
+    "head_vt": 0.1792,
+    "snap": 0.0,
+    "pit": 0.0
+   }
+  },
+  {
+   "at_anchor": "20180119",
+   "weights": {
+    "W5": 0.5128,
+    "M": 0.0483,
+    "margin_net_share": 0.018,
+    "flow": 0.0162,
+    "h10": 0.1745,
+    "head_vt": 0.2149,
+    "snap": 0.0085,
+    "pit": 0.007
+   }
+  },
+  {
+   "at_anchor": "20180720",
+   "weights": {
+    "W5": 0.4052,
+    "M": 0.0669,
+    "margin_net_share": 0.0214,
+    "flow": 0.0365,
+    "h10": 0.1851,
+    "head_vt": 0.1815,
+    "snap": 0.0483,
+    "pit": 0.0552
+   }
+  },
+  {
+   "at_anchor": "20190125",
+   "weights": {
+    "W5": 0.2838,
+    "M": 0.1071,
+    "margin_net_share": 0.0092,
+    "flow": 0.0452,
+    "h10": 0.1425,
+    "head_vt": 0.192,
+    "snap": 0.1085,
+    "pit": 0.1117
+   }
+  },
+  {
+   "at_anchor": "20190802",
+   "weights": {
+    "W5": 0.2739,
+    "M": 0.1129,
+    "margin_net_share": 0.0098,
+    "flow": 0.0474,
+    "h10": 0.1251,
+    "head_vt": 0.1712,
+    "snap": 0.1272,
+    "pit": 0.1324
+   }
+  },
+  {
+   "at_anchor": "20200207",
+   "weights": {
+    "W5": 0.2793,
+    "M": 0.1204,
+    "margin_net_share": 0.0085,
+    "flow": 0.058,
+    "h10": 0.1008,
+    "head_vt": 0.1492,
+    "snap": 0.1389,
+    "pit": 0.1449
+   }
+  },
+  {
+   "at_anchor": "20200807",
+   "weights": {
+    "W5": 0.2772,
+    "M": 0.1314,
+    "margin_net_share": 0.0023,
+    "flow": 0.0551,
+    "h10": 0.0784,
+    "head_vt": 0.1515,
+    "snap": 0.1509,
+    "pit": 0.1531
+   }
+  },
+  {
+   "at_anchor": "20210205",
+   "weights": {
+    "W5": 0.2758,
+    "M": 0.1379,
+    "margin_net_share": 0.0046,
+    "flow": 0.0563,
+    "h10": 0.0577,
+    "head_vt": 0.1607,
+    "snap": 0.1496,
+    "pit": 0.1575
+   }
+  },
+  {
+   "at_anchor": "20210806",
+   "weights": {
+    "W5": 0.2694,
+    "M": 0.1429,
+    "margin_net_share": 0.0,
+    "flow": 0.0525,
+    "h10": 0.0714,
+    "head_vt": 0.1769,
+    "snap": 0.1417,
+    "pit": 0.1451
+   }
+  },
+  {
+   "at_anchor": "20220211",
+   "weights": {
+    "W5": 0.2388,
+    "M": 0.1392,
+    "margin_net_share": 0.0,
+    "flow": 0.0417,
+    "h10": 0.0961,
+    "head_vt": 0.2244,
+    "snap": 0.1306,
+    "pit": 0.1291
+   }
+  },
+  {
+   "at_anchor": "20220812",
+   "weights": {
+    "W5": 0.2206,
+    "M": 0.1334,
+    "margin_net_share": 0.0,
+    "flow": 0.0457,
+    "h10": 0.1165,
+    "head_vt": 0.2409,
+    "snap": 0.1212,
+    "pit": 0.1217
+   }
+  },
+  {
+   "at_anchor": "20230224",
+   "weights": {
+    "W5": 0.2395,
+    "M": 0.1365,
+    "margin_net_share": 0.0,
+    "flow": 0.0557,
+    "h10": 0.1125,
+    "head_vt": 0.2211,
+    "snap": 0.1186,
+    "pit": 0.1161
+   }
+  },
+  {
+   "at_anchor": "20230825",
+   "weights": {
+    "W5": 0.2184,
+    "M": 0.1423,
+    "margin_net_share": 0.0,
+    "flow": 0.063,
+    "h10": 0.0953,
+    "head_vt": 0.2223,
+    "snap": 0.1293,
+    "pit": 0.1294
+   }
+  },
+  {
+   "at_anchor": "20240308",
+   "weights": {
+    "W5": 0.2207,
+    "M": 0.1409,
+    "margin_net_share": 0.0,
+    "flow": 0.0754,
+    "h10": 0.1025,
+    "head_vt": 0.1863,
+    "snap": 0.1353,
+    "pit": 0.139
+   }
+  },
+  {
+   "at_anchor": "20240906",
+   "weights": {
+    "W5": 0.2208,
+    "M": 0.1465,
+    "margin_net_share": 0.0,
+    "flow": 0.0778,
+    "h10": 0.0992,
+    "head_vt": 0.1714,
+    "snap": 0.1405,
+    "pit": 0.1438
+   }
+  },
+  {
+   "at_anchor": "20250307",
+   "weights": {
+    "W5": 0.2189,
+    "M": 0.14,
+    "margin_net_share": 0.0,
+    "flow": 0.0811,
+    "h10": 0.1089,
+    "head_vt": 0.163,
+    "snap": 0.1446,
+    "pit": 0.1435
+   }
+  },
+  {
+   "at_anchor": "20250905",
+   "weights": {
+    "W5": 0.2332,
+    "M": 0.1386,
+    "margin_net_share": 0.0,
+    "flow": 0.083,
+    "h10": 0.1008,
+    "head_vt": 0.1501,
+    "snap": 0.1485,
+    "pit": 0.1458
+   }
+  },
+  {
+   "at_anchor": "20260313",
+   "weights": {
+    "W5": 0.2361,
+    "M": 0.1414,
+    "margin_net_share": 0.0,
+    "flow": 0.0751,
+    "h10": 0.088,
+    "head_vt": 0.1601,
+    "snap": 0.1513,
+    "pit": 0.1481
+   }
+  },
+  {
+   "at_anchor": "20260911",
+   "weights": {
+    "W5": 0.2133,
+    "M": 0.1442,
+    "margin_net_share": 0.0,
+    "flow": 0.0709,
+    "h10": 0.0839,
+    "head_vt": 0.1765,
+    "snap": 0.1583,
+    "pit": 0.153
+   }
+  }
+ ],
+ "arms": {
+  "A_现役W5+M": {
+   "n": 491,
+   "excess_pp": 12.02,
+   "ann": 0.1745,
+   "mdd": -0.3144,
+   "turnover": 0.092,
+   "ic": 0.0706
+  },
+  "B_全die等权": {
+   "n": 491,
+   "excess_pp": 6.31,
+   "ann": 0.1175,
+   "mdd": -0.3181,
+   "turnover": 0.026,
+   "ic": 0.0476
+  },
+  "C_良率加权": {
+   "n": 491,
+   "excess_pp": 8.33,
+   "ann": 0.1376,
+   "mdd": -0.3523,
+   "turnover": 0.047,
+   "ic": 0.0716
+  },
+  "D_良率加权+Top2": {
+   "n": 491,
+   "excess_pp": 13.78,
+   "ann": 0.1922,
+   "mdd": -0.3021,
+   "turnover": 0.104,
+   "ic": 0.0881
+  }
+ },
+ "verdict": {
+  "baseline_pp": 12.02,
+  "yield_pp": 8.33,
+  "equal_pp": 6.31,
+  "beat_baseline": false,
+  "mdd_ok": false,
+  "beat_equal": true,
+  "adopt": false
+ },
+ "secs": 385.8
+}

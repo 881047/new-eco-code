@@ -1,0 +1,117 @@
+{
+ "script": "F75_intraday_minute_kgd",
+ "n_factors": 3,
+ "criteria": {
+  "min_head_pp": 0.119,
+  "min_t": 2.0,
+  "max_abs_rho": 0.95,
+  "bonferroni_denom": 174,
+  "dead": [
+   "2020-09-01",
+   "2023-12-31"
+  ],
+  "active": [
+   "2024-01-01",
+   "2026-08-31"
+  ],
+  "horizon": 5,
+  "sanity": {
+   "x2": 0.21,
+   "x3": 0.15
+  },
+  "data": "baostock 60min 2020-01-02 起（北交所不支持，缺口已登记）"
+ },
+ "factors": {
+  "id60_late_vol_share": {
+   "dead": {
+    "n": 170,
+    "head_pp": 0.0001,
+    "t_hac": 0.0,
+    "ic": 0.0418
+   },
+   "active": {
+    "n": 137,
+    "head_pp": -0.0399,
+    "t_hac": -0.44,
+    "ic": 0.0382
+   },
+   "rho_model_score": 0.177,
+   "max_abs_rho_pv": 0.356,
+   "rho_detail_top5": {
+    "vol_20": 0.356,
+    "amount_log": 0.347,
+    "ret_max20": 0.333,
+    "vol_60": 0.292,
+    "low_52w": 0.269
+   },
+   "turnover": 0.7514,
+   "round_trip_fee_pct": 0.102,
+   "cost_pp": 0.0766,
+   "net_head_pp": -0.0765,
+   "p_adj_174": 1.0,
+   "same_sign": false,
+   "pass": false
+  },
+  "id60_late_ret": {
+   "dead": {
+    "n": 170,
+    "head_pp": -0.3848,
+    "t_hac": -5.88,
+    "ic": -0.0106
+   },
+   "active": {
+    "n": 137,
+    "head_pp": -0.2953,
+    "t_hac": -3.6,
+    "ic": -0.0105
+   },
+   "rho_model_score": 0.086,
+   "max_abs_rho_pv": 0.189,
+   "rho_detail_top5": {
+    "rev_5": 0.189,
+    "beta_250": 0.189,
+    "bias_20": 0.154,
+    "vol_60": 0.142,
+    "amount_log": 0.14
+   },
+   "turnover": 0.8082,
+   "round_trip_fee_pct": 0.102,
+   "cost_pp": 0.0824,
+   "net_head_pp": -0.4672,
+   "p_adj_174": 0.0,
+   "same_sign": true,
+   "pass": false
+  },
+  "id60_close_vs_dayvwap": {
+   "dead": {
+    "n": 170,
+    "head_pp": -0.5863,
+    "t_hac": -5.84,
+    "ic": -0.0198
+   },
+   "active": {
+    "n": 137,
+    "head_pp": -0.4723,
+    "t_hac": -4.35,
+    "ic": -0.0185
+   },
+   "rho_model_score": 0.103,
+   "max_abs_rho_pv": 0.57,
+   "rho_detail_top5": {
+    "rev_5": 0.57,
+    "bias_20": 0.41,
+    "bias_60": 0.232,
+    "high_52w": 0.198,
+    "beta_250": 0.186
+   },
+   "turnover": 0.8033,
+   "round_trip_fee_pct": 0.102,
+   "cost_pp": 0.0819,
+   "net_head_pp": -0.6682,
+   "p_adj_174": 0.0,
+   "same_sign": true,
+   "pass": false
+  }
+ },
+ "secs": 287.4
+}

@@ -1,0 +1,63 @@
+{
+ "ran_at": "2026-09-26T23:33:25",
+ "implied_t_by_N": {
+  "7": 2.69,
+  "25": 3.09,
+  "100": 3.48,
+  "173": 3.62,
+  "249": 3.72,
+  "400": 3.84,
+  "1089": 4.08
+ },
+ "targets": [
+  {
+   "name": "生产打分(model_score)",
+   "dead_head": 0.0105,
+   "dead_t": 5.21,
+   "active_head": 0.0082,
+   "same_sign": true,
+   "dead_top6": 0.0048,
+   "head_bar_pass": true
+  },
+  {
+   "name": "size",
+   "dead_head": -0.0125,
+   "dead_t": -2.02,
+   "active_head": -0.0041,
+   "same_sign": true,
+   "dead_top6": -0.0074,
+   "head_bar_pass": true
+  },
+  {
+   "name": "rev_5",
+   "dead_head": 0.0006,
+   "dead_t": 0.2,
+   "active_head": 0.0009,
+   "same_sign": true,
+   "dead_top6": -0.0124,
+   "head_bar_pass": false
+  },
+  {
+   "name": "turnover_20",
+   "dead_head": -0.0176,
+   "dead_t": -3.23,
+   "active_head": -0.0066,
+   "same_sign": true,
+   "dead_top6": -0.0029,
+   "head_bar_pass": true
+  },
+  {
+   "name": "ep",
+   "dead_head": 0.0022,
+   "dead_t": 0.41,
+   "active_head": -0.0051,
+   "same_sign": false,
+   "dead_top6": -0.032,
+   "head_bar_pass": false
+  }
+ ],
+ "bank_context": {
+  "candidates_with_readouts": 244,
+  "median_dead_head": -0.0031
+ }
+}

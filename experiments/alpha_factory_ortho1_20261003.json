@@ -1,0 +1,272 @@
+{
+ "ran_at": "2026-10-03 16:34:04",
+ "prereg": "plans/gp-ortho-mining-prereg-20261003.md",
+ "smoke": false,
+ "register": true,
+ "budget": {
+  "population": 60,
+  "generations": 15,
+  "seed": 20260911,
+  "max_depth": 3,
+  "fitness_mode": "ortho"
+ },
+ "controls": {
+  "model_score": {
+   "stamps": 117,
+   "range": [
+    "2017-01-26",
+    "2026-09-30"
+   ],
+   "n_stocks": 4818,
+   "n_dropped_out_of_window": 1,
+   "n_clamped_to_window_start": 10,
+   "pit_rule": "month M score effective from 2nd trading day of M+1, ffill; pre-window stamps clamped to window start (latest stamp kept)"
+  },
+  "pooled_members": {
+   "used": [
+    {
+     "alpha_id": "gp_000",
+     "expr": "Med(Div(Abs(Div($low, $total_mv)), $vwap), 5)"
+    }
+   ],
+   "skipped": [],
+   "as_of": "2026-10-03 14:35:13"
+  }
+ },
+ "denominator": 900,
+ "n_prior": 247,
+ "n_used": 1147,
+ "n_front": 7,
+ "n_pass_ortho": 0,
+ "n_skip": 0,
+ "n_dup_residual": 0,
+ "duplicates_residual": [],
+ "elapsed_search_sec": 6787.3,
+ "members": [
+  {
+   "alpha_id": "gpo1_000",
+   "expr": "Sqrt(Mean(Mean(Mean(Mean($circ_mv, 60), 60), 20), 3))",
+   "ortho": {
+    "DEAD_head": 0.009521237955777907,
+    "DEAD_head_t": 3.546469907814984,
+    "DEAD_top6": 0.0298055243329145,
+    "ACTIVE_head": 0.0005960372800473124,
+    "p_adj": 0.4478224413055708,
+    "head_bar": 0.005831594202898551,
+    "cost_per_month": 0.0008315942028985508,
+    "PASS": false,
+    "c_same_sign": true,
+    "c_head_size": true,
+    "c_t": true,
+    "c_p_adj": false,
+    "c_top6": true,
+    "c_cost": true,
+    "n_tests": 1147,
+    "n_tests_family": 900,
+    "n_tests_prior": 247
+   },
+   "head": {
+    "DEAD_head": -0.01173532985849306,
+    "DEAD_head_t": -1.910476839558046,
+    "DEAD_top6": -0.004816591658163815,
+    "ACTIVE_head": -0.0041765195928746834,
+    "p_adj": 1.0,
+    "PASS": false
+   },
+   "registered": true
+  },
+  {
+   "alpha_id": "gpo1_001",
+   "expr": "Sqrt(Mean(Mean($circ_mv, 60), 60))",
+   "ortho": {
+    "DEAD_head": 0.008858714561210946,
+    "DEAD_head_t": 3.2758094238890028,
+    "DEAD_top6": 0.035679188556969166,
+    "ACTIVE_head": 0.0005115281383041292,
+    "p_adj": 1.0,
+    "head_bar": 0.005817826086956522,
+    "cost_per_month": 0.0008178260869565217,
+    "PASS": false,
+    "c_same_sign": true,
+    "c_head_size": true,
+    "c_t": true,
+    "c_p_adj": false,
+    "c_top6": true,
+    "c_cost": true,
+    "n_tests": 1147,
+    "n_tests_family": 900,
+    "n_tests_prior": 247
+   },
+   "head": {
+    "DEAD_head": -0.012040573474951088,
+    "DEAD_head_t": -1.9496464454292344,
+    "DEAD_top6": -0.00351067204028368,
+    "ACTIVE_head": -0.004146505729295313,
+    "p_adj": 1.0,
+    "PASS": false
+   },
+   "registered": true
+  },
+  {
+   "alpha_id": "gpo1_002",
+   "expr": "Sqrt(Mean(Mean($circ_mv, 60), 3))",
+   "ortho": {
+    "DEAD_head": 0.007998816308099777,
+    "DEAD_head_t": 2.934232120351267,
+    "DEAD_top6": 0.026055531937163322,
+    "ACTIVE_head": -0.00018436464597471058,
+    "p_adj": 1.0,
+    "head_bar": 0.005817826086956522,
+    "cost_per_month": 0.0008178260869565217,
+    "PASS": false,
+    "c_same_sign": false,
+    "c_head_size": true,
+    "c_t": true,
+    "c_p_adj": false,
+    "c_top6": true,
+    "c_cost": true,
+    "n_tests": 1147,
+    "n_tests_family": 900,
+    "n_tests_prior": 247
+   },
+   "head": {
+    "DEAD_head": -0.01275877229636535,
+    "DEAD_head_t": -2.0297070844867653,
+    "DEAD_top6": -0.010495902970433235,
+    "ACTIVE_head": -0.0035296799906063825,
+    "p_adj": 1.0,
+    "PASS": false
+   },
+   "registered": true
+  },
+  {
+   "alpha_id": "gpo1_003",
+   "expr": "Sqrt(Mean($circ_mv, 20))",
+   "ortho": {
+    "DEAD_head": 0.007374212611466646,
+    "DEAD_head_t": 2.992567763636581,
+    "DEAD_top6": 0.0304141208413057,
+    "ACTIVE_head": -3.5103148547932506e-05,
+    "p_adj": 1.0,
+    "head_bar": 0.005828840579710145,
+    "cost_per_month": 0.0008288405797101451,
+    "PASS": false,
+    "c_same_sign": false,
+    "c_head_size": true,
+    "c_t": true,
+    "c_p_adj": false,
+    "c_top6": true,
+    "c_cost": true,
+    "n_tests": 1147,
+    "n_tests_family": 900,
+    "n_tests_prior": 247
+   },
+   "head": {
+    "DEAD_head": -0.013172761438181625,
+    "DEAD_head_t": -2.0788263477379005,
+    "DEAD_top6": -0.005216669081710279,
+    "ACTIVE_head": -0.003772462179767899,
+    "p_adj": 1.0,
+    "PASS": false
+   },
+   "registered": true
+  },
+  {
+   "alpha_id": "gpo1_004",
+   "expr": "Mean($circ_mv, 60)",
+   "ortho": {
+    "DEAD_head": 0.007155199663247913,
+    "DEAD_head_t": 3.031896115358347,
+    "DEAD_top6": 0.037991566362325105,
+    "ACTIVE_head": 0.0010832231491804123,
+    "p_adj": 1.0,
+    "head_bar": 0.005718695652173913,
+    "cost_per_month": 0.000718695652173913,
+    "PASS": false,
+    "c_same_sign": true,
+    "c_head_size": true,
+    "c_t": true,
+    "c_p_adj": false,
+    "c_top6": true,
+    "c_cost": true,
+    "n_tests": 1147,
+    "n_tests_family": 900,
+    "n_tests_prior": 247
+   },
+   "head": {
+    "DEAD_head": -0.012525749637279659,
+    "DEAD_head_t": -1.9881509463056355,
+    "DEAD_top6": -0.01119083701632917,
+    "ACTIVE_head": -0.003662281495053321,
+    "p_adj": 1.0,
+    "PASS": false
+   },
+   "registered": true
+  },
+  {
+   "alpha_id": "gpo1_005",
+   "expr": "$circ_mv",
+   "ortho": {
+    "DEAD_head": 0.005336687382077798,
+    "DEAD_head_t": 2.442515053793289,
+    "DEAD_top6": 0.02764783860184252,
+    "ACTIVE_head": 0.0007073758897604421,
+    "p_adj": 1.0,
+    "head_bar": 0.005746231884057971,
+    "cost_per_month": 0.0007462318840579712,
+    "PASS": false,
+    "c_same_sign": true,
+    "c_head_size": false,
+    "c_t": true,
+    "c_p_adj": false,
+    "c_top6": true,
+    "c_cost": true,
+    "n_tests": 1147,
+    "n_tests_family": 900,
+    "n_tests_prior": 247
+   },
+   "head": {
+    "DEAD_head": -0.01351990489056334,
+    "DEAD_head_t": -2.098425221523102,
+    "DEAD_top6": -0.009690730914007873,
+    "ACTIVE_head": -0.004896531085250899,
+    "p_adj": 1.0,
+    "PASS": false
+   },
+   "registered": true
+  },
+  {
+   "alpha_id": "gpo1_007",
+   "expr": "$low",
+   "ortho": {
+    "DEAD_head": -0.008967895805835725,
+    "DEAD_head_t": -2.9898641094595617,
+    "DEAD_top6": -0.010660047421697526,
+    "ACTIVE_head": 0.003028466337127611,
+    "p_adj": 1.0,
+    "head_bar": 0.005881159420289855,
+    "cost_per_month": 0.0008811594202898552,
+    "PASS": false,
+    "c_same_sign": false,
+    "c_head_size": true,
+    "c_t": false,
+    "c_p_adj": false,
+    "c_top6": false,
+    "c_cost": true,
+    "n_tests": 1147,
+    "n_tests_family": 900,
+    "n_tests_prior": 247
+   },
+   "head": {
+    "DEAD_head": -0.017080577951855958,
+    "DEAD_head_t": -2.782239370240994,
+    "DEAD_top6": -0.014517218549735844,
+    "ACTIVE_head": -0.0005586578045040369,
+    "p_adj": 1.0,
+    "PASS": false
+   },
+   "registered": true
+  }
+ ],
+ "exit_note": "PASS=残差面板六判据全过=POOLED=有资格进组合层回测, 不等于可用; 0 PASS 的结论 = GP 在本仓死区×900 预算下, 对 model_score+POOLED 池的正交增量无可检出增量(预注册 §四.2)"
+}

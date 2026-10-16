@@ -1,0 +1,128 @@
+{
+ "ran_at": "2026-09-25 11:36:01",
+ "window": {
+  "start": "20190731",
+  "end": "20260831"
+ },
+ "method": "基线臂 vs 治理臂, 两臂同码同撮合(engine 未改动, 缝注入+逐位对账自证)",
+ "results": {
+  "monthly": {
+   "base": {
+    "periods": 85,
+    "ppy": 12,
+    "ann": 0.1782,
+    "mdd": -0.2838,
+    "excess_ann": 0.118,
+    "bench_ann": 0.0602,
+    "sys_ann": 0.1497,
+    "sys_mdd": -0.228,
+    "sys_mdd_daily": -0.3277,
+    "turnover": 0.8954,
+    "ic": 0.0962,
+    "sharpe": 0.617,
+    "arm": "base",
+    "kind": "monthly",
+    "run_tag": "20260925_abgov_m_base",
+    "run_date": "20260925_20260925_abgov_m_base",
+    "elapsed_sec": 8.9,
+    "trip": -0.2,
+    "reset": -0.1,
+    "pin_check": {
+     "ann": 0.0,
+     "mdd": 0.0,
+     "sys_ann": 0.0,
+     "sys_mdd": 0.0,
+     "sys_mdd_daily": 0.0,
+     "excess": 0.0,
+     "ic": 0.0
+    }
+   },
+   "gov": {
+    "periods": 85,
+    "ppy": 12,
+    "ann": 0.0311,
+    "mdd": -0.286,
+    "excess_ann": -0.0291,
+    "bench_ann": 0.0602,
+    "sys_ann": 0.0221,
+    "sys_mdd": -0.2433,
+    "sys_mdd_daily": -0.324,
+    "turnover": 0.8925,
+    "ic": 0.0962,
+    "sharpe": 0.054,
+    "arm": "gov",
+    "kind": "monthly",
+    "run_tag": "20260925_abgov_m_gov",
+    "run_date": "20260925_20260925_abgov_m_gov",
+    "elapsed_sec": 8.0,
+    "trip": -0.2,
+    "reset": -0.1,
+    "trips": 1,
+    "cautious_periods": 28,
+    "cautious_share": 0.3294,
+    "episodes": [
+     {
+      "trip_at": "20240531",
+      "trip_dd": -0.2048
+     }
+    ],
+    "seam_check": {
+     "sys_nav_max_abs_diff": "0.0",
+     "periods": 85
+    }
+   },
+   "gov3": {
+    "periods": 85,
+    "ppy": 12,
+    "ann": 0.1779,
+    "mdd": -0.286,
+    "excess_ann": 0.1177,
+    "bench_ann": 0.0602,
+    "sys_ann": 0.1467,
+    "sys_mdd": -0.2433,
+    "sys_mdd_daily": -0.324,
+    "turnover": 0.8815,
+    "ic": 0.0962,
+    "sharpe": 0.616,
+    "arm": "gov3",
+    "kind": "monthly",
+    "run_tag": "20260925_abgov_m_gov3",
+    "run_date": "20260925_20260925_abgov_m_gov3",
+    "elapsed_sec": 8.5,
+    "trip": -0.2,
+    "reset": -0.1,
+    "trips": 1,
+    "cautious_periods": 3,
+    "cautious_share": 0.0353,
+    "episodes": [
+     {
+      "trip_at": "20240531",
+      "trip_dd": -0.2048,
+      "reset_at": "20240930",
+      "reset_dd": -0.0421
+     }
+    ],
+    "seam_check": {
+     "sys_nav_max_abs_diff": "0.0",
+     "periods": 85
+    }
+   },
+   "delta": {
+    "ann": -0.1471,
+    "mdd": -0.0022,
+    "sys_ann": -0.1276,
+    "sys_mdd": -0.0153,
+    "sys_mdd_daily": 0.0037,
+    "excess_ann": -0.1471
+   },
+   "delta_gov3": {
+    "ann": -0.0003,
+    "mdd": -0.0022,
+    "sys_ann": -0.003,
+    "sys_mdd": -0.0153,
+    "sys_mdd_daily": 0.0037,
+    "excess_ann": -0.0003
+   }
+  }
+ }
+}

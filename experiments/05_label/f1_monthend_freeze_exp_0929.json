@@ -1,0 +1,58 @@
+{
+ "asof": "2026-09-29 22:09:11",
+ "prereg": "plans/f1-monthend-freeze-prereg-20260929.md",
+ "exp1": {
+  "n_compared": 122452,
+  "exact_rate": 0.677302,
+  "by_factor_exact": {
+   "amount_log": 0.0159,
+   "beta_250": 0.1204,
+   "bias_20": 1.0,
+   "bias_60": 0.0721,
+   "bp": 0.804,
+   "dv_ttm": 0.8346,
+   "ep": 0.8733,
+   "high_52w": 0.95,
+   "illiq": 1.0,
+   "lhb_cnt20": 0.0,
+   "lhb_net20": 0.9506,
+   "lhb_org_net20": 1.0,
+   "low_52w": 0.945,
+   "mom_120": 0.936,
+   "mom_20": 0.8107,
+   "mom_250": 0.8824,
+   "mom_60": 0.9716,
+   "ret_max20": 1.0,
+   "rev_5": 0.9599,
+   "size": 0.7923,
+   "skew_20": 0.0,
+   "turnover_20": 0.8294,
+   "turnover_chg": 1.0,
+   "vol_20": 0.4768,
+   "vol_60": 0.3266
+  },
+  "verdict_E1": "FAIL(另有漂移源)"
+ },
+ "exp2": {
+  "n_scored": 4395,
+  "top6_A": [
+   "000571.SZ",
+   "001260.SZ",
+   "002724.SZ",
+   "300548.SZ",
+   "603036.SH",
+   "603097.SH"
+  ],
+  "top6_B": [
+   "000571.SZ",
+   "001260.SZ",
+   "002724.SZ",
+   "300548.SZ",
+   "603036.SH",
+   "603097.SH"
+  ],
+  "top6_identical": true,
+  "spearman": 0.999932,
+  "verdict_E2": "E2a_决策无影响"
+ }
+}

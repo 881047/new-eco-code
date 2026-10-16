@@ -1,0 +1,26 @@
+{
+ "ran_at": "2026-09-26T22:00:56",
+ "n_bank_real": 232,
+ "implied_t_at_n_bank": 3.7,
+ "placebo": {
+  "iid": {
+   "n": 100,
+   "ensemble_pass": 0,
+   "single_pass": 0,
+   "max_abs_t": 3.0,
+   "max_abs_head": 0.0024
+  },
+  "perm_size": {
+   "n": 50,
+   "ensemble_pass": 0,
+   "single_pass": 0,
+   "max_abs_t": 2.33,
+   "max_abs_head": 0.0022
+  }
+ },
+ "criteria_note": "集成门比较用四判据(cost 除外, 安慰剂无成本概念); 单因子档 S4 对安慰剂豁免(独立于现役池) ⇒ 单因子档的安慰剂通过率是S1-S3 的假放行率上界(真实候选还要过 S4 去相关)",
+ "verdict_rule": {
+  "single_ok": "假放行率 ≤10%(下游组合层 A/B 是真过滤器)",
+  "single_too_loose": "假放行率 ≥20% ⇒ 收紧 S 阈值(另立预注册)"
+ }
+}

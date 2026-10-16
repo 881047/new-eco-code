@@ -1,0 +1,116 @@
+{
+  "Q4_ic_window_and_survivorship": {
+    "cross_sections": 86,
+    "cells_scored": 344682,
+    "ic_current_shift_minus21": 0.097166,
+    "ic_aligned_to_exec_day": 0.09604,
+    "delta_abs": 0.001126,
+    "dropna_cells": 4971,
+    "of_which_ST_or_delist_names": 162,
+    "self_check": {
+      "用到的真实对象": "model_score + daily + stock_basic",
+      "截面数必须>50": true,
+      "两臂共用同一份 score 矩阵": true
+    },
+    "gate": "|ΔIC|<0.005 ⇒ 关闭 + 就地注释；≥0.005 或判档变 ⇒ 第二步",
+    "crossed": false,
+    "level": "OK",
+    "caveat": "`of_which_ST_or_delist_names` 用的是**名称代理**（stock_basic.name 含 '退'/'ST'），不是真正的退市标记表 ⇒ 那一列只作量级参考，别当精确计数引用"
+  },
+  "Q5_per_year_52": {
+    "anchor_source": "app/weekly/scores.week_end_dates(trade_cal.is_open=1)",
+    "years_all": 13,
+    "years_complete": 11,
+    "min_per_year_complete": 50,
+    "max_per_year_complete": 53,
+    "mean_per_year_complete": 51.182,
+    "mean_per_year_including_partial": 50.154,
+    "per_year_const": 52.0,
+    "overstatement_pct": 1.599,
+    "overstatement_if_partial_years_included": 3.681,
+    "where_it_is_used": [
+      "app/weekly/attrib.py:226 周频年化超额(pp/年)",
+      "app/weekly/attrib.py:232 风格暴露(pp/年)",
+      "副本冻结: F24/F25/F28/F29/F34 + mirror_pool_reference.py"
+    ],
+    "self_check": {
+      "完整年数=11(2015~2025)": true,
+      "每个完整年锚点数落在 45~60": true,
+      "首末不完整年已剔除": true
+    },
+    "gate": "存在距自身判据线 <1.3% 的周频在册读数 ⇒ 进第二步；否则关闭",
+    "crossed": null,
+    "level": "CHECK",
+    "not_measured": "在册周频读数与各自判据线的距离要人对着 02 号逐条判 ⇒ 本脚本只给高估百分比，不替人判贴线与否（写了就是假精确）"
+  },
+  "Q6_insider_rows": {
+    "rows_total": 171344,
+    "ratio_zero_and_positive_delta": 1426,
+    "rows_with_negative_delta_anywhere": 117509,
+    "alpha_bank_insider_rows": 2,
+    "alpha_bank_insider_status": [
+      "CANDIDATE"
+    ],
+    "self_check": {
+      "ratio 列真实存在(不是 change_ratio)": true,
+      "alpha_bank 查询未报错": true
+    },
+    "gate": "判决不变 ⇒ 保持默认 +1 并就地注释；判决变 ⇒ 预注册 + 重跑 F27",
+    "crossed": true,
+    "level": "CROSS",
+    "reading": "方向假定影响的行数 = 1426（占 0.83%）。是否在某个在册判决里被消费：见 alpha_bank_insider_rows —— >0 表示图谱/门禁用过它 ⇒ 进第二步；=0 表示只作为数据存在"
+  },
+  "Q8_label_conventions": {
+    "two_cells": {
+      "688373.SH@20231228": {
+        "in_model_score": 0,
+        "in_daily_score": 0,
+        "has_daily_row_later": 660
+      },
+      "000893.SZ@20240102": {
+        "in_model_score": 0,
+        "in_daily_score": 0,
+        "has_daily_row_later": 658
+      }
+    },
+    "cells_appearing_in_any_score_table": 0,
+    "self_check": {
+      "两格都查了三张表": true
+    },
+    "gate": "影响为空 ⇒ 维持'有意不同'；非空 ⇒ 预注册 A/B",
+    "crossed": false,
+    "level": "OK",
+    "note": "差异本身由 tests/test_label_conventions.py 钉住（重叠域逐位一致 + 生产不许更缺 + 差异恰好两格）；这里只回答'这两格进没进过任何打分表'"
+  },
+  "Q9_tradability_gap": {
+    "monthly_anchors_checked": 116,
+    "untradable_yet_filled": 0,
+    "sum_abs_return_of_those": 0.0,
+    "upper_bound_pp_per_year": 0.0,
+    "self_check": {
+      "扫了全部评分月": true,
+      "每笔按 1/100 仓、只算绝对值上界(高估方向)": true
+    },
+    "gate": "0 笔 或 <0.2pp ⇒ 关闭；否则 ⇒ 第二步（改回测可交易性 = 换 pin）",
+    "crossed": false,
+    "level": "OK",
+    "note": "上界是刻意保守(高估)的算法：不看持仓权重、不看手续费、按绝对值累加"
+  },
+  "NOT_RUN": {
+    "Q1_alpha_panel_dual_scale_gate": {
+      "why": "全 158 条双尺门禁 A/B 需要 `critic.churn_cost` + 完整 `factory.run` 链路（小时级），而 09-19 那份 `audit_alpha_panel_adj.py` 自己写明'不重跑门禁' ⇒ 名单是否变属于**阶段 B**，需单列一轮预注册",
+      "already_have": "秩相关量级（133/158 条踩价格水平；代表 14 条含除权窗 ≈0.85）见 logs/audit_alpha_panel_adj.json"
+    },
+    "Q2_scores_mask_scale": {
+      "why": "两把尺的差别在 `scores.train()` 第 263 行的截面百分位上 ⇒ 要拿到两臂打分必须重跑周频训练（不是只读 SQL 能给的）",
+      "real_api": "alpha 侧可交易性矩阵 = app.pit.engine.PITEngine.tradable_matrix(dates, columns)"
+    },
+    "Q3_ic_three_scales": {
+      "why": "要跑 `weekly.health.rolling_ic(window=12)` 全链（读打分存档）+ 同一批锚点上另算未复权版，且判档要用 `health.evaluate` 的分级函数 —— 本版还没核对到能一句跑通的调用方式，宁可不跑"
+    },
+    "Q7_stuck_holiday_interest": {
+      "why": "结转占资与卖出回笼不补息发生在 `backtest/engine._roll_stuck` 内部（`invested += sv['bp_raw']` 与 proceeds 分账），SQL 侧看不到 ⇒ 要么插桩跑一遍回测、要么在引擎里加计数 —— 都不是'只读量化'",
+      "correction": "上一版这里输出 0 笔却写了'实库确有跨月结转持仓（非 0 笔）'⇒ 那句结论作废"
+    }
+  }
+}

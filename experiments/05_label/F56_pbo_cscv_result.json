@@ -1,0 +1,317 @@
+{
+ "selftest": {
+  "S": 8,
+  "n_iter": 40,
+  "T": 600,
+  "N": 20,
+  "noise_only": 0.5011,
+  "one_true_arm": 0.0007,
+  "pass": true
+ },
+ "protocol": {
+  "arms_primary": [
+   "F4_scores_seedA",
+   "F4_scores_seedB",
+   "F47_SA_C1_small",
+   "F47_SA_C2_mid",
+   "F47_SA_C3_strong",
+   "F47_SA_C4_capacity",
+   "F47_SA_C5_qlib",
+   "F47_SB_C1_small",
+   "F47_SB_C2_mid",
+   "F47_SB_C3_strong",
+   "F47_SB_C4_capacity",
+   "F47_SB_C5_qlib"
+  ],
+  "n_arms_primary": 12,
+  "arms_sensitivity": [
+   "F4_scores_seedA",
+   "F4_scores_seedB",
+   "F29_SA_A0_base",
+   "F29_SA_A1_abs",
+   "F29_SA_A2_pos",
+   "F29_SA_A3_abs2",
+   "F29_SB_A0_base",
+   "F29_SB_A1_abs",
+   "F29_SB_A2_pos",
+   "F29_SB_A3_abs2",
+   "F47_SA_C1_small",
+   "F47_SA_C2_mid",
+   "F47_SA_C3_strong",
+   "F47_SA_C4_capacity",
+   "F47_SA_C5_qlib",
+   "F47_SB_C1_small",
+   "F47_SB_C2_mid",
+   "F47_SB_C3_strong",
+   "F47_SB_C4_capacity",
+   "F47_SB_C5_qlib"
+  ],
+  "excluded": {
+   "F32_scores_SA_PERM.npz": "置换对照臂=零模型，不是候选构型",
+   "F33_scores_SA_M21.npz": "月频锚点(153 期)，T 网格与周频臂不同",
+   "F33_scores_SB_M21.npz": "月频锚点(153 期)，T 网格与周频臂不同"
+  },
+  "note": "主读数只用**同层（融合级）**候选；F29 是单 die 组件臂，混层只作敏感性",
+  "top_n": 100,
+  "sell_rate_bp": 7.6,
+  "metric": "sharpe(net excess, equal weight top100)",
+  "cscv_S_main": 16,
+  "cscv_S_sensitivity": [
+   8,
+   10,
+   16
+  ],
+  "decision_rule": "PBO<0.5 未见明显选择过拟合; >=0.5 禁止据'最佳构型'上线"
+ },
+ "n_periods": 606,
+ "window": [
+  "2014-01-03",
+  "2026-09-11"
+ ],
+ "per_arm": {
+  "F4_scores_seedA": {
+   "n": 606,
+   "mean_pp": 0.513,
+   "sd_pp": 1.931,
+   "sharpe": 0.266,
+   "excess_pp": 29.26
+  },
+  "F4_scores_seedB": {
+   "n": 606,
+   "mean_pp": 0.51,
+   "sd_pp": 1.917,
+   "sharpe": 0.266,
+   "excess_pp": 29.04
+  },
+  "F29_SA_A0_base": {
+   "n": 606,
+   "mean_pp": 0.513,
+   "sd_pp": 1.931,
+   "sharpe": 0.266,
+   "excess_pp": 29.26
+  },
+  "F29_SA_A1_abs": {
+   "n": 606,
+   "mean_pp": 0.583,
+   "sd_pp": 1.904,
+   "sharpe": 0.306,
+   "excess_pp": 34.06
+  },
+  "F29_SA_A2_pos": {
+   "n": 606,
+   "mean_pp": -0.628,
+   "sd_pp": 2.928,
+   "sharpe": -0.215,
+   "excess_pp": -29.55
+  },
+  "F29_SA_A3_abs2": {
+   "n": 606,
+   "mean_pp": 0.56,
+   "sd_pp": 1.949,
+   "sharpe": 0.287,
+   "excess_pp": 32.42
+  },
+  "F29_SB_A0_base": {
+   "n": 606,
+   "mean_pp": 0.516,
+   "sd_pp": 1.904,
+   "sharpe": 0.271,
+   "excess_pp": 29.46
+  },
+  "F29_SB_A1_abs": {
+   "n": 606,
+   "mean_pp": 0.575,
+   "sd_pp": 1.903,
+   "sharpe": 0.302,
+   "excess_pp": 33.53
+  },
+  "F29_SB_A2_pos": {
+   "n": 606,
+   "mean_pp": -0.66,
+   "sd_pp": 2.846,
+   "sharpe": -0.232,
+   "excess_pp": -30.62
+  },
+  "F29_SB_A3_abs2": {
+   "n": 606,
+   "mean_pp": 0.568,
+   "sd_pp": 1.952,
+   "sharpe": 0.291,
+   "excess_pp": 32.93
+  },
+  "F47_SA_C1_small": {
+   "n": 606,
+   "mean_pp": 0.524,
+   "sd_pp": 1.937,
+   "sharpe": 0.271,
+   "excess_pp": 29.99
+  },
+  "F47_SA_C2_mid": {
+   "n": 606,
+   "mean_pp": 0.487,
+   "sd_pp": 1.989,
+   "sharpe": 0.245,
+   "excess_pp": 27.43
+  },
+  "F47_SA_C3_strong": {
+   "n": 606,
+   "mean_pp": 0.519,
+   "sd_pp": 2.041,
+   "sharpe": 0.254,
+   "excess_pp": 29.49
+  },
+  "F47_SA_C4_capacity": {
+   "n": 606,
+   "mean_pp": 0.479,
+   "sd_pp": 2.023,
+   "sharpe": 0.237,
+   "excess_pp": 26.87
+  },
+  "F47_SA_C5_qlib": {
+   "n": 606,
+   "mean_pp": 0.39,
+   "sd_pp": 1.36,
+   "sharpe": 0.287,
+   "excess_pp": 21.87
+  },
+  "F47_SB_C1_small": {
+   "n": 606,
+   "mean_pp": 0.53,
+   "sd_pp": 1.952,
+   "sharpe": 0.271,
+   "excess_pp": 30.35
+  },
+  "F47_SB_C2_mid": {
+   "n": 606,
+   "mean_pp": 0.509,
+   "sd_pp": 2.017,
+   "sharpe": 0.253,
+   "excess_pp": 28.9
+  },
+  "F47_SB_C3_strong": {
+   "n": 606,
+   "mean_pp": 0.498,
+   "sd_pp": 2.03,
+   "sharpe": 0.245,
+   "excess_pp": 28.1
+  },
+  "F47_SB_C4_capacity": {
+   "n": 606,
+   "mean_pp": 0.466,
+   "sd_pp": 2.041,
+   "sharpe": 0.228,
+   "excess_pp": 26.0
+  },
+  "F47_SB_C5_qlib": {
+   "n": 606,
+   "mean_pp": 0.383,
+   "sd_pp": 1.363,
+   "sharpe": 0.281,
+   "excess_pp": 21.4
+  }
+ },
+ "pbo": {
+  "S=8": {
+   "S": 8,
+   "n_combos": 70,
+   "pbo": 0.4,
+   "median_oos_rank_of_is_best": 8,
+   "mean_oos_rank_of_is_best": 7.74,
+   "is_best_pick_counts": {
+    "F47_SA_C5_qlib": 36,
+    "F47_SB_C5_qlib": 10,
+    "F47_SA_C3_strong": 9,
+    "F47_SB_C1_small": 6,
+    "F4_scores_seedB": 3,
+    "F47_SA_C1_small": 3,
+    "F47_SA_C2_mid": 2,
+    "F4_scores_seedA": 1
+   }
+  },
+  "S=10": {
+   "S": 10,
+   "n_combos": 252,
+   "pbo": 0.373,
+   "median_oos_rank_of_is_best": 7,
+   "mean_oos_rank_of_is_best": 7.37,
+   "is_best_pick_counts": {
+    "F47_SA_C5_qlib": 128,
+    "F47_SB_C5_qlib": 34,
+    "F47_SA_C3_strong": 31,
+    "F47_SB_C1_small": 21,
+    "F47_SA_C1_small": 19,
+    "F4_scores_seedB": 15,
+    "F4_scores_seedA": 4
+   }
+  },
+  "S=16": {
+   "S": 16,
+   "n_combos": 12870,
+   "pbo": 0.4339,
+   "median_oos_rank_of_is_best": 7,
+   "mean_oos_rank_of_is_best": 6.74,
+   "is_best_pick_counts": {
+    "F47_SA_C5_qlib": 5664,
+    "F47_SB_C1_small": 2106,
+    "F47_SB_C5_qlib": 1864,
+    "F47_SA_C3_strong": 1546,
+    "F4_scores_seedA": 872,
+    "F47_SA_C1_small": 513,
+    "F4_scores_seedB": 279,
+    "F47_SA_C2_mid": 20
+   }
+  }
+ },
+ "pbo_sensitivity_mixed_20arms": {
+  "S=8": {
+   "S": 8,
+   "n_combos": 70,
+   "pbo": 0.2286,
+   "median_oos_rank_of_is_best": 17,
+   "mean_oos_rank_of_is_best": 14.93,
+   "is_best_pick_counts": {
+    "F29_SA_A1_abs": 27,
+    "F29_SB_A1_abs": 22,
+    "F47_SA_C5_qlib": 14,
+    "F29_SB_A0_base": 3,
+    "F47_SB_C5_qlib": 3,
+    "F47_SA_C2_mid": 1
+   }
+  },
+  "S=10": {
+   "S": 10,
+   "n_combos": 252,
+   "pbo": 0.2302,
+   "median_oos_rank_of_is_best": 17,
+   "mean_oos_rank_of_is_best": 14.77,
+   "is_best_pick_counts": {
+    "F29_SA_A1_abs": 96,
+    "F29_SB_A1_abs": 75,
+    "F47_SA_C5_qlib": 57,
+    "F47_SB_C5_qlib": 15,
+    "F29_SB_A0_base": 6,
+    "F47_SA_C3_strong": 2,
+    "F29_SB_A3_abs2": 1
+   }
+  },
+  "S=16": {
+   "S": 16,
+   "n_combos": 12870,
+   "pbo": 0.2327,
+   "median_oos_rank_of_is_best": 17,
+   "mean_oos_rank_of_is_best": 14.71,
+   "is_best_pick_counts": {
+    "F29_SA_A1_abs": 5327,
+    "F29_SB_A1_abs": 3446,
+    "F47_SA_C5_qlib": 2349,
+    "F47_SB_C5_qlib": 878,
+    "F29_SB_A0_base": 370,
+    "F47_SA_C3_strong": 289,
+    "F4_scores_seedA": 99,
+    "F29_SA_A3_abs2": 50
+   }
+  }
+ },
+ "corr_mean": 0.7792,
+ "verdict": "未见明显选择过拟合"
+}

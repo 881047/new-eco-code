@@ -1,0 +1,27 @@
+{
+ "experiment": "exp_train_months.py（训练窗口长度：36/60/120/999 四臂）",
+ "date": "2026-09-16 18:15",
+ "note": "训练 2026-09-10 完成（model_score_tm60/120/999），判决回测 2026-09-16 补跑落盘 —— 本文件补上预注册证据链缺失的最后一环（审查 MOD-02）",
+ "criteria_frozen": {
+   "source": "scripts/oneoff/exp_train_months.py docstring（2026-09-11 写死）",
+   "adopt": "P1(2020-09~2023-12) 系统年化比对照臂改善 >= 3.0pp 且 全期系统年化退化 <= 2.0pp",
+   "else": "关闭「改造模型」路径"
+ },
+ "validate": {"sys_ann": 0.1940, "sys_mdd": -0.1966},
+ "reproduce": {"tm36_sys_ann": 0.1940, "tm36_sys_mdd": -0.1966,
+               "diff_ann_pp": 0.0, "diff_mdd_pp": 0.0, "ok": true},
+ "arms": [
+  {"tm": 36,  "run": "20260916_tm36",  "periods": 85, "ann": 0.2262, "sys_ann": 0.1940, "sys_mdd": -0.1966, "sharpe": 0.853, "ic": 0.0959, "n_avg": 4.94, "idle": 0.2871, "turnover": 0.9018, "P1_sys": 0.0696, "P1_excess": 0.0382, "P2_sys": 0.3770, "P2_excess": 0.2603},
+  {"tm": 60,  "run": "20260916_tm60",  "periods": 85, "ann": 0.0097, "sys_ann": 0.0096, "sys_mdd": -0.2036, "sharpe": -0.052, "ic": 0.1043, "n_avg": 5.09, "idle": 0.2839, "turnover": 0.8708, "P1_sys": 0.0314, "P1_excess": -0.0002, "P2_sys": -0.0028, "P2_excess": -0.1198},
+  {"tm": 120, "run": "20260916_tm120", "periods": 85, "ann": 0.0905, "sys_ann": 0.0801, "sys_mdd": -0.3371, "sharpe": 0.283, "ic": 0.1146, "n_avg": 5.18, "idle": 0.2722, "turnover": 0.9113, "P1_sys": 0.0529, "P1_excess": 0.0209, "P2_sys": 0.1695, "P2_excess": 0.0512},
+  {"tm": 999, "run": "20260916_tm999", "periods": 85, "ann": 0.0985, "sys_ann": 0.0820, "sys_mdd": -0.3311, "sharpe": 0.338, "ic": 0.1152, "n_avg": 5.09, "idle": 0.2857, "turnover": 0.9167, "P1_sys": 0.0529, "P1_excess": 0.0214, "P2_sys": 0.1748, "P2_excess": 0.0580}
+ ],
+ "verdicts": {
+  "tm60":  {"d_p1_pp": -3.82, "d_full_pp": -18.44, "verdict": "不采纳"},
+  "tm120": {"d_p1_pp": -1.67, "d_full_pp": -11.39, "verdict": "不采纳"},
+  "tm999": {"d_p1_pp": -1.67, "d_full_pp": -11.20, "verdict": "不采纳"}
+ },
+ "conclusion": "三臂全部不采纳 —— 「36 个月窗口使模型追 regime」假设被数据回答：拉长窗口全面更差（全期 -11~-18pp、tm120/999 回撤恶化到 -33%）。关键反直觉读数：长窗口臂的 IC 反而更高（0.1043~0.1152 vs 对照 0.0959），但收益崩了 —— 又一次独立复现『全截面 IC 与 top-6 收益反相关』（05 号台账 P1-3 / MOD-08）；P2 段超额从 +26.03% 掉到 +5.12~5.80% ⇒ 追 regime 的风格暴露不是缺陷，是凸性收益的来源本体（与 F67/F68 互证）。「改造模型」路径正式关闭。",
+ "run_rows_kept": ["20260916_tm36", "20260916_tm60", "20260916_tm120", "20260916_tm999"],
+ "backtest_log": "logs/app.log 18:12~18:15（本判决回测）；训练日志 2026-09-10 22:2x（app.log:3832/3928/4024）"
+}

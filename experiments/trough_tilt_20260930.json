@@ -1,0 +1,153 @@
+{
+ "ran_at": "2026-09-30T23:48:32",
+ "prereg": "plans/trough-tilt-prereg-20260930.md",
+ "calibrate_only": false,
+ "params": {
+  "block": "B1(size/amount_log/illiq)",
+  "long_m": 24,
+  "recent_m": 6,
+  "long_bar": 0.01,
+  "mv_q_lo": 0.2,
+  "mv_q_hi": 0.8,
+  "capture": 0.3,
+  "bar_floor": 0.005
+ },
+ "activate_months": [
+  "2024-06",
+  "2024-07"
+ ],
+ "n_anchors": 92,
+ "coverage": 0.021739130434782608,
+ "calibration": {
+  "per_anchor": [
+   {
+    "anchor": "2024-06-28",
+    "n_small": 1066,
+    "r_small": -0.0007,
+    "r_pool": -0.027,
+    "r_big": -0.031,
+    "spread_small_pool": 0.0263
+   },
+   {
+    "anchor": "2024-07-31",
+    "n_small": 997,
+    "r_small": -0.0516,
+    "r_pool": -0.0565,
+    "r_big": -0.0662,
+    "spread_small_pool": 0.0049
+   }
+  ],
+  "c1_cum": 0.0312,
+  "c1_ann": 0.0044,
+  "c2_cum": 0.0034,
+  "c2_ann": 0.0005,
+  "years_prod": 7.11,
+  "bar": 0.005
+ },
+ "runtime_sec": 74.1,
+ "ctrl": {
+  "prod": {
+   "ann_return": 0.3168,
+   "excess_ann": 0.2566,
+   "max_drawdown": -0.2363,
+   "avg_turnover": 0.8865
+  },
+  "full": {
+   "ann_return": 0.1865,
+   "excess_ann": 0.1334,
+   "max_drawdown": -0.3819,
+   "avg_turnover": 0.8778
+  }
+ },
+ "arms": {
+  "t1": {
+   "prod": {
+    "ann_return": 0.3302,
+    "excess_ann": 0.27,
+    "max_drawdown": -0.2305,
+    "avg_turnover": 0.8897
+   },
+   "full": {
+    "ann_return": 0.1954,
+    "excess_ann": 0.1423,
+    "max_drawdown": -0.3819,
+    "avg_turnover": 0.8801
+   }
+  },
+  "t2": {
+   "prod": {
+    "ann_return": 0.3168,
+    "excess_ann": 0.2566,
+    "max_drawdown": -0.2363,
+    "avg_turnover": 0.8865
+   },
+   "full": {
+    "ann_return": 0.1865,
+    "excess_ann": 0.1334,
+    "max_drawdown": -0.3819,
+    "avg_turnover": 0.8778
+   }
+  }
+ },
+ "checks": {
+  "t1": {
+   "d_excess_prod": 0.0134,
+   "d_excess_full": 0.0089,
+   "d_mdd_prod": 0.0058,
+   "d_mdd_full": 0.0,
+   "p1": true,
+   "p2": true,
+   "p3": true,
+   "bar": 0.005
+  },
+  "t2": {
+   "d_excess_prod": 0.0,
+   "d_excess_full": 0.0,
+   "d_mdd_prod": 0.0,
+   "d_mdd_full": 0.0,
+   "p1": false,
+   "p2": true,
+   "p3": true,
+   "bar": 0.005
+  }
+ },
+ "verdicts": {
+  "t1": "PASS（进生产接线预注册）〔单事件标注: 前瞻观察 ≥4 期为接线前置〕",
+  "t2": "REJECT（线结清）"
+ },
+ "note": "评分表层实现(零引擎改动); 触发器逐字复用 L3 B1; 对照同 session 重跑并守卫 pin 复现; PASS 后生产接线另走预注册+回放复核",
+ "divergence_diagnostic": {
+  "source": "backtest_nav 留痕(只读), run_date 前缀取最新",
+  "t1": {
+   "n_periods": 84,
+   "n_divergent": 3,
+   "months": [
+    {
+     "month": "2024-07",
+     "ctrl": -0.0338,
+     "arm": 0.0258,
+     "delta": -0.0596
+    },
+    {
+     "month": "2024-08",
+     "ctrl": -0.0036,
+     "arm": 0.0089,
+     "delta": -0.0125
+    },
+    {
+     "month": "2024-09",
+     "ctrl": 0.3792,
+     "arm": 0.3781,
+     "delta": 0.0011
+    }
+   ],
+   "cum_contribution": 0.0741
+  },
+  "t2": {
+   "n_periods": 84,
+   "n_divergent": 0,
+   "months": [],
+   "cum_contribution": 0.0
+  }
+ }
+}

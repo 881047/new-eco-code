@@ -1,0 +1,48 @@
+{
+ "script_sha": "595cbc76c38b273d",
+ "since": "20151101",
+ "horizon": 5,
+ "n_anchor": 555,
+ "n_tested": 2,
+ "n_denom_clusters_used": 36,
+ "nonzero_share": {
+  "ul_press_60": 0.0556,
+  "ins_net_60": 0.0797
+ },
+ "passed": [],
+ "stats": {
+  "ul_press_60": {
+   "DEAD": {
+    "n": 170,
+    "ic": 0.0086,
+    "t": 1.29
+   },
+   "ACTIVE": {
+    "n": 137,
+    "ic": 0.0055,
+    "t": 0.64
+   },
+   "n_ic": 553,
+   "nonzero_share": 0.0556
+  },
+  "ins_net_60": {
+   "DEAD": {
+    "n": 170,
+    "ic": -0.0049,
+    "t": -0.63
+   },
+   "ACTIVE": {
+    "n": 137,
+    "ic": 0.0011,
+    "t": 0.09
+   },
+   "n_ic": 553,
+   "nonzero_share": 0.0797
+  }
+ },
+ "verdict": {
+  "event2_route": false,
+  "n_passed": 0
+ },
+ "secs": 336.9
+}

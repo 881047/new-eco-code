@@ -1,0 +1,66 @@
+{
+ "ran_at": "2026-09-27T13:52:09",
+ "prereg": "plans/excl-pool-ab-prereg-20260927.md",
+ "runtime_sec": 1814.1,
+ "arm_runtimes_sec": {
+  "excl_ctrl_sa": 383.4,
+  "excl_ctrl_sb": 397.1,
+  "excl_min_sa": 289.3,
+  "excl_min_sb": 295.4,
+  "excl_gate_sa": 210.4,
+  "excl_gate_sb": 210.0
+ },
+ "audit": {
+  "all31": [
+   "amount_log",
+   "beta_250",
+   "bias_20",
+   "bias_60",
+   "bp",
+   "debt_to_assets",
+   "dv_ttm",
+   "ep",
+   "eps_yoy",
+   "grossprofit_margin",
+   "high_52w",
+   "illiq",
+   "lhb_cnt20",
+   "lhb_net20",
+   "lhb_org_net20",
+   "low_52w",
+   "mom_120",
+   "mom_20",
+   "mom_250",
+   "mom_60",
+   "netprofit_yoy",
+   "or_yoy",
+   "ret_max20",
+   "rev_5",
+   "roe",
+   "size",
+   "skew_20",
+   "turnover_20",
+   "turnover_chg",
+   "vol_20",
+   "vol_60"
+  ],
+  "s5_flipped": [
+   "bias_60",
+   "high_52w",
+   "lhb_cnt20",
+   "lhb_net20",
+   "rev_5"
+  ],
+  "gate_keep": [
+   "grossprofit_margin",
+   "mom_120",
+   "mom_60",
+   "roe",
+   "size",
+   "turnover_20"
+  ],
+  "min_keep_n": 26,
+  "gate_keep_n": 6
+ },
+ "next": "portfolio_admission_gate.py --ctrl excl_ctrl --cand excl_min --tag exclmin / --cand excl_gate --tag exclgate"
+}

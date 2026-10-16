@@ -1,0 +1,157 @@
+{
+ "ran_at": "2026-09-27T11:30:07",
+ "prereg": "plans/holdperiod-ab-prereg-20260927.md",
+ "eval_start": "20190722",
+ "table": "model_score",
+ "runs": {
+  "A_month_prod": {
+   "anchor": "month",
+   "periods": 85,
+   "periods_per_year": 12,
+   "ann_return": 0.2009,
+   "bench_ann": 0.0602,
+   "excess_ann": 0.1407,
+   "max_drawdown": -0.2792,
+   "win_rate": 0.5529,
+   "ic_mean": 0.0962,
+   "icir": 0.862,
+   "avg_turnover": 0.8946
+  },
+  "A_month_full": {
+   "anchor": "month",
+   "periods": 115,
+   "periods_per_year": 12,
+   "ann_return": 0.0993,
+   "bench_ann": 0.0531,
+   "excess_ann": 0.0462,
+   "max_drawdown": -0.5107,
+   "win_rate": 0.487,
+   "ic_mean": 0.0861,
+   "icir": 0.737,
+   "avg_turnover": 0.9009
+  },
+  "B1_2month_even_prod": {
+   "anchor": "2month_even",
+   "periods": 42,
+   "periods_per_year": 6,
+   "ann_return": 0.0119,
+   "bench_ann": 0.0567,
+   "excess_ann": -0.0447,
+   "max_drawdown": -0.2877,
+   "win_rate": 0.4524,
+   "ic_mean": 0.069,
+   "icir": 0.594,
+   "avg_turnover": 0.9545
+  },
+  "B1_2month_even_full": {
+   "anchor": "2month_even",
+   "periods": 57,
+   "periods_per_year": 6,
+   "ann_return": -0.0064,
+   "bench_ann": 0.0504,
+   "excess_ann": -0.0569,
+   "max_drawdown": -0.3691,
+   "win_rate": 0.4386,
+   "ic_mean": 0.0638,
+   "icir": 0.53,
+   "avg_turnover": 0.9607
+  },
+  "B2_2month_odd_prod": {
+   "anchor": "2month_odd",
+   "periods": 42,
+   "periods_per_year": 6,
+   "ann_return": 0.1492,
+   "bench_ann": 0.0583,
+   "excess_ann": 0.0909,
+   "max_drawdown": -0.4625,
+   "win_rate": 0.5714,
+   "ic_mean": 0.1202,
+   "icir": 1.204,
+   "avg_turnover": 0.9293
+  },
+  "B2_2month_odd_full": {
+   "anchor": "2month_odd",
+   "periods": 57,
+   "periods_per_year": 6,
+   "ann_return": 0.0746,
+   "bench_ann": 0.05,
+   "excess_ann": 0.0245,
+   "max_drawdown": -0.4625,
+   "win_rate": 0.5263,
+   "ic_mean": 0.1058,
+   "icir": 0.976,
+   "avg_turnover": 0.9452
+  }
+ },
+ "reproduction_A_vs_pin": {
+  "prod": {
+   "ref": "nfab_ctrl_sa",
+   "max_abs_diff": 0.0,
+   "diffs": {
+    "ann_return": 0.0,
+    "max_drawdown": 0.0,
+    "avg_turnover": 0.0
+   }
+  },
+  "full": {
+   "ref": "nfab_ctrl_sa",
+   "max_abs_diff": 0.0,
+   "diffs": {
+    "ann_return": 0.0,
+    "max_drawdown": 0.0,
+    "avg_turnover": 0.0
+   }
+  },
+  "ok": true
+ },
+ "deltas": {
+  "B1_2month_even_prod": {
+   "d_excess": -0.18539999999999998,
+   "d_mdd": -0.008500000000000008,
+   "annual_turnover_ratio": 0.5334786496758328,
+   "periods_per_year": 6
+  },
+  "B1_2month_even_full": {
+   "d_excess": -0.1031,
+   "d_mdd": 0.14160000000000006,
+   "annual_turnover_ratio": 0.5331890331890331,
+   "periods_per_year": 6
+  },
+  "B2_2month_odd_prod": {
+   "d_excess": -0.0498,
+   "d_mdd": -0.18330000000000002,
+   "annual_turnover_ratio": 0.5193941426335793,
+   "periods_per_year": 6
+  },
+  "B2_2month_odd_full": {
+   "d_excess": -0.021699999999999997,
+   "d_mdd": 0.04820000000000002,
+   "annual_turnover_ratio": 0.5245865245865247,
+   "periods_per_year": 6
+  }
+ },
+ "criteria": {
+  "mech": {
+   "ppy": 6,
+   "turnover_cut": 0.4
+  },
+  "p1": "双窗 Δexcess 同向为正",
+  "p2": "Δmdd ≥ -0.02",
+  "p3": "双相位同号"
+ },
+ "checks": {
+  "mechanism_ok": true,
+  "p1": {
+   "B1_2month_even": false,
+   "B2_2month_odd": false
+  },
+  "p2": {
+   "B1_2month_even": true,
+   "B2_2month_odd": false
+  },
+  "p3_phase": true
+ },
+ "verdict": "REJECT（线结清）",
+ "note": "配置级 A/B 无双种子集维度; 生产变更须拍板; run_tag=hpab_ 留痕不自清",
+ "runtime_sec": 72.3
+}

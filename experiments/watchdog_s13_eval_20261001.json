@@ -1,0 +1,145 @@
+{
+ "generated_at": "2026-10-01 14:16:33",
+ "eval_window": "2026-09-25 ~ 2026-10-01（7 天，处置 09-24 23:17 启用后）",
+ "criteria": {
+  "F1": "定时档 = 分钟尾数 5 且秒 ≤9；其余 = 额外（逐字同源 0922 取证脚本）",
+  "F2": "自愈事件 = 本次调用内出现「已发出拉起命令」；每次调用至多计 1",
+  "S13_main": "定时档自愈率 vs 基线 0.81%：趋近 0 = 支持 / 不变 = 无效",
+  "contamination": "09-24 四次计划内重启（22:15/22:32/23:05/23:17）按日期过滤天然窗外"
+ },
+ "baseline": {
+  "rate_sched": 0.0081,
+  "restarts_sched": 8,
+  "days": 7,
+  "source": "确认集 09-15~09-21（experiments/watchdog_restart_forensics.json）"
+ },
+ "eval": {
+  "calls_sched": 950,
+  "restarts_sched": 1,
+  "rate_sched": 0.001053,
+  "calls_extra": 12,
+  "restarts_extra": 12,
+  "rate_extra": 1.0,
+  "sched_events": [
+   {
+    "time": "2026-09-29 15:55:03"
+   }
+  ],
+  "extra_events": [
+   {
+    "time": "2026-09-25 01:16:54",
+    "window": "±10min",
+    "app_hit": false,
+    "hit_files": []
+   },
+   {
+    "time": "2026-09-25 13:56:09",
+    "window": "±10min",
+    "app_hit": false,
+    "hit_files": []
+   },
+   {
+    "time": "2026-09-26 18:27:54",
+    "window": "±10min",
+    "app_hit": false,
+    "hit_files": []
+   },
+   {
+    "time": "2026-09-27 01:16:48",
+    "window": "±10min",
+    "app_hit": false,
+    "hit_files": []
+   },
+   {
+    "time": "2026-09-27 14:31:18",
+    "window": "±10min",
+    "app_hit": false,
+    "hit_files": []
+   },
+   {
+    "time": "2026-09-28 13:49:36",
+    "window": "±10min",
+    "app_hit": true,
+    "hit_files": [
+     "app/datasource/lhb_client.py",
+     "app/factors/factor_engine.py",
+     "app/models/trainer.py",
+     "app/portfolio/builder.py",
+     "app/portfolio/chase.py",
+     "app/portfolio/monitor.py",
+     "app/scheduler.py",
+     "app/web/api.py",
+     "app/web/llm.py",
+     "app/web/static/assets/ChartLine-C18OUXi0.js"
+    ]
+   },
+   {
+    "time": "2026-09-28 15:52:41",
+    "window": "±10min",
+    "app_hit": true,
+    "hit_files": [
+     "app/backtest/engine.py",
+     "app/models/daily_score.py",
+     "app/models/fusion.py",
+     "app/pit/engine.py",
+     "app/portfolio/board.py",
+     "app/web/static/assets/ChartLine-249Sw1Ff.js",
+     "app/web/static/assets/DataTable-DWMXvDJx.js",
+     "app/web/static/assets/DataView-BnAsy1aV.js",
+     "app/web/static/assets/KpiGrid-BBDmW0uL.js",
+     "app/web/static/assets/PlanView-eKw59j-K.js"
+    ]
+   },
+   {
+    "time": "2026-09-28 19:18:23",
+    "window": "±10min",
+    "app_hit": false,
+    "hit_files": []
+   },
+   {
+    "time": "2026-09-28 20:52:14",
+    "window": "±10min",
+    "app_hit": true,
+    "hit_files": [
+     "app/config.py",
+     "app/notify.py",
+     "app/scheduler.py",
+     "app/weekly/doctor.py",
+     "app/weekly/health.py",
+     "app/weekly/report.py",
+     "app/weekly/risk.py"
+    ]
+   },
+   {
+    "time": "2026-09-30 16:12:12",
+    "window": "±10min",
+    "app_hit": false,
+    "hit_files": []
+   },
+   {
+    "time": "2026-09-30 21:07:51",
+    "window": "±10min",
+    "app_hit": true,
+    "hit_files": [
+     "app/paper/engine.py"
+    ]
+   },
+   {
+    "time": "2026-09-30 21:56:21",
+    "window": "±10min",
+    "app_hit": true,
+    "hit_files": [
+     "app/paper/engine.py",
+     "app/portfolio/monitor.py"
+    ]
+   }
+  ],
+  "extra_planned_like": 5
+ },
+ "verdict": "S13 部分支持：定时档自愈率较基线明显下降（未到 0），继续观察",
+ "limits": [
+  "TaskScheduler/Operational 仍 enabled:false ⇒ 无 OS 级证据；因果属事后一致非机制证明",
+  "额外调用桶含计划性重启（C2 仅作识别注记，不参与主判据）",
+  "只读：未改计划任务、日志通道、阈值或任何配置"
+ ]
+}

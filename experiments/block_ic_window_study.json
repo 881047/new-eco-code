@@ -1,0 +1,371 @@
+{
+ "meta": {
+  "script": "scripts/oneoff/block_ic_window_study.py",
+  "prereg": "plans/block-ic-window-calib-prereg-20260922.md",
+  "git_head": "6adb0c48",
+  "generated_at": "2026-09-22 22:26:56",
+  "seconds": 156.2,
+  "read_only": true,
+  "thresholds": {
+   "alarm_frac_min": 0.5,
+   "flip_rate_min": 0.3
+  },
+  "note": "改 window/horizon = 改判据 ⇒ 本轮只测量不修改"
+ },
+ "by_horizon": {
+  "5": {
+   "horizon": 5,
+   "window": 12,
+   "baseline_anchors": 60,
+   "asof_count": 175,
+   "asof_first": "20140130",
+   "asof_last": "20260914",
+   "segments": {
+    "monthly": {
+     "B1": {
+      "n": 79,
+      "alarm_frac": 0.418,
+      "flips": 9,
+      "flip_rate": 0.115
+     },
+     "B2": {
+      "n": 79,
+      "alarm_frac": 0.241,
+      "flips": 13,
+      "flip_rate": 0.167
+     },
+     "B3": {
+      "n": 79,
+      "alarm_frac": 0.316,
+      "flips": 8,
+      "flip_rate": 0.103
+     },
+     "B4": {
+      "n": 79,
+      "alarm_frac": 0.228,
+      "flips": 10,
+      "flip_rate": 0.128
+     },
+     "B5": {
+      "n": 79,
+      "alarm_frac": 0.278,
+      "flips": 8,
+      "flip_rate": 0.103
+     },
+     "B6": {
+      "n": 79,
+      "alarm_frac": 0.532,
+      "flips": 15,
+      "flip_rate": 0.192
+     }
+    },
+    "daily": {
+     "B1": {
+      "n": 24,
+      "alarm_frac": 0.042,
+      "flips": 1,
+      "flip_rate": 0.043
+     },
+     "B2": {
+      "n": 24,
+      "alarm_frac": 0.0,
+      "flips": 0,
+      "flip_rate": 0.0
+     },
+     "B3": {
+      "n": 24,
+      "alarm_frac": 0.0,
+      "flips": 0,
+      "flip_rate": 0.0
+     },
+     "B4": {
+      "n": 24,
+      "alarm_frac": 0.25,
+      "flips": 2,
+      "flip_rate": 0.087
+     },
+     "B5": {
+      "n": 24,
+      "alarm_frac": 0.125,
+      "flips": 3,
+      "flip_rate": 0.13
+     },
+     "B6": {
+      "n": 24,
+      "alarm_frac": 0.083,
+      "flips": 1,
+      "flip_rate": 0.043
+     }
+    }
+   },
+   "effective_sample": {
+    "window_natural_days": 18,
+    "non_overlapping_fwd_windows": 3,
+    "note": "日频锚点间隔 1 日、前瞻 5 日 ⇒ 相邻锚点样本重叠"
+   }
+  },
+  "10": {
+   "horizon": 10,
+   "window": 12,
+   "baseline_anchors": 60,
+   "asof_count": 170,
+   "asof_first": "20140130",
+   "asof_last": "20260907",
+   "segments": {
+    "monthly": {
+     "B1": {
+      "n": 79,
+      "alarm_frac": 0.291,
+      "flips": 6,
+      "flip_rate": 0.077
+     },
+     "B2": {
+      "n": 79,
+      "alarm_frac": 0.253,
+      "flips": 7,
+      "flip_rate": 0.09
+     },
+     "B3": {
+      "n": 79,
+      "alarm_frac": 0.266,
+      "flips": 4,
+      "flip_rate": 0.051
+     },
+     "B4": {
+      "n": 79,
+      "alarm_frac": 0.139,
+      "flips": 8,
+      "flip_rate": 0.103
+     },
+     "B5": {
+      "n": 79,
+      "alarm_frac": 0.468,
+      "flips": 22,
+      "flip_rate": 0.282
+     },
+     "B6": {
+      "n": 79,
+      "alarm_frac": 0.266,
+      "flips": 17,
+      "flip_rate": 0.218
+     }
+    },
+    "daily": {
+     "B1": {
+      "n": 19,
+      "alarm_frac": 0.0,
+      "flips": 0,
+      "flip_rate": 0.0
+     },
+     "B2": {
+      "n": 19,
+      "alarm_frac": 0.0,
+      "flips": 0,
+      "flip_rate": 0.0
+     },
+     "B3": {
+      "n": 19,
+      "alarm_frac": 0.0,
+      "flips": 0,
+      "flip_rate": 0.0
+     },
+     "B4": {
+      "n": 19,
+      "alarm_frac": 0.0,
+      "flips": 0,
+      "flip_rate": 0.0
+     },
+     "B5": {
+      "n": 19,
+      "alarm_frac": 0.105,
+      "flips": 3,
+      "flip_rate": 0.167
+     },
+     "B6": {
+      "n": 19,
+      "alarm_frac": 0.158,
+      "flips": 2,
+      "flip_rate": 0.111
+     }
+    }
+   },
+   "effective_sample": {
+    "window_natural_days": 18,
+    "non_overlapping_fwd_windows": 2,
+    "note": "日频锚点间隔 1 日、前瞻 10 日 ⇒ 相邻锚点样本重叠"
+   }
+  },
+  "21": {
+   "horizon": 21,
+   "window": 12,
+   "baseline_anchors": 60,
+   "asof_count": 159,
+   "asof_first": "20140130",
+   "asof_last": "20260821",
+   "segments": {
+    "monthly": {
+     "B1": {
+      "n": 79,
+      "alarm_frac": 0.228,
+      "flips": 6,
+      "flip_rate": 0.077
+     },
+     "B2": {
+      "n": 79,
+      "alarm_frac": 0.0,
+      "flips": 0,
+      "flip_rate": 0.0
+     },
+     "B3": {
+      "n": 79,
+      "alarm_frac": 0.291,
+      "flips": 9,
+      "flip_rate": 0.115
+     },
+     "B4": {
+      "n": 79,
+      "alarm_frac": 0.342,
+      "flips": 9,
+      "flip_rate": 0.115
+     },
+     "B5": {
+      "n": 79,
+      "alarm_frac": 0.481,
+      "flips": 12,
+      "flip_rate": 0.154
+     },
+     "B6": {
+      "n": 79,
+      "alarm_frac": 0.152,
+      "flips": 12,
+      "flip_rate": 0.154
+     }
+    },
+    "daily": {
+     "B1": {
+      "n": 8,
+      "alarm_frac": 0.0,
+      "flips": 0,
+      "flip_rate": 0.0
+     },
+     "B2": {
+      "n": 8,
+      "alarm_frac": 0.0,
+      "flips": 0,
+      "flip_rate": 0.0
+     },
+     "B3": {
+      "n": 8,
+      "alarm_frac": 0.0,
+      "flips": 0,
+      "flip_rate": 0.0
+     },
+     "B4": {
+      "n": 8,
+      "alarm_frac": 0.0,
+      "flips": 0,
+      "flip_rate": 0.0
+     },
+     "B5": {
+      "n": 8,
+      "alarm_frac": 0.0,
+      "flips": 0,
+      "flip_rate": 0.0
+     },
+     "B6": {
+      "n": 8,
+      "alarm_frac": 0.5,
+      "flips": 1,
+      "flip_rate": 0.143
+     }
+    }
+   },
+   "effective_sample": {
+    "window_natural_days": 114,
+    "non_overlapping_fwd_windows": 1,
+    "note": "日频锚点间隔 1 日、前瞻 21 日 ⇒ 相邻锚点样本重叠"
+   }
+  }
+ },
+ "verdict": {
+  "verdict": "暂不需要改",
+  "allergic_p0_blocks": [],
+  "focus_allergic": [],
+  "daily_stats_horizon5": {
+   "B1": {
+    "n": 24,
+    "alarm_frac": 0.042,
+    "flips": 1,
+    "flip_rate": 0.043
+   },
+   "B2": {
+    "n": 24,
+    "alarm_frac": 0.0,
+    "flips": 0,
+    "flip_rate": 0.0
+   },
+   "B3": {
+    "n": 24,
+    "alarm_frac": 0.0,
+    "flips": 0,
+    "flip_rate": 0.0
+   },
+   "B4": {
+    "n": 24,
+    "alarm_frac": 0.25,
+    "flips": 2,
+    "flip_rate": 0.087
+   },
+   "B5": {
+    "n": 24,
+    "alarm_frac": 0.125,
+    "flips": 3,
+    "flip_rate": 0.13
+   },
+   "B6": {
+    "n": 24,
+    "alarm_frac": 0.083,
+    "flips": 1,
+    "flip_rate": 0.043
+   }
+  },
+  "monthly_stats_horizon5": {
+   "B1": {
+    "n": 79,
+    "alarm_frac": 0.418,
+    "flips": 9,
+    "flip_rate": 0.115
+   },
+   "B2": {
+    "n": 79,
+    "alarm_frac": 0.241,
+    "flips": 13,
+    "flip_rate": 0.167
+   },
+   "B3": {
+    "n": 79,
+    "alarm_frac": 0.316,
+    "flips": 8,
+    "flip_rate": 0.103
+   },
+   "B4": {
+    "n": 79,
+    "alarm_frac": 0.228,
+    "flips": 10,
+    "flip_rate": 0.128
+   },
+   "B5": {
+    "n": 79,
+    "alarm_frac": 0.278,
+    "flips": 8,
+    "flip_rate": 0.103
+   },
+   "B6": {
+    "n": 79,
+    "alarm_frac": 0.532,
+    "flips": 15,
+    "flip_rate": 0.192
+   }
+  }
+ }
+}

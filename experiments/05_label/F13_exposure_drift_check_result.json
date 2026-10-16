@@ -1,0 +1,244 @@
+{
+ "capital": 1000000.0,
+ "arms": {
+  "A0_现状": {
+   "2015": {
+    "n": 52,
+    "invested": 0.7373,
+    "cash_over_nav": 0.2627,
+    "ann": 0.7012,
+    "bench": 0.7885,
+    "excess_pp": -8.73,
+    "nav_end": 1699722.0
+   },
+   "2016": {
+    "n": 50,
+    "invested": 0.772,
+    "cash_over_nav": 0.228,
+    "ann": 0.1607,
+    "bench": -0.1454,
+    "excess_pp": 30.61,
+    "nav_end": 1961587.0
+   },
+   "2017": {
+    "n": 51,
+    "invested": 0.7623,
+    "cash_over_nav": 0.2377,
+    "ann": -0.1143,
+    "bench": -0.1561,
+    "excess_pp": 4.18,
+    "nav_end": 1741438.0
+   },
+   "2018": {
+    "n": 51,
+    "invested": 0.7836,
+    "cash_over_nav": 0.2164,
+    "ann": -0.0308,
+    "bench": -0.2865,
+    "excess_pp": 25.57,
+    "nav_end": 1688793.0
+   },
+   "2019": {
+    "n": 52,
+    "invested": 0.8076,
+    "cash_over_nav": 0.1924,
+    "ann": 0.4132,
+    "bench": 0.2441,
+    "excess_pp": 16.91,
+    "nav_end": 2386612.0
+   },
+   "2020": {
+    "n": 51,
+    "invested": 0.8091,
+    "cash_over_nav": 0.1909,
+    "ann": 0.1116,
+    "bench": 0.2048,
+    "excess_pp": -9.32,
+    "nav_end": 2647620.0
+   },
+   "2021": {
+    "n": 52,
+    "invested": 0.7905,
+    "cash_over_nav": 0.2095,
+    "ann": 0.2362,
+    "bench": 0.2231,
+    "excess_pp": 1.31,
+    "nav_end": 3272949.0
+   },
+   "2022": {
+    "n": 50,
+    "invested": 0.8065,
+    "cash_over_nav": 0.1935,
+    "ann": 0.1403,
+    "bench": -0.0798,
+    "excess_pp": 22.01,
+    "nav_end": 3713305.0
+   },
+   "2023": {
+    "n": 50,
+    "invested": 0.7926,
+    "cash_over_nav": 0.2074,
+    "ann": 0.3175,
+    "bench": 0.0741,
+    "excess_pp": 24.34,
+    "nav_end": 4840615.0
+   },
+   "2024": {
+    "n": 52,
+    "invested": 0.7946,
+    "cash_over_nav": 0.2054,
+    "ann": 0.1001,
+    "bench": 0.1247,
+    "excess_pp": -2.46,
+    "nav_end": 5325334.0
+   },
+   "2025": {
+    "n": 52,
+    "invested": 0.7983,
+    "cash_over_nav": 0.2017,
+    "ann": 0.378,
+    "bench": 0.3162,
+    "excess_pp": 6.18,
+    "nav_end": 7338554.0
+   },
+   "2026": {
+    "n": 35,
+    "invested": 0.7852,
+    "cash_over_nav": 0.2148,
+    "ann": -0.0941,
+    "bench": -0.0132,
+    "excess_pp": -8.09,
+    "nav_end": 6866533.0
+   }
+  },
+  "A5_上限1.5": {
+   "2015": {
+    "n": 52,
+    "invested": 0.997,
+    "cash_over_nav": 0.003,
+    "ann": 0.9774,
+    "bench": 0.7885,
+    "excess_pp": 18.89,
+    "nav_end": 1959013.0
+   },
+   "2016": {
+    "n": 50,
+    "invested": 0.9966,
+    "cash_over_nav": 0.0034,
+    "ann": 0.1787,
+    "bench": -0.1454,
+    "excess_pp": 32.42,
+    "nav_end": 2294605.0
+   },
+   "2017": {
+    "n": 51,
+    "invested": 0.9957,
+    "cash_over_nav": 0.0042,
+    "ann": -0.1544,
+    "bench": -0.1561,
+    "excess_pp": 0.17,
+    "nav_end": 1946578.0
+   },
+   "2018": {
+    "n": 51,
+    "invested": 0.9952,
+    "cash_over_nav": 0.0048,
+    "ann": -0.0306,
+    "bench": -0.2865,
+    "excess_pp": 25.6,
+    "nav_end": 1888193.0
+   },
+   "2019": {
+    "n": 52,
+    "invested": 0.9948,
+    "cash_over_nav": 0.0052,
+    "ann": 0.5169,
+    "bench": 0.2441,
+    "excess_pp": 27.28,
+    "nav_end": 2864154.0
+   },
+   "2020": {
+    "n": 51,
+    "invested": 0.9966,
+    "cash_over_nav": 0.0034,
+    "ann": 0.1131,
+    "bench": 0.2048,
+    "excess_pp": -9.17,
+    "nav_end": 3181621.0
+   },
+   "2021": {
+    "n": 52,
+    "invested": 0.9962,
+    "cash_over_nav": 0.0038,
+    "ann": 0.2568,
+    "bench": 0.2231,
+    "excess_pp": 3.36,
+    "nav_end": 3998527.0
+   },
+   "2022": {
+    "n": 50,
+    "invested": 0.9942,
+    "cash_over_nav": 0.0058,
+    "ann": 0.1787,
+    "bench": -0.0798,
+    "excess_pp": 25.85,
+    "nav_end": 4683292.0
+   },
+   "2023": {
+    "n": 50,
+    "invested": 0.9946,
+    "cash_over_nav": 0.0054,
+    "ann": 0.4079,
+    "bench": 0.0741,
+    "excess_pp": 33.38,
+    "nav_end": 6507364.0
+   },
+   "2024": {
+    "n": 52,
+    "invested": 0.9941,
+    "cash_over_nav": 0.0059,
+    "ann": 0.1336,
+    "bench": 0.1247,
+    "excess_pp": 0.88,
+    "nav_end": 7376589.0
+   },
+   "2025": {
+    "n": 52,
+    "invested": 0.9936,
+    "cash_over_nav": 0.0064,
+    "ann": 0.4921,
+    "bench": 0.3162,
+    "excess_pp": 17.59,
+    "nav_end": 11006497.0
+   },
+   "2026": {
+    "n": 35,
+    "invested": 0.9946,
+    "cash_over_nav": 0.0054,
+    "ann": -0.1264,
+    "bench": -0.0132,
+    "excess_pp": -11.32,
+    "nav_end": 10049736.0
+   }
+  }
+ },
+ "secs": 360.7,
+ "verdict": {
+  "A0_现状": {
+   "first_year": "2015",
+   "last_year": "2026",
+   "invested_first": 0.7373,
+   "invested_last": 0.7852,
+   "drift_pp": 4.8,
+   "drift_significant": false
+  },
+  "A5_上限1.5": {
+   "first_year": "2015",
+   "last_year": "2026",
+   "invested_first": 0.997,
+   "invested_last": 0.9946,
+   "drift_pp": -0.2,
+   "drift_significant": false
+  }
+ }
+}

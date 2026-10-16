@@ -1,0 +1,64 @@
+{
+ "ran_at": "2026-09-27T18:52:17",
+ "prereg": "plans/sleeve-ab-prereg-20260927.md",
+ "candidates": [
+  "CNTP5",
+  "CORD10",
+  "CORD20",
+  "CORD30",
+  "CORD5",
+  "CORD60",
+  "IMAX20",
+  "IMAX60",
+  "IMXD20",
+  "IMXD30",
+  "KLEN",
+  "KLOW",
+  "KUP",
+  "VSUMD60",
+  "VSUMP60"
+ ],
+ "seeds": [
+  42,
+  7
+ ],
+ "n_anchors": 443,
+ "eval_from": "2021-01-01",
+ "n_eval": 289,
+ "arm_a": {
+  "n": 289,
+  "ann_excess": 0.1342,
+  "mdd": -0.2582,
+  "vol_ann": 0.1588,
+  "sharpe_excess": 0.845
+ },
+ "arm_b": {
+  "n": 289,
+  "ann_excess": 0.1374,
+  "mdd": -0.2222,
+  "vol_ann": 0.1606,
+  "sharpe_excess": 0.856
+ },
+ "turnover": {
+  "a": 0.4679,
+  "b": 0.5297
+ },
+ "paired": {
+  "mean_delta_bp": 0.58,
+  "t": 0.2,
+  "n": 289
+ },
+ "criteria": {
+  "p1": "Δmean>0 且 t≥2",
+  "p2": "MDD 劣化≤2pp",
+  "p3": "|Δ换手|≤10pp"
+ },
+ "checks": {
+  "p1": false,
+  "p2": true,
+  "p3": true
+ },
+ "verdict": "INDETERMINATE",
+ "note": "配对简化模拟器(两臂同规则); 生产采纳须 replay 全保真验证+拍板",
+ "runtime_sec": 322.4
+}

@@ -1,0 +1,26 @@
+{
+ "db_bytes": 12657143808,
+ "page_count": 3090123,
+ "table_count": 194,
+ "model_tables": 135,
+ "model_score_rows": 444312,
+ "model_score_range": [
+  "20170126",
+  "20260831"
+ ],
+ "pipeline_run_max_id": 281,
+ "signal_max": "20260904",
+ "trade_cal_max": "20271231",
+ "daily_max": "20260924",
+ "ledger_sha16": "c34bd674a8a6b549",
+ "block_ic_sha16": "210d9f06f66d98e5",
+ "config_yaml_sha16": "c8e3cd2c31ef9f8b",
+ "backtest_run": "backtest_run: 20260922_trbench",
+ "recorded_at": "2026-09-24 22:12:16",
+ "backup": {
+  "path": "data/backup/neweco_20260924.db",
+  "bytes": 12657143808,
+  "quick_check": "ok",
+  "table_count": 194
+ }
+}

@@ -1,0 +1,54 @@
+{
+ "source_skill": "quantskills/skill-backtest（GPL-3.0，外部工具，未入库）",
+ "inputs": {
+  "F41": "F41_exposure_alignment_result.json",
+  "plan": "plan_20260911.json"
+ },
+ "checks": {
+  "holding_count_stable": {
+   "readout": "实盘方案 98 只 / 名义 top_n 100",
+   "verdict": "通过（98/100，少的 2 只是'一手买不起'被丢弃，已计入 dropped）",
+   "gap": "回测逐期持仓矩阵未落盘 ⇒ 只能用实盘方案做代理，无法看历史分布"
+  },
+  "turnover": {
+   "readout": "袖套每期换手 0.118（全史 491 期, w=1.0）",
+   "reference": "该协议按日频 Top 分位、期望 ≈ 2/H（H=5 ⇒ 单日 ≈40%）",
+   "verdict": "口径不同（周频 + 8× 退出带 + 留存不补仓）⇒ 不作通过/不通过判定",
+   "extra": "折年 ≈ 6.1× 名义资金/年；留出集 0.092/期"
+  },
+  "sharpe_vs_ic_ir": {
+   "readout": "周频 Sharpe 0.1927/期（F38 落盘值）≈ 年化 1.39",
+   "reference": "该协议期望 Sharpe ≈ IC_IR × 0.3~0.5",
+   "verdict": "**无法判定**：IC_IR 需要逐期 IC 序列（mean/sd），而项目只落盘了均值 IC（0.0773）",
+   "gap": "建议把逐期 IC 序列 + 逐期持仓数 + 逐期投入率一起写进实验结果（现在都只有汇总值）"
+  },
+  "mdd_sanity": {
+   "readout": "全史 MDD -36.9%（w=1.0, 491 期）| 留出集 -36.9%",
+   "reference": "A 股 −20%~−40%；MDD < 5% 视为前视嫌疑",
+   "verdict": "通过（落在该区间内，且远离'小到可疑'那一侧）",
+   "extra": "注意：MDD 随敞口走（F25：w=0.873 时 −32.3%）"
+  },
+  "time_invested": {
+   "readout": "回测平均投入率 0.769 | 实盘方案投入率 0.8691",
+   "reference": "该协议期望 80%+",
+   "verdict": "低于阈值：回测 76.9% < 80%（实盘方案 86.9% 已高于它）",
+   "explain": "不是 bug：整手粒度 + 每手成本 + 逆回购计息共同决定了留现金更优；但它意味着约 1/4 的钱不承担 alpha（见 F37 贪婪预算那条被否的对照）"
+  }
+ },
+ "summary": {
+  "passed": [
+   "holding_count_stable",
+   "mdd_sanity"
+  ],
+  "below_reference": [
+   "time_invested"
+  ],
+  "cannot_judge": [
+   "sharpe_vs_ic_ir"
+  ],
+  "not_applicable": [
+   "turnover"
+  ],
+  "note": "本表只作对照：口径不同的条目（换手）不硬判；无法判定的条目一律写明缺哪个产物，不用估计值冒充"
+ }
+}

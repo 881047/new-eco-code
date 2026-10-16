@@ -1,0 +1,307 @@
+{
+  "ran_at": "2026-09-28T18:46:42",
+  "prereg": "plans/exec-window-ab-prereg-20260928.md",
+  "note": "控制臂 = 开盘价（现役 pin 20260928_exe 同口径）。偏离计划：原控制臂为收盘价，但 P1.5 已先落地 ⇒ 收盘价降级为历史对照（G0b），不参与准入。",
+  "min60_files_loaded": 349,
+  "tail_hit_rate": 1.0,
+  "tail_n_hit": 1227,
+  "tail_n_miss": 0,
+  "g1_selfcheck": {
+    "ok": true,
+    "median_abs_bp": 17.53,
+    "median_abs_bp_bar": 50.0,
+    "outlier_frac": 0.00027,
+    "outlier_frac_bar": 0.01,
+    "outlier_def": "|vwap/close-1|>5%",
+    "n": 60224,
+    "mean_signed_bp": -4.91,
+    "p95_abs_bp": 77.44
+  },
+  "g0_bitwise": {
+    "sys_ann": {
+      "base_full": 0.1877,
+      "open_full": 0.1877,
+      "identical": true
+    },
+    "sys_mdd": {
+      "base_full": -0.3214,
+      "open_full": -0.3214,
+      "identical": true
+    },
+    "ann": {
+      "base_full": 0.1865,
+      "open_full": 0.1865,
+      "identical": true
+    },
+    "mdd": {
+      "base_full": -0.3819,
+      "open_full": -0.3819,
+      "identical": true
+    },
+    "turnover": {
+      "base_full": 0.8778,
+      "open_full": 0.8778,
+      "identical": true
+    },
+    "ic": {
+      "base_full": 0.0888,
+      "open_full": 0.0888,
+      "identical": true
+    },
+    "avg_stocks": {
+      "base_full": 4.88,
+      "open_full": 4.88,
+      "identical": true
+    }
+  },
+  "arms": {
+    "base_full": {
+      "arm": "base",
+      "exec_window": "",
+      "window": "full",
+      "run_tag": "exwin_base_full",
+      "run_date": "20260928_exwin_base_full",
+      "periods": 115,
+      "sys_ann": 0.1877,
+      "sys_mdd": -0.3214,
+      "sys_mdd_daily": -0.3358,
+      "ann": 0.1865,
+      "mdd": -0.3819,
+      "turnover": 0.8778,
+      "ic": 0.0888,
+      "avg_stocks": 4.88,
+      "avg_idle": 0.3161
+    },
+    "base_p2020": {
+      "arm": "base",
+      "exec_window": "",
+      "window": "p2020",
+      "run_tag": "exwin_base_p2020",
+      "run_date": "20260928_exwin_base_p2020",
+      "periods": 79,
+      "sys_ann": 0.3301,
+      "sys_mdd": -0.1817,
+      "sys_mdd_daily": -0.3358,
+      "ann": 0.3547,
+      "mdd": -0.2363,
+      "turnover": 0.8863,
+      "ic": 0.1033,
+      "avg_stocks": 4.89,
+      "avg_idle": 0.3074
+    },
+    "open_full": {
+      "arm": "open",
+      "exec_window": "open",
+      "window": "full",
+      "run_tag": "exwin_open_full",
+      "run_date": "20260928_exwin_open_full",
+      "periods": 115,
+      "sys_ann": 0.1877,
+      "sys_mdd": -0.3214,
+      "sys_mdd_daily": -0.3358,
+      "ann": 0.1865,
+      "mdd": -0.3819,
+      "turnover": 0.8778,
+      "ic": 0.0888,
+      "avg_stocks": 4.88,
+      "avg_idle": 0.3161
+    },
+    "open_p2020": {
+      "arm": "open",
+      "exec_window": "open",
+      "window": "p2020",
+      "run_tag": "exwin_open_p2020",
+      "run_date": "20260928_exwin_open_p2020",
+      "periods": 79,
+      "sys_ann": 0.3301,
+      "sys_mdd": -0.1817,
+      "sys_mdd_daily": -0.3358,
+      "ann": 0.3547,
+      "mdd": -0.2363,
+      "turnover": 0.8863,
+      "ic": 0.1033,
+      "avg_stocks": 4.89,
+      "avg_idle": 0.3074
+    },
+    "close_full": {
+      "arm": "close",
+      "exec_window": "close",
+      "window": "full",
+      "run_tag": "exwin_close_full",
+      "run_date": "20260928_exwin_close_full",
+      "periods": 115,
+      "sys_ann": 0.1374,
+      "sys_mdd": -0.3448,
+      "sys_mdd_daily": -0.3553,
+      "ann": 0.1628,
+      "mdd": -0.4344,
+      "turnover": 0.8778,
+      "ic": 0.0888,
+      "avg_stocks": 4.9,
+      "avg_idle": 0.3143
+    },
+    "close_p2020": {
+      "arm": "close",
+      "exec_window": "close",
+      "window": "p2020",
+      "run_tag": "exwin_close_p2020",
+      "run_date": "20260928_exwin_close_p2020",
+      "periods": 79,
+      "sys_ann": 0.2476,
+      "sys_mdd": -0.2217,
+      "sys_mdd_daily": -0.3482,
+      "ann": 0.3194,
+      "mdd": -0.2595,
+      "turnover": 0.8863,
+      "ic": 0.1033,
+      "avg_stocks": 4.87,
+      "avg_idle": 0.3119
+    },
+    "vwap_full": {
+      "arm": "vwap",
+      "exec_window": "vwap",
+      "window": "full",
+      "run_tag": "exwin_vwap_full",
+      "run_date": "20260928_exwin_vwap_full",
+      "periods": 115,
+      "sys_ann": 0.1398,
+      "sys_mdd": -0.3427,
+      "sys_mdd_daily": -0.3644,
+      "ann": 0.1565,
+      "mdd": -0.4133,
+      "turnover": 0.8778,
+      "ic": 0.0888,
+      "avg_stocks": 4.87,
+      "avg_idle": 0.3174
+    },
+    "vwap_p2020": {
+      "arm": "vwap",
+      "exec_window": "vwap",
+      "window": "p2020",
+      "run_tag": "exwin_vwap_p2020",
+      "run_date": "20260928_exwin_vwap_p2020",
+      "periods": 79,
+      "sys_ann": 0.2552,
+      "sys_mdd": -0.2143,
+      "sys_mdd_daily": -0.3502,
+      "ann": 0.3119,
+      "mdd": -0.278,
+      "turnover": 0.8863,
+      "ic": 0.1033,
+      "avg_stocks": 4.86,
+      "avg_idle": 0.3119
+    },
+    "vwap_tail_p2020": {
+      "arm": "vwap_tail",
+      "exec_window": "vwap_tail",
+      "window": "p2020",
+      "run_tag": "exwin_vwap_tail_p2020",
+      "run_date": "20260928_exwin_vwap_tail_p2020",
+      "periods": 79,
+      "sys_ann": 0.2458,
+      "sys_mdd": -0.2283,
+      "sys_mdd_daily": -0.3493,
+      "ann": 0.323,
+      "mdd": -0.2665,
+      "turnover": 0.8863,
+      "ic": 0.1033,
+      "avg_stocks": 4.86,
+      "avg_idle": 0.3129
+    }
+  },
+  "paired_tests": {
+    "close_full": {
+      "n": 114,
+      "t": -1.755,
+      "mean_pp": -0.3814,
+      "sign_agree": 0.5175
+    },
+    "vwap_full": {
+      "n": 114,
+      "t": -2.471,
+      "mean_pp": -0.372,
+      "sign_agree": 0.5526
+    },
+    "close_p2020": {
+      "n": 78,
+      "t": -2.002,
+      "mean_pp": -0.5693,
+      "sign_agree": 0.5769
+    },
+    "vwap_p2020": {
+      "n": 78,
+      "t": -2.601,
+      "mean_pp": -0.5263,
+      "sign_agree": 0.5513
+    },
+    "vwap_tail_p2020": {
+      "n": 78,
+      "t": -2.114,
+      "mean_pp": -0.5803,
+      "sign_agree": 0.4872
+    }
+  },
+  "gate": {
+    "vwap_tail": {
+      "d_sys_ann_prod_pp": -8.43,
+      "d_sys_mdd_prod_pp": -4.66,
+      "d_turnover_pp": 0.0,
+      "paired_t": -2.114,
+      "paired_t_ok": true,
+      "sign_consistent": true,
+      "g2_ann": false,
+      "g2_mdd": false,
+      "g2_turnover": true,
+      "PASS": false
+    },
+    "vwap": {
+      "d_sys_ann_prod_pp": -7.49,
+      "d_sys_mdd_prod_pp": -3.26,
+      "d_turnover_pp": 0.0,
+      "paired_t": -2.601,
+      "paired_t_ok": true,
+      "sign_consistent": true,
+      "g2_ann": false,
+      "g2_mdd": false,
+      "g2_turnover": true,
+      "PASS": false
+    },
+    "close": {
+      "d_sys_ann_prod_pp": -8.25,
+      "d_sys_mdd_prod_pp": -4.0,
+      "d_turnover_pp": 0.0,
+      "paired_t": -2.002,
+      "paired_t_ok": true,
+      "sign_consistent": true,
+      "g2_ann": false,
+      "g2_mdd": false,
+      "g2_turnover": true,
+      "PASS": false
+    }
+  },
+  "verdict": {
+    "G0_bitwise_identical": true,
+    "G0b_close_worse_than_open": true,
+    "G1_data_usable": true,
+    "G2_pass": {
+      "vwap_tail": false,
+      "vwap": false,
+      "close": false
+    },
+    "dual_window_same_sign": {
+      "vwap": {
+        "d_full_pp": -4.79,
+        "d_p2020_pp": -7.49,
+        "same_sign": true
+      },
+      "close": {
+        "d_full_pp": -5.03,
+        "d_p2020_pp": -8.25,
+        "same_sign": true
+      }
+    },
+    "best_delta_pp": -7.49,
+    "stop_loss_triggered": true,
+    "conclusion": "止损：所有臂 Δ 均 <+1.0pp ⇒ 执行窗口作为 alpha 来源结清（读数转为口径测量性质，不采纳为改进动作）"
+  }
+}

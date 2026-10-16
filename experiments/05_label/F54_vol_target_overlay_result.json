@@ -1,0 +1,130 @@
+{
+ "lambda": 0.97,
+ "warmup": 26,
+ "expo_floor": 0.5,
+ "expo_cap": 1.0,
+ "betas": {
+  "buy_rate": 0.00026,
+  "sell_rate": 0.00076
+ },
+ "windows": {
+  "FULL": [
+   "2010-01-01",
+   "2030-12-31"
+  ],
+  "OOS_32m": [
+   "2024-01-01",
+   "2026-08-31"
+  ],
+  "DEAD": [
+   "2020-09-01",
+   "2023-12-31"
+  ]
+ },
+ "seeds": {
+  "seedA": {
+   "FULL": {
+    "n": 492,
+    "excess_static_pp": 17.74,
+    "excess_overlay_pp": 12.3,
+    "excess_static_no_cost_pp": 12.33,
+    "mdd_static": -0.366,
+    "mdd_overlay": -0.3329,
+    "ratio_static": 0.485,
+    "ratio_overlay": 0.369,
+    "mean_expo": 0.855,
+    "pct_at_floor": 0.024,
+    "pct_at_cap": 0.425,
+    "cost_pp_total": 0.22
+   },
+   "OOS_32m": {
+    "n": 138,
+    "excess_static_pp": 9.21,
+    "excess_overlay_pp": -5.08,
+    "excess_static_no_cost_pp": -5.04,
+    "mdd_static": -0.366,
+    "mdd_overlay": -0.3329,
+    "ratio_static": 0.252,
+    "ratio_overlay": 0.153,
+    "mean_expo": 0.691,
+    "pct_at_floor": 0.087,
+    "pct_at_cap": 0.043,
+    "cost_pp_total": 0.09
+   },
+   "DEAD": {
+    "n": 169,
+    "excess_static_pp": 25.64,
+    "excess_overlay_pp": 25.69,
+    "excess_static_no_cost_pp": 25.69,
+    "mdd_static": -0.1622,
+    "mdd_overlay": -0.1622,
+    "ratio_static": 1.581,
+    "ratio_overlay": 1.583,
+    "mean_expo": 0.998,
+    "pct_at_floor": 0.0,
+    "pct_at_cap": 0.947,
+    "cost_pp_total": 0.0
+   }
+  },
+  "seedB": {
+   "FULL": {
+    "n": 492,
+    "excess_static_pp": 17.43,
+    "excess_overlay_pp": 11.97,
+    "excess_static_no_cost_pp": 12.0,
+    "mdd_static": -0.366,
+    "mdd_overlay": -0.3316,
+    "ratio_static": 0.476,
+    "ratio_overlay": 0.361,
+    "mean_expo": 0.853,
+    "pct_at_floor": 0.018,
+    "pct_at_cap": 0.411,
+    "cost_pp_total": 0.22
+   },
+   "OOS_32m": {
+    "n": 138,
+    "excess_static_pp": 11.4,
+    "excess_overlay_pp": -3.54,
+    "excess_static_no_cost_pp": -3.5,
+    "mdd_static": -0.366,
+    "mdd_overlay": -0.3316,
+    "ratio_static": 0.311,
+    "ratio_overlay": 0.107,
+    "mean_expo": 0.692,
+    "pct_at_floor": 0.065,
+    "pct_at_cap": 0.043,
+    "cost_pp_total": 0.09
+   },
+   "DEAD": {
+    "n": 169,
+    "excess_static_pp": 23.57,
+    "excess_overlay_pp": 23.61,
+    "excess_static_no_cost_pp": 23.62,
+    "mdd_static": -0.1611,
+    "mdd_overlay": -0.1611,
+    "ratio_static": 1.463,
+    "ratio_overlay": 1.466,
+    "mean_expo": 0.997,
+    "pct_at_floor": 0.0,
+    "pct_at_cap": 0.917,
+    "cost_pp_total": 0.0
+   }
+  }
+ },
+ "verdict": {
+  "passed": false,
+  "per_seed": {
+   "seedA": {
+    "overlay_beats_static_excess": false,
+    "overlay_cuts_mdd_5pct": true,
+    "pass": false
+   },
+   "seedB": {
+    "overlay_beats_static_excess": false,
+    "overlay_cuts_mdd_5pct": true,
+    "pass": false
+   }
+  },
+  "conclusion": "**未通过** ⇒ 结清这条线：写进 05 号证伪登记（动态敞口在本数据上没能同时改善两轴）"
+ }
+}

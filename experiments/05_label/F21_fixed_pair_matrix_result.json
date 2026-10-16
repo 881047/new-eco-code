@@ -1,0 +1,164 @@
+{
+ "script_sha": "9188d31f79381470",
+ "partners": [
+  "M",
+  "head_vt",
+  "snap",
+  "pit",
+  "h10",
+  "margin_net_share",
+  "flow"
+ ],
+ "seeds": {
+  "seedA": {
+   "common_window": 491,
+   "arms": {
+    "W5_only": {
+     "n": 491,
+     "excess_pp": 9.39,
+     "ann": 0.1482,
+     "mdd": -0.3161,
+     "turnover": 0.152,
+     "ic": 0.084
+    },
+    "W5+M": {
+     "n": 491,
+     "excess_pp": 12.02,
+     "ann": 0.1745,
+     "mdd": -0.3144,
+     "turnover": 0.092,
+     "ic": 0.0706
+    },
+    "W5+head_vt": {
+     "n": 491,
+     "excess_pp": 10.78,
+     "ann": 0.1621,
+     "mdd": -0.3349,
+     "turnover": 0.073,
+     "ic": 0.0826
+    },
+    "W5+snap": {
+     "n": 491,
+     "excess_pp": 13.0,
+     "ann": 0.1844,
+     "mdd": -0.3212,
+     "turnover": 0.089,
+     "ic": 0.0703
+    },
+    "W5+pit": {
+     "n": 491,
+     "excess_pp": 13.16,
+     "ann": 0.186,
+     "mdd": -0.3183,
+     "turnover": 0.093,
+     "ic": 0.0713
+    },
+    "W5+h10": {
+     "n": 491,
+     "excess_pp": 10.86,
+     "ann": 0.163,
+     "mdd": -0.3359,
+     "turnover": 0.116,
+     "ic": 0.0675
+    },
+    "W5+margin_net_share": {
+     "n": 491,
+     "excess_pp": 3.92,
+     "ann": 0.0935,
+     "mdd": -0.3184,
+     "turnover": 0.098,
+     "ic": 0.034
+    },
+    "W5+flow": {
+     "n": 491,
+     "excess_pp": 8.69,
+     "ann": 0.1412,
+     "mdd": -0.3262,
+     "turnover": 0.14,
+     "ic": 0.0629
+    }
+   }
+  },
+  "seedB": {
+   "common_window": 491,
+   "arms": {
+    "W5_only": {
+     "n": 491,
+     "excess_pp": 8.85,
+     "ann": 0.1428,
+     "mdd": -0.315,
+     "turnover": 0.152,
+     "ic": 0.0843
+    },
+    "W5+M": {
+     "n": 491,
+     "excess_pp": 11.52,
+     "ann": 0.1696,
+     "mdd": -0.3437,
+     "turnover": 0.092,
+     "ic": 0.0706
+    },
+    "W5+head_vt": {
+     "n": 491,
+     "excess_pp": 11.31,
+     "ann": 0.1675,
+     "mdd": -0.3325,
+     "turnover": 0.073,
+     "ic": 0.0827
+    },
+    "W5+snap": {
+     "n": 491,
+     "excess_pp": 12.26,
+     "ann": 0.1769,
+     "mdd": -0.3213,
+     "turnover": 0.089,
+     "ic": 0.0703
+    },
+    "W5+pit": {
+     "n": 491,
+     "excess_pp": 12.48,
+     "ann": 0.1792,
+     "mdd": -0.3272,
+     "turnover": 0.093,
+     "ic": 0.0713
+    },
+    "W5+h10": {
+     "n": 491,
+     "excess_pp": 10.15,
+     "ann": 0.1559,
+     "mdd": -0.3351,
+     "turnover": 0.115,
+     "ic": 0.0673
+    },
+    "W5+margin_net_share": {
+     "n": 491,
+     "excess_pp": 4.43,
+     "ann": 0.0986,
+     "mdd": -0.3153,
+     "turnover": 0.098,
+     "ic": 0.0336
+    },
+    "W5+flow": {
+     "n": 491,
+     "excess_pp": 7.74,
+     "ann": 0.1317,
+     "mdd": -0.3336,
+     "turnover": 0.139,
+     "ic": 0.0629
+    }
+   }
+  }
+ },
+ "verdict": {
+  "baseline": "W5+M",
+  "baseline_excess": {
+   "seedA": 12.02,
+   "seedB": 11.52
+  },
+  "adopt": [
+   "W5+pit"
+  ],
+  "note": "两套种子同时 ≥ 基准+0.5pp 且 MDD 不劣 10% 且 IC 不降, 才采纳"
+ },
+ "secs": 401.6
+}

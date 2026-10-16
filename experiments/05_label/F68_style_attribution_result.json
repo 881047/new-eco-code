@@ -1,0 +1,116 @@
+{
+ "protocol": {
+  "specs": {
+   "SMB": {
+    "factor": "size",
+    "higher_is_better": false
+   },
+   "HML": {
+    "factor": "bp",
+    "higher_is_better": true
+   },
+   "MOM": {
+    "factor": "mom_120",
+    "higher_is_better": true
+   },
+   "LOWVOL": {
+    "factor": "vol_60",
+    "higher_is_better": false
+   }
+  },
+  "quintile": 0.2,
+  "h": 5,
+  "windows": {
+   "full": [
+    "2010-01-01",
+    "2030-12-31"
+   ],
+   "active": [
+    "2024-01-01",
+    "2026-08-31"
+   ]
+  },
+  "criteria": "① 全史 α_t≥2（正） ② 留出集 α>0"
+ },
+ "factor_stats": {
+  "SMB": {
+   "mean_pp": 0.292,
+   "t": 2.8
+  },
+  "HML": {
+   "mean_pp": 0.203,
+   "t": 3.26
+  },
+  "MOM": {
+   "mean_pp": -0.121,
+   "t": -1.54
+  },
+  "LOWVOL": {
+   "mean_pp": 0.177,
+   "t": 1.81
+  }
+ },
+ "seeds": {
+  "seedA": {
+   "FULL": {
+    "alpha_pp": 0.317,
+    "alpha_t": 5.07,
+    "betas": {
+     "SMB": -0.057,
+     "HML": -0.007,
+     "MOM": -0.013,
+     "LOWVOL": 0.033
+    },
+    "r2": 0.014,
+    "n": 490
+   },
+   "ACTIVE": {
+    "alpha_pp": 0.25,
+    "alpha_t": 1.43,
+    "betas": {
+     "SMB": -0.136,
+     "HML": -0.082,
+     "MOM": 0.027,
+     "LOWVOL": 0.078
+    },
+    "r2": 0.055,
+    "n": 138
+   },
+   "alpha_ok": true,
+   "active_ok": true,
+   "pass": true
+  },
+  "seedB": {
+   "FULL": {
+    "alpha_pp": 0.31,
+    "alpha_t": 5.02,
+    "betas": {
+     "SMB": -0.054,
+     "HML": -0.008,
+     "MOM": -0.023,
+     "LOWVOL": 0.032
+    },
+    "r2": 0.012,
+    "n": 490
+   },
+   "ACTIVE": {
+    "alpha_pp": 0.287,
+    "alpha_t": 1.63,
+    "betas": {
+     "SMB": -0.144,
+     "HML": -0.136,
+     "MOM": -0.006,
+     "LOWVOL": 0.09
+    },
+    "r2": 0.057,
+    "n": 138
+   },
+   "alpha_ok": true,
+   "active_ok": true,
+   "pass": true
+  }
+ },
+ "verdict": {
+  "both_seeds_pass": true
+ }
+}

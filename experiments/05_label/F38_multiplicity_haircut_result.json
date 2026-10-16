@@ -1,0 +1,75 @@
+{
+ "script_sha": "622289f3afe7e72b",
+ "trial_sharpes_doc": {
+  "L0": -1.0,
+  "L1": 0.37,
+  "L4": 0.49,
+  "L5": 0.67,
+  "L7": 0.74,
+  "M5": 0.79,
+  "M6": 0.81
+ },
+ "seeds": {
+  "seedA": {
+   "T": 491,
+   "sr_week": 0.1927,
+   "sr_ann": 1.39,
+   "skew": -2.652,
+   "kurtosis": 27.882,
+   "var_trials_doc_ann": 0.4128,
+   "n_trials_doc": 7,
+   "dsr_n7": {
+    "sr0_period": 0.1236,
+    "sr0_annual": 0.891,
+    "dsr": 0.8756
+   },
+   "dsr_n25": {
+    "sr0_period": 0.1779,
+    "sr0_annual": 1.283,
+    "dsr": 0.5972
+   },
+   "excess_t_hac": 4.28,
+   "p_bonferroni": {
+    "1": 9e-06,
+    "7": 6.6e-05,
+    "25": 0.000236,
+    "38": 0.000359,
+    "1000": 0.009447
+   }
+  },
+  "seedB": {
+   "T": 491,
+   "sr_week": 0.1845,
+   "sr_ann": 1.33,
+   "skew": -2.569,
+   "kurtosis": 27.345,
+   "var_trials_doc_ann": 0.4128,
+   "n_trials_doc": 7,
+   "dsr_n7": {
+    "sr0_period": 0.1236,
+    "sr0_annual": 0.891,
+    "dsr": 0.8495
+   },
+   "dsr_n25": {
+    "sr0_period": 0.1779,
+    "sr0_annual": 1.283,
+    "dsr": 0.544
+   },
+   "excess_t_hac": 4.11,
+   "p_bonferroni": {
+    "1": 2e-05,
+    "7": 0.00014,
+    "25": 0.0005,
+    "38": 0.000759,
+    "1000": 0.019981
+   }
+  }
+ },
+ "verdict": {
+  "dsr_n7_min": 0.8495,
+  "pass_95": false,
+  "note": "**DSR <0.95 ⇒ 不得再把全史超额当显著读数**：README/看板必须带'多重比较后不显著'；可辩护的只有 F28 样本外 + F24 归因 + 未来的纸面样本",
+  "bonferroni_note": "同一 t 统计量在 N≤1000 下都过（回答的是'超额>0'，与 DSR 不是同一个问题）"
+ },
+ "secs": 370.9
+}

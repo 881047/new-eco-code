@@ -1,0 +1,26 @@
+# 统一文本行尾：仓库里历史文件是 LF，Windows 检出为 CRLF（git 已在做，此处显式声明）
+* text=auto
+
+# 大体积 vendored 前端库（1MB）：不做行尾转换、不生成 diff（2026-09-12 独立审计 #21）
+#   echarts.min.js 是运行时依赖（app/web/static/index.html 引用），保留在库内，
+#   但它是压缩后的第三方产物，diff 无意义且会拖慢 review。
+app/web/static/echarts.min.js -text -diff
+
+# 二进制产物：任何情况下不做行尾/合并处理
+*.npz binary
+*.db binary
+*.db-wal binary
+*.db-shm binary
+*.xlsx binary
+*.docx binary
+
+# 计划任务入口：cmd.exe / 脚本宿主解析 **LF 行尾**的批次文件会错位（2026-09-13 实测：一版用
+# LF 写的 .cmd 被解析成一串 'EALPY is not recognized'）。这是计划任务运行时才暴露的静默失效，
+# 所以从这里钉死"检出即 CRLF"（内容另由 tests/test_service_watchdog.py 守卫）。
+#
+# 2026-10-13 扩到**全部**任务入口 —— 原规则只钉了 watchdog_task.cmd 一个文件，属**同族漏网**：
+# 实测 23 个任务入口里 18 个仍是 LF（check_monthly_chain.bat / satellite_rebal_daily.bat
+# 与 16 个 silent_*.vbs）。"只修手上那一处、没扫同族"是 07 号台账的既有主题。
+scripts/*.cmd text eol=crlf
+scripts/*.bat text eol=crlf
+scripts/*.vbs text eol=crlf

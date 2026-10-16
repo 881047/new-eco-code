@@ -1,0 +1,303 @@
+{
+ "panel": {
+  "fingerprint": "53ed29b669ed48a3",
+  "factor_max": "20260922",
+  "anchors": 653,
+  "cols": 5824,
+  "names": [
+   "amount_log",
+   "beta_250",
+   "bias_20",
+   "bias_60",
+   "bp",
+   "debt_to_assets",
+   "dv_ttm",
+   "ep",
+   "eps_yoy",
+   "grossprofit_margin",
+   "high_52w",
+   "illiq",
+   "lhb_cnt20",
+   "lhb_net20",
+   "lhb_org_net20",
+   "low_52w",
+   "mom_120",
+   "mom_20",
+   "mom_250",
+   "mom_60",
+   "netprofit_yoy",
+   "or_yoy",
+   "ret_max20",
+   "rev_5",
+   "roe",
+   "size",
+   "skew_20",
+   "turnover_20",
+   "turnover_chg",
+   "vol_20",
+   "vol_60"
+  ],
+  "secs": 56
+ },
+ "train": {
+  "arms": {
+   "r2_s1": {
+    "factors": 22,
+    "secs": 246.0,
+    "S_shape": [
+     653,
+     5824
+    ],
+    "skipped": true
+   },
+   "g0_s1": {
+    "factors": 31,
+    "secs": 300.7,
+    "S_shape": [
+     653,
+     5824
+    ]
+   },
+   "g0_s2": {
+    "factors": 31,
+    "secs": 304.8,
+    "S_shape": [
+     653,
+     5824
+    ]
+   },
+   "r1_s1": {
+    "factors": 24,
+    "secs": 264.1,
+    "S_shape": [
+     653,
+     5824
+    ]
+   },
+   "r1_s2": {
+    "factors": 24,
+    "secs": 333.9,
+    "S_shape": [
+     653,
+     5824
+    ]
+   },
+   "r2_s2": {
+    "factors": 22,
+    "secs": 288.2,
+    "S_shape": [
+     653,
+     5824
+    ]
+   },
+   "r3_s1": {
+    "factors": 28,
+    "secs": 328.9,
+    "S_shape": [
+     653,
+     5824
+    ]
+   },
+   "r3_s2": {
+    "factors": 28,
+    "secs": 306.8,
+    "S_shape": [
+     653,
+     5824
+    ]
+   },
+   "e1_s1": {
+    "factors": 27,
+    "secs": 287.1,
+    "S_shape": [
+     653,
+     5824
+    ]
+   },
+   "e1_s2": {
+    "factors": 27,
+    "secs": 279.0,
+    "S_shape": [
+     653,
+     5824
+    ]
+   },
+   "g0_p": {
+    "factors": 31,
+    "secs": 299.3,
+    "S_shape": [
+     653,
+     5824
+    ]
+   }
+  },
+  "fingerprint": "53ed29b669ed48a3"
+ },
+ "research": {
+  "sell_rate_bp": 7.6,
+  "eval_window": [
+   "2017-02-03",
+   "2026-09-22"
+  ],
+  "n_eval": 494,
+  "snapshot_drift": {
+   "drifted": false,
+   "fingerprint_panel": "53ed29b669ed48a3",
+   "fingerprint_now": "53ed29b669ed48a3",
+   "factor_max_now": "20260922"
+  },
+  "per_arm": {
+   "g0_s1": {
+    "n": 492,
+    "ann_pp": 20.6266,
+    "ic_mean": 0.0813,
+    "ACTIVE_ann_pp": 12.122,
+    "DEAD_ann_pp": 23.9755
+   },
+   "g0_s2": {
+    "n": 492,
+    "ann_pp": 20.4797,
+    "ic_mean": 0.0812,
+    "ACTIVE_ann_pp": 12.8846,
+    "DEAD_ann_pp": 23.4705
+   },
+   "r1_s1": {
+    "n": 492,
+    "ann_pp": 22.6617,
+    "ic_mean": 0.0806,
+    "ACTIVE_ann_pp": 13.6785,
+    "DEAD_ann_pp": 26.1989
+   },
+   "r1_s2": {
+    "n": 492,
+    "ann_pp": 23.2986,
+    "ic_mean": 0.0806,
+    "ACTIVE_ann_pp": 17.1065,
+    "DEAD_ann_pp": 25.7368
+   },
+   "r2_s1": {
+    "n": 492,
+    "ann_pp": 19.2471,
+    "ic_mean": 0.0814,
+    "ACTIVE_ann_pp": 9.986,
+    "DEAD_ann_pp": 22.8938
+   },
+   "r2_s2": {
+    "n": 492,
+    "ann_pp": 19.2241,
+    "ic_mean": 0.0816,
+    "ACTIVE_ann_pp": 10.6104,
+    "DEAD_ann_pp": 22.6158
+   },
+   "r3_s1": {
+    "n": 492,
+    "ann_pp": 21.5605,
+    "ic_mean": 0.0805,
+    "ACTIVE_ann_pp": 16.3387,
+    "DEAD_ann_pp": 23.6167
+   },
+   "r3_s2": {
+    "n": 492,
+    "ann_pp": 19.6861,
+    "ic_mean": 0.0805,
+    "ACTIVE_ann_pp": 12.9999,
+    "DEAD_ann_pp": 22.3189
+   },
+   "e1_s1": {
+    "n": 492,
+    "ann_pp": 19.9684,
+    "ic_mean": 0.0801,
+    "ACTIVE_ann_pp": 10.9425,
+    "DEAD_ann_pp": 23.5224
+   },
+   "e1_s2": {
+    "n": 492,
+    "ann_pp": 20.3194,
+    "ic_mean": 0.08,
+    "ACTIVE_ann_pp": 13.4844,
+    "DEAD_ann_pp": 23.0108
+   },
+   "g0_p": {
+    "n": 492,
+    "ann_pp": 19.4286,
+    "ic_mean": 0.081,
+    "ACTIVE_ann_pp": 10.351,
+    "DEAD_ann_pp": 23.0031
+   }
+  }
+ },
+ "analyze": {
+  "g0_1": {
+   "g0p_vs_s1_median_spearman": 0.9743,
+   "g0p_vs_s2_median_spearman": 0.9741,
+   "pass": false,
+   "design_defect_note": "阈值 0.99 未计入纯种子噪声地板：g0_p（生产种子）与 g0_s1/s2（零重叠种子）同设施同数据同配置，中位 Spearman 0.974 即种子抽样差异本身（top 段稳、中段散）。设施无恙的实质证据：三臂读数同分布（19.43/20.63/20.48pp，IC 0.0810/0.0813/0.0812）。按 J3 先例（判据设计缺陷、按实质登记、判据不改）挂账：G0-1 不作作废依据；若将来重用此门须先标定种子噪声地板。"
+  },
+  "pairs": {
+   "r1_s1": {
+    "delta_ann_pp": 2.035,
+    "n": 492,
+    "t_paired": 1.522,
+    "ic_floor_ok": true,
+    "pass": false
+   },
+   "r2_s1": {
+    "delta_ann_pp": -1.3796,
+    "n": 492,
+    "t_paired": -1.034,
+    "ic_floor_ok": true,
+    "pass": false
+   },
+   "r3_s1": {
+    "delta_ann_pp": 0.9339,
+    "n": 492,
+    "t_paired": 0.906,
+    "ic_floor_ok": true,
+    "pass": false
+   },
+   "e1_s1": {
+    "delta_ann_pp": -0.6583,
+    "n": 492,
+    "t_paired": -0.528,
+    "ic_floor_ok": true,
+    "pass": false
+   },
+   "r1_s2": {
+    "delta_ann_pp": 2.8188,
+    "n": 492,
+    "t_paired": 2.168,
+    "ic_floor_ok": true,
+    "pass": true
+   },
+   "r2_s2": {
+    "delta_ann_pp": -1.2557,
+    "n": 492,
+    "t_paired": -0.986,
+    "ic_floor_ok": true,
+    "pass": false
+   },
+   "r3_s2": {
+    "delta_ann_pp": -0.7936,
+    "n": 492,
+    "t_paired": -0.766,
+    "ic_floor_ok": true,
+    "pass": false
+   },
+   "e1_s2": {
+    "delta_ann_pp": -0.1603,
+    "n": 492,
+    "t_paired": -0.131,
+    "ic_floor_ok": true,
+    "pass": false
+   }
+  },
+  "arm_verdict": {
+   "r1": false,
+   "r2": false,
+   "r3": false,
+   "e1": false
+  },
+  "verdict": "null",
+  "note": "L2 门（预注册）：每臂双 seed 集全部 Δ≥+0.7pp 且 t≥1.6 且 IC 不劣-0.005；年化 ×52（PER_YEAR=52 在册口径，敏感性见 05 号 Q5）；配对 t 的 SE 只含时间抽样，可能虚高 ≤1.20×（F78b）；越门臂须独立复跑确认（F56 教训），不直接采纳"
+ }
+}

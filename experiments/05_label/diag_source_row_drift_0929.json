@@ -1,0 +1,42 @@
+{
+ "asof": "2026-09-29 21:51:45",
+ "backup": "neweco_20260922.db",
+ "question": "20260831 中性化截面 75% 行跨日漂移的源表定位",
+ "tables": {
+  "daily": {
+   "changed": 0,
+   "deleted": 0,
+   "added": 0
+  },
+  "adj_factor": {
+   "changed": 0,
+   "deleted": 0,
+   "added": 0
+  },
+  "daily_basic": {
+   "changed": 0,
+   "deleted": 0,
+   "added": 0
+  },
+  "lhb": {
+   "changed": 0,
+   "deleted": 0,
+   "added": 0
+  },
+  "lhb_org": {
+   "changed": 0,
+   "deleted": 0,
+   "added": 0
+  },
+  "fina_indicator": {
+   "changed": 0,
+   "deleted": 0,
+   "added": 102
+  },
+  "stock_basic": {
+   "changed": 6,
+   "deleted": 0,
+   "added": 6
+  }
+ }
+}

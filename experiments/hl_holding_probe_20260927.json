@@ -1,0 +1,2354 @@
+{
+ "ran_at": "2026-09-27T11:11:00",
+ "prereg": "plans/hl-holding-probe-prereg-20260927.md",
+ "source": "single_factor_retest_s5_20260927.json",
+ "c_ref": 0.003,
+ "R1_viability": {
+  "n": 31,
+  "viable_frac": 0.25806451612903225,
+  "threshold": "≥ 1/3",
+  "verdict": "CLEARED"
+ },
+ "R2_coherence": {
+  "viable_frac_hl_ge4": 0.2692307692307692,
+  "n_hl_ge4": 26,
+  "viable_frac_hl_le2": 0.0392156862745098,
+  "n_hl_le2": 51,
+  "frozen_prediction": "HL≥4 组 viable 占比 > HL≤2 组",
+  "coherent": true
+ },
+ "R3_layer_candidates": {
+  "extend_hold_candidates": [
+   "bp",
+   "dv_ttm",
+   "ep",
+   "eps_yoy",
+   "illiq",
+   "netprofit_yoy",
+   "or_yoy",
+   "rev_5",
+   "CORD10",
+   "mf_lg_net"
+  ],
+  "monthly_keep": [
+   "amount_log",
+   "beta_250",
+   "bias_20",
+   "bias_60",
+   "debt_to_assets",
+   "grossprofit_margin",
+   "high_52w",
+   "lhb_cnt20",
+   "lhb_net20",
+   "lhb_org_net20",
+   "low_52w",
+   "mom_120",
+   "mom_20",
+   "mom_250",
+   "mom_60",
+   "ret_max20",
+   "roe",
+   "size",
+   "skew_20",
+   "turnover_20",
+   "turnover_chg",
+   "vol_20",
+   "vol_60",
+   "KMID",
+   "KLEN",
+   "KUP",
+   "KLOW",
+   "KSFT",
+   "CORD5",
+   "CNTP5",
+   "BETA10",
+   "RESI30",
+   "RSV10",
+   "IMAX20",
+   "IMAX30",
+   "IMAX60",
+   "IMXD20",
+   "IMXD30",
+   "IMXD60",
+   "CORD20",
+   "CORD30",
+   "CORD60",
+   "CNTD10",
+   "SUMP10",
+   "SUMD10",
+   "VSTD10",
+   "VSUMP10",
+   "VSUMP20",
+   "VSUMP60",
+   "VSUMD10",
+   "VSUMD20",
+   "VSUMD60",
+   "margin_buy_share",
+   "margin_net_share",
+   "margin_net_to_rzye",
+   "mf_main_sm_div",
+   "kg_broker_rec_3m",
+   "m60_cv10",
+   "m60_cv20",
+   "m60_cv5",
+   "m60_lr10",
+   "m60_lr20",
+   "m60_lr5",
+   "m60_lvsxlr",
+   "llm_intraday_reversal_turnover",
+   "llm_turnover_accel_5_20",
+   "llm_turnover_to_pb",
+   "llm_positive_day_ratio_20",
+   "llm_turnover_accel",
+   "llm_vwap_premium",
+   "llm_price_skew_20",
+   "llm_intraday_close_position",
+   "llm_vwap_premium_voladj",
+   "llm_high_low_order_20",
+   "llm_amount_short_long_ratio"
+  ],
+  "note": "读数非判决——生产分层须组合层 A/B 预注册 + 拍板（chase6 惯例）"
+ },
+ "rows": [
+  {
+   "family": "pool",
+   "name": "amount_log",
+   "hl": 6.0,
+   "s5_pass": true,
+   "g_1": -0.1255534534184393,
+   "c_star_1": null,
+   "g_2": -0.11512478664357108,
+   "c_star_2": -0.02085733354973643,
+   "g_3": -0.10738068016026309,
+   "c_star_3": -0.027259159887264305,
+   "viable": false
+  },
+  {
+   "family": "pool",
+   "name": "beta_250",
+   "hl": 6.0,
+   "s5_pass": true,
+   "g_1": -0.04269022069561148,
+   "c_star_1": null,
+   "g_2": -0.04151998518023056,
+   "c_star_2": -0.0023404710307618343,
+   "g_3": -0.04051333070486915,
+   "c_star_3": -0.003265334986113494,
+   "viable": false
+  },
+  {
+   "family": "pool",
+   "name": "bias_20",
+   "hl": 2.0,
+   "s5_pass": true,
+   "g_1": -0.05430412684125967,
+   "c_star_1": null,
+   "g_2": -0.042056102433637235,
+   "c_star_2": -0.024496048815244864,
+   "g_3": -0.022309989973532396,
+   "c_star_3": -0.0479912053015909,
+   "viable": false
+  },
+  {
+   "family": "pool",
+   "name": "bias_60",
+   "hl": 1.0,
+   "s5_pass": false,
+   "g_1": -0.06620847361486767,
+   "c_star_1": null,
+   "g_2": -0.049367417705549095,
+   "c_star_2": -0.03368211181863716,
+   "g_3": -0.03664428605882455,
+   "c_star_3": -0.04434628133406469,
+   "viable": false
+  },
+  {
+   "family": "pool",
+   "name": "bp",
+   "hl": 6.0,
+   "s5_pass": true,
+   "g_1": 0.0742248038146591,
+   "c_star_1": null,
+   "g_2": 0.06917968133420735,
+   "c_star_2": 0.010090244960903494,
+   "g_3": 0.06563097988966846,
+   "c_star_3": 0.012890735887485958,
+   "viable": true
+  },
+  {
+   "family": "pool",
+   "name": "debt_to_assets",
+   "hl": 6.0,
+   "s5_pass": true,
+   "g_1": -0.0007392519921446919,
+   "c_star_1": null,
+   "g_2": -0.001226076090759076,
+   "c_star_2": 0.0009736481972287682,
+   "g_3": -0.002094893874294554,
+   "c_star_3": 0.002033462823224793,
+   "viable": false
+  },
+  {
+   "family": "pool",
+   "name": "dv_ttm",
+   "hl": 6.0,
+   "s5_pass": true,
+   "g_1": 0.03846415738268603,
+   "c_star_1": null,
+   "g_2": 0.03656530044494608,
+   "c_star_2": 0.003797713875479891,
+   "g_3": 0.03476393424662752,
+   "c_star_3": 0.00555033470408776,
+   "viable": true
+  },
+  {
+   "family": "pool",
+   "name": "ep",
+   "hl": 3.0,
+   "s5_pass": true,
+   "g_1": 0.023668307950821414,
+   "c_star_1": null,
+   "g_2": 0.020663694701671426,
+   "c_star_2": 0.006009226498299977,
+   "g_3": 0.01827086651848164,
+   "c_star_3": 0.00809616214850966,
+   "viable": true
+  },
+  {
+   "family": "pool",
+   "name": "eps_yoy",
+   "hl": 6.0,
+   "s5_pass": true,
+   "g_1": -0.012787697949082449,
+   "c_star_1": null,
+   "g_2": -0.013991269256758167,
+   "c_star_2": 0.0024071426153514375,
+   "g_3": -0.015531327466188774,
+   "c_star_3": 0.004115444275659488,
+   "viable": true
+  },
+  {
+   "family": "pool",
+   "name": "grossprofit_margin",
+   "hl": 6.0,
+   "s5_pass": true,
+   "g_1": -0.01598794135413568,
+   "c_star_1": null,
+   "g_2": -0.01657051636718491,
+   "c_star_2": 0.0011651500260984604,
+   "g_3": -0.017054809961693704,
+   "c_star_3": 0.0016003029113370348,
+   "viable": false
+  },
+  {
+   "family": "pool",
+   "name": "high_52w",
+   "hl": 1.0,
+   "s5_pass": false,
+   "g_1": -0.017522657013242564,
+   "c_star_1": null,
+   "g_2": -0.009972345575765967,
+   "c_star_2": -0.015100622874953194,
+   "g_3": -0.0035057086905969596,
+   "c_star_3": -0.021025422483968405,
+   "viable": false
+  },
+  {
+   "family": "pool",
+   "name": "illiq",
+   "hl": 6.0,
+   "s5_pass": true,
+   "g_1": 0.07311839539348478,
+   "c_star_1": null,
+   "g_2": 0.07162199463674124,
+   "c_star_2": 0.0029928015134870756,
+   "g_3": 0.06817066121930714,
+   "c_star_3": 0.007421601261266459,
+   "viable": true
+  },
+  {
+   "family": "pool",
+   "name": "lhb_cnt20",
+   "hl": 1.0,
+   "s5_pass": false,
+   "g_1": -0.018776142270025276,
+   "c_star_1": null,
+   "g_2": -0.011745302835021357,
+   "c_star_2": -0.014061678870007838,
+   "g_3": -0.009431170328865797,
+   "c_star_3": -0.014017457911739218,
+   "viable": false
+  },
+  {
+   "family": "pool",
+   "name": "lhb_net20",
+   "hl": 1.0,
+   "s5_pass": false,
+   "g_1": -0.023153147052626225,
+   "c_star_1": null,
+   "g_2": -0.011750019134575424,
+   "c_star_2": -0.022806255836101602,
+   "g_3": -0.00807860118615728,
+   "c_star_3": -0.022611818799703417,
+   "viable": false
+  },
+  {
+   "family": "pool",
+   "name": "lhb_org_net20",
+   "hl": 2.0,
+   "s5_pass": true,
+   "g_1": -0.030214160750527696,
+   "c_star_1": null,
+   "g_2": -0.02546896067392934,
+   "c_star_2": -0.009490400153196708,
+   "g_3": -0.018292326244859512,
+   "c_star_3": -0.017882751758502274,
+   "viable": false
+  },
+  {
+   "family": "pool",
+   "name": "low_52w",
+   "hl": 4.0,
+   "s5_pass": true,
+   "g_1": -0.07781349842849762,
+   "c_star_1": null,
+   "g_2": -0.06642214150646729,
+   "c_star_2": -0.022782713844060665,
+   "g_3": -0.05932679008454994,
+   "c_star_3": -0.027730062515921517,
+   "viable": false
+  },
+  {
+   "family": "pool",
+   "name": "mom_120",
+   "hl": 2.0,
+   "s5_pass": true,
+   "g_1": -0.042240474861404434,
+   "c_star_1": null,
+   "g_2": -0.03432179705010606,
+   "c_star_2": -0.01583735562259675,
+   "g_3": -0.02758810391587159,
+   "c_star_3": -0.021978556418299263,
+   "viable": false
+  },
+  {
+   "family": "pool",
+   "name": "mom_20",
+   "hl": 2.0,
+   "s5_pass": true,
+   "g_1": -0.026877059224507414,
+   "c_star_1": null,
+   "g_2": -0.0259846724036056,
+   "c_star_2": -0.0017847736418036275,
+   "g_3": -0.017660555995138386,
+   "c_star_3": -0.01382475484405354,
+   "viable": false
+  },
+  {
+   "family": "pool",
+   "name": "mom_250",
+   "hl": 6.0,
+   "s5_pass": true,
+   "g_1": -0.044460158244773194,
+   "c_star_1": null,
+   "g_2": -0.04301175772169713,
+   "c_star_2": -0.002896801046152128,
+   "g_3": -0.03967721012953896,
+   "c_star_3": -0.00717442217285135,
+   "viable": false
+  },
+  {
+   "family": "pool",
+   "name": "mom_60",
+   "hl": 3.0,
+   "s5_pass": true,
+   "g_1": -0.0412514783775407,
+   "c_star_1": null,
+   "g_2": -0.03881500300351519,
+   "c_star_2": -0.004872950748051025,
+   "g_3": -0.0333957915233029,
+   "c_star_3": -0.011783530281356697,
+   "viable": false
+  },
+  {
+   "family": "pool",
+   "name": "netprofit_yoy",
+   "hl": 6.0,
+   "s5_pass": true,
+   "g_1": -0.016153785070243735,
+   "c_star_1": null,
+   "g_2": -0.017418020889656653,
+   "c_star_2": 0.002528471638825837,
+   "g_3": -0.018411195265509748,
+   "c_star_3": 0.003386115292899019,
+   "viable": true
+  },
+  {
+   "family": "pool",
+   "name": "or_yoy",
+   "hl": 6.0,
+   "s5_pass": true,
+   "g_1": -0.015684258413507308,
+   "c_star_1": null,
+   "g_2": -0.016795038230078982,
+   "c_star_2": 0.002221559633143348,
+   "g_3": -0.018293480334081274,
+   "c_star_3": 0.003913832880860948,
+   "viable": true
+  },
+  {
+   "family": "pool",
+   "name": "ret_max20",
+   "hl": 4.0,
+   "s5_pass": true,
+   "g_1": -0.08088741602901339,
+   "c_star_1": null,
+   "g_2": -0.06931247573543309,
+   "c_star_2": -0.02314988058716061,
+   "g_3": -0.06260221887306322,
+   "c_star_3": -0.027427795733925255,
+   "viable": false
+  },
+  {
+   "family": "pool",
+   "name": "rev_5",
+   "hl": 1.0,
+   "s5_pass": false,
+   "g_1": 0.047931606812653474,
+   "c_star_1": null,
+   "g_2": 0.030076168937486134,
+   "c_star_2": 0.03571087575033468,
+   "g_3": 0.013978911234201849,
+   "c_star_3": 0.05092904336767743,
+   "viable": true
+  },
+  {
+   "family": "pool",
+   "name": "roe",
+   "hl": 6.0,
+   "s5_pass": true,
+   "g_1": -0.038973659295159425,
+   "c_star_1": null,
+   "g_2": -0.038453567438097705,
+   "c_star_2": -0.001040183714123441,
+   "g_3": -0.03816801832134787,
+   "c_star_3": -0.001208461460717333,
+   "viable": false
+  },
+  {
+   "family": "pool",
+   "name": "size",
+   "hl": 6.0,
+   "s5_pass": true,
+   "g_1": -0.08134947801136738,
+   "c_star_1": null,
+   "g_2": -0.0770895917867093,
+   "c_star_2": -0.008519772449316176,
+   "g_3": -0.07372533905900013,
+   "c_star_3": -0.011436208428550884,
+   "viable": false
+  },
+  {
+   "family": "pool",
+   "name": "skew_20",
+   "hl": 3.0,
+   "s5_pass": true,
+   "g_1": -0.029829442464238375,
+   "c_star_1": null,
+   "g_2": -0.022396397151983737,
+   "c_star_2": -0.014866090624509276,
+   "g_3": -0.020632069435448624,
+   "c_star_3": -0.013796059543184623,
+   "viable": false
+  },
+  {
+   "family": "pool",
+   "name": "turnover_20",
+   "hl": 4.0,
+   "s5_pass": true,
+   "g_1": -0.07170750341428553,
+   "c_star_1": null,
+   "g_2": -0.06257275710361801,
+   "c_star_2": -0.018269492621335037,
+   "g_3": -0.0565575669707023,
+   "c_star_3": -0.02272490466537484,
+   "viable": false
+  },
+  {
+   "family": "pool",
+   "name": "turnover_chg",
+   "hl": 2.0,
+   "s5_pass": true,
+   "g_1": -0.0411266794578532,
+   "c_star_1": null,
+   "g_2": -0.032314734899436245,
+   "c_star_2": -0.017623889116833907,
+   "g_3": -0.026801515090190086,
+   "c_star_3": -0.021487746551494668,
+   "viable": false
+  },
+  {
+   "family": "pool",
+   "name": "vol_20",
+   "hl": 4.0,
+   "s5_pass": true,
+   "g_1": -0.09037238012609221,
+   "c_star_1": null,
+   "g_2": -0.0802512895766632,
+   "c_star_2": -0.020242181098858003,
+   "g_3": -0.07471189413420547,
+   "c_star_3": -0.02349072898783011,
+   "viable": false
+  },
+  {
+   "family": "pool",
+   "name": "vol_60",
+   "hl": 4.0,
+   "s5_pass": true,
+   "g_1": -0.09378844099632183,
+   "c_star_1": null,
+   "g_2": -0.08522195530660351,
+   "c_star_2": -0.017132971379436646,
+   "g_3": -0.07925673906382816,
+   "c_star_3": -0.021797552898740507,
+   "viable": false
+  },
+  {
+   "family": "bank",
+   "name": "KMID",
+   "hl": 1.0,
+   "s5_pass": false,
+   "g_1": -0.008314851955306263,
+   "c_star_1": null,
+   "g_2": -0.0038058257882482975,
+   "c_star_2": -0.009018052334115931,
+   "g_3": 0.0017960276902669351,
+   "c_star_3": -0.015166319468359796,
+   "viable": false
+  },
+  {
+   "family": "bank",
+   "name": "KLEN",
+   "hl": 4.0,
+   "s5_pass": true,
+   "g_1": -0.076793311528545,
+   "c_star_1": null,
+   "g_2": -0.06498965318438568,
+   "c_star_2": -0.02360731668831864,
+   "g_3": -0.05903695693996039,
+   "c_star_3": -0.026634531882876917,
+   "viable": false
+  },
+  {
+   "family": "bank",
+   "name": "KUP",
+   "hl": 5.0,
+   "s5_pass": true,
+   "g_1": -0.038252704788928206,
+   "c_star_1": null,
+   "g_2": -0.03668353570294855,
+   "c_star_2": -0.0031383381719593123,
+   "g_3": -0.031127013332790093,
+   "c_star_3": -0.010688537184207168,
+   "viable": false
+  },
+  {
+   "family": "bank",
+   "name": "KLOW",
+   "hl": 3.0,
+   "s5_pass": true,
+   "g_1": -0.04024541991411817,
+   "c_star_1": null,
+   "g_2": -0.03579381619324992,
+   "c_star_2": -0.008903207441736491,
+   "g_3": -0.032393183976141854,
+   "c_star_3": -0.011778353906964469,
+   "viable": false
+  },
+  {
+   "family": "bank",
+   "name": "KSFT",
+   "hl": 6.0,
+   "s5_pass": true,
+   "g_1": -0.0031577307853620654,
+   "c_star_1": null,
+   "g_2": 0.0009699309944427546,
+   "c_star_2": -0.00825532355960964,
+   "g_3": 0.004313367558249363,
+   "c_star_3": -0.011206647515417141,
+   "viable": false
+  },
+  {
+   "family": "bank",
+   "name": "OPEN0",
+   "hl": null,
+   "note": "无曲线（未测/无面板）"
+  },
+  {
+   "family": "bank",
+   "name": "HIGH0",
+   "hl": null,
+   "note": "无曲线（未测/无面板）"
+  },
+  {
+   "family": "bank",
+   "name": "LOW0",
+   "hl": null,
+   "note": "无曲线（未测/无面板）"
+  },
+  {
+   "family": "bank",
+   "name": "VWAP0",
+   "hl": null,
+   "note": "无曲线（未测/无面板）"
+  },
+  {
+   "family": "bank",
+   "name": "ROC5",
+   "hl": null,
+   "note": "无曲线（未测/无面板）"
+  },
+  {
+   "family": "bank",
+   "name": "MA5",
+   "hl": null,
+   "note": "无曲线（未测/无面板）"
+  },
+  {
+   "family": "bank",
+   "name": "STD5",
+   "hl": null,
+   "note": "无曲线（未测/无面板）"
+  },
+  {
+   "family": "bank",
+   "name": "BETA5",
+   "hl": null,
+   "note": "无曲线（未测/无面板）"
+  },
+  {
+   "family": "bank",
+   "name": "RSQR5",
+   "hl": null,
+   "note": "无曲线（未测/无面板）"
+  },
+  {
+   "family": "bank",
+   "name": "RESI5",
+   "hl": null,
+   "note": "无曲线（未测/无面板）"
+  },
+  {
+   "family": "bank",
+   "name": "MAX5",
+   "hl": null,
+   "note": "无曲线（未测/无面板）"
+  },
+  {
+   "family": "bank",
+   "name": "MIN5",
+   "hl": null,
+   "note": "无曲线（未测/无面板）"
+  },
+  {
+   "family": "bank",
+   "name": "QTLU5",
+   "hl": null,
+   "note": "无曲线（未测/无面板）"
+  },
+  {
+   "family": "bank",
+   "name": "QTLD5",
+   "hl": null,
+   "note": "无曲线（未测/无面板）"
+  },
+  {
+   "family": "bank",
+   "name": "RANK5",
+   "hl": null,
+   "note": "无曲线（未测/无面板）"
+  },
+  {
+   "family": "bank",
+   "name": "RSV5",
+   "hl": null,
+   "note": "无曲线（未测/无面板）"
+  },
+  {
+   "family": "bank",
+   "name": "IMAX5",
+   "hl": null,
+   "note": "无曲线（未测/无面板）"
+  },
+  {
+   "family": "bank",
+   "name": "IMIN5",
+   "hl": null,
+   "note": "无曲线（未测/无面板）"
+  },
+  {
+   "family": "bank",
+   "name": "IMXD5",
+   "hl": null,
+   "note": "无曲线（未测/无面板）"
+  },
+  {
+   "family": "bank",
+   "name": "CORR5",
+   "hl": null,
+   "note": "无曲线（未测/无面板）"
+  },
+  {
+   "family": "bank",
+   "name": "CORD5",
+   "hl": 2.0,
+   "s5_pass": true,
+   "g_1": -0.032087859457342424,
+   "c_star_1": null,
+   "g_2": -0.031762287946215675,
+   "c_star_2": -0.0006511430222534975,
+   "g_3": -0.021364571921797266,
+   "c_star_3": -0.016084931303317736,
+   "viable": false
+  },
+  {
+   "family": "bank",
+   "name": "CNTP5",
+   "hl": 2.0,
+   "s5_pass": true,
+   "g_1": -0.02721112080657831,
+   "c_star_1": null,
+   "g_2": -0.02331287831823895,
+   "c_star_2": -0.007796484976678716,
+   "g_3": -0.01323702083647166,
+   "c_star_3": -0.020961149955159974,
+   "viable": false
+  },
+  {
+   "family": "bank",
+   "name": "CNTN5",
+   "hl": null,
+   "note": "无曲线（未测/无面板）"
+  },
+  {
+   "family": "bank",
+   "name": "CNTD5",
+   "hl": null,
+   "note": "无曲线（未测/无面板）"
+  },
+  {
+   "family": "bank",
+   "name": "SUMP5",
+   "hl": null,
+   "note": "无曲线（未测/无面板）"
+  },
+  {
+   "family": "bank",
+   "name": "SUMN5",
+   "hl": null,
+   "note": "无曲线（未测/无面板）"
+  },
+  {
+   "family": "bank",
+   "name": "SUMD5",
+   "hl": null,
+   "note": "无曲线（未测/无面板）"
+  },
+  {
+   "family": "bank",
+   "name": "VMA5",
+   "hl": null,
+   "note": "无曲线（未测/无面板）"
+  },
+  {
+   "family": "bank",
+   "name": "VSTD5",
+   "hl": null,
+   "note": "无曲线（未测/无面板）"
+  },
+  {
+   "family": "bank",
+   "name": "WVMA5",
+   "hl": null,
+   "note": "无曲线（未测/无面板）"
+  },
+  {
+   "family": "bank",
+   "name": "VSUMP5",
+   "hl": null,
+   "note": "无曲线（未测/无面板）"
+  },
+  {
+   "family": "bank",
+   "name": "VSUMN5",
+   "hl": null,
+   "note": "无曲线（未测/无面板）"
+  },
+  {
+   "family": "bank",
+   "name": "VSUMD5",
+   "hl": null,
+   "note": "无曲线（未测/无面板）"
+  },
+  {
+   "family": "bank",
+   "name": "KMID2",
+   "hl": null,
+   "note": "无曲线（未测/无面板）"
+  },
+  {
+   "family": "bank",
+   "name": "KUP2",
+   "hl": null,
+   "note": "无曲线（未测/无面板）"
+  },
+  {
+   "family": "bank",
+   "name": "KLOW2",
+   "hl": null,
+   "note": "无曲线（未测/无面板）"
+  },
+  {
+   "family": "bank",
+   "name": "KSFT2",
+   "hl": null,
+   "note": "无曲线（未测/无面板）"
+  },
+  {
+   "family": "bank",
+   "name": "ROC10",
+   "hl": null,
+   "note": "无曲线（未测/无面板）"
+  },
+  {
+   "family": "bank",
+   "name": "ROC20",
+   "hl": null,
+   "note": "无曲线（未测/无面板）"
+  },
+  {
+   "family": "bank",
+   "name": "ROC30",
+   "hl": null,
+   "note": "无曲线（未测/无面板）"
+  },
+  {
+   "family": "bank",
+   "name": "ROC60",
+   "hl": null,
+   "note": "无曲线（未测/无面板）"
+  },
+  {
+   "family": "bank",
+   "name": "MA10",
+   "hl": null,
+   "note": "无曲线（未测/无面板）"
+  },
+  {
+   "family": "bank",
+   "name": "MA20",
+   "hl": null,
+   "note": "无曲线（未测/无面板）"
+  },
+  {
+   "family": "bank",
+   "name": "MA30",
+   "hl": null,
+   "note": "无曲线（未测/无面板）"
+  },
+  {
+   "family": "bank",
+   "name": "MA60",
+   "hl": null,
+   "note": "无曲线（未测/无面板）"
+  },
+  {
+   "family": "bank",
+   "name": "STD10",
+   "hl": null,
+   "note": "无曲线（未测/无面板）"
+  },
+  {
+   "family": "bank",
+   "name": "STD20",
+   "hl": null,
+   "note": "无曲线（未测/无面板）"
+  },
+  {
+   "family": "bank",
+   "name": "STD30",
+   "hl": null,
+   "note": "无曲线（未测/无面板）"
+  },
+  {
+   "family": "bank",
+   "name": "STD60",
+   "hl": null,
+   "note": "无曲线（未测/无面板）"
+  },
+  {
+   "family": "bank",
+   "name": "BETA10",
+   "hl": 2.0,
+   "s5_pass": true,
+   "g_1": -0.053238395799813744,
+   "c_star_1": null,
+   "g_2": -0.03996277917068718,
+   "c_star_2": -0.026551233258253135,
+   "g_3": -0.02332953249985761,
+   "c_star_3": -0.0448632949499342,
+   "viable": false
+  },
+  {
+   "family": "bank",
+   "name": "BETA20",
+   "hl": null,
+   "note": "无曲线（未测/无面板）"
+  },
+  {
+   "family": "bank",
+   "name": "BETA30",
+   "hl": null,
+   "note": "无曲线（未测/无面板）"
+  },
+  {
+   "family": "bank",
+   "name": "BETA60",
+   "hl": null,
+   "note": "无曲线（未测/无面板）"
+  },
+  {
+   "family": "bank",
+   "name": "RSQR10",
+   "hl": null,
+   "note": "无曲线（未测/无面板）"
+  },
+  {
+   "family": "bank",
+   "name": "RSQR20",
+   "hl": null,
+   "note": "无曲线（未测/无面板）"
+  },
+  {
+   "family": "bank",
+   "name": "RSQR30",
+   "hl": null,
+   "note": "无曲线（未测/无面板）"
+  },
+  {
+   "family": "bank",
+   "name": "RSQR60",
+   "hl": null,
+   "note": "无曲线（未测/无面板）"
+  },
+  {
+   "family": "bank",
+   "name": "RESI10",
+   "hl": null,
+   "note": "无曲线（未测/无面板）"
+  },
+  {
+   "family": "bank",
+   "name": "RESI20",
+   "hl": null,
+   "note": "无曲线（未测/无面板）"
+  },
+  {
+   "family": "bank",
+   "name": "RESI30",
+   "hl": 1.0,
+   "s5_pass": false,
+   "g_1": -0.02860657234527588,
+   "c_star_1": null,
+   "g_2": -0.021448830707593035,
+   "c_star_2": -0.014315483275365692,
+   "g_3": -0.008748876753341546,
+   "c_star_3": -0.0297865433879015,
+   "viable": false
+  },
+  {
+   "family": "bank",
+   "name": "RESI60",
+   "hl": null,
+   "note": "无曲线（未测/无面板）"
+  },
+  {
+   "family": "bank",
+   "name": "MAX10",
+   "hl": null,
+   "note": "无曲线（未测/无面板）"
+  },
+  {
+   "family": "bank",
+   "name": "MAX20",
+   "hl": null,
+   "note": "无曲线（未测/无面板）"
+  },
+  {
+   "family": "bank",
+   "name": "MAX30",
+   "hl": null,
+   "note": "无曲线（未测/无面板）"
+  },
+  {
+   "family": "bank",
+   "name": "MAX60",
+   "hl": null,
+   "note": "无曲线（未测/无面板）"
+  },
+  {
+   "family": "bank",
+   "name": "MIN10",
+   "hl": null,
+   "note": "无曲线（未测/无面板）"
+  },
+  {
+   "family": "bank",
+   "name": "MIN20",
+   "hl": null,
+   "note": "无曲线（未测/无面板）"
+  },
+  {
+   "family": "bank",
+   "name": "MIN30",
+   "hl": null,
+   "note": "无曲线（未测/无面板）"
+  },
+  {
+   "family": "bank",
+   "name": "MIN60",
+   "hl": null,
+   "note": "无曲线（未测/无面板）"
+  },
+  {
+   "family": "bank",
+   "name": "QTLU10",
+   "hl": null,
+   "note": "无曲线（未测/无面板）"
+  },
+  {
+   "family": "bank",
+   "name": "QTLU20",
+   "hl": null,
+   "note": "无曲线（未测/无面板）"
+  },
+  {
+   "family": "bank",
+   "name": "QTLU30",
+   "hl": null,
+   "note": "无曲线（未测/无面板）"
+  },
+  {
+   "family": "bank",
+   "name": "QTLU60",
+   "hl": null,
+   "note": "无曲线（未测/无面板）"
+  },
+  {
+   "family": "bank",
+   "name": "QTLD10",
+   "hl": null,
+   "note": "无曲线（未测/无面板）"
+  },
+  {
+   "family": "bank",
+   "name": "QTLD20",
+   "hl": null,
+   "note": "无曲线（未测/无面板）"
+  },
+  {
+   "family": "bank",
+   "name": "QTLD30",
+   "hl": null,
+   "note": "无曲线（未测/无面板）"
+  },
+  {
+   "family": "bank",
+   "name": "QTLD60",
+   "hl": null,
+   "note": "无曲线（未测/无面板）"
+  },
+  {
+   "family": "bank",
+   "name": "RANK10",
+   "hl": null,
+   "note": "无曲线（未测/无面板）"
+  },
+  {
+   "family": "bank",
+   "name": "RANK20",
+   "hl": null,
+   "note": "无曲线（未测/无面板）"
+  },
+  {
+   "family": "bank",
+   "name": "RANK30",
+   "hl": null,
+   "note": "无曲线（未测/无面板）"
+  },
+  {
+   "family": "bank",
+   "name": "RANK60",
+   "hl": null,
+   "note": "无曲线（未测/无面板）"
+  },
+  {
+   "family": "bank",
+   "name": "RSV10",
+   "hl": 1.0,
+   "s5_pass": false,
+   "g_1": -0.03268948654623083,
+   "c_star_1": null,
+   "g_2": -0.024501409581391253,
+   "c_star_2": -0.01637615392967915,
+   "g_3": -0.010668227176055955,
+   "c_star_3": -0.0330318890552623,
+   "viable": false
+  },
+  {
+   "family": "bank",
+   "name": "RSV20",
+   "hl": null,
+   "note": "无曲线（未测/无面板）"
+  },
+  {
+   "family": "bank",
+   "name": "RSV30",
+   "hl": null,
+   "note": "无曲线（未测/无面板）"
+  },
+  {
+   "family": "bank",
+   "name": "RSV60",
+   "hl": null,
+   "note": "无曲线（未测/无面板）"
+  },
+  {
+   "family": "bank",
+   "name": "IMAX10",
+   "hl": null,
+   "note": "无曲线（未测/无面板）"
+  },
+  {
+   "family": "bank",
+   "name": "IMAX20",
+   "hl": 2.0,
+   "s5_pass": true,
+   "g_1": -0.03380679893188374,
+   "c_star_1": null,
+   "g_2": -0.027299783186503224,
+   "c_star_2": -0.013014031490761038,
+   "g_3": -0.01996210359783746,
+   "c_star_3": -0.020767043001069425,
+   "viable": false
+  },
+  {
+   "family": "bank",
+   "name": "IMAX30",
+   "hl": 1.0,
+   "s5_pass": false,
+   "g_1": -0.04530269961033902,
+   "c_star_1": null,
+   "g_2": -0.03071267137429253,
+   "c_star_2": -0.02918005647209297,
+   "g_3": -0.024700711298269926,
+   "c_star_3": -0.030902982468103635,
+   "viable": false
+  },
+  {
+   "family": "bank",
+   "name": "IMAX60",
+   "hl": 2.0,
+   "s5_pass": true,
+   "g_1": -0.03382043317096398,
+   "c_star_1": null,
+   "g_2": -0.029949307573920177,
+   "c_star_2": -0.007742251194087613,
+   "g_3": -0.025161635529297524,
+   "c_star_3": -0.012988196462499687,
+   "viable": false
+  },
+  {
+   "family": "bank",
+   "name": "IMIN10",
+   "hl": null,
+   "note": "无曲线（未测/无面板）"
+  },
+  {
+   "family": "bank",
+   "name": "IMIN20",
+   "hl": null,
+   "note": "无曲线（未测/无面板）"
+  },
+  {
+   "family": "bank",
+   "name": "IMIN30",
+   "hl": null,
+   "note": "无曲线（未测/无面板）"
+  },
+  {
+   "family": "bank",
+   "name": "IMIN60",
+   "hl": null,
+   "note": "无曲线（未测/无面板）"
+  },
+  {
+   "family": "bank",
+   "name": "IMXD10",
+   "hl": null,
+   "note": "无曲线（未测/无面板）"
+  },
+  {
+   "family": "bank",
+   "name": "IMXD20",
+   "hl": 2.0,
+   "s5_pass": true,
+   "g_1": -0.03238175363236507,
+   "c_star_1": null,
+   "g_2": -0.03303124448023585,
+   "c_star_2": 0.0012989816957415662,
+   "g_3": -0.021672085181047542,
+   "c_star_3": -0.01606450267697629,
+   "viable": false
+  },
+  {
+   "family": "bank",
+   "name": "IMXD30",
+   "hl": 2.0,
+   "s5_pass": true,
+   "g_1": -0.046415137962663486,
+   "c_star_1": null,
+   "g_2": -0.035576421029116526,
+   "c_star_2": -0.02167743386709392,
+   "g_3": -0.02645560661017835,
+   "c_star_3": -0.029939297028727704,
+   "viable": false
+  },
+  {
+   "family": "bank",
+   "name": "IMXD60",
+   "hl": 2.0,
+   "s5_pass": true,
+   "g_1": -0.0419910507086584,
+   "c_star_1": null,
+   "g_2": -0.03606410009622356,
+   "c_star_2": -0.011853901224869678,
+   "g_3": -0.028966428133216194,
+   "c_star_3": -0.019536933863163304,
+   "viable": false
+  },
+  {
+   "family": "bank",
+   "name": "CORR10",
+   "hl": null,
+   "note": "无曲线（未测/无面板）"
+  },
+  {
+   "family": "bank",
+   "name": "CORR20",
+   "hl": null,
+   "note": "无曲线（未测/无面板）"
+  },
+  {
+   "family": "bank",
+   "name": "CORR30",
+   "hl": null,
+   "note": "无曲线（未测/无面板）"
+  },
+  {
+   "family": "bank",
+   "name": "CORR60",
+   "hl": null,
+   "note": "无曲线（未测/无面板）"
+  },
+  {
+   "family": "bank",
+   "name": "CORD10",
+   "hl": 2.0,
+   "s5_pass": true,
+   "g_1": -0.03496172812574462,
+   "c_star_1": null,
+   "g_2": -0.03843644849271703,
+   "c_star_2": 0.006949440733944823,
+   "g_3": -0.028103757876736746,
+   "c_star_3": -0.01028695537351181,
+   "viable": true
+  },
+  {
+   "family": "bank",
+   "name": "CORD20",
+   "hl": 2.0,
+   "s5_pass": true,
+   "g_1": -0.03787892137846984,
+   "c_star_1": null,
+   "g_2": -0.036230482233134076,
+   "c_star_2": -0.0032968782906715316,
+   "g_3": -0.027682374199857956,
+   "c_star_3": -0.015294820767917827,
+   "viable": false
+  },
+  {
+   "family": "bank",
+   "name": "CORD30",
+   "hl": 2.0,
+   "s5_pass": true,
+   "g_1": -0.047521644330281575,
+   "c_star_1": null,
+   "g_2": -0.0395364250499929,
+   "c_star_2": -0.015970438560577352,
+   "g_3": -0.03080000655010992,
+   "c_star_3": -0.025082456670257477,
+   "viable": false
+  },
+  {
+   "family": "bank",
+   "name": "CORD60",
+   "hl": 2.0,
+   "s5_pass": true,
+   "g_1": -0.03908956358777097,
+   "c_star_1": null,
+   "g_2": -0.03202241691858514,
+   "c_star_2": -0.014134293338371656,
+   "g_3": -0.024964894226385287,
+   "c_star_3": -0.021187004042078524,
+   "viable": false
+  },
+  {
+   "family": "bank",
+   "name": "CNTP10",
+   "hl": null,
+   "note": "无曲线（未测/无面板）"
+  },
+  {
+   "family": "bank",
+   "name": "CNTP20",
+   "hl": null,
+   "note": "无曲线（未测/无面板）"
+  },
+  {
+   "family": "bank",
+   "name": "CNTP30",
+   "hl": null,
+   "note": "无曲线（未测/无面板）"
+  },
+  {
+   "family": "bank",
+   "name": "CNTP60",
+   "hl": null,
+   "note": "无曲线（未测/无面板）"
+  },
+  {
+   "family": "bank",
+   "name": "CNTN10",
+   "hl": null,
+   "note": "无曲线（未测/无面板）"
+  },
+  {
+   "family": "bank",
+   "name": "CNTN20",
+   "hl": null,
+   "note": "无曲线（未测/无面板）"
+  },
+  {
+   "family": "bank",
+   "name": "CNTN30",
+   "hl": null,
+   "note": "无曲线（未测/无面板）"
+  },
+  {
+   "family": "bank",
+   "name": "CNTN60",
+   "hl": null,
+   "note": "无曲线（未测/无面板）"
+  },
+  {
+   "family": "bank",
+   "name": "CNTD10",
+   "hl": 2.0,
+   "s5_pass": true,
+   "g_1": -0.029998017514927894,
+   "c_star_1": null,
+   "g_2": -0.02780992474402573,
+   "c_star_2": -0.004376185541804328,
+   "g_3": -0.01611285834026769,
+   "c_star_3": -0.020827738761990303,
+   "viable": false
+  },
+  {
+   "family": "bank",
+   "name": "CNTD20",
+   "hl": null,
+   "note": "无曲线（未测/无面板）"
+  },
+  {
+   "family": "bank",
+   "name": "CNTD30",
+   "hl": null,
+   "note": "无曲线（未测/无面板）"
+  },
+  {
+   "family": "bank",
+   "name": "CNTD60",
+   "hl": null,
+   "note": "无曲线（未测/无面板）"
+  },
+  {
+   "family": "bank",
+   "name": "SUMP10",
+   "hl": 2.0,
+   "s5_pass": true,
+   "g_1": -0.04111153552166398,
+   "c_star_1": null,
+   "g_2": -0.037301715972123964,
+   "c_star_2": -0.007619639099080033,
+   "g_3": -0.02231104613674069,
+   "c_star_3": -0.028200734077384933,
+   "viable": false
+  },
+  {
+   "family": "bank",
+   "name": "SUMP20",
+   "hl": null,
+   "note": "无曲线（未测/无面板）"
+  },
+  {
+   "family": "bank",
+   "name": "SUMP30",
+   "hl": null,
+   "note": "无曲线（未测/无面板）"
+  },
+  {
+   "family": "bank",
+   "name": "SUMP60",
+   "hl": null,
+   "note": "无曲线（未测/无面板）"
+  },
+  {
+   "family": "bank",
+   "name": "SUMN10",
+   "hl": null,
+   "note": "无曲线（未测/无面板）"
+  },
+  {
+   "family": "bank",
+   "name": "SUMN20",
+   "hl": null,
+   "note": "无曲线（未测/无面板）"
+  },
+  {
+   "family": "bank",
+   "name": "SUMN30",
+   "hl": null,
+   "note": "无曲线（未测/无面板）"
+  },
+  {
+   "family": "bank",
+   "name": "SUMN60",
+   "hl": null,
+   "note": "无曲线（未测/无面板）"
+  },
+  {
+   "family": "bank",
+   "name": "SUMD10",
+   "hl": 2.0,
+   "s5_pass": true,
+   "g_1": -0.04111153552166398,
+   "c_star_1": null,
+   "g_2": -0.037301715972123964,
+   "c_star_2": -0.007619639099080033,
+   "g_3": -0.02231104613674069,
+   "c_star_3": -0.028200734077384933,
+   "viable": false
+  },
+  {
+   "family": "bank",
+   "name": "SUMD20",
+   "hl": null,
+   "note": "无曲线（未测/无面板）"
+  },
+  {
+   "family": "bank",
+   "name": "SUMD30",
+   "hl": null,
+   "note": "无曲线（未测/无面板）"
+  },
+  {
+   "family": "bank",
+   "name": "SUMD60",
+   "hl": null,
+   "note": "无曲线（未测/无面板）"
+  },
+  {
+   "family": "bank",
+   "name": "VMA10",
+   "hl": null,
+   "note": "无曲线（未测/无面板）"
+  },
+  {
+   "family": "bank",
+   "name": "VMA20",
+   "hl": null,
+   "note": "无曲线（未测/无面板）"
+  },
+  {
+   "family": "bank",
+   "name": "VMA30",
+   "hl": null,
+   "note": "无曲线（未测/无面板）"
+  },
+  {
+   "family": "bank",
+   "name": "VMA60",
+   "hl": null,
+   "note": "无曲线（未测/无面板）"
+  },
+  {
+   "family": "bank",
+   "name": "VSTD10",
+   "hl": 2.0,
+   "s5_pass": true,
+   "g_1": -0.012211445288050047,
+   "c_star_1": null,
+   "g_2": -0.011374441264970083,
+   "c_star_2": -0.0016740080461599277,
+   "g_3": -0.007084346159197555,
+   "c_star_3": -0.007690648693278737,
+   "viable": false
+  },
+  {
+   "family": "bank",
+   "name": "VSTD20",
+   "hl": null,
+   "note": "无曲线（未测/无面板）"
+  },
+  {
+   "family": "bank",
+   "name": "VSTD30",
+   "hl": null,
+   "note": "无曲线（未测/无面板）"
+  },
+  {
+   "family": "bank",
+   "name": "VSTD60",
+   "hl": null,
+   "note": "无曲线（未测/无面板）"
+  },
+  {
+   "family": "bank",
+   "name": "WVMA10",
+   "hl": null,
+   "note": "无曲线（未测/无面板）"
+  },
+  {
+   "family": "bank",
+   "name": "WVMA20",
+   "hl": null,
+   "note": "无曲线（未测/无面板）"
+  },
+  {
+   "family": "bank",
+   "name": "WVMA30",
+   "hl": null,
+   "note": "无曲线（未测/无面板）"
+  },
+  {
+   "family": "bank",
+   "name": "WVMA60",
+   "hl": null,
+   "note": "无曲线（未测/无面板）"
+  },
+  {
+   "family": "bank",
+   "name": "VSUMP10",
+   "hl": 2.0,
+   "s5_pass": true,
+   "g_1": -0.019950283003809986,
+   "c_star_1": null,
+   "g_2": -0.014981638818770958,
+   "c_star_2": -0.009937288370078057,
+   "g_3": -0.012943699582304775,
+   "c_star_3": -0.010509875132257816,
+   "viable": false
+  },
+  {
+   "family": "bank",
+   "name": "VSUMP20",
+   "hl": 1.0,
+   "s5_pass": false,
+   "g_1": -0.03257741559988897,
+   "c_star_1": null,
+   "g_2": -0.023297297951236702,
+   "c_star_2": -0.018560235297304536,
+   "g_3": -0.015792686576599085,
+   "c_star_3": -0.025177093534934827,
+   "viable": false
+  },
+  {
+   "family": "bank",
+   "name": "VSUMP30",
+   "hl": null,
+   "note": "无曲线（未测/无面板）"
+  },
+  {
+   "family": "bank",
+   "name": "VSUMP60",
+   "hl": 3.0,
+   "s5_pass": true,
+   "g_1": -0.04089954457438668,
+   "c_star_1": null,
+   "g_2": -0.03376861421984391,
+   "c_star_2": -0.014261860709085541,
+   "g_3": -0.030290329467928076,
+   "c_star_3": -0.015913822659687903,
+   "viable": false
+  },
+  {
+   "family": "bank",
+   "name": "VSUMN10",
+   "hl": null,
+   "note": "无曲线（未测/无面板）"
+  },
+  {
+   "family": "bank",
+   "name": "VSUMN20",
+   "hl": null,
+   "note": "无曲线（未测/无面板）"
+  },
+  {
+   "family": "bank",
+   "name": "VSUMN30",
+   "hl": null,
+   "note": "无曲线（未测/无面板）"
+  },
+  {
+   "family": "bank",
+   "name": "VSUMN60",
+   "hl": null,
+   "note": "无曲线（未测/无面板）"
+  },
+  {
+   "family": "bank",
+   "name": "VSUMD10",
+   "hl": 2.0,
+   "s5_pass": true,
+   "g_1": -0.019950283003809986,
+   "c_star_1": null,
+   "g_2": -0.014981638818770958,
+   "c_star_2": -0.009937288370078057,
+   "g_3": -0.012943699582304775,
+   "c_star_3": -0.010509875132257816,
+   "viable": false
+  },
+  {
+   "family": "bank",
+   "name": "VSUMD20",
+   "hl": 1.0,
+   "s5_pass": false,
+   "g_1": -0.03257741559988897,
+   "c_star_1": null,
+   "g_2": -0.023297297951236702,
+   "c_star_2": -0.018560235297304536,
+   "g_3": -0.015792686576599085,
+   "c_star_3": -0.025177093534934827,
+   "viable": false
+  },
+  {
+   "family": "bank",
+   "name": "VSUMD30",
+   "hl": null,
+   "note": "无曲线（未测/无面板）"
+  },
+  {
+   "family": "bank",
+   "name": "VSUMD60",
+   "hl": 3.0,
+   "s5_pass": true,
+   "g_1": -0.04089954457438668,
+   "c_star_1": null,
+   "g_2": -0.03376861421984391,
+   "c_star_2": -0.014261860709085541,
+   "g_3": -0.030290329467928076,
+   "c_star_3": -0.015913822659687903,
+   "viable": false
+  },
+  {
+   "family": "bank",
+   "name": "block_cnt20",
+   "hl": null,
+   "note": "无曲线（未测/无面板）"
+  },
+  {
+   "family": "bank",
+   "name": "margin_buy_share",
+   "hl": 6.0,
+   "s5_pass": true,
+   "g_1": -0.0067047551744367885,
+   "c_star_1": null,
+   "g_2": 0.0003148847196625432,
+   "c_star_2": -0.014039279788198664,
+   "g_3": 0.004926618714810077,
+   "c_star_3": -0.017447060833870296,
+   "viable": false
+  },
+  {
+   "family": "bank",
+   "name": "margin_net_share",
+   "hl": 2.0,
+   "s5_pass": true,
+   "g_1": -0.02454238437194094,
+   "c_star_1": null,
+   "g_2": -0.0186640435445267,
+   "c_star_2": -0.011756681654828481,
+   "g_3": -0.012833764971993018,
+   "c_star_3": -0.01756292909992188,
+   "viable": false
+  },
+  {
+   "family": "bank",
+   "name": "margin_net_to_rzye",
+   "hl": 1.0,
+   "s5_pass": false,
+   "g_1": -0.008637838597164752,
+   "c_star_1": null,
+   "g_2": -0.006413419467263407,
+   "c_star_2": -0.00444883825980269,
+   "g_3": -0.0011749849735280353,
+   "c_star_3": -0.011194280435455074,
+   "viable": false
+  },
+  {
+   "family": "bank",
+   "name": "margin_rqye_ratio",
+   "hl": null,
+   "note": "无曲线（未测/无面板）"
+  },
+  {
+   "family": "bank",
+   "name": "margin_rzye_chg20",
+   "hl": null,
+   "note": "无曲线（未测/无面板）"
+  },
+  {
+   "family": "bank",
+   "name": "margin_rzye_ratio",
+   "hl": null,
+   "note": "无曲线（未测/无面板）"
+  },
+  {
+   "family": "bank",
+   "name": "mf_elg_net",
+   "hl": null,
+   "note": "无曲线（未测/无面板）"
+  },
+  {
+   "family": "bank",
+   "name": "mf_lg_net",
+   "hl": 4.0,
+   "s5_pass": true,
+   "g_1": -0.005222863169907959,
+   "c_star_1": null,
+   "g_2": -0.006794575597398549,
+   "c_star_2": 0.00314342485498118,
+   "g_3": -0.0011626375257201844,
+   "c_star_3": -0.006090338466281661,
+   "viable": true
+  },
+  {
+   "family": "bank",
+   "name": "mf_main_net",
+   "hl": null,
+   "note": "无曲线（未测/无面板）"
+  },
+  {
+   "family": "bank",
+   "name": "mf_main_net20",
+   "hl": null,
+   "note": "无曲线（未测/无面板）"
+  },
+  {
+   "family": "bank",
+   "name": "mf_main_sm_div",
+   "hl": 4.0,
+   "s5_pass": true,
+   "g_1": -0.009556680862157831,
+   "c_star_1": null,
+   "g_2": -0.008178892693203094,
+   "c_star_2": -0.002755576337909474,
+   "g_3": -0.002476217124237653,
+   "c_star_3": -0.010620695606880266,
+   "viable": false
+  },
+  {
+   "family": "bank",
+   "name": "mf_sm_net",
+   "hl": null,
+   "note": "无曲线（未测/无面板）"
+  },
+  {
+   "family": "bank",
+   "name": "id60_close_vs_vwap_neg",
+   "hl": null,
+   "note": "无曲线（未测/无面板）"
+  },
+  {
+   "family": "bank",
+   "name": "kg_broker_rec_3m",
+   "hl": 3.0,
+   "s5_pass": true,
+   "g_1": -0.018240139015738482,
+   "c_star_1": null,
+   "g_2": -0.015912334440474657,
+   "c_star_2": -0.004655609150527651,
+   "g_3": -0.01535643243454366,
+   "c_star_3": -0.0043255598717922335,
+   "viable": false
+  },
+  {
+   "family": "bank",
+   "name": "kg_broker_rec_chg",
+   "hl": null,
+   "note": "无曲线（未测/无面板）"
+  },
+  {
+   "family": "bank",
+   "name": "kg_catalyst_60d",
+   "hl": null,
+   "note": "无曲线（未测/无面板）"
+  },
+  {
+   "family": "bank",
+   "name": "kg_holder_add_60d",
+   "hl": null,
+   "note": "无曲线（未测/无面板）"
+  },
+  {
+   "family": "bank",
+   "name": "kg_holder_dec_60d",
+   "hl": null,
+   "note": "无曲线（未测/无面板）"
+  },
+  {
+   "family": "bank",
+   "name": "kg_holder_net",
+   "hl": null,
+   "note": "无曲线（未测/无面板）"
+  },
+  {
+   "family": "bank",
+   "name": "kg_holder_new_entry",
+   "hl": null,
+   "note": "无曲线（未测/无面板）"
+  },
+  {
+   "family": "bank",
+   "name": "kg_resonance",
+   "hl": null,
+   "note": "无曲线（未测/无面板）"
+  },
+  {
+   "family": "bank",
+   "name": "kg_sentiment_60d",
+   "hl": null,
+   "note": "无曲线（未测/无面板）"
+  },
+  {
+   "family": "bank",
+   "name": "kg_insider_net",
+   "hl": null,
+   "note": "无曲线（未测/无面板）"
+  },
+  {
+   "family": "bank",
+   "name": "kg_insider_sell_60d",
+   "hl": null,
+   "note": "无曲线（未测/无面板）"
+  },
+  {
+   "family": "bank",
+   "name": "kg_unlock_90d_cnt",
+   "hl": null,
+   "note": "无曲线（未测/无面板）"
+  },
+  {
+   "family": "bank",
+   "name": "kg_unlock_90d_ratio",
+   "hl": null,
+   "note": "无曲线（未测/无面板）"
+  },
+  {
+   "family": "bank",
+   "name": "gp_000",
+   "hl": null,
+   "note": "无曲线（未测/无面板）"
+  },
+  {
+   "family": "bank",
+   "name": "gp_001",
+   "hl": null,
+   "note": "无曲线（未测/无面板）"
+  },
+  {
+   "family": "bank",
+   "name": "gp_002",
+   "hl": null,
+   "note": "无曲线（未测/无面板）"
+  },
+  {
+   "family": "bank",
+   "name": "gp_003",
+   "hl": null,
+   "note": "无曲线（未测/无面板）"
+  },
+  {
+   "family": "bank",
+   "name": "gp_004",
+   "hl": null,
+   "note": "无曲线（未测/无面板）"
+  },
+  {
+   "family": "bank",
+   "name": "gp_005",
+   "hl": null,
+   "note": "无曲线（未测/无面板）"
+  },
+  {
+   "family": "bank",
+   "name": "gp_006",
+   "hl": null,
+   "note": "无曲线（未测/无面板）"
+  },
+  {
+   "family": "bank",
+   "name": "gp_007",
+   "hl": null,
+   "note": "无曲线（未测/无面板）"
+  },
+  {
+   "family": "bank",
+   "name": "m60_cv10",
+   "hl": 1.0,
+   "s5_pass": false,
+   "g_1": -0.038297019901633526,
+   "c_star_1": null,
+   "g_2": -0.027742491800056307,
+   "c_star_2": -0.02110905620315444,
+   "g_3": -0.015778668183531342,
+   "c_star_3": -0.03377752757715327,
+   "viable": false
+  },
+  {
+   "family": "bank",
+   "name": "m60_cv20",
+   "hl": 1.0,
+   "s5_pass": false,
+   "g_1": -0.03128370245388335,
+   "c_star_1": null,
+   "g_2": -0.02113135715247374,
+   "c_star_2": -0.020304690602819225,
+   "g_3": -0.010864137559444051,
+   "c_star_3": -0.03062934734165895,
+   "viable": false
+  },
+  {
+   "family": "bank",
+   "name": "m60_cv5",
+   "hl": 1.0,
+   "s5_pass": false,
+   "g_1": -0.030779865653513684,
+   "c_star_1": null,
+   "g_2": -0.01832736399762687,
+   "c_star_2": -0.02490500331177363,
+   "g_3": -0.009775522526651386,
+   "c_star_3": -0.03150651469029345,
+   "viable": false
+  },
+  {
+   "family": "bank",
+   "name": "m60_cv5n",
+   "hl": null,
+   "note": "无曲线（未测/无面板）"
+  },
+  {
+   "family": "bank",
+   "name": "m60_lr10",
+   "hl": 2.0,
+   "s5_pass": true,
+   "g_1": -0.027172520322843684,
+   "c_star_1": null,
+   "g_2": -0.02256291024605579,
+   "c_star_2": -0.009219220153575791,
+   "g_3": -0.01470524815497193,
+   "c_star_3": -0.01870090825180763,
+   "viable": false
+  },
+  {
+   "family": "bank",
+   "name": "m60_lr20",
+   "hl": 1.0,
+   "s5_pass": false,
+   "g_1": -0.022286067403290827,
+   "c_star_1": null,
+   "g_2": -0.015993553819118683,
+   "c_star_2": -0.012585027168344289,
+   "g_3": -0.008301577739015714,
+   "c_star_3": -0.02097673449641267,
+   "viable": false
+  },
+  {
+   "family": "bank",
+   "name": "m60_lr20n",
+   "hl": null,
+   "note": "无曲线（未测/无面板）"
+  },
+  {
+   "family": "bank",
+   "name": "m60_lr5",
+   "hl": 2.0,
+   "s5_pass": true,
+   "g_1": -0.021744825776932694,
+   "c_star_1": null,
+   "g_2": -0.01703751046359809,
+   "c_star_2": -0.00941463062666921,
+   "g_3": -0.010929686201569422,
+   "c_star_3": -0.016222709363044905,
+   "viable": false
+  },
+  {
+   "family": "bank",
+   "name": "m60_lr5n",
+   "hl": null,
+   "note": "无曲线（未测/无面板）"
+  },
+  {
+   "family": "bank",
+   "name": "m60_lvs20",
+   "hl": null,
+   "note": "无曲线（未测/无面板）"
+  },
+  {
+   "family": "bank",
+   "name": "m60_lvs_chg",
+   "hl": null,
+   "note": "无曲线（未测/无面板）"
+  },
+  {
+   "family": "bank",
+   "name": "m60_lvsxlr",
+   "hl": 2.0,
+   "s5_pass": true,
+   "g_1": -0.02199445159013778,
+   "c_star_1": null,
+   "g_2": -0.016820461140115303,
+   "c_star_2": -0.010347980900044955,
+   "g_3": -0.010907632309692711,
+   "c_star_3": -0.0166302289206676,
+   "viable": false
+  },
+  {
+   "family": "bank",
+   "name": "llm_kg_holder_add_dec_ratio",
+   "hl": null,
+   "note": "无曲线（未测/无面板）"
+  },
+  {
+   "family": "bank",
+   "name": "llm_holder_net_vs_resonance",
+   "hl": null,
+   "note": "无曲线（未测/无面板）"
+  },
+  {
+   "family": "bank",
+   "name": "llm_rating_up_vs_sentiment",
+   "hl": null,
+   "note": "无曲线（未测/无面板）"
+  },
+  {
+   "family": "bank",
+   "name": "llm_new_holder_vs_catalyst",
+   "hl": null,
+   "note": "无曲线（未测/无面板）"
+  },
+  {
+   "family": "bank",
+   "name": "llm_intraday_reversal_turnover",
+   "hl": 2.0,
+   "s5_pass": true,
+   "g_1": -0.031110521605903545,
+   "c_star_1": null,
+   "g_2": -0.02898279626234487,
+   "c_star_2": -0.00425545068711735,
+   "g_3": -0.024077273179939813,
+   "c_star_3": -0.010549872638945596,
+   "viable": false
+  },
+  {
+   "family": "bank",
+   "name": "llm_amount_concentration",
+   "hl": null,
+   "note": "无曲线（未测/无面板）"
+  },
+  {
+   "family": "bank",
+   "name": "llm_turnover_accel_5_20",
+   "hl": 1.0,
+   "s5_pass": false,
+   "g_1": -0.03064967073002332,
+   "c_star_1": null,
+   "g_2": -0.022137355946536527,
+   "c_star_2": -0.017024629566973586,
+   "g_3": -0.01616997677992932,
+   "c_star_3": -0.021719540925140994,
+   "viable": false
+  },
+  {
+   "family": "bank",
+   "name": "llm_turnover_disp_20",
+   "hl": null,
+   "note": "无曲线（未测/无面板）"
+  },
+  {
+   "family": "bank",
+   "name": "llm_amihud_1",
+   "hl": null,
+   "note": "无曲线（未测/无面板）"
+  },
+  {
+   "family": "bank",
+   "name": "llm_max_ret_20",
+   "hl": null,
+   "note": "无曲线（未测/无面板）"
+  },
+  {
+   "family": "bank",
+   "name": "llm_range_vol_20",
+   "hl": null,
+   "note": "无曲线（未测/无面板）"
+  },
+  {
+   "family": "bank",
+   "name": "llm_turnover_spike_20",
+   "hl": null,
+   "note": "无曲线（未测/无面板）"
+  },
+  {
+   "family": "bank",
+   "name": "llm_turnover_to_pb",
+   "hl": 1.0,
+   "s5_pass": false,
+   "g_1": -0.041825520440266564,
+   "c_star_1": null,
+   "g_2": -0.030302179934686313,
+   "c_star_2": -0.023046681011160502,
+   "g_3": -0.02585692264268979,
+   "c_star_3": -0.023952896696365158,
+   "viable": false
+  },
+  {
+   "family": "bank",
+   "name": "llm_positive_day_ratio_20",
+   "hl": 6.0,
+   "s5_pass": true,
+   "g_1": -0.07886908542189548,
+   "c_star_1": null,
+   "g_2": -0.07031355837085865,
+   "c_star_2": -0.01711105410207367,
+   "g_3": -0.06530205548290557,
+   "c_star_3": -0.02035054490848486,
+   "viable": false
+  },
+  {
+   "family": "bank",
+   "name": "llm_gap_rev",
+   "hl": null,
+   "note": "无曲线（未测/无面板）"
+  },
+  {
+   "family": "bank",
+   "name": "llm_turnover_accel",
+   "hl": 1.0,
+   "s5_pass": false,
+   "g_1": -0.030663744705530127,
+   "c_star_1": null,
+   "g_2": -0.022150637943772054,
+   "c_star_2": -0.017026213523516145,
+   "g_3": -0.016180855081321388,
+   "c_star_3": -0.021724334436313105,
+   "viable": false
+  },
+  {
+   "family": "bank",
+   "name": "llm_vwap_premium",
+   "hl": 1.0,
+   "s5_pass": false,
+   "g_1": -0.008232783962398075,
+   "c_star_1": null,
+   "g_2": -0.0021369173461227883,
+   "c_star_2": -0.012191733232550572,
+   "g_3": -0.0003684932967439808,
+   "c_star_3": -0.011796435998481139,
+   "viable": false
+  },
+  {
+   "family": "bank",
+   "name": "llm_max_lottery",
+   "hl": null,
+   "note": "无曲线（未测/无面板）"
+  },
+  {
+   "family": "bank",
+   "name": "llm_range_compression",
+   "hl": null,
+   "note": "无曲线（未测/无面板）"
+  },
+  {
+   "family": "bank",
+   "name": "llm_price_skew_20",
+   "hl": 3.0,
+   "s5_pass": true,
+   "g_1": -0.02982235099276757,
+   "c_star_1": null,
+   "g_2": -0.024968840791098523,
+   "c_star_2": -0.009707020403338096,
+   "g_3": -0.02162751315040927,
+   "c_star_3": -0.01229225676353745,
+   "viable": false
+  },
+  {
+   "family": "bank",
+   "name": "llm_float_tightness",
+   "hl": null,
+   "note": "无曲线（未测/无面板）"
+  },
+  {
+   "family": "bank",
+   "name": "llm_float_turnover",
+   "hl": null,
+   "note": "无曲线（未测/无面板）"
+  },
+  {
+   "family": "bank",
+   "name": "llm_turnover_concentration_20",
+   "hl": null,
+   "note": "无曲线（未测/无面板）"
+  },
+  {
+   "family": "bank",
+   "name": "llm_limit_up_cnt_20",
+   "hl": null,
+   "note": "无曲线（未测/无面板）"
+  },
+  {
+   "family": "bank",
+   "name": "llm_ret_autocorr_20",
+   "hl": null,
+   "note": "无曲线（未测/无面板）"
+  },
+  {
+   "family": "bank",
+   "name": "llm_turnover_persistence_20",
+   "hl": null,
+   "note": "无曲线（未测/无面板）"
+  },
+  {
+   "family": "bank",
+   "name": "llm_gap_asym",
+   "hl": null,
+   "note": "无曲线（未测/无面板）"
+  },
+  {
+   "family": "bank",
+   "name": "llm_holder_concentration",
+   "hl": null,
+   "note": "无曲线（未测/无面板）"
+  },
+  {
+   "family": "bank",
+   "name": "llm_insider_net_z",
+   "hl": null,
+   "note": "无曲线（未测/无面板）"
+  },
+  {
+   "family": "bank",
+   "name": "llm_intraday_close_position",
+   "hl": 6.0,
+   "s5_pass": true,
+   "g_1": -7.602424580004235e-05,
+   "c_star_1": null,
+   "g_2": 0.004811868881143636,
+   "c_star_2": -0.009775786253887357,
+   "g_3": 0.006483452824855557,
+   "c_star_3": -0.009839215605983399,
+   "viable": false
+  },
+  {
+   "family": "bank",
+   "name": "llm_upper_lower_shadow_ratio",
+   "hl": null,
+   "note": "无曲线（未测/无面板）"
+  },
+  {
+   "family": "bank",
+   "name": "llm_vwap_premium_voladj",
+   "hl": 2.0,
+   "s5_pass": true,
+   "g_1": -0.008449981505752355,
+   "c_star_1": null,
+   "g_2": -0.0009948805177210102,
+   "c_star_2": -0.01491020197606269,
+   "g_3": 0.00018774020714920118,
+   "c_star_3": -0.012956582569352334,
+   "viable": false
+  },
+  {
+   "family": "bank",
+   "name": "llm_amount_concentration_5",
+   "hl": null,
+   "note": "无曲线（未测/无面板）"
+  },
+  {
+   "family": "bank",
+   "name": "llm_high_low_order_20",
+   "hl": 2.0,
+   "s5_pass": true,
+   "g_1": -0.0323917221234559,
+   "c_star_1": null,
+   "g_2": -0.0330466787984572,
+   "c_star_2": 0.0013099133500025922,
+   "g_3": -0.021860825997486413,
+   "c_star_3": -0.01579634418895423,
+   "viable": false
+  },
+  {
+   "family": "bank",
+   "name": "llm_intraday_range_turnover",
+   "hl": null,
+   "note": "无曲线（未测/无面板）"
+  },
+  {
+   "family": "bank",
+   "name": "llm_illiquidity_vol_amount",
+   "hl": null,
+   "note": "无曲线（未测/无面板）"
+  },
+  {
+   "family": "bank",
+   "name": "llm_amount_short_long_ratio",
+   "hl": 2.0,
+   "s5_pass": true,
+   "g_1": -0.03465684055697685,
+   "c_star_1": null,
+   "g_2": -0.026677528486508333,
+   "c_star_2": -0.01595862414093703,
+   "g_3": -0.018994427508902862,
+   "c_star_3": -0.023493619572110977,
+   "viable": false
+  },
+  {
+   "family": "bank",
+   "name": "llm_turnover_volatility",
+   "hl": null,
+   "note": "无曲线（未测/无面板）"
+  }
+ ],
+ "note": "只读探针; G(H) 为秩 IC 近似, 终审=组合层 A/B"
+}

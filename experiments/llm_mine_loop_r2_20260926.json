@@ -1,0 +1,420 @@
+{
+ "iterations": [
+  {
+   "iteration": 1,
+   "n_proposals": 10,
+   "proposals": [
+    {
+     "kind": "expr",
+     "name": "llm_pe_pe_ttm_spread",
+     "expr": "$pe - $pe_ttm",
+     "why": "静态PE与滚动PE之差，反映盈利改善或恶化，捕捉微盘盈利修正早期信息。",
+     "noise_hypothesis": "KG热门/事件代理显示高共振、高情绪常是反向定价噪声，该估值价差避开纯KG题材脉冲。"
+    },
+    {
+     "kind": "expr",
+     "name": "llm_netprofit_revenue_gap",
+     "expr": "$netprofit_yoy - $or_yoy",
+     "why": "净利润增速相对营收增速的剪刀差，衡量费用、非经常损益驱动的盈利质量。",
+     "noise_hypothesis": "KG催化剂与金股推荐常放大营收故事，该剪刀差借KG反向定价判断躲开事件驱动噪声。"
+    },
+    {
+     "kind": "expr",
+     "name": "llm_eps_netprofit_divergence",
+     "expr": "$eps_yoy - $netprofit_yoy",
+     "why": "EPS增速与净利润增速差，捕捉股本收缩、回购或分母效应带来的微盘行为金融信号。",
+     "noise_hypothesis": "KG股东新进/增减持与股本事件相关，该差异避开KG股本事件误报噪声。"
+    },
+    {
+     "kind": "expr",
+     "name": "llm_gross_margin_rev_synergy",
+     "expr": "$grossprofit_margin * $or_yoy",
+     "why": "高毛利与营收增长同向，偏微盘公司定价权与需求扩张共振。",
+     "noise_hypothesis": "KG催化剂/金股推荐常制造无毛利验证的事件热度，该交互躲开纯题材催化剂噪声。"
+    },
+    {
+     "kind": "expr",
+     "name": "llm_roe_delevered",
+     "expr": "$roe / (1 + $debt_to_assets)",
+     "why": "单位负债支持的ROE，偏好微盘低杠杆高质量公司。",
+     "noise_hypothesis": "KG解禁/减持压力常集中于高杠杆困境公司，低杠杆质量躲开事件冲击噪声。"
+    },
+    {
+     "kind": "expr",
+     "name": "llm_sales_growth_debt_cover",
+     "expr": "$or_yoy / (1 + $debt_to_assets)",
+     "why": "低负债下的营收增长，衡量微盘扩张质量而非单纯成长。",
+     "noise_hypothesis": "借KG解禁与减持压力判断，高负债公司易受事件流动性噪声污染，该因子避开该类噪声。"
+    },
+    {
+     "kind": "expr",
+     "name": "llm_total_circ_mv_ratio",
+     "expr": "$total_mv / $circ_mv",
+     "why": "总市值与流通市值之比，代理非流通比例与潜在解禁/流动性压力。",
+     "noise_hypothesis": "KG解禁覆盖稀疏且事件反向，该全市场覆盖比值避开稀疏KG事件整行清零噪声。"
+    },
+    {
+     "kind": "kg",
+     "name": "llm_holder_net_vs_resonance",
+     "op": "ratio",
+     "cols": [
+      "kg_holder_net",
+      "kg_resonance"
+     ],
+     "why": "股东净增持相对多源共振热度，偏好低热度但股东加仓的微盘股。",
+     "noise_hypothesis": "kg_resonance是热门代理且反向定价，ratio剥离热门拥挤噪声。"
+    },
+    {
+     "kind": "kg",
+     "name": "llm_rating_up_vs_sentiment",
+     "op": "ratio",
+     "cols": [
+      "kg_rating_up_60d",
+      "kg_sentiment_60d"
+     ],
+     "why": "评级上调但情绪分不高，避免情绪已透支的微盘股。",
+     "noise_hypothesis": "kg_sentiment_60d是反向定价情绪噪声，ratio躲开高情绪拥挤。"
+    },
+    {
+     "kind": "kg",
+     "name": "llm_new_holder_vs_catalyst",
+     "op": "ratio",
+     "cols": [
+      "kg_holder_new_entry",
+      "kg_catalyst_60d"
+     ],
+     "why": "新进股东确认但催化剂少，避开事件炒作型微盘股。",
+     "noise_hypothesis": "kg_catalyst_60d是事件脉冲噪声，ratio躲开题材催化剂拥挤。"
+    }
+   ],
+   "records": [
+    {
+     "alpha_id": "llm_holder_net_vs_resonance",
+     "DEAD_head": 0.0016286633751430625,
+     "DEAD_head_t": 0.8176992423161973,
+     "DEAD_hit": 0.5405405405405406,
+     "DEAD_n": 37,
+     "DEAD_top6": -0.005957208938795973,
+     "DEAD_ic": -0.0002900525730508434,
+     "DEAD_ls": 0.004409248569376163,
+     "ACTIVE_head": 0.001579077037361761,
+     "ACTIVE_head_t": 0.42290835807376387,
+     "ACTIVE_hit": 0.4666666666666667,
+     "ACTIVE_n": 30,
+     "ACTIVE_top6": 0.01055382074167331,
+     "ACTIVE_ic": 0.012070914666696056,
+     "ACTIVE_ls": 0.002813762876515587,
+     "FULL_head": 0.0016064605373305393,
+     "FULL_head_t": 0.8095369020257736,
+     "FULL_n": 67,
+     "FULL_top6": 0.0014357894255932588,
+     "p_adj": 1.0,
+     "n_tests": 213,
+     "n_tests_family": 3,
+     "n_tests_prior": 210,
+     "cost_per_month": 0.0012175124378109453,
+     "yearly": {
+      "2020": {
+       "head": NaN,
+       "top6": NaN,
+       "n": 2
+      },
+      "2021": {
+       "head": -0.0030692599565637383,
+       "top6": -0.009380383755673061,
+       "n": 11
+      },
+      "2022": {
+       "head": 0.0018422550444180767,
+       "top6": -0.01715074370925625,
+       "n": 12
+      },
+      "2023": {
+       "head": 0.003347436936261753,
+       "top6": 0.0104518299534296,
+       "n": 12
+      },
+      "2024": {
+       "head": -0.0012505192620058854,
+       "top6": -0.004986605917414029,
+       "n": 12
+      },
+      "2025": {
+       "head": 0.007623261907914032,
+       "top6": -0.00042620285724600154,
+       "n": 12
+      },
+      "2026": {
+       "head": -0.004850100105007489,
+       "top6": 0.06359472125768661,
+       "n": 6
+      }
+     },
+     "avg_names": 2403.5671641791046,
+     "expr": "panel:llm_mine_loop_r2#llm_holder_net_vs_resonance",
+     "info_source": "llm_r2",
+     "source": "llm_mine_loop_r2",
+     "pit_version": "pit_v1_2019-01-01",
+     "note": "{\"active\": [\"2024-01-01\", \"2026-08-31\"], \"dead\": [\"2020-09-01\", \"2023-12-31\"], \"eval_since\": \"2019-01-01\", \"intent\": \"LLM 自主挖因子循环 r2 · 迭代 1 (plans/llm-mine-loop-r2-prereg-20260926.md): 10 条, 双域保守分母; 标准域判据, 降噪域平行读数\", \"version\": \"factory_v1\", \"warmup_days\": 400} | why: 股东净增持相对多源共振热度，偏好低热度但股东加仓的微盘股。 | noise: kg_resonance是热门代理且反向定价，ratio剥离热门拥挤噪声。",
+     "head_bar": 0.006217512437810945,
+     "c_same_sign": true,
+     "c_head_size": false,
+     "c_t": false,
+     "c_p_adj": false,
+     "c_top6": false,
+     "c_cost": true,
+     "PASS": false,
+     "std_dead_head": 0.0016,
+     "den_dead_head": 0.0091,
+     "delta_head_denoised": 0.0075
+    },
+    {
+     "alpha_id": "llm_rating_up_vs_sentiment",
+     "DEAD_head": 0.0013652412376056115,
+     "DEAD_head_t": 0.2693653315764612,
+     "DEAD_hit": 0.5333333333333333,
+     "DEAD_n": 30,
+     "DEAD_top6": 0.005711622955277562,
+     "DEAD_ic": -0.014520981714459648,
+     "DEAD_ls": -0.00282579578148822,
+     "ACTIVE_head": 6.8837466339270275e-06,
+     "ACTIVE_head_t": 0.001432606990952666,
+     "ACTIVE_hit": 0.43333333333333335,
+     "ACTIVE_n": 30,
+     "ACTIVE_top6": 0.002119126636534929,
+     "ACTIVE_ic": 0.00018218066910194106,
+     "ACTIVE_ls": 0.0004615641509493192,
+     "FULL_head": 0.0006860624921197693,
+     "FULL_head_t": 0.19808767925807355,
+     "FULL_n": 60,
+     "FULL_top6": 0.0039153747959062455,
+     "p_adj": 1.0,
+     "n_tests": 213,
+     "n_tests_family": 3,
+     "n_tests_prior": 210,
+     "cost_per_month": 0.0013829508196721314,
+     "yearly": {
+      "2020": {
+       "head": 0.018510714638978243,
+       "top6": 0.036030709045007825,
+       "n": 4
+      },
+      "2021": {
+       "head": -0.0052500274032354355,
+       "top6": -0.014336844440549612,
+       "n": 8
+      },
+      "2022": {
+       "head": 0.016010601332204208,
+       "top6": 0.03651328426268366,
+       "n": 9
+      },
+      "2023": {
+       "head": -0.015020090465744337,
+       "top6": -0.02074432781794005,
+       "n": 9
+      },
+      "2024": {
+       "head": -2.4848695223530132e-05,
+       "top6": -0.016436170941839617,
+       "n": 12
+      },
+      "2025": {
+       "head": -0.008391446687958458,
+       "top6": 0.009478830563073809,
+       "n": 11
+      },
+      "2026": {
+       "head": 0.013258658615606171,
+       "top6": 0.02236295917204448,
+       "n": 7
+      }
+     },
+     "avg_names": 2235.4666666666667,
+     "expr": "panel:llm_mine_loop_r2#llm_rating_up_vs_sentiment",
+     "info_source": "llm_r2",
+     "source": "llm_mine_loop_r2",
+     "pit_version": "pit_v1_2019-01-01",
+     "note": "{\"active\": [\"2024-01-01\", \"2026-08-31\"], \"dead\": [\"2020-09-01\", \"2023-12-31\"], \"eval_since\": \"2019-01-01\", \"intent\": \"LLM 自主挖因子循环 r2 · 迭代 1 (plans/llm-mine-loop-r2-prereg-20260926.md): 10 条, 双域保守分母; 标准域判据, 降噪域平行读数\", \"version\": \"factory_v1\", \"warmup_days\": 400} | why: 评级上调但情绪分不高，避免情绪已透支的微盘股。 | noise: kg_sentiment_60d是反向定价情绪噪声，ratio躲开高情绪拥挤。",
+     "head_bar": 0.0063829508196721315,
+     "c_same_sign": true,
+     "c_head_size": false,
+     "c_t": false,
+     "c_p_adj": false,
+     "c_top6": true,
+     "c_cost": true,
+     "PASS": false,
+     "std_dead_head": 0.0014,
+     "den_dead_head": -0.0073,
+     "delta_head_denoised": -0.0087
+    },
+    {
+     "alpha_id": "llm_new_holder_vs_catalyst",
+     "DEAD_head": -0.003695677953939407,
+     "DEAD_head_t": -1.6860650546235474,
+     "DEAD_hit": 0.41025641025641024,
+     "DEAD_n": 39,
+     "DEAD_top6": -0.003515746587744126,
+     "DEAD_ic": -0.008542285786805532,
+     "DEAD_ls": -0.00790418746570746,
+     "ACTIVE_head": -0.004067252720555951,
+     "ACTIVE_head_t": -1.786967590492659,
+     "ACTIVE_hit": 0.4838709677419355,
+     "ACTIVE_n": 31,
+     "ACTIVE_top6": -0.015345043202321376,
+     "ACTIVE_ic": -0.00228629870442305,
+     "ACTIVE_ls": -0.004877704856616836,
+     "FULL_head": -0.0038602324934410197,
+     "FULL_head_t": -2.455152922231499,
+     "FULL_n": 70,
+     "FULL_top6": -0.008754435088485479,
+     "p_adj": 1.0,
+     "n_tests": 213,
+     "n_tests_family": 3,
+     "n_tests_prior": 210,
+     "cost_per_month": 0.0010820952380952381,
+     "yearly": {
+      "2020": {
+       "head": 0.014047391712665558,
+       "top6": -0.022816918169458706,
+       "n": 3
+      },
+      "2021": {
+       "head": -0.004710371644857029,
+       "top6": 0.008338586582491795,
+       "n": 12
+      },
+      "2022": {
+       "head": -0.005194658335919182,
+       "top6": -0.009761725009108583,
+       "n": 12
+      },
+      "2023": {
+       "head": -0.0056177712976932526,
+       "top6": -0.004298808441186945,
+       "n": 12
+      },
+      "2024": {
+       "head": -0.004296604621534546,
+       "top6": -0.012366239447146654,
+       "n": 12
+      },
+      "2025": {
+       "head": -0.003981311650325854,
+       "top6": -0.019276490512614448,
+       "n": 12
+      },
+      "2026": {
+       "head": -0.0038214055821299553,
+       "top6": -0.01371193996497563,
+       "n": 7
+      }
+     },
+     "avg_names": 2317.385714285714,
+     "expr": "panel:llm_mine_loop_r2#llm_new_holder_vs_catalyst",
+     "info_source": "llm_r2",
+     "source": "llm_mine_loop_r2",
+     "pit_version": "pit_v1_2019-01-01",
+     "note": "{\"active\": [\"2024-01-01\", \"2026-08-31\"], \"dead\": [\"2020-09-01\", \"2023-12-31\"], \"eval_since\": \"2019-01-01\", \"intent\": \"LLM 自主挖因子循环 r2 · 迭代 1 (plans/llm-mine-loop-r2-prereg-20260926.md): 10 条, 双域保守分母; 标准域判据, 降噪域平行读数\", \"version\": \"factory_v1\", \"warmup_days\": 400} | why: 新进股东确认但催化剂少，避开事件炒作型微盘股。 | noise: kg_catalyst_60d是事件脉冲噪声，ratio躲开题材催化剂拥挤。",
+     "head_bar": 0.006082095238095238,
+     "c_same_sign": true,
+     "c_head_size": false,
+     "c_t": false,
+     "c_p_adj": false,
+     "c_top6": false,
+     "c_cost": true,
+     "PASS": false,
+     "std_dead_head": -0.0037,
+     "den_dead_head": 0.0025,
+     "delta_head_denoised": 0.0062
+    }
+   ],
+   "denominator": 20,
+   "n_prior": 210,
+   "n_used": 230
+  },
+  {
+   "iteration": 2,
+   "n_proposals": 10,
+   "proposals": [
+    {
+     "kind": "expr",
+     "name": "llm_close_vwap_bias",
+     "expr": "($close - $amount / $vol) / ($amount / $vol)",
+     "why": "收盘价相对当日成交均价(VWAP)的偏离，捕捉微盘尾盘资金推动与流动性溢价。",
+     "noise_hypothesis": "借 KG 的 kg_sentiment_60d/kg_catalyst_60d 判断非事件消息驱动，剔除公告脉冲噪声。"
+    },
+    {
+     "kind": "expr",
+     "name": "llm_overnight_discount",
+     "expr": "($pre_close - $open) / $pre_close",
+     "why": "隔夜低开折价，微盘散户恐慌过度反应后的修复收益。",
+     "noise_hypothesis": "借 KG 的 kg_rating_up_60d/kg_coverage_chg 排除有真实评级下调或覆盖变化的低开，保留无信息噪声折价。"
+    },
+    {
+     "kind": "expr",
+     "name": "llm_gap_absorption",
+     "expr": "($close - $open) / $open - ($open - $pre_close) / $pre_close",
+     "why": "日内价格对隔夜跳空的吸收程度，衡量开盘错误定价修正。",
+     "noise_hypothesis": "借 KG 的 kg_broker_rec_3m/kg_catalyst_60d 排除金股推荐或催化剂造成的真实跳空，避开事件动量噪声。"
+    },
+    {
+     "kind": "expr",
+     "name": "llm_range_volume_strength",
+     "expr": "(($close - $low) / ($high - $low + 0.0001)) * $volume_ratio",
+     "why": "日内收盘位置与量比共振，微盘放量收高代表资金真实介入。",
+     "noise_hypothesis": "借 KG 的 kg_sentiment_60d/kg_resonance 过滤热门共振噪声，保留非拥挤的资金信号。"
+    },
+    {
+     "kind": "expr",
+     "name": "llm_range_to_turnover",
+     "expr": "($high - $low) / ($amount / $circ_mv + 0.0001)",
+     "why": "单位成交额占比的日内振幅，薄流动性微盘的价格冲击成本。",
+     "noise_hypothesis": "借 KG 的 kg_rating_cov_60d/kg_rating_dispersion 剔除高关注高分歧噪声，保留低覆盖流动性溢价。"
+    },
+    {
+     "kind": "expr",
+     "name": "llm_lower_shadow_strength",
+     "expr": "($close - $low) / ($high - $close + 0.0001)",
+     "why": "下影线相对上影线的强度，微盘日内低位承接与错杀修复。",
+     "noise_hypothesis": "借 KG 的 kg_holder_net/kg_insider_net 排除股东减持造成的长上影，避开治理事件噪声。"
+    },
+    {
+     "kind": "expr",
+     "name": "llm_margin_leverage_quality",
+     "expr": "$grossprofit_margin * (1 - $debt_to_assets)",
+     "why": "高毛利且低负债的经营质量，微盘财务脆弱性的反向。",
+     "noise_hypothesis": "借 KG 的 kg_holder_add_60d/kg_dividend_90d 过滤治理与分红事件噪声，保留基本面质量溢价。"
+    },
+    {
+     "kind": "expr",
+     "name": "llm_roe_per_margin",
+     "expr": "$roe / ($grossprofit_margin + 0.0001)",
+     "why": "ROE 对毛利率的比率，衡量单位毛利创造的股东回报，反映运营效率与杠杆。",
+     "noise_hypothesis": "借 KG 的 kg_rating_dispersion/kg_coverage_chg 过滤分析师预期噪声，保留财务效率信号。"
+    },
+    {
+     "kind": "expr",
+     "name": "llm_dividend_debt_cover",
+     "expr": "$dv_ttm / ($debt_to_assets + 0.0001)",
+     "why": "股息率对负债率的覆盖，衡量微盘分红能力与财务安全的交叉。",
+     "noise_hypothesis": "借 KG 的 kg_dividend_90d/kg_holder_net 排除一次性分红与股东减持事件，保留可持续分红安全边际。"
+    },
+    {
+     "kind": "expr",
+     "name": "llm_eps_yoy_per_roe",
+     "expr": "$eps_yoy / ($roe + 0.0001)",
+     "why": "盈利增长相对现有盈利能力的比率，低 ROE 高增长代表边际效率改善。",
+     "noise_hypothesis": "借 KG 的 kg_rating_up_60d/kg_holder_net 排除评级上调与股东增持驱动的增长噪声，保留未被关注的基本面改善。"
+    }
+   ],
+   "records": [],
+   "denominator": 0,
+   "n_prior": 213,
+   "n_used": 213
+  }
+ ],
+ "feedback_iter2": "上一轮(迭代 1)的门禁读数, 请据此修正方向(禁重复已否方向):\n- llm_pe_pe_ttm_spread: 静态检查失败 module 'llm_factor_propose' has no attribute '_static_check'\n- llm_netprofit_revenue_gap: 静态检查失败 module 'llm_factor_propose' has no attribute '_static_check'\n- llm_eps_netprofit_divergence: 静态检查失败 module 'llm_factor_propose' has no attribute '_static_check'\n- llm_gross_margin_rev_synergy: 静态检查失败 module 'llm_factor_propose' has no attribute '_static_check'\n- llm_roe_delevered: 静态检查失败 module 'llm_factor_propose' has no attribute '_static_check'\n- llm_sales_growth_debt_cover: 静态检查失败 module 'llm_factor_propose' has no attribute '_static_check'\n- llm_total_circ_mv_ratio: 静态检查失败 module 'llm_factor_propose' has no attribute '_static_check'\n- llm_holder_net_vs_resonance: DEAD head 0.0016286633751430625, t 0.8176992423161973, p_adj 1.0, 未过\n- llm_rating_up_vs_sentiment: DEAD head 0.0013652412376056115, t 0.2693653315764612, p_adj 1.0, 未过\n- llm_new_holder_vs_catalyst: DEAD head -0.003695677953939407, t -1.6860650546235474, p_adj 1.0, 未过",
+ "ran_at": "2026-09-26T19:31:34",
+ "n_pass": 0
+}

@@ -1,0 +1,241 @@
+{
+ "script_sha": "4f5515e2d69e99eb",
+ "question": "周频训练标签从裸 open 换成 open×adj —— 会不会更好？",
+ "criteria": {
+  "excess_pp_tol": 0.5,
+  "mdd_pp_tol": 2.0,
+  "ic": "adj ≥ raw（严格不降）"
+ },
+ "design": {
+  "RAW": "F4_scores_{seed}.npz（生产在跑的 W5）",
+  "ADJ": "同一份 build_dataset + 同一 params/种子，只换标签",
+  "shape": "top100 / band 8× / hold_bonus 0 / 1,000,000",
+  "blend": "2×W5 + 1×pit（f22.wr）"
+ },
+ "windows": {
+  "full": [
+   "2010-01-01",
+   "2030-12-31"
+  ],
+  "active": [
+   "2024-01-01",
+   "2026-08-31"
+  ]
+ },
+ "results": {
+  "seedA": {
+   "RAW": {
+    "full": {
+     "n": 492,
+     "excess_pp": 17.78,
+     "mdd": -0.366,
+     "turnover": 0.137,
+     "invested": 0.8918,
+     "names": 99.8
+    },
+    "active": {
+     "n": 138,
+     "excess_pp": 9.21,
+     "mdd": -0.366,
+     "turnover": 0.103,
+     "invested": 0.9019,
+     "names": 99.9
+    }
+   },
+   "ADJ": {
+    "full": {
+     "n": 492,
+     "excess_pp": 16.0,
+     "mdd": -0.3674,
+     "turnover": 0.14,
+     "invested": 0.886,
+     "names": 99.6
+    },
+    "active": {
+     "n": 138,
+     "excess_pp": 10.19,
+     "mdd": -0.3674,
+     "turnover": 0.12,
+     "invested": 0.906,
+     "names": 99.9
+    }
+   },
+   "RAW_retrain": {
+    "full": {
+     "n": 492,
+     "excess_pp": 17.24,
+     "mdd": -0.3703,
+     "turnover": 0.14,
+     "invested": 0.89,
+     "names": 99.8
+    },
+    "active": {
+     "n": 138,
+     "excess_pp": 12.57,
+     "mdd": -0.3703,
+     "turnover": 0.11,
+     "invested": 0.8996,
+     "names": 99.9
+    }
+   }
+  },
+  "seedB": {
+   "RAW": {
+    "full": {
+     "n": 492,
+     "excess_pp": 17.46,
+     "mdd": -0.366,
+     "turnover": 0.136,
+     "invested": 0.8908,
+     "names": 99.8
+    },
+    "active": {
+     "n": 138,
+     "excess_pp": 11.4,
+     "mdd": -0.366,
+     "turnover": 0.103,
+     "invested": 0.8985,
+     "names": 99.9
+    }
+   },
+   "ADJ": {
+    "full": {
+     "n": 492,
+     "excess_pp": 16.11,
+     "mdd": -0.365,
+     "turnover": 0.14,
+     "invested": 0.8891,
+     "names": 99.7
+    },
+    "active": {
+     "n": 138,
+     "excess_pp": 10.27,
+     "mdd": -0.365,
+     "turnover": 0.123,
+     "invested": 0.9064,
+     "names": 99.9
+    }
+   },
+   "RAW_retrain": {
+    "full": {
+     "n": 492,
+     "excess_pp": 17.75,
+     "mdd": -0.3661,
+     "turnover": 0.14,
+     "invested": 0.8908,
+     "names": 99.8
+    },
+    "active": {
+     "n": 138,
+     "excess_pp": 13.32,
+     "mdd": -0.3661,
+     "turnover": 0.111,
+     "invested": 0.8978,
+     "names": 99.9
+    }
+   }
+  }
+ },
+ "ic": {
+  "seedA": {
+   "RAW_raw": {
+    "mean": 0.08401,
+    "n": 607
+   },
+   "RAW_adj": {
+    "mean": 0.08228,
+    "n": 607
+   },
+   "ADJ_raw": {
+    "mean": 0.08198,
+    "n": 607
+   },
+   "ADJ_adj": {
+    "mean": 0.08095,
+    "n": 607
+   },
+   "RAW_retrain_raw": {
+    "mean": 0.08318,
+    "n": 607
+   },
+   "RAW_retrain_adj": {
+    "mean": 0.08146,
+    "n": 607
+   }
+  },
+  "seedB": {
+   "RAW_raw": {
+    "mean": 0.08428,
+    "n": 607
+   },
+   "RAW_adj": {
+    "mean": 0.08254,
+    "n": 607
+   },
+   "ADJ_raw": {
+    "mean": 0.08164,
+    "n": 607
+   },
+   "ADJ_adj": {
+    "mean": 0.08059,
+    "n": 607
+   },
+   "RAW_retrain_raw": {
+    "mean": 0.08376,
+    "n": 607
+   },
+   "RAW_retrain_adj": {
+    "mean": 0.08202,
+    "n": 607
+   }
+  }
+ },
+ "criteria_eval": {
+  "seedA": {
+   "d_holdout_excess_pp": 0.98,
+   "d_full_mdd_pp": -0.14,
+   "ic_raw_arm": 0.08401,
+   "ic_adj_arm": 0.08095,
+   "d_ic": -0.00306,
+   "c_excess": true,
+   "c_mdd": true,
+   "c_ic": false,
+   "PASS": false
+  },
+  "seedB": {
+   "d_holdout_excess_pp": -1.13,
+   "d_full_mdd_pp": 0.1,
+   "ic_raw_arm": 0.08428,
+   "ic_adj_arm": 0.08059,
+   "d_ic": -0.00369,
+   "c_excess": false,
+   "c_mdd": true,
+   "c_ic": false,
+   "PASS": false
+  }
+ },
+ "verdict": {
+  "adopt_adjusted_label": false,
+  "conclusion": "至少一条不成立 ⇒ **不采纳**（维持未复权；登记为'已知且被测试钉住的口径'）",
+  "note": "两套种子全部满足才算通过（预注册写死）；跨配对 IC 只作诊断、不参与判定"
+ },
+ "secs": 419.4,
+ "robustness_vintage_matched": {
+  "seedA": {
+   "d_holdout_excess_pp": -2.38,
+   "d_full_excess_pp": -1.24,
+   "d_full_mdd_pp": 0.29,
+   "ic_raw": 0.08318,
+   "ic_adj": 0.08095,
+   "d_ic": -0.00223
+  },
+  "seedB": {
+   "d_holdout_excess_pp": -3.05,
+   "d_full_excess_pp": -1.64,
+   "d_full_mdd_pp": 0.11,
+   "ic_raw": 0.08376,
+   "ic_adj": 0.08059,
+   "d_ic": -0.00317
+  }
+ }
+}

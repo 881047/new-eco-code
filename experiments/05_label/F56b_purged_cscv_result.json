@@ -1,0 +1,304 @@
+{
+ "selftest": {
+  "purge=0": {
+   "noise_only": 0.5011,
+   "one_true_arm": 0.0011,
+   "pass": true
+  },
+  "purge=1": {
+   "noise_only": 0.4957,
+   "one_true_arm": 0.0011,
+   "pass": true
+  },
+  "purge=2": {
+   "noise_only": 0.4896,
+   "one_true_arm": 0.0014,
+   "pass": true
+  }
+ },
+ "protocol": {
+  "arms_primary": [
+   "F4_scores_seedA",
+   "F4_scores_seedB",
+   "F47_SA_C1_small",
+   "F47_SA_C2_mid",
+   "F47_SA_C3_strong",
+   "F47_SA_C4_capacity",
+   "F47_SA_C5_qlib",
+   "F47_SB_C1_small",
+   "F47_SB_C2_mid",
+   "F47_SB_C3_strong",
+   "F47_SB_C4_capacity",
+   "F47_SB_C5_qlib"
+  ],
+  "arms_all": [
+   "F4_scores_seedA",
+   "F4_scores_seedB",
+   "F29_SA_A0_base",
+   "F29_SA_A1_abs",
+   "F29_SA_A2_pos",
+   "F29_SA_A3_abs2",
+   "F29_SB_A0_base",
+   "F29_SB_A1_abs",
+   "F29_SB_A2_pos",
+   "F29_SB_A3_abs2",
+   "F47_SA_C1_small",
+   "F47_SA_C2_mid",
+   "F47_SA_C3_strong",
+   "F47_SA_C4_capacity",
+   "F47_SA_C5_qlib",
+   "F47_SB_C1_small",
+   "F47_SB_C2_mid",
+   "F47_SB_C3_strong",
+   "F47_SB_C4_capacity",
+   "F47_SB_C5_qlib"
+  ],
+  "excluded": {
+   "F32_scores_SA_PERM.npz": "置换对照臂=零模型，不是候选构型",
+   "F33_scores_SA_M21.npz": "月频锚点(153 期)，T 网格与周频臂不同",
+   "F33_scores_SB_M21.npz": "月频锚点(153 期)，T 网格与周频臂不同"
+  },
+  "top_n": 100,
+  "cscv_S": [
+   8,
+   10,
+   16
+  ],
+  "purge_main": 1,
+  "purge_rationale": "周锚点间距≈5 交易日, 5 日标签窗重叠最远 ±1 锚点（短周间距 4 时共享 1 日）⇒ purge=1 清零直接重叠, purge=2 敏感性",
+  "stability_gate": 0.05,
+  "decision_rule": "|ΔPBO(S=16, purge=1)| < 0.05 ⇒ F56 结论在 purge 下稳定"
+ },
+ "n_periods": 607,
+ "window": [
+  "2014-10-31",
+  "2026-09-04"
+ ],
+ "corr_mean": 0.8528,
+ "replication_vs_f56": {
+  "S=8": {
+   "f56_stored": 0.4,
+   "purge0_recomputed": 0.3429,
+   "match": false
+  },
+  "S=10": {
+   "f56_stored": 0.373,
+   "purge0_recomputed": 0.3968,
+   "match": false
+  },
+  "S=16": {
+   "f56_stored": 0.4339,
+   "purge0_recomputed": 0.4401,
+   "match": false
+  }
+ },
+ "pbo_grid_primary": {
+  "S=8|purge=0": {
+   "S": 8,
+   "purge": 0,
+   "n_combos": 70,
+   "pbo": 0.3429,
+   "median_oos_rank_of_is_best": 9,
+   "mean_oos_rank_of_is_best": 8.14,
+   "is_best_pick_counts": {
+    "F47_SA_C5_qlib": 40,
+    "F47_SB_C5_qlib": 9,
+    "F47_SA_C3_strong": 9,
+    "F47_SB_C1_small": 7,
+    "F47_SA_C1_small": 2,
+    "F4_scores_seedA": 1,
+    "F4_scores_seedB": 1,
+    "F47_SA_C2_mid": 1
+   },
+   "mean_dropped_per_combo": 0
+  },
+  "S=8|purge=1": {
+   "S": 8,
+   "purge": 1,
+   "n_combos": 70,
+   "pbo": 0.4,
+   "median_oos_rank_of_is_best": 7,
+   "mean_oos_rank_of_is_best": 7.47,
+   "is_best_pick_counts": {
+    "F47_SA_C5_qlib": 36,
+    "F47_SB_C1_small": 10,
+    "F47_SA_C3_strong": 9,
+    "F47_SB_C5_qlib": 8,
+    "F4_scores_seedB": 2,
+    "F47_SA_C1_small": 2,
+    "F47_SA_C2_mid": 2,
+    "F4_scores_seedA": 1
+   },
+   "mean_dropped_per_combo": 8.0
+  },
+  "S=8|purge=2": {
+   "S": 8,
+   "purge": 2,
+   "n_combos": 70,
+   "pbo": 0.4429,
+   "median_oos_rank_of_is_best": 7,
+   "mean_oos_rank_of_is_best": 7.24,
+   "is_best_pick_counts": {
+    "F47_SA_C5_qlib": 35,
+    "F47_SB_C1_small": 9,
+    "F47_SA_C3_strong": 8,
+    "F47_SB_C5_qlib": 8,
+    "F4_scores_seedB": 3,
+    "F47_SA_C1_small": 3,
+    "F47_SA_C2_mid": 2,
+    "F4_scores_seedA": 1
+   },
+   "mean_dropped_per_combo": 16.0
+  },
+  "S=10|purge=0": {
+   "S": 10,
+   "purge": 0,
+   "n_combos": 252,
+   "pbo": 0.3968,
+   "median_oos_rank_of_is_best": 7,
+   "mean_oos_rank_of_is_best": 7.22,
+   "is_best_pick_counts": {
+    "F47_SA_C5_qlib": 124,
+    "F47_SB_C5_qlib": 34,
+    "F47_SA_C3_strong": 33,
+    "F47_SB_C1_small": 27,
+    "F47_SA_C1_small": 18,
+    "F4_scores_seedB": 11,
+    "F4_scores_seedA": 4,
+    "F47_SA_C2_mid": 1
+   },
+   "mean_dropped_per_combo": 0
+  },
+  "S=10|purge=1": {
+   "S": 10,
+   "purge": 1,
+   "n_combos": 252,
+   "pbo": 0.4206,
+   "median_oos_rank_of_is_best": 7,
+   "mean_oos_rank_of_is_best": 7.37,
+   "is_best_pick_counts": {
+    "F47_SA_C5_qlib": 134,
+    "F47_SA_C3_strong": 36,
+    "F47_SB_C5_qlib": 24,
+    "F47_SB_C1_small": 23,
+    "F47_SA_C1_small": 17,
+    "F4_scores_seedB": 14,
+    "F4_scores_seedA": 4
+   },
+   "mean_dropped_per_combo": 10.0
+  },
+  "S=10|purge=2": {
+   "S": 10,
+   "purge": 2,
+   "n_combos": 252,
+   "pbo": 0.4048,
+   "median_oos_rank_of_is_best": 8,
+   "mean_oos_rank_of_is_best": 7.62,
+   "is_best_pick_counts": {
+    "F47_SA_C5_qlib": 140,
+    "F47_SA_C3_strong": 39,
+    "F47_SB_C1_small": 28,
+    "F47_SB_C5_qlib": 20,
+    "F47_SA_C1_small": 16,
+    "F4_scores_seedB": 7,
+    "F4_scores_seedA": 2
+   },
+   "mean_dropped_per_combo": 20.0
+  },
+  "S=16|purge=0": {
+   "S": 16,
+   "purge": 0,
+   "n_combos": 12870,
+   "pbo": 0.4401,
+   "median_oos_rank_of_is_best": 7,
+   "mean_oos_rank_of_is_best": 6.69,
+   "is_best_pick_counts": {
+    "F47_SA_C5_qlib": 5816,
+    "F47_SB_C1_small": 2238,
+    "F47_SB_C5_qlib": 1602,
+    "F47_SA_C3_strong": 1557,
+    "F4_scores_seedA": 870,
+    "F47_SA_C1_small": 464,
+    "F4_scores_seedB": 299,
+    "F47_SA_C2_mid": 20
+   },
+   "mean_dropped_per_combo": 0
+  },
+  "S=16|purge=1": {
+   "S": 16,
+   "purge": 1,
+   "n_combos": 12870,
+   "pbo": 0.4573,
+   "median_oos_rank_of_is_best": 7,
+   "mean_oos_rank_of_is_best": 6.52,
+   "is_best_pick_counts": {
+    "F47_SA_C5_qlib": 5620,
+    "F47_SB_C1_small": 2505,
+    "F47_SA_C3_strong": 1450,
+    "F47_SB_C5_qlib": 1420,
+    "F4_scores_seedA": 795,
+    "F47_SA_C1_small": 530,
+    "F4_scores_seedB": 480,
+    "F47_SB_C2_mid": 37
+   },
+   "mean_dropped_per_combo": 16.0
+  },
+  "S=16|purge=2": {
+   "S": 16,
+   "purge": 2,
+   "n_combos": 12870,
+   "pbo": 0.4381,
+   "median_oos_rank_of_is_best": 7,
+   "mean_oos_rank_of_is_best": 6.63,
+   "is_best_pick_counts": {
+    "F47_SA_C5_qlib": 5280,
+    "F47_SB_C1_small": 2372,
+    "F47_SB_C5_qlib": 1792,
+    "F47_SA_C3_strong": 1104,
+    "F47_SA_C1_small": 768,
+    "F4_scores_seedA": 696,
+    "F4_scores_seedB": 653,
+    "F47_SB_C2_mid": 150
+   },
+   "mean_dropped_per_combo": 32.0
+  }
+ },
+ "delta_pbo_main": {
+  "S": 16,
+  "purge": 1,
+  "abs_delta": 0.0172,
+  "abs_delta_purge2": 0.002,
+  "gate": 0.05,
+  "stable": true
+ },
+ "verdict": "F56 结论在 purge 下稳定（|ΔPBO|=0.0172 < 0.05）⇒ 27号 §七/§十二#2 更正只需补'已补 purge 验证，结论不变'",
+ "post_run_diagnosis": {
+  "trigger": "复核锚 purge=0 与 F56 存档 3/3 不等(0.3429/0.3968/0.4401 vs 0.4000/0.3730/0.4339), 按预注册如实诊断",
+  "root_cause": "F56b 的 R 比 F56 多 1 行: 末锚 2026-09-11 的 5 日前向窗在 F56 跑数日(2026-09-13, 面板止于~09-16)尚未成熟, 本次(2026-09-19, 面板止 09-18)已成熟。R 构造本身零漂移: 去掉该行后 purge=0 PBO 三个 S **逐位复现**存档(0.4000/0.3730/0.4339)。",
+  "window_field_semantics": "F56 存档 window 字段=651 锚点跨度(2014-01-03~2026-09-11, 前 43 锚点 npz 整行 NaN 不进 R); F56b window=R 行跨度(2014-10-31~2026-09-04)。字段口径不同, 不是数据分歧。",
+  "f56_exact_rows": {
+   "note": "在 F56 精确行集(606 行, 去末锚)上重算",
+   "grid": {
+    "S=8": {
+     "0": 0.4,
+     "1": 0.4429,
+     "2": 0.4286
+    },
+    "S=10": {
+     "0": 0.373,
+     "1": 0.4087,
+     "2": 0.3929
+    },
+    "S=16": {
+     "0": 0.4339,
+     "1": 0.4332,
+     "2": 0.4392
+    }
+   },
+   "abs_delta_purge1_S16": 0.0007,
+   "stable": true
+  },
+  "finding": "单条尾部锚点即可令 PBO(S=8) 移 0.057 —— PBO 是秩分位数统计量, 对尾部锚点敏感; 引用 PBO 时应同时报 S 与行集。",
+  "verdict_after_diagnosis": "F56 结论在 purge 下稳定的判决成立(重建 R 与 F56 精确行集上 |ΔPBO(S=16,purge=1)| 均 <0.05), 27号 §七/§十二#2 更正只需补 purge 验证句 + 本次复现锚说明"
+ }
+}

@@ -1,0 +1,172 @@
+{
+ "ran_at": "2026-09-26 16:31:26",
+ "prereg": "plans/gp-mining-prereg-20260926.md",
+ "smoke": true,
+ "save": false,
+ "budget": {
+  "population": 8,
+  "generations": 3,
+  "seed": 20260911,
+  "max_depth": 3
+ },
+ "denominator": 24,
+ "n_prior": 189,
+ "n_used": 24,
+ "n_records": 2,
+ "n_pass": 0,
+ "n_duplicates": 0,
+ "duplicates": [],
+ "elapsed_sec": 112.7,
+ "records": [
+  {
+   "alpha_id": "gp_000",
+   "DEAD_head": 0.003774296143092215,
+   "DEAD_head_t": 0.4456960170857905,
+   "DEAD_hit": 0.5,
+   "DEAD_n": 8,
+   "DEAD_top6": -0.011196162668056786,
+   "DEAD_ic": 0.005566564915032775,
+   "DEAD_ls": 0.0028570410213433206,
+   "ACTIVE_head": 0.019819537410512567,
+   "ACTIVE_head_t": 0.9699819847983902,
+   "ACTIVE_hit": 0.5,
+   "ACTIVE_n": 4,
+   "ACTIVE_top6": -0.01760160643607378,
+   "ACTIVE_ic": 0.06121971061343918,
+   "ACTIVE_ls": 0.007731835823506117,
+   "FULL_head": 0.009122709898898998,
+   "FULL_head_t": 1.0635210195780789,
+   "FULL_n": 12,
+   "FULL_top6": -0.013331310590729117,
+   "p_adj": 1.0,
+   "n_tests": 213,
+   "n_tests_family": 24,
+   "n_tests_prior": 189,
+   "cost_per_month": 0.0015059259259259262,
+   "yearly": {
+    "2021": {
+     "head": NaN,
+     "top6": NaN,
+     "n": 2
+    },
+    "2022": {
+     "head": 0.0006878765610357126,
+     "top6": -0.027474177380402882,
+     "n": 3
+    },
+    "2023": {
+     "head": 0.009441246433804432,
+     "top6": 0.04008467495441437,
+     "n": 3
+    },
+    "2024": {
+     "head": NaN,
+     "top6": NaN,
+     "n": 1
+    },
+    "2025": {
+     "head": NaN,
+     "top6": NaN,
+     "n": 2
+    },
+    "2026": {
+     "head": NaN,
+     "top6": NaN,
+     "n": 1
+    }
+   },
+   "avg_names": 4133.0,
+   "expr": "Ref(Sign(Corr($pb, $close, 30)), 30)",
+   "info_source": "price_volume_gp",
+   "source": "GPProposer(NSGA-II)",
+   "pit_version": "pit_v1_2019-01-01",
+   "note": "{\"active\": [\"2024-01-01\", \"2026-08-31\"], \"dead\": [\"2020-09-01\", \"2023-12-31\"], \"eval_since\": \"2019-01-01\", \"intent\": \"wiring smoke — save=False, 不入册不计分母 (gp-mining-prereg-20260926 冻结前接线验证)\", \"version\": \"factory_v1\", \"warmup_days\": 400} | 死区适应度 0.0038 / 复杂度 36 / Pareto 前沿第 0",
+   "head_bar": 0.006505925925925926,
+   "c_same_sign": true,
+   "c_head_size": false,
+   "c_t": false,
+   "c_p_adj": false,
+   "c_top6": false,
+   "c_cost": true,
+   "PASS": false
+  },
+  {
+   "alpha_id": "gp_001",
+   "DEAD_head": -0.0009931487962603568,
+   "DEAD_head_t": -0.40140649276023566,
+   "DEAD_hit": 0.375,
+   "DEAD_n": 40,
+   "DEAD_top6": -0.0027492522727698087,
+   "DEAD_ic": -0.010219637782247864,
+   "DEAD_ls": -0.0009791078278794884,
+   "ACTIVE_head": -0.0014880544866525357,
+   "ACTIVE_head_t": -0.26721273617941904,
+   "ACTIVE_hit": 0.4838709677419355,
+   "ACTIVE_n": 31,
+   "ACTIVE_top6": -0.01016383936568614,
+   "ACTIVE_ic": -0.021408042398022343,
+   "ACTIVE_ls": -0.0070890062638828836,
+   "FULL_head": -0.0012092343793893364,
+   "FULL_head_t": -0.4350644839596443,
+   "FULL_n": 71,
+   "FULL_top6": -0.005986607200662855,
+   "p_adj": 1.0,
+   "n_tests": 213,
+   "n_tests_family": 24,
+   "n_tests_prior": 189,
+   "cost_per_month": 0.000614057971014493,
+   "yearly": {
+    "2020": {
+     "head": -0.010060311295092106,
+     "top6": -0.03487994521856308,
+     "n": 4
+    },
+    "2021": {
+     "head": -0.0019401037910332282,
+     "top6": -0.016508205560967326,
+     "n": 12
+    },
+    "2022": {
+     "head": 0.0030029211969425282,
+     "top6": 0.007243861677125096,
+     "n": 12
+    },
+    "2023": {
+     "head": -0.0010198762950797875,
+     "top6": 0.011726818047463894,
+     "n": 12
+    },
+    "2024": {
+     "head": 0.0011222297325730324,
+     "top6": -0.009549757310499748,
+     "n": 12
+    },
+    "2025": {
+     "head": -0.002097687878025075,
+     "top6": -0.005107936138908069,
+     "n": 12
+    },
+    "2026": {
+     "head": -0.0049177416201148716,
+     "top6": -0.01988381413476808,
+     "n": 7
+    }
+   },
+   "avg_names": 3306.1830985915494,
+   "expr": "$pe_ttm",
+   "info_source": "price_volume_gp",
+   "source": "GPProposer(NSGA-II)",
+   "pit_version": "pit_v1_2019-01-01",
+   "note": "{\"active\": [\"2024-01-01\", \"2026-08-31\"], \"dead\": [\"2020-09-01\", \"2023-12-31\"], \"eval_since\": \"2019-01-01\", \"intent\": \"wiring smoke — save=False, 不入册不计分母 (gp-mining-prereg-20260926 冻结前接线验证)\", \"version\": \"factory_v1\", \"warmup_days\": 400} | 死区适应度 -0.0001 / 复杂度 7 / Pareto 前沿第 1",
+   "head_bar": 0.005614057971014493,
+   "c_same_sign": true,
+   "c_head_size": false,
+   "c_t": false,
+   "c_p_adj": false,
+   "c_top6": false,
+   "c_cost": true,
+   "PASS": false
+  }
+ ],
+ "exit_note": "PASS=POOLED=有资格进组合层回测, 不等于可用; 0 PASS 的结论 = GP 在本仓死区×900 预算下无可检出增量"
+}

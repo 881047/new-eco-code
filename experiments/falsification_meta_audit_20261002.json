@@ -1,0 +1,811 @@
+{
+ "asof": "2026-10-02T18:48:53",
+ "n_artifacts": 111,
+ "n_with_verdict": 37,
+ "no_verdict_keys": [
+  "ab_exec_window_20260928.json",
+  "ab_oi_excluder_20260928.json",
+  "alpha_factory_gp1_20260926.json",
+  "alpha_factory_gp1_smoke.json",
+  "block_alarm_persistence.json",
+  "block_diag_b1b2.json",
+  "block_ic_replay_2021.json",
+  "block_ic_replay_holdout_2022_2023.json",
+  "chase6_fullhist_20260926.json",
+  "chase6_r3_grid_eval.json",
+  "chase6_r3_grid_full.json",
+  "chase6_r3_min60.json",
+  "crowding_meter_probe_20260927.json",
+  "diag_gate_calibration_20260926.json",
+  "diag_gate_placebo_20260926.json",
+  "diag_nf50_redundancy_20260927.json",
+  "eb_bank_reverify_20260927.json",
+  "eps_revision_eval_20260929.json",
+  "excl_pool_train_20260927.json",
+  "field_factor_value_check.json",
+  "gap_waterfall_20261002.json",
+  "gold_grid_backtest_20261002.json",
+  "governor_overlay_ab_20260925.json",
+  "hetero_gate_20260928.json",
+  "hl_holding_probe_20260927.json",
+  "hl_holding_probe_v2_20260927.json",
+  "index_rebal_event_study_20260928.json",
+  "index_rebal_event_study_v2_20260928.json",
+  "index_rebal_rule_v3_20260928.json",
+  "lambdarank_ab_20261002.json",
+  "lambdarank_diagnose_20261002.json",
+  "llm_mine_loop_r2_20260926.json",
+  "llm_mine_loop_r3_20260926.json",
+  "llm_rubric_revise_20260927.json",
+  "llm_text_rubric_20260927.json",
+  "min60_factor_gate_r2_20260926.json",
+  "ml_attribution_20260929.json",
+  "monthly_exec_attribution.json",
+  "monthly_rule_expectancy.json",
+  "nf_ab_backtest_20260927.json",
+  "nf_fullretrain_ab_20260926.json",
+  "pead_factor_eval_20260928.json",
+  "pead_s5_readings_20260928.json",
+  "probability_audit_20261002.json",
+  "proxyoverride_backup_20261002.json",
+  "risk_overlay_ab_20260926.json",
+  "s1_excess_recheck_20261002.json",
+  "s5_decay_retest_20260927.json",
+  "seed_resolution.json",
+  "seed_variance_decomposition.json",
+  "single_factor_retest_20260926.json",
+  "single_factor_retest_s5_20260927.json",
+  "sleeve_downsize_ab_20260928.json",
+  "sleeve_downsize_ab_20260928_series_seedA_A0_anchor_1m_top100.json",
+  "sleeve_downsize_ab_20260928_series_seedA_B1_2w_top100.json",
+  "sleeve_downsize_ab_20260928_series_seedA_B2_2w_top20.json",
+  "sleeve_downsize_ab_20260928_series_seedA_B3_2w_top15.json",
+  "sleeve_downsize_ab_20260928_series_seedA_B4_2w_top10.json",
+  "sleeve_downsize_ab_20260928_series_seedA_B5_2w_top6.json",
+  "sleeve_downsize_ab_20260928_series_seedB_A0_anchor_1m_top100.json",
+  "sleeve_downsize_ab_20260928_series_seedB_B1_2w_top100.json",
+  "sleeve_downsize_ab_20260928_series_seedB_B2_2w_top20.json",
+  "sleeve_downsize_ab_20260928_series_seedB_B3_2w_top15.json",
+  "sleeve_downsize_ab_20260928_series_seedB_B4_2w_top10.json",
+  "sleeve_downsize_ab_20260928_series_seedB_B5_2w_top6.json",
+  "text_factor_materialize_20260927.json",
+  "text_factors_ab_20260927.json",
+  "text_factors_eval_20260927.json",
+  "text_probe_20260927.json",
+  "topn_widen_ab_20260929.json",
+  "trough_tilt_20260930.json",
+  "txt2_excl_train_20260927.json",
+  "weekly_freq_baseline.json",
+  "weekly_freq_hyst_scan.json"
+ ],
+ "ledger_claim_mismatches": [
+  {
+   "artifact": "costaware_smooth_20260927.json",
+   "L1_readable": true,
+   "verdict": "REJECT（线结清，登记勿重测）",
+   "ledger_claim": "平滑 REJECT: prod 窗非劣失败(−2.49pp)",
+   "n_numbers_stored": 39,
+   "claim_numbers_matched": [
+    false
+   ]
+  },
+  {
+   "artifact": "crowding_cap_20260928.json",
+   "L1_readable": true,
+   "verdict": "REJECT（线结清）",
+   "ledger_claim": "L3 REJECT: 触发后 prod 超额 −5.68pp 劣化",
+   "n_numbers_stored": 13,
+   "claim_numbers_matched": [
+    false
+   ]
+  },
+  {
+   "artifact": "e2e_ab_20260929.json",
+   "L1_readable": true,
+   "verdict": "REJECT 线结清（双种子同向为负）",
+   "ledger_claim": "E2E REJECT: ΔA −22.29pp/ΔB −8.52pp, 换手 +6.23pp 超 P3",
+   "n_numbers_stored": 34,
+   "claim_numbers_matched": [
+    false,
+    false,
+    false
+   ]
+  },
+  {
+   "artifact": "holdperiod_ab_20260927.json",
+   "L1_readable": true,
+   "verdict": "REJECT（线结清）",
+   "ledger_claim": "持有期 REJECT: Δexcess −18.5~−2.2pp 双相位双窗全负",
+   "n_numbers_stored": 87,
+   "claim_numbers_matched": [
+    false
+   ]
+  },
+  {
+   "artifact": "kline_entry_probe_20261001.json",
+   "L1_readable": true,
+   "verdict": "REJECT（线结清）",
+   "ledger_claim": "K线择时 REJECT: 条件臂 Δ −8.98pp(prod)/−5.77pp(full)",
+   "n_numbers_stored": 57,
+   "claim_numbers_matched": [
+    false,
+    false
+   ]
+  },
+  {
+   "artifact": "lambdarank_ab_20261002.json",
+   "L1_readable": true,
+   "verdict": null,
+   "ledger_claim": "lambdarank REJECT: a_prod −33.22pp/b_prod −15.25pp",
+   "n_numbers_stored": 32,
+   "claim_numbers_matched": [
+    false,
+    false
+   ]
+  },
+  {
+   "artifact": "nf_ab_backtest_20260927.json",
+   "L1_readable": true,
+   "verdict": null,
+   "ledger_claim": "nf58 REJECT: Δsys_ann −16.78/−9.76pp 双种子集同向为负",
+   "n_numbers_stored": 109,
+   "claim_numbers_matched": [
+    false
+   ]
+  },
+  {
+   "artifact": "volscale_overlay_20260927.json",
+   "L1_readable": true,
+   "verdict": "INDETERMINATE",
+   "ledger_claim": "vol 缩放 INDETERMINATE: MDD 改善 +4.42pp<5pp",
+   "n_numbers_stored": 36,
+   "claim_numbers_matched": [
+    false,
+    false
+   ]
+  }
+ ],
+ "rows": [
+  {
+   "artifact": "ab_exec_window_20260928.json",
+   "L1_readable": true,
+   "verdict": null
+  },
+  {
+   "artifact": "ab_oi_excluder_20260928.json",
+   "L1_readable": true,
+   "verdict": null
+  },
+  {
+   "artifact": "alpha_factory_gp1_20260926.json",
+   "L1_readable": true,
+   "verdict": null
+  },
+  {
+   "artifact": "alpha_factory_gp1_smoke.json",
+   "L1_readable": true,
+   "verdict": null
+  },
+  {
+   "artifact": "block_alarm_persistence.json",
+   "L1_readable": true,
+   "verdict": null
+  },
+  {
+   "artifact": "block_diag_b1b2.json",
+   "L1_readable": true,
+   "verdict": null
+  },
+  {
+   "artifact": "block_ic_replay_2021.json",
+   "L1_readable": true,
+   "verdict": null
+  },
+  {
+   "artifact": "block_ic_replay_holdout_2022_2023.json",
+   "L1_readable": true,
+   "verdict": null
+  },
+  {
+   "artifact": "block_ic_window_study.json",
+   "L1_readable": true,
+   "verdict": "暂不需要改"
+  },
+  {
+   "artifact": "chase6_fullhist_20260926.json",
+   "L1_readable": true,
+   "verdict": null
+  },
+  {
+   "artifact": "chase6_r3_grid_eval.json",
+   "L1_readable": true,
+   "verdict": null
+  },
+  {
+   "artifact": "chase6_r3_grid_full.json",
+   "L1_readable": true,
+   "verdict": null
+  },
+  {
+   "artifact": "chase6_r3_min60.json",
+   "L1_readable": true,
+   "verdict": null
+  },
+  {
+   "artifact": "costaware_smooth_20260927.json",
+   "L1_readable": true,
+   "verdict": "REJECT（线结清，登记勿重测）",
+   "ledger_claim": "平滑 REJECT: prod 窗非劣失败(−2.49pp)",
+   "n_numbers_stored": 39,
+   "claim_numbers_matched": [
+    false
+   ]
+  },
+  {
+   "artifact": "crowding_cap_20260928.json",
+   "L1_readable": true,
+   "verdict": "REJECT（线结清）",
+   "ledger_claim": "L3 REJECT: 触发后 prod 超额 −5.68pp 劣化",
+   "n_numbers_stored": 13,
+   "claim_numbers_matched": [
+    false
+   ]
+  },
+  {
+   "artifact": "crowding_meter_probe_20260927.json",
+   "L1_readable": true,
+   "verdict": null
+  },
+  {
+   "artifact": "diag_gate_calibration_20260926.json",
+   "L1_readable": true,
+   "verdict": null
+  },
+  {
+   "artifact": "diag_gate_placebo_20260926.json",
+   "L1_readable": true,
+   "verdict": null
+  },
+  {
+   "artifact": "diag_nf50_redundancy_20260927.json",
+   "L1_readable": true,
+   "verdict": null
+  },
+  {
+   "artifact": "e2e_ab_20260929.json",
+   "L1_readable": true,
+   "verdict": "REJECT 线结清（双种子同向为负）",
+   "ledger_claim": "E2E REJECT: ΔA −22.29pp/ΔB −8.52pp, 换手 +6.23pp 超 P3",
+   "n_numbers_stored": 34,
+   "claim_numbers_matched": [
+    false,
+    false,
+    false
+   ]
+  },
+  {
+   "artifact": "eb_bank_reverify_20260927.json",
+   "L1_readable": true,
+   "verdict": null
+  },
+  {
+   "artifact": "eps_revision_ab_20260929.json",
+   "L1_readable": true,
+   "verdict": "REJECT 线结清（P1/P2/P3 有未过）",
+   "ledger_claim": "EPS 修正剔除器 REJECT: ACTIVE Δsys_ann −0.14pp",
+   "n_numbers_stored": 68,
+   "claim_numbers_matched": [
+    true
+   ]
+  },
+  {
+   "artifact": "eps_revision_eval_20260929.json",
+   "L1_readable": true,
+   "verdict": null
+  },
+  {
+   "artifact": "excl_pool_train_20260927.json",
+   "L1_readable": true,
+   "verdict": null
+  },
+  {
+   "artifact": "exec_early_oracle_20261002.json",
+   "L1_readable": true,
+   "verdict": "NO-GO",
+   "ledger_claim": "执行前移 NO-GO: prod 超额 −0.06%/月",
+   "n_numbers_stored": 15,
+   "claim_numbers_matched": []
+  },
+  {
+   "artifact": "field_factor_value_check.json",
+   "L1_readable": true,
+   "verdict": null,
+   "ledger_claim": "字段因子 0/9",
+   "n_numbers_stored": 5,
+   "claim_numbers_matched": []
+  },
+  {
+   "artifact": "gap_waterfall_20261002.json",
+   "L1_readable": true,
+   "verdict": null
+  },
+  {
+   "artifact": "gold_grid_backtest_20261002.json",
+   "L1_readable": true,
+   "verdict": null,
+   "ledger_claim": "网格 INVALID-degenerate: 7.5 年 8 笔",
+   "n_numbers_stored": 19,
+   "claim_numbers_matched": []
+  },
+  {
+   "artifact": "governor_overlay_ab_20260925.json",
+   "L1_readable": true,
+   "verdict": null
+  },
+  {
+   "artifact": "gp000_combo_ab_20260926.json",
+   "L1_readable": true,
+   "verdict": "按冻结判据不采纳（与 Phase 2 B80 同款结清语义）",
+   "ledger_claim": "GP gp_000 ρ(size)=0.951 组合层不采纳",
+   "n_numbers_stored": 505,
+   "claim_numbers_matched": []
+  },
+  {
+   "artifact": "head_weight_ab_20260929.json",
+   "L1_readable": true,
+   "verdict": "REJECT 线结清（双种子同向为负）",
+   "ledger_claim": "B1 REJECT: ΔA −0.30pp/ΔB −0.10pp 同向为负",
+   "n_numbers_stored": 34,
+   "claim_numbers_matched": [
+    true,
+    true
+   ]
+  },
+  {
+   "artifact": "hetero_gate_20260928.json",
+   "L1_readable": true,
+   "verdict": null
+  },
+  {
+   "artifact": "hl_holding_probe_20260927.json",
+   "L1_readable": true,
+   "verdict": null
+  },
+  {
+   "artifact": "hl_holding_probe_v2_20260927.json",
+   "L1_readable": true,
+   "verdict": null
+  },
+  {
+   "artifact": "holdperiod_ab_20260927.json",
+   "L1_readable": true,
+   "verdict": "REJECT（线结清）",
+   "ledger_claim": "持有期 REJECT: Δexcess −18.5~−2.2pp 双相位双窗全负",
+   "n_numbers_stored": 87,
+   "claim_numbers_matched": [
+    false
+   ]
+  },
+  {
+   "artifact": "index_rebal_event_study_20260928.json",
+   "L1_readable": true,
+   "verdict": null
+  },
+  {
+   "artifact": "index_rebal_event_study_v2_20260928.json",
+   "L1_readable": true,
+   "verdict": null
+  },
+  {
+   "artifact": "index_rebal_rule_v3_20260928.json",
+   "L1_readable": true,
+   "verdict": null
+  },
+  {
+   "artifact": "inquiry_delay_probe_20260928.json",
+   "L1_readable": true,
+   "verdict": "覆盖不足 ⇒ 线结清（数据不支持，非因子无效）"
+  },
+  {
+   "artifact": "kline_entry_probe_20261001.json",
+   "L1_readable": true,
+   "verdict": "REJECT（线结清）",
+   "ledger_claim": "K线择时 REJECT: 条件臂 Δ −8.98pp(prod)/−5.77pp(full)",
+   "n_numbers_stored": 57,
+   "claim_numbers_matched": [
+    false,
+    false
+   ]
+  },
+  {
+   "artifact": "lambdarank_ab_20261002.json",
+   "L1_readable": true,
+   "verdict": null,
+   "ledger_claim": "lambdarank REJECT: a_prod −33.22pp/b_prod −15.25pp",
+   "n_numbers_stored": 32,
+   "claim_numbers_matched": [
+    false,
+    false
+   ]
+  },
+  {
+   "artifact": "lambdarank_diagnose_20261002.json",
+   "L1_readable": true,
+   "verdict": null
+  },
+  {
+   "artifact": "llm_mine_loop_r2_20260926.json",
+   "L1_readable": true,
+   "verdict": null
+  },
+  {
+   "artifact": "llm_mine_loop_r3_20260926.json",
+   "L1_readable": true,
+   "verdict": null
+  },
+  {
+   "artifact": "llm_rubric_revise_20260927.json",
+   "L1_readable": true,
+   "verdict": null
+  },
+  {
+   "artifact": "llm_text_rubric_20260927.json",
+   "L1_readable": true,
+   "verdict": null
+  },
+  {
+   "artifact": "m3_q2_percentile_ab.json",
+   "L1_readable": true,
+   "verdict": "越门（须立阶段 B：双臂重训 + 另写预注册）"
+  },
+  {
+   "artifact": "min60_factor_gate_r2_20260926.json",
+   "L1_readable": true,
+   "verdict": null,
+   "ledger_claim": "min60 变换族 0/12",
+   "n_numbers_stored": 6,
+   "claim_numbers_matched": []
+  },
+  {
+   "artifact": "ml_attribution_20260929.json",
+   "L1_readable": true,
+   "verdict": null
+  },
+  {
+   "artifact": "monthly_exec_attribution.json",
+   "L1_readable": true,
+   "verdict": null
+  },
+  {
+   "artifact": "monthly_rule_expectancy.json",
+   "L1_readable": true,
+   "verdict": null
+  },
+  {
+   "artifact": "nf_ab_backtest_20260927.json",
+   "L1_readable": true,
+   "verdict": null,
+   "ledger_claim": "nf58 REJECT: Δsys_ann −16.78/−9.76pp 双种子集同向为负",
+   "n_numbers_stored": 109,
+   "claim_numbers_matched": [
+    false
+   ]
+  },
+  {
+   "artifact": "nf_fullretrain_ab_20260926.json",
+   "L1_readable": true,
+   "verdict": null
+  },
+  {
+   "artifact": "padm_exclgate_20260927.json",
+   "L1_readable": true,
+   "verdict": "REJECT"
+  },
+  {
+   "artifact": "padm_exclmin_20260927.json",
+   "L1_readable": true,
+   "verdict": "PASS"
+  },
+  {
+   "artifact": "padm_nf58_20260927.json",
+   "L1_readable": true,
+   "verdict": "REJECT"
+  },
+  {
+   "artifact": "padm_seednoise_20260927.json",
+   "L1_readable": true,
+   "verdict": "INDETERMINATE"
+  },
+  {
+   "artifact": "padm_txt2pead_20260927.json",
+   "L1_readable": true,
+   "verdict": "REJECT"
+  },
+  {
+   "artifact": "pbo_cscv_diagnostic_20260929.json",
+   "L1_readable": true,
+   "verdict": "HEALTHY(选择过程健康)"
+  },
+  {
+   "artifact": "pead_factor_eval_20260928.json",
+   "L1_readable": true,
+   "verdict": null,
+   "ledger_claim": "PEAD 42 候选 0/42",
+   "n_numbers_stored": 9,
+   "claim_numbers_matched": []
+  },
+  {
+   "artifact": "pead_s5_readings_20260928.json",
+   "L1_readable": true,
+   "verdict": null
+  },
+  {
+   "artifact": "probability_audit_20261002.json",
+   "L1_readable": true,
+   "verdict": null
+  },
+  {
+   "artifact": "proxyoverride_backup_20261002.json",
+   "L1_readable": true,
+   "verdict": null
+  },
+  {
+   "artifact": "restore_drill_readonly.json",
+   "L1_readable": true,
+   "verdict": "**恢复演练（段 A）通过**：生产库与备份的 `quick_check` 均为 `ok`，关键表全部可读，备份的最新 `trade_date` 落后于生产 ⇒ 这是一份**停留在过去时点、结构完整**的可用快照。⇒ 结论：备份**可用于恢"
+  },
+  {
+   "artifact": "risk_overlay_ab_20260926.json",
+   "L1_readable": true,
+   "verdict": null
+  },
+  {
+   "artifact": "s1_confidence_probe_20260929.json",
+   "L1_readable": true,
+   "verdict": "CLEARED(本构造下未证实 ⇒ S1 线结清, 与拥挤度量器探针同措辞纪律)"
+  },
+  {
+   "artifact": "s1_excess_recheck_20261002.json",
+   "L1_readable": true,
+   "verdict": null
+  },
+  {
+   "artifact": "s2_pool_guard_impact.json",
+   "L1_readable": true,
+   "verdict": "翻档率 8.5659% ⇒ 护栏确实改变状态；需按量级决定是否换尺（见 plans/m3-q2-stage-b-prereg 同类代价框架）"
+  },
+  {
+   "artifact": "s2_pool_scale_candidates.json",
+   "L1_readable": true,
+   "verdict": "V1（无护栏）含新股首日等策略不可获得收益 ⇒ 不是正确参照尺，8.57% 与 −0.3862pp/月 是'两把尺口径不同'的产物，不是现行尺的真实偏差。真实偏差看 V0−V3（V2 剔新股首日、V3 再剔 ST/退；⑤⑥两层未实现但只剔 "
+  },
+  {
+   "artifact": "s5_decay_retest_20260927.json",
+   "L1_readable": true,
+   "verdict": null
+  },
+  {
+   "artifact": "s5_tiebreak_factor_level.json",
+   "L1_readable": true,
+   "verdict": "**翻档 35702 槽位 / 7655774（0.4663%）**，涉及 122 个因子、2974 个截面 ⇒ 与生产分那次对照（0.027%）相比显著更大 ⇒ S5 有实质收益，建议按预注册实施 —— 但动门禁会让在册 189 条读数成"
+  },
+  {
+   "artifact": "s5_tiebreak_impact.json",
+   "L1_readable": true,
+   "verdict": "翻档 12 槽位（0.0270%）⇒ 当前排序确实改变选股结果 ⇒ S5 有实质收益，建议按预注册实施（需你批准；实施后需重启服务）"
+  },
+  {
+   "artifact": "s5_tiebreak_return_impact.json",
+   "L1_readable": true,
+   "verdict": "**可辨**：8 个因子 ΔDEAD_head ≥ 5.0bp/月 ⇒ 翻档能搬动门禁判决量 ⇒ A/B 由用户拍板（B 代价照旧：另立预注册 + 在册 189 条读数成\"旧选面\"）。"
+  },
+  {
+   "artifact": "seed_resolution.json",
+   "L1_readable": true,
+   "verdict": null
+  },
+  {
+   "artifact": "seed_variance_decomposition.json",
+   "L1_readable": true,
+   "verdict": null
+  },
+  {
+   "artifact": "single_factor_retest_20260926.json",
+   "L1_readable": true,
+   "verdict": null
+  },
+  {
+   "artifact": "single_factor_retest_s5_20260927.json",
+   "L1_readable": true,
+   "verdict": null
+  },
+  {
+   "artifact": "sleeve_ab_20260927.json",
+   "L1_readable": true,
+   "verdict": "INDETERMINATE"
+  },
+  {
+   "artifact": "sleeve_bank_screen_20260927.json",
+   "L1_readable": true,
+   "verdict": "CANDIDATES"
+  },
+  {
+   "artifact": "sleeve_downsize_ab_20260928.json",
+   "L1_readable": true,
+   "verdict": null,
+   "ledger_claim": "袖套缩容 INDETERMINATE: +0.58bp/期 t=0.20",
+   "n_numbers_stored": 247,
+   "claim_numbers_matched": []
+  },
+  {
+   "artifact": "sleeve_downsize_ab_20260928_series_seedA_A0_anchor_1m_top100.json",
+   "L1_readable": true,
+   "verdict": null
+  },
+  {
+   "artifact": "sleeve_downsize_ab_20260928_series_seedA_B1_2w_top100.json",
+   "L1_readable": true,
+   "verdict": null
+  },
+  {
+   "artifact": "sleeve_downsize_ab_20260928_series_seedA_B2_2w_top20.json",
+   "L1_readable": true,
+   "verdict": null
+  },
+  {
+   "artifact": "sleeve_downsize_ab_20260928_series_seedA_B3_2w_top15.json",
+   "L1_readable": true,
+   "verdict": null
+  },
+  {
+   "artifact": "sleeve_downsize_ab_20260928_series_seedA_B4_2w_top10.json",
+   "L1_readable": true,
+   "verdict": null
+  },
+  {
+   "artifact": "sleeve_downsize_ab_20260928_series_seedA_B5_2w_top6.json",
+   "L1_readable": true,
+   "verdict": null
+  },
+  {
+   "artifact": "sleeve_downsize_ab_20260928_series_seedB_A0_anchor_1m_top100.json",
+   "L1_readable": true,
+   "verdict": null
+  },
+  {
+   "artifact": "sleeve_downsize_ab_20260928_series_seedB_B1_2w_top100.json",
+   "L1_readable": true,
+   "verdict": null
+  },
+  {
+   "artifact": "sleeve_downsize_ab_20260928_series_seedB_B2_2w_top20.json",
+   "L1_readable": true,
+   "verdict": null
+  },
+  {
+   "artifact": "sleeve_downsize_ab_20260928_series_seedB_B3_2w_top15.json",
+   "L1_readable": true,
+   "verdict": null
+  },
+  {
+   "artifact": "sleeve_downsize_ab_20260928_series_seedB_B4_2w_top10.json",
+   "L1_readable": true,
+   "verdict": null
+  },
+  {
+   "artifact": "sleeve_downsize_ab_20260928_series_seedB_B5_2w_top6.json",
+   "L1_readable": true,
+   "verdict": null
+  },
+  {
+   "artifact": "sleeve_factormom_ab_20260927.json",
+   "L1_readable": true,
+   "verdict": "REJECT（线结清）",
+   "ledger_claim": "因子动量 REJECT: 配对 Δ −9.91bp/期 (t=−2.13)",
+   "n_numbers_stored": 18,
+   "claim_numbers_matched": []
+  },
+  {
+   "artifact": "tender_offer_event_study_20261002.json",
+   "L1_readable": true,
+   "verdict": "GO"
+  },
+  {
+   "artifact": "tender_offer_spread_study_20261002.json",
+   "L1_readable": true,
+   "verdict": "NO-GO",
+   "ledger_claim": "要约价差 NO-GO: 价差型 0 起",
+   "n_numbers_stored": 4,
+   "claim_numbers_matched": []
+  },
+  {
+   "artifact": "text_factor_materialize_20260927.json",
+   "L1_readable": true,
+   "verdict": null
+  },
+  {
+   "artifact": "text_factors_ab_20260927.json",
+   "L1_readable": true,
+   "verdict": null
+  },
+  {
+   "artifact": "text_factors_dose_20260927.json",
+   "L1_readable": true,
+   "verdict": "ADOPT_PACKAGE=True"
+  },
+  {
+   "artifact": "text_factors_eval_20260927.json",
+   "L1_readable": true,
+   "verdict": null
+  },
+  {
+   "artifact": "text_label_validate_20260927.json",
+   "L1_readable": true,
+   "verdict": "FAIL（迭代 rubric）"
+  },
+  {
+   "artifact": "text_label_validate_s777_20260927.json",
+   "L1_readable": true,
+   "verdict": "FAIL（迭代 rubric）"
+  },
+  {
+   "artifact": "text_probe_20260927.json",
+   "L1_readable": true,
+   "verdict": null
+  },
+  {
+   "artifact": "topn_widen_ab_20260929.json",
+   "L1_readable": true,
+   "verdict": null,
+   "ledger_claim": "top_n 加宽 REJECT: main sys_ann 29.13%→14.97/12.78/9.37%",
+   "n_numbers_stored": 49,
+   "claim_numbers_matched": []
+  },
+  {
+   "artifact": "trough_tilt_20260930.json",
+   "L1_readable": true,
+   "verdict": null
+  },
+  {
+   "artifact": "txt2_excl_train_20260927.json",
+   "L1_readable": true,
+   "verdict": null
+  },
+  {
+   "artifact": "volscale_overlay_20260927.json",
+   "L1_readable": true,
+   "verdict": "INDETERMINATE",
+   "ledger_claim": "vol 缩放 INDETERMINATE: MDD 改善 +4.42pp<5pp",
+   "n_numbers_stored": 36,
+   "claim_numbers_matched": [
+    false,
+    false
+   ]
+  },
+  {
+   "artifact": "watchdog_restart_forensics.json",
+   "L1_readable": true,
+   "verdict": "自愈计数主要来自非定时的计划性重启"
+  },
+  {
+   "artifact": "watchdog_s13_eval_20261001.json",
+   "L1_readable": true,
+   "verdict": "S13 部分支持：定时档自愈率较基线明显下降（未到 0），继续观察"
+  },
+  {
+   "artifact": "weekly_freq_baseline.json",
+   "L1_readable": true,
+   "verdict": null
+  },
+  {
+   "artifact": "weekly_freq_hyst_scan.json",
+   "L1_readable": true,
+   "verdict": null
+  },
+  {
+   "artifact": "weekly_rebalance_ab.json",
+   "L1_readable": true,
+   "verdict": "**不采纳周频调仓**（净超额劣于月频 ⇒ 按预注册登记证伪，勿重跑）"
+  }
+ ]
+}

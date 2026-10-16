@@ -1,0 +1,154 @@
+{
+  "formula": "ann = (1+r).prod()**(per_year/n) - 1  (F1b:422, 几何)",
+  "bench_is": "池等权（F66.bench；与中证800 相关仅 0.66 ⇒ 所有超额是**池口径**）",
+  "caveat": "不复现 F52 在册读数；只量常数敏感性",
+  "per_seed": {
+    "A": [
+      {
+        "window": "全史",
+        "periods": 491,
+        "per_year_actual": 51.2394,
+        "excess_pool_52_pp": 17.785,
+        "excess_pool_actual_pp": 17.491,
+        "shift_pp": 0.294,
+        "shift_relative_pct": 1.654,
+        "distance_to_target_line_pp": 7.785,
+        "margin_above_line_pp": 7.785,
+        "flip_risk": false
+      },
+      {
+        "window": "留出集 2024-01 起",
+        "periods": 139,
+        "per_year_actual": 51.8588,
+        "excess_pool_52_pp": 9.576,
+        "excess_pool_actual_pp": 9.545,
+        "shift_pp": 0.031,
+        "shift_relative_pct": 0.321,
+        "distance_to_target_line_pp": -0.424,
+        "margin_above_line_pp": -0.424,
+        "flip_risk": false
+      },
+      {
+        "window": "死区 2020-09~2023-12",
+        "periods": 169,
+        "per_year_actual": 51.2685,
+        "excess_pool_52_pp": 25.643,
+        "excess_pool_actual_pp": 25.23,
+        "shift_pp": 0.413,
+        "shift_relative_pct": 1.611,
+        "distance_to_target_line_pp": 15.643,
+        "margin_above_line_pp": 15.643,
+        "flip_risk": false
+      }
+    ],
+    "B": [
+      {
+        "window": "全史",
+        "periods": 491,
+        "per_year_actual": 51.2394,
+        "excess_pool_52_pp": 17.469,
+        "excess_pool_actual_pp": 17.18,
+        "shift_pp": 0.289,
+        "shift_relative_pct": 1.652,
+        "distance_to_target_line_pp": 7.469,
+        "margin_above_line_pp": 7.469,
+        "flip_risk": false
+      },
+      {
+        "window": "留出集 2024-01 起",
+        "periods": 139,
+        "per_year_actual": 51.8588,
+        "excess_pool_52_pp": 11.832,
+        "excess_pool_actual_pp": 11.794,
+        "shift_pp": 0.038,
+        "shift_relative_pct": 0.324,
+        "distance_to_target_line_pp": 1.832,
+        "margin_above_line_pp": 1.832,
+        "flip_risk": false
+      },
+      {
+        "window": "死区 2020-09~2023-12",
+        "periods": 169,
+        "per_year_actual": 51.2685,
+        "excess_pool_52_pp": 23.572,
+        "excess_pool_actual_pp": 23.195,
+        "shift_pp": 0.377,
+        "shift_relative_pct": 1.599,
+        "distance_to_target_line_pp": 13.572,
+        "margin_above_line_pp": 13.572,
+        "flip_risk": false
+      }
+    ]
+  },
+  "self_check": {
+    "复现在册读数(F52 全史池口径 +17.78/+17.47)": {
+      "seedA": 17.785,
+      "seedB": 17.469,
+      "与台账差的绝对值 <0.02pp": true
+    }
+  },
+  "gate": {
+    "criterion": "读数当前在判据线上方，且被常数挪动的 pp ≥ 它的线上余量 ⇒ 会翻档 ⇒ 进第二步",
+    "per_reading": [
+      {
+        "seed": "A",
+        "window": "全史",
+        "shift_pp": 0.294,
+        "margin_above_line_pp": 7.785,
+        "flip_risk": false
+      },
+      {
+        "seed": "A",
+        "window": "留出集 2024-01 起",
+        "shift_pp": 0.031,
+        "margin_above_line_pp": -0.424,
+        "flip_risk": false
+      },
+      {
+        "seed": "A",
+        "window": "死区 2020-09~2023-12",
+        "shift_pp": 0.413,
+        "margin_above_line_pp": 15.643,
+        "flip_risk": false
+      },
+      {
+        "seed": "B",
+        "window": "全史",
+        "shift_pp": 0.289,
+        "margin_above_line_pp": 7.469,
+        "flip_risk": false
+      },
+      {
+        "seed": "B",
+        "window": "留出集 2024-01 起",
+        "shift_pp": 0.038,
+        "margin_above_line_pp": 1.832,
+        "flip_risk": false
+      },
+      {
+        "seed": "B",
+        "window": "死区 2020-09~2023-12",
+        "shift_pp": 0.377,
+        "margin_above_line_pp": 13.572,
+        "flip_risk": false
+      }
+    ],
+    "crossed": false,
+    "already_below_line": [
+      {
+        "seed": "A",
+        "window": "留出集 2024-01 起",
+        "shift_pp": 0.031,
+        "margin_above_line_pp": -0.424,
+        "flip_risk": false
+      }
+    ],
+    "tightest_above": {
+      "seed": "B",
+      "window": "留出集 2024-01 起",
+      "shift_pp": 0.038,
+      "margin_above_line_pp": 1.832,
+      "flip_risk": false
+    }
+  }
+}

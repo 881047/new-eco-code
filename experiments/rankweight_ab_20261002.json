@@ -1,0 +1,42 @@
+{
+ "asof": "2026-10-02T20:03:15",
+ "criteria_file": "plans/rankweight-prereg-20261002.md",
+ "deltas": {
+  "full": {
+   "arm_sys_ann": 0.2047,
+   "base_sys_ann": 0.1877,
+   "delta_sys_ann_pp": 1.7,
+   "arm_mdd": -0.3702,
+   "base_mdd": -0.3214,
+   "delta_mdd_pp": -4.88,
+   "arm_turnover": 0.8785,
+   "base_turnover": 0.8778,
+   "delta_turnover_pp": 0.07,
+   "arm_idle": 0.2887,
+   "base_idle": 0.3161,
+   "delta_idle_pp": -2.74
+  },
+  "prod": {
+   "arm_sys_ann": 0.2066,
+   "base_sys_ann": 0.2913,
+   "delta_sys_ann_pp": -8.47,
+   "arm_mdd": -0.3702,
+   "base_mdd": -0.1817,
+   "delta_mdd_pp": -18.85,
+   "arm_turnover": 0.8796,
+   "base_turnover": 0.8865,
+   "delta_turnover_pp": -0.69,
+   "arm_idle": 0.2898,
+   "base_idle": 0.2968,
+   "delta_idle_pp": -0.7
+  }
+ },
+ "vol_ratio_prod": 0.98,
+ "criteria": {
+  "P1": false,
+  "P2": false,
+  "P2b_vol_guard": true,
+  "P3": true,
+  "verdict": "INDETERMINATE"
+ }
+}

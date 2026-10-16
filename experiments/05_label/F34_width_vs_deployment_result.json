@@ -1,0 +1,97 @@
+{
+ "script_sha": "494a5b2c67c3b384",
+ "widths": [
+  50,
+  100,
+  150,
+  200
+ ],
+ "band": 8.0,
+ "hyst": 0.2,
+ "capital": 1000000.0,
+ "arms": {
+  "seedA": {
+   "top50": {
+    "n": 491,
+    "excess_pp": 15.15,
+    "mdd": -0.3325,
+    "invested": 0.7973,
+    "names": 49.9,
+    "turnover": 0.157,
+    "oos_excess_pp": 10.22
+   },
+   "top100": {
+    "n": 491,
+    "excess_pp": 14.91,
+    "mdd": -0.3228,
+    "invested": 0.7692,
+    "names": 99.8,
+    "turnover": 0.119,
+    "oos_excess_pp": 7.34
+   },
+   "top150": {
+    "n": 491,
+    "excess_pp": 11.96,
+    "mdd": -0.3098,
+    "invested": 0.7378,
+    "names": 149.5,
+    "turnover": 0.089,
+    "oos_excess_pp": 6.31
+   },
+   "top200": {
+    "n": 491,
+    "excess_pp": 10.35,
+    "mdd": -0.3017,
+    "invested": 0.711,
+    "names": 198.8,
+    "turnover": 0.07,
+    "oos_excess_pp": 5.83
+   }
+  },
+  "seedB": {
+   "top50": {
+    "n": 491,
+    "excess_pp": 14.92,
+    "mdd": -0.3351,
+    "invested": 0.7957,
+    "names": 49.9,
+    "turnover": 0.153,
+    "oos_excess_pp": 10.94
+   },
+   "top100": {
+    "n": 491,
+    "excess_pp": 14.3,
+    "mdd": -0.3223,
+    "invested": 0.7651,
+    "names": 99.8,
+    "turnover": 0.117,
+    "oos_excess_pp": 8.62
+   },
+   "top150": {
+    "n": 491,
+    "excess_pp": 11.94,
+    "mdd": -0.3096,
+    "invested": 0.7397,
+    "names": 149.4,
+    "turnover": 0.09,
+    "oos_excess_pp": 6.91
+   },
+   "top200": {
+    "n": 491,
+    "excess_pp": 10.04,
+    "mdd": -0.3021,
+    "invested": 0.7113,
+    "names": 198.8,
+    "turnover": 0.071,
+    "oos_excess_pp": 6.33
+   }
+  }
+ },
+ "verdict": {
+  "adopt": null,
+  "candidates": [],
+  "criteria": "两套种子同时: 投入率≥现役+5pp 且 全史超额≥现役 且 MDD≥现役×1.10",
+  "note": "投产率是机制、不是拟合; 但宽度同时改变分散度 ⇒ 两轴必须同时看"
+ },
+ "secs": 377.0
+}

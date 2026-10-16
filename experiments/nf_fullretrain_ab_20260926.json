@@ -1,0 +1,471 @@
+{
+  "ran_at": "2026-09-27T00:26:18",
+  "prereg": "plans/nf-fullretrain-prereg-20260926.md",
+  "runtime_sec": 52.0,
+  "arm_runtimes_sec": {},
+  "treatment_audit": {
+    "kept_pool": [
+      "bias_60",
+      "grossprofit_margin",
+      "lhb_cnt20",
+      "mom_120",
+      "mom_60",
+      "roe",
+      "size",
+      "turnover_20"
+    ],
+    "bank_missing": [],
+    "n_treatment": 58,
+    "bank_audit": [
+      {
+        "alpha_id": "KMID",
+        "nonnull_before": 442477,
+        "nonnull_after": 442477,
+        "retain": 1.0,
+        "sparse_ratio": 1.0,
+        "neutralize_mode": "neutralize"
+      },
+      {
+        "alpha_id": "KLEN",
+        "nonnull_before": 442477,
+        "nonnull_after": 442477,
+        "retain": 1.0,
+        "sparse_ratio": 1.0,
+        "neutralize_mode": "neutralize"
+      },
+      {
+        "alpha_id": "KUP",
+        "nonnull_before": 442477,
+        "nonnull_after": 442477,
+        "retain": 1.0,
+        "sparse_ratio": 1.0,
+        "neutralize_mode": "neutralize"
+      },
+      {
+        "alpha_id": "KLOW",
+        "nonnull_before": 442477,
+        "nonnull_after": 442477,
+        "retain": 1.0,
+        "sparse_ratio": 1.0,
+        "neutralize_mode": "neutralize"
+      },
+      {
+        "alpha_id": "KSFT",
+        "nonnull_before": 442477,
+        "nonnull_after": 442477,
+        "retain": 1.0,
+        "sparse_ratio": 1.0,
+        "neutralize_mode": "neutralize"
+      },
+      {
+        "alpha_id": "CORD5",
+        "nonnull_before": 439859,
+        "nonnull_after": 439859,
+        "retain": 1.0,
+        "sparse_ratio": 1.0,
+        "neutralize_mode": "neutralize"
+      },
+      {
+        "alpha_id": "CNTP5",
+        "nonnull_before": 539958,
+        "nonnull_after": 539958,
+        "retain": 1.0,
+        "sparse_ratio": 0.9989,
+        "neutralize_mode": "neutralize"
+      },
+      {
+        "alpha_id": "BETA10",
+        "nonnull_before": 438580,
+        "nonnull_after": 438580,
+        "retain": 1.0,
+        "sparse_ratio": 1.0,
+        "neutralize_mode": "neutralize"
+      },
+      {
+        "alpha_id": "RESI30",
+        "nonnull_before": 432684,
+        "nonnull_after": 432684,
+        "retain": 1.0,
+        "sparse_ratio": 1.0,
+        "neutralize_mode": "neutralize"
+      },
+      {
+        "alpha_id": "RSV10",
+        "nonnull_before": 438580,
+        "nonnull_after": 438580,
+        "retain": 1.0,
+        "sparse_ratio": 1.0,
+        "neutralize_mode": "neutralize"
+      },
+      {
+        "alpha_id": "IMAX20",
+        "nonnull_before": 440653,
+        "nonnull_after": 440653,
+        "retain": 1.0,
+        "sparse_ratio": 1.0,
+        "neutralize_mode": "neutralize"
+      },
+      {
+        "alpha_id": "IMAX30",
+        "nonnull_before": 439850,
+        "nonnull_after": 439850,
+        "retain": 1.0,
+        "sparse_ratio": 0.9999,
+        "neutralize_mode": "neutralize"
+      },
+      {
+        "alpha_id": "IMAX60",
+        "nonnull_before": 436884,
+        "nonnull_after": 436884,
+        "retain": 1.0,
+        "sparse_ratio": 0.9999,
+        "neutralize_mode": "neutralize"
+      },
+      {
+        "alpha_id": "IMXD20",
+        "nonnull_before": 440653,
+        "nonnull_after": 440653,
+        "retain": 1.0,
+        "sparse_ratio": 0.9999,
+        "neutralize_mode": "neutralize"
+      },
+      {
+        "alpha_id": "IMXD30",
+        "nonnull_before": 439850,
+        "nonnull_after": 439850,
+        "retain": 1.0,
+        "sparse_ratio": 1.0,
+        "neutralize_mode": "neutralize"
+      },
+      {
+        "alpha_id": "IMXD60",
+        "nonnull_before": 436884,
+        "nonnull_after": 436884,
+        "retain": 1.0,
+        "sparse_ratio": 1.0,
+        "neutralize_mode": "neutralize"
+      },
+      {
+        "alpha_id": "CORD10",
+        "nonnull_before": 438285,
+        "nonnull_after": 438285,
+        "retain": 1.0,
+        "sparse_ratio": 1.0,
+        "neutralize_mode": "neutralize"
+      },
+      {
+        "alpha_id": "CORD20",
+        "nonnull_before": 435254,
+        "nonnull_after": 435254,
+        "retain": 1.0,
+        "sparse_ratio": 1.0,
+        "neutralize_mode": "neutralize"
+      },
+      {
+        "alpha_id": "CORD30",
+        "nonnull_before": 432410,
+        "nonnull_after": 432410,
+        "retain": 1.0,
+        "sparse_ratio": 1.0,
+        "neutralize_mode": "neutralize"
+      },
+      {
+        "alpha_id": "CORD60",
+        "nonnull_before": 424400,
+        "nonnull_after": 424400,
+        "retain": 1.0,
+        "sparse_ratio": 1.0,
+        "neutralize_mode": "neutralize"
+      },
+      {
+        "alpha_id": "CNTD10",
+        "nonnull_before": 539958,
+        "nonnull_after": 539958,
+        "retain": 1.0,
+        "sparse_ratio": 0.9993,
+        "neutralize_mode": "neutralize"
+      },
+      {
+        "alpha_id": "SUMP10",
+        "nonnull_before": 438285,
+        "nonnull_after": 438285,
+        "retain": 1.0,
+        "sparse_ratio": 1.0,
+        "neutralize_mode": "neutralize"
+      },
+      {
+        "alpha_id": "SUMD10",
+        "nonnull_before": 438285,
+        "nonnull_after": 438285,
+        "retain": 1.0,
+        "sparse_ratio": 1.0,
+        "neutralize_mode": "neutralize"
+      },
+      {
+        "alpha_id": "VSTD10",
+        "nonnull_before": 438580,
+        "nonnull_after": 438580,
+        "retain": 1.0,
+        "sparse_ratio": 1.0,
+        "neutralize_mode": "neutralize"
+      },
+      {
+        "alpha_id": "VSUMP10",
+        "nonnull_before": 438285,
+        "nonnull_after": 438285,
+        "retain": 1.0,
+        "sparse_ratio": 1.0,
+        "neutralize_mode": "neutralize"
+      },
+      {
+        "alpha_id": "VSUMP20",
+        "nonnull_before": 435254,
+        "nonnull_after": 435254,
+        "retain": 1.0,
+        "sparse_ratio": 1.0,
+        "neutralize_mode": "neutralize"
+      },
+      {
+        "alpha_id": "VSUMP60",
+        "nonnull_before": 424400,
+        "nonnull_after": 424400,
+        "retain": 1.0,
+        "sparse_ratio": 1.0,
+        "neutralize_mode": "neutralize"
+      },
+      {
+        "alpha_id": "VSUMD10",
+        "nonnull_before": 438285,
+        "nonnull_after": 438285,
+        "retain": 1.0,
+        "sparse_ratio": 1.0,
+        "neutralize_mode": "neutralize"
+      },
+      {
+        "alpha_id": "VSUMD20",
+        "nonnull_before": 435254,
+        "nonnull_after": 435254,
+        "retain": 1.0,
+        "sparse_ratio": 1.0,
+        "neutralize_mode": "neutralize"
+      },
+      {
+        "alpha_id": "VSUMD60",
+        "nonnull_before": 424400,
+        "nonnull_after": 424400,
+        "retain": 1.0,
+        "sparse_ratio": 1.0,
+        "neutralize_mode": "neutralize"
+      },
+      {
+        "alpha_id": "margin_buy_share",
+        "nonnull_before": 241772,
+        "nonnull_after": 241772,
+        "retain": 1.0,
+        "sparse_ratio": 0.9998,
+        "neutralize_mode": "neutralize"
+      },
+      {
+        "alpha_id": "margin_net_share",
+        "nonnull_before": 241772,
+        "nonnull_after": 241772,
+        "retain": 1.0,
+        "sparse_ratio": 0.9998,
+        "neutralize_mode": "neutralize"
+      },
+      {
+        "alpha_id": "margin_net_to_rzye",
+        "nonnull_before": 242707,
+        "nonnull_after": 242707,
+        "retain": 1.0,
+        "sparse_ratio": 0.9997,
+        "neutralize_mode": "neutralize"
+      },
+      {
+        "alpha_id": "mf_lg_net",
+        "nonnull_before": 429799,
+        "nonnull_after": 429799,
+        "retain": 1.0,
+        "sparse_ratio": 1.0,
+        "neutralize_mode": "neutralize"
+      },
+      {
+        "alpha_id": "mf_main_sm_div",
+        "nonnull_before": 429799,
+        "nonnull_after": 429799,
+        "retain": 1.0,
+        "sparse_ratio": 1.0,
+        "neutralize_mode": "neutralize"
+      },
+      {
+        "alpha_id": "kg_broker_rec_3m",
+        "nonnull_before": 124491,
+        "nonnull_after": 124491,
+        "retain": 1.0,
+        "sparse_ratio": 0.9858,
+        "neutralize_mode": "neutralize"
+      },
+      {
+        "alpha_id": "m60_cv10",
+        "nonnull_before": 326775,
+        "nonnull_after": 326775,
+        "retain": 1.0,
+        "sparse_ratio": 1.0,
+        "neutralize_mode": "neutralize"
+      },
+      {
+        "alpha_id": "m60_cv20",
+        "nonnull_before": 322399,
+        "nonnull_after": 322399,
+        "retain": 1.0,
+        "sparse_ratio": 1.0,
+        "neutralize_mode": "neutralize"
+      },
+      {
+        "alpha_id": "m60_cv5",
+        "nonnull_before": 327286,
+        "nonnull_after": 327286,
+        "retain": 1.0,
+        "sparse_ratio": 1.0,
+        "neutralize_mode": "neutralize"
+      },
+      {
+        "alpha_id": "m60_lr10",
+        "nonnull_before": 326812,
+        "nonnull_after": 326812,
+        "retain": 1.0,
+        "sparse_ratio": 1.0,
+        "neutralize_mode": "neutralize"
+      },
+      {
+        "alpha_id": "m60_lr20",
+        "nonnull_before": 322466,
+        "nonnull_after": 322466,
+        "retain": 1.0,
+        "sparse_ratio": 1.0,
+        "neutralize_mode": "neutralize"
+      },
+      {
+        "alpha_id": "m60_lr5",
+        "nonnull_before": 327300,
+        "nonnull_after": 327300,
+        "retain": 1.0,
+        "sparse_ratio": 1.0,
+        "neutralize_mode": "neutralize"
+      },
+      {
+        "alpha_id": "m60_lvsxlr",
+        "nonnull_before": 322484,
+        "nonnull_after": 322484,
+        "retain": 1.0,
+        "sparse_ratio": 1.0,
+        "neutralize_mode": "neutralize"
+      },
+      {
+        "alpha_id": "llm_intraday_reversal_turnover",
+        "nonnull_before": 372670,
+        "nonnull_after": 372670,
+        "retain": 1.0,
+        "sparse_ratio": 1.0,
+        "neutralize_mode": "neutralize"
+      },
+      {
+        "alpha_id": "llm_turnover_accel_5_20",
+        "nonnull_before": 372670,
+        "nonnull_after": 372670,
+        "retain": 1.0,
+        "sparse_ratio": 1.0,
+        "neutralize_mode": "neutralize"
+      },
+      {
+        "alpha_id": "llm_turnover_to_pb",
+        "nonnull_before": 373958,
+        "nonnull_after": 373958,
+        "retain": 1.0,
+        "sparse_ratio": 1.0,
+        "neutralize_mode": "neutralize"
+      },
+      {
+        "alpha_id": "llm_positive_day_ratio_20",
+        "nonnull_before": 372564,
+        "nonnull_after": 372564,
+        "retain": 1.0,
+        "sparse_ratio": 1.0,
+        "neutralize_mode": "neutralize"
+      },
+      {
+        "alpha_id": "llm_turnover_accel",
+        "nonnull_before": 372670,
+        "nonnull_after": 372670,
+        "retain": 1.0,
+        "sparse_ratio": 1.0,
+        "neutralize_mode": "neutralize"
+      },
+      {
+        "alpha_id": "llm_vwap_premium",
+        "nonnull_before": 374645,
+        "nonnull_after": 374645,
+        "retain": 1.0,
+        "sparse_ratio": 1.0,
+        "neutralize_mode": "neutralize"
+      },
+      {
+        "alpha_id": "llm_price_skew_20",
+        "nonnull_before": 372670,
+        "nonnull_after": 372670,
+        "retain": 1.0,
+        "sparse_ratio": 1.0,
+        "neutralize_mode": "neutralize"
+      }
+    ]
+  },
+  "judge": {
+    "ctrl_sa": {
+      "table": "nfab_ctrl_sa",
+      "dead_head": 0.0105,
+      "dead_t": 5.21,
+      "active_head": 0.0082,
+      "same_sign": true,
+      "dead_top6": 0.0048,
+      "n_anchor": 71
+    },
+    "ctrl_sb": {
+      "table": "nfab_ctrl_sb",
+      "dead_head": 0.0098,
+      "dead_t": 4.79,
+      "active_head": 0.0085,
+      "same_sign": true,
+      "dead_top6": 0.0036,
+      "n_anchor": 71
+    },
+    "trt_sa": {
+      "table": "nfab_trt_sa",
+      "dead_head": 0.0138,
+      "dead_t": 6.09,
+      "active_head": 0.0067,
+      "same_sign": true,
+      "dead_top6": 0.0104,
+      "n_anchor": 71
+    },
+    "trt_sb": {
+      "table": "nfab_trt_sb",
+      "dead_head": 0.0125,
+      "dead_t": 5.52,
+      "active_head": 0.0066,
+      "same_sign": true,
+      "dead_top6": 0.0169,
+      "n_anchor": 71
+    }
+  },
+  "verdict": {
+    "delta_dead_head": {
+      "sa": 0.0033,
+      "sb": 0.0027
+    },
+    "mean_delta": 0.003,
+    "c1_双种子集同向": true,
+    "c2_增量均值≥+0.10pp": true,
+    "c3_B臂DEAD_t均≥2": true,
+    "ADOPT_CANDIDATE": true
+  }
+}

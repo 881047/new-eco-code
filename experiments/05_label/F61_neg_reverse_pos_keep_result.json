@@ -1,0 +1,173 @@
+{
+ "protocol": {
+  "top_n": 100,
+  "decile": 0.1,
+  "neg": [
+   "br_cnt",
+   "ih_fund_ratio"
+  ],
+  "pos": [
+   "margin_net_share",
+   "mf_main_sm_div"
+  ],
+  "pos_rule": "全部正因子高于各自截面中位数",
+  "windows": {
+   "FULL": [
+    "2010-01-01",
+    "2030-12-31"
+   ],
+   "ACTIVE": [
+    "2024-01-01",
+    "2026-08-31"
+   ],
+   "DEAD": [
+    "2020-09-01",
+    "2023-12-31"
+   ]
+  },
+  "sell_rate_bp": 7.6,
+  "multiplicity_warning": "4 臂高度相关 ⇒ 单臂通过须独立 A/B 才算数"
+ },
+ "n_periods": 606,
+ "turnover": {
+  "BASE": 1.0123,
+  "NEG_EXCL": 1.0036,
+  "POS_KEEP": 1.61,
+  "COMBO": 1.6052
+ },
+ "base": {
+  "FULL": {
+   "n": 606,
+   "excess_pp": 32.24,
+   "mean_pp": 0.559,
+   "sharpe": 0.278,
+   "mdd": -0.2272
+  },
+  "ACTIVE": {
+   "n": 137,
+   "excess_pp": 13.71,
+   "mean_pp": 0.291,
+   "sharpe": 0.098,
+   "mdd": -0.2272
+  },
+  "DEAD": {
+   "n": 170,
+   "excess_pp": 24.26,
+   "mean_pp": 0.427,
+   "sharpe": 0.325,
+   "mdd": -0.1145
+  }
+ },
+ "mean_bad_in_top100": 5.33,
+ "mean_good_in_top100": 4.2,
+ "arms": {
+  "NEG_EXCL": {
+   "stats": {
+    "FULL": {
+     "n": 606,
+     "excess_pp": 34.65,
+     "mean_pp": 0.593,
+     "sharpe": 0.299,
+     "mdd": -0.2277
+    },
+    "ACTIVE": {
+     "n": 137,
+     "excess_pp": 14.62,
+     "mean_pp": 0.305,
+     "sharpe": 0.104,
+     "mdd": -0.2277
+    },
+    "DEAD": {
+     "n": 170,
+     "excess_pp": 31.68,
+     "mean_pp": 0.539,
+     "sharpe": 0.426,
+     "mdd": -0.0732
+    }
+   },
+   "verdict": {
+    "delta_full_pp": 2.41,
+    "delta_active_pp": 0.91,
+    "full_excess_ok": true,
+    "active_excess_ok": true,
+    "mdd_ok": true,
+    "turnover_ok": true,
+    "paired_t_full": 1.81,
+    "paired_t_active": 0.38,
+    "candidate": true
+   }
+  },
+  "POS_KEEP": {
+   "stats": {
+    "FULL": {
+     "n": 606,
+     "excess_pp": 4.4,
+     "mean_pp": 0.094,
+     "sharpe": 0.063,
+     "mdd": -0.275
+    },
+    "ACTIVE": {
+     "n": 137,
+     "excess_pp": 10.96,
+     "mean_pp": 0.22,
+     "sharpe": 0.109,
+     "mdd": -0.1491
+    },
+    "DEAD": {
+     "n": 170,
+     "excess_pp": 0.28,
+     "mean_pp": 0.014,
+     "sharpe": 0.011,
+     "mdd": -0.275
+    }
+   },
+   "verdict": {
+    "delta_full_pp": -27.84,
+    "delta_active_pp": -2.75,
+    "full_excess_ok": false,
+    "active_excess_ok": false,
+    "mdd_ok": false,
+    "turnover_ok": false,
+    "paired_t_full": -5.56,
+    "paired_t_active": -0.53,
+    "candidate": false
+   }
+  },
+  "COMBO": {
+   "stats": {
+    "FULL": {
+     "n": 606,
+     "excess_pp": 6.7,
+     "mean_pp": 0.133,
+     "sharpe": 0.101,
+     "mdd": -0.2541
+    },
+    "ACTIVE": {
+     "n": 137,
+     "excess_pp": 12.06,
+     "mean_pp": 0.235,
+     "sharpe": 0.132,
+     "mdd": -0.1477
+    },
+    "DEAD": {
+     "n": 170,
+     "excess_pp": 7.51,
+     "mean_pp": 0.143,
+     "sharpe": 0.163,
+     "mdd": -0.1159
+    }
+   },
+   "verdict": {
+    "delta_full_pp": -25.54,
+    "delta_active_pp": -1.65,
+    "full_excess_ok": false,
+    "active_excess_ok": false,
+    "mdd_ok": false,
+    "turnover_ok": false,
+    "paired_t_full": -5.06,
+    "paired_t_active": -0.39,
+    "candidate": false
+   }
+  }
+ }
+}

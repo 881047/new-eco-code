@@ -1,0 +1,68 @@
+{
+ "script_sha": "4520d8f4cb9fbceb",
+ "since": "20151101",
+ "horizon": 5,
+ "n_anchor": 555,
+ "n_tested": 3,
+ "n_denom_clusters_used": 38,
+ "windows_days": {
+  "rp_amt": 120,
+  "rp_any": 60,
+  "seo": 90
+ },
+ "nonzero_share": {
+  "rp_amt120": 0.0269,
+  "rp_any60": 0.0141,
+  "seo_neg90": 0.0158
+ },
+ "passed": [],
+ "stats": {
+  "rp_amt120": {
+   "DEAD": {
+    "n": 170,
+    "ic": 0.002,
+    "t": 0.34
+   },
+   "ACTIVE": {
+    "n": 137,
+    "ic": 0.0037,
+    "t": 0.71
+   },
+   "n_ic": 553,
+   "nonzero_share": 0.0269
+  },
+  "rp_any60": {
+   "DEAD": {
+    "n": 170,
+    "ic": -0.0002,
+    "t": -0.04
+   },
+   "ACTIVE": {
+    "n": 137,
+    "ic": 0.0029,
+    "t": 0.45
+   },
+   "n_ic": 546,
+   "nonzero_share": 0.0141
+  },
+  "seo_neg90": {
+   "DEAD": {
+    "n": 170,
+    "ic": -0.001,
+    "t": -0.14
+   },
+   "ACTIVE": {
+    "n": 137,
+    "ic": -0.002,
+    "t": -0.22
+   },
+   "n_ic": 553,
+   "nonzero_share": 0.0158
+  }
+ },
+ "verdict": {
+  "event3_route": false,
+  "n_passed": 0
+ },
+ "secs": 331.3
+}

@@ -1,0 +1,72 @@
+{
+ "n_touch": 182518,
+ "sealed_frac": 0.6691,
+ "diagnostic": {
+  "全部触板": {
+   "n": 182518,
+   "frac": 1.0,
+   "mean_pct": -0.289,
+   "median_pct": -0.152,
+   "win_frac": 0.465,
+   "p10_pct": -6.93,
+   "p90_pct": 6.92
+  },
+  "其中: 封住": {
+   "n": 122122,
+   "frac": 0.6691,
+   "mean_pct": 2.197,
+   "median_pct": 1.526,
+   "win_frac": 0.674,
+   "p10_pct": -2.24,
+   "p90_pct": 9.73
+  },
+  "其中: 炸板": {
+   "n": 60396,
+   "frac": 0.3309,
+   "mean_pct": -5.315,
+   "median_pct": -4.893,
+   "win_frac": 0.044,
+   "p10_pct": -10.38,
+   "p90_pct": -1.11
+  }
+ },
+ "portfolio": {
+  "n_days": 2354,
+  "n_weeks": 470,
+  "daily_mean_pct": -2.177,
+  "week_mean_pct": -10.418,
+  "week_median_pct": -9.875,
+  "week_ge3_frac": 0.0106,
+  "week_worst_pct": -30.39,
+  "mdd_pct": -100.0,
+  "sharpe": -12.01,
+  "final_nav_x": 0.0
+ },
+ "fill": {
+  "p=0.25": {
+   "week_mean_pct": -2.693,
+   "ge3_frac": 0.0
+  },
+  "p=0.5": {
+   "week_mean_pct": -5.327,
+   "ge3_frac": 0.0043
+  },
+  "p=0.75": {
+   "week_mean_pct": -7.901,
+   "ge3_frac": 0.0085
+  },
+  "p=1.0": {
+   "week_mean_pct": -10.418,
+   "ge3_frac": 0.0106
+  }
+ },
+ "secs": 337.4,
+ "verdict": {
+  "all_touch_mean_net_pct": -0.289,
+  "sealed_mean_net_pct": 2.197,
+  "failed_mean_net_pct": -5.315,
+  "week_mean_pct": -10.418,
+  "reaches_3pct_mean": false,
+  "note": "点时口径; 未计入排队成交概率(见 fill)"
+ }
+}

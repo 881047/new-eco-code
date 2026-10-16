@@ -1,0 +1,124 @@
+{
+ "ran_at": "2026-09-21 13:52:35",
+ "elapsed_sec": 100.0,
+ "hysteresis_scanned": [
+  0,
+  8,
+  16,
+  24
+ ],
+ "results": [
+  {
+   "monthly": {
+    "hysteresis": 0,
+    "periods": 115,
+    "ann_return": 0.1159,
+    "bench_ann": 0.0531,
+    "excess_ann": 0.0628,
+    "max_drawdown": -0.5126,
+    "win_rate": 0.5391,
+    "ic_mean": 0.0859,
+    "icir": 0.735,
+    "avg_turnover": 0.9061,
+    "periods_per_year": 12
+   },
+   "weekly": {
+    "hysteresis": 0,
+    "periods": 81,
+    "ann_return": 0.055,
+    "bench_ann": 0.1203,
+    "excess_ann": -0.0654,
+    "max_drawdown": -0.3797,
+    "win_rate": 0.5062,
+    "ic_mean": 0.0951,
+    "icir": 0.787,
+    "avg_turnover": 0.9258,
+    "periods_per_year": 12
+   }
+  },
+  {
+   "monthly": {
+    "hysteresis": 8,
+    "periods": 115,
+    "ann_return": 0.1111,
+    "bench_ann": 0.0531,
+    "excess_ann": 0.058,
+    "max_drawdown": -0.5282,
+    "win_rate": 0.5391,
+    "ic_mean": 0.0859,
+    "icir": 0.735,
+    "avg_turnover": 0.8462,
+    "periods_per_year": 12
+   },
+   "weekly": {
+    "hysteresis": 8,
+    "periods": 81,
+    "ann_return": 0.0651,
+    "bench_ann": 0.1203,
+    "excess_ann": -0.0552,
+    "max_drawdown": -0.4324,
+    "win_rate": 0.5309,
+    "ic_mean": 0.0951,
+    "icir": 0.787,
+    "avg_turnover": 0.8831,
+    "periods_per_year": 12
+   }
+  },
+  {
+   "monthly": {
+    "hysteresis": 16,
+    "periods": 115,
+    "ann_return": 0.0875,
+    "bench_ann": 0.0531,
+    "excess_ann": 0.0344,
+    "max_drawdown": -0.535,
+    "win_rate": 0.5304,
+    "ic_mean": 0.0859,
+    "icir": 0.735,
+    "avg_turnover": 0.8039,
+    "periods_per_year": 12
+   },
+   "weekly": {
+    "hysteresis": 16,
+    "periods": 81,
+    "ann_return": 0.0676,
+    "bench_ann": 0.1203,
+    "excess_ann": -0.0528,
+    "max_drawdown": -0.4758,
+    "win_rate": 0.5309,
+    "ic_mean": 0.0951,
+    "icir": 0.787,
+    "avg_turnover": 0.8648,
+    "periods_per_year": 12
+   }
+  },
+  {
+   "monthly": {
+    "hysteresis": 24,
+    "periods": 115,
+    "ann_return": 0.0906,
+    "bench_ann": 0.0531,
+    "excess_ann": 0.0376,
+    "max_drawdown": -0.5328,
+    "win_rate": 0.5217,
+    "ic_mean": 0.0859,
+    "icir": 0.735,
+    "avg_turnover": 0.7791,
+    "periods_per_year": 12
+   },
+   "weekly": {
+    "hysteresis": 24,
+    "periods": 81,
+    "ann_return": 0.0796,
+    "bench_ann": 0.1203,
+    "excess_ann": -0.0408,
+    "max_drawdown": -0.4883,
+    "win_rate": 0.5432,
+    "ic_mean": 0.0951,
+    "icir": 0.787,
+    "avg_turnover": 0.8473,
+    "periods_per_year": 12
+   }
+  }
+ ]
+}

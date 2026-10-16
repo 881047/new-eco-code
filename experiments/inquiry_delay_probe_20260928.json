@@ -1,0 +1,36 @@
+{
+ "prereg": "plans/inquiry-delay-probe-prereg-20260928.md",
+ "window_days": 365,
+ "clip_hi": 365,
+ "n_pairs": 1547,
+ "n_stocks": 846,
+ "coverage_median": 0.0041,
+ "coverage_gate_pass": false,
+ "sparse_ratio": 1.0,
+ "neutralize_mode": "dense",
+ "gate": {
+  "dead_head": -0.0085,
+  "dead_t": -1.18,
+  "active_head": -0.0202,
+  "same_sign": true,
+  "n_dead": 21,
+  "n_active": 3,
+  "s1_head": true,
+  "s2_t": false,
+  "s3_same_sign": true,
+  "s4_decor": null,
+  "s5_half_life": null,
+  "PASS_single": false
+ },
+ "s4_max_abs_rho_vs_pool31": {
+  "turnover_20": 0.091,
+  "vol_60": 0.088,
+  "lhb_cnt20": 0.086,
+  "ret_max20": 0.077,
+  "vol_20": 0.075
+ },
+ "s4_pass": true,
+ "s4_max": 0.091,
+ "verdict": "覆盖不足 ⇒ 线结清（数据不支持，非因子无效）",
+ "secs": 76.3
+}

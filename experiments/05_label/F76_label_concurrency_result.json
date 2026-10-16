@@ -1,0 +1,58 @@
+{
+  "date": "2026-09-19",
+  "horizon_monthly": 21,
+  "horizon_weekly": 5,
+  "gate_cbar_max": 1.05,
+  "monthly": {
+    "n_anchors": 152,
+    "n_days_with_any_label": 3002,
+    "cover_mean": 1.061,
+    "cover_max": 2,
+    "cover_p90": 1,
+    "per_year_cover_mean": {
+      "2014": 1.05,
+      "2015": 1.0544,
+      "2016": 1.0588,
+      "2017": 1.0588,
+      "2018": 1.0636,
+      "2019": 1.0586,
+      "2020": 1.0633,
+      "2021": 1.0678,
+      "2022": 1.0678,
+      "2023": 1.0633,
+      "2024": 1.0633,
+      "2025": 1.0588,
+      "2026": 1.0643
+    },
+    "uniqueness_mean": 0.9427,
+    "uniqueness_p10": 0.8571,
+    "uniqueness_min": 0.8095
+  },
+  "weekly_approx": {
+    "n_anchors": 651,
+    "n_days_with_any_label": 3090,
+    "cover_mean": 1.0531,
+    "cover_max": 3,
+    "cover_p90": 1,
+    "per_year_cover_mean": {
+      "2014": 1.062,
+      "2015": 1.0697,
+      "2016": 1.0287,
+      "2017": 1.0451,
+      "2018": 1.0494,
+      "2019": 1.0533,
+      "2020": 1.0576,
+      "2021": 1.0741,
+      "2022": 1.0331,
+      "2023": 1.0331,
+      "2024": 1.062,
+      "2025": 1.0741,
+      "2026": 1.046
+    },
+    "uniqueness_mean": 0.9496,
+    "uniqueness_p10": 0.8,
+    "uniqueness_min": 0.4667
+  },
+  "decision_rule": "cbar<=1.05 close / >1.05 A/B（plans/p0-validation-upgrade-20260919.md Phase A）",
+  "verdict": "ab_with_uniqueness_weights"
+}

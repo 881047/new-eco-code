@@ -1,0 +1,201 @@
+{
+ "script_sha": "a286e6dbedb4ac08",
+ "oos_window": [
+  "2024-01-01",
+  "2026-08-31"
+ ],
+ "dead_window": [
+  "2020-09-01",
+  "2023-12-31"
+ ],
+ "c3_threshold_pp": 10.0,
+ "denoms": [
+  38,
+  100,
+  1000
+ ],
+ "arms": {
+  "seedA": {
+   "net": {
+    "full": {
+     "n": 491,
+     "ann": 0.2035,
+     "bench_ann": 0.0543,
+     "excess_pp": 14.91,
+     "excess_pp_arith": 12.75,
+     "t_hac": 4.28,
+     "mdd": -0.3228,
+     "turnover": 0.118,
+     "invested": 0.7693
+    },
+    "OOS_24m": {
+     "n": 138,
+     "ann": 0.226,
+     "bench_ann": 0.1526,
+     "excess_pp": 7.34,
+     "excess_pp_arith": 6.04,
+     "t_hac": 0.78,
+     "mdd": -0.3228,
+     "turnover": 0.092,
+     "invested": 0.7809,
+     "p_two_sided": 0.435391,
+     "p_corrected": {
+      "38": 1.0,
+      "100": 1.0,
+      "1000": 1.0
+     }
+    },
+    "DEAD": {
+     "n": 169,
+     "ann": 0.2421,
+     "bench_ann": 0.033,
+     "excess_pp": 20.91,
+     "excess_pp_arith": 18.17,
+     "t_hac": 4.78,
+     "mdd": -0.1383,
+     "turnover": 0.114,
+     "invested": 0.7779
+    }
+   },
+   "gross": {
+    "full": {
+     "n": 491,
+     "ann": 0.2326,
+     "bench_ann": 0.0543,
+     "excess_pp": 17.83,
+     "excess_pp_arith": 15.19,
+     "t_hac": 5.07,
+     "mdd": -0.3227,
+     "turnover": 0.118,
+     "invested": 0.7723
+    },
+    "OOS_24m": {
+     "n": 138,
+     "ann": 0.2412,
+     "bench_ann": 0.1526,
+     "excess_pp": 8.86,
+     "excess_pp_arith": 7.32,
+     "t_hac": 0.94,
+     "mdd": -0.3227,
+     "turnover": 0.093,
+     "invested": 0.7845,
+     "p_two_sided": 0.347218,
+     "p_corrected": {
+      "38": 1.0,
+      "100": 1.0,
+      "1000": 1.0
+     }
+    },
+    "DEAD": {
+     "n": 169,
+     "ann": 0.2749,
+     "bench_ann": 0.033,
+     "excess_pp": 24.19,
+     "excess_pp_arith": 20.8,
+     "t_hac": 5.43,
+     "mdd": -0.1326,
+     "turnover": 0.115,
+     "invested": 0.7821
+    }
+   },
+   "no_gates": {
+    "full": {
+     "n": 491,
+     "ann": 0.2103,
+     "bench_ann": 0.0543,
+     "excess_pp": 15.6,
+     "excess_pp_arith": 13.33,
+     "t_hac": 4.49,
+     "mdd": -0.3207,
+     "turnover": 0.118,
+     "invested": 0.7694
+    },
+    "OOS_24m": {
+     "n": 138,
+     "ann": 0.2276,
+     "bench_ann": 0.1526,
+     "excess_pp": 7.5,
+     "excess_pp_arith": 6.15,
+     "t_hac": 0.79,
+     "mdd": -0.3206,
+     "turnover": 0.093,
+     "invested": 0.7808,
+     "p_two_sided": 0.429528,
+     "p_corrected": {
+      "38": 1.0,
+      "100": 1.0,
+      "1000": 1.0
+     }
+    },
+    "DEAD": {
+     "n": 169,
+     "ann": 0.2529,
+     "bench_ann": 0.033,
+     "excess_pp": 21.99,
+     "excess_pp_arith": 19.04,
+     "t_hac": 4.99,
+     "mdd": -0.1372,
+     "turnover": 0.115,
+     "invested": 0.7783
+    }
+   }
+  },
+  "seedB": {
+   "net": {
+    "full": {
+     "n": 491,
+     "ann": 0.1974,
+     "bench_ann": 0.0543,
+     "excess_pp": 14.3,
+     "excess_pp_arith": 12.22,
+     "t_hac": 4.11,
+     "mdd": -0.3223,
+     "turnover": 0.116,
+     "invested": 0.7653
+    },
+    "OOS_24m": {
+     "n": 138,
+     "ann": 0.2388,
+     "bench_ann": 0.1526,
+     "excess_pp": 8.62,
+     "excess_pp_arith": 7.08,
+     "t_hac": 0.91,
+     "mdd": -0.3223,
+     "turnover": 0.092,
+     "invested": 0.777,
+     "p_two_sided": 0.362823,
+     "p_corrected": {
+      "38": 1.0,
+      "100": 1.0,
+      "1000": 1.0
+     }
+    },
+    "DEAD": {
+     "n": 169,
+     "ann": 0.238,
+     "bench_ann": 0.033,
+     "excess_pp": 20.5,
+     "excess_pp_arith": 17.83,
+     "t_hac": 4.77,
+     "mdd": -0.1352,
+     "turnover": 0.112,
+     "invested": 0.7748
+    }
+   }
+  }
+ },
+ "secs": 372.1,
+ "verdict": {
+  "C3_equiv_pass": false,
+  "oos_excess_pp": {
+   "seedA": 7.34,
+   "seedB": 8.62
+  },
+  "p_corrected_max": {
+   "38": 1.0,
+   "100": 1.0,
+   "1000": 1.0
+  },
+  "note": "一次性开封: 本判据此后冻结; 改构型必须在新的留出窗上重新验证"
+ }
+}

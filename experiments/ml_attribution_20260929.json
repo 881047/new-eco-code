@@ -1,0 +1,224 @@
+{
+ "asof": "2026-09-29 21:25:39",
+ "criteria_file": "plans/model-rebuild-options-20260929.md §1",
+ "arms": {
+  "ridge_full": {
+   "run_date": "20260929_mlattr_ridge_full",
+   "periods": 114,
+   "ann_return": 0.0744,
+   "max_drawdown": -0.3507,
+   "sys_ann_return": 0.0732,
+   "sys_max_drawdown": -0.333,
+   "sys_mdd_daily": -0.3945,
+   "avg_cash_idle": 0.2752,
+   "avg_stocks": 5.18,
+   "seconds": 16.1
+  },
+  "rankens_full": {
+   "run_date": "20260929_mlattr_rankens_full",
+   "periods": 114,
+   "ann_return": -0.04,
+   "max_drawdown": -0.586,
+   "sys_ann_return": -0.0267,
+   "sys_max_drawdown": -0.5187,
+   "sys_mdd_daily": -0.548,
+   "avg_cash_idle": 0.5287,
+   "avg_stocks": 3.57,
+   "seconds": 15.7
+  },
+  "random_full": {
+   "run_date": "20260929_mlattr_random_full",
+   "periods": 114,
+   "ann_return": 0.0368,
+   "max_drawdown": -0.3997,
+   "sys_ann_return": 0.0294,
+   "sys_max_drawdown": -0.3277,
+   "sys_mdd_daily": -0.3417,
+   "avg_cash_idle": 0.2979,
+   "avg_stocks": 5.06,
+   "seconds": 16.0
+  },
+  "ridge_prod": {
+   "run_date": "20260929_mlattr_ridge_prod",
+   "periods": 115,
+   "ann_return": 0.0754,
+   "max_drawdown": -0.3507,
+   "sys_ann_return": 0.0743,
+   "sys_max_drawdown": -0.333,
+   "sys_mdd_daily": -0.3945,
+   "avg_cash_idle": 0.2793,
+   "avg_stocks": 5.15,
+   "seconds": 16.1
+  },
+  "rankens_prod": {
+   "run_date": "20260929_mlattr_rankens_prod",
+   "periods": 115,
+   "ann_return": -0.0339,
+   "max_drawdown": -0.586,
+   "sys_ann_return": -0.0217,
+   "sys_max_drawdown": -0.5187,
+   "sys_mdd_daily": -0.548,
+   "avg_cash_idle": 0.5271,
+   "avg_stocks": 3.58,
+   "seconds": 15.8
+  },
+  "random_prod": {
+   "run_date": "20260929_mlattr_random_prod",
+   "periods": 115,
+   "ann_return": 0.0403,
+   "max_drawdown": -0.3997,
+   "sys_ann_return": 0.032,
+   "sys_max_drawdown": -0.3277,
+   "sys_mdd_daily": -0.3417,
+   "avg_cash_idle": 0.3003,
+   "avg_stocks": 5.04,
+   "seconds": 16.0
+  }
+ },
+ "baseline": {
+  "full": {
+   "run_date": "20260928_exe_full",
+   "start": "20170126",
+   "end": "20260831",
+   "periods": 115,
+   "top_n": 6,
+   "cost": 0.003,
+   "state_stocks": {
+    "attack": 6,
+    "neutral": 6,
+    "defense": 6
+   },
+   "stocks_target": {
+    "attack": 6,
+    "neutral": 6,
+    "defense": 6
+   },
+   "avg_stocks": 4.88,
+   "avg_cash_idle": 0.3161,
+   "eff_cap_by_state": {
+    "attack": 0.3333,
+    "neutral": 0.3333,
+    "defense": 0.3333
+   },
+   "candidate_top": 0,
+   "stop_loss": null,
+   "hysteresis": 0,
+   "periods_per_year": 12,
+   "cfg_fingerprint": {
+    "industry_floor_stocks": 2.0,
+    "state_stocks": {
+     "attack": 6,
+     "neutral": 6,
+     "defense": 6
+    },
+    "candidate_top": 0,
+    "cost": 0.003,
+    "slip": 0.001,
+    "ind_cap": 0.25,
+    "size_pctl": 0,
+    "min_amt20": 0,
+    "hysteresis": 0,
+    "st_filter": true
+   },
+   "capital": 20000.0,
+   "lot_modeled": true,
+   "ann_return": 0.1865,
+   "bench_ann": 0.0531,
+   "excess_ann": 0.1334,
+   "max_drawdown": -0.3819,
+   "vol_ann": 0.2552,
+   "sharpe": 0.652,
+   "win_rate": 0.5391,
+   "avg_turnover": 0.8778,
+   "ic_mean": 0.0888,
+   "ic_std": 0.1174,
+   "icir": 0.757,
+   "sys_ann_return": 0.1877,
+   "sys_max_drawdown": -0.3214,
+   "mdd_daily": -0.4251,
+   "sys_mdd_daily": -0.3358
+  },
+  "prod": {
+   "run_date": "20260928_exe",
+   "start": "20190731",
+   "end": "20260831",
+   "periods": 85,
+   "top_n": 6,
+   "cost": 0.003,
+   "state_stocks": {
+    "attack": 6,
+    "neutral": 6,
+    "defense": 6
+   },
+   "stocks_target": {
+    "attack": 6,
+    "neutral": 6,
+    "defense": 6
+   },
+   "avg_stocks": 4.94,
+   "avg_cash_idle": 0.2968,
+   "eff_cap_by_state": {
+    "attack": 0.3333,
+    "neutral": 0.3333,
+    "defense": 0.3333
+   },
+   "candidate_top": 0,
+   "stop_loss": null,
+   "hysteresis": 0,
+   "periods_per_year": 12,
+   "cfg_fingerprint": {
+    "industry_floor_stocks": 2.0,
+    "state_stocks": {
+     "attack": 6,
+     "neutral": 6,
+     "defense": 6
+    },
+    "candidate_top": 0,
+    "cost": 0.003,
+    "slip": 0.001,
+    "ind_cap": 0.25,
+    "size_pctl": 0,
+    "min_amt20": 0,
+    "hysteresis": 0,
+    "st_filter": true
+   },
+   "capital": 20000.0,
+   "lot_modeled": true,
+   "ann_return": 0.3168,
+   "bench_ann": 0.0602,
+   "excess_ann": 0.2566,
+   "max_drawdown": -0.2363,
+   "vol_ann": 0.2692,
+   "sharpe": 1.102,
+   "win_rate": 0.6118,
+   "avg_turnover": 0.8865,
+   "ic_mean": 0.0991,
+   "ic_std": 0.1165,
+   "icir": 0.851,
+   "sys_ann_return": 0.2913,
+   "sys_max_drawdown": -0.1817,
+   "mdd_daily": -0.3993,
+   "sys_mdd_daily": -0.3358
+  }
+ },
+ "verdict_full": {
+  "lgbm_sys_ann_pct": 18.77,
+  "gaps_pp": {
+   "ridge": 11.45,
+   "rankens": 21.44,
+   "random": 15.83
+  },
+  "sanity_random_ok": true,
+  "verdict": "V2_ML_有真实排序增量(重构目标=数据/结构)"
+ },
+ "verdict_prod": {
+  "lgbm_sys_ann_pct": 29.13,
+  "gaps_pp": {
+   "ridge": 21.7,
+   "rankens": 31.3,
+   "random": 25.93
+  },
+  "sanity_random_ok": true,
+  "verdict": "V2_ML_有真实排序增量(重构目标=数据/结构)"
+ }
+}

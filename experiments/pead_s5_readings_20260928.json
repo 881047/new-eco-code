@@ -1,0 +1,348 @@
+{
+ "ran_at": "2026-09-28T08:23:40",
+ "prereg": "plans/pead-factor-prereg-20260927.md（三十三补·续 S5 补测）",
+ "rows": [
+  {
+   "factor": "audit_internal_esg_21",
+   "hl_months": 0.0,
+   "censored": false,
+   "s5": null,
+   "n_min": 0,
+   "ic0": null
+  },
+  {
+   "factor": "audit_internal_esg_42",
+   "hl_months": 0.0,
+   "censored": false,
+   "s5": null,
+   "n_min": 0,
+   "ic0": null
+  },
+  {
+   "factor": "audit_internal_esg_63",
+   "hl_months": 0.0,
+   "censored": false,
+   "s5": null,
+   "n_min": 0,
+   "ic0": null
+  },
+  {
+   "factor": "buyback_21",
+   "hl_months": 2.0,
+   "censored": false,
+   "s5": true,
+   "n_min": 40,
+   "ic0": 0.0113
+  },
+  {
+   "factor": "buyback_42",
+   "hl_months": 2.0,
+   "censored": false,
+   "s5": true,
+   "n_min": 40,
+   "ic0": 0.0113
+  },
+  {
+   "factor": "buyback_63",
+   "hl_months": 2.0,
+   "censored": false,
+   "s5": true,
+   "n_min": 40,
+   "ic0": 0.0113
+  },
+  {
+   "factor": "dividend_21",
+   "hl_months": 6.0,
+   "censored": true,
+   "s5": true,
+   "n_min": 38,
+   "ic0": 0.0024
+  },
+  {
+   "factor": "dividend_42",
+   "hl_months": 6.0,
+   "censored": true,
+   "s5": true,
+   "n_min": 38,
+   "ic0": 0.0024
+  },
+  {
+   "factor": "dividend_63",
+   "hl_months": 6.0,
+   "censored": true,
+   "s5": true,
+   "n_min": 38,
+   "ic0": 0.0024
+  },
+  {
+   "factor": "earnings_forecast_21",
+   "hl_months": 0.0,
+   "censored": false,
+   "s5": null,
+   "n_min": 0,
+   "ic0": null
+  },
+  {
+   "factor": "earnings_forecast_42",
+   "hl_months": 0.0,
+   "censored": false,
+   "s5": null,
+   "n_min": 0,
+   "ic0": null
+  },
+  {
+   "factor": "earnings_forecast_63",
+   "hl_months": 0.0,
+   "censored": false,
+   "s5": null,
+   "n_min": 0,
+   "ic0": null
+  },
+  {
+   "factor": "equity_incentive_21",
+   "hl_months": 6.0,
+   "censored": true,
+   "s5": true,
+   "n_min": 40,
+   "ic0": 0.0071
+  },
+  {
+   "factor": "equity_incentive_42",
+   "hl_months": 6.0,
+   "censored": true,
+   "s5": true,
+   "n_min": 40,
+   "ic0": 0.0071
+  },
+  {
+   "factor": "equity_incentive_63",
+   "hl_months": 6.0,
+   "censored": true,
+   "s5": true,
+   "n_min": 40,
+   "ic0": 0.0071
+  },
+  {
+   "factor": "financing_capital_21",
+   "hl_months": 0.0,
+   "censored": false,
+   "s5": null,
+   "n_min": 0,
+   "ic0": null
+  },
+  {
+   "factor": "financing_capital_42",
+   "hl_months": 0.0,
+   "censored": false,
+   "s5": null,
+   "n_min": 0,
+   "ic0": null
+  },
+  {
+   "factor": "financing_capital_63",
+   "hl_months": 0.0,
+   "censored": false,
+   "s5": null,
+   "n_min": 0,
+   "ic0": null
+  },
+  {
+   "factor": "governance_meeting_21",
+   "hl_months": 0.0,
+   "censored": false,
+   "s5": null,
+   "n_min": 0,
+   "ic0": null
+  },
+  {
+   "factor": "governance_meeting_42",
+   "hl_months": 0.0,
+   "censored": false,
+   "s5": null,
+   "n_min": 0,
+   "ic0": null
+  },
+  {
+   "factor": "governance_meeting_63",
+   "hl_months": 0.0,
+   "censored": false,
+   "s5": null,
+   "n_min": 0,
+   "ic0": null
+  },
+  {
+   "factor": "guarantee_financial_assistance_21",
+   "hl_months": 3.0,
+   "censored": false,
+   "s5": true,
+   "n_min": 40,
+   "ic0": -0.0056
+  },
+  {
+   "factor": "guarantee_financial_assistance_42",
+   "hl_months": 3.0,
+   "censored": false,
+   "s5": true,
+   "n_min": 40,
+   "ic0": -0.0056
+  },
+  {
+   "factor": "guarantee_financial_assistance_63",
+   "hl_months": 3.0,
+   "censored": false,
+   "s5": true,
+   "n_min": 40,
+   "ic0": -0.0056
+  },
+  {
+   "factor": "insider_trading_21",
+   "hl_months": 2.0,
+   "censored": false,
+   "s5": true,
+   "n_min": 40,
+   "ic0": -0.0222
+  },
+  {
+   "factor": "insider_trading_42",
+   "hl_months": 2.0,
+   "censored": false,
+   "s5": true,
+   "n_min": 40,
+   "ic0": -0.0222
+  },
+  {
+   "factor": "insider_trading_63",
+   "hl_months": 2.0,
+   "censored": false,
+   "s5": true,
+   "n_min": 40,
+   "ic0": -0.0222
+  },
+  {
+   "factor": "litigation_regulatory_21",
+   "hl_months": 2.0,
+   "censored": false,
+   "s5": true,
+   "n_min": 40,
+   "ic0": -0.0243
+  },
+  {
+   "factor": "litigation_regulatory_42",
+   "hl_months": 2.0,
+   "censored": false,
+   "s5": true,
+   "n_min": 40,
+   "ic0": -0.0243
+  },
+  {
+   "factor": "litigation_regulatory_63",
+   "hl_months": 2.0,
+   "censored": false,
+   "s5": true,
+   "n_min": 40,
+   "ic0": -0.0243
+  },
+  {
+   "factor": "ma_restructuring_21",
+   "hl_months": 1.0,
+   "censored": false,
+   "s5": false,
+   "n_min": 40,
+   "ic0": 0.0088
+  },
+  {
+   "factor": "ma_restructuring_42",
+   "hl_months": 1.0,
+   "censored": false,
+   "s5": false,
+   "n_min": 40,
+   "ic0": 0.0088
+  },
+  {
+   "factor": "ma_restructuring_63",
+   "hl_months": 1.0,
+   "censored": false,
+   "s5": false,
+   "n_min": 40,
+   "ic0": 0.0088
+  },
+  {
+   "factor": "operating_contract_data_21",
+   "hl_months": 6.0,
+   "censored": true,
+   "s5": true,
+   "n_min": 40,
+   "ic0": 0.0032
+  },
+  {
+   "factor": "operating_contract_data_42",
+   "hl_months": 6.0,
+   "censored": true,
+   "s5": true,
+   "n_min": 40,
+   "ic0": 0.0032
+  },
+  {
+   "factor": "operating_contract_data_63",
+   "hl_months": 6.0,
+   "censored": true,
+   "s5": true,
+   "n_min": 40,
+   "ic0": 0.0032
+  },
+  {
+   "factor": "periodic_report_21",
+   "hl_months": 0.0,
+   "censored": false,
+   "s5": null,
+   "n_min": 0,
+   "ic0": null
+  },
+  {
+   "factor": "periodic_report_42",
+   "hl_months": 0.0,
+   "censored": false,
+   "s5": null,
+   "n_min": 0,
+   "ic0": null
+  },
+  {
+   "factor": "periodic_report_63",
+   "hl_months": 0.0,
+   "censored": false,
+   "s5": null,
+   "n_min": 0,
+   "ic0": null
+  },
+  {
+   "factor": "related_party_transaction_21",
+   "hl_months": 0.0,
+   "censored": false,
+   "s5": null,
+   "n_min": 0,
+   "ic0": null
+  },
+  {
+   "factor": "related_party_transaction_42",
+   "hl_months": 0.0,
+   "censored": false,
+   "s5": null,
+   "n_min": 0,
+   "ic0": null
+  },
+  {
+   "factor": "related_party_transaction_63",
+   "hl_months": 0.0,
+   "censored": false,
+   "s5": null,
+   "n_min": 0,
+   "ic0": null
+  }
+ ],
+ "summary": {
+  "n_pass": 21,
+  "n_fail": 3,
+  "n_none": 18
+ },
+ "runtime_sec": 114.0
+}

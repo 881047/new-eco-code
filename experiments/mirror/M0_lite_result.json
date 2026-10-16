@@ -1,0 +1,71 @@
+{
+ "script_sha16": "ec326ce57163721d",
+ "prereg_sha16": "a423b793ce482f86",
+ "window": {
+  "anchors": 652,
+  "intervals": 491
+ },
+ "panels": {
+  "cols": 5819,
+  "anchors": 652
+ },
+ "checks": {
+  "A2_shifted_sd_diff_pp": [
+   4.8073,
+   4.8073
+  ],
+  "A2_shifted_corr": [
+   -0.0022,
+   -0.0022
+  ],
+  "A3_corr_cache_vs_db": 0.9975103817612274,
+  "A3_overlap_days": 3090
+ },
+ "seeds": {
+  "seedA": {
+   "n": 491,
+   "sd_S_pp": 3.595983202606872,
+   "sd_F66bench_pp": 3.392051642431947,
+   "sd_POOL_pp": 3.395424509655679,
+   "sd_BENCH800_pp": 2.8504501179319015,
+   "sd_d_pool_pool_pp": 1.367245644728673,
+   "sd_d_bench800_pp": 2.889390619113564,
+   "mean_d_pool_pool_pp": 0.30924029204020276,
+   "mean_d_bench800_pp": 0.3727373357212695,
+   "n_pool_median": 3906,
+   "A1_corr_pool_vs_f66bench": 0.9999999950703408,
+   "A1_sd_diff_pp": 0.000337165469236348,
+   "A1old_corr_f66bench_vs_000906": 0.8077794788311756,
+   "A1old_sd_diff_pp": 2.00444434776616
+  },
+  "seedB": {
+   "n": 491,
+   "sd_S_pp": 3.57843651772968,
+   "sd_F66bench_pp": 3.392051642431947,
+   "sd_POOL_pp": 3.395424509655679,
+   "sd_BENCH800_pp": 2.8504501179319015,
+   "sd_d_pool_pool_pp": 1.3727078871328036,
+   "sd_d_bench800_pp": 2.878722466707978,
+   "mean_d_pool_pool_pp": 0.3036226131218354,
+   "mean_d_bench800_pp": 0.36711965680290215,
+   "n_pool_median": 3906,
+   "A1_corr_pool_vs_f66bench": 0.9999999950703408,
+   "A1_sd_diff_pp": 0.000337165469236348,
+   "A1old_corr_f66bench_vs_000906": 0.8077794788311756,
+   "A1old_sd_diff_pp": 2.00444434776616
+  }
+ },
+ "verdict": {
+  "gate": "继续",
+  "rule": "G≥3 继续 / 2≤G<3 待裁定 / G<2 缩编（预注册 §三-C）"
+ },
+ "G_pool": {
+  "seedA": 4.466007207486467,
+  "seedB": 4.3978796086157965,
+  "merged_mean": 4.431943408051132
+ },
+ "rho_required": {
+  "G3.0": 0.8333333333333334,
+  "G6.9": 0.927536231884058
+ }
+}

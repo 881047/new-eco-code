@@ -1,0 +1,614 @@
+{
+  "experiment_id": "D01",
+  "script_sha": "f2ed29558d5034d7",
+  "I1_I2": {
+    "bad": [],
+    "tables": {
+      "adj_factor": {
+        "rows": 13357788,
+        "pk": [
+          "ts_code",
+          "trade_date"
+        ],
+        "dup": 0,
+        "null": 0
+      },
+      "block_trade": {
+        "rows": 351626,
+        "pk": [
+          "trade_date",
+          "ts_code"
+        ],
+        "dup": 0,
+        "null": 0
+      },
+      "daily": {
+        "rows": 12799167,
+        "pk": [
+          "ts_code",
+          "trade_date"
+        ],
+        "dup": 0,
+        "null": 0
+      },
+      "daily_basic": {
+        "rows": 12721716,
+        "pk": [
+          "ts_code",
+          "trade_date"
+        ],
+        "dup": 0,
+        "null": 0
+      },
+      "daily_score": {
+        "rows": 129745,
+        "pk": [
+          "ts_code",
+          "trade_date"
+        ],
+        "dup": 0,
+        "null": 0
+      },
+      "factor": {
+        "rows": 22111432,
+        "pk": [
+          "ts_code",
+          "trade_date",
+          "factor"
+        ],
+        "dup": 0,
+        "null": 0
+      },
+      "fina_indicator": {
+        "rows": 264520,
+        "pk": [
+          "ts_code",
+          "end_date"
+        ],
+        "dup": 0,
+        "null": 0
+      },
+      "fund_adj": {
+        "rows": 3111163,
+        "pk": [
+          "ts_code",
+          "trade_date"
+        ],
+        "dup": 0,
+        "null": 0
+      },
+      "fund_basic": {
+        "rows": 17924,
+        "pk": [
+          "ts_code"
+        ],
+        "dup": 0,
+        "null": 0
+      },
+      "fund_daily": {
+        "rows": 2905870,
+        "pk": [
+          "ts_code",
+          "trade_date"
+        ],
+        "dup": 0,
+        "null": 0
+      },
+      "fund_rank": {
+        "rows": 20251,
+        "pk": [
+          "snap_date",
+          "code"
+        ],
+        "dup": 0,
+        "null": 0
+      },
+      "hk_hold": {
+        "rows": 5592714,
+        "pk": [
+          "trade_date",
+          "ts_code"
+        ],
+        "dup": 0,
+        "null": 0
+      },
+      "holder_num": {
+        "rows": 190622,
+        "pk": [
+          "ts_code",
+          "end_date",
+          "ann_date"
+        ],
+        "dup": 0,
+        "null": 0
+      },
+      "index_daily": {
+        "rows": 16630,
+        "pk": [
+          "ts_code",
+          "trade_date"
+        ],
+        "dup": 0,
+        "null": 0
+      },
+      "lhb": {
+        "rows": 166698,
+        "pk": [
+          "trade_date",
+          "ts_code"
+        ],
+        "dup": 0,
+        "null": 0
+      },
+      "lhb_org": {
+        "rows": 74855,
+        "pk": [
+          "trade_date",
+          "ts_code"
+        ],
+        "dup": 0,
+        "null": 0
+      },
+      "margin": {
+        "rows": 6713030,
+        "pk": [
+          "trade_date",
+          "ts_code"
+        ],
+        "dup": 0,
+        "null": 0
+      },
+      "moneyflow": {
+        "rows": 12515913,
+        "pk": [
+          "ts_code",
+          "trade_date"
+        ],
+        "dup": 0,
+        "null": 0
+      },
+      "namechange": {
+        "rows": 14201,
+        "pk": [
+          "ts_code",
+          "start_date"
+        ],
+        "dup": 0,
+        "null": 0
+      },
+      "pool_index": {
+        "rows": 3326,
+        "pk": [
+          "trade_date"
+        ],
+        "dup": 0,
+        "null": 0
+      },
+      "regime": {
+        "rows": 3077,
+        "pk": [
+          "trade_date"
+        ],
+        "dup": 0,
+        "null": 0
+      },
+      "stk_limit": {
+        "rows": 10637395,
+        "pk": [
+          "trade_date",
+          "ts_code"
+        ],
+        "dup": 0,
+        "null": 0
+      },
+      "stock_basic": {
+        "rows": 5901,
+        "pk": [
+          "ts_code"
+        ],
+        "dup": 0,
+        "null": 0
+      }
+    }
+  },
+  "I3": {
+    "bad": [
+      "daily_basic: total_mv>0 却 circ_mv>total_mv = 15 行",
+      "margin: rzche<0 = 343 行",
+      "moneyflow: net_mf_amount 与 net_mf_vol 符号不一致 = 31900 行"
+    ],
+    "counts": {
+      "daily|close<=0": 0,
+      "daily|open<=0": 0,
+      "daily|high<low": 0,
+      "daily|high<open 或 high<close": 0,
+      "daily|low>open 或 low>close": 0,
+      "daily|vol<0": 0,
+      "daily|amount<0": 0,
+      "daily|pre_close<=0": 0,
+      "daily_basic|total_mv<0": 0,
+      "daily_basic|circ_mv<0": 0,
+      "daily_basic|turnover_rate<0": 0,
+      "daily_basic|total_mv>0 却 circ_mv>total_mv": 15,
+      "adj_factor|adj_factor<=0": 0,
+      "stk_limit|非哨兵行 down_limit<=0": 0,
+      "stk_limit|up_limit<down_limit": 0,
+      "margin|rzye<0": 0,
+      "margin|rqye<0": 0,
+      "margin|rzmre<0": 0,
+      "margin|rzche<0": 343,
+      "moneyflow|net_mf_amount 与 net_mf_vol 符号不一致": 31900,
+      "moneyflow|任一买入额为负": 0,
+      "block_trade|avg_price<=0": 0,
+      "block_trade|total_vol<0": 0,
+      "block_trade|n_trades<0": 0,
+      "hk_hold|vol<0": 0,
+      "hk_hold|ratio<0": 0,
+      "index_daily|close<=0": 0,
+      "index_daily|high<low": 0,
+      "fund_daily|close<=0": 0,
+      "fund_daily|high<low": 0,
+      "fund_adj|adj_factor<=0": 0,
+      "pool_index|close<=0": 0,
+      "repo_rate|overnight<0": 0,
+      "valuation_pe|pe_ttm<=0": 0,
+      "daily_score|score 非有限": 0
+    },
+    "sentinel_rows": 279
+  },
+  "I4": {
+    "bad": [
+      "adj_factor 有 2 个非开市日"
+    ]
+  },
+  "I5": {
+    "lo": "20130104",
+    "hi": "20260911",
+    "daily_days": 3326,
+    "cal_days": 3326,
+    "missing": [],
+    "extra": []
+  },
+  "I6": {
+    "nulls": {
+      "adj_factor.adj_factor": 0,
+      "block_trade.avg_price": 0,
+      "block_trade.total_amount": 0,
+      "daily.open": 0,
+      "daily.high": 0,
+      "daily.low": 0,
+      "daily.close": 0,
+      "daily.pre_close": 193,
+      "daily.change": 193,
+      "daily.pct_chg": 193,
+      "daily.vol": 0,
+      "daily.amount": 0,
+      "daily_basic.turnover_rate": 0,
+      "daily_basic.volume_ratio": 17866,
+      "daily_basic.pe_ttm": 2292287,
+      "daily_basic.pb": 79187,
+      "daily_basic.total_mv": 0,
+      "daily_basic.circ_mv": 0,
+      "daily_score.score": 0,
+      "daily_score.pred_ret": 0,
+      "factor.value": 0,
+      "fina_indicator.ann_date": 0,
+      "fina_indicator.roe": 5458,
+      "fina_indicator.netprofit_yoy": 14990,
+      "fina_indicator.or_yoy": 15812,
+      "fund_adj.adj_factor": 0,
+      "fund_basic.list_date": 15154,
+      "fund_basic.delist_date": 17298,
+      "fund_daily.close": 0,
+      "fund_rank.ret_1y": 2224,
+      "fund_rank.ret_3y": 6983,
+      "hk_hold.vol": 0,
+      "hk_hold.ratio": 6264,
+      "holder_num.ann_date": 0,
+      "holder_num.holder_num": 3779,
+      "index_daily.close": 0,
+      "index_daily.vol": 0,
+      "lhb.net_buy": 0,
+      "lhb.lhb_amount": 0,
+      "lhb.reason": 0,
+      "lhb_org.org_net_value": 0,
+      "lhb_org.reason": 0,
+      "margin.rzye": 33,
+      "margin.rqye": 3186,
+      "margin.rzmre": 33,
+      "moneyflow.net_mf_amount": 0,
+      "moneyflow.buy_elg_amount": 0,
+      "moneyflow.sell_elg_amount": 0,
+      "namechange.start_date": 0,
+      "namechange.ann_date": 1,
+      "pool_index.ret": 1,
+      "pool_index.close": 0,
+      "regime.state": 0,
+      "regime.score": 0,
+      "stk_limit.up_limit": 0,
+      "stk_limit.down_limit": 0,
+      "stock_basic.industry": 333,
+      "stock_basic.list_date": 0,
+      "stock_basic.delist_date": 5562
+    },
+    "positive": [
+      [
+        "daily",
+        "pre_close",
+        12799167,
+        193,
+        0.001507910631996598,
+        "**193 行全部是 `.BJ`(北交所)股票**, 且 `vol>0`。`pre_close` 是 引擎推导涨跌停价的输入(`engine._exec_side`), NULL 会静默退化成「可成交」—— 但北交所**已在 `tradable_mask` 的剔除域内**(方案 §3 不变量 #3), 对策略域零影响。"
+      ],
+      [
+        "daily",
+        "change",
+        12799167,
+        193,
+        0.001507910631996598,
+        "与 `pre_close` 同源同行(同 193 行), 是 `close-pre_close`; 同上。"
+      ],
+      [
+        "daily",
+        "pct_chg",
+        12799167,
+        193,
+        0.001507910631996598,
+        "与 `pre_close` 同源同行(同 193 行); 同上。"
+      ],
+      [
+        "daily_basic",
+        "volume_ratio",
+        12721716,
+        17866,
+        0.14043702909261613,
+        "17,866 行为空(0.14%)。**全项目零消费者** —— `load_market()` 不取它, `app/factors`/`app/models`/`app/portfolio` 均无引用 ⇒ 零影响。"
+      ],
+      [
+        "daily_basic",
+        "pe_ttm",
+        12721716,
+        2292287,
+        18.01869339010555,
+        "2,292,287 行为空 = **亏损股**(实测: 负值 0 行, 正值 10,429,429 行)⇒ **不是缺失, 是语义上无定义**。消费者 `factor_engine` 走 `1/pe` ⇒ NaN ⇒ 进 `neutralize` 后该股在 ep 截面上被排除, 是正确行为。"
+      ],
+      [
+        "daily_basic",
+        "pb",
+        12721716,
+        79187,
+        0.6224553354280193,
+        "79,187 行为空(0.62%), 同 `pe_ttm`: 净资产为负时 PB 无意义。"
+      ],
+      [
+        "fina_indicator",
+        "roe",
+        264520,
+        5458,
+        2.063360048389536,
+        "5,458 行为空(2.06%) = 该报告期该指标缺失; 消费者 `compute_fina_factors` 按 `ann_date` 对齐, NaN 自然不进截面。"
+      ],
+      [
+        "fina_indicator",
+        "netprofit_yoy",
+        264520,
+        14990,
+        5.666868289732346,
+        "14,990 行为空(5.67%); 同上。"
+      ],
+      [
+        "fina_indicator",
+        "or_yoy",
+        264520,
+        15812,
+        5.9776198397096625,
+        "15,812 行为空(5.98%); 同上。"
+      ],
+      [
+        "fund_basic",
+        "list_date",
+        17924,
+        15154,
+        84.5458602990404,
+        "15,154 行为空(84.5%) —— **基金链路**, 不在股票模型路径上(§9 已登记 `fund_nav` 全项目零写入方); 留待基金侧专项验收。"
+      ],
+      [
+        "fund_basic",
+        "delist_date",
+        17924,
+        17298,
+        96.50747600981924,
+        "未退市基金定义上无退市日"
+      ],
+      [
+        "fund_rank",
+        "ret_1y",
+        20251,
+        2224,
+        10.982173719816306,
+        "2,224 行为空(10.98%) —— 成立不满 1 年的基金定义上无 1 年收益。"
+      ],
+      [
+        "fund_rank",
+        "ret_3y",
+        20251,
+        6983,
+        34.482247790232584,
+        "6,983 行为空(34.48%) —— 成立不满 3 年定义上无 3 年收益。"
+      ],
+      [
+        "hk_hold",
+        "ratio",
+        5592714,
+        6264,
+        0.11200286658677701,
+        "6,264 行为空(0.11%); `hk_hold` **只作研究不入生产**(不变量 #6)。"
+      ],
+      [
+        "holder_num",
+        "holder_num",
+        190622,
+        3779,
+        1.9824574288382244,
+        "3,779 行为空(1.98%) = 该期未披露股东户数; 研究因子用, 不进生产。"
+      ],
+      [
+        "margin",
+        "rzye",
+        6713030,
+        33,
+        0.0004915812978640048,
+        "33 行为空(0.0005%), 与 `rzmre` 同行数 ⇒ 同一批异常行。研究/flow die 用。"
+      ],
+      [
+        "margin",
+        "rqye",
+        6713030,
+        3186,
+        0.04745993984832483,
+        "3,186 行为空(0.047%) = 该标的当日无融券余额; 语义上允许为空。"
+      ],
+      [
+        "margin",
+        "rzmre",
+        6713030,
+        33,
+        0.0004915812978640048,
+        "33 行为空, 同 `rzye`。"
+      ],
+      [
+        "namechange",
+        "ann_date",
+        14201,
+        1,
+        0.0070417576227026265,
+        "1 行为空(0.007%); `names.py` 只按 `start_date` 取名称, 不读 `ann_date`。"
+      ],
+      [
+        "pool_index",
+        "ret",
+        3326,
+        1,
+        0.03006614552014432,
+        "1 行为空(= 首日无前收盘) ⇒ 池子指数首日定义上无收益。"
+      ],
+      [
+        "stock_basic",
+        "industry",
+        5901,
+        333,
+        5.643111337061515,
+        "**已知缺陷**: 333 只 NULL 被 fillna('未知') 当同一行业"
+      ],
+      [
+        "stock_basic",
+        "delist_date",
+        5901,
+        5562,
+        94.25521098118963,
+        "未退市股定义上无退市日"
+      ]
+    ],
+    "unregistered": []
+  },
+  "I7": {
+    "pairs": {
+      "daily_basic": {
+        "only_other": 661,
+        "only_daily": 78112,
+        "top_dates": [
+          "20260904",
+          "20260903",
+          "20260902",
+          "20260901",
+          "20260831"
+        ]
+      },
+      "adj_factor": {
+        "only_other": 559757,
+        "only_daily": 1136,
+        "top_dates": [
+          "20150709",
+          "20150710",
+          "20150708",
+          "20150713",
+          "20150714"
+        ]
+      },
+      "stk_limit": {
+        "only_other": 261875,
+        "only_daily": 2423647,
+        "top_dates": [
+          "20180208",
+          "20180209",
+          "20180207",
+          "20180206",
+          "20180212"
+        ]
+      },
+      "index_daily": {
+        "only_other": 16630,
+        "only_daily": 12799167,
+        "top_dates": [
+          "20260911",
+          "20260910",
+          "20260909",
+          "20260908",
+          "20260907"
+        ]
+      },
+      "daily_score": {
+        "only_other": 0,
+        "only_daily": 12669422,
+        "top_dates": []
+      }
+    }
+  },
+  "I8": {
+    "industry_null": 333,
+    "fund_nav_rows": 0,
+    "data_status_orphan": [
+      "regime_valuation",
+      "daily_factor"
+    ],
+    "hk_hold_2024": {
+      "2024070": 4138,
+      "2024071": 4134,
+      "2024072": 4141,
+      "2024073": 4139,
+      "2024080": 4139,
+      "2024081": 4134,
+      "2024082": 792,
+      "2024083": 793,
+      "2024090": 794,
+      "2024091": 814,
+      "2024092": 815,
+      "2024093": 3540,
+      "2024100": 816,
+      "2024101": 816,
+      "2024102": 815,
+      "2024103": 814
+    },
+    "sw_industry_member_exists": false,
+    "factor_days": 181
+  },
+  "I9": {
+    "circ_mv_in_seqdie_path": false,
+    "turnover_null": 0,
+    "margin_in_seqdie_path": false,
+    "adj_stray_rows": 2,
+    "adj_689009_missing_on_trading_days": 1.064,
+    "moneyflow_in_seqdie_path": false,
+    "mf_implied_符号一致": {
+      "n": 12467258,
+      "close_ok": 11181516,
+      "negative": 0
+    },
+    "mf_implied_符号相反": {
+      "n": 31886,
+      "close_ok": 0,
+      "negative": 31886
+    }
+  },
+  "verdict": "FAIL"
+}

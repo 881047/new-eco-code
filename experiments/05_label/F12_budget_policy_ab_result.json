@@ -1,0 +1,84 @@
+{
+ "script_sha": "57cf57341bf16be1",
+ "capital": 1000000.0,
+ "top_n": 100,
+ "band": 8.0,
+ "arms": {
+  "A0_现状": {
+   "n": 606,
+   "ann": 0.1798,
+   "bench": 0.0849,
+   "excess_pp": 9.49,
+   "turnover": 0.155,
+   "invested_ratio": 0.7867,
+   "avg_names": 99.7,
+   "mdd": -0.4302
+  },
+  "A1_贪婪预算": {
+   "n": 606,
+   "ann": 0.2134,
+   "bench": 0.0849,
+   "excess_pp": 12.86,
+   "turnover": 0.15,
+   "invested_ratio": 0.9919,
+   "avg_names": 62.0,
+   "mdd": -0.5566
+  },
+  "A2_顺延候选": {
+   "n": 606,
+   "ann": 0.1809,
+   "bench": 0.0849,
+   "excess_pp": 9.61,
+   "turnover": 0.155,
+   "invested_ratio": 0.7895,
+   "avg_names": 100.0,
+   "mdd": -0.4458
+  },
+  "A3_两者并用": {
+   "n": 606,
+   "ann": 0.214,
+   "bench": 0.0849,
+   "excess_pp": 12.91,
+   "turnover": 0.15,
+   "invested_ratio": 0.9929,
+   "avg_names": 62.1,
+   "mdd": -0.5574
+  },
+  "A4_贪婪顺延_上限1.0": {
+   "n": 606,
+   "ann": 0.1809,
+   "bench": 0.0849,
+   "excess_pp": 9.61,
+   "turnover": 0.155,
+   "invested_ratio": 0.7895,
+   "avg_names": 100.0,
+   "mdd": -0.4458
+  },
+  "A5_贪婪顺延_上限1.5": {
+   "n": 606,
+   "ann": 0.219,
+   "bench": 0.0849,
+   "excess_pp": 13.41,
+   "turnover": 0.155,
+   "invested_ratio": 0.9946,
+   "avg_names": 83.4,
+   "mdd": -0.5576
+  },
+  "A6_贪婪顺延_上限2.0": {
+   "n": 606,
+   "ann": 0.2204,
+   "bench": 0.0849,
+   "excess_pp": 13.56,
+   "turnover": 0.152,
+   "invested_ratio": 0.9929,
+   "avg_names": 64.5,
+   "mdd": -0.5609
+  }
+ },
+ "secs": 374.8,
+ "verdict": {
+  "baseline_invested": 0.7867,
+  "adopt": null,
+  "note": "采纳条件: 投入率 ≥80% 且 超额不劣于基线 −0.5pp"
+ }
+}

@@ -1,0 +1,113 @@
+{
+ "protocol": {
+  "cut": 0.3,
+  "shape": {
+   "capital": 1000000.0,
+   "top_n": 100,
+   "rank_band": 8.0,
+   "hyst": 0.0
+  },
+  "seeds": [
+   "seedA",
+   "seedB"
+  ],
+  "baseline": "F52 A0（同构型不剔微盘）",
+  "criteria": "① 全史超额保留率≥70% ② 留出集超额>0 ③ |MDD| 不劣化超2pp",
+  "mean_dropped_per_period": 1042.0
+ },
+ "arms": {
+  "seedA": {
+   "current": {
+    "FULL": {
+     "n": 606,
+     "excess_pp": 3.12,
+     "mdd": -0.4378,
+     "turnover": 0.1772
+    },
+    "ACTIVE": {
+     "n": 138,
+     "excess_pp": -3.66,
+     "mdd": -0.2221,
+     "turnover": 0.118
+    }
+   },
+   "baseline": {
+    "FULL": {
+     "n": 491,
+     "excess_pp": 17.35,
+     "mdd": -0.366,
+     "turnover": 0.1371
+    },
+    "ACTIVE": {
+     "n": 138,
+     "excess_pp": 9.62,
+     "mdd": -0.366,
+     "turnover": 0.1025
+    }
+   }
+  },
+  "seedB": {
+   "current": {
+    "FULL": {
+     "n": 606,
+     "excess_pp": 3.01,
+     "mdd": -0.4462,
+     "turnover": 0.1778
+    },
+    "ACTIVE": {
+     "n": 138,
+     "excess_pp": -4.89,
+     "mdd": -0.2252,
+     "turnover": 0.1178
+    }
+   },
+   "baseline": {
+    "FULL": {
+     "n": 491,
+     "excess_pp": 17.01,
+     "mdd": -0.366,
+     "turnover": 0.1357
+    },
+    "ACTIVE": {
+     "n": 138,
+     "excess_pp": 11.5,
+     "mdd": -0.366,
+     "turnover": 0.1033
+    }
+   }
+  }
+ },
+ "verdict": {
+  "seedA": {
+   "keep_ratio": 0.18,
+   "keep_ok": false,
+   "active_ok": false,
+   "mdd_ok": false,
+   "excess_full_pp": 3.12,
+   "excess_full_base_pp": 17.35,
+   "excess_active_pp": -3.66,
+   "excess_active_base_pp": 9.62,
+   "mdd": -0.4378,
+   "mdd_base": -0.366,
+   "turnover": 0.1772,
+   "turnover_base": 0.1371,
+   "pass": false
+  },
+  "seedB": {
+   "keep_ratio": 0.177,
+   "keep_ok": false,
+   "active_ok": false,
+   "mdd_ok": false,
+   "excess_full_pp": 3.01,
+   "excess_full_base_pp": 17.01,
+   "excess_active_pp": -4.89,
+   "excess_active_base_pp": 11.5,
+   "mdd": -0.4462,
+   "mdd_base": -0.366,
+   "turnover": 0.1778,
+   "turnover_base": 0.1357,
+   "pass": false
+  },
+  "strong": false
+ }
+}

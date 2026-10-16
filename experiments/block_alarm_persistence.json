@@ -1,0 +1,418 @@
+{
+ "meta": {
+  "script": "scripts/oneoff/block_alarm_persistence.py",
+  "prereg": "plans/block-alarm-persistence-prereg-20260922.md",
+  "git_head": "e59aa1b4",
+  "generated_at": "2026-09-22 22:43:34",
+  "seconds": 50.7,
+  "read_only": true,
+  "params": {
+   "horizon": 5,
+   "window": 12,
+   "baseline_anchors": 60,
+   "short_run": 2,
+   "short_frac_min": 0.5
+  }
+ },
+ "by_block": {
+  "B1": {
+   "monthly": {
+    "n_runs": 5,
+    "lens": [
+     1,
+     2,
+     3,
+     10,
+     17
+    ],
+    "mean": 6.6,
+    "median": 3,
+    "p90": 17,
+    "max": 17,
+    "frac_short": 0.4
+   },
+   "daily": {
+    "n_runs": 1,
+    "lens": [
+     1
+    ],
+    "mean": 1.0,
+    "median": 1,
+    "p90": 1,
+    "max": 1,
+    "frac_short": 1.0
+   },
+   "monthly_runs": [
+    {
+     "from": "20200123",
+     "to": "20210531",
+     "len": 17
+    },
+    {
+     "from": "20210930",
+     "to": "20210930",
+     "len": 1
+    },
+    {
+     "from": "20230428",
+     "to": "20230630",
+     "len": 3
+    },
+    {
+     "from": "20240229",
+     "to": "20240329",
+     "len": 2
+    },
+    {
+     "from": "20240531",
+     "to": "20250228",
+     "len": 10
+    }
+   ],
+   "daily_runs": [
+    {
+     "from": "20260914",
+     "to": "20260914",
+     "len": 1
+    }
+   ]
+  },
+  "B2": {
+   "monthly": {
+    "n_runs": 7,
+    "lens": [
+     1,
+     1,
+     1,
+     1,
+     2,
+     3,
+     10
+    ],
+    "mean": 2.71,
+    "median": 1,
+    "p90": 3,
+    "max": 10,
+    "frac_short": 0.714
+   },
+   "daily": {
+    "n_runs": 0,
+    "lens": [],
+    "mean": null,
+    "median": null,
+    "p90": null,
+    "max": null,
+    "frac_short": null
+   },
+   "monthly_runs": [
+    {
+     "from": "20200123",
+     "to": "20200228",
+     "len": 2
+    },
+    {
+     "from": "20200430",
+     "to": "20210129",
+     "len": 10
+    },
+    {
+     "from": "20210331",
+     "to": "20210331",
+     "len": 1
+    },
+    {
+     "from": "20230228",
+     "to": "20230428",
+     "len": 3
+    },
+    {
+     "from": "20230831",
+     "to": "20230831",
+     "len": 1
+    },
+    {
+     "from": "20250630",
+     "to": "20250630",
+     "len": 1
+    },
+    {
+     "from": "20251031",
+     "to": "20251031",
+     "len": 1
+    }
+   ],
+   "daily_runs": []
+  },
+  "B3": {
+   "monthly": {
+    "n_runs": 4,
+    "lens": [
+     1,
+     3,
+     6,
+     15
+    ],
+    "mean": 6.25,
+    "median": 4.5,
+    "p90": 15,
+    "max": 15,
+    "frac_short": 0.25
+   },
+   "daily": {
+    "n_runs": 0,
+    "lens": [],
+    "mean": null,
+    "median": null,
+    "p90": null,
+    "max": null,
+    "frac_short": null
+   },
+   "monthly_runs": [
+    {
+     "from": "20200228",
+     "to": "20200731",
+     "len": 6
+    },
+    {
+     "from": "20210129",
+     "to": "20210129",
+     "len": 1
+    },
+    {
+     "from": "20210730",
+     "to": "20210930",
+     "len": 3
+    },
+    {
+     "from": "20240229",
+     "to": "20250430",
+     "len": 15
+    }
+   ],
+   "daily_runs": []
+  },
+  "B4": {
+   "monthly": {
+    "n_runs": 5,
+    "lens": [
+     1,
+     1,
+     1,
+     3,
+     12
+    ],
+    "mean": 3.6,
+    "median": 1,
+    "p90": 12,
+    "max": 12,
+    "frac_short": 0.6
+   },
+   "daily": {
+    "n_runs": 1,
+    "lens": [
+     6
+    ],
+    "mean": 6.0,
+    "median": 6,
+    "p90": 6,
+    "max": 6,
+    "frac_short": 0.0
+   },
+   "monthly_runs": [
+    {
+     "from": "20200228",
+     "to": "20200228",
+     "len": 1
+    },
+    {
+     "from": "20210430",
+     "to": "20210430",
+     "len": 1
+    },
+    {
+     "from": "20210630",
+     "to": "20210831",
+     "len": 3
+    },
+    {
+     "from": "20240229",
+     "to": "20250127",
+     "len": 12
+    },
+    {
+     "from": "20260331",
+     "to": "20260331",
+     "len": 1
+    }
+   ],
+   "daily_runs": [
+    {
+     "from": "20260903",
+     "to": "20260910",
+     "len": 6
+    }
+   ]
+  },
+  "B5": {
+   "monthly": {
+    "n_runs": 4,
+    "lens": [
+     1,
+     5,
+     7,
+     9
+    ],
+    "mean": 5.5,
+    "median": 6.0,
+    "p90": 9,
+    "max": 9,
+    "frac_short": 0.25
+   },
+   "daily": {
+    "n_runs": 2,
+    "lens": [
+     1,
+     2
+    ],
+    "mean": 1.5,
+    "median": 1.5,
+    "p90": 2,
+    "max": 2,
+    "frac_short": 1.0
+   },
+   "monthly_runs": [
+    {
+     "from": "20200228",
+     "to": "20200831",
+     "len": 7
+    },
+    {
+     "from": "20201030",
+     "to": "20210630",
+     "len": 9
+    },
+    {
+     "from": "20230228",
+     "to": "20230630",
+     "len": 5
+    },
+    {
+     "from": "20250127",
+     "to": "20250127",
+     "len": 1
+    }
+   ],
+   "daily_runs": [
+    {
+     "from": "20260817",
+     "to": "20260817",
+     "len": 1
+    },
+    {
+     "from": "20260911",
+     "to": "20260914",
+     "len": 2
+    }
+   ]
+  },
+  "B6": {
+   "monthly": {
+    "n_runs": 8,
+    "lens": [
+     1,
+     1,
+     2,
+     3,
+     6,
+     7,
+     7,
+     15
+    ],
+    "mean": 5.25,
+    "median": 4.5,
+    "p90": 7,
+    "max": 15,
+    "frac_short": 0.375
+   },
+   "daily": {
+    "n_runs": 1,
+    "lens": [
+     2
+    ],
+    "mean": 2.0,
+    "median": 2,
+    "p90": 2,
+    "max": 2,
+    "frac_short": 1.0
+   },
+   "monthly_runs": [
+    {
+     "from": "20200123",
+     "to": "20200731",
+     "len": 7
+    },
+    {
+     "from": "20210331",
+     "to": "20210430",
+     "len": 2
+    },
+    {
+     "from": "20210730",
+     "to": "20211231",
+     "len": 6
+    },
+    {
+     "from": "20220331",
+     "to": "20220331",
+     "len": 1
+    },
+    {
+     "from": "20221031",
+     "to": "20231229",
+     "len": 15
+    },
+    {
+     "from": "20240229",
+     "to": "20240830",
+     "len": 7
+    },
+    {
+     "from": "20241129",
+     "to": "20250127",
+     "len": 3
+    },
+    {
+     "from": "20260331",
+     "to": "20260331",
+     "len": 1
+    }
+   ],
+   "daily_runs": [
+    {
+     "from": "20260911",
+     "to": "20260914",
+     "len": 2
+    }
+   ]
+  }
+ },
+ "advice": {
+  "B1": {
+   "watch_periods": 3,
+   "basis": "短促 run 占比 0.4 < 0.5 ⇒ 观察窗口取中位持续期数"
+  },
+  "B2": {
+   "watch_periods": 2,
+   "basis": "≤2 期就消退的 run 占 0.714 ≥ 0.5 ⇒ 多为短促扰动"
+  },
+  "B3": {
+   "watch_periods": 4.5,
+   "basis": "短促 run 占比 0.25 < 0.5 ⇒ 观察窗口取中位持续期数"
+  },
+  "B4": {
+   "watch_periods": 2,
+   "basis": "≤2 期就消退的 run 占 0.6 ≥ 0.5 ⇒ 多为短促扰动"
+  }
+ },
+ "unit_note": "月频段 1 期 ≈ 1 个月；日频段 1 期 ≈ 1 个交易日 —— 两种单位不可混用"
+}

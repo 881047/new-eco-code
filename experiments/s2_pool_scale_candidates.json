@@ -1,0 +1,115 @@
+{
+ "ran_at": "2026-09-21 23:05:34",
+ "elapsed_sec": 132.4,
+ "blocked_rows": {
+  "up_rows": 2343,
+  "down_rows": 177,
+  "up_seq_le_60": 2335,
+  "up_worst_pct": 1942.5806,
+  "down_seq_le_60": 70,
+  "down_worst_pct": 96.4431
+ },
+ "annualized_pp": {
+  "V0_guarded": 18.1087,
+  "V1_noguard": 24.0238,
+  "V2_rule60": 12.8087,
+  "V3_rule60_st": 13.0526
+ },
+ "monthly_bias_pp": {
+  "V0_minus_V1": -0.4041,
+  "V0_minus_V2": 0.38,
+  "V0_minus_V3": 0.3597,
+  "V1_minus_V2": 0.7841,
+  "V2_minus_V3": -0.0203
+ },
+ "regime_flip": {
+  "V0_vs_V1": {
+   "state_days": 3083,
+   "flip_days": 264,
+   "flip_rate": 0.085631,
+   "counts_a": {
+    "attack": 1376,
+    "defense": 1246,
+    "neutral": 461
+   },
+   "counts_b": {
+    "attack": 1526,
+    "defense": 1109,
+    "neutral": 448
+   }
+  },
+  "V0_vs_V2": {
+   "state_days": 3083,
+   "flip_days": 207,
+   "flip_rate": 0.067142,
+   "counts_a": {
+    "attack": 1376,
+    "defense": 1246,
+    "neutral": 461
+   },
+   "counts_b": {
+    "defense": 1333,
+    "attack": 1249,
+    "neutral": 501
+   }
+  },
+  "V0_vs_V3": {
+   "state_days": 3083,
+   "flip_days": 223,
+   "flip_rate": 0.072332,
+   "counts_a": {
+    "attack": 1376,
+    "defense": 1246,
+    "neutral": 461
+   },
+   "counts_b": {
+    "defense": 1317,
+    "attack": 1250,
+    "neutral": 516
+   }
+  }
+ },
+ "domain_layers": {
+  "①上市满60交易日": {
+   "in": [
+    "V2",
+    "V3"
+   ],
+   "note": "与生产 _first_trade=max(首现日,list_date) 同口径"
+  },
+  "②不停牌(vol>0)": {
+   "in": [
+    "V0",
+    "V1",
+    "V2",
+    "V3"
+   ],
+   "note": "四臂统一用 amount>0 近似(与 pool_index 原口径一致)"
+  },
+  "③非ST/退": {
+   "in": [
+    "V3"
+   ],
+   "note": "V2 未实现 ⇒ V3 才覆盖; 按 namechange 时点名区间"
+  },
+  "④非北交/科创": {
+   "in": [
+    "V0",
+    "V1",
+    "V2",
+    "V3"
+   ],
+   "note": "_BASE_WHERE 已剔 688/689/8/4/9"
+  },
+  "⑤市值下界": {
+   "in": [],
+   "note": "生产 stock_size_pctl 未配置 ⇒ 阈值 0 ⇒ 实际只剔 total_mv 为 NaN 者, 与①高度重叠(上市初期本无数据) ⇒ 本轮不实现"
+  },
+  "⑥流动性下界": {
+   "in": [],
+   "note": "生产 stock_min_amt20 未配置 ⇒ 阈值 0 ⇒ 同理只剔 NaN, 与①重叠 ⇒ 本轮不实现"
+  },
+  "_结论": "V3 仍未覆盖⑤⑥(NaN 层), 故 V3 也不是'完整六层'; 但⑤⑥与①重叠度高, 影响应远小于③"
+ },
+ "verdict": "V1（无护栏）含新股首日等策略不可获得收益 ⇒ 不是正确参照尺，8.57% 与 −0.3862pp/月 是'两把尺口径不同'的产物，不是现行尺的真实偏差。真实偏差看 V0−V3（V2 剔新股首日、V3 再剔 ST/退；⑤⑥两层未实现但只剔 NaN、与①重叠，见 domain_layers）。若 |V0−V3| 显著小于 |V0−V1| ⇒ 现行尺问题被高估，换尺优先级下调；反之按 |V0−V3| 的量级决定是否立预注册执行。"
+}

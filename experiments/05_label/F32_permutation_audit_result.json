@@ -1,0 +1,49 @@
+{
+ "script_sha": "4879f9faebcd150e",
+ "seeds": [
+  42,
+  7,
+  123,
+  2024
+ ],
+ "permute_seed": 20260913,
+ "criteria": {
+  "ic_abs_max": 0.01,
+  "t_abs_max": 3.0,
+  "excess_pp_max": 3.0
+ },
+ "arms": {
+  "REAL": {
+   "scores_file": "F29_scores_SA_A0_base.npz",
+   "ic": 0.084,
+   "ic_t": 15.13,
+   "ic_n": 606,
+   "full": {
+    "n": 606,
+    "ann": 0.1798,
+    "excess_pp": 9.49,
+    "mdd": -0.4302,
+    "turnover": 0.155
+   }
+  },
+  "PERM": {
+   "scores_file": "F32_scores_SA_PERM.npz",
+   "ic": 0.0178,
+   "ic_t": 7.2,
+   "ic_n": 606,
+   "full": {
+    "n": 606,
+    "ann": 0.023,
+    "excess_pp": -6.19,
+    "mdd": -0.5751,
+    "turnover": 0.179
+   }
+  }
+ },
+ "secs": 740.6,
+ "verdict": {
+  "no_lookahead_pass": false,
+  "real_arm_has_signal": true,
+  "note": "置换后仍显著 ⇒ 停止上线动作并按最坏假设排查泄漏"
+ }
+}

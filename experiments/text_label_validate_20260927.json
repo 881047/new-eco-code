@@ -1,0 +1,193 @@
+{
+  "ran_at": "2026-09-27T13:47:02",
+  "prereg": "plans/text-factor-llm-labeling-prereg-20260927.md",
+  "n_sample": 300,
+  "judged": 300,
+  "agree": 252,
+  "mismatch": 48,
+  "tier2_missing": 0,
+  "agreement_rate": 0.84,
+  "verdict": "FAIL（迭代 rubric）",
+  "mismatch_samples": [
+    {
+      "i": 11,
+      "title": "2020年半年度财务报告",
+      "tier1": "other",
+      "tier2": "periodic_report"
+    },
+    {
+      "i": 17,
+      "title": "拟进行商誉减值测试所涉及的北京智游网安科技有限公司资产组可收回价值项目资产评估报告",
+      "tier1": "other",
+      "tier2": "audit_internal_esg"
+    },
+    {
+      "i": 19,
+      "title": "关于签订麦庙港（机场路-备塘河）清淤及淤泥处置工程合同的公告",
+      "tier1": "other",
+      "tier2": "operating_contract_data"
+    },
+    {
+      "i": 20,
+      "title": "控股股东及其他关联方非经营性资金占用及其他关联资金往来情况汇总表",
+      "tier1": "audit_internal_esg",
+      "tier2": "related_party_transaction"
+    },
+    {
+      "i": 28,
+      "title": "关于重新披露《中国宝安集团股份有限公司及其发行的16宝安01与17宝安02跟踪评级报告》的说明",
+      "tier1": "other",
+      "tier2": "financing_capital"
+    },
+    {
+      "i": 29,
+      "title": "关于筹划重大事项停牌的公告",
+      "tier1": "litigation_regulatory",
+      "tier2": "ma_restructuring"
+    },
+    {
+      "i": 53,
+      "title": "林溪郡项目员工跟投管理办法",
+      "tier1": "other",
+      "tier2": "governance_meeting"
+    },
+    {
+      "i": 58,
+      "title": "关于回购部分境内上市外资股（B股）股份的进展公告",
+      "tier1": "other",
+      "tier2": "buyback"
+    },
+    {
+      "i": 64,
+      "title": "2021年半年度财务报告",
+      "tier1": "other",
+      "tier2": "periodic_report"
+    },
+    {
+      "i": 66,
+      "title": "关于披露重大资产重组预案暨公司股票复牌的提示性公告",
+      "tier1": "litigation_regulatory",
+      "tier2": "ma_restructuring"
+    },
+    {
+      "i": 78,
+      "title": "关于公司及子公司开展应收账款保理业务的公告",
+      "tier1": "other",
+      "tier2": "financing_capital"
+    },
+    {
+      "i": 87,
+      "title": "2022-018 关于增补公司董事的公告",
+      "tier1": "other",
+      "tier2": "governance_meeting"
+    },
+    {
+      "i": 94,
+      "title": "内部审计工作制度（2025年修订版）",
+      "tier1": "other",
+      "tier2": "audit_internal_esg"
+    },
+    {
+      "i": 97,
+      "title": "董事会审计委员会对会计师事务所2023年度履职情况评估及履行监督职责情况的报告",
+      "tier1": "governance_meeting",
+      "tier2": "audit_internal_esg"
+    },
+    {
+      "i": 101,
+      "title": "关于对武汉建厂项目投资的公告",
+      "tier1": "other",
+      "tier2": "ma_restructuring"
+    },
+    {
+      "i": 113,
+      "title": "北京市盈科（深圳）律师事务所关于公司2018年A股限制性股票激励计划（第二期）部分限制性股票回购注销相关事项之法律意见书",
+      "tier1": "governance_meeting",
+      "tier2": "equity_incentive"
+    },
+    {
+      "i": 114,
+      "title": "神州高铁技术股份有限公司负责人业绩考核与薪酬管理办法",
+      "tier1": "other",
+      "tier2": "governance_meeting"
+    },
+    {
+      "i": 117,
+      "title": "关于召开2021年度业绩说明会的公告",
+      "tier1": "earnings_forecast",
+      "tier2": "other"
+    },
+    {
+      "i": 122,
+      "title": "关于计提资产减值准备和预计负债的公告",
+      "tier1": "other",
+      "tier2": "litigation_regulatory"
+    },
+    {
+      "i": 125,
+      "title": "2021年度业绩说明会投资者关系活动记录表",
+      "tier1": "earnings_forecast",
+      "tier2": "other"
+    },
+    {
+      "i": 126,
+      "title": "关于筹划重大资产重组事项停牌进展公告",
+      "tier1": "litigation_regulatory",
+      "tier2": "ma_restructuring"
+    },
+    {
+      "i": 141,
+      "title": "深圳市特力（集团）股份有限公司收购报告书摘要",
+      "tier1": "ma_restructuring",
+      "tier2": "insider_trading"
+    },
+    {
+      "i": 146,
+      "title": "2023年3月销售及近期新增项目情况简报",
+      "tier1": "other",
+      "tier2": "operating_contract_data"
+    },
+    {
+      "i": 153,
+      "title": "关于回购股份事项前十名股东持股信息的公告",
+      "tier1": "other",
+      "tier2": "buyback"
+    },
+    {
+      "i": 160,
+      "title": "关于按照《香港上市规则》公布2019年6月份证券变动月报表的公告",
+      "tier1": "financing_capital",
+      "tier2": "other"
+    },
+    {
+      "i": 162,
+      "title": "关于提请股东大会给予董事会发行公司H股股份之一般性授权的公告",
+      "tier1": "governance_meeting",
+      "tier2": "financing_capital"
+    },
+    {
+      "i": 175,
+      "title": "“22宝安01”本息兑付暨摘牌公告",
+      "tier1": "litigation_regulatory",
+      "tier2": "financing_capital"
+    },
+    {
+      "i": 186,
+      "title": "国盛证券有限责任公司关于深圳美丽生态股份有限公司股权分置改革有限售条件流通股申请上市流通的核查意见",
+      "tier1": "other",
+      "tier2": "insider_trading"
+    },
+    {
+      "i": 188,
+      "title": "投资者关系管理办法",
+      "tier1": "other",
+      "tier2": "governance_meeting"
+    },
+    {
+      "i": 191,
+      "title": "关于续聘会计师事务所的公告",
+      "tier1": "audit_internal_esg",
+      "tier2": "governance_meeting"
+    }
+  ]
+}

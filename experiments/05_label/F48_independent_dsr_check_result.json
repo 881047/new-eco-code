@@ -1,0 +1,81 @@
+{
+ "source": "F38_multiplicity_haircut_result.json",
+ "skill": {
+  "path": "D:\\codex-home\\skills\\skill-backtest-overfit\\scripts\\deflated_sharpe.py",
+  "license": "GPL-3.0（外部工具，代码未入库）"
+ },
+ "tolerance": 0.0005,
+ "seeds": {
+  "seedA": {
+   "inputs": {
+    "T": 491,
+    "sr_week": 0.1927,
+    "skew": -2.652,
+    "kurtosis": 27.882,
+    "var_trials_ann": 0.4128
+   },
+   "n7": {
+    "sr0_period_skill": 0.123559,
+    "sr0_period_f38": 0.1236,
+    "sr0_annual_skill": 0.891,
+    "dsr_skill": 0.8756,
+    "dsr_f38": 0.8756,
+    "delta_sr0": 4.1e-05,
+    "delta_dsr": 4e-05
+   },
+   "n25": {
+    "sr0_period_skill": 0.177942,
+    "sr0_period_f38": 0.1779,
+    "sr0_annual_skill": 1.283,
+    "dsr_skill": 0.5972,
+    "dsr_f38": 0.5972,
+    "delta_sr0": 4.2e-05,
+    "delta_dsr": 3.7e-05
+   },
+   "mintrl_vs_zero": {
+    "observations_needed": 129.3,
+    "weeks_have": 491,
+    "note": "MinTRL > T ⇒ 当前样本长度还不足以让这个 Sharpe 显著于 0（与 DSR 是两问）"
+   }
+  },
+  "seedB": {
+   "inputs": {
+    "T": 491,
+    "sr_week": 0.1845,
+    "skew": -2.569,
+    "kurtosis": 27.345,
+    "var_trials_ann": 0.4128
+   },
+   "n7": {
+    "sr0_period_skill": 0.123559,
+    "sr0_period_f38": 0.1236,
+    "sr0_annual_skill": 0.891,
+    "dsr_skill": 0.8497,
+    "dsr_f38": 0.8495,
+    "delta_sr0": 4.1e-05,
+    "delta_dsr": 0.000208
+   },
+   "n25": {
+    "sr0_period_skill": 0.177942,
+    "sr0_period_f38": 0.1779,
+    "sr0_annual_skill": 1.283,
+    "dsr_skill": 0.5443,
+    "dsr_f38": 0.544,
+    "delta_sr0": 4.2e-05,
+    "delta_dsr": 0.000349
+   },
+   "mintrl_vs_zero": {
+    "observations_needed": 136.0,
+    "weeks_have": 491,
+    "note": "MinTRL > T ⇒ 当前样本长度还不足以让这个 Sharpe 显著于 0（与 DSR 是两问）"
+   }
+  }
+ },
+ "verdict": {
+  "worst_abs_delta": 0.000349,
+  "agree_within_tolerance": true,
+  "f38_dsr_n7_min": 0.8495,
+  "f38_pass_95": false,
+  "note": "两套独立实现同输入同结论"
+ }
+}

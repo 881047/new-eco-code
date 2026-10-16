@@ -1,0 +1,66 @@
+{
+ "plan": "plan_20260911.json",
+ "anchor": "20260911",
+ "n": 98,
+ "capital_yuan": 1000000.0,
+ "p_main": 0.1,
+ "p_sensitivity": [
+  0.05,
+  0.2
+ ],
+ "rule": "容量 = min_i (p × ADV20_i) / w_i；单票单次最坏成交 = C × w_i（整仓换手上界）",
+ "adv20_qian_yuan": {
+  "p10": 46613.8,
+  "median": 140999.6,
+  "p90": 663433.4
+ },
+ "total_mv_wan": {
+  "p10": 241362.0,
+  "median": 360143.0,
+  "p90": 1319163.0
+ },
+ "capacity_yuan": {
+  "p=0.10": {
+   "median_name": 1381796279,
+   "worst_decile_name": 456814937,
+   "min_name": 279680596
+  },
+  "p=0.05": {
+   "median_name": 690898140,
+   "worst_decile_name": 228407469,
+   "min_name": 139840298
+  },
+  "p=0.20": {
+   "median_name": 2763592559,
+   "worst_decile_name": 913629874,
+   "min_name": 559361193
+  }
+ },
+ "binding_names": [
+  {
+   "ts_code": "300904.SZ",
+   "adv20_qian_yuan": 28538.8,
+   "implied_capacity_yuan": 279680596
+  },
+  {
+   "ts_code": "300915.SZ",
+   "adv20_qian_yuan": 33038.5,
+   "implied_capacity_yuan": 323777353
+  },
+  {
+   "ts_code": "301586.SZ",
+   "adv20_qian_yuan": 33802.3,
+   "implied_capacity_yuan": 331262525
+  },
+  {
+   "ts_code": "300500.SZ",
+   "adv20_qian_yuan": 34075.7,
+   "implied_capacity_yuan": 333942037
+  },
+  {
+   "ts_code": "603722.SH",
+   "adv20_qian_yuan": 34397.8,
+   "implied_capacity_yuan": 337098491
+  }
+ ]
+}

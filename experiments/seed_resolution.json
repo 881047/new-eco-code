@@ -1,0 +1,47 @@
+{
+ "input_diff_pp": 5.9,
+ "sigma_single_pp": 4.172,
+ "rows": [
+  {
+   "delta_pp": 0.04,
+   "seeds_needed": 43512,
+   "se_at_2_seeds_pp": 2.95
+  },
+  {
+   "delta_pp": 0.1,
+   "seeds_needed": 6962,
+   "se_at_2_seeds_pp": 2.95
+  },
+  {
+   "delta_pp": 0.5,
+   "seeds_needed": 278,
+   "se_at_2_seeds_pp": 2.95
+  },
+  {
+   "delta_pp": 1.0,
+   "seeds_needed": 70,
+   "se_at_2_seeds_pp": 2.95
+  },
+  {
+   "delta_pp": 2.0,
+   "seeds_needed": 17,
+   "se_at_2_seeds_pp": 2.95
+  },
+  {
+   "delta_pp": 3.0,
+   "seeds_needed": 8,
+   "se_at_2_seeds_pp": 2.95
+  },
+  {
+   "delta_pp": 5.0,
+   "seeds_needed": 3,
+   "se_at_2_seeds_pp": 2.95
+  },
+  {
+   "delta_pp": 10.0,
+   "seeds_needed": 1,
+   "se_at_2_seeds_pp": 2.95
+  }
+ ],
+ "note": "SE = sigma/sqrt(N); 分辨准则 SE <= delta/2"
+}

@@ -1,0 +1,290 @@
+{
+ "ran_at": "2026-10-03 19:20:25",
+ "seed": 20261003,
+ "n_pseudo_per_class": 3000,
+ "baseline_kind": "exact equal-weight universe per event date (事件数加权)",
+ "note": "对抗性自查: 官方判决维持普查预注册口径; 共模基线=随机股票×同类真实事件日历; 图谱结论以'超额+按日稳健'为准",
+ "classes": {
+  "operating_contract_data": {
+   "exact_baseline": {
+    "full": {
+     "n_dates": 1848,
+     "mean": 0.01122
+    },
+    "2019-2022": {
+     "mean": 0.00947
+    },
+    "2023-2026": {
+     "mean": 0.01353
+    }
+   },
+   "census_actual": {
+    "mean": 0.00409,
+    "t": 7.4
+   },
+   "excess_mean": -0.00713,
+   "excess_z": -12.91
+  },
+  "ma_restructuring": {
+   "exact_baseline": {
+    "full": {
+     "n_dates": 1851,
+     "mean": 0.00806
+    },
+    "2019-2022": {
+     "mean": 0.00592
+    },
+    "2023-2026": {
+     "mean": 0.01146
+    }
+   },
+   "census_actual": {
+    "mean": 0.00346,
+    "t": 4.71
+   },
+   "excess_mean": -0.0046,
+   "excess_z": -6.26
+  },
+  "financing_capital": {
+   "exact_baseline": {
+    "full": {
+     "n_dates": 1857,
+     "mean": 0.00894
+    },
+    "2019-2022": {
+     "mean": 0.0093
+    },
+    "2023-2026": {
+     "mean": 0.00855
+    }
+   },
+   "census_actual": {
+    "mean": 0.00647,
+    "t": 21.0
+   },
+   "excess_mean": -0.00247,
+   "excess_z": -8.03
+  },
+  "related_party_transaction": {
+   "exact_baseline": {
+    "full": {
+     "n_dates": 1797,
+     "mean": 0.00909
+    },
+    "2019-2022": {
+     "mean": 0.00665
+    },
+    "2023-2026": {
+     "mean": 0.01099
+    }
+   },
+   "census_actual": {
+    "mean": 0.0075,
+    "t": 15.2
+   },
+   "excess_mean": -0.00159,
+   "excess_z": -3.22
+  },
+  "audit_internal_esg": {
+   "exact_baseline": {
+    "full": {
+     "n_dates": 1832,
+     "mean": 0.00968
+    },
+    "2019-2022": {
+     "mean": 0.00929
+    },
+    "2023-2026": {
+     "mean": 0.01002
+    }
+   },
+   "census_actual": {
+    "mean": 0.00819,
+    "t": 14.93
+   },
+   "excess_mean": -0.00149,
+   "excess_z": -2.71
+  },
+  "equity_incentive": {
+   "exact_baseline": {
+    "full": {
+     "n_dates": 1855,
+     "mean": 0.0115
+    },
+    "2019-2022": {
+     "mean": 0.01169
+    },
+    "2023-2026": {
+     "mean": 0.01134
+    }
+   },
+   "census_actual": {
+    "mean": 0.01578,
+    "t": 29.35
+   },
+   "excess_mean": 0.00428,
+   "excess_z": 7.96
+  },
+  "buyback": {
+   "exact_baseline": {
+    "full": {
+     "n_dates": 1755,
+     "mean": 0.01919
+    },
+    "2019-2022": {
+     "mean": 0.01064
+    },
+    "2023-2026": {
+     "mean": 0.02319
+    }
+   },
+   "census_actual": {
+    "mean": 0.02197,
+    "t": 25.4
+   },
+   "excess_mean": 0.00278,
+   "excess_z": 3.21
+  },
+  "litigation_regulatory": {
+   "exact_baseline": {
+    "full": {
+     "n_dates": 1856,
+     "mean": 0.00861
+    },
+    "2019-2022": {
+     "mean": 0.00847
+    },
+    "2023-2026": {
+     "mean": 0.00879
+    }
+   },
+   "census_actual": {
+    "mean": -0.00343,
+    "t": -4.53
+   },
+   "excess_mean": -0.01204,
+   "excess_z": -15.9
+  },
+  "insider_trading": {
+   "exact_baseline": {
+    "full": {
+     "n_dates": 1853,
+     "mean": 0.00914
+    },
+    "2019-2022": {
+     "mean": 0.00756
+    },
+    "2023-2026": {
+     "mean": 0.01118
+    }
+   },
+   "census_actual": {
+    "mean": 0.00654,
+    "t": 15.06
+   },
+   "excess_mean": -0.0026,
+   "excess_z": -5.99
+  },
+  "guarantee_financial_assistance": {
+   "exact_baseline": {
+    "full": {
+     "n_dates": 1791,
+     "mean": 0.00944
+    },
+    "2019-2022": {
+     "mean": 0.00898
+    },
+    "2023-2026": {
+     "mean": 0.00988
+    }
+   },
+   "census_actual": {
+    "mean": 0.00757,
+    "t": 12.8
+   },
+   "excess_mean": -0.00187,
+   "excess_z": -3.15
+  },
+  "dividend": {
+   "exact_baseline": {
+    "full": {
+     "n_dates": 1627,
+     "mean": 0.00902
+    },
+    "2019-2022": {
+     "mean": 0.01199
+    },
+    "2023-2026": {
+     "mean": 0.00712
+    }
+   },
+   "census_actual": {
+    "mean": 0.01102,
+    "t": 19.89
+   },
+   "excess_mean": 0.002,
+   "excess_z": 3.6
+  },
+  "earnings_forecast": {
+   "exact_baseline": {
+    "full": {
+     "n_dates": 1729,
+     "mean": 0.01541
+    },
+    "2019-2022": {
+     "mean": 0.01648
+    },
+    "2023-2026": {
+     "mean": 0.01467
+    }
+   },
+   "census_actual": {
+    "mean": 0.01642,
+    "t": 36.05
+   },
+   "excess_mean": 0.00101,
+   "excess_z": 2.22
+  },
+  "periodic_report": {
+   "exact_baseline": {
+    "full": {
+     "n_dates": 1622,
+     "mean": 0.01683
+    },
+    "2019-2022": {
+     "mean": 0.01272
+    },
+    "2023-2026": {
+     "mean": 0.02063
+    }
+   },
+   "census_actual": {
+    "mean": 0.01413,
+    "t": 36.78
+   },
+   "excess_mean": -0.0027,
+   "excess_z": -7.02
+  },
+  "governance_meeting": {
+   "exact_baseline": {
+    "full": {
+     "n_dates": 1857,
+     "mean": 0.00978
+    },
+    "2019-2022": {
+     "mean": 0.00881
+    },
+    "2023-2026": {
+     "mean": 0.01078
+    }
+   },
+   "census_actual": {
+    "mean": 0.00659,
+    "t": 31.44
+   },
+   "excess_mean": -0.00319,
+   "excess_z": -15.24
+  }
+ },
+ "elapsed_sec": 164.0
+}

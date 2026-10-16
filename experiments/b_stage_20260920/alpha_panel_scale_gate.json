@@ -1,0 +1,960 @@
+{
+  "G0": {
+    "n_bank_rows": 158,
+    "n_compared": 158,
+    "sign_match_pct": 91.139,
+    "within_0p3pp_pct": 90.506,
+    "median_abs_diff_pp": 0.1296,
+    "max_abs_diff_pp": 0.4627,
+    "bank_n_tests": [
+      158
+    ],
+    "arm_n_tests": [
+      347
+    ],
+    "bank_pass_n": 0,
+    "as_observation_only": true,
+    "determinism_同臂二次": {
+      "second_run_present": true,
+      "identical": true,
+      "n_diff": 0,
+      "diff_names": [],
+      "n_compared": 158
+    },
+    "register_deviation_is_expected": "登记簿 158 行 created=2026-09-11 20:37，早于 P0-05 裁域(09-12) 与门禁 v2(09-14)⇒ head/p 与今天不可比；差异照实报告，不算通过也不算失败"
+  },
+  "G1_PASS集合进出": {
+    "raw_pass": [],
+    "adj_pass": [],
+    "added": [],
+    "removed": [],
+    "crossed": false
+  },
+  "G2_临界翻动": {
+    "n_flipped": 16,
+    "threshold": 5,
+    "names": [
+      "IMAX10",
+      "IMIN30",
+      "IMIN60",
+      "IMXD5",
+      "MAX30",
+      "MAX60",
+      "QTLD10",
+      "QTLD20",
+      "QTLU60",
+      "RANK5",
+      "ROC30",
+      "ROC5",
+      "ROC60",
+      "STD30",
+      "STD60",
+      "SUMN10"
+    ],
+    "detail": {
+      "IMAX10": {
+        "why": [
+          "|t| 跨 GATE_MIN_T"
+        ],
+        "raw": {
+          "DEAD_head": -0.005578990501817316,
+          "DEAD_head_t": -2.0329279424935547,
+          "ACTIVE_head": -0.00558278060828646,
+          "DEAD_top6": -0.0023486171383410694,
+          "cost_per_month": 0.0015116483516483517,
+          "PASS": false
+        },
+        "adj": {
+          "DEAD_head": -0.005230903142364696,
+          "DEAD_head_t": -1.875674662803367,
+          "ACTIVE_head": -0.005156222265213728,
+          "DEAD_top6": -0.0043933089589700105,
+          "cost_per_month": 0.0015116483516483517,
+          "PASS": false
+        },
+        "abs_d_head": 0.00034808735945262,
+        "abs_d_active": 0.0004265583430727322,
+        "abs_d_top6": 0.002044691820628941,
+        "超过噪声地板": true
+      },
+      "IMIN30": {
+        "why": [
+          "c_top6"
+        ],
+        "raw": {
+          "DEAD_head": 7.823810447007417e-05,
+          "DEAD_head_t": 0.027851802646845128,
+          "ACTIVE_head": -0.0024103875602445295,
+          "DEAD_top6": 0.0006028502248227596,
+          "cost_per_month": 0.0015089855072463769,
+          "PASS": false
+        },
+        "adj": {
+          "DEAD_head": 0.0003719433443620801,
+          "DEAD_head_t": 0.13296616155505456,
+          "ACTIVE_head": -0.0023134265155080828,
+          "DEAD_top6": -0.0026649328181520106,
+          "cost_per_month": 0.0015089855072463769,
+          "PASS": false
+        },
+        "abs_d_head": 0.0002937052398920059,
+        "abs_d_active": 9.696104473644676e-05,
+        "abs_d_top6": 0.0032677830429747702,
+        "超过噪声地板": true
+      },
+      "IMIN60": {
+        "why": [
+          "DEAD_head 符号",
+          "c_same_sign"
+        ],
+        "raw": {
+          "DEAD_head": 0.0003725432266946882,
+          "DEAD_head_t": 0.1346781110150388,
+          "ACTIVE_head": -0.0033140770880685697,
+          "DEAD_top6": -0.00169296131352894,
+          "cost_per_month": 0.0014373913043478261,
+          "PASS": false
+        },
+        "adj": {
+          "DEAD_head": -4.537301138043404e-05,
+          "DEAD_head_t": -0.0146962417145888,
+          "ACTIVE_head": -0.003386442895017324,
+          "DEAD_top6": -0.00762056743260473,
+          "cost_per_month": 0.0014373913043478261,
+          "PASS": false
+        },
+        "abs_d_head": 0.0004179162380751223,
+        "abs_d_active": 7.236580694875436e-05,
+        "abs_d_top6": 0.005927606119075789,
+        "超过噪声地板": true
+      },
+      "IMXD5": {
+        "why": [
+          "c_head_size"
+        ],
+        "raw": {
+          "DEAD_head": -0.0065013172032195145,
+          "DEAD_head_t": -2.971676164840646,
+          "ACTIVE_head": -0.005890775892523027,
+          "DEAD_top6": -0.01948837551753968,
+          "cost_per_month": 0.0015144927536231887,
+          "PASS": false
+        },
+        "adj": {
+          "DEAD_head": -0.006682357212412171,
+          "DEAD_head_t": -3.01944887091417,
+          "ACTIVE_head": -0.006361143107736303,
+          "DEAD_top6": -0.013409053254872561,
+          "cost_per_month": 0.0015144927536231887,
+          "PASS": false
+        },
+        "abs_d_head": 0.00018104000919265655,
+        "abs_d_active": 0.0004703672152132762,
+        "abs_d_top6": 0.006079322262667119,
+        "超过噪声地板": true
+      },
+      "MAX30": {
+        "why": [
+          "c_top6"
+        ],
+        "raw": {
+          "DEAD_head": -0.0006431234418414533,
+          "DEAD_head_t": -0.17247231337957725,
+          "ACTIVE_head": 0.0052600962019735764,
+          "DEAD_top6": 0.005095314793288707,
+          "cost_per_month": 0.0014318840579710147,
+          "PASS": false
+        },
+        "adj": {
+          "DEAD_head": -0.00011820020154118538,
+          "DEAD_head_t": -0.030607965877942067,
+          "ACTIVE_head": 0.005888559044368805,
+          "DEAD_top6": -0.009343869891017676,
+          "cost_per_month": 0.0014346376811594204,
+          "PASS": false
+        },
+        "abs_d_head": 0.0005249232403002679,
+        "abs_d_active": 0.0006284628423952289,
+        "abs_d_top6": 0.014439184684306383,
+        "超过噪声地板": true
+      },
+      "MAX60": {
+        "why": [
+          "c_top6"
+        ],
+        "raw": {
+          "DEAD_head": 0.0011355003691278398,
+          "DEAD_head_t": 0.29725379039784255,
+          "ACTIVE_head": 0.0030397736737805027,
+          "DEAD_top6": 0.0064227702794596555,
+          "cost_per_month": 0.0012969565217391306,
+          "PASS": false
+        },
+        "adj": {
+          "DEAD_head": 0.0009317304065916687,
+          "DEAD_head_t": 0.223227873414127,
+          "ACTIVE_head": 0.003182953493970056,
+          "DEAD_top6": -0.003851359966211021,
+          "cost_per_month": 0.0012859420289855073,
+          "PASS": false
+        },
+        "abs_d_head": 0.00020376996253617112,
+        "abs_d_active": 0.00014317982018955322,
+        "abs_d_top6": 0.010274130245670676,
+        "超过噪声地板": true
+      },
+      "QTLD10": {
+        "why": [
+          "DEAD_head 符号",
+          "c_same_sign",
+          "c_top6"
+        ],
+        "raw": {
+          "DEAD_head": -1.4081592235015706e-05,
+          "DEAD_head_t": -0.005477187080206802,
+          "ACTIVE_head": 0.0020648598851215456,
+          "DEAD_top6": 0.008820409700274468,
+          "cost_per_month": 0.0015172463768115944,
+          "PASS": false
+        },
+        "adj": {
+          "DEAD_head": 0.00020567785686580463,
+          "DEAD_head_t": 0.08018750651132417,
+          "ACTIVE_head": 0.0022947029661267034,
+          "DEAD_top6": -0.004125250992365182,
+          "cost_per_month": 0.0015117391304347826,
+          "PASS": false
+        },
+        "abs_d_head": 0.00021975944910082034,
+        "abs_d_active": 0.00022984308100515785,
+        "abs_d_top6": 0.01294566069263965,
+        "超过噪声地板": true
+      },
+      "QTLD20": {
+        "why": [
+          "c_top6"
+        ],
+        "raw": {
+          "DEAD_head": 0.0010265275428537279,
+          "DEAD_head_t": 0.4533248266213725,
+          "ACTIVE_head": 0.005096346680675784,
+          "DEAD_top6": 0.0037706978619098663,
+          "cost_per_month": 0.0015172463768115944,
+          "PASS": false
+        },
+        "adj": {
+          "DEAD_head": 0.0010903714515734463,
+          "DEAD_head_t": 0.4726872938751916,
+          "ACTIVE_head": 0.0047921477216145685,
+          "DEAD_top6": -0.005527106311637909,
+          "cost_per_month": 0.0015117391304347826,
+          "PASS": false
+        },
+        "abs_d_head": 6.384390871971846e-05,
+        "abs_d_active": 0.0003041989590612153,
+        "abs_d_top6": 0.009297804173547775,
+        "超过噪声地板": true
+      },
+      "QTLU60": {
+        "why": [
+          "c_top6"
+        ],
+        "raw": {
+          "DEAD_head": 0.001174181856913492,
+          "DEAD_head_t": 0.2780889220261285,
+          "ACTIVE_head": 0.005195495402140002,
+          "DEAD_top6": 0.011611033335793764,
+          "cost_per_month": 0.0013382608695652178,
+          "PASS": false
+        },
+        "adj": {
+          "DEAD_head": 0.001639399555278942,
+          "DEAD_head_t": 0.36150555499475745,
+          "ACTIVE_head": 0.0055254973290908725,
+          "DEAD_top6": -0.0053832577599678185,
+          "cost_per_month": 0.0013382608695652175,
+          "PASS": false
+        },
+        "abs_d_head": 0.00046521769836544986,
+        "abs_d_active": 0.00033000192695087013,
+        "abs_d_top6": 0.01699429109576158,
+        "超过噪声地板": true
+      },
+      "RANK5": {
+        "why": [
+          "|t| 跨 GATE_MIN_T",
+          "c_top6"
+        ],
+        "raw": {
+          "DEAD_head": -0.004786109458655119,
+          "DEAD_head_t": -1.9012350628423822,
+          "ACTIVE_head": -0.00727725758527716,
+          "DEAD_top6": -0.0019368935492821038,
+          "cost_per_month": 0.0015116483516483517,
+          "PASS": false
+        },
+        "adj": {
+          "DEAD_head": -0.005151950474828482,
+          "DEAD_head_t": -2.066357371458129,
+          "ACTIVE_head": -0.007350851952408751,
+          "DEAD_top6": 0.003112472000066191,
+          "cost_per_month": 0.0015116483516483517,
+          "PASS": false
+        },
+        "abs_d_head": 0.00036584101617336256,
+        "abs_d_active": 7.359436713159136e-05,
+        "abs_d_top6": 0.005049365549348294,
+        "超过噪声地板": true
+      },
+      "ROC30": {
+        "why": [
+          "c_top6"
+        ],
+        "raw": {
+          "DEAD_head": 0.0025618612009566276,
+          "DEAD_head_t": 0.6466429001775604,
+          "ACTIVE_head": 0.008142979890708961,
+          "DEAD_top6": 0.011208289430942386,
+          "cost_per_month": 0.0014566666666666667,
+          "PASS": false
+        },
+        "adj": {
+          "DEAD_head": 0.002776827971683815,
+          "DEAD_head_t": 0.6861129458577548,
+          "ACTIVE_head": 0.008855894538423708,
+          "DEAD_top6": -0.008974876767024399,
+          "cost_per_month": 0.0014511594202898553,
+          "PASS": false
+        },
+        "abs_d_head": 0.0002149667707271874,
+        "abs_d_active": 0.0007129146477147467,
+        "abs_d_top6": 0.020183166197966784,
+        "超过噪声地板": true
+      },
+      "ROC5": {
+        "why": [
+          "DEAD_head 符号",
+          "c_same_sign"
+        ],
+        "raw": {
+          "DEAD_head": -1.980283996090293e-05,
+          "DEAD_head_t": -0.006833389269682353,
+          "ACTIVE_head": 0.0006009864155203104,
+          "DEAD_top6": -0.012034705467522144,
+          "cost_per_month": 0.0015144927536231887,
+          "PASS": false
+        },
+        "adj": {
+          "DEAD_head": 0.0005026412254665047,
+          "DEAD_head_t": 0.17154251978575402,
+          "ACTIVE_head": 0.0006585965053208413,
+          "DEAD_top6": -0.01111504688160494,
+          "cost_per_month": 0.0015144927536231887,
+          "PASS": false
+        },
+        "abs_d_head": 0.0005224440654274076,
+        "abs_d_active": 5.7610089800530875e-05,
+        "abs_d_top6": 0.0009196585859172039,
+        "超过噪声地板": true
+      },
+      "ROC60": {
+        "why": [
+          "c_top6"
+        ],
+        "raw": {
+          "DEAD_head": 0.001669630780816078,
+          "DEAD_head_t": 0.44082103962313235,
+          "ACTIVE_head": 0.00508370277501883,
+          "DEAD_top6": 0.004362215218134224,
+          "cost_per_month": 0.001313478260869565,
+          "PASS": false
+        },
+        "adj": {
+          "DEAD_head": 0.0020181245869025587,
+          "DEAD_head_t": 0.4833794070719655,
+          "ACTIVE_head": 0.005575977701453432,
+          "DEAD_top6": -0.004908703966066241,
+          "cost_per_month": 0.001357536231884058,
+          "PASS": false
+        },
+        "abs_d_head": 0.0003484938060864806,
+        "abs_d_active": 0.0004922749264346018,
+        "abs_d_top6": 0.009270919184200466,
+        "超过噪声地板": true
+      },
+      "STD30": {
+        "why": [
+          "c_top6"
+        ],
+        "raw": {
+          "DEAD_head": -0.005202874913811684,
+          "DEAD_head_t": -1.4744210155872919,
+          "ACTIVE_head": 0.009091812261049785,
+          "DEAD_top6": 0.011073330556973815,
+          "cost_per_month": 0.0014566666666666667,
+          "PASS": false
+        },
+        "adj": {
+          "DEAD_head": -0.004619558667764067,
+          "DEAD_head_t": -1.1928556958157974,
+          "ACTIVE_head": 0.009308463818724117,
+          "DEAD_top6": -0.0033206319203600287,
+          "cost_per_month": 0.0014346376811594204,
+          "PASS": false
+        },
+        "abs_d_head": 0.0005833162460476167,
+        "abs_d_active": 0.00021665155767433206,
+        "abs_d_top6": 0.014393962477333844,
+        "超过噪声地板": true
+      },
+      "STD60": {
+        "why": [
+          "c_top6"
+        ],
+        "raw": {
+          "DEAD_head": -0.005582793452776969,
+          "DEAD_head_t": -1.6215464816781056,
+          "ACTIVE_head": 0.0033256250223325143,
+          "DEAD_top6": 0.0056321825832128525,
+          "cost_per_month": 0.0011675362318840582,
+          "PASS": false
+        },
+        "adj": {
+          "DEAD_head": -0.005480004730634392,
+          "DEAD_head_t": -1.5458752245046075,
+          "ACTIVE_head": 0.003645717737174803,
+          "DEAD_top6": -0.009837239142507314,
+          "cost_per_month": 0.0011840579710144928,
+          "PASS": false
+        },
+        "abs_d_head": 0.000102788722142577,
+        "abs_d_active": 0.0003200927148422888,
+        "abs_d_top6": 0.015469421725720167,
+        "超过噪声地板": true
+      },
+      "SUMN10": {
+        "why": [
+          "c_top6"
+        ],
+        "raw": {
+          "DEAD_head": -0.0007400960894301534,
+          "DEAD_head_t": -0.34835214149616567,
+          "ACTIVE_head": 0.002293836618322999,
+          "DEAD_top6": 0.00044230250641703607,
+          "cost_per_month": 0.0015144927536231887,
+          "PASS": false
+        },
+        "adj": {
+          "DEAD_head": -0.000751824676990509,
+          "DEAD_head_t": -0.3549529596088094,
+          "ACTIVE_head": 0.0021803151710980363,
+          "DEAD_top6": -0.0050269843195565045,
+          "cost_per_month": 0.0015144927536231887,
+          "PASS": false
+        },
+        "abs_d_head": 1.1728587560355642e-05,
+        "abs_d_active": 0.0001135214472249629,
+        "abs_d_top6": 0.005469286825973541,
+        "超过噪声地板": true
+      }
+    },
+    "观测_噪声地板_head": 1.800574467215703e-05,
+    "观测_噪声地板_top6": 0.0036857583573166736,
+    "观测_其中幅度超过地板": 16,
+    "观测_地板来源": "G3-① 那 7 条解析上不变的因子（真值差=0 ⇒ 实测差全为数值噪声）",
+    "crossed": true
+  },
+  "G3_构造自证": {
+    "④条数": {
+      "raw": 158,
+      "adj": 158,
+      "expect": 158,
+      "declared": {
+        "raw": 158,
+        "adj": 158
+      },
+      "pass": true
+    },
+    "③掩码与标签": {
+      "raw": {
+        "label": {
+          "tag": "forward_return",
+          "shape": [
+            2141,
+            5812
+          ],
+          "n_cells": 12443492,
+          "n_finite_or_true": 9631377,
+          "sha256": "2ea89399cfc230f0669e30305edb39cfb2cee6a72098e2b19051b5ade08b0dcd"
+        },
+        "mask": {
+          "tag": "pit_tradable_mask",
+          "shape": [
+            93,
+            5809
+          ],
+          "n_cells": 540237,
+          "n_finite_or_true": 374643,
+          "sha256": "52c0d81d899e60e3f85718cda31abddafed5fc269f8f277e6311ddc3bf1bec2c"
+        }
+      },
+      "adj": {
+        "label": {
+          "tag": "forward_return",
+          "shape": [
+            2141,
+            5812
+          ],
+          "n_cells": 12443492,
+          "n_finite_or_true": 9631377,
+          "sha256": "2ea89399cfc230f0669e30305edb39cfb2cee6a72098e2b19051b5ade08b0dcd"
+        },
+        "mask": {
+          "tag": "pit_tradable_mask",
+          "shape": [
+            93,
+            5809
+          ],
+          "n_cells": 540237,
+          "n_finite_or_true": 374643,
+          "sha256": "52c0d81d899e60e3f85718cda31abddafed5fc269f8f277e6311ddc3bf1bec2c"
+        }
+      },
+      "pass": true
+    },
+    "②除权样本": {
+      "code": "300765.SZ",
+      "dates": [
+        "20200428",
+        "20200429"
+      ],
+      "source": "probe 单进程（同一份 m，两臂各自的 build_panel）",
+      "rel_step": 1.1059999465942383,
+      "probe_diag_等于_ADJ臂_diag": true,
+      "same_sample_picked": true,
+      "raw_close_identical_across_arms": true,
+      "total_mv_identical": true,
+      "per_date": {
+        "20200428": {
+          "close_ADJ_over_RAW": 1.0,
+          "vwap_ADJ_over_RAW": 1.0,
+          "adj_factor": 1.0
+        },
+        "20200429": {
+          "close_ADJ_over_RAW": 2.105999917695431,
+          "vwap_ADJ_over_RAW": 2.105999977403184,
+          "adj_factor": 2.1059999465942383
+        }
+      },
+      "ratio_adj_factor": 2.1059999465942383,
+      "ratio_close_ADJ_over_RAW": 2.105999917695431,
+      "rel_err_pointwise_d0": 0.0,
+      "rel_err_pointwise_d1": 1.3722131098070633e-08,
+      "rel_err_vwap_d1": 1.4629129241328087e-08,
+      "rel_err_ratio": 1.3722131098070633e-08,
+      "probe_G4_零写入": true,
+      "pass": true
+    },
+    "①尺度无关族": {
+      "rule": "AST 求齐次次数 == 0（同日比值族）—— 正则版判错过一次，见脚本内注释",
+      "n_family": 7,
+      "n_compared": 7,
+      "tolerance": 1e-06,
+      "max_abs_d_head": 3.202741499990294e-05,
+      "max_abs_d_t": 0.005774908236948484,
+      "worst": [
+        {
+          "name": "KLEN",
+          "abs_d_head": 3.202741499990294e-05,
+          "abs_d_t": 0.0028793881882371863,
+          "abs_d_active": 8.673317009391668e-08
+        },
+        {
+          "name": "VWAP0",
+          "abs_d_head": 2.1072549861856152e-05,
+          "abs_d_t": 0.005774908236948484,
+          "abs_d_active": 4.064360813748453e-05
+        },
+        {
+          "name": "KSFT",
+          "abs_d_head": 6.377766840160934e-06,
+          "abs_d_t": 0.0020252808305070147,
+          "abs_d_active": 9.909046873930738e-06
+        },
+        {
+          "name": "HIGH0",
+          "abs_d_head": 6.014859536662698e-06,
+          "abs_d_t": 0.0028953060268124275,
+          "abs_d_active": 7.900709827099797e-06
+        },
+        {
+          "name": "KMID",
+          "abs_d_head": 4.5054592192166065e-06,
+          "abs_d_t": 0.0027448315350246943,
+          "abs_d_active": 9.39509200472994e-06
+        },
+        {
+          "name": "OPEN0",
+          "abs_d_head": 2.643465995788054e-06,
+          "abs_d_t": 0.0008711064995496898,
+          "abs_d_active": 8.66953163377698e-06
+        },
+        {
+          "name": "LOW0",
+          "abs_d_head": 2.0400620996978078e-07,
+          "abs_d_t": 0.0007658029327941573,
+          "abs_d_active": 1.471168211390891e-05
+        }
+      ],
+      "status": "FAIL"
+    }
+  },
+  "G3①机制归因_诊断非判据": {
+    "family": [
+      "HIGH0",
+      "KLEN",
+      "KMID",
+      "KSFT",
+      "LOW0",
+      "OPEN0",
+      "VWAP0"
+    ],
+    "horizon": 21,
+    "elapsed_s": 157.2,
+    "per_factor": [
+      {
+        "name": "HIGH0",
+        "n_cells": 374643,
+        "value_rel_max": 0.06491023302078247,
+        "value_rel_mean": 0.0001779060548869893,
+        "value_abs_max": 0.054512739181518555,
+        "boundary_gap_min_rms": 0.0,
+        "n_dates_gap_below_value_noise": 71,
+        "mean_spearman": 0.9999959153163508,
+        "min_spearman": 0.9999385297478592,
+        "n_dates": 71,
+        "n_dates_headset_diff": 3,
+        "swap_sizes": [
+          2,
+          2,
+          2
+        ],
+        "ident_max_err": 1.862645149230957e-09,
+        "DEAD_head_raw": -0.008327186988128848,
+        "DEAD_head_adj": -0.008327247940567913,
+        "DEAD_top6_raw": -0.02410455029720152,
+        "DEAD_top6_adj": -0.024074971807044997,
+        "abs_d_top6": 2.9578490156521864e-05,
+        "abs_d_head": 6.095243906475978e-08
+      },
+      {
+        "name": "KLEN",
+        "n_cells": 374643,
+        "value_rel_max": 0.06354597955942154,
+        "value_rel_mean": 0.00021694762108381838,
+        "value_abs_max": 0.05527830123901367,
+        "boundary_gap_min_rms": 3.6432433262234554e-05,
+        "n_dates_gap_below_value_noise": 71,
+        "mean_spearman": 0.9999947462166731,
+        "min_spearman": 0.999910839396973,
+        "n_dates": 71,
+        "n_dates_headset_diff": 5,
+        "swap_sizes": [
+          2,
+          2,
+          2,
+          2,
+          4
+        ],
+        "ident_max_err": 3.725290298461914e-09,
+        "DEAD_head_raw": -0.013416593599225014,
+        "DEAD_head_adj": -0.013434599343897171,
+        "DEAD_top6_raw": -0.02508231920098335,
+        "DEAD_top6_adj": -0.024908592491607432,
+        "abs_d_top6": 0.00017372670937591816,
+        "abs_d_head": 1.800574467215703e-05
+      },
+      {
+        "name": "KMID",
+        "n_cells": 374643,
+        "value_rel_max": 0.06424059718847275,
+        "value_rel_mean": 0.00021038754493929446,
+        "value_abs_max": 0.06193065643310547,
+        "boundary_gap_min_rms": 0.0,
+        "n_dates_gap_below_value_noise": 71,
+        "mean_spearman": 0.9999965730804679,
+        "min_spearman": 0.9999524770990594,
+        "n_dates": 71,
+        "n_dates_headset_diff": 7,
+        "swap_sizes": [
+          2,
+          2,
+          2,
+          2,
+          2,
+          2
+        ],
+        "ident_max_err": 3.725290298461914e-09,
+        "DEAD_head_raw": -0.00748049554703626,
+        "DEAD_head_adj": -0.007473855177727594,
+        "DEAD_top6_raw": -0.03425451532058733,
+        "DEAD_top6_adj": -0.03506222562733251,
+        "abs_d_top6": 0.000807710306745181,
+        "abs_d_head": 6.6403693086665785e-06
+      },
+      {
+        "name": "KSFT",
+        "n_cells": 374643,
+        "value_rel_max": 0.053731631487607956,
+        "value_rel_mean": 0.00020142488938290626,
+        "value_abs_max": 0.05096101760864258,
+        "boundary_gap_min_rms": 3.272983803981333e-06,
+        "n_dates_gap_below_value_noise": 71,
+        "mean_spearman": 0.9999964921916096,
+        "min_spearman": 0.999953168793568,
+        "n_dates": 71,
+        "n_dates_headset_diff": 4,
+        "swap_sizes": [
+          2,
+          2,
+          2,
+          2
+        ],
+        "ident_max_err": 3.725290298461914e-09,
+        "DEAD_head_raw": -0.008461280935771868,
+        "DEAD_head_adj": -0.008469200529105646,
+        "DEAD_top6_raw": -0.032312519182647825,
+        "DEAD_top6_adj": -0.034966269734276224,
+        "abs_d_top6": 0.002653750551628399,
+        "abs_d_head": 7.919593333778271e-06
+      },
+      {
+        "name": "LOW0",
+        "n_cells": 374643,
+        "value_rel_max": 0.08110349625349045,
+        "value_rel_mean": 0.00021986481442581862,
+        "value_abs_max": 0.07887458801269531,
+        "boundary_gap_min_rms": 0.0,
+        "n_dates_gap_below_value_noise": 71,
+        "mean_spearman": 0.9999919355511196,
+        "min_spearman": 0.9997152046421235,
+        "n_dates": 71,
+        "n_dates_headset_diff": 16,
+        "swap_sizes": [
+          2,
+          4,
+          4,
+          6,
+          8,
+          8
+        ],
+        "ident_max_err": 1.3969838619232178e-09,
+        "DEAD_head_raw": -0.003315217776591299,
+        "DEAD_head_adj": -0.0033089092991668992,
+        "DEAD_top6_raw": -0.021705393364626756,
+        "DEAD_top6_adj": -0.021705393364626756,
+        "abs_d_top6": 0.0,
+        "abs_d_head": 6.308477424399935e-06
+      },
+      {
+        "name": "OPEN0",
+        "n_cells": 374643,
+        "value_rel_max": 0.06118379533290863,
+        "value_rel_mean": 0.00020556579693220556,
+        "value_abs_max": 0.05896162986755371,
+        "boundary_gap_min_rms": 0.0,
+        "n_dates_gap_below_value_noise": 71,
+        "mean_spearman": 0.999996816779461,
+        "min_spearman": 0.9999575887206079,
+        "n_dates": 71,
+        "n_dates_headset_diff": 6,
+        "swap_sizes": [
+          2,
+          2,
+          2,
+          2,
+          4,
+          4
+        ],
+        "ident_max_err": 3.725290298461914e-09,
+        "DEAD_head_raw": -0.003964346894194228,
+        "DEAD_head_adj": -0.0039666429060367,
+        "DEAD_top6_raw": -0.018595457942762846,
+        "DEAD_top6_adj": -0.01904875441441234,
+        "abs_d_top6": 0.00045329647164949263,
+        "abs_d_head": 2.296011842472037e-06
+      },
+      {
+        "name": "VWAP0",
+        "n_cells": 374643,
+        "value_rel_max": 0.05876058340072632,
+        "value_rel_mean": 0.0002477155940141529,
+        "value_abs_max": 0.052803754806518555,
+        "boundary_gap_min_rms": 2.2603671823162585e-05,
+        "n_dates_gap_below_value_noise": 71,
+        "mean_spearman": 0.9999969305762144,
+        "min_spearman": 0.9999684321304109,
+        "n_dates": 71,
+        "n_dates_headset_diff": 7,
+        "swap_sizes": [
+          2,
+          2,
+          2,
+          2,
+          2,
+          2
+        ],
+        "ident_max_err": 1.862645149230957e-09,
+        "DEAD_head_raw": -0.003917574685749034,
+        "DEAD_head_adj": -0.003911700744090051,
+        "DEAD_top6_raw": -0.040490470826625824,
+        "DEAD_top6_adj": -0.03680471246930915,
+        "abs_d_top6": 0.0036857583573166736,
+        "abs_d_head": 5.873941658983417e-06
+      }
+    ],
+    "fp_before": {
+      "bank": {
+        "rows": 206,
+        "max_created": "2026-09-18 12:24:55",
+        "max_updated": "2026-09-18 19:04:16",
+        "n_pass": 1
+      },
+      "pool": {
+        "exists": true,
+        "files": 189,
+        "sum_mtime_ns": 338156179272506357200,
+        "sum_size": 445502790
+      }
+    },
+    "fp_after": {
+      "bank": {
+        "rows": 206,
+        "max_created": "2026-09-18 12:24:55",
+        "max_updated": "2026-09-18 19:04:16",
+        "n_pass": 1
+      },
+      "pool": {
+        "exists": true,
+        "files": 189,
+        "sum_mtime_ns": 338156179272506357200,
+        "sum_size": 445502790
+      }
+    },
+    "reading": "值差按**逐月末截面 RMS** 归一（除以 |value| 会在趋零格上爆炸）；ident_max_err 是【照抄 gate.evaluate 的取数：因子非空 ∩ 前向收益非空】回算 head 超额的残差 ⇒ ≈0 说明两臂读数差异的全部来源是 top-k 选面这个离散步骤，收益没有第二个通道；boundary_gap_min_rms = 头部第 k 名与第 k+1 名的间距（RMS 单位），它小于值噪声的那些月末就是「边界近并列被翻动」的月份"
+  },
+  "G4_零写入": {
+    "raw": {
+      "before": {
+        "bank": {
+          "rows": 206,
+          "max_created": "2026-09-18 12:24:55",
+          "max_updated": "2026-09-18 19:04:16",
+          "n_pass": 1
+        },
+        "pool": {
+          "exists": true,
+          "files": 189,
+          "sum_mtime_ns": 338156179272506357200,
+          "sum_size": 445502790
+        }
+      },
+      "after": {
+        "bank": {
+          "rows": 206,
+          "max_created": "2026-09-18 12:24:55",
+          "max_updated": "2026-09-18 19:04:16",
+          "n_pass": 1
+        },
+        "pool": {
+          "exists": true,
+          "files": 189,
+          "sum_mtime_ns": 338156179272506357200,
+          "sum_size": 445502790
+        }
+      },
+      "unchanged": true
+    },
+    "adj": {
+      "before": {
+        "bank": {
+          "rows": 206,
+          "max_created": "2026-09-18 12:24:55",
+          "max_updated": "2026-09-18 19:04:16",
+          "n_pass": 1
+        },
+        "pool": {
+          "exists": true,
+          "files": 189,
+          "sum_mtime_ns": 338156179272506357200,
+          "sum_size": 445502790
+        }
+      },
+      "after": {
+        "bank": {
+          "rows": 206,
+          "max_created": "2026-09-18 12:24:55",
+          "max_updated": "2026-09-18 19:04:16",
+          "n_pass": 1
+        },
+        "pool": {
+          "exists": true,
+          "files": 189,
+          "sum_mtime_ns": 338156179272506357200,
+          "sum_size": 445502790
+        }
+      },
+      "unchanged": true
+    }
+  },
+  "方法偏离": {
+    "check_duplicate 桩": "两臂对称施加（预注册 §3）；两臂 duplicates 计数 {'raw': 0, 'adj': 0} ⇒ 应为 0",
+    "save": false,
+    "adj_diag": {
+      "adj_shape": [
+        2141,
+        5812
+      ],
+      "close_shape": [
+        2141,
+        5809
+      ],
+      "adj_columns_missing": 0,
+      "adj_missing_on_price_cells": 1136,
+      "adj_zero_on_price_cells": 0,
+      "dtype_before": "float32",
+      "scaled": [
+        "open",
+        "high",
+        "low",
+        "close",
+        "pre_close",
+        "vwap"
+      ],
+      "dtype_each": {
+        "open": "float32",
+        "high": "float32",
+        "low": "float32",
+        "close": "float32",
+        "pre_close": "float32",
+        "vwap": "float32"
+      },
+      "dtype_after": {
+        "open": "float32",
+        "high": "float32",
+        "low": "float32",
+        "close": "float32",
+        "pre_close": "float32",
+        "vwap": "float32"
+      }
+    }
+  },
+  "summary": {
+    "两臂共同因子数": 158,
+    "qlib158 声明条数": 158,
+    "G3_全过": false,
+    "G4_零写入成立": true,
+    "G2_翻动数": 16,
+    "判决": "不可引用（G3 构造自证或 G4 零写入有不过项 ⇒ 先修实现，不解释结果）"
+  }
+}

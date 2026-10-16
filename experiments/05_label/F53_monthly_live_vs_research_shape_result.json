@@ -1,0 +1,202 @@
+{
+ "question": "生产构型(hold_bonus=0.0) 的月度读数 vs 研究构型(hyst=0.2)",
+ "windows": {
+  "FULL": [
+   "2010-01-01",
+   "2030-12-31"
+  ],
+  "OOS_32m": [
+   "2024-01-01",
+   "2026-08-31"
+  ],
+  "DEAD": [
+   "2020-09-01",
+   "2023-12-31"
+  ]
+ },
+ "results": {
+  "A0_生产构型(hyst=0.0)": {
+   "seedA": {
+    "FULL": {
+     "n": 115,
+     "mean_pp": 1.34,
+     "median_pp": 1.39,
+     "hit": 0.713,
+     "sd_pp": 2.63,
+     "worst_pp": -12.1,
+     "best_pp": 8.15,
+     "ann_excess_pp": 17.36,
+     "avg_ret_pp": 1.94,
+     "avg_bench_pp": 0.61
+    },
+    "OOS_32m": {
+     "n": 32,
+     "mean_pp": 0.76,
+     "median_pp": 1.22,
+     "hit": 0.656,
+     "sd_pp": 3.42,
+     "worst_pp": -12.1,
+     "best_pp": 5.86,
+     "ann_excess_pp": 9.16,
+     "avg_ret_pp": 2.19,
+     "avg_bench_pp": 1.42
+    },
+    "DEAD": {
+     "n": 40,
+     "mean_pp": 1.85,
+     "median_pp": 1.98,
+     "hit": 0.775,
+     "sd_pp": 2.3,
+     "worst_pp": -4.74,
+     "best_pp": 7.2,
+     "ann_excess_pp": 24.91,
+     "avg_ret_pp": 2.2,
+     "avg_bench_pp": 0.35
+    }
+   },
+   "seedB": {
+    "FULL": {
+     "n": 115,
+     "mean_pp": 1.31,
+     "median_pp": 1.45,
+     "hit": 0.713,
+     "sd_pp": 2.62,
+     "worst_pp": -12.43,
+     "best_pp": 7.47,
+     "ann_excess_pp": 17.03,
+     "avg_ret_pp": 1.92,
+     "avg_bench_pp": 0.61
+    },
+    "OOS_32m": {
+     "n": 32,
+     "mean_pp": 0.91,
+     "median_pp": 1.42,
+     "hit": 0.656,
+     "sd_pp": 3.5,
+     "worst_pp": -12.43,
+     "best_pp": 5.85,
+     "ann_excess_pp": 11.33,
+     "avg_ret_pp": 2.33,
+     "avg_bench_pp": 1.42
+    },
+    "DEAD": {
+     "n": 40,
+     "mean_pp": 1.71,
+     "median_pp": 1.82,
+     "hit": 0.725,
+     "sd_pp": 2.33,
+     "worst_pp": -4.58,
+     "best_pp": 6.57,
+     "ann_excess_pp": 22.9,
+     "avg_ret_pp": 2.07,
+     "avg_bench_pp": 0.35
+    }
+   }
+  },
+  "A1_研究构型(hyst=0.2)": {
+   "seedA": {
+    "FULL": {
+     "n": 115,
+     "mean_pp": 1.35,
+     "median_pp": 1.54,
+     "hit": 0.739,
+     "sd_pp": 2.66,
+     "worst_pp": -12.48,
+     "best_pp": 8.45,
+     "ann_excess_pp": 17.57,
+     "avg_ret_pp": 1.95,
+     "avg_bench_pp": 0.61
+    },
+    "OOS_32m": {
+     "n": 32,
+     "mean_pp": 0.84,
+     "median_pp": 1.33,
+     "hit": 0.719,
+     "sd_pp": 3.48,
+     "worst_pp": -12.48,
+     "best_pp": 5.73,
+     "ann_excess_pp": 10.33,
+     "avg_ret_pp": 2.26,
+     "avg_bench_pp": 1.42
+    },
+    "DEAD": {
+     "n": 40,
+     "mean_pp": 1.79,
+     "median_pp": 2.03,
+     "hit": 0.775,
+     "sd_pp": 2.35,
+     "worst_pp": -5.03,
+     "best_pp": 6.67,
+     "ann_excess_pp": 24.09,
+     "avg_ret_pp": 2.15,
+     "avg_bench_pp": 0.35
+    }
+   },
+   "seedB": {
+    "FULL": {
+     "n": 115,
+     "mean_pp": 1.3,
+     "median_pp": 1.38,
+     "hit": 0.739,
+     "sd_pp": 2.64,
+     "worst_pp": -12.22,
+     "best_pp": 7.69,
+     "ann_excess_pp": 16.87,
+     "avg_ret_pp": 1.9,
+     "avg_bench_pp": 0.61
+    },
+    "OOS_32m": {
+     "n": 32,
+     "mean_pp": 0.93,
+     "median_pp": 1.21,
+     "hit": 0.688,
+     "sd_pp": 3.46,
+     "worst_pp": -12.22,
+     "best_pp": 5.84,
+     "ann_excess_pp": 11.73,
+     "avg_ret_pp": 2.35,
+     "avg_bench_pp": 1.42
+    },
+    "DEAD": {
+     "n": 40,
+     "mean_pp": 1.75,
+     "median_pp": 1.99,
+     "hit": 0.775,
+     "sd_pp": 2.35,
+     "worst_pp": -4.83,
+     "best_pp": 6.74,
+     "ann_excess_pp": 23.57,
+     "avg_ret_pp": 2.11,
+     "avg_bench_pp": 0.35
+    }
+   }
+  }
+ },
+ "f45_quoted": {
+  "full": {
+   "mean_pp": [
+    1.35,
+    1.3
+   ]
+  },
+  "oos": {
+   "mean_pp": [
+    0.84,
+    0.93
+   ]
+  },
+  "source": "F45（研究构型 hyst=0.2）"
+ },
+ "verdict": {
+  "live_full_mean_pp": 1.325,
+  "research_full_mean_pp": 1.325,
+  "live_oos_mean_pp": 0.835,
+  "research_oos_mean_pp": 0.885,
+  "live_oos_per_seed": [
+   0.76,
+   0.91
+  ],
+  "above_c3_monthly_line(0.83pp)": true,
+  "note": "留出集是 F28 已开封那 32 个月 ⇒ 只作方向；月样本量远不足以分辨 +0.83pp/月（约需 70 个月）"
+ }
+}

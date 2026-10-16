@@ -1,0 +1,98 @@
+{
+ "n_periods": 606,
+ "top_n": 100,
+ "sell_rate_bp": 7.6,
+ "criteria": {
+  "min_excess_gain_pp": 1.0,
+  "max_vol_ratio": 1.05
+ },
+ "windows": {
+  "FULL": {
+   "E_等权": {
+    "n": 606,
+    "excess_pp": 32.24,
+    "mean_pp_per_week": 0.559,
+    "vol_pp": 2.008,
+    "sharpe": 0.278,
+    "mdd": -0.2272
+   },
+   "R_分位加权": {
+    "n": 606,
+    "excess_pp": 35.97,
+    "mean_pp_per_week": 0.619,
+    "vol_pp": 2.305,
+    "sharpe": 0.268,
+    "mdd": -0.2326
+   },
+   "turnover_mean": {
+    "E": 1.012,
+    "R": 1.1
+   },
+   "cost_pp_total": {
+    "E": 46.62,
+    "R": 50.68
+   }
+  },
+  "OOS_32m": {
+   "E_等权": {
+    "n": 137,
+    "excess_pp": 13.71,
+    "mean_pp_per_week": 0.291,
+    "vol_pp": 2.979,
+    "sharpe": 0.098,
+    "mdd": -0.2272
+   },
+   "R_分位加权": {
+    "n": 137,
+    "excess_pp": 11.44,
+    "mean_pp_per_week": 0.258,
+    "vol_pp": 3.168,
+    "sharpe": 0.081,
+    "mdd": -0.2326
+   },
+   "turnover_mean": {
+    "E": 0.887,
+    "R": 1.011
+   },
+   "cost_pp_total": {
+    "E": 9.23,
+    "R": 10.52
+   }
+  },
+  "DEAD": {
+   "E_等权": {
+    "n": 170,
+    "excess_pp": 24.26,
+    "mean_pp_per_week": 0.427,
+    "vol_pp": 1.313,
+    "sharpe": 0.325,
+    "mdd": -0.1145
+   },
+   "R_分位加权": {
+    "n": 170,
+    "excess_pp": 23.85,
+    "mean_pp_per_week": 0.423,
+    "vol_pp": 1.476,
+    "sharpe": 0.287,
+    "mdd": -0.1321
+   },
+   "turnover_mean": {
+    "E": 0.936,
+    "R": 1.002
+   },
+   "cost_pp_total": {
+    "E": 12.09,
+    "R": 12.95
+   }
+  }
+ },
+ "secs": 322.4,
+ "verdict": {
+  "gain_pp": 3.73,
+  "vol_ratio": 1.148,
+  "mdd_ok": false,
+  "paired_t_hac_reference": 2.05,
+  "passed": false,
+  "conclusion": "**未通过** ⇒ 结清'权重分布'这条线（写进 05 号证伪登记）"
+ }
+}

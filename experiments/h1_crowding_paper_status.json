@@ -1,0 +1,14 @@
+{
+ "as_of": "2026-10-14 20:50:25",
+ "first_run_date": "20261003",
+ "n_anchors": 1,
+ "n_anchors_in_window": 0,
+ "regime_now": "crowded",
+ "judge": {
+  "n_obs": 0,
+  "window_start": null,
+  "window_end": null,
+  "verdict_mechanical": "PENDING",
+  "verdict_human": "PENDING"
+ }
+}

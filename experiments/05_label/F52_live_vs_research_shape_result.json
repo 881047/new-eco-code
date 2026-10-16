@@ -1,0 +1,123 @@
+{
+ "script_sha": "f0ef235fda1c3b76",
+ "question": "生产构型(hold_bonus=0.0) 与 研究构型(hyst=0.2) 在 100 万档差多少？",
+ "tolerance": {
+  "excess_pp": 1.0,
+  "mdd_pp": 2.0
+ },
+ "arms": [
+  "A0_生产构型(hyst=0.0)",
+  "A1_研究构型(hyst=0.2)"
+ ],
+ "seeds": [
+  "seedA",
+  "seedB"
+ ],
+ "windows": {
+  "full": [
+   "2010-01-01",
+   "2030-12-31"
+  ],
+  "active": [
+   "2024-01-01",
+   "2026-08-31"
+  ]
+ },
+ "note": "单次校准, 不是搜索; ACTIVE 是 F28 已开封的留出集 ⇒ 只作方向",
+ "results": {
+  "seedA": {
+   "A0_生产构型(hyst=0.0)": {
+    "full": {
+     "n": 491,
+     "excess_pp": 17.78,
+     "mdd": -0.366,
+     "turnover": 0.137,
+     "invested": 0.8917,
+     "names": 99.8
+    },
+    "active": {
+     "n": 138,
+     "excess_pp": 9.21,
+     "mdd": -0.366,
+     "turnover": 0.103,
+     "invested": 0.9019,
+     "names": 99.9
+    }
+   },
+   "A1_研究构型(hyst=0.2)": {
+    "full": {
+     "n": 491,
+     "excess_pp": 18.0,
+     "mdd": -0.369,
+     "turnover": 0.118,
+     "invested": 0.8861,
+     "names": 99.8
+    },
+    "active": {
+     "n": 138,
+     "excess_pp": 10.38,
+     "mdd": -0.369,
+     "turnover": 0.092,
+     "invested": 0.8952,
+     "names": 99.9
+    }
+   }
+  },
+  "seedB": {
+   "A0_生产构型(hyst=0.0)": {
+    "full": {
+     "n": 491,
+     "excess_pp": 17.47,
+     "mdd": -0.366,
+     "turnover": 0.136,
+     "invested": 0.8908,
+     "names": 99.8
+    },
+    "active": {
+     "n": 138,
+     "excess_pp": 11.4,
+     "mdd": -0.366,
+     "turnover": 0.103,
+     "invested": 0.8985,
+     "names": 99.9
+    }
+   },
+   "A1_研究构型(hyst=0.2)": {
+    "full": {
+     "n": 491,
+     "excess_pp": 17.3,
+     "mdd": -0.3693,
+     "turnover": 0.116,
+     "invested": 0.8828,
+     "names": 99.8
+    },
+    "active": {
+     "n": 138,
+     "excess_pp": 11.8,
+     "mdd": -0.3693,
+     "turnover": 0.092,
+     "invested": 0.8904,
+     "names": 99.9
+    }
+   }
+  }
+ },
+ "verdict": {
+  "within_tolerance": true,
+  "conclusion": "两构型在容差内 ⇒ 研究读数可继续引用（02/05 需加注'含 hold_bonus=0.2'）",
+  "note": "A0 = 生产在跑的构型（hold_bonus=0.0）；A1 = F25/F41 那批研究用的构型（hyst=0.2）"
+ },
+ "secs": 327.7,
+ "deltas": {
+  "seedA": {
+   "delta_excess_pp": 0.22,
+   "delta_mdd_pp": 0.3,
+   "within_tolerance": true
+  },
+  "seedB": {
+   "delta_excess_pp": 0.17,
+   "delta_mdd_pp": 0.33,
+   "within_tolerance": true
+  }
+ }
+}

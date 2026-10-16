@@ -1,0 +1,153 @@
+{
+ "n_events": 162108,
+ "since": "20170101",
+ "clip": 100000.0,
+ "split": {
+  "一字板(买不到)": {
+   "frac": 0.1276,
+   "n": 20673,
+   "mean_pct": 7.381,
+   "median_pct": 9.834,
+   "std_pct": 4.05,
+   "win_frac": 0.935,
+   "p10_pct": 1.53
+  },
+  "开板(可成交)": {
+   "frac": 0.8724,
+   "n": 141375,
+   "mean_pct": 1.778,
+   "median_pct": 1.234,
+   "std_pct": 4.23,
+   "win_frac": 0.651,
+   "p10_pct": -2.46
+  }
+ },
+ "by_boards_open": {
+  "首板": {
+   "n": 112219,
+   "mean_pct": 1.682,
+   "median_pct": 1.103,
+   "std_pct": 4.02,
+   "win_frac": 0.649,
+   "p10_pct": -2.16
+  },
+  "二板": {
+   "n": 18002,
+   "mean_pct": 2.161,
+   "median_pct": 1.809,
+   "std_pct": 4.7,
+   "win_frac": 0.662,
+   "p10_pct": -3.33
+  },
+  "三板": {
+   "n": 5611,
+   "mean_pct": 2.286,
+   "median_pct": 2.371,
+   "std_pct": 5.1,
+   "win_frac": 0.665,
+   "p10_pct": -4.48
+  },
+  "四板+": {
+   "n": 5543,
+   "mean_pct": 1.963,
+   "median_pct": 2.449,
+   "std_pct": 5.47,
+   "win_frac": 0.644,
+   "p10_pct": -5.34
+  }
+ },
+ "by_year_open": {
+  "2017": {
+   "n": 4938,
+   "mean_pct": 1.82,
+   "median_pct": 1.187,
+   "std_pct": 4.1,
+   "win_frac": 0.681,
+   "p10_pct": -1.6
+  },
+  "2018": {
+   "n": 7719,
+   "mean_pct": 1.654,
+   "median_pct": 1.186,
+   "std_pct": 3.81,
+   "win_frac": 0.664,
+   "p10_pct": -2.13
+  },
+  "2019": {
+   "n": 10654,
+   "mean_pct": 1.794,
+   "median_pct": 1.303,
+   "std_pct": 3.8,
+   "win_frac": 0.669,
+   "p10_pct": -2.11
+  },
+  "2020": {
+   "n": 13391,
+   "mean_pct": 1.751,
+   "median_pct": 1.236,
+   "std_pct": 4.95,
+   "win_frac": 0.671,
+   "p10_pct": -2.13
+  },
+  "2021": {
+   "n": 14966,
+   "mean_pct": 1.523,
+   "median_pct": 1.092,
+   "std_pct": 3.26,
+   "win_frac": 0.668,
+   "p10_pct": -1.82
+  },
+  "2022": {
+   "n": 13177,
+   "mean_pct": 1.456,
+   "median_pct": 0.955,
+   "std_pct": 3.55,
+   "win_frac": 0.634,
+   "p10_pct": -2.34
+  },
+  "2023": {
+   "n": 7899,
+   "mean_pct": 1.497,
+   "median_pct": 0.879,
+   "std_pct": 3.93,
+   "win_frac": 0.621,
+   "p10_pct": -2.38
+  },
+  "2024": {
+   "n": 14898,
+   "mean_pct": 2.326,
+   "median_pct": 1.452,
+   "std_pct": 4.8,
+   "win_frac": 0.663,
+   "p10_pct": -2.42
+  },
+  "2025": {
+   "n": 13430,
+   "mean_pct": 1.626,
+   "median_pct": 0.925,
+   "std_pct": 3.74,
+   "win_frac": 0.625,
+   "p10_pct": -2.17
+  },
+  "2026": {
+   "n": 11147,
+   "mean_pct": 1.269,
+   "median_pct": 0.791,
+   "std_pct": 3.61,
+   "win_frac": 0.599,
+   "p10_pct": -2.27
+  }
+ },
+ "capacity": {
+  "median_amount": 252791.967215,
+  "p25_amount": 104571.07175
+ },
+ "verdict": {
+  "first_board_open_mean_net_pct": 1.682,
+  "weekly_full_fill_pct": 8.409,
+  "reaches_3pct": true,
+  "required_fill_prob": 0.357,
+  "yizi_frac": 0.1276
+ },
+ "secs": 350.7
+}

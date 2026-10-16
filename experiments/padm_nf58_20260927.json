@@ -1,0 +1,103 @@
+{
+  "ran_at": "2026-09-27T01:10:33",
+  "prereg": "plans/portfolio-admission-gate-prereg-20260927.md",
+  "tag": "nf58",
+  "eval_start": "20190722",
+  "tables": {
+    "ctrl_sa": "nfab_ctrl_sa",
+    "ctrl_sb": "nfab_ctrl_sb",
+    "cand_sa": "nfab_trt_sa",
+    "cand_sb": "nfab_trt_sb"
+  },
+  "runs": {
+    "ctrl_sa": {
+      "prod": {
+        "sys_ann_return": 0.1704,
+        "sys_max_drawdown": -0.2266,
+        "avg_turnover": 0.8946,
+        "periods": 85
+      },
+      "full": {
+        "sys_ann_return": 0.086,
+        "sys_max_drawdown": -0.4188,
+        "avg_turnover": 0.9009,
+        "periods": 115
+      }
+    },
+    "ctrl_sb": {
+      "prod": {
+        "sys_ann_return": 0.1355,
+        "sys_max_drawdown": -0.1846,
+        "avg_turnover": 0.9135,
+        "periods": 85
+      },
+      "full": {
+        "sys_ann_return": 0.0992,
+        "sys_max_drawdown": -0.2938,
+        "avg_turnover": 0.9156,
+        "periods": 115
+      }
+    },
+    "cand_sa": {
+      "prod": {
+        "sys_ann_return": 0.0026,
+        "sys_max_drawdown": -0.3724,
+        "avg_turnover": 0.9659,
+        "periods": 85
+      },
+      "full": {
+        "sys_ann_return": -0.0199,
+        "sys_max_drawdown": -0.4715,
+        "avg_turnover": 0.9636,
+        "periods": 115
+      }
+    },
+    "cand_sb": {
+      "prod": {
+        "sys_ann_return": 0.0379,
+        "sys_max_drawdown": -0.338,
+        "avg_turnover": 0.9474,
+        "periods": 85
+      },
+      "full": {
+        "sys_ann_return": -0.0038,
+        "sys_max_drawdown": -0.4992,
+        "avg_turnover": 0.9525,
+        "periods": 115
+      }
+    }
+  },
+  "deltas": [
+    {
+      "seed_set": "sa",
+      "sys_ann_prod": -0.1678,
+      "sys_ann_full": -0.1059,
+      "sys_mdd_prod": -0.1458,
+      "sys_mdd_full": -0.0527,
+      "turnover": 0.0713
+    },
+    {
+      "seed_set": "sb",
+      "sys_ann_prod": -0.0976,
+      "sys_ann_full": -0.103,
+      "sys_mdd_prod": -0.1534,
+      "sys_mdd_full": -0.2054,
+      "turnover": 0.0339
+    }
+  ],
+  "thresholds": {
+    "ann_bar_prod": 0.02,
+    "ann_bar_full": 0.01,
+    "mdd_bar_prod": -0.02,
+    "mdd_bar_full": -0.03,
+    "turnover_bar": 0.05
+  },
+  "verdict": {
+    "p1_ann": false,
+    "p2_mdd": false,
+    "p3_turnover": false,
+    "n_seed_sets": 2,
+    "PASS_portfolio": false,
+    "verdict": "REJECT"
+  }
+}

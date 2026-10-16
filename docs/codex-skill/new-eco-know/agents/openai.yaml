@@ -1,0 +1,4 @@
+interface:
+  display_name: "NEW ECO 知识库"
+  short_description: "NEW ECO 个人量化终端：口径/纪律/台账 + 量化高阶理论层"
+  default_prompt: "Use $new-eco-know 先查口径与台账，再动手或报数；设计新方案时读 20~29 理论层并走转换协议。"

@@ -1,0 +1,448 @@
+{
+ "protocol": {
+  "panel": "app.weekly.scores.build_panel(industry=snapshot) —— 生产 W5 die 同源",
+  "trainer": "app.weekly.scores.train(生产 PARAMS/4 种子/50 轮/36 月窗/禁运 3 锚点)",
+  "head_n": 100,
+  "head_frac": 0.1,
+  "min_names": 200,
+  "dead": [
+   "2020-09-01",
+   "2023-12-31"
+  ],
+  "active": [
+   "2024-01-01",
+   "2026-08-31"
+  ],
+  "polarity_rule": "死区头部超额符号(一次性、不搜索)",
+  "verdict_rule": "top100 集合重叠=100% 且 逐票最大绝对差<1e-6 ⇒ 模型层对极性不变",
+  "caveat": "极性表取自死区(样本内), 仅用于构造取负列集合; 本实验只解释不改模型"
+ },
+ "model": {
+  "lightgbm_params": {
+   "objective": "regression",
+   "metric": "rmse",
+   "learning_rate": 0.05,
+   "num_leaves": 31,
+   "min_data_in_leaf": 200,
+   "feature_fraction": 0.8,
+   "bagging_fraction": 0.8,
+   "bagging_freq": 1,
+   "lambda_l2": 1.0,
+   "n_jobs": 4,
+   "verbose": -1,
+   "seed": 42,
+   "deterministic": true
+  },
+  "kind": "回归树(无单调约束/无线性树)",
+  "why_no_op": "树只按特征序切分 ⇒ 取负只是镜像候选切分, 划分与增益逐一对应"
+ },
+ "polarity_table": {
+  "amount_log": {
+   "n": 170,
+   "head_pp": -0.4046,
+   "sign": -1,
+   "t_naive": -3.29
+  },
+  "beta_250": {
+   "n": 170,
+   "head_pp": -0.1755,
+   "sign": -1,
+   "t_naive": -1.64
+  },
+  "bias_20": {
+   "n": 170,
+   "head_pp": -0.8423,
+   "sign": -1,
+   "t_naive": -7.46
+  },
+  "bias_60": {
+   "n": 170,
+   "head_pp": -0.7872,
+   "sign": -1,
+   "t_naive": -5.55
+  },
+  "bp": {
+   "n": 170,
+   "head_pp": 0.2154,
+   "sign": 1,
+   "t_naive": 2.53
+  },
+  "debt_to_assets": {
+   "n": 170,
+   "head_pp": 0.0614,
+   "sign": 1,
+   "t_naive": 1.67
+  },
+  "dv_ttm": {
+   "n": 170,
+   "head_pp": 0.1473,
+   "sign": 1,
+   "t_naive": 1.98
+  },
+  "ep": {
+   "n": 170,
+   "head_pp": 0.037,
+   "sign": 1,
+   "t_naive": 0.4
+  },
+  "eps_yoy": {
+   "n": 170,
+   "head_pp": -0.0179,
+   "sign": -1,
+   "t_naive": -0.38
+  },
+  "grossprofit_margin": {
+   "n": 170,
+   "head_pp": -0.1258,
+   "sign": -1,
+   "t_naive": -2.55
+  },
+  "high_52w": {
+   "n": 170,
+   "head_pp": -0.2604,
+   "sign": -1,
+   "t_naive": -2.53
+  },
+  "illiq": {
+   "n": 170,
+   "head_pp": 0.3683,
+   "sign": 1,
+   "t_naive": 4.62
+  },
+  "lhb_cnt20": {
+   "n": 170,
+   "head_pp": -0.4669,
+   "sign": -1,
+   "t_naive": -5.17
+  },
+  "lhb_net20": {
+   "n": 170,
+   "head_pp": -0.0617,
+   "sign": -1,
+   "t_naive": -0.5
+  },
+  "lhb_org_net20": {
+   "n": 165,
+   "head_pp": 0.0054,
+   "sign": 1,
+   "t_naive": 0.04
+  },
+  "low_52w": {
+   "n": 170,
+   "head_pp": -0.5949,
+   "sign": -1,
+   "t_naive": -3.8
+  },
+  "mom_120": {
+   "n": 170,
+   "head_pp": -0.4287,
+   "sign": -1,
+   "t_naive": -3.04
+  },
+  "mom_20": {
+   "n": 170,
+   "head_pp": -0.4045,
+   "sign": -1,
+   "t_naive": -3.6
+  },
+  "mom_250": {
+   "n": 170,
+   "head_pp": -0.3786,
+   "sign": -1,
+   "t_naive": -2.57
+  },
+  "mom_60": {
+   "n": 170,
+   "head_pp": -0.4846,
+   "sign": -1,
+   "t_naive": -3.54
+  },
+  "netprofit_yoy": {
+   "n": 170,
+   "head_pp": -0.0346,
+   "sign": -1,
+   "t_naive": -0.68
+  },
+  "or_yoy": {
+   "n": 170,
+   "head_pp": -0.1381,
+   "sign": -1,
+   "t_naive": -2.45
+  },
+  "ret_max20": {
+   "n": 170,
+   "head_pp": -0.364,
+   "sign": -1,
+   "t_naive": -4.8
+  },
+  "rev_5": {
+   "n": 170,
+   "head_pp": 0.023,
+   "sign": 1,
+   "t_naive": 0.31
+  },
+  "roe": {
+   "n": 170,
+   "head_pp": -0.2617,
+   "sign": -1,
+   "t_naive": -3.52
+  },
+  "size": {
+   "n": 170,
+   "head_pp": -0.2947,
+   "sign": -1,
+   "t_naive": -2.14
+  },
+  "skew_20": {
+   "n": 170,
+   "head_pp": -0.1036,
+   "sign": -1,
+   "t_naive": -2.13
+  },
+  "turnover_20": {
+   "n": 170,
+   "head_pp": -0.5137,
+   "sign": -1,
+   "t_naive": -4.47
+  },
+  "turnover_chg": {
+   "n": 170,
+   "head_pp": -0.1512,
+   "sign": -1,
+   "t_naive": -1.62
+  },
+  "vol_20": {
+   "n": 170,
+   "head_pp": -0.4555,
+   "sign": -1,
+   "t_naive": -3.92
+  },
+  "vol_60": {
+   "n": 170,
+   "head_pp": -0.4183,
+   "sign": -1,
+   "t_naive": -3.89
+  }
+ },
+ "neg_cols": [
+  "amount_log",
+  "beta_250",
+  "bias_20",
+  "bias_60",
+  "eps_yoy",
+  "grossprofit_margin",
+  "high_52w",
+  "lhb_cnt20",
+  "lhb_net20",
+  "low_52w",
+  "mom_120",
+  "mom_20",
+  "mom_250",
+  "mom_60",
+  "netprofit_yoy",
+  "or_yoy",
+  "ret_max20",
+  "roe",
+  "size",
+  "skew_20",
+  "turnover_20",
+  "turnover_chg",
+  "vol_20",
+  "vol_60"
+ ],
+ "part1_archived_models": {
+  "asof": "20260911",
+  "n_models": 4,
+  "n_stocks": 5900,
+  "per_seed": {
+   "lgb_202608_s123": {
+    "n": 5900,
+    "max_abs_diff": 0.0981738979501485,
+    "frac_bitwise_equal": 0.0,
+    "spearman": -0.422567366,
+    "n_trees": 50,
+    "n_features": 31
+   },
+   "lgb_202608_s2024": {
+    "n": 5900,
+    "max_abs_diff": 0.1054532782764692,
+    "frac_bitwise_equal": 0.0,
+    "spearman": -0.3116992593,
+    "n_trees": 50,
+    "n_features": 31
+   },
+   "lgb_202608_s42": {
+    "n": 5900,
+    "max_abs_diff": 0.0923460024403227,
+    "frac_bitwise_equal": 0.0,
+    "spearman": -0.3866418934,
+    "n_trees": 50,
+    "n_features": 31
+   },
+   "lgb_202608_s7": {
+    "n": 5900,
+    "max_abs_diff": 0.09264376065243479,
+    "frac_bitwise_equal": 0.0,
+    "spearman": -0.2686476494,
+    "n_trees": 50,
+    "n_features": 31
+   }
+  }
+ },
+ "arms_ic": {
+  "A_BASE": {
+   "elapsed_s": 306.7,
+   "ic": {
+    "FULL": {
+     "n": 606,
+     "mean": 0.0854,
+     "t_naive": 16.99
+    },
+    "DEAD": {
+     "n": 170,
+     "mean": 0.08649,
+     "t_naive": 12.5
+    },
+    "ACTIVE": {
+     "n": 137,
+     "mean": 0.07253,
+     "t_naive": 5.23
+    }
+   }
+  },
+  "B_ALLNEG": {
+   "elapsed_s": 312.6,
+   "ic": {
+    "FULL": {
+     "n": 606,
+     "mean": 0.08559,
+     "t_naive": 16.98
+    },
+    "DEAD": {
+     "n": 170,
+     "mean": 0.08681,
+     "t_naive": 12.5
+    },
+    "ACTIVE": {
+     "n": 137,
+     "mean": 0.07277,
+     "t_naive": 5.21
+    }
+   }
+  },
+  "C_SIGN": {
+   "elapsed_s": 312.6,
+   "ic": {
+    "FULL": {
+     "n": 606,
+     "mean": 0.08552,
+     "t_naive": 16.96
+    },
+    "DEAD": {
+     "n": 170,
+     "mean": 0.08702,
+     "t_naive": 12.5
+    },
+    "ACTIVE": {
+     "n": 137,
+     "mean": 0.0727,
+     "t_naive": 5.22
+    }
+   }
+  }
+ },
+ "comparisons": {
+  "B_ALLNEG": {
+   "n_anchors": 608,
+   "max_abs_diff": 0.7444578409194946,
+   "p999_abs_diff": 0.36660075187683105,
+   "frac_bitwise_equal": 0.0010848083863206736,
+   "spearman_min": 0.709697181355719,
+   "spearman_mean": 0.9492404713475662,
+   "top_overlap_min": 0.75,
+   "top_overlap_mean": 0.8735526315789474,
+   "n_anchors_top_overlap_lt_1": 608,
+   "max_rank_shift_in_common_top": 84.0
+  },
+  "C_SIGN": {
+   "n_anchors": 608,
+   "max_abs_diff": 0.6805722713470459,
+   "p999_abs_diff": 0.34507644176483154,
+   "frac_bitwise_equal": 0.001076611553802878,
+   "spearman_min": 0.7004331406807885,
+   "spearman_mean": 0.9502195484873397,
+   "top_overlap_min": 0.75,
+   "top_overlap_mean": 0.8761842105263158,
+   "n_anchors_top_overlap_lt_1": 608,
+   "max_rank_shift_in_common_top": 88.0
+  }
+ },
+ "head_excess_stats": {
+  "A_BASE": {
+   "FULL": {
+    "n": 606,
+    "mean_pp": 0.59,
+    "delta_pp": 0.0,
+    "paired_t": null
+   },
+   "DEAD": {
+    "n": 170,
+    "mean_pp": 0.5083,
+    "delta_pp": 0.0,
+    "paired_t": null
+   },
+   "ACTIVE": {
+    "n": 137,
+    "mean_pp": 0.2505,
+    "delta_pp": 0.0,
+    "paired_t": null
+   }
+  },
+  "B_ALLNEG": {
+   "FULL": {
+    "n": 606,
+    "mean_pp": 0.6091,
+    "delta_pp": 0.0191,
+    "paired_t": 1.44
+   },
+   "DEAD": {
+    "n": 170,
+    "mean_pp": 0.5289,
+    "delta_pp": 0.0205,
+    "paired_t": 0.82
+   },
+   "ACTIVE": {
+    "n": 137,
+    "mean_pp": 0.2904,
+    "delta_pp": 0.0399,
+    "paired_t": 1.15
+   }
+  },
+  "C_SIGN": {
+   "FULL": {
+    "n": 606,
+    "mean_pp": 0.6052,
+    "delta_pp": 0.0152,
+    "paired_t": 1.15
+   },
+   "DEAD": {
+    "n": 170,
+    "mean_pp": 0.5402,
+    "delta_pp": 0.0319,
+    "paired_t": 1.16
+   },
+   "ACTIVE": {
+    "n": 137,
+    "mean_pp": 0.2977,
+    "delta_pp": 0.0472,
+    "paired_t": 1.51
+   }
+  }
+ },
+ "verdict": {
+  "model_layer_polarity_is_noop": false,
+  "reading": "机制判断被推翻: 符号确实改变了重训输出, 需按实测差异重估",
+  "fidelity_check_ic_full_should_be_about": 0.084,
+  "note": "A_BASE 的 FULL IC 若明显偏离 0.0840 ⇒ 本脚本没复刻生产路径, 读数不可用"
+ }
+}

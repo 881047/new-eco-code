@@ -1,0 +1,367 @@
+{
+  "prereg": "plans/b1-total-return-benchmark-ab-20260919.md",
+  "benchmark_code": "000906.SH",
+  "yield_source": "index_weight ∩ daily_basic.dv_ttm 市值加权（复用 B1 审计函数）",
+  "yield_months": 92,
+  "yield_mean_pct_per_year": 2.247,
+  "bench_construction": {
+    "monthly_yield_coverage_months": 92,
+    "covered_from": "201901",
+    "covered_to": "202608",
+    "monthly_yield_range_pct": [
+      1.588,
+      3.004
+    ],
+    "mean_pct_per_year": 2.247,
+    "panel_days_filled_by_mean": 1472,
+    "verdict_window_months_missing_weights": [],
+    "verdict_window": "201907~202608"
+  },
+  "arms": {
+    "A_prod": {
+      "start": "20190731",
+      "end": "20260831",
+      "periods": 85,
+      "top_n": 6,
+      "cost": 0.003,
+      "state_stocks": {
+        "attack": 6,
+        "neutral": 6,
+        "defense": 6
+      },
+      "stocks_target": {
+        "attack": 6,
+        "neutral": 6,
+        "defense": 6
+      },
+      "avg_stocks": 4.94,
+      "avg_cash_idle": 0.2871,
+      "eff_cap_by_state": {
+        "attack": 0.3333,
+        "neutral": 0.3333,
+        "defense": 0.3333
+      },
+      "candidate_top": 0,
+      "stop_loss": null,
+      "hysteresis": 0,
+      "cfg_fingerprint": {
+        "industry_floor_stocks": 2.0,
+        "state_stocks": {
+          "attack": 6,
+          "neutral": 6,
+          "defense": 6
+        },
+        "candidate_top": 0,
+        "cost": 0.003,
+        "slip": 0.001,
+        "ind_cap": 0.25,
+        "size_pctl": 0,
+        "min_amt20": 0,
+        "hysteresis": 0,
+        "st_filter": true
+      },
+      "capital": 20000.0,
+      "lot_modeled": true,
+      "ann_return": 0.2262,
+      "bench_ann": 0.038,
+      "excess_ann": 0.1882,
+      "max_drawdown": -0.241,
+      "vol_ann": 0.2418,
+      "sharpe": 0.853,
+      "win_rate": 0.6706,
+      "avg_turnover": 0.9018,
+      "ic_mean": 0.0959,
+      "ic_std": 0.1116,
+      "icir": 0.86,
+      "sys_ann_return": 0.194,
+      "sys_max_drawdown": -0.1966,
+      "mdd_daily": -0.3812,
+      "sys_mdd_daily": -0.3172
+    },
+    "B_prod": {
+      "start": "20190731",
+      "end": "20260831",
+      "periods": 85,
+      "top_n": 6,
+      "cost": 0.003,
+      "state_stocks": {
+        "attack": 6,
+        "neutral": 6,
+        "defense": 6
+      },
+      "stocks_target": {
+        "attack": 6,
+        "neutral": 6,
+        "defense": 6
+      },
+      "avg_stocks": 4.94,
+      "avg_cash_idle": 0.2871,
+      "eff_cap_by_state": {
+        "attack": 0.3333,
+        "neutral": 0.3333,
+        "defense": 0.3333
+      },
+      "candidate_top": 0,
+      "stop_loss": null,
+      "hysteresis": 0,
+      "cfg_fingerprint": {
+        "industry_floor_stocks": 2.0,
+        "state_stocks": {
+          "attack": 6,
+          "neutral": 6,
+          "defense": 6
+        },
+        "candidate_top": 0,
+        "cost": 0.003,
+        "slip": 0.001,
+        "ind_cap": 0.25,
+        "size_pctl": 0,
+        "min_amt20": 0,
+        "hysteresis": 0,
+        "st_filter": true
+      },
+      "capital": 20000.0,
+      "lot_modeled": true,
+      "ann_return": 0.2262,
+      "bench_ann": 0.0616,
+      "excess_ann": 0.1645,
+      "max_drawdown": -0.241,
+      "vol_ann": 0.2418,
+      "sharpe": 0.853,
+      "win_rate": 0.6353,
+      "avg_turnover": 0.9018,
+      "ic_mean": 0.0959,
+      "ic_std": 0.1116,
+      "icir": 0.86,
+      "sys_ann_return": 0.194,
+      "sys_max_drawdown": -0.1966,
+      "mdd_daily": -0.3812,
+      "sys_mdd_daily": -0.3172
+    },
+    "A_full": {
+      "start": "20170126",
+      "end": "20260831",
+      "periods": 115,
+      "top_n": 6,
+      "cost": 0.003,
+      "state_stocks": {
+        "attack": 6,
+        "neutral": 6,
+        "defense": 6
+      },
+      "stocks_target": {
+        "attack": 6,
+        "neutral": 6,
+        "defense": 6
+      },
+      "avg_stocks": 4.74,
+      "avg_cash_idle": 0.324,
+      "eff_cap_by_state": {
+        "attack": 0.3333,
+        "neutral": 0.3333,
+        "defense": 0.3333
+      },
+      "candidate_top": 0,
+      "stop_loss": null,
+      "hysteresis": 0,
+      "cfg_fingerprint": {
+        "industry_floor_stocks": 2.0,
+        "state_stocks": {
+          "attack": 6,
+          "neutral": 6,
+          "defense": 6
+        },
+        "candidate_top": 0,
+        "cost": 0.003,
+        "slip": 0.001,
+        "ind_cap": 0.25,
+        "size_pctl": 0,
+        "min_amt20": 0,
+        "hysteresis": 0,
+        "st_filter": true
+      },
+      "capital": 20000.0,
+      "lot_modeled": true,
+      "ann_return": 0.1159,
+      "bench_ann": 0.0309,
+      "excess_ann": 0.085,
+      "max_drawdown": -0.5126,
+      "vol_ann": 0.2405,
+      "sharpe": 0.399,
+      "win_rate": 0.5739,
+      "avg_turnover": 0.9061,
+      "ic_mean": 0.0859,
+      "ic_std": 0.1168,
+      "icir": 0.735,
+      "sys_ann_return": 0.1016,
+      "sys_max_drawdown": -0.421,
+      "mdd_daily": -0.5186,
+      "sys_mdd_daily": -0.4264
+    },
+    "B_full": {
+      "start": "20170126",
+      "end": "20260831",
+      "periods": 115,
+      "top_n": 6,
+      "cost": 0.003,
+      "state_stocks": {
+        "attack": 6,
+        "neutral": 6,
+        "defense": 6
+      },
+      "stocks_target": {
+        "attack": 6,
+        "neutral": 6,
+        "defense": 6
+      },
+      "avg_stocks": 4.74,
+      "avg_cash_idle": 0.324,
+      "eff_cap_by_state": {
+        "attack": 0.3333,
+        "neutral": 0.3333,
+        "defense": 0.3333
+      },
+      "candidate_top": 0,
+      "stop_loss": null,
+      "hysteresis": 0,
+      "cfg_fingerprint": {
+        "industry_floor_stocks": 2.0,
+        "state_stocks": {
+          "attack": 6,
+          "neutral": 6,
+          "defense": 6
+        },
+        "candidate_top": 0,
+        "cost": 0.003,
+        "slip": 0.001,
+        "ind_cap": 0.25,
+        "size_pctl": 0,
+        "min_amt20": 0,
+        "hysteresis": 0,
+        "st_filter": true
+      },
+      "capital": 20000.0,
+      "lot_modeled": true,
+      "ann_return": 0.1159,
+      "bench_ann": 0.0543,
+      "excess_ann": 0.0616,
+      "max_drawdown": -0.5126,
+      "vol_ann": 0.2405,
+      "sharpe": 0.399,
+      "win_rate": 0.5478,
+      "avg_turnover": 0.9061,
+      "ic_mean": 0.0859,
+      "ic_std": 0.1168,
+      "icir": 0.735,
+      "sys_ann_return": 0.1016,
+      "sys_max_drawdown": -0.421,
+      "mdd_daily": -0.5186,
+      "sys_mdd_daily": -0.4264
+    }
+  },
+  "diff_prod": {
+    "expected_to_change": {
+      "bench_ann": {
+        "a": 0.038,
+        "b": 0.0616,
+        "delta": -0.0236
+      },
+      "excess_ann": {
+        "a": 0.1882,
+        "b": 0.1645,
+        "delta": 0.0237
+      },
+      "win_rate": {
+        "a": 0.6706,
+        "b": 0.6353,
+        "delta": 0.0353
+      }
+    },
+    "invariance_violations": []
+  },
+  "diff_full": {
+    "expected_to_change": {
+      "bench_ann": {
+        "a": 0.0309,
+        "b": 0.0543,
+        "delta": -0.0234
+      },
+      "excess_ann": {
+        "a": 0.085,
+        "b": 0.0616,
+        "delta": 0.0234
+      },
+      "win_rate": {
+        "a": 0.5739,
+        "b": 0.5478,
+        "delta": 0.0261
+      }
+    },
+    "invariance_violations": []
+  },
+  "gates": {
+    "A0_reproduction": {
+      "pass": true,
+      "values": {
+        "ann_return": {
+          "pin_20260912": 0.2262,
+          "arm_A_prod": 0.2262
+        },
+        "bench_ann": {
+          "pin_20260912": 0.038,
+          "arm_A_prod": 0.038
+        },
+        "excess_ann": {
+          "pin_20260912": 0.1882,
+          "arm_A_prod": 0.1882
+        },
+        "max_drawdown": {
+          "pin_20260912": -0.241,
+          "arm_A_prod": -0.241
+        },
+        "win_rate": {
+          "pin_20260912": 0.6706,
+          "arm_A_prod": 0.6706
+        },
+        "avg_turnover": {
+          "pin_20260912": 0.8912,
+          "arm_A_prod": 0.9018
+        },
+        "ic_mean": {
+          "pin_20260912": 0.0959,
+          "arm_A_prod": 0.0959
+        }
+      },
+      "turnover_note": "唯一容许差 = avg_turnover 的分母口径(05 号 P2-1, 09-14 改『真正计入的期数』、goldens 当时故意重钉且只动这一字段)：pin 0.8912 × n/(n−1)=0.9018 vs 本臂 0.9018",
+      "meaning": "A 臂必须复现现行 pin 行(除那一个已知字段) —— 复现不上说明 harness 不是生产 harness"
+    },
+    "A1_invariance": {
+      "pass": true,
+      "violations": [],
+      "meaning": "除 bench_ann/excess_ann/win_rate 外两臂必须逐位相等（不等 = bench 进了决策 = 前提证伪）"
+    },
+    "A2_magnitude": {
+      "pass": true,
+      "delta_excess_ann_pp_per_year": 2.37,
+      "frozen_band_pp": [
+        1.5,
+        3.0
+      ],
+      "full_window_delta_pp": 2.34
+    },
+    "A3_window_fully_covered": {
+      "pass": true,
+      "missing_months": [],
+      "meaning": "判决窗内一个月都不许靠均值填（预注册 §4 的承诺）"
+    },
+    "A4_monthly_yield_actually_used": {
+      "pass": true,
+      "monthly_range_pct": [
+        1.588,
+        3.004
+      ],
+      "meaning": "B 臂必须用上逐月 y_m；第一版因月键形态错配静默退化成常数，而 Δ 仍落在 A2 带内 ⇒ 数值门抓不到（预注册 §7）"
+    }
+  },
+  "not_a_pin_change": "本脚本不改任何生产代码/口径/pin；结论交用户拍板"
+}

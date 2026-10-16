@@ -1,0 +1,446 @@
+{
+ "script_sha": "97d07cbea619f0ac",
+ "prereg": "plans/sleeve-downsize-ab-prereg-20260928.md",
+ "question": "2 万档缩容（top6-20 + greedy/fill_through）后袖套净超额是否存续？",
+ "band": 8.0,
+ "hyst": 0.0,
+ "windows": {
+  "full": [
+   "2010-01-01",
+   "2030-12-31"
+  ],
+  "active": [
+   "2024-01-01",
+   "2026-08-31"
+  ]
+ },
+ "arms": {
+  "A0_anchor_1m_top100": {
+   "capital": 1000000.0,
+   "top_n": 100,
+   "greedy": false,
+   "fill": false
+  },
+  "B1_2w_top100": {
+   "capital": 20000.0,
+   "top_n": 100,
+   "greedy": true,
+   "fill": true
+  },
+  "B2_2w_top20": {
+   "capital": 20000.0,
+   "top_n": 20,
+   "greedy": true,
+   "fill": true
+  },
+  "B3_2w_top15": {
+   "capital": 20000.0,
+   "top_n": 15,
+   "greedy": true,
+   "fill": true
+  },
+  "B4_2w_top10": {
+   "capital": 20000.0,
+   "top_n": 10,
+   "greedy": true,
+   "fill": true
+  },
+  "B5_2w_top6": {
+   "capital": 20000.0,
+   "top_n": 6,
+   "greedy": true,
+   "fill": true
+  }
+ },
+ "results": {
+  "seedA": {
+   "A0_anchor_1m_top100": {
+    "full": {
+     "n": 492,
+     "excess_pp": 17.78,
+     "ret_ann": 22.92,
+     "bench_ann": 5.14,
+     "mdd": -0.366,
+     "turnover": 0.137,
+     "invested": 0.8918,
+     "names": 99.8,
+     "sharpe": 0.928
+    },
+    "active": {
+     "n": 138,
+     "excess_pp": 9.21,
+     "ret_ann": 24.47,
+     "bench_ann": 15.26,
+     "mdd": -0.366,
+     "turnover": 0.103,
+     "invested": 0.9019,
+     "names": 99.9,
+     "sharpe": 0.801
+    }
+   },
+   "B1_2w_top100": {
+    "full": {
+     "n": 492,
+     "excess_pp": 0.2,
+     "ret_ann": 5.34,
+     "bench_ann": 5.14,
+     "mdd": -0.2654,
+     "turnover": 0.489,
+     "invested": 0.2813,
+     "names": 18.3,
+     "sharpe": 0.395
+    },
+    "active": {
+     "n": 138,
+     "excess_pp": 8.64,
+     "ret_ann": 23.9,
+     "bench_ann": 15.26,
+     "mdd": -0.2654,
+     "turnover": 0.13,
+     "invested": 0.9316,
+     "names": 58.5,
+     "sharpe": 0.842
+    }
+   },
+   "B2_2w_top20": {
+    "full": {
+     "n": 492,
+     "excess_pp": 8.9,
+     "ret_ann": 14.04,
+     "bench_ann": 5.14,
+     "mdd": -0.511,
+     "turnover": 0.233,
+     "invested": 0.9765,
+     "names": 13.6,
+     "sharpe": 0.568
+    },
+    "active": {
+     "n": 138,
+     "excess_pp": 21.65,
+     "ret_ann": 36.91,
+     "bench_ann": 15.26,
+     "mdd": -0.4267,
+     "turnover": 0.206,
+     "invested": 0.9772,
+     "names": 13.2,
+     "sharpe": 0.953
+    }
+   },
+   "B3_2w_top15": {
+    "full": {
+     "n": 492,
+     "excess_pp": 9.65,
+     "ret_ann": 14.79,
+     "bench_ann": 5.14,
+     "mdd": -0.452,
+     "turnover": 0.249,
+     "invested": 0.9696,
+     "names": 10.2,
+     "sharpe": 0.586
+    },
+    "active": {
+     "n": 138,
+     "excess_pp": 16.88,
+     "ret_ann": 32.14,
+     "bench_ann": 15.26,
+     "mdd": -0.4157,
+     "turnover": 0.223,
+     "invested": 0.9683,
+     "names": 9.9,
+     "sharpe": 0.875
+    }
+   },
+   "B4_2w_top10": {
+    "full": {
+     "n": 492,
+     "excess_pp": 13.59,
+     "ret_ann": 18.73,
+     "bench_ann": 5.14,
+     "mdd": -0.4039,
+     "turnover": 0.269,
+     "invested": 0.9439,
+     "names": 6.8,
+     "sharpe": 0.673
+    },
+    "active": {
+     "n": 138,
+     "excess_pp": 15.91,
+     "ret_ann": 31.17,
+     "bench_ann": 15.26,
+     "mdd": -0.3982,
+     "turnover": 0.262,
+     "invested": 0.9303,
+     "names": 6.5,
+     "sharpe": 0.863
+    }
+   },
+   "B5_2w_top6": {
+    "full": {
+     "n": 492,
+     "excess_pp": 14.94,
+     "ret_ann": 20.08,
+     "bench_ann": 5.14,
+     "mdd": -0.4125,
+     "turnover": 0.294,
+     "invested": 0.8889,
+     "names": 4.2,
+     "sharpe": 0.69
+    },
+    "active": {
+     "n": 138,
+     "excess_pp": -3.22,
+     "ret_ann": 12.05,
+     "bench_ann": 15.26,
+     "mdd": -0.4125,
+     "turnover": 0.278,
+     "invested": 0.8951,
+     "names": 4.1,
+     "sharpe": 0.476
+    }
+   }
+  },
+  "seedB": {
+   "A0_anchor_1m_top100": {
+    "full": {
+     "n": 492,
+     "excess_pp": 17.46,
+     "ret_ann": 22.6,
+     "bench_ann": 5.14,
+     "mdd": -0.366,
+     "turnover": 0.136,
+     "invested": 0.8908,
+     "names": 99.8,
+     "sharpe": 0.922
+    },
+    "active": {
+     "n": 138,
+     "excess_pp": 11.4,
+     "ret_ann": 26.66,
+     "bench_ann": 15.26,
+     "mdd": -0.366,
+     "turnover": 0.103,
+     "invested": 0.8985,
+     "names": 99.9,
+     "sharpe": 0.853
+    }
+   },
+   "B1_2w_top100": {
+    "full": {
+     "n": 492,
+     "excess_pp": 1.2,
+     "ret_ann": 6.34,
+     "bench_ann": 5.14,
+     "mdd": -0.275,
+     "turnover": 0.484,
+     "invested": 0.2874,
+     "names": 18.6,
+     "sharpe": 0.445
+    },
+    "active": {
+     "n": 138,
+     "excess_pp": 11.26,
+     "ret_ann": 26.52,
+     "bench_ann": 15.26,
+     "mdd": -0.275,
+     "turnover": 0.121,
+     "invested": 0.9485,
+     "names": 59.1,
+     "sharpe": 0.895
+    }
+   },
+   "B2_2w_top20": {
+    "full": {
+     "n": 492,
+     "excess_pp": 8.91,
+     "ret_ann": 14.05,
+     "bench_ann": 5.14,
+     "mdd": -0.4988,
+     "turnover": 0.228,
+     "invested": 0.9774,
+     "names": 13.6,
+     "sharpe": 0.577
+    },
+    "active": {
+     "n": 138,
+     "excess_pp": 16.31,
+     "ret_ann": 31.57,
+     "bench_ann": 15.26,
+     "mdd": -0.3958,
+     "turnover": 0.214,
+     "invested": 0.9774,
+     "names": 13.1,
+     "sharpe": 0.883
+    }
+   },
+   "B3_2w_top15": {
+    "full": {
+     "n": 492,
+     "excess_pp": 9.7,
+     "ret_ann": 14.84,
+     "bench_ann": 5.14,
+     "mdd": -0.5414,
+     "turnover": 0.25,
+     "invested": 0.9695,
+     "names": 10.2,
+     "sharpe": 0.582
+    },
+    "active": {
+     "n": 138,
+     "excess_pp": 12.08,
+     "ret_ann": 27.34,
+     "bench_ann": 15.26,
+     "mdd": -0.4326,
+     "turnover": 0.238,
+     "invested": 0.9695,
+     "names": 9.8,
+     "sharpe": 0.775
+    }
+   },
+   "B4_2w_top10": {
+    "full": {
+     "n": 492,
+     "excess_pp": 11.55,
+     "ret_ann": 16.69,
+     "bench_ann": 5.14,
+     "mdd": -0.4642,
+     "turnover": 0.277,
+     "invested": 0.9417,
+     "names": 6.9,
+     "sharpe": 0.624
+    },
+    "active": {
+     "n": 138,
+     "excess_pp": 15.26,
+     "ret_ann": 30.52,
+     "bench_ann": 15.26,
+     "mdd": -0.403,
+     "turnover": 0.264,
+     "invested": 0.9285,
+     "names": 6.5,
+     "sharpe": 0.844
+    }
+   },
+   "B5_2w_top6": {
+    "full": {
+     "n": 492,
+     "excess_pp": 19.58,
+     "ret_ann": 24.72,
+     "bench_ann": 5.14,
+     "mdd": -0.368,
+     "turnover": 0.307,
+     "invested": 0.8972,
+     "names": 4.1,
+     "sharpe": 0.793
+    },
+    "active": {
+     "n": 138,
+     "excess_pp": -3.4,
+     "ret_ann": 11.86,
+     "bench_ann": 15.26,
+     "mdd": -0.368,
+     "turnover": 0.299,
+     "invested": 0.8959,
+     "names": 3.9,
+     "sharpe": 0.474
+    }
+   }
+  }
+ },
+ "g0": {
+  "seedA": {
+   "ok": true,
+   "delta_excess_pp": 0.0,
+   "delta_mdd": 0.0,
+   "ref": [
+    17.78,
+    -0.366
+   ],
+   "mine": [
+    17.78,
+    -0.366
+   ]
+  },
+  "seedB": {
+   "ok": true,
+   "delta_excess_pp": 0.01,
+   "delta_mdd": 0.0,
+   "ref": [
+    17.47,
+    -0.366
+   ],
+   "mine": [
+    17.46,
+    -0.366
+   ]
+  },
+  "ok": true
+ },
+ "verdict": {
+  "g0_ok": true,
+  "B2_2w_top20": {
+   "seedA": {
+    "excess_pp": 8.9,
+    "need_ge": 10.67,
+    "p1_excess": false,
+    "p1_mdd": false,
+    "p2_turnover": false
+   },
+   "seedB": {
+    "excess_pp": 8.91,
+    "need_ge": 10.48,
+    "p1_excess": false,
+    "p1_mdd": false,
+    "p2_turnover": false
+   }
+  },
+  "p1_arms_pass": [
+   {
+    "B2_2w_top20": false
+   },
+   {
+    "B3_2w_top15": false
+   },
+   {
+    "B4_2w_top10": false
+   }
+  ],
+  "B3_2w_top15": {
+   "seedA": {
+    "excess_pp": 9.65,
+    "need_ge": 10.67,
+    "p1_excess": false,
+    "p1_mdd": false,
+    "p2_turnover": false
+   },
+   "seedB": {
+    "excess_pp": 9.7,
+    "need_ge": 10.48,
+    "p1_excess": false,
+    "p1_mdd": false,
+    "p2_turnover": false
+   }
+  },
+  "B4_2w_top10": {
+   "seedA": {
+    "excess_pp": 13.59,
+    "need_ge": 10.67,
+    "p1_excess": true,
+    "p1_mdd": true,
+    "p2_turnover": false
+   },
+   "seedB": {
+    "excess_pp": 11.55,
+    "need_ge": 10.48,
+    "p1_excess": true,
+    "p1_mdd": false,
+    "p2_turnover": false
+   }
+  },
+  "P1_pass_arms": [
+   "B4_2w_top10"
+  ],
+  "P2_pass_arms": [],
+  "conclusion": "P1/P2 不过 ⇒ 缩容线结清：分散度损失主导，2 万档袖套不可跑"
+ },
+ "secs": 267.5
+}

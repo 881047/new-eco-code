@@ -1,0 +1,144 @@
+{
+ "ran_at": "2026-10-03 13:05:12",
+ "prereg": "plans/gp-ortho-mining-prereg-20261003.md",
+ "smoke": true,
+ "register": false,
+ "budget": {
+  "population": 8,
+  "generations": 3,
+  "seed": 20260911,
+  "max_depth": 3,
+  "fitness_mode": "ortho"
+ },
+ "controls": {
+  "model_score": {
+   "stamps": 117,
+   "range": [
+    "2017-01-26",
+    "2026-09-30"
+   ],
+   "n_stocks": 4818,
+   "n_dropped_out_of_window": 1,
+   "n_clamped_to_window_start": 10,
+   "pit_rule": "month M score effective from 2nd trading day of M+1, ffill; pre-window stamps clamped to window start (latest stamp kept)"
+  },
+  "pooled_members": {
+   "used": [
+    {
+     "alpha_id": "gp_000",
+     "expr": "Med(Div(Abs(Div($low, $total_mv)), $vwap), 5)"
+    }
+   ],
+   "skipped": [],
+   "as_of": "2026-10-03 12:54:55"
+  }
+ },
+ "denominator": 24,
+ "n_prior": 247,
+ "n_used": 271,
+ "n_front": 3,
+ "n_pass_ortho": 0,
+ "n_skip": 0,
+ "n_dup_residual": 0,
+ "duplicates_residual": [],
+ "elapsed_search_sec": 455.7,
+ "members": [
+  {
+   "alpha_id": "gpo1_000",
+   "expr": "Corr($circ_mv, Mul(Cov(Quantile($high, 5, 0.1), $close, 30), Quantile($high, 5, 0.1)), 30)",
+   "ortho": {
+    "DEAD_head": 0.002499061479466036,
+    "DEAD_head_t": 1.1146539802554785,
+    "DEAD_top6": 0.01600029763067141,
+    "ACTIVE_head": 0.001634768195799552,
+    "p_adj": 1.0,
+    "head_bar": 0.006503478260869566,
+    "cost_per_month": 0.001503478260869565,
+    "PASS": false,
+    "c_same_sign": true,
+    "c_head_size": false,
+    "c_t": false,
+    "c_p_adj": false,
+    "c_top6": true,
+    "c_cost": true,
+    "n_tests": 271,
+    "n_tests_family": 24,
+    "n_tests_prior": 247
+   },
+   "head": {
+    "DEAD_head": 7.037186296656727e-05,
+    "DEAD_head_t": 0.02630132732172181,
+    "DEAD_top6": -0.002878462988883257,
+    "ACTIVE_head": 0.0016614858905086294,
+    "p_adj": 1.0,
+    "PASS": false
+   },
+   "registered": false
+  },
+  {
+   "alpha_id": "gpo1_001",
+   "expr": "Corr($circ_mv, Mul(Cov($pb, $open, 30), Quantile($high, 5, 0.1)), 30)",
+   "ortho": {
+    "DEAD_head": 0.0017101387085858733,
+    "DEAD_head_t": 0.7411768904321078,
+    "DEAD_top6": 0.018120369769167154,
+    "ACTIVE_head": -0.00017661784659139812,
+    "p_adj": 1.0,
+    "head_bar": 0.006492463768115942,
+    "cost_per_month": 0.001492463768115942,
+    "PASS": false,
+    "c_same_sign": false,
+    "c_head_size": false,
+    "c_t": false,
+    "c_p_adj": false,
+    "c_top6": true,
+    "c_cost": true,
+    "n_tests": 271,
+    "n_tests_family": 24,
+    "n_tests_prior": 247
+   },
+   "head": {
+    "DEAD_head": -0.0006716524949297309,
+    "DEAD_head_t": -0.22478244205506206,
+    "DEAD_top6": 0.002558276453055441,
+    "ACTIVE_head": -0.00012755538045894355,
+    "p_adj": 1.0,
+    "PASS": false
+   },
+   "registered": false
+  },
+  {
+   "alpha_id": "gpo1_002",
+   "expr": "Rsquare(Exp(Sqrt($pb)), 5)",
+   "ortho": {
+    "DEAD_head": -0.000833045644685626,
+    "DEAD_head_t": -0.413160372609095,
+    "DEAD_top6": 0.008976158272707835,
+    "ACTIVE_head": -0.002958119352115318,
+    "p_adj": 1.0,
+    "head_bar": 0.006517246376811595,
+    "cost_per_month": 0.0015172463768115944,
+    "PASS": false,
+    "c_same_sign": true,
+    "c_head_size": false,
+    "c_t": false,
+    "c_p_adj": false,
+    "c_top6": true,
+    "c_cost": true,
+    "n_tests": 271,
+    "n_tests_family": 24,
+    "n_tests_prior": 247
+   },
+   "head": {
+    "DEAD_head": -0.0020833548391237856,
+    "DEAD_head_t": -1.0462520956122443,
+    "DEAD_top6": 0.0002936339471489191,
+    "ACTIVE_head": -0.0043333531939424574,
+    "p_adj": 1.0,
+    "PASS": false
+   },
+   "registered": false
+  }
+ ],
+ "exit_note": "PASS=残差面板六判据全过=POOLED=有资格进组合层回测, 不等于可用; 0 PASS 的结论 = GP 在本仓死区×900 预算下, 对 model_score+POOLED 池的正交增量无可检出增量(预注册 §四.2)"
+}

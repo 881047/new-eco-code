@@ -1,0 +1,262 @@
+{
+  "ran_at": "2026-09-28T18:16:40",
+  "prereg": "plans/oi-excluder-prereg-20260928.md",
+  "ctl": {
+    "prod": {
+      "label": "控制臂",
+      "run_date": "20260928_model_score_oiex_ctl_prod",
+      "sys_ann": 0.2913,
+      "sys_mdd": -0.1817,
+      "ann": 0.3168,
+      "mdd": -0.2363,
+      "turnover": 0.8865,
+      "periods": 85
+    },
+    "full": {
+      "label": "控制臂",
+      "run_date": "20260928_model_score_oiex_ctl_full",
+      "sys_ann": 0.1877,
+      "sys_mdd": -0.3214,
+      "ann": 0.1865,
+      "mdd": -0.3819,
+      "turnover": 0.8778,
+      "periods": 115
+    }
+  },
+  "arms": {
+    "ctl": {
+      "prod": {
+        "label": "控制臂",
+        "run_date": "20260928_model_score_oiex_ctl_prod",
+        "sys_ann": 0.2913,
+        "sys_mdd": -0.1817,
+        "ann": 0.3168,
+        "mdd": -0.2363,
+        "turnover": 0.8865,
+        "periods": 85
+      },
+      "full": {
+        "label": "控制臂",
+        "run_date": "20260928_model_score_oiex_ctl_full",
+        "sys_ann": 0.1877,
+        "sys_mdd": -0.3214,
+        "ann": 0.1865,
+        "mdd": -0.3819,
+        "turnover": 0.8778,
+        "periods": 115
+      }
+    },
+    "w20_t1.5": {
+      "prod": {
+        "label": "剔除 W=20 θ=1.5",
+        "run_date": "20260928_model_score_oiex_w20_t15_prod",
+        "sys_ann": 0.2814,
+        "sys_mdd": -0.2411,
+        "ann": 0.3052,
+        "mdd": -0.3011,
+        "turnover": 0.896,
+        "periods": 85
+      },
+      "full": {
+        "label": "剔除 W=20 θ=1.5",
+        "run_date": "20260928_model_score_oiex_w20_t15_full",
+        "sys_ann": 0.1885,
+        "sys_mdd": -0.2893,
+        "ann": 0.1925,
+        "mdd": -0.3542,
+        "turnover": 0.8854,
+        "periods": 115
+      }
+    },
+    "w20_t2.0": {
+      "prod": {
+        "label": "剔除 W=20 θ=2.0",
+        "run_date": "20260928_model_score_oiex_w20_t20_prod",
+        "sys_ann": 0.2778,
+        "sys_mdd": -0.2571,
+        "ann": 0.3003,
+        "mdd": -0.3202,
+        "turnover": 0.8905,
+        "periods": 85
+      },
+      "full": {
+        "label": "剔除 W=20 θ=2.0",
+        "run_date": "20260928_model_score_oiex_w20_t20_full",
+        "sys_ann": 0.1842,
+        "sys_mdd": -0.2965,
+        "ann": 0.1851,
+        "mdd": -0.3597,
+        "turnover": 0.8795,
+        "periods": 115
+      }
+    },
+    "w20_t2.5": {
+      "prod": {
+        "label": "剔除 W=20 θ=2.5",
+        "run_date": "20260928_model_score_oiex_w20_t25_prod",
+        "sys_ann": 0.3029,
+        "sys_mdd": -0.1861,
+        "ann": 0.3221,
+        "mdd": -0.2442,
+        "turnover": 0.8835,
+        "periods": 85
+      },
+      "full": {
+        "label": "剔除 W=20 θ=2.5",
+        "run_date": "20260928_model_score_oiex_w20_t25_full",
+        "sys_ann": 0.1976,
+        "sys_mdd": -0.2974,
+        "ann": 0.1955,
+        "mdd": -0.3632,
+        "turnover": 0.8756,
+        "periods": 115
+      }
+    },
+    "w60_t1.5": {
+      "prod": {
+        "label": "剔除 W=60 θ=1.5",
+        "run_date": "20260928_model_score_oiex_w60_t15_prod",
+        "sys_ann": 0.2838,
+        "sys_mdd": -0.1719,
+        "ann": 0.3065,
+        "mdd": -0.2286,
+        "turnover": 0.8897,
+        "periods": 85
+      },
+      "full": {
+        "label": "剔除 W=60 θ=1.5",
+        "run_date": "20260928_model_score_oiex_w60_t15_full",
+        "sys_ann": 0.1839,
+        "sys_mdd": -0.2898,
+        "ann": 0.1881,
+        "mdd": -0.3483,
+        "turnover": 0.8789,
+        "periods": 115
+      }
+    },
+    "w60_t2.0": {
+      "prod": {
+        "label": "剔除 W=60 θ=2.0",
+        "run_date": "20260928_model_score_oiex_w60_t20_prod",
+        "sys_ann": 0.285,
+        "sys_mdd": -0.1861,
+        "ann": 0.3032,
+        "mdd": -0.2442,
+        "turnover": 0.8895,
+        "periods": 85
+      },
+      "full": {
+        "label": "剔除 W=60 θ=2.0",
+        "run_date": "20260928_model_score_oiex_w60_t20_full",
+        "sys_ann": 0.1831,
+        "sys_mdd": -0.2977,
+        "ann": 0.1836,
+        "mdd": -0.3568,
+        "turnover": 0.8788,
+        "periods": 115
+      }
+    },
+    "w60_t2.5": {
+      "prod": {
+        "label": "剔除 W=60 θ=2.5",
+        "run_date": "20260928_model_score_oiex_w60_t25_prod",
+        "sys_ann": 0.273,
+        "sys_mdd": -0.1817,
+        "ann": 0.2926,
+        "mdd": -0.2363,
+        "turnover": 0.8855,
+        "periods": 85
+      },
+      "full": {
+        "label": "剔除 W=60 θ=2.5",
+        "run_date": "20260928_model_score_oiex_w60_t25_full",
+        "sys_ann": 0.1781,
+        "sys_mdd": -0.3167,
+        "ann": 0.1782,
+        "mdd": -0.3801,
+        "turnover": 0.877,
+        "periods": 115
+      }
+    }
+  },
+  "verdicts": {
+    "w20_t1.5": {
+      "stats": {
+        "drop_rows": 29245,
+        "periods_hit": 116,
+        "periods_hit_frac": 1.0,
+        "avg_drop_per_hit_period": 252.11
+      },
+      "d_sys_ann_prod": -0.0099,
+      "d_sys_ann_full": 0.0008,
+      "d_sys_mdd_prod": -0.0594,
+      "d_sys_mdd_full": 0.0321
+    },
+    "w20_t2.0": {
+      "stats": {
+        "drop_rows": 16561,
+        "periods_hit": 116,
+        "periods_hit_frac": 1.0,
+        "avg_drop_per_hit_period": 142.77
+      },
+      "d_sys_ann_prod": -0.0135,
+      "d_sys_ann_full": -0.0035,
+      "d_sys_mdd_prod": -0.0754,
+      "d_sys_mdd_full": 0.0249
+    },
+    "w20_t2.5": {
+      "stats": {
+        "drop_rows": 9666,
+        "periods_hit": 116,
+        "periods_hit_frac": 1.0,
+        "avg_drop_per_hit_period": 83.33
+      },
+      "d_sys_ann_prod": 0.0116,
+      "d_sys_ann_full": 0.0099,
+      "d_sys_mdd_prod": -0.0044,
+      "d_sys_mdd_full": 0.024
+    },
+    "w60_t1.5": {
+      "stats": {
+        "drop_rows": 31362,
+        "periods_hit": 116,
+        "periods_hit_frac": 1.0,
+        "avg_drop_per_hit_period": 270.36
+      },
+      "d_sys_ann_prod": -0.0075,
+      "d_sys_ann_full": -0.0038,
+      "d_sys_mdd_prod": 0.0098,
+      "d_sys_mdd_full": 0.0316
+    },
+    "w60_t2.0": {
+      "stats": {
+        "drop_rows": 17712,
+        "periods_hit": 116,
+        "periods_hit_frac": 1.0,
+        "avg_drop_per_hit_period": 152.69
+      },
+      "d_sys_ann_prod": -0.0063,
+      "d_sys_ann_full": -0.0046,
+      "d_sys_mdd_prod": -0.0044,
+      "d_sys_mdd_full": 0.0237
+    },
+    "w60_t2.5": {
+      "stats": {
+        "drop_rows": 10126,
+        "periods_hit": 116,
+        "periods_hit_frac": 1.0,
+        "avg_drop_per_hit_period": 87.29
+      },
+      "d_sys_ann_prod": -0.0183,
+      "d_sys_ann_full": -0.0096,
+      "d_sys_mdd_prod": 0.0,
+      "d_sys_mdd_full": 0.0047
+    }
+  },
+  "gates": {
+    "g1_ann": false,
+    "g2_mdd": true,
+    "g4_dose_monotone": true
+  },
+  "note": "补位语义(删行 ⇒ 次优递补); chase6 是选后剔不补位, 落地前须补测不补位臂"
+}

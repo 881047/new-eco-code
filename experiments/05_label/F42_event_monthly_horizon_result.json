@@ -1,0 +1,271 @@
+{
+ "script_sha": "2cd5f80ad92f1d0c",
+ "since": "20151101",
+ "horizons": [
+  5,
+  21
+ ],
+ "denom": 25,
+ "sources": [
+  "forecast",
+  "event2(解禁/增减持)",
+  "event3(回购/增发)"
+ ],
+ "by_horizon": {
+  "5": {
+   "lag": 2,
+   "n_tested": 8,
+   "n_denom_used": 25,
+   "passed": [],
+   "stats": {
+    "forecast:fc_chg": {
+     "DEAD": {
+      "n": 170,
+      "ic": -0.0081,
+      "t": -1.26
+     },
+     "ACTIVE": {
+      "n": 137,
+      "ic": 0.0015,
+      "t": 0.18
+     },
+     "n_ic": 553,
+     "coverage": 0.3807
+    },
+    "forecast:fc_type": {
+     "DEAD": {
+      "n": 170,
+      "ic": -0.0085,
+      "t": -1.36
+     },
+     "ACTIVE": {
+      "n": 137,
+      "ic": 0.0009,
+      "t": 0.11
+     },
+     "n_ic": 553,
+     "coverage": 0.392
+    },
+    "forecast:fc_cover90": {
+     "DEAD": {
+      "n": 170,
+      "ic": -0.0055,
+      "t": -1.37
+     },
+     "ACTIVE": {
+      "n": 137,
+      "ic": -0.0004,
+      "t": -0.06
+     },
+     "n_ic": 553,
+     "coverage": 1.0
+    },
+    "event2(解禁/增减持):ul_press_60": {
+     "DEAD": {
+      "n": 170,
+      "ic": 0.0086,
+      "t": 1.29
+     },
+     "ACTIVE": {
+      "n": 137,
+      "ic": 0.0055,
+      "t": 0.64
+     },
+     "n_ic": 553,
+     "coverage": 0.9985
+    },
+    "event2(解禁/增减持):ins_net_60": {
+     "DEAD": {
+      "n": 170,
+      "ic": -0.0049,
+      "t": -0.63
+     },
+     "ACTIVE": {
+      "n": 137,
+      "ic": 0.0011,
+      "t": 0.09
+     },
+     "n_ic": 553,
+     "coverage": 0.9991
+    },
+    "event3(回购/增发):rp_amt120": {
+     "DEAD": {
+      "n": 97,
+      "ic": -0.0013,
+      "t": -0.17
+     },
+     "ACTIVE": {
+      "n": 107,
+      "ic": 0.0033,
+      "t": 0.53
+     },
+     "n_ic": 238,
+     "coverage": 0.9997
+    },
+    "event3(回购/增发):rp_any60": {
+     "DEAD": {
+      "n": 37,
+      "ic": -0.0066,
+      "t": -0.54
+     },
+     "ACTIVE": {
+      "n": 73,
+      "ic": 0.0055,
+      "t": 0.57
+     },
+     "n_ic": 123,
+     "coverage": 1.0
+    },
+    "event3(回购/增发):seo_neg90": {
+     "DEAD": {
+      "n": 76,
+      "ic": -0.0036,
+      "t": -0.51
+     },
+     "ACTIVE": {
+      "n": 0,
+      "ic": null,
+      "t": null
+     },
+     "n_ic": 159,
+     "coverage": 1.0
+    }
+   },
+   "verdict": {
+    "route_worth_arm": false,
+    "n_passed": 0
+   }
+  },
+  "21": {
+   "lag": 6,
+   "n_tested": 8,
+   "n_denom_used": 25,
+   "passed": [],
+   "stats": {
+    "forecast:fc_chg": {
+     "DEAD": {
+      "n": 170,
+      "ic": -0.0227,
+      "t": -2.09
+     },
+     "ACTIVE": {
+      "n": 134,
+      "ic": -0.0059,
+      "t": -0.45
+     },
+     "n_ic": 550,
+     "coverage": 0.3807
+    },
+    "forecast:fc_type": {
+     "DEAD": {
+      "n": 170,
+      "ic": -0.0249,
+      "t": -2.52
+     },
+     "ACTIVE": {
+      "n": 134,
+      "ic": -0.0043,
+      "t": -0.31
+     },
+     "n_ic": 550,
+     "coverage": 0.392
+    },
+    "forecast:fc_cover90": {
+     "DEAD": {
+      "n": 170,
+      "ic": -0.0078,
+      "t": -1.04
+     },
+     "ACTIVE": {
+      "n": 134,
+      "ic": 0.0078,
+      "t": 0.7
+     },
+     "n_ic": 550,
+     "coverage": 1.0
+    },
+    "event2(解禁/增减持):ul_press_60": {
+     "DEAD": {
+      "n": 170,
+      "ic": 0.0168,
+      "t": 1.48
+     },
+     "ACTIVE": {
+      "n": 134,
+      "ic": 0.0173,
+      "t": 1.47
+     },
+     "n_ic": 550,
+     "coverage": 0.9985
+    },
+    "event2(解禁/增减持):ins_net_60": {
+     "DEAD": {
+      "n": 170,
+      "ic": -0.0037,
+      "t": -0.25
+     },
+     "ACTIVE": {
+      "n": 134,
+      "ic": 0.0146,
+      "t": 0.86
+     },
+     "n_ic": 550,
+     "coverage": 0.9991
+    },
+    "event3(回购/增发):rp_amt120": {
+     "DEAD": {
+      "n": 97,
+      "ic": 0.0014,
+      "t": 0.11
+     },
+     "ACTIVE": {
+      "n": 104,
+      "ic": 0.0,
+      "t": 0.0
+     },
+     "n_ic": 235,
+     "coverage": 0.9997
+    },
+    "event3(回购/增发):rp_any60": {
+     "DEAD": {
+      "n": 37,
+      "ic": -0.011,
+      "t": -0.54
+     },
+     "ACTIVE": {
+      "n": 70,
+      "ic": -0.008,
+      "t": -0.73
+     },
+     "n_ic": 120,
+     "coverage": 1.0
+    },
+    "event3(回购/增发):seo_neg90": {
+     "DEAD": {
+      "n": 76,
+      "ic": 0.0081,
+      "t": 0.71
+     },
+     "ACTIVE": {
+      "n": 0,
+      "ic": null,
+      "t": null
+     },
+     "n_ic": 159,
+     "coverage": 1.0
+    }
+   },
+   "verdict": {
+    "route_worth_arm": false,
+    "n_passed": 0
+   }
+  }
+ },
+ "secs": 314.2,
+ "control": {
+  "horizon": 5,
+  "ok": true,
+  "note": "H=5 必须复现已记录的周频 IC; 不复现 ⇒ H=21 一律不得解读",
+  "detail": "全部逐位/1e-3 内一致"
+ }
+}

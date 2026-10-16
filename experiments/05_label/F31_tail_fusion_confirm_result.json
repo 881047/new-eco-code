@@ -1,0 +1,139 @@
+{
+ "script_sha": "c337c93a1d81dbc4",
+ "candidates": [
+  "A1_abs",
+  "A3_abs2"
+ ],
+ "sets": {
+  "SA": [
+   42,
+   7,
+   123,
+   2024
+  ],
+  "SB": [
+   43,
+   8,
+   124,
+   2025
+  ]
+ },
+ "windows": {
+  "full": [
+   "2010-01-01",
+   "2030-12-31"
+  ],
+  "oos": [
+   "2024-01-01",
+   "2026-08-31"
+  ]
+ },
+ "arms": {
+  "SA": {
+   "A0_fused": {
+    "full": {
+     "n": 491,
+     "excess_pp": 14.91,
+     "mdd": -0.3228,
+     "turnover": 0.118
+    },
+    "OOS": {
+     "n": 138,
+     "ann": 0.226,
+     "excess_pp": 7.34,
+     "mdd": -0.3228,
+     "turnover": 0.092
+    },
+    "t_diff_vs_base": null
+   },
+   "A1_abs_fused": {
+    "full": {
+     "n": 491,
+     "excess_pp": 13.61,
+     "mdd": -0.3207,
+     "turnover": 0.109
+    },
+    "OOS": {
+     "n": 138,
+     "ann": 0.2363,
+     "excess_pp": 8.37,
+     "mdd": -0.3207,
+     "turnover": 0.098
+    },
+    "t_diff_vs_base": -1.09
+   },
+   "A3_abs2_fused": {
+    "full": {
+     "n": 491,
+     "excess_pp": 13.58,
+     "mdd": -0.3141,
+     "turnover": 0.111
+    },
+    "OOS": {
+     "n": 138,
+     "ann": 0.2332,
+     "excess_pp": 8.06,
+     "mdd": -0.3139,
+     "turnover": 0.095
+    },
+    "t_diff_vs_base": -1.26
+   }
+  },
+  "SB": {
+   "A0_fused": {
+    "full": {
+     "n": 491,
+     "excess_pp": 15.07,
+     "mdd": -0.3212,
+     "turnover": 0.119
+    },
+    "OOS": {
+     "n": 138,
+     "ann": 0.2409,
+     "excess_pp": 8.83,
+     "mdd": -0.3212,
+     "turnover": 0.093
+    },
+    "t_diff_vs_base": null
+   },
+   "A1_abs_fused": {
+    "full": {
+     "n": 491,
+     "excess_pp": 15.14,
+     "mdd": -0.316,
+     "turnover": 0.108
+    },
+    "OOS": {
+     "n": 138,
+     "ann": 0.2345,
+     "excess_pp": 8.19,
+     "mdd": -0.3152,
+     "turnover": 0.096
+    },
+    "t_diff_vs_base": 0.15
+   },
+   "A3_abs2_fused": {
+    "full": {
+     "n": 491,
+     "excess_pp": 14.55,
+     "mdd": -0.3137,
+     "turnover": 0.113
+    },
+    "OOS": {
+     "n": 138,
+     "ann": 0.2351,
+     "excess_pp": 8.25,
+     "mdd": -0.3137,
+     "turnover": 0.096
+    },
+    "t_diff_vs_base": -0.36
+   }
+  }
+ },
+ "verdict": {
+  "adopt_component": null,
+  "candidates_passed": [],
+  "criteria": "两套种子同时: ①全史≥基线+1.0pp ②留出集≥基线 ③MDD≥基线×1.10"
+ },
+ "secs": 376.9
+}

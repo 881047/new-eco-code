@@ -1,0 +1,920 @@
+{
+ "_readme": "每个 experiments/05_label/F*.py 用到的构型（资金/top_n/出带/持仓加成）台账。由 tests/test_experiment_shape_ledger.py 守卫：脚本里写死的常量必须与本表一致；新脚本必须有条目；_production 行必须等于 plan.pick_shape(1e6) 的实时值。2026-09-13 建立，起因见 docs/know/07 号 #23（研究方向与生产构型不一致）。",
+ "_production": {
+  "capital": 1000000.0,
+  "top_n": 100,
+  "band": 8.0,
+  "hyst": 0.0,
+  "source": "plan.pick_shape(1e6) + weekly.capital"
+ },
+ "files": {
+  "F10_board_strategy_account.py": {
+   "shape": {
+    "capital": 200000.0,
+    "top_n": 5,
+    "band": null,
+    "hyst": null
+   },
+   "hyst_kwargs": [],
+   "kind": "OTHER_SHAPE",
+   "note": "20 万档（capital=2e5, top_n=5）"
+  },
+  "F11_board_pit_backtest.py": {
+   "shape": {
+    "capital": 200000.0,
+    "top_n": 5,
+    "band": null,
+    "hyst": null
+   },
+   "hyst_kwargs": [],
+   "kind": "OTHER_SHAPE",
+   "note": "20 万档（capital=2e5, top_n=5）"
+  },
+  "F12_budget_policy_ab.py": {
+   "shape": {
+    "capital": 1000000.0,
+    "top_n": 100,
+    "band": 8.0,
+    "hyst": 0.2
+   },
+   "hyst_kwargs": [],
+   "kind": "RESEARCH_HYST02",
+   "note": "研究构型 hyst=0.2 —— 2026-09-13 F52 已量化它与生产的差（全史 0.17~0.22pp、留出集 ~0.8pp、换手 ~17%）；引用其读数时必须按 07 号 #23 标注构型"
+  },
+  "F13_exposure_drift_check.py": {
+   "shape": {
+    "capital": 1000000.0,
+    "top_n": null,
+    "band": null,
+    "hyst": 0.2
+   },
+   "hyst_kwargs": [
+    0.2
+   ],
+   "kind": "RESEARCH_HYST02",
+   "note": "研究构型 hyst=0.2 —— 2026-09-13 F52 已量化它与生产的差（全史 0.17~0.22pp、留出集 ~0.8pp、换手 ~17%）；引用其读数时必须按 07 号 #23 标注构型"
+  },
+  "F14_multi_horizon_ensemble.py": {
+   "shape": {
+    "capital": 1000000.0,
+    "top_n": null,
+    "band": null,
+    "hyst": 0.2
+   },
+   "hyst_kwargs": [
+    0.2
+   ],
+   "kind": "RESEARCH_HYST02",
+   "note": "研究构型 hyst=0.2 —— 2026-09-13 F52 已量化它与生产的差（全史 0.17~0.22pp、留出集 ~0.8pp、换手 ~17%）；引用其读数时必须按 07 号 #23 标注构型"
+  },
+  "F16_newfactors_as_features.py": {
+   "shape": {
+    "capital": 1000000.0,
+    "top_n": null,
+    "band": null,
+    "hyst": 0.2
+   },
+   "hyst_kwargs": [
+    0.2
+   ],
+   "kind": "RESEARCH_HYST02",
+   "note": "研究构型 hyst=0.2 —— 2026-09-13 F52 已量化它与生产的差（全史 0.17~0.22pp、留出集 ~0.8pp、换手 ~17%）；引用其读数时必须按 07 号 #23 标注构型"
+  },
+  "F17_die_registry_kgd.py": {
+   "shape": {
+    "capital": 1000000.0,
+    "top_n": 100,
+    "band": 8.0,
+    "hyst": 0.2
+   },
+   "hyst_kwargs": [
+    0.2
+   ],
+   "kind": "RESEARCH_HYST02",
+   "note": "研究构型 hyst=0.2 —— 2026-09-13 F52 已量化它与生产的差（全史 0.17~0.22pp、留出集 ~0.8pp、换手 ~17%）；引用其读数时必须按 07 号 #23 标注构型"
+  },
+  "F18_fusion_dose_response.py": {
+   "shape": {
+    "capital": 1000000.0,
+    "top_n": 100,
+    "band": 8.0,
+    "hyst": 0.2
+   },
+   "hyst_kwargs": [],
+   "kind": "RESEARCH_HYST02",
+   "note": "研究构型 hyst=0.2 —— 2026-09-13 F52 已量化它与生产的差（全史 0.17~0.22pp、留出集 ~0.8pp、换手 ~17%）；引用其读数时必须按 07 号 #23 标注构型"
+  },
+  "F19_yield_weighted_fusion.py": {
+   "shape": {
+    "capital": 1000000.0,
+    "top_n": 100,
+    "band": 8.0,
+    "hyst": 0.2
+   },
+   "hyst_kwargs": [],
+   "kind": "RESEARCH_HYST02",
+   "note": "研究构型 hyst=0.2 —— 2026-09-13 F52 已量化它与生产的差（全史 0.17~0.22pp、留出集 ~0.8pp、换手 ~17%）；引用其读数时必须按 07 号 #23 标注构型"
+  },
+  "F1_weekly_ic_decay.py": {
+   "shape": {
+    "capital": null,
+    "top_n": 6,
+    "band": null,
+    "hyst": null
+   },
+   "hyst_kwargs": [],
+   "kind": "OTHER_SHAPE",
+   "note": "2 万档早期研究（top_n=6）"
+  },
+  "F1b_weekly_open_overlap.py": {
+   "shape": {
+    "capital": null,
+    "top_n": 6,
+    "band": null,
+    "hyst": null
+   },
+   "hyst_kwargs": [],
+   "kind": "OTHER_SHAPE",
+   "note": "模拟器本体（默认 top_n=6；调用方传参决定构型）"
+  },
+  "F20_index_rebalance_probe.py": {
+   "shape": {
+    "capital": 1000000.0,
+    "top_n": null,
+    "band": null,
+    "hyst": 0.2
+   },
+   "hyst_kwargs": [
+    0.2
+   ],
+   "kind": "RESEARCH_HYST02",
+   "note": "研究构型 hyst=0.2 —— 2026-09-13 F52 已量化它与生产的差（全史 0.17~0.22pp、留出集 ~0.8pp、换手 ~17%）；引用其读数时必须按 07 号 #23 标注构型"
+  },
+  "F21_fixed_pair_matrix.py": {
+   "shape": {
+    "capital": 1000000.0,
+    "top_n": 100,
+    "band": 8.0,
+    "hyst": 0.2
+   },
+   "hyst_kwargs": [],
+   "kind": "RESEARCH_HYST02",
+   "note": "研究构型 hyst=0.2 —— 2026-09-13 F52 已量化它与生产的差（全史 0.17~0.22pp、留出集 ~0.8pp、换手 ~17%）；引用其读数时必须按 07 号 #23 标注构型"
+  },
+  "F22_pair_final_selection.py": {
+   "shape": {
+    "capital": 1000000.0,
+    "top_n": 100,
+    "band": 8.0,
+    "hyst": 0.2
+   },
+   "hyst_kwargs": [],
+   "kind": "RESEARCH_HYST02",
+   "note": "研究构型 hyst=0.2 —— 2026-09-13 F52 已量化它与生产的差（全史 0.17~0.22pp、留出集 ~0.8pp、换手 ~17%）；引用其读数时必须按 07 号 #23 标注构型"
+  },
+  "F23_affordability_gap.py": {
+   "shape": {
+    "capital": 1000000.0,
+    "top_n": 100,
+    "band": 8.0,
+    "hyst": 0.2
+   },
+   "hyst_kwargs": [],
+   "kind": "RESEARCH_HYST02",
+   "note": "研究构型 hyst=0.2 —— 2026-09-13 F52 已量化它与生产的差（全史 0.17~0.22pp、留出集 ~0.8pp、换手 ~17%）；引用其读数时必须按 07 号 #23 标注构型"
+  },
+  "F24_attribution.py": {
+   "shape": {
+    "capital": 1000000.0,
+    "top_n": 100,
+    "band": 8.0,
+    "hyst": 0.2
+   },
+   "hyst_kwargs": [],
+   "kind": "RESEARCH_HYST02",
+   "note": "研究构型 hyst=0.2 —— 2026-09-13 F52 已量化它与生产的差（全史 0.17~0.22pp、留出集 ~0.8pp、换手 ~17%）；引用其读数时必须按 07 号 #23 标注构型"
+  },
+  "F25_equity_weight_dial.py": {
+   "shape": {
+    "capital": 1000000.0,
+    "top_n": 100,
+    "band": 8.0,
+    "hyst": 0.2
+   },
+   "hyst_kwargs": [],
+   "kind": "RESEARCH_HYST02",
+   "note": "研究构型 hyst=0.2 —— 2026-09-13 F52 已量化它与生产的差（全史 0.17~0.22pp、留出集 ~0.8pp、换手 ~17%）；引用其读数时必须按 07 号 #23 标注构型"
+  },
+  "F26_forecast_weekly_ic.py": {
+   "shape": {
+    "capital": null,
+    "top_n": null,
+    "band": null,
+    "hyst": null
+   },
+   "hyst_kwargs": [],
+   "kind": "NO_CONST",
+   "note": "未写死构型常量（走默认/参数化）—— 若将来在这里写死，本台账与守卫测试会要求更新"
+  },
+  "F27_event2_weekly_ic.py": {
+   "shape": {
+    "capital": null,
+    "top_n": null,
+    "band": null,
+    "hyst": null
+   },
+   "hyst_kwargs": [],
+   "kind": "NO_CONST",
+   "note": "未写死构型常量（走默认/参数化）—— 若将来在这里写死，本台账与守卫测试会要求更新"
+  },
+  "F28_oos_unseal.py": {
+   "shape": {
+    "capital": 1000000.0,
+    "top_n": 100,
+    "band": 8.0,
+    "hyst": 0.2
+   },
+   "hyst_kwargs": [],
+   "kind": "RESEARCH_HYST02",
+   "note": "研究构型 hyst=0.2 —— 2026-09-13 F52 已量化它与生产的差（全史 0.17~0.22pp、留出集 ~0.8pp、换手 ~17%）；引用其读数时必须按 07 号 #23 标注构型"
+  },
+  "F29_tail_weighted_training.py": {
+   "shape": {
+    "capital": 1000000.0,
+    "top_n": 100,
+    "band": 8.0,
+    "hyst": 0.2
+   },
+   "hyst_kwargs": [],
+   "kind": "RESEARCH_HYST02",
+   "note": "研究构型 hyst=0.2 —— 2026-09-13 F52 已量化它与生产的差（全史 0.17~0.22pp、留出集 ~0.8pp、换手 ~17%）；引用其读数时必须按 07 号 #23 标注构型"
+  },
+  "F2_weekly_construction.py": {
+   "shape": {
+    "capital": null,
+    "top_n": 6,
+    "band": null,
+    "hyst": 0.2
+   },
+   "hyst_kwargs": [
+    false,
+    true
+   ],
+   "kind": "OTHER_SHAPE",
+   "note": "早期 2 万档构型实验（top_n=6, hyst=0.2）"
+  },
+  "F30_cost_stress.py": {
+   "shape": {
+    "capital": null,
+    "top_n": null,
+    "band": null,
+    "hyst": null
+   },
+   "hyst_kwargs": [],
+   "kind": "NO_CONST",
+   "note": "未写死构型常量（走默认/参数化）—— 若将来在这里写死，本台账与守卫测试会要求更新"
+  },
+  "F31_tail_fusion_confirm.py": {
+   "shape": {
+    "capital": null,
+    "top_n": null,
+    "band": null,
+    "hyst": null
+   },
+   "hyst_kwargs": [],
+   "kind": "NO_CONST",
+   "note": "未写死构型常量（走默认/参数化）—— 若将来在这里写死，本台账与守卫测试会要求更新"
+  },
+  "F32_permutation_audit.py": {
+   "shape": {
+    "capital": null,
+    "top_n": null,
+    "band": null,
+    "hyst": null
+   },
+   "hyst_kwargs": [],
+   "kind": "NO_CONST",
+   "note": "未写死构型常量（走默认/参数化）—— 若将来在这里写死，本台账与守卫测试会要求更新"
+  },
+  "F32b_perm_diagnosis.py": {
+   "shape": {
+    "capital": null,
+    "top_n": null,
+    "band": null,
+    "hyst": null
+   },
+   "hyst_kwargs": [],
+   "kind": "NO_CONST",
+   "note": "未写死构型常量（走默认/参数化）—— 若将来在这里写死，本台账与守卫测试会要求更新"
+  },
+  "F33_weekly_vs_monthly.py": {
+   "shape": {
+    "capital": 1000000.0,
+    "top_n": 100,
+    "band": 8.0,
+    "hyst": 0.2
+   },
+   "hyst_kwargs": [],
+   "kind": "RESEARCH_HYST02",
+   "note": "研究构型 hyst=0.2 —— 2026-09-13 F52 已量化它与生产的差（全史 0.17~0.22pp、留出集 ~0.8pp、换手 ~17%）；引用其读数时必须按 07 号 #23 标注构型"
+  },
+  "F34_width_vs_deployment.py": {
+   "shape": {
+    "capital": 1000000.0,
+    "top_n": null,
+    "band": 8.0,
+    "hyst": 0.2
+   },
+   "hyst_kwargs": [],
+   "kind": "RESEARCH_HYST02",
+   "note": "研究构型 hyst=0.2 —— 2026-09-13 F52 已量化它与生产的差（全史 0.17~0.22pp、留出集 ~0.8pp、换手 ~17%）；引用其读数时必须按 07 号 #23 标注构型"
+  },
+  "F35_event3_weekly_ic.py": {
+   "shape": {
+    "capital": null,
+    "top_n": null,
+    "band": null,
+    "hyst": null
+   },
+   "hyst_kwargs": [],
+   "kind": "NO_CONST",
+   "note": "未写死构型常量（走默认/参数化）—— 若将来在这里写死，本台账与守卫测试会要求更新"
+  },
+  "F36_monthly_excess_distribution.py": {
+   "shape": {
+    "capital": null,
+    "top_n": null,
+    "band": null,
+    "hyst": null
+   },
+   "hyst_kwargs": [],
+   "kind": "NO_CONST",
+   "note": "未写死构型常量（走默认/参数化）—— 若将来在这里写死，本台账与守卫测试会要求更新"
+  },
+  "F37_greedy_budget_cap.py": {
+   "shape": {
+    "capital": 1000000.0,
+    "top_n": 100,
+    "band": 8.0,
+    "hyst": 0.2
+   },
+   "hyst_kwargs": [],
+   "kind": "RESEARCH_HYST02",
+   "note": "研究构型 hyst=0.2 —— 2026-09-13 F52 已量化它与生产的差（全史 0.17~0.22pp、留出集 ~0.8pp、换手 ~17%）；引用其读数时必须按 07 号 #23 标注构型"
+  },
+  "F38_multiplicity_haircut.py": {
+   "shape": {
+    "capital": null,
+    "top_n": null,
+    "band": null,
+    "hyst": 0.2
+   },
+   "hyst_kwargs": [
+    0.2
+   ],
+   "kind": "RESEARCH_HYST02",
+   "note": "复用 F41 的常量（模块 import）⇒ 解析不到字面量；实际同 F41 的研究构型；**构型偏离生产**（hyst=0.2）：与生产的差已由 F52 量化（全史 0.17~0.22pp、留出集 ~0.8pp、换手 ~17%），引用其读数须按 07 号 #23 标注"
+  },
+  "F39_investable_benchmark.py": {
+   "shape": {
+    "capital": null,
+    "top_n": null,
+    "band": null,
+    "hyst": null
+   },
+   "hyst_kwargs": [],
+   "kind": "NO_CONST",
+   "note": "未写死构型常量（走默认/参数化）—— 若将来在这里写死，本台账与守卫测试会要求更新"
+  },
+  "F3_newdata_weekly_ic.py": {
+   "shape": {
+    "capital": null,
+    "top_n": null,
+    "band": null,
+    "hyst": null
+   },
+   "hyst_kwargs": [],
+   "kind": "NO_CONST",
+   "note": "未写死构型常量（走默认/参数化）—— 若将来在这里写死，本台账与守卫测试会要求更新"
+  },
+  "F40_style_neutral_arm.py": {
+   "shape": {
+    "capital": null,
+    "top_n": null,
+    "band": null,
+    "hyst": null
+   },
+   "hyst_kwargs": [],
+   "kind": "NO_CONST",
+   "note": "未写死构型常量（走默认/参数化）—— 若将来在这里写死，本台账与守卫测试会要求更新"
+  },
+  "F41_exposure_alignment.py": {
+   "shape": {
+    "capital": 1000000.0,
+    "top_n": 100,
+    "band": 8.0,
+    "hyst": 0.2
+   },
+   "hyst_kwargs": [],
+   "kind": "RESEARCH_HYST02",
+   "note": "研究构型 hyst=0.2 —— 2026-09-13 F52 已量化它与生产的差（全史 0.17~0.22pp、留出集 ~0.8pp、换手 ~17%）；引用其读数时必须按 07 号 #23 标注构型"
+  },
+  "F42_event_monthly_horizon.py": {
+   "shape": {
+    "capital": null,
+    "top_n": null,
+    "band": null,
+    "hyst": null
+   },
+   "hyst_kwargs": [],
+   "kind": "NO_CONST",
+   "note": "未写死构型常量（走默认/参数化）—— 若将来在这里写死，本台账与守卫测试会要求更新"
+  },
+  "F43_holder_arm_months.py": {
+   "shape": {
+    "capital": null,
+    "top_n": null,
+    "band": null,
+    "hyst": null
+   },
+   "hyst_kwargs": [],
+   "kind": "NO_CONST",
+   "note": "未写死构型常量（走默认/参数化）—— 若将来在这里写死，本台账与守卫测试会要求更新"
+  },
+  "F44_holder_filter_months.py": {
+   "shape": {
+    "capital": null,
+    "top_n": null,
+    "band": null,
+    "hyst": null
+   },
+   "hyst_kwargs": [],
+   "kind": "NO_CONST",
+   "note": "未写死构型常量（走默认/参数化）—— 若将来在这里写死，本台账与守卫测试会要求更新"
+  },
+  "F45_monthly_at_live_exposure.py": {
+   "shape": {
+    "capital": null,
+    "top_n": null,
+    "band": null,
+    "hyst": null
+   },
+   "hyst_kwargs": [],
+   "kind": "NO_CONST",
+   "note": "未写死构型常量（走默认/参数化）—— 若将来在这里写死，本台账与守卫测试会要求更新"
+  },
+  "F46_exec_lag_weekday.py": {
+   "shape": {
+    "capital": null,
+    "top_n": null,
+    "band": null,
+    "hyst": null
+   },
+   "hyst_kwargs": [],
+   "kind": "NO_CONST",
+   "note": "未写死构型常量（走默认/参数化）—— 若将来在这里写死，本台账与守卫测试会要求更新"
+  },
+  "F47_weekly_hyperparams.py": {
+   "shape": {
+    "capital": null,
+    "top_n": null,
+    "band": null,
+    "hyst": null
+   },
+   "hyst_kwargs": [],
+   "kind": "NO_CONST",
+   "note": "未写死构型常量（走默认/参数化）—— 若将来在这里写死，本台账与守卫测试会要求更新"
+  },
+  "F47b_weekly_capacity.py": {
+   "shape": {
+    "capital": null,
+    "top_n": null,
+    "band": null,
+    "hyst": null
+   },
+   "hyst_kwargs": [],
+   "kind": "NO_CONST",
+   "note": "未写死构型常量（走默认/参数化）—— 若将来在这里写死，本台账与守卫测试会要求更新"
+  },
+  "F47c_qlib_recipe.py": {
+   "shape": {
+    "capital": null,
+    "top_n": null,
+    "band": null,
+    "hyst": null
+   },
+   "hyst_kwargs": [],
+   "kind": "NO_CONST",
+   "note": "未写死构型常量（走默认/参数化）—— 若将来在这里写死，本台账与守卫测试会要求更新"
+  },
+  "F48_independent_dsr_check.py": {
+   "shape": {
+    "capital": null,
+    "top_n": null,
+    "band": null,
+    "hyst": null
+   },
+   "hyst_kwargs": [],
+   "kind": "NO_CONST",
+   "note": "未写死构型常量（走默认/参数化）—— 若将来在这里写死，本台账与守卫测试会要求更新"
+  },
+  "F49_thirdparty_health_check.py": {
+   "shape": {
+    "capital": null,
+    "top_n": null,
+    "band": null,
+    "hyst": null
+   },
+   "hyst_kwargs": [],
+   "kind": "NO_CONST",
+   "note": "未写死构型常量（走默认/参数化）—— 若将来在这里写死，本台账与守卫测试会要求更新"
+  },
+  "F4_weekly_lgb.py": {
+   "shape": {
+    "capital": null,
+    "top_n": null,
+    "band": null,
+    "hyst": 0.2
+   },
+   "hyst_kwargs": [],
+   "kind": "RESEARCH_HYST02",
+   "note": "早期 die 实验（只写死 HYST=0.2，未绑定资金档）；**构型偏离生产**（hyst=0.2）：与生产的差已由 F52 量化（全史 0.17~0.22pp、留出集 ~0.8pp、换手 ~17%），引用其读数须按 07 号 #23 标注"
+  },
+  "F50_ic_ir_of_prod_scores.py": {
+   "shape": {
+    "capital": null,
+    "top_n": null,
+    "band": null,
+    "hyst": null
+   },
+   "hyst_kwargs": [],
+   "kind": "NO_CONST",
+   "note": "未写死构型常量（走默认/参数化）—— 若将来在这里写死，本台账与守卫测试会要求更新"
+  },
+  "F52_live_vs_research_shape.py": {
+   "shape": {
+    "capital": 1000000.0,
+    "top_n": 100,
+    "band": 8.0,
+    "hyst": null
+   },
+   "hyst_kwargs": [],
+   "kind": "OTHER_SHAPE",
+   "note": "本轮校准实验：A0=生产(0.0) / A1=研究(0.2) 两臂同跑（常量对应 A0）"
+  },
+  "F53_monthly_live_vs_research_shape.py": {
+   "shape": {
+    "capital": null,
+    "top_n": null,
+    "band": null,
+    "hyst": null
+   },
+   "hyst_kwargs": [],
+   "kind": "NO_CONST",
+   "note": "只做月度聚合，不跑模拟器 ⇒ 无构型常量"
+  },
+  "F5_limitup_diagnostic.py": {
+   "shape": {
+    "capital": null,
+    "top_n": 6,
+    "band": null,
+    "hyst": null
+   },
+   "hyst_kwargs": [],
+   "kind": "OTHER_SHAPE",
+   "note": "涨停诊断（2 万档 top_n=6）"
+  },
+  "F6_independent_m5_check.py": {
+   "shape": {
+    "capital": 1000000.0,
+    "top_n": null,
+    "band": null,
+    "hyst": null
+   },
+   "hyst_kwargs": [],
+   "kind": "OTHER_SHAPE",
+   "note": "独立复现实验（未写死构型）"
+  },
+  "F7_weekly_return_distribution.py": {
+   "shape": {
+    "capital": null,
+    "top_n": null,
+    "band": null,
+    "hyst": 0.0
+   },
+   "hyst_kwargs": [
+    0.0
+   ],
+   "kind": "MATCHES_PROD",
+   "note": "与生产构型一致"
+  },
+  "F8_frequency_vs_risk_frontier.py": {
+   "shape": {
+    "capital": null,
+    "top_n": null,
+    "band": null,
+    "hyst": null
+   },
+   "hyst_kwargs": [],
+   "kind": "NO_CONST",
+   "note": "未写死构型常量（走默认/参数化）—— 若将来在这里写死，本台账与守卫测试会要求更新"
+  },
+  "F9_limitup_board_probe.py": {
+   "shape": {
+    "capital": null,
+    "top_n": null,
+    "band": null,
+    "hyst": null
+   },
+   "hyst_kwargs": [],
+   "kind": "NO_CONST",
+   "note": "未写死构型常量（走默认/参数化）—— 若将来在这里写死，本台账与守卫测试会要求更新"
+  },
+  "F9b_limitup_fillability.py": {
+   "shape": {
+    "capital": null,
+    "top_n": null,
+    "band": null,
+    "hyst": null
+   },
+   "hyst_kwargs": [],
+   "kind": "NO_CONST",
+   "note": "未写死构型常量（走默认/参数化）—— 若将来在这里写死，本台账与守卫测试会要求更新"
+  },
+  "F54_vol_target_overlay.py": {
+   "shape": {
+    "capital": null,
+    "top_n": null,
+    "band": null,
+    "hyst": null
+   },
+   "hyst_kwargs": [],
+   "kind": "NO_CONST",
+   "note": "只做波动率目标叠加（读 F52 落盘的生产构型序列），不跑模拟器 ⇒ 无构型常量"
+  },
+  "F55_score_weight_vs_equal.py": {
+   "shape": {
+    "capital": null,
+    "top_n": 100,
+    "band": null,
+    "hyst": null
+   },
+   "hyst_kwargs": [],
+   "kind": "OTHER_SHAPE",
+   "note": "连续近似筛选（生产融合分 + PIT 掩码 + forward_excess，top_n=100 只用分数排序）；不跑 F1b 模拟器 ⇒ 无资金/出带/加成常量。用途见 05 号 F55（权重分布证伪）"
+  },
+  "F56_pbo_cscv.py": {
+   "shape": {
+    "capital": null,
+    "top_n": 100,
+    "band": null,
+    "hyst": null
+   },
+   "hyst_kwargs": [],
+   "kind": "OTHER_SHAPE",
+   "note": "连续近似筛选（20 个已存档臂的分数 + 生产 PIT 掩码 + 5 日 forward_excess，top_n=100 只用于等权 top100 选股）；不跑 F1b 模拟器 ⇒ 无资金/出带/加成常量。用途见 05 号 F56（PBO/CSCV：同层 12 臂 PBO=0.434）"
+  },
+  "F57_broker_exclusion.py": {
+   "shape": {
+    "capital": null,
+    "top_n": 100,
+    "band": null,
+    "hyst": null
+   },
+   "hyst_kwargs": [],
+   "kind": "OTHER_SHAPE",
+   "note": "连续近似筛选（生产融合分 + 生产 PIT 掩码 + 5 日 forward_excess，top_n=100 只用于等权 top100 选股；再叠加券商金股头部剔除并顺位补足）；不跑 F1b 模拟器 ⇒ 无资金/出带/加成常量。用途见 05 号 F57（券商金股反向剔除器）"
+  },
+  "F58_negative_factor_overlap.py": {
+   "shape": {
+    "capital": null,
+    "top_n": 100,
+    "band": null,
+    "hyst": null
+   },
+   "hyst_kwargs": [],
+   "kind": "OTHER_SHAPE",
+   "note": "连续近似筛选（生产融合分 top100 + 生产 PIT 掩码 + 5 日 forward_excess）上叠加三族因子面板，逐期比较'因子坏侧/好侧十分位'与'模型 top100'的重叠与头部超额；不跑 F1b 模拟器 ⇒ 无资金/出带/加成常量。用途见 05 号 F58（回答'负向因子能否反着用'）"
+  },
+  "F59_negative_exclusion_multi.py": {
+   "shape": {
+    "capital": null,
+    "top_n": 100,
+    "band": null,
+    "hyst": null
+   },
+   "hyst_kwargs": [],
+   "kind": "OTHER_SHAPE",
+   "note": "连续近似筛选（生产融合分 top100 + 生产 PIT 掩码 + 5 日 forward_excess + 真实卖出费率），叠加三族因子的'坏侧十分位剔除 + 顺位补足'；不跑 F1b 模拟器 ⇒ 无资金/出带/加成常量。用途见 05 号 F59（回答用户'负向因子能否反着用'）"
+  },
+  "F60_pos_neg_together.py": {
+   "shape": {
+    "capital": null,
+    "top_n": 100,
+    "band": null,
+    "hyst": null
+   },
+   "hyst_kwargs": [],
+   "kind": "OTHER_SHAPE",
+   "note": "连续近似筛选（生产融合分 top100 + 生产 PIT 掩码 + 5 日 forward_excess + 真实卖出费率），叠加'负因子坏侧剔除'与'正因子 z 倾斜'的 6 臂组合；不跑 F1b 模拟器 ⇒ 无资金/出带/加成常量。用途见 05 号 F60（回答用户'正负因子一起作用'）"
+  },
+  "F61_neg_reverse_pos_keep.py": {
+   "shape": {
+    "capital": null,
+    "top_n": 100,
+    "band": null,
+    "hyst": null
+   },
+   "hyst_kwargs": [],
+   "kind": "OTHER_SHAPE",
+   "note": "连续近似筛选（生产融合分 top100 + 生产 PIT 掩码 + 5 日 forward_excess + 真实卖出费率）；负因子坏侧剔除 + 正因子 good side 优先（筛选而非倾斜）；不跑 F1b 模拟器 ⇒ 无资金/出带/加成常量。用途见 05 号 F61（回答用户'负因子反向筛 + 正因子正向筛'）"
+  },
+  "F62_newfamilies_as_features.py": {
+   "shape": {
+    "capital": 1000000.0,
+    "top_n": 100,
+    "band": 8.0,
+    "hyst": 0.0
+   },
+   "hyst_kwargs": [],
+   "kind": "PRODUCTION",
+   "note": "生产构型（= plan.pick_shape(1e6)：100 万 / top100 / 带 8× / hold_bonus=0.0）；把第 11/12/13 族 10 个新因子中性化后当特征重训（基础 31 vs 扩展 41，两臂都重训），再走 F1b 生产构型回测。用途见 05 号 F62（模型层适配路线）"
+  },
+  "F63_screen_method_grid.py": {
+   "shape": {
+    "capital": null,
+    "top_n": 100,
+    "band": null,
+    "hyst": null
+   },
+   "hyst_kwargs": [],
+   "kind": "OTHER_SHAPE",
+   "note": "连续近似筛选（生产融合分 + 生产 PIT 掩码 + sc.forward_excess 5 日 + 真实卖出费率；口径已与 F1b forward_excess_open 逐行核对同公式），测更精细的筛法：负筛只剔合成坏分前 5%、正因子做'前 150 内重排'或'权重倾斜[0.5,1.5]'；不跑 F1b 模拟器 ⇒ 无资金/出带/加成常量。用途见 05 号 F63"
+  },
+  "F64_all_factors_composite.py": {
+   "shape": {
+    "capital": null,
+    "top_n": 100,
+    "band": null,
+    "hyst": null
+   },
+   "hyst_kwargs": [],
+   "kind": "OTHER_SHAPE",
+   "note": "连续近似筛选（生产融合分 + 生产 PIT 掩码 + sc.forward_excess 5 日 + 真实卖出费率）；把阶段 0c 的全部新族因子（约 27 个）按死区符号自适应、等权 z 合成为总分 C，再让 C 在三个位置起作用（打分倾斜 w=0.3/0.5、剔最差十分位、两者叠加）；不跑 F1b 模拟器 ⇒ 无资金/出带/加成常量。用途见 05 号 F64（用户'所有因子一起干活'）"
+  },
+  "F65_n2_independent_ab.py": {
+   "shape": {
+    "capital": 1000000.0,
+    "top_n": 100,
+    "band": 8.0,
+    "hyst": 0.0
+   },
+   "hyst_kwargs": [],
+   "kind": "PRODUCTION",
+   "note": "生产构型独立 A/B（= plan.pick_shape(1e6)：100 万 / top100 / 8× 出带 / hold_bonus=0.0 / 整手 / 逐笔费用 / 涨跌停闸门），两套种子（F4_scores_seedA/B）× 两臂（BASE / N2 剔除合成分前 5%，实现=把被剔名字分数设 −inf）；复用 F1b.run_overlap_portfolio，不改冻结脚本。用途见 05 号 F65"
+  },
+  "F66_tail_metrics.py": {
+   "shape": {
+    "capital": null,
+    "top_n": null,
+    "band": null,
+    "hyst": null
+   },
+   "hyst_kwargs": [],
+   "kind": "NO_CONST",
+   "note": "只读 F52 的生产构型逐期序列（A0 = hyst=0.0）算尾部度量（ES5%/CDaR5/MDD + 月度口径），并落盘逐期 invested_ratio/n_positions（闭 KB14 #9 缺口）；不跑模拟器 ⇒ 脚本内无构型常量。用途见 05 号 F66（理论层 26 号 §可检验假设 3）"
+  },
+  "F67_microcap_control.py": {
+   "shape": {
+    "capital": 1000000.0,
+    "top_n": 100,
+    "band": 8.0,
+    "hyst": 0.0
+   },
+   "hyst_kwargs": [],
+   "kind": "PRODUCTION",
+   "note": "生产构型（100 万 / top100 / 8× 出带 / hold_bonus=0.0 / 整手 / 逐笔费用 / 涨跌停闸门）+ 逐期剔除最小 30% 市值（可交易域内重算分位）；两套种子跑 F1b 模拟器，基线取 F52 A0 序列。用途见 05 号 F67（理论层 23 号 §可检验假设 2：微盘对照）"
+  },
+  "F68_style_attribution.py": {
+   "shape": {
+    "capital": null,
+    "top_n": null,
+    "band": null,
+    "hyst": null
+   },
+   "hyst_kwargs": [],
+   "kind": "NO_CONST",
+   "note": "只读：F52 生产构型逐期序列 + 本地 factor 表（size/bp/mom_120/vol_60）+ 生产 PIT 掩码，构造四分位风格价差并做逐期超额的四因子 OLS（含 HAC t）；不跑模拟器 ⇒ 脚本内无构型常量。用途见 05 号 F68（理论层 23 号 §可检验假设 1：风格归因）"
+  },
+  "F69_capacity_estimate.py": {
+   "shape": {
+    "capital": null,
+    "top_n": null,
+    "band": null,
+    "hyst": null
+   },
+   "hyst_kwargs": [],
+   "kind": "NO_CONST",
+   "note": "只读：当前生产方案 data/weekly/plan_20260911.json（98 只）+ daily.amount/total_mv 算 ADV20 与容量上界（单票单次 ≤ p×ADV20，p=10% 主口径 + 5%/20% 敏感度；单票最坏成交 = C×w_i 整仓换手）；不跑模拟器 ⇒ 脚本内无构型常量。用途见 05 号 F69（F67 的容量后果）"
+  },
+  "F70_polarity_invariance.py": {
+   "shape": {
+    "capital": null,
+    "top_n": null,
+    "band": null,
+    "hyst": null
+   },
+   "hyst_kwargs": [],
+   "kind": "NO_CONST",
+   "note": "只读：已拟合的生产归档模型 data/models/ens/lgb_202608_s*.txt 在 X/−X 上推分对照 + 生产周频面板/生产 train() 的三臂重训（A 原样 / B 全取负 / C 按死区极性表取负），比逐票分差与各锚点 top100 集合重叠；只做切片统计、不跑组合模拟器 ⇒ 脚本内无构型常量（HEAD_N=100 只是统计口径）。用途见 05 号 F70（回答“要不要为因子极性改造模型层”）"
+  },
+  "F71_risk_weight_screen.py": {
+   "shape": {
+    "capital": null,
+    "top_n": 100,
+    "band": 8.0,
+    "hyst": null
+   },
+   "hyst_kwargs": [],
+   "kind": "OTHER_SHAPE",
+   "note": "连续近似 harness（无整手/无涨跌停闸门/每期满仓，只有臂间差有效）：TOP_N=100 与 BAND=8.0 是为了在**同一套选股域**里复刻现役构型（EB 臂），但**不跑** F1b 离散模拟器 ⇒ 无 CAPITAL/HYST 常量。基线取 EB（等权+8×带），另设 E 臂复现 F55 读数作口径保真锚。用途见 05 号 F71（理论层 26 号 §可检验假设 2：约束凸优化替代 top100+出带）"
+  },
+  "F72_wick_family_kgd.py": {
+   "shape": {
+    "capital": null,
+    "top_n": null,
+    "band": null,
+    "hyst": null
+   },
+   "hyst_kwargs": [],
+   "kind": "NO_CONST",
+   "note": "只读因子门禁：影线族 4 条（上/下影线 × W=5/10）在周锚点上的死区/活跃区头部超额 + HAC t + 与全部价量因子的 |ρ|，再按预注册判据判否；不跑组合模拟器 ⇒ 脚本内无构型常量。用途见 05 号 F72（answer：quantskills 四族在因子层全部关闭）"
+  },
+  "F75_intraday_minute_kgd.py": {
+   "shape": {
+    "capital": null,
+    "top_n": null,
+    "band": null,
+    "hyst": null
+   },
+   "hyst_kwargs": [],
+   "kind": "OTHER_SHAPE",
+   "note": "日内(60min)因子族 KGD 门禁——3 条 id60_* 因子死区判据(预注册 F75_intraday_prereg.md)，不使用组合构型(2026-09-17 补申报, 文件系 baostock 工作流产出被例行提交扫入)"
+  },
+  "F76_label_concurrency.py": {
+   "shape": {
+    "capital": null,
+    "top_n": null,
+    "band": null,
+    "hyst": null
+   },
+   "hyst_kwargs": [],
+   "kind": "NO_CONST",
+   "note": "标签并发/唯一性诊断(月频 c̄=1.0610 与 López de Prado u_i, 对照 trainer 生产锚点口径; P0-1 前置测量, 判 ab_with_uniqueness_weights ⇒ trainer 加 sample_weight_mode 实验参数); 只读日历与锚点 ⇒ 无构型常量。用途见 05 号 F76"
+  },
+  "F76b_uniqueness_ab.py": {
+   "shape": {
+    "capital": null,
+    "top_n": 100,
+    "band": null,
+    "hyst": null
+   },
+   "hyst_kwargs": [],
+   "kind": "OTHER_SHAPE",
+   "note": "P0-1 判决轮: 唯一性权重 A/B(双种子 × 隔离表重训)。研究层读数 = F56 同源连续近似(生产 PIT 掩码 + top100 等权 + 21 日 forward_excess, top_n=100 只用于选股); 组合层走生产回测引擎默认构型零覆盖, 不跑 F1b 模拟器 ⇒ 无资金/出带/加成常量。隔离 score/importance 表 + 归档 data/models/ab_uw_*。用途见 05 号 F76b"
+  },
+  "F56b_purged_cscv.py": {
+   "shape": {
+    "capital": null,
+    "top_n": 100,
+    "band": null,
+    "hyst": null
+   },
+   "hyst_kwargs": [],
+   "kind": "OTHER_SHAPE",
+   "note": "Phase B: F56 的 purged-CSCV 复核(同一 20 臂 R 矩阵 + ±1 锚点边界 purge, 周锚点 5 日标签窗重叠最远 ±1)。top_n=100 只用于研究层等权选股(连续近似); 不跑组合模拟器 ⇒ 无资金/出带/加成常量; 只读 npz 与行情缓存, 零 DB 写。用途见 05 号 F56b"
+  },
+  "F77_group_ablation.py": {
+   "shape": {
+    "capital": null,
+    "top_n": 100,
+    "band": null,
+    "hyst": null
+   },
+   "hyst_kwargs": [],
+   "kind": "OTHER_SHAPE",
+   "note": "P0-3 判决轮: 组级消融(27号 §十二#5)。双种子 × factors_override 隔离表重训(model_score_ab_g{0..3}_{a,b}); G0 也走 override 同路径, 生产路径旁证锚=现役 model_score(F76b base_A); sanity 门 Spearman>=0.999 / top100 Jaccard>=0.9 不过即停轮。top_n=100 仅研究层读数(F56/F76b 同源: PIT 掩码+等权 top100+21 日 forward_excess), 不跑 F1b 模拟器 ⇒ 无资金/出带/加成常量;组合层走 E.run_backtest 生产构型。预注册 plans/f77-group-ablation-20260919.md"
+  },
+  "F78_seed_variance_calibration.py": {
+   "shape": {
+    "capital": null,
+    "top_n": 100,
+    "band": null,
+    "hyst": null
+   },
+   "hyst_kwargs": [],
+   "kind": "OTHER_SHAPE",
+   "note": "P0-4 方差标定（**只量仪器，不是判决轮**）：组A 6臂×K=4 + 组B 3臂×K=16，72 个互异 seed、臂间零重叠、与生产零重叠；隔离表 model_score_f78_* + 归档 data/models/f78_*。top_n=100 只用于研究层读数（F56/F76b 同源：PIT 掩码 + 等权 top100 + 21 日 forward_excess）；组合层走 E.run_backtest 生产构型、全窗(20170101)零覆盖 ⇒ 无资金/出带/加成常量。不判任何候选、不动 pin、不写生产表。预注册 plans/f78-seed-variance-calibration-20260921.md，结果见 05 号 §5.7"
+  }
+ }
+}

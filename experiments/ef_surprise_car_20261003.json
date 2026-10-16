@@ -1,0 +1,71 @@
+{
+ "ran_at": "2026-10-03 19:36:36",
+ "prereg": "plans/ef-surprise-car-prereg-20261003.md",
+ "n_ef_events": 110960,
+ "n_with_yoy": 26718,
+ "coverage_by_year": {
+  "2019": 2124,
+  "2020": 2142,
+  "2021": 2169,
+  "2022": 2091,
+  "2023": 1994,
+  "2024": 1902,
+  "2025": 1645,
+  "2026": 1676
+ },
+ "buckets": {
+  "good": {
+   "n": 16958,
+   "mean_CAR21": 0.02577,
+   "t_per_event": 23.54,
+   "exact_baseline": 0.02114,
+   "excess": 0.00464,
+   "excess_z": 4.24,
+   "yoy_median": 70.455,
+   "years": 2019,
+   "-": 2026
+  },
+  "bad": {
+   "n": 9573,
+   "mean_CAR21": 0.02243,
+   "t_per_event": 14.17,
+   "exact_baseline": 0.0184,
+   "excess": 0.00403,
+   "excess_z": 2.55,
+   "yoy_median": -67.0,
+   "years": 2019,
+   "-": 2026
+  }
+ },
+ "C1_spread": {
+  "full_t": 1.73,
+  "subwindows": {
+   "2019-2022": {
+    "spread_t": 1.12,
+    "n_good": 10568,
+    "n_bad": 5493
+   },
+   "2023-2026": {
+    "spread_t": 0.55,
+    "n_good": 6390,
+    "n_bad": 4080
+   }
+  },
+  "sign_consistency": false
+ },
+ "C2_magnitude_terciles_descriptive": {
+  "good": {
+   "T1": 0.02319,
+   "T2": 0.02384,
+   "T3": 0.03028
+  },
+  "bad": {
+   "T1": 0.02137,
+   "T2": 0.0222,
+   "T3": 0.02373
+  }
+ },
+ "criteria": "spread |t|>=2 且双子窗同号且各自|t|>=1.5 且两桶超额符号与 spread 一致",
+ "verdict": "本构造下未证实",
+ "elapsed_sec": 45.5
+}

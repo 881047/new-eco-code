@@ -1,0 +1,264 @@
+{
+ "script_sha": "450814fcd330d234",
+ "arms_registered": [
+  "NEUT_SIZE",
+  "NEUT_ALL"
+ ],
+ "active_bar_pp": 10.0,
+ "windows": {
+  "full": [
+   "2010-01-01",
+   "2030-12-31"
+  ],
+  "dead": [
+   "2020-09-01",
+   "2023-12-31"
+  ],
+  "active": [
+   "2024-01-01",
+   "2026-08-31"
+  ]
+ },
+ "arms": {
+  "SA": {
+   "BASE": {
+    "full": {
+     "n": 491,
+     "excess_pp": 14.91,
+     "mdd": -0.3228,
+     "turnover": 0.118
+    },
+    "dead": {
+     "n": 169,
+     "ann": 0.2421,
+     "excess_pp": 20.91,
+     "mdd": -0.1383,
+     "turnover": 0.114
+    },
+    "active": {
+     "n": 138,
+     "ann": 0.226,
+     "excess_pp": 7.34,
+     "mdd": -0.3228,
+     "turnover": 0.092
+    },
+    "t_diff_vs_base": null
+   },
+   "NEUT_SIZE": {
+    "full": {
+     "n": 491,
+     "excess_pp": 3.37,
+     "mdd": -0.1994,
+     "turnover": 0.106
+    },
+    "dead": {
+     "n": 169,
+     "ann": 0.0553,
+     "excess_pp": 2.23,
+     "mdd": -0.1333,
+     "turnover": 0.141
+    },
+    "active": {
+     "n": 138,
+     "ann": 0.1076,
+     "excess_pp": -4.5,
+     "mdd": -0.1101,
+     "turnover": 0.04
+    },
+    "t_diff_vs_base": -2.67
+   },
+   "NEUT_ALL": {
+    "full": {
+     "n": 491,
+     "excess_pp": -3.27,
+     "mdd": -0.3524,
+     "turnover": 0.128
+    },
+    "dead": {
+     "n": 169,
+     "ann": -0.0275,
+     "excess_pp": -6.05,
+     "mdd": -0.2358,
+     "turnover": 0.152
+    },
+    "active": {
+     "n": 138,
+     "ann": 0.0732,
+     "excess_pp": -7.94,
+     "mdd": -0.1936,
+     "turnover": 0.103
+    },
+    "t_diff_vs_base": -4.11
+   }
+  },
+  "SB": {
+   "BASE": {
+    "full": {
+     "n": 491,
+     "excess_pp": 15.07,
+     "mdd": -0.3212,
+     "turnover": 0.119
+    },
+    "dead": {
+     "n": 169,
+     "ann": 0.2539,
+     "excess_pp": 22.1,
+     "mdd": -0.1323,
+     "turnover": 0.115
+    },
+    "active": {
+     "n": 138,
+     "ann": 0.2409,
+     "excess_pp": 8.83,
+     "mdd": -0.3212,
+     "turnover": 0.093
+    },
+    "t_diff_vs_base": null
+   },
+   "NEUT_SIZE": {
+    "full": {
+     "n": 491,
+     "excess_pp": 3.41,
+     "mdd": -0.2137,
+     "turnover": 0.107
+    },
+    "dead": {
+     "n": 169,
+     "ann": 0.0579,
+     "excess_pp": 2.49,
+     "mdd": -0.1355,
+     "turnover": 0.14
+    },
+    "active": {
+     "n": 138,
+     "ann": 0.113,
+     "excess_pp": -3.96,
+     "mdd": -0.1061,
+     "turnover": 0.04
+    },
+    "t_diff_vs_base": -2.67
+   },
+   "NEUT_ALL": {
+    "full": {
+     "n": 491,
+     "excess_pp": -3.1,
+     "mdd": -0.3263,
+     "turnover": 0.13
+    },
+    "dead": {
+     "n": 169,
+     "ann": -0.0142,
+     "excess_pp": -4.72,
+     "mdd": -0.2288,
+     "turnover": 0.152
+    },
+    "active": {
+     "n": 138,
+     "ann": 0.0717,
+     "excess_pp": -8.09,
+     "mdd": -0.199,
+     "turnover": 0.102
+    },
+    "t_diff_vs_base": -4.02
+   }
+  }
+ },
+ "exposure": {
+  "SA": {
+   "BASE": {
+    "per_style_z": {
+     "size": -0.9104,
+     "mom_20": -0.4587,
+     "mom_60": -0.4384,
+     "vol_20": -0.0723,
+     "turn_20": -0.1486,
+     "ep": -0.3115,
+     "bp": -0.0898,
+     "dv": -0.1885,
+     "rev_5": 0.3586
+    },
+    "mean_abs_z": 0.3308
+   },
+   "NEUT_SIZE": {
+    "per_style_z": {
+     "size": 0.362,
+     "mom_20": -0.3503,
+     "mom_60": -0.2552,
+     "vol_20": -0.2677,
+     "turn_20": -0.3237,
+     "ep": 0.6085,
+     "bp": 0.4411,
+     "dv": 0.3139,
+     "rev_5": 0.3124
+    },
+    "mean_abs_z": 0.3594
+   },
+   "NEUT_ALL": {
+    "per_style_z": {
+     "size": 0.3434,
+     "mom_20": 0.5271,
+     "mom_60": 0.5476,
+     "vol_20": 0.7326,
+     "turn_20": 0.6033,
+     "ep": -0.1668,
+     "bp": -0.3389,
+     "dv": -0.1744,
+     "rev_5": -0.3516
+    },
+    "mean_abs_z": 0.4206
+   }
+  },
+  "SB": {
+   "BASE": {
+    "per_style_z": {
+     "size": -0.9113,
+     "mom_20": -0.4586,
+     "mom_60": -0.4397,
+     "vol_20": -0.0688,
+     "turn_20": -0.1435,
+     "ep": -0.3074,
+     "bp": -0.0924,
+     "dv": -0.1889,
+     "rev_5": 0.3565
+    },
+    "mean_abs_z": 0.3297
+   },
+   "NEUT_SIZE": {
+    "per_style_z": {
+     "size": 0.398,
+     "mom_20": -0.3453,
+     "mom_60": -0.2431,
+     "vol_20": -0.2749,
+     "turn_20": -0.3269,
+     "ep": 0.6399,
+     "bp": 0.4696,
+     "dv": 0.3363,
+     "rev_5": 0.312
+    },
+    "mean_abs_z": 0.3718
+   },
+   "NEUT_ALL": {
+    "per_style_z": {
+     "size": 0.3704,
+     "mom_20": 0.5534,
+     "mom_60": 0.5768,
+     "vol_20": 0.7449,
+     "turn_20": 0.621,
+     "ep": -0.1628,
+     "bp": -0.3386,
+     "dv": -0.1748,
+     "rev_5": -0.3716
+    },
+    "mean_abs_z": 0.4349
+   }
+  }
+ },
+ "verdict": {
+  "exposure_check_passed": false,
+  "candidates_passed": [],
+  "primary_arm": "NEUT_ALL",
+  "criteria": "两套种子同时: ①ACTIVE ≥ +10pp 且 ≥ BASE ②全史 MDD ≥ BASE×1.10 ③篮子平均|风格z| ≤ BASE 的 1/2",
+  "note": "ACTIVE 是 F28 已开封的留出集, 本读数**不是**新的显著性证据(F38 DSR 已不通过)"
+ },
+ "secs": 374.0
+}

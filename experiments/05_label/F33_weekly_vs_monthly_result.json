@@ -1,0 +1,160 @@
+{
+ "script_sha": "96655082244ad1d3",
+ "sets": {
+  "SA": [
+   42,
+   7,
+   123,
+   2024
+  ],
+  "SB": [
+   43,
+   8,
+   124,
+   2025
+  ]
+ },
+ "arms": {
+  "SA": {
+   "W5w": {
+    "full": {
+     "n": 491,
+     "excess_pp": 14.91,
+     "mdd": -0.3228,
+     "turnover": 0.118,
+     "inv": 0.7693,
+     "t": 4.28
+    },
+    "OOS": {
+     "n": 138,
+     "excess_pp": 7.34,
+     "mdd": -0.3228,
+     "turnover": 0.092,
+     "inv": 0.7809,
+     "t": 0.78
+    },
+    "n_per_year": 52.0,
+    "horizon": 5
+   },
+   "W5m": {
+    "full": {
+     "n": 115,
+     "excess_pp": 9.35,
+     "mdd": -0.2934,
+     "turnover": 0.252,
+     "inv": 0.7525,
+     "t": 3.01
+    },
+    "OOS": {
+     "n": 32,
+     "excess_pp": 3.86,
+     "mdd": -0.2514,
+     "turnover": 0.188,
+     "inv": 0.7594,
+     "t": 0.46
+    },
+    "n_per_year": 12.0,
+    "horizon": 5
+   },
+   "M21": {
+    "full": {
+     "n": 108,
+     "excess_pp": 11.33,
+     "mdd": -0.2728,
+     "turnover": 0.191,
+     "inv": 0.7434,
+     "t": 3.26
+    },
+    "OOS": {
+     "n": 32,
+     "excess_pp": 7.68,
+     "mdd": -0.2319,
+     "turnover": 0.142,
+     "inv": 0.7548,
+     "t": 0.99
+    },
+    "n_per_year": 12.0,
+    "horizon": 21
+   }
+  },
+  "SB": {
+   "W5w": {
+    "full": {
+     "n": 491,
+     "excess_pp": 15.07,
+     "mdd": -0.3212,
+     "turnover": 0.119,
+     "inv": 0.7673,
+     "t": 4.36
+    },
+    "OOS": {
+     "n": 138,
+     "excess_pp": 8.83,
+     "mdd": -0.3212,
+     "turnover": 0.093,
+     "inv": 0.7785,
+     "t": 0.96
+    },
+    "n_per_year": 52.0,
+    "horizon": 5
+   },
+   "W5m": {
+    "full": {
+     "n": 115,
+     "excess_pp": 9.98,
+     "mdd": -0.292,
+     "turnover": 0.258,
+     "inv": 0.7547,
+     "t": 3.19
+    },
+    "OOS": {
+     "n": 32,
+     "excess_pp": 4.86,
+     "mdd": -0.2438,
+     "turnover": 0.196,
+     "inv": 0.7621,
+     "t": 0.59
+    },
+    "n_per_year": 12.0,
+    "horizon": 5
+   },
+   "M21": {
+    "full": {
+     "n": 108,
+     "excess_pp": 11.05,
+     "mdd": -0.2702,
+     "turnover": 0.192,
+     "inv": 0.7454,
+     "t": 3.15
+    },
+    "OOS": {
+     "n": 32,
+     "excess_pp": 8.33,
+     "mdd": -0.2401,
+     "turnover": 0.139,
+     "inv": 0.7559,
+     "t": 1.05
+    },
+    "n_per_year": 12.0,
+    "horizon": 21
+   }
+  }
+ },
+ "verdict": {
+  "monthly_beats_weekly": false,
+  "per_set": {
+   "SA": {
+    "excess_delta_pp": -3.58,
+    "mdd_delta_pp": 5.0,
+    "pass": false
+   },
+   "SB": {
+    "excess_delta_pp": -4.02,
+    "mdd_delta_pp": 5.1,
+    "pass": false
+   }
+  },
+  "criteria": "两套种子同时: 月频超额≥周频 且 MDD不劣 且 至少一轴改善(超额≥2pp 或 MDD≥5pp)"
+ },
+ "secs": 634.6
+}

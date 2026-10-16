@@ -1,0 +1,77 @@
+{
+ "date": "2026-09-16 20:51:34",
+ "purpose": "MOD-05 采纳决策的种子稳健性扩展（用户拍板：双种子同向才重新考虑采纳）",
+ "criteria": {
+  "p1_gain": 0.03,
+  "full_drop_max": -0.02,
+  "mdd_worse_max": 0.005
+ },
+ "seed_sets": {
+  "b": [
+   11,
+   37,
+   101,
+   777
+  ],
+  "c": [
+   5,
+   53,
+   208,
+   1999
+  ]
+ },
+ "rows": [
+  {
+   "seeds": "b",
+   "ho": 6,
+   "run": "20260916_ho6sb",
+   "sys_ann": 0.1619,
+   "sys_mdd": -0.1997,
+   "idle": 0.3016,
+   "ic": 0.0964
+  },
+  {
+   "seeds": "b",
+   "ho": 3,
+   "run": "20260916_ho3sb",
+   "sys_ann": 0.1026,
+   "sys_mdd": -0.2027,
+   "idle": 0.3003,
+   "ic": 0.1016
+  },
+  {
+   "seeds": "c",
+   "ho": 6,
+   "run": "20260916_ho6sc",
+   "sys_ann": 0.1173,
+   "sys_mdd": -0.2035,
+   "idle": 0.3002,
+   "ic": 0.0968
+  },
+  {
+   "seeds": "c",
+   "ho": 3,
+   "run": "20260916_ho3sc",
+   "sys_ann": 0.1605,
+   "sys_mdd": -0.219,
+   "idle": 0.3181,
+   "ic": 0.1004
+  }
+ ],
+ "verdicts": {
+  "b": {
+   "d_p1": -0.1281,
+   "d_full": -0.0593,
+   "mdd_worse": 0.003,
+   "passed": false
+  },
+  "c": {
+   "d_p1": -0.0011,
+   "d_full": 0.0432,
+   "mdd_worse": 0.0155,
+   "passed": false
+  }
+ },
+ "all_pass": false,
+ "note": "对照臂与 pin 的绝对差只作快照漂移读数（exp_holdout_recent v2 语义）"
+}

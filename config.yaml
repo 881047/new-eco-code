@@ -1,0 +1,303 @@
+capital: 20000
+risk_profile: aggressive
+max_stocks: 6
+industry_max_weight: 0.25
+single_side_cost: 0.003
+# 训练起点 vs 评估起点(2026-09-11 拆开, 用户拍板) —— 详见 app/config.py 同名键注释:
+#   data_start  训练数据/评分月起点; null = 全历史(2026-09-10 前的原本行为)
+#   eval_start  回测评估窗口起点, 不喂给 trainer
+# 本为同一个键(data_start='20190722'), 但实测两半效应方向相反: 评估窗那半 +9.59pp 是
+# **纯口径**(删掉 2018 崩盘), 训练起点那半是 **-5.22pp 的负贡献**。现按用户 2026-09-11
+# 拍板恢复全历史训练、保留评估窗。
+data_start:
+eval_start: '20190722'
+# ---- 第 5 次重钉(2026-09-26, 用户拍板采纳 chase6 建仓追高剔除闸) ----
+# pin 现行基线: 恒定权益 0.873 + 固定 6 只 + 全历史训练 + 评估窗 2019-07-22 起 —— **85 期**,
+# 满仓 20.09%/-27.92%(夏普 0.718), 系统 17.04%/-22.66%(日频 -32.77%), 基准 **6.02%**/超额
+# **+14.07pp/年**/胜率 0.5529, IC 0.0962/ICIR 0.862, 实持 4.89/闲置 29.39%/换手 89.46%。
+# 全史窗 115 期: 满仓 9.93%/-51.07%, 系统 8.60%/−41.88%(日频 -42.42%), 基准 5.31%/超额 +4.62pp。
+# **口径: 不含 2017-10-11→2018-10-25, 即旧基线最大回撤 -41.90% 所在的那段** —— 引用必须一并写明。
+# ⚠️ 由来: chase6(建仓追高剔除闸)三轮预注册 A/B 过判据后用户拍板采纳 —— 建仓候选中
+# chase_z = max(z(mom5), z(devvwap)) > 2.0 的票**剔除、不补位**(单一实现
+# app/portfolio/chase.py; engine/builder 同一实现; 信号只用锚点日及以前数据, 无前视)。
+# 证据链: plans/risk-overlay-prereg-20260926.md(85 期 +2.07pp, 回撤轴 0) →
+# chase6-fullhist(全史 +1.47pp 确认) → chase6-round3(θ 剂量曲线 1.5/2.0/2.5 →
+# +0.80/+1.47/+1.10pp 全≥0.5pp; min60 原信号 +0.13pp 方向不反) —— 05 号台账 七补/九补。
+# Δ(逐位与 A/B chase6 臂一致, 生产实现=实验实现的交叉验证): 系统 +2.07pp(85 期)/+1.47pp(全史)、
+# 满仓 +2.27pp/+1.59pp、超额 +11.80→+14.07pp; 回撤轴 ≈0(日频 -32.77% 一位不动 —— 05 号 九补:
+# 月内回撤是系统性的, 本闸不是回撤工具); 闲置 28.06→29.39%(少买留现金)、实持 5.00→4.89。
+# 旧 pin 20260922_trbench 满仓 17.82%/-28.38%、系统 14.97%/-22.80%、超额 +11.80pp(行仍在库可回滚;
+# 回滚 = config chase.enabled: false + backtest_run 改回, 读数可由现行代码复现 —— chase 是
+# config 门控的可插拔闸, 不存在"旧读数产不出"问题)。
+# 证据: `scripts/pin_baseline.py --tag chase2`(20260926_chase2 / _full 两 run 留痕保留不自清)。
+#
+# ---- 第 4 次重钉(2026-09-22, 用户拍板提前 --full 全量重训) ----
+# pin 现行基线: 恒定权益 0.873 + 固定 6 只 + 全历史训练 + 评估窗 2019-07-22 起 —— **85 期**,
+# 满仓 17.82%/-28.38%(夏普 0.617), 系统 14.97%/-22.80%(日频 -32.77%), 基准 **6.02%**/超额
+# **+11.80pp/年**/胜率 0.5294, IC 0.0962/ICIR 0.862, 实持 5.00/闲置 28.06%/换手 89.54%。
+# 全史窗 115 期: 满仓 8.34%/-51.26%, 系统 7.13%/-42.10%(日频 -42.64%)。
+# **口径: 不含 2017-10-11→2018-10-25, 即旧基线最大回撤 -41.90% 所在的那段** —— 引用必须一并写明。
+# ⚠️ 由来: 用户推翻 D3"不提前重训"(2026-09-22), 15:29 备份后 15:30 跑 `scripts/train_model.py
+# --full` 重写全史 116 期 model_score(444,312 行; trained_at 15:37:05 / data_asof 20260921,
+# 溯源三键齐) ⇒ 旧 pin 读数系 **09-09 模型快照、现行代码已产不出**(保留 = 重演 09-12
+# "pin 悄悄失效"事故) ⇒ 必须重钉。
+# Δ: 满仓 -4.80pp、系统 -4.43pp(prod) / -3.03pp(full) —— full 窗 7.13% 与 F78b 探针 P1
+# **逐位一致** ⇒ 可复现性验证通过, 即"现行代码+现行数据"的真实产能; 超额 +16.60→+11.80pp
+# (基准腿不变 6.02%), IC/ICIR 持平略升(0.0959→0.0962 / 0.860→0.862)。
+# 证据: `scripts/pin_baseline.py --tag trbench`(20260922_trbench / _full 两 run 留痕保留不自清)
+# + `plans/early-full-retrain-20260922.md`(决策记录, 含 D3 推翻)。
+# ⚠️ 上一档 **不可再生**: 旧 model_score 行已被 --full 覆盖(备份 neweco_20260922.db 可查),
+# backtest_summary/nav 留痕仍可查, 但回滚 backtest_run 数字 ≠ 复现读数。
+# 上一档 20260920_trbench(2026-09-20 **第 3 次重钉**, 报告腿换全收益指数): 恒定权益 0.873 + 固定 6 只
+# + 全历史训练 + 评估窗 2019-07-22 起 —— **85 期**, 满仓 22.62%/-24.10%(夏普 0.853), 系统
+# 19.40%/-19.66%(日频 -31.72%), 基准 **6.02%**/超额 **+16.60pp/年**/胜率 0.6235,
+# IC 0.0959/ICIR 0.860, 实持 4.94/闲置 28.71%/换手 90.18%。全史窗 115 期: 满仓 11.59%/-51.26%,
+# 系统 10.16%/-42.10%(日频 -42.64%), 基准 5.31%/超额 +6.28pp。
+# ⚠️ **本次只换"报出来的超额/基准/胜率"这一族字段**：基准腿从价格指数 000906.SH 换成同一家
+# 中证公司发布的**全收益指数 H00906.CSI**(税前分红再投资) —— 持仓腿本来就是 `close×adj_factor`
+# (全收益), 两腿不同尺使超额凭空高出一个基准股息率(真尺 A/B 实测 **2.22pp/年**, 两窗一致)。
+# 策略/成交/决策**零改动**：新行 31 个键与 20260919_b1real_prod_c 逐位相等(只差 run_date 本身),
+# 净值/回撤/换手/IC 全部不变。判据与证据: `plans/b1-tr-pin-adoption-20260920.md`、
+# `logs/b1_pin_evidence_{before,after}.json`(22 个价量因子整体指纹改前=改后)。
+# ⚠️ 与上一档比还有两处**与换尺无关**的已知差: 换手 0.8912→0.9018(=×85/84, 05 号 P2-1 分母修正)、
+# ICIR 0.859→0.860(因子表 09-16~18 刷新, 第 4 位、不跨判档)。别把它们当成"换尺换坏了"。
+# 旧 pin `20260912_limitquant`(超额 +18.82pp, 价格指数尺)**行仍在库**, 可回滚; 但回滚
+# `benchmark_nav_code` 必须显式写 000906.SH(缺省已是全收益, 删行不等于退回旧尺)。
+#
+# ---- 第 2 次重钉(2026-09-12, E5 限价入参量化), 价格指数尺 ----
+# 满仓 22.62%/-24.10%, IC 0.0959/ICIR 0.859, 换手 89.12%; 全史 115 期满仓 11.59%/-51.26%。
+# **口径: 不含 2017-10-11→2018-10-25, 即旧基线最大回撤 -41.90% 所在的那段** ——
+# 引用本成绩必须一并写明, 详见 eval_start 注释与 app/config.py。
+#
+# ⚠️ 第 2 次重钉的由来(2026-09-12): E5 预注册判决 **P2 = PASS**(与真值臂读 `stk_limit`
+# 公布值**位级一致**, 最大绝对差 0.000e+00)⇒ `_exec_side` 的限价入参量化回分, 修掉
+# float32 让"限价比交易所低一分"的老缺陷。它改成交口径, 故按纪律独立预注册 + 组合层
+# 两轴判决后才落地、落地必重钉。**代价方向是变差**(限价修对 ⇒ 回测买不进/卖不出的票
+# 被如实挡住): 满仓 -1.15pp/年、系统 -1.07pp/年, 两窗回撤**一格未动**。
+# 证据: `experiments/01_data/E5_float32_limit.py` + `E5_float32_result.json` +
+# `tests/test_limit_precision.py`。
+# ⭐ **本档与上一档都可再生**(补上了上一次事故暴露的缺口):
+#   本档 = 现行代码; 上一档 `20260912_fullhist`(23.77%/20.47%, full 12.36%/10.90%)
+#   = 把 `app/backtest/engine.py` 的 `PRE_CLOSE_QUANTIZE` 置 False 后逐位复现。
+#
+# 第 1 次重钉的由来(同一日, 保留作前例): D06/D07 限幅修复进生产(7 个文件, A→B =
+# -0.17pp/年)**没有重钉基线**, 于是旧 pin `20260911_fullhist` 记的 23.97%/20.64% 变成
+# 现行代码产不出的数字。它咬掉两个预注册脚本(ab_const_n_5v6.py 第 1 轮整轮作废、
+# exp_train_months.py 的 VALIDATE 同形)。根因是 pin **没有再生路径**, 故补
+# `scripts/pin_baseline.py`(只测量、不自动改本文件)。
+# 📌 现已作废但**有再生路径**的历史档: `20260911_fullhist`(23.97%/20.64%)= D06/D07
+# 修复前口径; `20260912_fullhist` = float32 限价口径。两个都靠对应开关/分支复现, 所以
+# `ab_const_n_5v6*.py` 那类"比旧 pin"的预注册脚本仍可复跑, 只是要先回到它那时的口径。
+# **Δ 不受影响**(每个实验都自带同期控制臂, 两臂同代码) ⇒ 历史判决无需重跑。
+#
+# 上一档 20260910_star19start(训练也截到 2019-07)72 期, 满仓 16.59%/-24.10%(夏普 0.616),
+# 系统 15.42%/-21.26%(日频 -32.95%), IC 0.0869, 保留可回滚对比;
+# 再上档 20260910_const873_fix6(全窗口 2017 起)满仓 12.56%/-51.00%, 系统
+# 11.05%/-41.90%(日频 -42.44%), 满仓夏普 0.430 / 系统 0.428, 保留可回滚对比;
+# 更旧的 20260910_fees0910(择时 1.0/0.9/0.8 + 6/5/4) = 满仓 11.80%/-58.75%,
+# 系统 7.86%/-51.81%。注: 历史上的「夏普 0.61」对不上 const873_fix6 —— 该 pin 实为
+# 0.430; 0.616 是 star19start 的满仓线夏普。engine 的 sharpe 字段口径 = (满仓年化-RF)/满仓波动。
+# ---- 生产因子剔除（2026-09-27 第 6 次重钉采纳, 用户指令"继续"拍板） ----
+# S5 时效轴官方重测（05 号台账 十七补）: 下列 5 因子执行延迟半衰期 1 个月(HL=1 < 2×调仓周期)。
+# 池剔除 A/B（plans/excl-pool-ab-prereg-20260927.md, 台账十九补 padm_exclmin）组合层 PASS:
+# Δsys_ann prod +5.08/+8.39pp、full +5.20/+6.19pp（双种子集双窗全过 P1）、回撤改善、换手下降。
+# ⚠️ 改动本键 ⇒ 因子指纹变更 ⇒ 增量训练被守卫拒绝, 必须 train_model.py --full 全量重训。
+# factor 表仍写全量 31 个（剔除只发生在训练/评分消费侧）—— 重测/审读机器不受影响。
+factor_exclusions: [bias_60, high_52w, lhb_cnt20, lhb_net20, rev_5]
+# ---- 第 6 次重钉(2026-09-27, 用户指令"继续"拍板采纳池剔除 A/B) ----
+# pin 现行基线(重钉于 20260927): 恒定权益 0.873 + 固定 6 只 + 全历史训练 +
+# 评估窗 20190722 起 + factor_exclusions 剔除 5 个 S5 判否因子(HL=1) —— **85 期**,
+# 满仓 28.32%/-25.84%(夏普 0.977), 系统 22.12%/-22.10%(日频 -34.82%),
+# IC 0.0991/ICIR 0.851, 实持 4.93/闲置 30.05%/换手 88.65%。
+# 全史窗(115 期): 满仓 16.37%/-43.36%, 系统 13.80%/-34.41%(日频 -35.51%)。
+# vs 旧 pin(31 因子): 系统 +5.08pp(prod)/+5.20pp(full), 回撤改善 —— 组合层档 PASS
+# (padm_exclmin 双种子集全过 P1/P2/P3)。证据链: 预注册 excl-pool-ab + 台账十九/二十补。
+# 读数由 scripts/pin_baseline.py --tag excl5 产出(20260927_excl5 / _full 两 run 留痕保留)。
+# 旧 pin 20260926_chase2(31 因子) 满仓 20.09%/-27.92%、系统 17.04%/-22.66% 仍可回滚
+# (回滚 = 清 factor_exclusions + backtest_run 改回 + --full 重训, chasing6 同款可插拔)。
+# ---- 第 7 次重钉(2026-09-28, 预注册 plans/metric-fix-batch-prereg-20260928.md 判据全 PASS) ----
+# pin 现行基线: 恒定权益 0.873 + 固定 6 只 + 全历史训练 + 评估窗 20190722 起 +
+# factor_exclusions 剔 5 个 S5 判否因子 —— **85 期**, 满仓 28.32%/-25.84%(夏普 0.977),
+# 系统 22.12%/-22.10%(日频 -34.82%), IC 0.0991/ICIR 0.851, 实持 4.93/闲置 30.05%/换手 88.65%。
+# 全史窗(115 期): 满仓 16.37%/-43.36%, 系统 13.80%/-34.41%(日频 -35.45%)。
+# ⚠️ 本次只动**报告层指标**, 撮合/账务/成本口径零改动: ① sys_ann_return 年化频率与满仓线
+# 同源自适应 ppy(原硬编码 12 —— 现役 month 锚下逐位不变, 防 week/双月锚 A/B 读错系统线);
+# ② 日频 MDD 锯齿去除(锚点日在内存日频序列曾"近似行/精确行"双记 ⇒ 指标与
+# backtest_nav_daily 不可互审、回撤被虚高峰值人为放大; 修复=锚点日只保留精确行);
+# ③ board_of 沪B 900xxx 归类修正(原被 ("4","8","9") 归 bse ±30%; 候选域无 9 开头行 ⇒ Δ=0)。
+# 对照(逐键比对 20260927_excl5{,_full}): **prod 全键逐位不变**; full 仅 sys_mdd_daily
+# -35.51%→-35.45%(改善方向 —— 锯齿虚高峰点恰在全史窗构成全局最深点)。
+# 读数由 scripts/pin_baseline.py --tag excl5mdd 产出(20260928_excl5mdd / _full 两 run
+# 留痕保留不自清)。旧 pin 20260927_excl5 各项收益/回撤与新 pin 逐位相等(仅全史日频差
+# 0.06pp), 旧 run 行保留在库; 回滚 = backtest_run 改回(旧读数由 git 历史代码复现)。
+# ---- 第 8 次重钉(2026-09-28, 预注册 plans/pin-exec-round-prereg-20260928.md) ----
+# pin 现行基线: 恒定权益 0.873 + 固定 6 只 + 全历史训练 + 评估窗 20190722 起 +
+# factor_exclusions 剔 5 个 S5 判否因子 + **开盘价撮合(FILL_AT_OPEN=True)** +
+# 重叠持仓 Δshares 计费(OVERLAP_REBAL_COST=True) —— **85 期**, 满仓 31.68%/-23.63%
+# (夏普 1.102), 系统 29.13%/-18.17%(日频 -33.58%), IC 0.0991/ICIR 0.851,
+# 实持 4.94/闲置 29.68%/换手 88.65%。
+# 全史窗(115 期): 满仓 18.65%/-38.19%, 系统 18.77%/-32.14%(日频 -33.58%)。
+# ⚠️ Δ vs 旧 pin: 系统 +7.01pp(prod)/+4.97pp(full) —— 但**该 Δ 不是"执行层 alpha"的证据**。
+#   diag_exec_pin_delta_20260928.py 按 trade_date 配对的月度 Δ: 配对 t=1.84/1.74(未达 2)、
+#   符号一致率 54.8%/51.8%(未达 2/3)、最大 3 月占 Δ 比 67.3%/64.8%(超 60% 阈值)、
+#   月度 Δ 中位数仅 +0.018pp/+0.009pp(均值远大于中位数 ⇒ 高度右偏, 靠少数月撑起)。
+#   合成 golden 宇宙上同口径仅 +0.41pp(系统)且**系统回撤恶化 0.35pp**、胜率 -3.45pp。
+#   ⇒ 翻开关的**唯一正当理由是消灭回测/实盘撮合分叉**(实盘 app/paper/engine.py:148
+#   一直是次日开盘价 + 滑点成交), 不是收益。**对外引用产能时不得把 +7pp 记作策略提升。**
+# ⚠️ 遗留乐观偏差: 回测开盘成交沿用 slip=0.001(10bp)。微盘股开盘流动性差, 实盘真实
+#   滑点可能显著高于此 ⇒ 本读数偏乐观, 待实盘 price_fn 实测对账(见计划 §七)。
+# 回滚 = backtest_run 改回 20260928_excl5mdd + 两个开关翻回 False(旧读数由 git 历史复现)。
+backtest_run: 20260928_exe
+# 持仓只数(2026-09-10): 原按状态收缩(6/5/4)经 A/B 证实是负贡献 —— defense 只持 4 只在降仓
+# 的同时把集中度顶上去, full 窗口满仓线回撤从 -58.75% 恶化到 -60.54%(v1_worse 臂); 固定 6
+# 只单独就把满仓线从 11.80%/-58.75% 改善到 12.56%/-51.00%。证据 scripts/oneoff/ab_style_guard.py
+state_stocks:
+  attack: 6
+  neutral: 6
+  defense: 6
+stock_candidate_top: 0
+hysteresis_buffer: 0
+stock_size_pctl: 0
+stock_min_amt20: 0
+industry_floor_stocks: 2
+regime_use_valuation: true
+bse_enabled: false
+star_enabled: false
+benchmark: 000906.SH
+# 基准**净值/超额**腿(2026-09-20 B1 采纳轮, 与上面那行故意不同源): 回测/袖套的"超额"要用
+# 中证800 **全收益指数**(H00906.CSI, 税前分红再投资) —— 持仓腿是 `close×adj_factor`(全收益),
+# 而价格指数少算基准股息 ⇒ 超额凭空 +2.22pp/年(两窗实测一致, 见 14 号三补二十七)。
+# 本键只供 `bench_tr` 报告腿; `benchmark` 仍是 regime 择时均线/style/模拟盘基准列/邮件文案之源,
+# 换它等于换策略输入 ⇒ 不动。回滚到旧尺要**显式**改成 000906.SH(删行=仍是全收益)。
+benchmark_nav_code: H00906.CSI
+# 权益仓位(2026-09-10 定档 0.873 恒定, 用户拍板): 原 aggressive 按状态择时(1.0/0.9/0.8)
+# 被同平均仓位的恒定仓完全支配 —— full 窗口 +7.86%/-51.81% → +11.05%/-41.90%, h1 亦两轴
+# 全胜。恒定 0.873 后系统回撤已等于池子(等权全A)自身回撤 -41.78%, 集中度成本中性化。
+# 注: 2 万本金下 0.873 实际只投出约 61% 的钱(整手粒度+行业上限), 单只预算约 2900 元。
+# 再降档(0.70/0.60)收益让渡大且落入整手粒度伪影区, 见 scan_const_weight.py。
+regime_equity_weight:
+  aggressive:
+    attack: 0.873
+    neutral: 0.873
+    defense: 0.873
+  balanced:
+    attack: 0.8
+    neutral: 0.65
+    defense: 0.5
+  conservative:
+    attack: 0.5
+    neutral: 0.35
+    defense: 0.2
+email:
+  enabled: true
+  smtp_server: smtp.qq.com
+  smtp_port: 465
+  sender: 2781740047@qq.com
+  auth_code: ''
+  recipients:
+  - 2781740047@qq.com
+dynamic:
+  # 2026-09-24 用户拍板开启（此前为 false ⇒ 动态监控静默停摆 20 天，signal 表停在 20260904）。
+  # 依据：临时副本库试跑（20260924）⇒ 20 条信号全为 buy_candidate、has_action=False、
+  # 持仓 5 只体检全通过（无止损/弱势/停牌/ST）⇒ 无风险动作。
+  # ⚠️ 关闭的代价：止损 / ST·停牌预警 / 弱势替换全部失效（持仓亏 -15% 无提醒）。
+  # ⚠️ 已知：候选名单不看市场状态 ⇒ defense 状态下仍会推 buy_candidate（只"看"不"动"）。
+  enabled: true
+  stop_loss: -0.15
+  weak_pct: 40
+  swap_drawdown: -0.08
+  candidate_top: 20
+  min_hold_days: 3
+  weak_confirm_days: 2
+  cooldown_days: 5
+paper:
+  slip: 0.001
+  open_exec: true
+  paused: false
+  # 2026-09-25: 账户级回撤治理(决策函数, app/portfolio/governor.py) —— 净值自峰值
+  # 回撤 ≤ dd_trip(-20%) 触发「谨慎态」: 月度方案停补仓、候选替换买入停, 卖出照常;
+  # 回升 ≥ dd_reset(-10%) 自动解除(滞回带, 纯函数可复算, 无持久状态)。
+  # ⚠️ 2026-09-25 A/B 判决(scripts/ab_governor_overlay.py, experiments/
+  # governor_overlay_ab_20260925.json): 月盘口径下**判否停用** —— 治理臂系统线年化
+  # 14.97%→2.21%(-12.76pp)、MDD -22.80%→-24.33%(反而恶化), 机制 = 月换手 89.5% 下
+  # 「停买+退出照旧」≈ 1~2 个月清仓成现金 ⇒ 回撤冻结在触发位、-10% 解除线不可达
+  # (20240531 触发后至窗口末 28 期未解除); 时限版(gov3, 封 3 期)年化代价 -0.30pp
+  # 但 MDD 仍恶化 -1.53pp —— 治理器以压回撤为存在意义, 回撤反而更差 ⇒ 两变体皆否。
+  # 月盘的风险层 = 逐票 -15% 止损(dynamic); defense 候选闸(同日上线)不受本开关影响。
+  governor:
+    enabled: false
+    dd_trip: -0.20
+    dd_reset: -0.10
+fees:
+  commission_rate: 0.00025
+  min_commission: 5.0
+  stamp_tax: 0.0005
+  stamp_tax_before: 0.001
+  # 2026-09-13: 曾写作 `1e-05`（YAML 1.1 下不被认成 float ⇒ 变字符串；`save_config` 的
+  # ruamel round-trip 恰好会写回这种写法）—— 装载器已改用 `_ConfigLoader` 容错，
+  # 这里仍写小数，人读与 diff 都更清楚。详见 docs/know/07 号 #21。
+  transfer_fee: 0.00001
+weekly:
+  enabled: true
+  email: true
+  capital: 1000000
+  equity_weight: 1.0
+  # 2026-09-22（结项审计）：以下三键原先**只存在于 `app/config.py` 的 DEFAULT_CONFIG**，
+  # 本文件里没有 ⇒ 走默认值。补进来是为了"显式化"：换机 / 手删 / 人工 review 时能看见
+  # 当前生效值，而不是靠翻源码。
+  # ⚠️ 值必须与 DEFAULT_CONFIG **逐字一致且类型正确**（`1.5` 非 `"1.5"`、`true` 非 `yes`、
+  #    `{}` 非 `null`）—— 因为 `config_sha16` 按**合并后的生效 dict** 算（`app/weekly/plan.py`
+  #    的 `artifact_meta`），值不同就会换指纹。等值补键 = 空操作，**不换 pin、不判漂移**。
+  max_lot_cost_mult: 1.5      # plan.build 的兜底
+  risk_halt:
+    enabled: true             # risk.py / doctor.py 的兜底（默认开）
+    # 2026-09-28（用户拍板"改成自动解除"）：停买中且健康档读到 **healthy** ⇒ 19:45 档自动
+    # 解除（risk.maybe_auto_resume，账本 halt 记录带 auto=True 留痕；成功/落账失败都发
+    # 运维告警）。滞回：触发要 degrading/dead、解除要严格更好的 healthy，warning 不解除。
+    # DEFAULT_CONFIG 缺省 false = 旧"只人工 resume"口径（测试/新装机不变）。
+    # ⚠️ 新增键换 plan.meta.config_sha16（整个 weekly 子字典进 sha），预期内。
+    auto_resume: true
+  shape: {}                   # 显式覆盖 pick_shape(top_n/band/hold_bonus)；空 = 按资金自动
+  # 2026-09-25: 袖套版回撤治理(app/weekly/risk.py::governor) —— 净值自峰值回撤
+  # ≤ dd_trip 停开新仓(退出照旧), 回升 ≥ dd_reset 自动解除。w=1.0 生产构型
+  # MDD -36.6%(F52) ⇒ -20% 触发。⚠️ 新增键会换 plan.meta.config_sha16(预期内)。
+  # ✅ 2026-09-25 A/B 判决(scripts/ab_governor_overlay.py): 袖套口径下**采纳保留** ——
+  # 治理臂年化 20.19%→17.05%(-3.14pp/年 = 保费), MDD -38.44%→-24.69%(改善 13.75pp)、
+  # 日频 MDD -46.51%→-25.56%(改善 20.95pp), 收益/回撤比 0.53→0.69; 两次触发均正常解除
+  # (band=8 留存持仓 ⇒ 谨慎期组合不散架、解除线可达 —— 与月盘的清仓陷阱机制相反)。
+  governor:
+    enabled: true
+    dd_trip: -0.20
+    dd_reset: -0.10
+
+# 2026-09-22（结项审计）：同上 —— 这两个顶层键原先只在 DEFAULT_CONFIG 里。
+# 两者默认均为**关闭**（fail-safe）。注意 `regime_style_guard` / `framework`
+# **不在** `config_sha16` 的子集内（子集 = weekly / fees / regime_equity_weight /
+# single_side_cost / benchmark），所以它们怎么改都不动指纹。
+regime_style_guard:
+  enabled: false              # 开启后池子分支用同一套规则并行计算
+  mode: worse                 # worse = 取更防守的一路（只加防守，不放松进攻）
+framework:
+  enabled: false              # 框架阶段（factory/pipeline/fusion/optimizer/health）总开关
+  stages:
+    factory: false
+    pipeline: false
+    fusion: false
+    optimizer: false
+    health: false
+  alpha_tables: {}
+  die_tables: {}
+  ens_table: model_score_ens
+  investable: 0
+  round_trip_target: 0.005
+  others_tables:
+    - model_score
+  market_since: null          # 缺省取 eval_start；只影响框架阶段，不碰生产
+# 建仓追高剔除闸(2026-09-26 用户拍板采纳; 单一实现 app/portfolio/chase.py):
+# 最终 top-n 候选中 chase_z = max(z(mom5), z(devvwap)) > theta 的票剔除、不补位 ——
+# 三轮预注册 A/B: 85 期 +2.07pp/全史 +1.47pp(θ=2.0), 剂量曲线稳健, min60 原信号不反
+# (05 号台账 七补/九补; 判据/证据链见 plans/risk-overlay、chase6-fullhist、chase6-round3 三预注册)。
+# DEFAULT_CONFIG 缺省 False —— 本键为生产的显式开启。
+chase:
+  enabled: true
+  theta: 2.0  # 剔除阈值(冻结 2.0, 剂量曲线见 05 号 九补)

@@ -1,0 +1,200 @@
+{
+ "script_sha": "42111509a2264c71",
+ "arms": {
+  "A0_现状": {},
+  "G1_贪婪+上限1.5x": {
+   "greedy_budget": true,
+   "budget_cap_mult": 1.5
+  },
+  "G2_贪婪+上限1.25x": {
+   "greedy_budget": true,
+   "budget_cap_mult": 1.25
+  },
+  "G3_纯贪婪": {
+   "greedy_budget": true
+  }
+ },
+ "windows": {
+  "full": [
+   "2010-01-01",
+   "2030-12-31"
+  ],
+  "oos": [
+   "2024-01-01",
+   "2026-08-31"
+  ]
+ },
+ "results": {
+  "seedA": {
+   "A0_现状": {
+    "full": {
+     "n": 491,
+     "excess_pp": 14.91,
+     "mdd": -0.3228
+    },
+    "OOS": {
+     "n": 138,
+     "excess_pp": 7.34,
+     "mdd": -0.3228
+    },
+    "DEAD": {
+     "n": 169,
+     "excess_pp": 20.91,
+     "mdd": -0.1383
+    },
+    "invested": 0.7692,
+    "names": 99.8,
+    "turnover": 0.119
+   },
+   "G1_贪婪+上限1.5x": {
+    "full": {
+     "n": 491,
+     "excess_pp": 20.42,
+     "mdd": -0.4123
+    },
+    "OOS": {
+     "n": 138,
+     "excess_pp": 14.29,
+     "mdd": -0.4123
+    },
+    "DEAD": {
+     "n": 169,
+     "excess_pp": 29.6,
+     "mdd": -0.1818
+    },
+    "invested": 0.9933,
+    "names": 85.5,
+    "turnover": 0.118
+   },
+   "G2_贪婪+上限1.25x": {
+    "full": {
+     "n": 491,
+     "excess_pp": 19.81,
+     "mdd": -0.4009
+    },
+    "OOS": {
+     "n": 138,
+     "excess_pp": 12.33,
+     "mdd": -0.4009
+    },
+    "DEAD": {
+     "n": 169,
+     "excess_pp": 27.14,
+     "mdd": -0.1736
+    },
+    "invested": 0.9659,
+    "names": 99.8,
+    "turnover": 0.12
+   },
+   "G3_纯贪婪": {
+    "full": {
+     "n": 491,
+     "excess_pp": 21.0,
+     "mdd": -0.415
+    },
+    "OOS": {
+     "n": 138,
+     "excess_pp": 15.71,
+     "mdd": -0.415
+    },
+    "DEAD": {
+     "n": 169,
+     "excess_pp": 28.99,
+     "mdd": -0.183
+    },
+    "invested": 0.9908,
+    "names": 61.5,
+    "turnover": 0.116
+   }
+  },
+  "seedB": {
+   "A0_现状": {
+    "full": {
+     "n": 491,
+     "excess_pp": 14.3,
+     "mdd": -0.3223
+    },
+    "OOS": {
+     "n": 138,
+     "excess_pp": 8.62,
+     "mdd": -0.3223
+    },
+    "DEAD": {
+     "n": 169,
+     "excess_pp": 20.5,
+     "mdd": -0.1352
+    },
+    "invested": 0.7651,
+    "names": 99.8,
+    "turnover": 0.117
+   },
+   "G1_贪婪+上限1.5x": {
+    "full": {
+     "n": 491,
+     "excess_pp": 19.54,
+     "mdd": -0.4122
+    },
+    "OOS": {
+     "n": 138,
+     "excess_pp": 16.07,
+     "mdd": -0.4122
+    },
+    "DEAD": {
+     "n": 169,
+     "excess_pp": 27.47,
+     "mdd": -0.1872
+    },
+    "invested": 0.9932,
+    "names": 85.8,
+    "turnover": 0.117
+   },
+   "G2_贪婪+上限1.25x": {
+    "full": {
+     "n": 491,
+     "excess_pp": 19.36,
+     "mdd": -0.4
+    },
+    "OOS": {
+     "n": 138,
+     "excess_pp": 14.08,
+     "mdd": -0.4
+    },
+    "DEAD": {
+     "n": 169,
+     "excess_pp": 27.21,
+     "mdd": -0.1666
+    },
+    "invested": 0.963,
+    "names": 99.8,
+    "turnover": 0.118
+   },
+   "G3_纯贪婪": {
+    "full": {
+     "n": 491,
+     "excess_pp": 19.98,
+     "mdd": -0.4064
+    },
+    "OOS": {
+     "n": 138,
+     "excess_pp": 18.45,
+     "mdd": -0.4064
+    },
+    "DEAD": {
+     "n": 169,
+     "excess_pp": 29.13,
+     "mdd": -0.1782
+    },
+    "invested": 0.9914,
+    "names": 61.4,
+    "turnover": 0.115
+   }
+  }
+ },
+ "verdict": {
+  "adopt": null,
+  "candidates": [],
+  "criteria": "两套种子同时: 投入率≥现役+5pp 且 全史超额≥现役 且 MDD≥现役×1.10",
+  "note": "w 不变(仍是 0.873) —— 这只是把已宣布的权益预算真正投出去, 不是提高风险预算"
+ },
+ "secs": 369.6
+}

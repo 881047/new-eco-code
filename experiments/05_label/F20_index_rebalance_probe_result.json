@@ -1,0 +1,37 @@
+{
+ "script_sha": "556875ecd941fe64",
+ "decay_days": 126,
+ "coverage": 0.02085,
+ "ic": {
+  "n": 314,
+  "ic": -0.0409,
+  "DEAD": {
+   "n": 142,
+   "ic": -0.0755,
+   "t": -3.5
+  },
+  "ACTIVE": {
+   "n": 124,
+   "ic": -0.0117,
+   "t": -0.41
+  }
+ },
+ "portfolio": {
+  "n": 260,
+  "excess_pp": 45.57,
+  "ann": 0.6194,
+  "mdd": -0.212,
+  "turnover": 0.033
+ },
+ "verdict": {
+  "ic_same_sign_and_ge_0.02": true,
+  "excess_positive": true,
+  "absurd_return_guard": false,
+  "zones": {
+   "DEAD": -0.0755,
+   "ACTIVE": -0.0117
+  },
+  "adopt": true
+ },
+ "secs": 367.9
+}

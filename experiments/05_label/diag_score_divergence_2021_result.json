@@ -1,0 +1,41 @@
+{
+ "anchors": 116,
+ "split": "2021-01-01",
+ "top_n": 100,
+ "horizon": 21,
+ "sell_rate_bp": 7.6,
+ "segments": {
+  "2017-01~2020-12": {
+   "prod_excess_pp_yr": 0.697,
+   "fresh_excess_pp_yr": 0.697,
+   "delta_pp": 0.0,
+   "prod_ic": 0.0637,
+   "fresh_ic": 0.0637,
+   "delta_ic": 0.0,
+   "n": 48
+  },
+  "2021-01~2026-08": {
+   "prod_excess_pp_yr": 12.248,
+   "fresh_excess_pp_yr": 11.768,
+   "delta_pp": -0.479,
+   "prod_ic": 0.1016,
+   "fresh_ic": 0.102,
+   "delta_ic": 0.0004,
+   "n": 68
+  },
+  "全窗": {
+   "prod_excess_pp_yr": 7.426,
+   "fresh_excess_pp_yr": 7.147,
+   "delta_pp": -0.279,
+   "prod_ic": 0.0858,
+   "fresh_ic": 0.086,
+   "delta_ic": 0.0003,
+   "n": 116
+  }
+ },
+ "verdict": {
+  "ic_higher_on_2021plus": true,
+  "interpretation": "刷新臂 IC 更高 ⇒ 倾向『数据补全』（历史可得信息补齐），非重述/前视",
+  "note": "与『历史行修订=0』的只读查证互为交叉验证；两者一致才算 PIT 安全。"
+ }
+}

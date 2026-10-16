@@ -1,0 +1,363 @@
+{
+  "generated_at": "2026-09-26 18:26:39",
+  "prereg": "plans/watchdog-restart-forensics-prereg-20260922.md",
+  "criteria": {
+    "F1": "定时档 = 分钟尾数 5 且秒 ≤9(计划任务 09:45 起 PT10M);其余 = 额外",
+    "F2": "自愈事件 = 本次调用内出现「已发出拉起命令」;每次调用至多计 1",
+    "F3_confirm_set": "2026-09-15 ~ 2026-09-21(判决集)",
+    "F3_explore_set": "2026-09-22(探索集,驱动判据设计,不参与判决)",
+    "C1": "rate_extra ≥ 0.5 且 rate_sched ≤ 0.05",
+    "C2": "每次额外型自愈 ±10min 内是否有 app/** 提交(辅助,不判决)"
+  },
+  "confirm": {
+    "calls_sched": 985,
+    "restarts_sched": 8,
+    "rate_sched": 0.008122,
+    "calls_extra": 30,
+    "restarts_extra": 26,
+    "rate_extra": 0.866667,
+    "extra_events": [
+      "2026-09-16 13:27:28",
+      "2026-09-16 20:58:55",
+      "2026-09-16 22:23:33",
+      "2026-09-17 07:22:40",
+      "2026-09-17 13:13:43",
+      "2026-09-17 13:19:16",
+      "2026-09-17 13:36:06",
+      "2026-09-17 13:59:20",
+      "2026-09-17 18:29:10",
+      "2026-09-18 10:46:57",
+      "2026-09-18 10:56:17",
+      "2026-09-18 11:17:16",
+      "2026-09-18 11:31:37",
+      "2026-09-18 13:04:43",
+      "2026-09-18 13:10:32",
+      "2026-09-18 22:02:31",
+      "2026-09-19 20:27:38",
+      "2026-09-19 21:48:03",
+      "2026-09-19 23:16:53",
+      "2026-09-20 12:53:52",
+      "2026-09-20 22:32:14",
+      "2026-09-20 22:42:50",
+      "2026-09-20 22:51:16",
+      "2026-09-20 22:59:51",
+      "2026-09-21 12:16:14",
+      "2026-09-21 12:21:51"
+    ]
+  },
+  "explore": {
+    "calls_sched": 143,
+    "restarts_sched": 2,
+    "rate_sched": 0.013986,
+    "calls_extra": 7,
+    "restarts_extra": 6,
+    "rate_extra": 0.857143,
+    "extra_events": [
+      "2026-09-22 12:19:01",
+      "2026-09-22 12:42:25",
+      "2026-09-22 13:48:51",
+      "2026-09-22 20:16:43",
+      "2026-09-22 20:19:04",
+      "2026-09-22 20:58:04"
+    ]
+  },
+  "c2_details": [
+    {
+      "time": "2026-09-16 13:27:28",
+      "window": "±10min",
+      "app_hit": false,
+      "hit_files": [],
+      "commits": 0
+    },
+    {
+      "time": "2026-09-16 20:58:55",
+      "window": "±10min",
+      "app_hit": true,
+      "hit_files": [
+        "app/web/llm.py",
+        "app/web/static/assets/ChartLine-B7Jl16YL.js",
+        "app/web/static/assets/DataTable-D6kiwCmc.js",
+        "app/web/static/assets/DataView-ToUz8xGa.js",
+        "app/web/static/assets/KpiGrid-JI4gA2dC.js",
+        "app/web/static/assets/PlanView-lMu45Nak.js",
+        "app/web/static/assets/SettingsView-Bkj_3QrQ.js",
+        "app/web/static/assets/SettingsView-VUzy5kTm.js",
+        "app/web/static/assets/TodayView-Dmy42mA4.js",
+        "app/web/static/assets/TradingView-Bdz4hI_Y.js"
+      ],
+      "commits": 2
+    },
+    {
+      "time": "2026-09-16 22:23:33",
+      "window": "±10min",
+      "app_hit": false,
+      "hit_files": [],
+      "commits": 0
+    },
+    {
+      "time": "2026-09-17 07:22:40",
+      "window": "±10min",
+      "app_hit": false,
+      "hit_files": [],
+      "commits": 1
+    },
+    {
+      "time": "2026-09-17 13:13:43",
+      "window": "±10min",
+      "app_hit": true,
+      "hit_files": [
+        "app/web/llm.py",
+        "app/web/static/assets/ChartLine-COpqPRO6.js",
+        "app/web/static/assets/DataTable-CkH4xKU2.js",
+        "app/web/static/assets/DataView-jTsXIriZ.js",
+        "app/web/static/assets/KpiGrid-CjsdBrYX.js",
+        "app/web/static/assets/PlanView-B-7KaNZ9.js",
+        "app/web/static/assets/SettingsView-C61J4UDs.js",
+        "app/web/static/assets/TodayView-OStyKSms.js",
+        "app/web/static/assets/TradingView-B_3BxZVv.js",
+        "app/web/static/assets/index-CfPLPZjj.js"
+      ],
+      "commits": 1
+    },
+    {
+      "time": "2026-09-17 13:19:16",
+      "window": "±10min",
+      "app_hit": true,
+      "hit_files": [
+        "app/web/llm.py",
+        "app/web/static/assets/ChartLine-COpqPRO6.js",
+        "app/web/static/assets/ChartLine-CkWPnG8b.js",
+        "app/web/static/assets/DataTable-BuVztBk-.js",
+        "app/web/static/assets/DataTable-CkH4xKU2.js",
+        "app/web/static/assets/DataView-BYy7yN7s.js",
+        "app/web/static/assets/DataView-jTsXIriZ.js",
+        "app/web/static/assets/KpiGrid-CjsdBrYX.js",
+        "app/web/static/assets/KpiGrid-Co9HYMVS.js",
+        "app/web/static/assets/PlanView-B-7KaNZ9.js"
+      ],
+      "commits": 3
+    },
+    {
+      "time": "2026-09-17 13:36:06",
+      "window": "±10min",
+      "app_hit": true,
+      "hit_files": [
+        "app/web/api.py",
+        "app/web/static/assets/ChartLine-CkWPnG8b.js",
+        "app/web/static/assets/ChartLine-URwrANSR.js",
+        "app/web/static/assets/ChartLine-bshZalLA.js",
+        "app/web/static/assets/ChartLine-mumrjA4l.js",
+        "app/web/static/assets/DataTable-0v4sXK5S.js",
+        "app/web/static/assets/DataTable-Ac7UK7ps.js",
+        "app/web/static/assets/DataTable-BuVztBk-.js",
+        "app/web/static/assets/DataTable-C9rJw_Dn.js",
+        "app/web/static/assets/DataView-BAV0tvKV.js"
+      ],
+      "commits": 3
+    },
+    {
+      "time": "2026-09-17 13:59:20",
+      "window": "±10min",
+      "app_hit": true,
+      "hit_files": [
+        "app/web/api.py",
+        "app/web/static/assets/ChartLine-BPQmrKcW.js",
+        "app/web/static/assets/ChartLine-Bx7i_kU8.js",
+        "app/web/static/assets/ChartLine-xnSPPQIu.js",
+        "app/web/static/assets/DataTable-BHKRbAJa.js",
+        "app/web/static/assets/DataTable-DOHZGFkM.js",
+        "app/web/static/assets/DataTable-Dga96qET.js",
+        "app/web/static/assets/DataView-Bwp8-ub9.js",
+        "app/web/static/assets/DataView-DUw096bx.js",
+        "app/web/static/assets/DataView-DXgDbm9x.js"
+      ],
+      "commits": 2
+    },
+    {
+      "time": "2026-09-17 18:29:10",
+      "window": "±10min",
+      "app_hit": true,
+      "hit_files": [
+        "app/datasource/flow_client.py",
+        "app/datasource/updater.py"
+      ],
+      "commits": 2
+    },
+    {
+      "time": "2026-09-18 10:46:57",
+      "window": "±10min",
+      "app_hit": false,
+      "hit_files": [],
+      "commits": 0
+    },
+    {
+      "time": "2026-09-18 10:56:17",
+      "window": "±10min",
+      "app_hit": false,
+      "hit_files": [],
+      "commits": 0
+    },
+    {
+      "time": "2026-09-18 11:17:16",
+      "window": "±10min",
+      "app_hit": false,
+      "hit_files": [],
+      "commits": 0
+    },
+    {
+      "time": "2026-09-18 11:31:37",
+      "window": "±10min",
+      "app_hit": false,
+      "hit_files": [],
+      "commits": 0
+    },
+    {
+      "time": "2026-09-18 13:04:43",
+      "window": "±10min",
+      "app_hit": true,
+      "hit_files": [
+        "app/kg_story.py",
+        "app/web/api.py"
+      ],
+      "commits": 1
+    },
+    {
+      "time": "2026-09-18 13:10:32",
+      "window": "±10min",
+      "app_hit": true,
+      "hit_files": [
+        "app/kg_story.py",
+        "app/web/api.py"
+      ],
+      "commits": 1
+    },
+    {
+      "time": "2026-09-18 22:02:31",
+      "window": "±10min",
+      "app_hit": false,
+      "hit_files": [],
+      "commits": 0
+    },
+    {
+      "time": "2026-09-19 20:27:38",
+      "window": "±10min",
+      "app_hit": true,
+      "hit_files": [
+        "app/backtest/engine.py",
+        "app/datasource/quote_client.py",
+        "app/db.py",
+        "app/filelock.py",
+        "app/models/trainer.py",
+        "app/paper/engine.py",
+        "app/scheduler.py",
+        "app/web/llm.py",
+        "app/weekly/protocol.py"
+      ],
+      "commits": 3
+    },
+    {
+      "time": "2026-09-19 21:48:03",
+      "window": "±10min",
+      "app_hit": true,
+      "hit_files": [
+        "app/datasource/flow_client.py",
+        "app/datasource/updater.py",
+        "app/scheduler.py",
+        "app/weekly/doctor.py",
+        "app/weekly/protocol.py",
+        "app/weekly/reconcile.py"
+      ],
+      "commits": 3
+    },
+    {
+      "time": "2026-09-19 23:16:53",
+      "window": "±10min",
+      "app_hit": true,
+      "hit_files": [
+        "app/datasource/updater.py"
+      ],
+      "commits": 3
+    },
+    {
+      "time": "2026-09-20 12:53:52",
+      "window": "±10min",
+      "app_hit": true,
+      "hit_files": [
+        "app/backtest/engine.py",
+        "app/datasource/akshare_client.py",
+        "app/datasource/event_client.py",
+        "app/datasource/flow_client.py",
+        "app/datasource/lhb_client.py",
+        "app/datasource/updater.py",
+        "app/main.py",
+        "app/models/pool_index.py",
+        "app/models/seq_die.py",
+        "app/web/static/assets/ChartLine-BVkmfaOv.js"
+      ],
+      "commits": 1
+    },
+    {
+      "time": "2026-09-20 22:32:14",
+      "window": "±10min",
+      "app_hit": true,
+      "hit_files": [
+        "app/backtest/engine.py"
+      ],
+      "commits": 4
+    },
+    {
+      "time": "2026-09-20 22:42:50",
+      "window": "±10min",
+      "app_hit": true,
+      "hit_files": [
+        "app/backtest/engine.py"
+      ],
+      "commits": 4
+    },
+    {
+      "time": "2026-09-20 22:51:16",
+      "window": "±10min",
+      "app_hit": true,
+      "hit_files": [
+        "app/backtest/engine.py"
+      ],
+      "commits": 5
+    },
+    {
+      "time": "2026-09-20 22:59:51",
+      "window": "±10min",
+      "app_hit": true,
+      "hit_files": [
+        "app/backtest/engine.py"
+      ],
+      "commits": 5
+    },
+    {
+      "time": "2026-09-21 12:16:14",
+      "window": "±10min",
+      "app_hit": true,
+      "hit_files": [
+        "app/weekly/health.py"
+      ],
+      "commits": 1
+    },
+    {
+      "time": "2026-09-21 12:21:51",
+      "window": "±10min",
+      "app_hit": true,
+      "hit_files": [
+        "app/weekly/health.py"
+      ],
+      "commits": 2
+    }
+  ],
+  "c2_app_hit_rate": 0.692308,
+  "c1_pass": true,
+  "verdict": "自愈计数主要来自非定时的计划性重启",
+  "limits": [
+    "TaskScheduler/Operational 日志 enabled:false ⇒ 无 OS 级证据区分「手动 /run」与「任务延迟启动」",
+    "结论只到『这些调用不合计划 cadence』一层,禁止写成『已证实是手动重启』",
+    "剩余定时档内检测到的自愈事件仍是未解释的自发死亡,本轮不解释其机制",
+    "本轮只读:未启用任何日志通道、未改计划任务、未改任何阈值"
+  ]
+}

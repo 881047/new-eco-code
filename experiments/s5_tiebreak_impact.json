@@ -1,0 +1,93 @@
+{
+ "ran_at": "2026-09-21 12:37:28",
+ "elapsed_sec": 0.6,
+ "sections": 116,
+ "top_frac": 0.1,
+ "total_top_slots": 44385,
+ "total_flip_slots": 12,
+ "flip_rate": 0.00027,
+ "sections_with_ties": 14,
+ "per_section_sample": [
+  {
+   "date": "20170126",
+   "n": 2704,
+   "k": 270,
+   "flip": 0,
+   "flip_rate": 0.0,
+   "tied_with_kth": 1
+  },
+  {
+   "date": "20170228",
+   "n": 2705,
+   "k": 270,
+   "flip": 0,
+   "flip_rate": 0.0,
+   "tied_with_kth": 1
+  },
+  {
+   "date": "20170331",
+   "n": 2766,
+   "k": 276,
+   "flip": 0,
+   "flip_rate": 0.0,
+   "tied_with_kth": 1
+  },
+  {
+   "date": "20170428",
+   "n": 2795,
+   "k": 279,
+   "flip": 0,
+   "flip_rate": 0.0,
+   "tied_with_kth": 1
+  },
+  {
+   "date": "20170531",
+   "n": 2810,
+   "k": 281,
+   "flip": 2,
+   "flip_rate": 0.007117,
+   "tied_with_kth": 2
+  },
+  {
+   "date": "20170630",
+   "n": 2858,
+   "k": 285,
+   "flip": 0,
+   "flip_rate": 0.0,
+   "tied_with_kth": 1
+  },
+  {
+   "date": "20170731",
+   "n": 2896,
+   "k": 289,
+   "flip": 0,
+   "flip_rate": 0.0,
+   "tied_with_kth": 1
+  },
+  {
+   "date": "20170831",
+   "n": 2974,
+   "k": 297,
+   "flip": 0,
+   "flip_rate": 0.0,
+   "tied_with_kth": 1
+  },
+  {
+   "date": "20170929",
+   "n": 3026,
+   "k": 302,
+   "flip": 0,
+   "flip_rate": 0.0,
+   "tied_with_kth": 1
+  },
+  {
+   "date": "20171031",
+   "n": 3061,
+   "k": 306,
+   "flip": 0,
+   "flip_rate": 0.0,
+   "tied_with_kth": 2
+  }
+ ],
+ "verdict": "翻档 12 槽位（0.0270%）⇒ 当前排序确实改变选股结果 ⇒ S5 有实质收益，建议按预注册实施（需你批准；实施后需重启服务）"
+}

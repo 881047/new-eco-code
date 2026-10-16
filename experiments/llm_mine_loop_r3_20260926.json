@@ -1,0 +1,1204 @@
+{
+ "ran_at": "2026-09-26T22:10:27",
+ "prereg": "plans/llm-mine-loop-r3-prereg-20260926.md",
+ "criteria": {
+  "static_fail_rate_max": 0.4,
+  "shadow_rho": 0.7
+ },
+ "iterations": [
+  {
+   "iteration": 1,
+   "n_proposals": 10,
+   "proposals": [
+    {
+     "kind": "expr",
+     "name": "llm_overnight_gap_reversal",
+     "expr": "Div(Mean(Div(Sub($open,$pre_close),$pre_close),5), Add(Std(Div(Sub($open,$pre_close),$pre_close),20),0.001))",
+     "why": "微盘隔夜跳空由散户注意力驱动，持续高开且波动大者次月反转。",
+     "noise_hypothesis": "用 pre_close 归一化剥离价格水平与市场整体跳空，只留个股隔夜情绪。"
+    },
+    {
+     "kind": "expr",
+     "name": "llm_open_drive_fade",
+     "expr": "Sub(Mean(Div(Sub($close,$open),Add(Sub($high,$low),0.001)),5), Mean(Div(Sub($open,$pre_close),$pre_close),5))",
+     "why": "开盘冲高但收盘弱反映日内诱多，微盘散户接盘后次月回落。",
+     "noise_hypothesis": "用日内振幅归一化，避免高低价绝对区间和微盘价格噪声。"
+    },
+    {
+     "kind": "expr",
+     "name": "llm_max_lottery_neg",
+     "expr": "Sub(0, Max(Div(Sub($close,$pre_close),Add($pre_close,0.001)),20))",
+     "why": "微盘彩票偏好，过去20日单日最大涨幅越高，次月越可能被高估回落。",
+     "noise_hypothesis": "用 pre_close 归一化去除价格水平，MAX 只提取极端正收益。"
+    },
+    {
+     "kind": "expr",
+     "name": "llm_idio_skew_neg",
+     "expr": "Sub(0, Div(Mean(Pow(Sub(Div($close,$pre_close),1),3),20), Add(Pow(Std(Div($close,$pre_close),20),3),0.001)))",
+     "why": "微盘正偏度吸引彩票型资金，正偏度高者未来收益低。",
+     "noise_hypothesis": "除以波动率三次方，剥离整体波动水平，保留偏度形状。"
+    },
+    {
+     "kind": "expr",
+     "name": "llm_downside_vol_asym",
+     "expr": "Div(Std(Mul(Div(Sub($close,$pre_close),$pre_close), Less(Div(Sub($close,$pre_close),$pre_close),0)),20), Add(Std(Mul(Div(Sub($close,$pre_close),$pre_close), Greater(Div(Sub($close,$pre_close),$pre_close),0)),20),0.001))",
+     "why": "微盘下行波动占比高代表恐慌与流动性脆弱，低则被忽视；该比值度量下行风险不对称。",
+     "noise_hypothesis": "上下行收益分开，避免总波动率被涨跌停和微盘噪声主导。"
+    },
+    {
+     "kind": "expr",
+     "name": "llm_clv_reversal",
+     "expr": "Sub(0, Mean(Div(Sub(Mul(2,$close),Add($high,$low)), Add(Sub($high,$low),0.001)),20))",
+     "why": "收盘持续位于日内区间上沿表示买压过度，微盘次月易反转。",
+     "noise_hypothesis": "日内位置归一化，避免跳空和绝对价格水平噪声。"
+    },
+    {
+     "kind": "expr",
+     "name": "llm_gap_asym",
+     "expr": "Div(Sub($high,$pre_close), Add(Sub($pre_close,$low),0.001))",
+     "why": "向上跳空幅度相对向下跳空幅度，度量微盘情绪不对称，过高者易回落。",
+     "noise_hypothesis": "用 pre_close 归一化，剥离绝对价位和涨跌停制度差异。"
+    },
+    {
+     "kind": "kg",
+     "name": "llm_holder_concentration",
+     "op": "ratio",
+     "cols": [
+      "kg_holder_dec_60d",
+      "kg_holder_add_60d"
+     ],
+     "why": "微盘股东户数减少/增加比率高代表筹码集中、散户拥挤度低，未来更可能上涨。",
+     "noise_hypothesis": "用股东户数变化避开直接量价噪声，只留筹码结构变化。"
+    },
+    {
+     "kind": "kg",
+     "name": "llm_insider_net_z",
+     "op": "z",
+     "cols": [
+      "kg_insider_net"
+     ],
+     "why": "微盘内部人净增持的截面 z 值，内部人真金白银买入缓解信息不对称。",
+     "noise_hypothesis": "用内部人交易数据避开普通资金流和公告事件的噪声。"
+    },
+    {
+     "kind": "kg",
+     "name": "llm_dividend_rank",
+     "op": "rank_pct",
+     "cols": [
+      "kg_dividend_90d"
+     ],
+     "why": "微盘中近期分红事件截面分位，现金流真实性降低壳价值炒作。",
+     "noise_hypothesis": "用分红事件避开纯情绪炒作和财报应计噪声。"
+    }
+   ],
+   "legal_examples": [
+    "Div(Sub($high,$pre_close), Add(Sub($pre_close,$low),0.001))",
+    "ratio['kg_holder_dec_60d', 'kg_holder_add_60d']",
+    "z['kg_insider_net']"
+   ],
+   "static_dropped": [
+    "- llm_overnight_gap_reversal [kind=expr]: 树深超 4",
+    "- llm_open_drive_fade [kind=expr]: 树深超 4",
+    "- llm_max_lottery_neg [kind=expr]: 树深超 4",
+    "- llm_idio_skew_neg [kind=expr]: 树深超 4",
+    "- llm_downside_vol_asym [kind=expr]: 树深超 4",
+    "- llm_clv_reversal [kind=expr]: 树深超 4"
+   ],
+   "records": [
+    {
+     "alpha_id": "llm_gap_asym",
+     "DEAD_head": 0.002046433894429356,
+     "DEAD_head_t": 0.8606972579761556,
+     "DEAD_hit": 0.525,
+     "DEAD_n": 40,
+     "DEAD_top6": 0.01351985145593062,
+     "DEAD_ic": -0.007067137819309272,
+     "DEAD_ls": -0.000982097734231502,
+     "ACTIVE_head": -0.0018828892479500463,
+     "ACTIVE_head_t": -0.3678678952897073,
+     "ACTIVE_hit": 0.6129032258064516,
+     "ACTIVE_n": 31,
+     "ACTIVE_top6": 0.0005713113012813753,
+     "ACTIVE_ic": 0.01476627076688322,
+     "ACTIVE_ls": 0.003979796874186685,
+     "FULL_head": 0.0003308139308552507,
+     "FULL_head_t": 0.12751071980695766,
+     "FULL_n": 71,
+     "FULL_top6": 0.007866263501083767,
+     "p_adj": 1.0,
+     "n_tests": 239,
+     "n_tests_family": 4,
+     "n_tests_prior": 235,
+     "cost_per_month": 0.0015172463768115942,
+     "yearly": {
+      "2020": {
+       "head": -0.004164078272879124,
+       "top6": 0.031007276847958565,
+       "n": 4
+      },
+      "2021": {
+       "head": 0.007396386004984379,
+       "top6": 0.01702263082067172,
+       "n": 12
+      },
+      "2022": {
+       "head": -0.0030235068018858633,
+       "top6": 0.028639490871379774,
+       "n": 12
+      },
+      "2023": {
+       "head": 0.003836593202625712,
+       "top6": -0.010931709121602276,
+       "n": 12
+      },
+      "2024": {
+       "head": 0.008090066723525524,
+       "top6": -0.0037230754581590495,
+       "n": 12
+      },
+      "2025": {
+       "head": -0.00010076095350086689,
+       "top6": 0.015202717079470554,
+       "n": 12
+      },
+      "2026": {
+       "head": -0.022034462275249616,
+       "top6": -0.01714929273085935,
+       "n": 7
+      }
+     },
+     "avg_names": 4166.3239436619715,
+     "expr": "Div(Sub($high,$pre_close), Add(Sub($pre_close,$low),0.001))",
+     "info_source": "llm_r3",
+     "source": "llm_mine_loop_r3",
+     "pit_version": "pit_v1_2019-01-01",
+     "note": "{\"active\": [\"2024-01-01\", \"2026-08-31\"], \"dead\": [\"2020-09-01\", \"2023-12-31\"], \"eval_since\": \"2019-01-01\", \"intent\": \"LLM 自主挖因子循环 r3 · 迭代 1 (plans/llm-mine-loop-r3-prereg-20260926.md): 4 条进厂(静态合法), 双域保守分母; 主判据=静态失败率(预注册 §三)\", \"version\": \"factory_v1\", \"warmup_days\": 400} | why: 向上跳空幅度相对向下跳空幅度，度量微盘情绪不对称，过高者易回落。 | noise: 用 pre_close 归一化，剥离绝对价位和涨跌停制度差异。",
+     "head_bar": 0.006517246376811594,
+     "c_same_sign": false,
+     "c_head_size": false,
+     "c_t": false,
+     "c_p_adj": false,
+     "c_top6": true,
+     "c_cost": true,
+     "PASS": false,
+     "std_dead_head": 0.0021,
+     "den_dead_head": -0.0001,
+     "delta_head_denoised": -0.0022,
+     "shadow_factor": "rev_5",
+     "shadow_abs_rho": 0.131,
+     "is_shadow": false
+    },
+    {
+     "alpha_id": "llm_holder_concentration",
+     "DEAD_head": 0.0009179333091846534,
+     "DEAD_head_t": 0.5429502611960267,
+     "DEAD_hit": 0.5428571428571428,
+     "DEAD_n": 35,
+     "DEAD_top6": 0.0126093736450587,
+     "DEAD_ic": -0.0010814391929931568,
+     "DEAD_ls": -0.001824197612170662,
+     "ACTIVE_head": 0.0022090706193158703,
+     "ACTIVE_head_t": 0.6180191444075193,
+     "ACTIVE_hit": 0.41935483870967744,
+     "ACTIVE_n": 31,
+     "ACTIVE_top6": -0.004410147847187134,
+     "ACTIVE_ic": -0.00414579817554141,
+     "ACTIVE_ls": 0.0062314434157263844,
+     "FULL_head": 0.0015243765912159827,
+     "FULL_head_t": 0.8068995332643185,
+     "FULL_n": 66,
+     "FULL_top6": 0.004615355974458384,
+     "p_adj": 1.0,
+     "n_tests": 239,
+     "n_tests_family": 4,
+     "n_tests_prior": 235,
+     "cost_per_month": 0.0012436363636363639,
+     "yearly": {
+      "2020": {
+       "head": -0.0010121023903290431,
+       "top6": 0.028920532825092476,
+       "n": 3
+      },
+      "2021": {
+       "head": 0.001462664781138301,
+       "top6": 0.0019764071330428123,
+       "n": 10
+      },
+      "2022": {
+       "head": 0.002714362538730105,
+       "top6": 0.007184642677505811,
+       "n": 12
+      },
+      "2023": {
+       "head": -0.0012035025283694267,
+       "top6": 0.02485866956412792,
+       "n": 10
+      },
+      "2024": {
+       "head": -0.003662081823373834,
+       "top6": -0.005994359652201335,
+       "n": 12
+      },
+      "2025": {
+       "head": 0.004555248500158389,
+       "top6": 0.017688807100057602,
+       "n": 12
+      },
+      "2026": {
+       "head": 0.008251884153911046,
+       "top6": -0.039578278948153765,
+       "n": 7
+      }
+     },
+     "avg_names": 2420.5454545454545,
+     "expr": "panel:llm_mine_loop_r3#llm_holder_concentration",
+     "info_source": "llm_r3",
+     "source": "llm_mine_loop_r3",
+     "pit_version": "pit_v1_2019-01-01",
+     "note": "{\"active\": [\"2024-01-01\", \"2026-08-31\"], \"dead\": [\"2020-09-01\", \"2023-12-31\"], \"eval_since\": \"2019-01-01\", \"intent\": \"LLM 自主挖因子循环 r3 · 迭代 1 (plans/llm-mine-loop-r3-prereg-20260926.md): 4 条进厂(静态合法), 双域保守分母; 主判据=静态失败率(预注册 §三)\", \"version\": \"factory_v1\", \"warmup_days\": 400} | why: 微盘股东户数减少/增加比率高代表筹码集中、散户拥挤度低，未来更可能上涨。 | noise: 用股东户数变化避开直接量价噪声，只留筹码结构变化。",
+     "head_bar": 0.006243636363636364,
+     "c_same_sign": true,
+     "c_head_size": false,
+     "c_t": false,
+     "c_p_adj": false,
+     "c_top6": true,
+     "c_cost": true,
+     "PASS": false,
+     "std_dead_head": 0.0009,
+     "den_dead_head": 0.0109,
+     "delta_head_denoised": 0.01,
+     "shadow_factor": "amount_log",
+     "shadow_abs_rho": 0.077,
+     "is_shadow": false
+    },
+    {
+     "alpha_id": "llm_insider_net_z",
+     "DEAD_head": 0.0006722307414747774,
+     "DEAD_head_t": 0.1636371886321371,
+     "DEAD_hit": 0.425,
+     "DEAD_n": 40,
+     "DEAD_top6": -0.00885721284430474,
+     "DEAD_ic": -0.009979290278671019,
+     "DEAD_ls": 0.005247537768445909,
+     "ACTIVE_head": -0.0006778897236912481,
+     "ACTIVE_head_t": -0.15064656360471826,
+     "ACTIVE_hit": 0.3548387096774194,
+     "ACTIVE_n": 31,
+     "ACTIVE_top6": 0.0023040616464230323,
+     "ACTIVE_ic": 0.0162791683121525,
+     "ACTIVE_ls": 0.0010664449749334204,
+     "FULL_head": 8.274152428961136e-05,
+     "FULL_head_t": 0.02743977814759252,
+     "FULL_n": 71,
+     "FULL_top6": -0.003983980320184164,
+     "p_adj": 1.0,
+     "n_tests": 239,
+     "n_tests_family": 4,
+     "n_tests_prior": 235,
+     "cost_per_month": 0.001315925925925926,
+     "yearly": {
+      "2020": {
+       "head": -0.007002424215897918,
+       "top6": -0.025211478350684047,
+       "n": 4
+      },
+      "2021": {
+       "head": 0.015299799114776155,
+       "top6": 0.025090348906815052,
+       "n": 12
+      },
+      "2022": {
+       "head": -0.006438835135971506,
+       "top6": -0.011146996170282364,
+       "n": 12
+      },
+      "2023": {
+       "head": -0.0042860534352560835,
+       "top6": -0.03506356943398714,
+       "n": 12
+      },
+      "2024": {
+       "head": 0.002811107784509659,
+       "top6": -0.006753561086952686,
+       "n": 12
+      },
+      "2025": {
+       "head": -0.009693292823309699,
+       "top6": -0.003072483465075493,
+       "n": 12
+      },
+      "2026": {
+       "head": 0.008795948433024543,
+       "top6": 0.027048349380493164,
+       "n": 7
+      }
+     },
+     "avg_names": 2300.7042253521126,
+     "expr": "panel:llm_mine_loop_r3#llm_insider_net_z",
+     "info_source": "llm_r3",
+     "source": "llm_mine_loop_r3",
+     "pit_version": "pit_v1_2019-01-01",
+     "note": "{\"active\": [\"2024-01-01\", \"2026-08-31\"], \"dead\": [\"2020-09-01\", \"2023-12-31\"], \"eval_since\": \"2019-01-01\", \"intent\": \"LLM 自主挖因子循环 r3 · 迭代 1 (plans/llm-mine-loop-r3-prereg-20260926.md): 4 条进厂(静态合法), 双域保守分母; 主判据=静态失败率(预注册 §三)\", \"version\": \"factory_v1\", \"warmup_days\": 400} | why: 微盘内部人净增持的截面 z 值，内部人真金白银买入缓解信息不对称。 | noise: 用内部人交易数据避开普通资金流和公告事件的噪声。",
+     "head_bar": 0.006315925925925926,
+     "c_same_sign": false,
+     "c_head_size": false,
+     "c_t": false,
+     "c_p_adj": false,
+     "c_top6": false,
+     "c_cost": true,
+     "PASS": false,
+     "std_dead_head": 0.0007,
+     "den_dead_head": 0.0045,
+     "delta_head_denoised": 0.0038,
+     "shadow_factor": "low_52w",
+     "shadow_abs_rho": 0.083,
+     "is_shadow": false
+    }
+   ],
+   "denominator": 8,
+   "n_prior": 235,
+   "n_used": 243
+  },
+  {
+   "iteration": 2,
+   "n_proposals": 10,
+   "proposals": [
+    {
+     "kind": "expr",
+     "name": "llm_intraday_close_position",
+     "expr": "Div(Sub($close, $low), Add(Sub($high, $low), 0.001))",
+     "why": "收盘在日内高低区间的位置，微盘高位收盘代表情绪过热，预期次月反转走弱。",
+     "noise_hypothesis": "借 KG 的 kg_holder_dec_60d 排除大股东减持公告造成的异常高位收盘噪声。"
+    },
+    {
+     "kind": "expr",
+     "name": "llm_upper_lower_shadow_ratio",
+     "expr": "Div(Sub($high, $close), Add(Sub($close, $low), 0.001))",
+     "why": "上影线相对下影线，衡量日内抛压与承接不对称，微盘上影线强预期次月偏弱。",
+     "noise_hypothesis": "借 KG 的 kg_holder_add_60d 排除增持公告造成的下影线承接噪声。"
+    },
+    {
+     "kind": "expr",
+     "name": "llm_vwap_premium_voladj",
+     "expr": "Div(Sub($close, $vwap), Add(Std($close,20), 0.001))",
+     "why": "收盘相对 VWAP 溢价经波动调整，捕捉微盘日内追高后的反转压力。",
+     "noise_hypothesis": "借 KG 的 kg_catalyst_60d 排除事件催化造成的 VWAP 溢价噪声。"
+    },
+    {
+     "kind": "expr",
+     "name": "llm_amount_concentration_5",
+     "expr": "Div(Max($amount,5), Add(Sum($amount,5),0.001))",
+     "why": "近5日最大单日成交额占比，微盘情绪脉冲越集中，次月越容易资金退潮走弱。",
+     "noise_hypothesis": "借 KG 的 kg_dividend_90d 排除分红实施日造成的成交额脉冲噪声。"
+    },
+    {
+     "kind": "expr",
+     "name": "llm_turnover_accel_5_20",
+     "expr": "Sub(Mean($turnover,5), Mean($turnover,20))",
+     "why": "短期换手率相对长期加速，微盘情绪升温过快，预期次月负向。",
+     "noise_hypothesis": "借 KG 的 kg_rating_up_60d 排除评级上调带来的换手加速噪声。"
+    },
+    {
+     "kind": "expr",
+     "name": "llm_high_low_order_20",
+     "expr": "Sub(IdxMax($high,20), IdxMin($low,20))",
+     "why": "20日最高价与最低价出现顺序，衡量微盘路径依赖，冲高回落路径预期次月偏弱。",
+     "noise_hypothesis": "借 KG 的 kg_broker_rec_3m 排除券商推荐变化造成的路径噪声。"
+    },
+    {
+     "kind": "expr",
+     "name": "llm_intraday_range_turnover",
+     "expr": "Div(Div(Sub($high,$low), Add($pre_close,0.001)), Add($turnover,0.001))",
+     "why": "单位换手的日内振幅，衡量微盘低流动性冲击，冲击越高次月越弱。",
+     "noise_hypothesis": "借 KG 的 kg_dividend_90d 排除除权除息造成的振幅噪声。"
+    },
+    {
+     "kind": "expr",
+     "name": "llm_illiquidity_vol_amount",
+     "expr": "Div(Std($close,20), Add(Mean($amount,20),0.001))",
+     "why": "单位成交额对应的价格波动，刻画微盘非流动性，高非流动性容易拥挤反转。",
+     "noise_hypothesis": "借 KG 的 kg_sentiment_60d 排除情绪极端造成的成交额噪声。"
+    },
+    {
+     "kind": "expr",
+     "name": "llm_amount_short_long_ratio",
+     "expr": "Div(Mean($amount,5), Add(Mean($amount,20),0.001))",
+     "why": "短期成交额相对长期放大，微盘资金拥挤度上升，预期次月负向。",
+     "noise_hypothesis": "借 KG 的 kg_broker_rec_3m 排除券商关注骤增带来的量能噪声。"
+    },
+    {
+     "kind": "expr",
+     "name": "llm_turnover_volatility",
+     "expr": "Div(Std($turnover,20), Add(Mean($turnover,20),0.001))",
+     "why": "换手率变异系数，微盘交易不稳定且情绪反复，预期次月偏弱。",
+     "noise_hypothesis": "借 KG 的 kg_holder_net 排除股东交易造成的换手噪声。"
+    }
+   ],
+   "legal_examples": [
+    "Div(Sub($close, $low), Add(Sub($high, $low), 0.001))",
+    "Div(Sub($high, $close), Add(Sub($close, $low), 0.001))",
+    "Div(Sub($close, $vwap), Add(Std($close,20), 0.001))"
+   ],
+   "static_dropped": [],
+   "records": [
+    {
+     "alpha_id": "llm_intraday_close_position",
+     "DEAD_head": -0.0035666439798660576,
+     "DEAD_head_t": -2.1023098614914146,
+     "DEAD_hit": 0.425,
+     "DEAD_n": 40,
+     "DEAD_top6": -0.02038406358915381,
+     "DEAD_ic": -7.602424580004235e-05,
+     "DEAD_ls": 0.0021147610736079515,
+     "ACTIVE_head": -0.006662294899504031,
+     "ACTIVE_head_t": -2.244847489665245,
+     "ACTIVE_hit": 0.45161290322580644,
+     "ACTIVE_n": 31,
+     "ACTIVE_top6": -0.026145864638590043,
+     "ACTIVE_ic": -0.004871968271726578,
+     "ACTIVE_ls": 0.0012787525512037738,
+     "FULL_head": -0.004918266212384046,
+     "FULL_head_t": -3.0588566981749223,
+     "FULL_n": 71,
+     "FULL_top6": -0.02289977954031611,
+     "p_adj": 1.0,
+     "n_tests": 248,
+     "n_tests_family": 10,
+     "n_tests_prior": 238,
+     "cost_per_month": 0.0015117391304347826,
+     "yearly": {
+      "2020": {
+       "head": 0.00121760880574584,
+       "top6": 0.031936006620526314,
+       "n": 4
+      },
+      "2021": {
+       "head": -0.0037117810376609364,
+       "top6": -0.044186325336340815,
+       "n": 12
+      },
+      "2022": {
+       "head": -0.008886316946397224,
+       "top6": -0.0415026624687016,
+       "n": 12
+      },
+      "2023": {
+       "head": 0.00030341511592268944,
+       "top6": 0.007096773634354274,
+       "n": 12
+      },
+      "2024": {
+       "head": -0.007073172368109226,
+       "top6": -0.061162917564312615,
+       "n": 12
+      },
+      "2025": {
+       "head": -0.004979949056481321,
+       "top6": -0.0035782928268114724,
+       "n": 12
+      },
+      "2026": {
+       "head": -0.008841954969934054,
+       "top6": -0.004803897014686039,
+       "n": 7
+      }
+     },
+     "avg_names": 4166.3239436619715,
+     "expr": "Div(Sub($close, $low), Add(Sub($high, $low), 0.001))",
+     "info_source": "llm_r3",
+     "source": "llm_mine_loop_r3",
+     "pit_version": "pit_v1_2019-01-01",
+     "note": "{\"active\": [\"2024-01-01\", \"2026-08-31\"], \"dead\": [\"2020-09-01\", \"2023-12-31\"], \"eval_since\": \"2019-01-01\", \"intent\": \"LLM 自主挖因子循环 r3 · 迭代 2 (plans/llm-mine-loop-r3-prereg-20260926.md): 10 条进厂(静态合法), 双域保守分母; 主判据=静态失败率(预注册 §三)\", \"version\": \"factory_v1\", \"warmup_days\": 400} | why: 收盘在日内高低区间的位置，微盘高位收盘代表情绪过热，预期次月反转走弱。 | noise: 借 KG 的 kg_holder_dec_60d 排除大股东减持公告造成的异常高位收盘噪声。",
+     "head_bar": 0.006511739130434783,
+     "c_same_sign": true,
+     "c_head_size": false,
+     "c_t": false,
+     "c_p_adj": false,
+     "c_top6": false,
+     "c_cost": true,
+     "PASS": false,
+     "std_dead_head": -0.0036,
+     "den_dead_head": -0.0108,
+     "delta_head_denoised": -0.0072,
+     "shadow_factor": "rev_5",
+     "shadow_abs_rho": 0.245,
+     "is_shadow": false
+    },
+    {
+     "alpha_id": "llm_upper_lower_shadow_ratio",
+     "DEAD_head": -0.0044225692166946825,
+     "DEAD_head_t": -1.6554884236718785,
+     "DEAD_hit": 0.45,
+     "DEAD_n": 40,
+     "DEAD_top6": -0.011986329307546839,
+     "DEAD_ic": -0.015240821960258912,
+     "DEAD_ls": -0.004525635740719736,
+     "ACTIVE_head": -0.003177418238333156,
+     "ACTIVE_head_t": -0.651093556699479,
+     "ACTIVE_hit": 0.3225806451612903,
+     "ACTIVE_n": 31,
+     "ACTIVE_top6": -0.01862471610788376,
+     "ACTIVE_ic": -0.02558520122320184,
+     "ACTIVE_ls": -0.011600727395665261,
+     "FULL_head": -0.0038789117472692275,
+     "FULL_head_t": -1.4983327917190246,
+     "FULL_n": 71,
+     "FULL_top6": -0.014884779882341834,
+     "p_adj": 1.0,
+     "n_tests": 248,
+     "n_tests_family": 10,
+     "n_tests_prior": 238,
+     "cost_per_month": 0.0015144927536231887,
+     "yearly": {
+      "2020": {
+       "head": -0.009268402587622404,
+       "top6": 0.012016292661428452,
+       "n": 4
+      },
+      "2021": {
+       "head": -0.003098496080686649,
+       "top6": 0.014047292914862433,
+       "n": 12
+      },
+      "2022": {
+       "head": -0.004875011392869055,
+       "top6": -0.02813535447542866,
+       "n": 12
+      },
+      "2023": {
+       "head": -0.0036789223862191043,
+       "top6": -0.02987180035173272,
+       "n": 12
+      },
+      "2024": {
+       "head": -0.011862121988087893,
+       "top6": -0.038266494094083704,
+       "n": 12
+      },
+      "2025": {
+       "head": -0.006488862175804873,
+       "top6": -0.0073058839576939745,
+       "n": 12
+      },
+      "2026": {
+       "head": 0.017387406368340765,
+       "top6": -0.004356808960437775,
+       "n": 7
+      }
+     },
+     "avg_names": 4166.3239436619715,
+     "expr": "Div(Sub($high, $close), Add(Sub($close, $low), 0.001))",
+     "info_source": "llm_r3",
+     "source": "llm_mine_loop_r3",
+     "pit_version": "pit_v1_2019-01-01",
+     "note": "{\"active\": [\"2024-01-01\", \"2026-08-31\"], \"dead\": [\"2020-09-01\", \"2023-12-31\"], \"eval_since\": \"2019-01-01\", \"intent\": \"LLM 自主挖因子循环 r3 · 迭代 2 (plans/llm-mine-loop-r3-prereg-20260926.md): 10 条进厂(静态合法), 双域保守分母; 主判据=静态失败率(预注册 §三)\", \"version\": \"factory_v1\", \"warmup_days\": 400} | why: 上影线相对下影线，衡量日内抛压与承接不对称，微盘上影线强预期次月偏弱。 | noise: 借 KG 的 kg_holder_add_60d 排除增持公告造成的下影线承接噪声。",
+     "head_bar": 0.006514492753623188,
+     "c_same_sign": true,
+     "c_head_size": false,
+     "c_t": false,
+     "c_p_adj": false,
+     "c_top6": false,
+     "c_cost": true,
+     "PASS": false,
+     "std_dead_head": -0.0044,
+     "den_dead_head": -0.0034,
+     "delta_head_denoised": 0.001,
+     "shadow_factor": "rev_5",
+     "shadow_abs_rho": 0.164,
+     "is_shadow": false
+    },
+    {
+     "alpha_id": "llm_vwap_premium_voladj",
+     "DEAD_head": -0.0061457274830900134,
+     "DEAD_head_t": -2.4385619329140305,
+     "DEAD_hit": 0.25,
+     "DEAD_n": 40,
+     "DEAD_top6": -0.012625628686510026,
+     "DEAD_ic": -0.008449973588790842,
+     "DEAD_ls": -0.0025347732298541814,
+     "ACTIVE_head": -0.007608918608316491,
+     "ACTIVE_head_t": -1.7118018291243626,
+     "ACTIVE_hit": 0.3548387096774194,
+     "ACTIVE_n": 31,
+     "ACTIVE_top6": -0.029085355300095775,
+     "ACTIVE_ic": -0.021784470418423043,
+     "ACTIVE_ls": -0.006944392267013749,
+     "FULL_head": -0.006784585580019884,
+     "FULL_head_t": -2.8421735824474004,
+     "FULL_n": 71,
+     "FULL_top6": -0.019812269883991127,
+     "p_adj": 1.0,
+     "n_tests": 248,
+     "n_tests_family": 10,
+     "n_tests_prior": 238,
+     "cost_per_month": 0.0015144927536231883,
+     "yearly": {
+      "2020": {
+       "head": 0.003203371539711952,
+       "top6": -0.03258747048676014,
+       "n": 4
+      },
+      "2021": {
+       "head": -0.002397755354953309,
+       "top6": 0.00509085498439769,
+       "n": 12
+      },
+      "2022": {
+       "head": -0.016148037898043793,
+       "top6": -0.05030731515338024,
+       "n": 12
+      },
+      "2023": {
+       "head": -0.003007755537206928,
+       "top6": 0.013993521376202503,
+       "n": 12
+      },
+      "2024": {
+       "head": -0.006815549296637376,
+       "top6": -0.03501976824675997,
+       "n": 12
+      },
+      "2025": {
+       "head": -0.0031106966004396477,
+       "top6": 0.005284725843618314,
+       "n": 12
+      },
+      "2026": {
+       "head": -0.01668021801326956,
+       "top6": -0.07783221506646701,
+       "n": 7
+      }
+     },
+     "avg_names": 4147.3239436619715,
+     "expr": "Div(Sub($close, $vwap), Add(Std($close,20), 0.001))",
+     "info_source": "llm_r3",
+     "source": "llm_mine_loop_r3",
+     "pit_version": "pit_v1_2019-01-01",
+     "note": "{\"active\": [\"2024-01-01\", \"2026-08-31\"], \"dead\": [\"2020-09-01\", \"2023-12-31\"], \"eval_since\": \"2019-01-01\", \"intent\": \"LLM 自主挖因子循环 r3 · 迭代 2 (plans/llm-mine-loop-r3-prereg-20260926.md): 10 条进厂(静态合法), 双域保守分母; 主判据=静态失败率(预注册 §三)\", \"version\": \"factory_v1\", \"warmup_days\": 400} | why: 收盘相对 VWAP 溢价经波动调整，捕捉微盘日内追高后的反转压力。 | noise: 借 KG 的 kg_catalyst_60d 排除事件催化造成的 VWAP 溢价噪声。",
+     "head_bar": 0.006514492753623188,
+     "c_same_sign": true,
+     "c_head_size": false,
+     "c_t": false,
+     "c_p_adj": false,
+     "c_top6": false,
+     "c_cost": true,
+     "PASS": false,
+     "std_dead_head": -0.0061,
+     "den_dead_head": -0.0041,
+     "delta_head_denoised": 0.0021,
+     "shadow_factor": "rev_5",
+     "shadow_abs_rho": 0.218,
+     "is_shadow": false
+    },
+    {
+     "alpha_id": "llm_amount_concentration_5",
+     "DEAD_head": -0.0027098107035271823,
+     "DEAD_head_t": -1.4520336611150622,
+     "DEAD_hit": 0.475,
+     "DEAD_n": 40,
+     "DEAD_top6": -0.011576778918970377,
+     "DEAD_ic": -0.017651177596155698,
+     "DEAD_ls": -0.0038878915162058546,
+     "ACTIVE_head": -0.009023148160908491,
+     "ACTIVE_head_t": -3.6079636733490186,
+     "ACTIVE_hit": 0.25806451612903225,
+     "ACTIVE_n": 31,
+     "ACTIVE_top6": -0.02010325711941527,
+     "ACTIVE_ic": -0.0447110789975009,
+     "ACTIVE_ls": -0.011558753137867297,
+     "FULL_head": -0.005466338325764092,
+     "FULL_head_t": -3.525860337394276,
+     "FULL_n": 71,
+     "FULL_top6": -0.01529960742902378,
+     "p_adj": 1.0,
+     "n_tests": 248,
+     "n_tests_family": 10,
+     "n_tests_prior": 238,
+     "cost_per_month": 0.0015117391304347826,
+     "yearly": {
+      "2020": {
+       "head": -0.006622627843171358,
+       "top6": -0.01904441136866808,
+       "n": 4
+      },
+      "2021": {
+       "head": -0.0013758929756780465,
+       "top6": 9.150368471940358e-05,
+       "n": 12
+      },
+      "2022": {
+       "head": -0.003793314409752687,
+       "top6": -0.024998990857663255,
+       "n": 12
+      },
+      "2023": {
+       "head": -0.0016559523452694218,
+       "top6": -0.007333638767401378,
+       "n": 12
+      },
+      "2024": {
+       "head": -0.012263946894866725,
+       "top6": -0.05640484252944589,
+       "n": 12
+      },
+      "2025": {
+       "head": 0.0001538814976811409,
+       "top6": -0.009624099281306068,
+       "n": 12
+      },
+      "2026": {
+       "head": -0.019199544031705176,
+       "top6": 0.024163761575307165,
+       "n": 7
+      }
+     },
+     "avg_names": 4162.422535211268,
+     "expr": "Div(Max($amount,5), Add(Sum($amount,5),0.001))",
+     "info_source": "llm_r3",
+     "source": "llm_mine_loop_r3",
+     "pit_version": "pit_v1_2019-01-01",
+     "note": "{\"active\": [\"2024-01-01\", \"2026-08-31\"], \"dead\": [\"2020-09-01\", \"2023-12-31\"], \"eval_since\": \"2019-01-01\", \"intent\": \"LLM 自主挖因子循环 r3 · 迭代 2 (plans/llm-mine-loop-r3-prereg-20260926.md): 10 条进厂(静态合法), 双域保守分母; 主判据=静态失败率(预注册 §三)\", \"version\": \"factory_v1\", \"warmup_days\": 400} | why: 近5日最大单日成交额占比，微盘情绪脉冲越集中，次月越容易资金退潮走弱。 | noise: 借 KG 的 kg_dividend_90d 排除分红实施日造成的成交额脉冲噪声。",
+     "head_bar": 0.006511739130434783,
+     "c_same_sign": true,
+     "c_head_size": false,
+     "c_t": false,
+     "c_p_adj": false,
+     "c_top6": false,
+     "c_cost": true,
+     "PASS": false,
+     "std_dead_head": -0.0027,
+     "den_dead_head": 0.0044,
+     "delta_head_denoised": 0.0071,
+     "shadow_factor": "rev_5",
+     "shadow_abs_rho": 0.146,
+     "is_shadow": false
+    },
+    {
+     "alpha_id": "llm_high_low_order_20",
+     "DEAD_head": -0.008848371976637282,
+     "DEAD_head_t": -2.8411227766644767,
+     "DEAD_hit": 0.4,
+     "DEAD_n": 40,
+     "DEAD_top6": -0.02580056102015078,
+     "DEAD_ic": -0.03239163740276056,
+     "DEAD_ls": -0.009439374157227575,
+     "ACTIVE_head": -0.012159895812792162,
+     "ACTIVE_head_t": -1.769963084911228,
+     "ACTIVE_hit": 0.2903225806451613,
+     "ACTIVE_n": 31,
+     "ACTIVE_top6": -0.015634443190309308,
+     "ACTIVE_ic": -0.05483725091622501,
+     "ACTIVE_ls": -0.014590971892879855,
+     "FULL_head": -0.01029424858115561,
+     "FULL_head_t": -2.9822741083516022,
+     "FULL_n": 71,
+     "FULL_top6": -0.02136183351698056,
+     "p_adj": 1.0,
+     "n_tests": 248,
+     "n_tests_family": 10,
+     "n_tests_prior": 238,
+     "cost_per_month": 0.0015144927536231887,
+     "yearly": {
+      "2020": {
+       "head": -6.278418004512787e-05,
+       "top6": -0.011732364073395729,
+       "n": 4
+      },
+      "2021": {
+       "head": -0.00956386984519971,
+       "top6": -0.030368370469659567,
+       "n": 12
+      },
+      "2022": {
+       "head": -0.016059383284300566,
+       "top6": -0.043384350215395294,
+       "n": 12
+      },
+      "2023": {
+       "head": -0.0038503920659422874,
+       "top6": -0.008338361357649168,
+       "n": 12
+      },
+      "2024": {
+       "head": -0.012080937623977661,
+       "top6": -0.02551258308812976,
+       "n": 12
+      },
+      "2025": {
+       "head": -0.0028401976451277733,
+       "top6": 0.017185463880499203,
+       "n": 12
+      },
+      "2026": {
+       "head": -0.028271878138184547,
+       "top6": -0.05496318691543171,
+       "n": 7
+      }
+     },
+     "avg_names": 4161.12676056338,
+     "expr": "Sub(IdxMax($high,20), IdxMin($low,20))",
+     "info_source": "llm_r3",
+     "source": "llm_mine_loop_r3",
+     "pit_version": "pit_v1_2019-01-01",
+     "note": "{\"active\": [\"2024-01-01\", \"2026-08-31\"], \"dead\": [\"2020-09-01\", \"2023-12-31\"], \"eval_since\": \"2019-01-01\", \"intent\": \"LLM 自主挖因子循环 r3 · 迭代 2 (plans/llm-mine-loop-r3-prereg-20260926.md): 10 条进厂(静态合法), 双域保守分母; 主判据=静态失败率(预注册 §三)\", \"version\": \"factory_v1\", \"warmup_days\": 400} | why: 20日最高价与最低价出现顺序，衡量微盘路径依赖，冲高回落路径预期次月偏弱。 | noise: 借 KG 的 kg_broker_rec_3m 排除券商推荐变化造成的路径噪声。",
+     "head_bar": 0.006514492753623188,
+     "c_same_sign": true,
+     "c_head_size": true,
+     "c_t": false,
+     "c_p_adj": false,
+     "c_top6": false,
+     "c_cost": true,
+     "PASS": false,
+     "std_dead_head": -0.0088,
+     "den_dead_head": 0.0002,
+     "delta_head_denoised": 0.009,
+     "shadow_factor": "mom_20",
+     "shadow_abs_rho": 0.607,
+     "is_shadow": false
+    },
+    {
+     "alpha_id": "llm_intraday_range_turnover",
+     "DEAD_head": 0.002281897293869406,
+     "DEAD_head_t": 0.6022588437395968,
+     "DEAD_hit": 0.525,
+     "DEAD_n": 40,
+     "DEAD_top6": -0.010916122526396066,
+     "DEAD_ic": 0.04794129180525592,
+     "DEAD_ls": 0.007598301116377115,
+     "ACTIVE_head": -0.00420610642721576,
+     "ACTIVE_head_t": -0.758570661612651,
+     "ACTIVE_hit": 0.3548387096774194,
+     "ACTIVE_n": 31,
+     "ACTIVE_top6": 0.00017613701282009003,
+     "ACTIVE_ic": 0.03561233036930366,
+     "ACTIVE_ls": 0.00447550710410841,
+     "FULL_head": -0.0005508930632241176,
+     "FULL_head_t": -0.17076756874505308,
+     "FULL_n": 71,
+     "FULL_top6": -0.00607302329096366,
+     "p_adj": 1.0,
+     "n_tests": 248,
+     "n_tests_family": 10,
+     "n_tests_prior": 238,
+     "cost_per_month": 0.0012033333333333336,
+     "yearly": {
+      "2020": {
+       "head": 0.018843437545001507,
+       "top6": -0.023156392388045788,
+       "n": 4
+      },
+      "2021": {
+       "head": 0.00024048013923068842,
+       "top6": -0.017270867169524234,
+       "n": 12
+      },
+      "2022": {
+       "head": -0.00027957124014695484,
+       "top6": -0.02210435240219037,
+       "n": 12
+      },
+      "2023": {
+       "head": 0.0013642695654804509,
+       "top6": 0.010706941946409643,
+       "n": 12
+      },
+      "2024": {
+       "head": -0.005279176713277896,
+       "top6": -0.00816968750829498,
+       "n": 12
+      },
+      "2025": {
+       "head": -0.007721149983505408,
+       "top6": 0.017120847944170237,
+       "n": 12
+      },
+      "2026": {
+       "head": 0.003659231588244438,
+       "top6": -0.01456481111901147,
+       "n": 7
+      }
+     },
+     "avg_names": 4166.3239436619715,
+     "expr": "Div(Div(Sub($high,$low), Add($pre_close,0.001)), Add($turnover,0.001))",
+     "info_source": "llm_r3",
+     "source": "llm_mine_loop_r3",
+     "pit_version": "pit_v1_2019-01-01",
+     "note": "{\"active\": [\"2024-01-01\", \"2026-08-31\"], \"dead\": [\"2020-09-01\", \"2023-12-31\"], \"eval_since\": \"2019-01-01\", \"intent\": \"LLM 自主挖因子循环 r3 · 迭代 2 (plans/llm-mine-loop-r3-prereg-20260926.md): 10 条进厂(静态合法), 双域保守分母; 主判据=静态失败率(预注册 §三)\", \"version\": \"factory_v1\", \"warmup_days\": 400} | why: 单位换手的日内振幅，衡量微盘低流动性冲击，冲击越高次月越弱。 | noise: 借 KG 的 kg_dividend_90d 排除除权除息造成的振幅噪声。",
+     "head_bar": 0.006203333333333333,
+     "c_same_sign": false,
+     "c_head_size": false,
+     "c_t": false,
+     "c_p_adj": false,
+     "c_top6": false,
+     "c_cost": true,
+     "PASS": false,
+     "std_dead_head": 0.0023,
+     "den_dead_head": -0.0014,
+     "delta_head_denoised": -0.0037,
+     "shadow_factor": "turnover_20",
+     "shadow_abs_rho": 0.726,
+     "is_shadow": true
+    },
+    {
+     "alpha_id": "llm_illiquidity_vol_amount",
+     "DEAD_head": 0.0004337639664299786,
+     "DEAD_head_t": 0.1468537951849066,
+     "DEAD_hit": 0.5,
+     "DEAD_n": 40,
+     "DEAD_top6": -0.013888530392432586,
+     "DEAD_ic": 0.014456867624638565,
+     "DEAD_ls": 0.003115360764786601,
+     "ACTIVE_head": 0.005759720179823137,
+     "ACTIVE_head_t": 1.5026505063170874,
+     "ACTIVE_hit": 0.6774193548387096,
+     "ACTIVE_n": 31,
+     "ACTIVE_top6": -0.004323920550485773,
+     "ACTIVE_ic": 0.013706144640174271,
+     "ACTIVE_ls": 0.004597924154011473,
+     "FULL_head": 0.0027591814680523437,
+     "FULL_head_t": 1.1672837218469354,
+     "FULL_n": 71,
+     "FULL_top6": -0.009712433137498061,
+     "p_adj": 1.0,
+     "n_tests": 248,
+     "n_tests_family": 10,
+     "n_tests_prior": 238,
+     "cost_per_month": 0.0012859420289855076,
+     "yearly": {
+      "2020": {
+       "head": -0.010482270270586014,
+       "top6": -0.007530681788921356,
+       "n": 4
+      },
+      "2021": {
+       "head": 0.002249813793847958,
+       "top6": -3.0381139367818832e-05,
+       "n": 12
+      },
+      "2022": {
+       "head": 0.005172442528419197,
+       "top6": -0.02610773655275504,
+       "n": 12
+      },
+      "2023": {
+       "head": -0.002482286343971888,
+       "top6": -0.017646756353011977,
+       "n": 12
+      },
+      "2024": {
+       "head": -0.0014080970237652461,
+       "top6": -0.025314582667003076,
+       "n": 12
+      },
+      "2025": {
+       "head": 0.007726951191822688,
+       "top6": 0.0022226731525734067,
+       "n": 12
+      },
+      "2026": {
+       "head": 0.01467501079397542,
+       "top6": 0.020437339586871012,
+       "n": 7
+      }
+     },
+     "avg_names": 4147.3239436619715,
+     "expr": "Div(Std($close,20), Add(Mean($amount,20),0.001))",
+     "info_source": "llm_r3",
+     "source": "llm_mine_loop_r3",
+     "pit_version": "pit_v1_2019-01-01",
+     "note": "{\"active\": [\"2024-01-01\", \"2026-08-31\"], \"dead\": [\"2020-09-01\", \"2023-12-31\"], \"eval_since\": \"2019-01-01\", \"intent\": \"LLM 自主挖因子循环 r3 · 迭代 2 (plans/llm-mine-loop-r3-prereg-20260926.md): 10 条进厂(静态合法), 双域保守分母; 主判据=静态失败率(预注册 §三)\", \"version\": \"factory_v1\", \"warmup_days\": 400} | why: 单位成交额对应的价格波动，刻画微盘非流动性，高非流动性容易拥挤反转。 | noise: 借 KG 的 kg_sentiment_60d 排除情绪极端造成的成交额噪声。",
+     "head_bar": 0.006285942028985508,
+     "c_same_sign": true,
+     "c_head_size": false,
+     "c_t": false,
+     "c_p_adj": false,
+     "c_top6": false,
+     "c_cost": true,
+     "PASS": false,
+     "std_dead_head": 0.0004,
+     "den_dead_head": -0.0157,
+     "delta_head_denoised": -0.0161,
+     "shadow_factor": "illiq",
+     "shadow_abs_rho": 0.606,
+     "is_shadow": false
+    },
+    {
+     "alpha_id": "llm_amount_short_long_ratio",
+     "DEAD_head": -0.012034079537261277,
+     "DEAD_head_t": -4.311854747358778,
+     "DEAD_hit": 0.275,
+     "DEAD_n": 40,
+     "DEAD_top6": -0.03505514885764569,
+     "DEAD_ic": -0.034656845402101046,
+     "DEAD_ls": -0.013923171104397624,
+     "ACTIVE_head": -0.01443798331573846,
+     "ACTIVE_head_t": -2.6449528774682727,
+     "ACTIVE_hit": 0.2903225806451613,
+     "ACTIVE_n": 31,
+     "ACTIVE_top6": -0.047978003449257345,
+     "ACTIVE_ic": -0.04412370143751396,
+     "ACTIVE_ls": -0.018201903199716922,
+     "FULL_head": -0.013083671327863991,
+     "FULL_head_t": -4.613971420157339,
+     "FULL_n": 71,
+     "FULL_top6": -0.04069752198919444,
+     "p_adj": 0.004014891256392529,
+     "n_tests": 248,
+     "n_tests_family": 10,
+     "n_tests_prior": 238,
+     "cost_per_month": 0.00152,
+     "yearly": {
+      "2020": {
+       "head": -0.020016931928694248,
+       "top6": -0.039450959768146276,
+       "n": 4
+      },
+      "2021": {
+       "head": -0.008299386206393441,
+       "top6": -0.033988315922518574,
+       "n": 12
+      },
+      "2022": {
+       "head": -0.016931948096801836,
+       "top6": -0.056821526028215885,
+       "n": 12
+      },
+      "2023": {
+       "head": -0.008209953511444231,
+       "top6": -0.01289033431870242,
+       "n": 12
+      },
+      "2024": {
+       "head": -0.020721738692373037,
+       "top6": -0.04483823695530494,
+       "n": 12
+      },
+      "2025": {
+       "head": -0.006769140464408944,
+       "top6": -0.05320891675849756,
+       "n": 12
+      },
+      "2026": {
+       "head": -0.016812418986644064,
+       "top6": -0.04439318033733538,
+       "n": 7
+      }
+     },
+     "avg_names": 4147.3239436619715,
+     "expr": "Div(Mean($amount,5), Add(Mean($amount,20),0.001))",
+     "info_source": "llm_r3",
+     "source": "llm_mine_loop_r3",
+     "pit_version": "pit_v1_2019-01-01",
+     "note": "{\"active\": [\"2024-01-01\", \"2026-08-31\"], \"dead\": [\"2020-09-01\", \"2023-12-31\"], \"eval_since\": \"2019-01-01\", \"intent\": \"LLM 自主挖因子循环 r3 · 迭代 2 (plans/llm-mine-loop-r3-prereg-20260926.md): 10 条进厂(静态合法), 双域保守分母; 主判据=静态失败率(预注册 §三)\", \"version\": \"factory_v1\", \"warmup_days\": 400} | why: 短期成交额相对长期放大，微盘资金拥挤度上升，预期次月负向。 | noise: 借 KG 的 kg_broker_rec_3m 排除券商关注骤增带来的量能噪声。",
+     "head_bar": 0.00652,
+     "c_same_sign": true,
+     "c_head_size": true,
+     "c_t": false,
+     "c_p_adj": true,
+     "c_top6": false,
+     "c_cost": true,
+     "PASS": false,
+     "std_dead_head": -0.012,
+     "den_dead_head": -0.0015,
+     "delta_head_denoised": 0.0105,
+     "shadow_factor": "bias_20",
+     "shadow_abs_rho": 0.495,
+     "is_shadow": false
+    },
+    {
+     "alpha_id": "llm_turnover_volatility",
+     "DEAD_head": -0.0034490509191527964,
+     "DEAD_head_t": -1.3600160625030495,
+     "DEAD_hit": 0.375,
+     "DEAD_n": 40,
+     "DEAD_top6": -0.02155252085067332,
+     "DEAD_ic": -0.028252099626558273,
+     "DEAD_ls": -0.005061951966490596,
+     "ACTIVE_head": -0.009392389419278311,
+     "ACTIVE_head_t": -3.29137158478917,
+     "ACTIVE_hit": 0.22580645161290322,
+     "ACTIVE_n": 31,
+     "ACTIVE_top6": -0.005653309725945996,
+     "ACTIVE_ic": -0.04479222643526464,
+     "ACTIVE_ls": -0.01230270002457884,
+     "FULL_head": -0.006044029700897739,
+     "FULL_head_t": -3.156397930319773,
+     "FULL_n": 71,
+     "FULL_top6": -0.014610611768045895,
+     "p_adj": 1.0,
+     "n_tests": 248,
+     "n_tests_family": 10,
+     "n_tests_prior": 238,
+     "cost_per_month": 0.001508985507246377,
+     "yearly": {
+      "2020": {
+       "head": -0.022264947183430195,
+       "top6": -0.028136929497122765,
+       "n": 4
+      },
+      "2021": {
+       "head": 0.0016154653082291286,
+       "top6": -0.03169209494565924,
+       "n": 12
+      },
+      "2022": {
+       "head": -0.005102939670905471,
+       "top6": -0.024408322448531788,
+       "n": 12
+      },
+      "2023": {
+       "head": -0.000587712973356247,
+       "top6": -0.0063623422756791115,
+       "n": 12
+      },
+      "2024": {
+       "head": -0.014122215565294027,
+       "top6": -0.02644183315957586,
+       "n": 12
+      },
+      "2025": {
+       "head": -0.0026583480454670885,
+       "top6": 0.02683766574288408,
+       "n": 12
+      },
+      "2026": {
+       "head": -0.012828186952642031,
+       "top6": -0.0257146560720035,
+       "n": 7
+      }
+     },
+     "avg_names": 4147.3239436619715,
+     "expr": "Div(Std($turnover,20), Add(Mean($turnover,20),0.001))",
+     "info_source": "llm_r3",
+     "source": "llm_mine_loop_r3",
+     "pit_version": "pit_v1_2019-01-01",
+     "note": "{\"active\": [\"2024-01-01\", \"2026-08-31\"], \"dead\": [\"2020-09-01\", \"2023-12-31\"], \"eval_since\": \"2019-01-01\", \"intent\": \"LLM 自主挖因子循环 r3 · 迭代 2 (plans/llm-mine-loop-r3-prereg-20260926.md): 10 条进厂(静态合法), 双域保守分母; 主判据=静态失败率(预注册 §三)\", \"version\": \"factory_v1\", \"warmup_days\": 400} | why: 换手率变异系数，微盘交易不稳定且情绪反复，预期次月偏弱。 | noise: 借 KG 的 kg_holder_net 排除股东交易造成的换手噪声。",
+     "head_bar": 0.006508985507246377,
+     "c_same_sign": true,
+     "c_head_size": false,
+     "c_t": false,
+     "c_p_adj": false,
+     "c_top6": false,
+     "c_cost": true,
+     "PASS": false,
+     "std_dead_head": -0.0034,
+     "den_dead_head": 0.0033,
+     "delta_head_denoised": 0.0068,
+     "shadow_factor": "ret_max20",
+     "shadow_abs_rho": 0.39,
+     "is_shadow": false
+    }
+   ],
+   "denominator": 20,
+   "n_prior": 238,
+   "n_used": 258
+  }
+ ],
+ "verdict": {
+  "static_fail_rate": 0.3,
+  "n_proposals": 20,
+  "mech_verdict": "生成端约束有效(≤40%)",
+  "n_pass": 0
+ },
+ "runtime_sec": 714.6
+}

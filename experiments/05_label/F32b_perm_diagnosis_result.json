@@ -1,0 +1,26 @@
+{
+ "script_sha": "5f1d9998a8a42c36",
+ "arms": {
+  "REAL": {
+   "n": 606,
+   "ic_raw": 0.0853,
+   "ic_raw_t": 15.13,
+   "ic_style_neutral": 0.0279,
+   "ic_style_neutral_t": 12.81,
+   "score_style_r2": 0.5943
+  },
+  "PERM": {
+   "n": 606,
+   "ic_raw": 0.0169,
+   "ic_raw_t": 6.63,
+   "ic_style_neutral": 0.0023,
+   "ic_style_neutral_t": 1.84,
+   "score_style_r2": 0.151
+  }
+ },
+ "secs": 382.7,
+ "verdict": {
+  "dynamic_leak": false,
+  "note": "风格中性后不显著 ⇒ 残余是**静态风格暴露**, 不是前视"
+ }
+}

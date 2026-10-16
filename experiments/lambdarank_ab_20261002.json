@@ -1,0 +1,55 @@
+{
+ "asof": "2026-10-02T17:39:59",
+ "criteria_file": "plans/lambdarank-prereg-20261002.md",
+ "arms": {},
+ "verdict": {},
+ "deltas": {
+  "a_full": {
+   "arm_sys_ann": -0.0479,
+   "base_sys_ann": 0.1877,
+   "delta_sys_ann_pp": -23.56,
+   "arm_mdd": -0.4066,
+   "base_mdd": -0.3214,
+   "delta_mdd_pp": -8.52,
+   "arm_turnover": 0.9326,
+   "base_turnover": 0.8778
+  },
+  "a_prod": {
+   "arm_sys_ann": -0.0409,
+   "base_sys_ann": 0.2913,
+   "delta_sys_ann_pp": -33.22,
+   "arm_mdd": -0.4127,
+   "base_mdd": -0.1817,
+   "delta_mdd_pp": -23.1,
+   "arm_turnover": 0.9332,
+   "base_turnover": 0.8865
+  },
+  "b_full": {
+   "arm_sys_ann": -0.0039,
+   "base_sys_ann": 0.0811,
+   "delta_sys_ann_pp": -8.5,
+   "arm_mdd": -0.4041,
+   "base_mdd": -0.4191,
+   "delta_mdd_pp": 1.5,
+   "arm_turnover": 0.9501,
+   "base_turnover": 0.9035
+  },
+  "b_prod": {
+   "arm_sys_ann": 0.0127,
+   "base_sys_ann": 0.1652,
+   "delta_sys_ann_pp": -15.25,
+   "arm_mdd": -0.4009,
+   "base_mdd": -0.1634,
+   "delta_mdd_pp": -23.75,
+   "arm_turnover": 0.9506,
+   "base_turnover": 0.8942
+  }
+ },
+ "criteria": {
+  "P1_both_seeds_ge_threshold": false,
+  "P2_mdd_bound": false,
+  "P3_turnover": false,
+  "same_direction": false,
+  "verdict": "REJECT(线结清, MOD-02 缺口了结)"
+ }
+}

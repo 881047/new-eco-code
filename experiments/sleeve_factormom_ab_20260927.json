@@ -1,0 +1,372 @@
+{
+ "ran_at": "2026-09-27T20:01:52",
+ "prereg": "plans/sleeve-factormom-prereg-20260927.md",
+ "seeds": [
+  42,
+  7
+ ],
+ "n_anchors": 443,
+ "eval_from": "2021-01-01",
+ "n_eval": 289,
+ "arm_a": {
+  "n": 289,
+  "ann_excess": 0.1342,
+  "mdd": -0.2582,
+  "vol_ann": 0.1588,
+  "sharpe_excess": 0.845
+ },
+ "arm_b": {
+  "n": 289,
+  "ann_excess": 0.0776,
+  "mdd": -0.2308,
+  "vol_ann": 0.1554,
+  "sharpe_excess": 0.499
+ },
+ "turnover": {
+  "a": 0.4679,
+  "b": 0.4823
+ },
+ "paired": {
+  "mean_delta_bp": -9.91,
+  "t": -2.13,
+  "n": 289
+ },
+ "criteria": {
+  "p1": "Δmean>0 且 t≥2",
+  "p2": "MDD 劣化≤2pp",
+  "p3": "|Δ换手|≤10pp"
+ },
+ "checks": {
+  "p1": false,
+  "p2": true,
+  "p3": true
+ },
+ "verdict": "REJECT（线结清）",
+ "momentum_activity": [
+  {
+   "anchor": "2019-01-25",
+   "excluded_blocks": [
+    "B5"
+   ],
+   "n_factors": 22
+  },
+  {
+   "anchor": "2019-12-27",
+   "excluded_blocks": [
+    "B3"
+   ],
+   "n_factors": 24
+  },
+  {
+   "anchor": "2020-02-28",
+   "excluded_blocks": [
+    "B1",
+    "B3"
+   ],
+   "n_factors": 21
+  },
+  {
+   "anchor": "2020-06-24",
+   "excluded_blocks": [
+    "B4",
+    "B3"
+   ],
+   "n_factors": 22
+  },
+  {
+   "anchor": "2020-07-31",
+   "excluded_blocks": [
+    "B3",
+    "B4"
+   ],
+   "n_factors": 22
+  },
+  {
+   "anchor": "2020-08-28",
+   "excluded_blocks": [
+    "B4"
+   ],
+   "n_factors": 29
+  },
+  {
+   "anchor": "2021-01-29",
+   "excluded_blocks": [
+    "B1",
+    "B4"
+   ],
+   "n_factors": 26
+  },
+  {
+   "anchor": "2021-02-26",
+   "excluded_blocks": [
+    "B1",
+    "B3"
+   ],
+   "n_factors": 21
+  },
+  {
+   "anchor": "2021-04-30",
+   "excluded_blocks": [
+    "B5"
+   ],
+   "n_factors": 22
+  },
+  {
+   "anchor": "2021-05-28",
+   "excluded_blocks": [
+    "B5"
+   ],
+   "n_factors": 22
+  },
+  {
+   "anchor": "2021-06-25",
+   "excluded_blocks": [
+    "B5"
+   ],
+   "n_factors": 22
+  },
+  {
+   "anchor": "2021-07-30",
+   "excluded_blocks": [
+    "B4",
+    "B5"
+   ],
+   "n_factors": 20
+  },
+  {
+   "anchor": "2021-08-27",
+   "excluded_blocks": [
+    "B4"
+   ],
+   "n_factors": 29
+  },
+  {
+   "anchor": "2021-09-30",
+   "excluded_blocks": [
+    "B4"
+   ],
+   "n_factors": 29
+  },
+  {
+   "anchor": "2021-12-31",
+   "excluded_blocks": [
+    "B5"
+   ],
+   "n_factors": 22
+  },
+  {
+   "anchor": "2022-01-28",
+   "excluded_blocks": [
+    "B5"
+   ],
+   "n_factors": 22
+  },
+  {
+   "anchor": "2022-04-29",
+   "excluded_blocks": [
+    "B3"
+   ],
+   "n_factors": 24
+  },
+  {
+   "anchor": "2022-07-29",
+   "excluded_blocks": [
+    "B5"
+   ],
+   "n_factors": 22
+  },
+  {
+   "anchor": "2022-08-26",
+   "excluded_blocks": [
+    "B5"
+   ],
+   "n_factors": 22
+  },
+  {
+   "anchor": "2022-09-30",
+   "excluded_blocks": [
+    "B5"
+   ],
+   "n_factors": 22
+  },
+  {
+   "anchor": "2022-10-28",
+   "excluded_blocks": [
+    "B4"
+   ],
+   "n_factors": 29
+  },
+  {
+   "anchor": "2023-01-20",
+   "excluded_blocks": [
+    "B5"
+   ],
+   "n_factors": 22
+  },
+  {
+   "anchor": "2023-07-28",
+   "excluded_blocks": [
+    "B5"
+   ],
+   "n_factors": 22
+  },
+  {
+   "anchor": "2023-08-25",
+   "excluded_blocks": [
+    "B5"
+   ],
+   "n_factors": 22
+  },
+  {
+   "anchor": "2023-09-28",
+   "excluded_blocks": [
+    "B5"
+   ],
+   "n_factors": 22
+  },
+  {
+   "anchor": "2023-11-24",
+   "excluded_blocks": [
+    "B5",
+    "B3"
+   ],
+   "n_factors": 15
+  },
+  {
+   "anchor": "2023-12-29",
+   "excluded_blocks": [
+    "B5",
+    "B3"
+   ],
+   "n_factors": 15
+  },
+  {
+   "anchor": "2024-01-26",
+   "excluded_blocks": [
+    "B3",
+    "B4"
+   ],
+   "n_factors": 22
+  },
+  {
+   "anchor": "2024-02-23",
+   "excluded_blocks": [
+    "B3",
+    "B4"
+   ],
+   "n_factors": 22
+  },
+  {
+   "anchor": "2024-03-29",
+   "excluded_blocks": [
+    "B4",
+    "B1"
+   ],
+   "n_factors": 26
+  },
+  {
+   "anchor": "2024-04-30",
+   "excluded_blocks": [
+    "B4",
+    "B1"
+   ],
+   "n_factors": 26
+  },
+  {
+   "anchor": "2024-05-31",
+   "excluded_blocks": [
+    "B4"
+   ],
+   "n_factors": 29
+  },
+  {
+   "anchor": "2024-09-30",
+   "excluded_blocks": [
+    "B5"
+   ],
+   "n_factors": 22
+  },
+  {
+   "anchor": "2024-10-25",
+   "excluded_blocks": [
+    "B5"
+   ],
+   "n_factors": 22
+  },
+  {
+   "anchor": "2024-11-29",
+   "excluded_blocks": [
+    "B5"
+   ],
+   "n_factors": 22
+  },
+  {
+   "anchor": "2024-12-27",
+   "excluded_blocks": [
+    "B5"
+   ],
+   "n_factors": 22
+  },
+  {
+   "anchor": "2025-04-30",
+   "excluded_blocks": [
+    "B5"
+   ],
+   "n_factors": 22
+  },
+  {
+   "anchor": "2025-07-25",
+   "excluded_blocks": [
+    "B5"
+   ],
+   "n_factors": 22
+  },
+  {
+   "anchor": "2026-01-30",
+   "excluded_blocks": [
+    "B4"
+   ],
+   "n_factors": 29
+  },
+  {
+   "anchor": "2026-03-27",
+   "excluded_blocks": [
+    "B4"
+   ],
+   "n_factors": 29
+  },
+  {
+   "anchor": "2026-04-30",
+   "excluded_blocks": [
+    "B4"
+   ],
+   "n_factors": 29
+  },
+  {
+   "anchor": "2026-05-29",
+   "excluded_blocks": [
+    "B2",
+    "B3"
+   ],
+   "n_factors": 17
+  },
+  {
+   "anchor": "2026-06-26",
+   "excluded_blocks": [
+    "B3",
+    "B2"
+   ],
+   "n_factors": 17
+  },
+  {
+   "anchor": "2026-07-31",
+   "excluded_blocks": [
+    "B3",
+    "B4"
+   ],
+   "n_factors": 22
+  }
+ ],
+ "note": "分块倾斜试点(每重训点最多剔 2 冷块); 生产采纳须 replay 全保真验证+拍板",
+ "runtime_sec": 261.9
+}

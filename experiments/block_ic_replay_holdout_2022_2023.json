@@ -1,0 +1,8385 @@
+{
+ "meta": {
+  "script": "scripts/oneoff/block_ic_replay_holdout.py",
+  "prereg": "plans/block-ic-replay-v2-holdout-prereg-20260922.md",
+  "git_head": "e41cb061",
+  "generated_at": "2026-09-22 21:06:11",
+  "seconds": 36.1,
+  "read_only": true,
+  "params": {
+   "horizon": 5,
+   "window": 12,
+   "baseline_anchors": 60,
+   "alarm_ratio": 0.5,
+   "min_names": 200
+  },
+  "anchors_total": 120,
+  "anchors_with_ic": 120
+ },
+ "verdict_v2": {
+  "verdict": "PASS",
+  "criterion": "≥1 个锚点：全模型主口径健康 且 ≥1 个 P0 块报警（只判存在性，无自由阈值）",
+  "decision_years": [
+   "2022",
+   "2023"
+  ],
+  "hits_by_year": {
+   "2022": [],
+   "2023": [
+    {
+     "date": "20230131",
+     "blocks": [
+      "B2"
+     ],
+     "composite_ratio": 0.756
+    },
+    {
+     "date": "20230228",
+     "blocks": [
+      "B2"
+     ],
+     "composite_ratio": 0.717
+    },
+    {
+     "date": "20230428",
+     "blocks": [
+      "B1"
+     ],
+     "composite_ratio": 0.736
+    },
+    {
+     "date": "20230531",
+     "blocks": [
+      "B1"
+     ],
+     "composite_ratio": 0.682
+    },
+    {
+     "date": "20230731",
+     "blocks": [
+      "B2"
+     ],
+     "composite_ratio": 0.79
+    }
+   ]
+  },
+  "healthy_anchors_by_year": {
+   "2022": 12,
+   "2023": 11
+  },
+  "total_hits": 5,
+  "lead_by_year": {
+   "2022": [
+    {
+     "block": "B1",
+     "block_first_alarm": null,
+     "model_first_alarm": null,
+     "lead_days": null,
+     "censored": false
+    },
+    {
+     "block": "B2",
+     "block_first_alarm": null,
+     "model_first_alarm": null,
+     "lead_days": null,
+     "censored": false
+    },
+    {
+     "block": "B3",
+     "block_first_alarm": null,
+     "model_first_alarm": null,
+     "lead_days": null,
+     "censored": false
+    },
+    {
+     "block": "B4",
+     "block_first_alarm": null,
+     "model_first_alarm": null,
+     "lead_days": null,
+     "censored": false
+    }
+   ],
+   "2023": [
+    {
+     "block": "B1",
+     "block_first_alarm": "20230331",
+     "model_first_alarm": "20230331",
+     "lead_days": 0,
+     "censored": false
+    },
+    {
+     "block": "B2",
+     "block_first_alarm": "20230131",
+     "model_first_alarm": "20230331",
+     "lead_days": 59,
+     "censored": false
+    },
+    {
+     "block": "B3",
+     "block_first_alarm": null,
+     "model_first_alarm": "20230331",
+     "lead_days": null,
+     "censored": false
+    },
+    {
+     "block": "B4",
+     "block_first_alarm": null,
+     "model_first_alarm": "20230331",
+     "lead_days": null,
+     "censored": false
+    }
+   ]
+  },
+  "limits": [
+   "分辨率仍是月末 12 锚点/年（≈4 周）",
+   "判决区间是连续两年 = 一个市场阶段，n≈1",
+   "PASS 只证明独立信息，不证明按它处置能改善收益/回撤"
+  ]
+ },
+ "descriptive_only": {
+  "2019": {
+   "hits": [
+    {
+     "date": "20190131",
+     "blocks": [
+      "B2"
+     ],
+     "composite_ratio": 0.639
+    },
+    {
+     "date": "20190228",
+     "blocks": [
+      "B2"
+     ],
+     "composite_ratio": 0.73
+    },
+    {
+     "date": "20190329",
+     "blocks": [
+      "B2"
+     ],
+     "composite_ratio": 0.741
+    },
+    {
+     "date": "20190430",
+     "blocks": [
+      "B2"
+     ],
+     "composite_ratio": 0.773
+    },
+    {
+     "date": "20190731",
+     "blocks": [
+      "B2"
+     ],
+     "composite_ratio": 0.82
+    },
+    {
+     "date": "20190830",
+     "blocks": [
+      "B2"
+     ],
+     "composite_ratio": 0.842
+    },
+    {
+     "date": "20191031",
+     "blocks": [
+      "B2"
+     ],
+     "composite_ratio": 0.838
+    },
+    {
+     "date": "20191129",
+     "blocks": [
+      "B2"
+     ],
+     "composite_ratio": 0.743
+    },
+    {
+     "date": "20191231",
+     "blocks": [
+      "B1",
+      "B2"
+     ],
+     "composite_ratio": 0.599
+    }
+   ],
+   "healthy_anchors": 12,
+   "note": "已见数据 ⇒ 只作描述性对照，不参与判决"
+  },
+  "2020": {
+   "hits": [
+    {
+     "date": "20200831",
+     "blocks": [
+      "B1",
+      "B2"
+     ],
+     "composite_ratio": 0.537
+    },
+    {
+     "date": "20201030",
+     "blocks": [
+      "B1",
+      "B2"
+     ],
+     "composite_ratio": 0.539
+    },
+    {
+     "date": "20201130",
+     "blocks": [
+      "B1",
+      "B2"
+     ],
+     "composite_ratio": 0.565
+    }
+   ],
+   "healthy_anchors": 3,
+   "note": "已见数据 ⇒ 只作描述性对照，不参与判决"
+  },
+  "2021": {
+   "hits": [
+    {
+     "date": "20210430",
+     "blocks": [
+      "B1"
+     ],
+     "composite_ratio": 0.532
+    },
+    {
+     "date": "20210531",
+     "blocks": [
+      "B4"
+     ],
+     "composite_ratio": 0.524
+    },
+    {
+     "date": "20210630",
+     "blocks": [
+      "B3",
+      "B4"
+     ],
+     "composite_ratio": 0.532
+    }
+   ],
+   "healthy_anchors": 7,
+   "note": "已见数据 ⇒ 只作描述性对照，不参与判决"
+  }
+ },
+ "per_anchor": [
+  {
+   "date": "20150430",
+   "n_avail": 16,
+   "blocks": {
+    "B1": {
+     "alarm": false,
+     "ic": 0.08474,
+     "baseline": 0.07552,
+     "ratio": 1.122,
+     "priority": "P0",
+     "note": ""
+    },
+    "B2": {
+     "alarm": true,
+     "ic": 0.0174,
+     "baseline": 0.04137,
+     "ratio": 0.421,
+     "priority": "P0",
+     "note": ""
+    },
+    "B3": {
+     "alarm": false,
+     "ic": 0.0597,
+     "baseline": 0.04759,
+     "ratio": 1.254,
+     "priority": "P0",
+     "note": ""
+    },
+    "B4": {
+     "alarm": false,
+     "ic": 0.0825,
+     "baseline": 0.10817,
+     "ratio": 0.763,
+     "priority": "P0",
+     "note": ""
+    },
+    "B5": {
+     "alarm": false,
+     "ic": 0.01161,
+     "baseline": 0.01456,
+     "ratio": 0.797,
+     "priority": "P1",
+     "note": ""
+    },
+    "B6": {
+     "alarm": false,
+     "ic": 0.02623,
+     "baseline": null,
+     "ratio": null,
+     "priority": "P2",
+     "note": "读数不足（块内成员在该窗没有有效 IC）"
+    }
+   },
+   "composite": {
+    "main": {
+     "ic": 0.03758,
+     "baseline": 0.04274,
+     "ratio": 0.879,
+     "alarm": false,
+     "note": ""
+    },
+    "a_unoriented": {
+     "ic": -0.03534,
+     "baseline": -0.0216,
+     "ratio": null,
+     "alarm": false,
+     "note": "基线 -0.0216 ≤ 0 ⇒ 0.5× 判据不适用（如实标注，不按健康处理）"
+    },
+    "b_p0only": {
+     "ic": 0.05047,
+     "baseline": 0.05609,
+     "ratio": 0.9,
+     "alarm": false,
+     "note": ""
+    }
+   }
+  },
+  {
+   "date": "20150529",
+   "n_avail": 17,
+   "blocks": {
+    "B1": {
+     "alarm": false,
+     "ic": 0.07761,
+     "baseline": 0.08924,
+     "ratio": 0.87,
+     "priority": "P0",
+     "note": ""
+    },
+    "B2": {
+     "alarm": true,
+     "ic": 0.0192,
+     "baseline": 0.03842,
+     "ratio": 0.5,
+     "priority": "P0",
+     "note": ""
+    },
+    "B3": {
+     "alarm": false,
+     "ic": 0.07588,
+     "baseline": 0.0379,
+     "ratio": 2.002,
+     "priority": "P0",
+     "note": ""
+    },
+    "B4": {
+     "alarm": false,
+     "ic": 0.10341,
+     "baseline": 0.10237,
+     "ratio": 1.01,
+     "priority": "P0",
+     "note": ""
+    },
+    "B5": {
+     "alarm": false,
+     "ic": 0.01322,
+     "baseline": 0.01513,
+     "ratio": 0.873,
+     "priority": "P1",
+     "note": ""
+    },
+    "B6": {
+     "alarm": false,
+     "ic": 0.01386,
+     "baseline": null,
+     "ratio": null,
+     "priority": "P2",
+     "note": "读数不足（块内成员在该窗没有有效 IC）"
+    }
+   },
+   "composite": {
+    "main": {
+     "ic": 0.04244,
+     "baseline": 0.04082,
+     "ratio": 1.04,
+     "alarm": false,
+     "note": ""
+    },
+    "a_unoriented": {
+     "ic": -0.03955,
+     "baseline": -0.02193,
+     "ratio": null,
+     "alarm": false,
+     "note": "基线 -0.0219 ≤ 0 ⇒ 0.5× 判据不适用（如实标注，不按健康处理）"
+    },
+    "b_p0only": {
+     "ic": 0.05817,
+     "baseline": 0.05298,
+     "ratio": 1.098,
+     "alarm": false,
+     "note": ""
+    }
+   }
+  },
+  {
+   "date": "20150630",
+   "n_avail": 18,
+   "blocks": {
+    "B1": {
+     "alarm": false,
+     "ic": 0.05512,
+     "baseline": 0.09737,
+     "ratio": 0.566,
+     "priority": "P0",
+     "note": ""
+    },
+    "B2": {
+     "alarm": false,
+     "ic": 0.05053,
+     "baseline": 0.04402,
+     "ratio": 1.148,
+     "priority": "P0",
+     "note": ""
+    },
+    "B3": {
+     "alarm": false,
+     "ic": 0.08239,
+     "baseline": 0.04282,
+     "ratio": 1.924,
+     "priority": "P0",
+     "note": ""
+    },
+    "B4": {
+     "alarm": false,
+     "ic": 0.08213,
+     "baseline": 0.10635,
+     "ratio": 0.772,
+     "priority": "P0",
+     "note": ""
+    },
+    "B5": {
+     "alarm": true,
+     "ic": -0.00147,
+     "baseline": 0.01342,
+     "ratio": -0.109,
+     "priority": "P1",
+     "note": ""
+    },
+    "B6": {
+     "alarm": false,
+     "ic": 0.02792,
+     "baseline": null,
+     "ratio": null,
+     "priority": "P2",
+     "note": "读数不足（块内成员在该窗没有有效 IC）"
+    }
+   },
+   "composite": {
+    "main": {
+     "ic": 0.04369,
+     "baseline": 0.04405,
+     "ratio": 0.992,
+     "alarm": false,
+     "note": ""
+    },
+    "a_unoriented": {
+     "ic": -0.0324,
+     "baseline": -0.02626,
+     "ratio": null,
+     "alarm": false,
+     "note": "基线 -0.0263 ≤ 0 ⇒ 0.5× 判据不适用（如实标注，不按健康处理）"
+    },
+    "b_p0only": {
+     "ic": 0.06632,
+     "baseline": 0.05856,
+     "ratio": 1.132,
+     "alarm": false,
+     "note": ""
+    }
+   }
+  },
+  {
+   "date": "20150731",
+   "n_avail": 19,
+   "blocks": {
+    "B1": {
+     "alarm": false,
+     "ic": 0.05427,
+     "baseline": 0.09409,
+     "ratio": 0.577,
+     "priority": "P0",
+     "note": ""
+    },
+    "B2": {
+     "alarm": false,
+     "ic": 0.03868,
+     "baseline": 0.04961,
+     "ratio": 0.78,
+     "priority": "P0",
+     "note": ""
+    },
+    "B3": {
+     "alarm": false,
+     "ic": 0.08577,
+     "baseline": 0.05325,
+     "ratio": 1.611,
+     "priority": "P0",
+     "note": ""
+    },
+    "B4": {
+     "alarm": false,
+     "ic": 0.09188,
+     "baseline": 0.11027,
+     "ratio": 0.833,
+     "priority": "P0",
+     "note": ""
+    },
+    "B5": {
+     "alarm": true,
+     "ic": -0.00058,
+     "baseline": 0.01374,
+     "ratio": -0.042,
+     "priority": "P1",
+     "note": ""
+    },
+    "B6": {
+     "alarm": false,
+     "ic": 0.01951,
+     "baseline": null,
+     "ratio": null,
+     "priority": "P2",
+     "note": "读数不足（块内成员在该窗没有有效 IC）"
+    }
+   },
+   "composite": {
+    "main": {
+     "ic": 0.0419,
+     "baseline": 0.04809,
+     "ratio": 0.871,
+     "alarm": false,
+     "note": ""
+    },
+    "a_unoriented": {
+     "ic": -0.03043,
+     "baseline": -0.0313,
+     "ratio": null,
+     "alarm": false,
+     "note": "基线 -0.0313 ≤ 0 ⇒ 0.5× 判据不适用（如实标注，不按健康处理）"
+    },
+    "b_p0only": {
+     "ic": 0.06409,
+     "baseline": 0.06436,
+     "ratio": 0.996,
+     "alarm": false,
+     "note": ""
+    }
+   }
+  },
+  {
+   "date": "20150831",
+   "n_avail": 20,
+   "blocks": {
+    "B1": {
+     "alarm": true,
+     "ic": 0.04671,
+     "baseline": 0.09559,
+     "ratio": 0.489,
+     "priority": "P0",
+     "note": ""
+    },
+    "B2": {
+     "alarm": false,
+     "ic": 0.03121,
+     "baseline": 0.04479,
+     "ratio": 0.697,
+     "priority": "P0",
+     "note": ""
+    },
+    "B3": {
+     "alarm": false,
+     "ic": 0.10778,
+     "baseline": 0.04162,
+     "ratio": 2.59,
+     "priority": "P0",
+     "note": ""
+    },
+    "B4": {
+     "alarm": false,
+     "ic": 0.09126,
+     "baseline": 0.11011,
+     "ratio": 0.829,
+     "priority": "P0",
+     "note": ""
+    },
+    "B5": {
+     "alarm": true,
+     "ic": -0.00696,
+     "baseline": 0.01566,
+     "ratio": -0.444,
+     "priority": "P1",
+     "note": ""
+    },
+    "B6": {
+     "alarm": false,
+     "ic": 0.01652,
+     "baseline": null,
+     "ratio": null,
+     "priority": "P2",
+     "note": "读数不足（块内成员在该窗没有有效 IC）"
+    }
+   },
+   "composite": {
+    "main": {
+     "ic": 0.0422,
+     "baseline": 0.04474,
+     "ratio": 0.943,
+     "alarm": false,
+     "note": ""
+    },
+    "a_unoriented": {
+     "ic": -0.03525,
+     "baseline": -0.02734,
+     "ratio": null,
+     "alarm": false,
+     "note": "基线 -0.0273 ≤ 0 ⇒ 0.5× 判据不适用（如实标注，不按健康处理）"
+    },
+    "b_p0only": {
+     "ic": 0.06819,
+     "baseline": 0.05852,
+     "ratio": 1.165,
+     "alarm": false,
+     "note": ""
+    }
+   }
+  },
+  {
+   "date": "20150930",
+   "n_avail": 21,
+   "blocks": {
+    "B1": {
+     "alarm": false,
+     "ic": 0.05257,
+     "baseline": 0.08858,
+     "ratio": 0.593,
+     "priority": "P0",
+     "note": ""
+    },
+    "B2": {
+     "alarm": false,
+     "ic": 0.0233,
+     "baseline": 0.04559,
+     "ratio": 0.511,
+     "priority": "P0",
+     "note": ""
+    },
+    "B3": {
+     "alarm": false,
+     "ic": 0.11432,
+     "baseline": 0.04364,
+     "ratio": 2.62,
+     "priority": "P0",
+     "note": ""
+    },
+    "B4": {
+     "alarm": false,
+     "ic": 0.09879,
+     "baseline": 0.10464,
+     "ratio": 0.944,
+     "priority": "P0",
+     "note": ""
+    },
+    "B5": {
+     "alarm": true,
+     "ic": -0.00371,
+     "baseline": 0.01559,
+     "ratio": -0.238,
+     "priority": "P1",
+     "note": ""
+    },
+    "B6": {
+     "alarm": false,
+     "ic": 0.01345,
+     "baseline": null,
+     "ratio": null,
+     "priority": "P2",
+     "note": "读数不足（块内成员在该窗没有有效 IC）"
+    }
+   },
+   "composite": {
+    "main": {
+     "ic": 0.04349,
+     "baseline": 0.04428,
+     "ratio": 0.982,
+     "alarm": false,
+     "note": ""
+    },
+    "a_unoriented": {
+     "ic": -0.03504,
+     "baseline": -0.0282,
+     "ratio": null,
+     "alarm": false,
+     "note": "基线 -0.0282 ≤ 0 ⇒ 0.5× 判据不适用（如实标注，不按健康处理）"
+    },
+    "b_p0only": {
+     "ic": 0.0694,
+     "baseline": 0.05788,
+     "ratio": 1.199,
+     "alarm": false,
+     "note": ""
+    }
+   }
+  },
+  {
+   "date": "20151030",
+   "n_avail": 22,
+   "blocks": {
+    "B1": {
+     "alarm": false,
+     "ic": 0.05571,
+     "baseline": 0.09169,
+     "ratio": 0.608,
+     "priority": "P0",
+     "note": ""
+    },
+    "B2": {
+     "alarm": false,
+     "ic": 0.0355,
+     "baseline": 0.04318,
+     "ratio": 0.822,
+     "priority": "P0",
+     "note": ""
+    },
+    "B3": {
+     "alarm": false,
+     "ic": 0.11975,
+     "baseline": 0.04145,
+     "ratio": 2.889,
+     "priority": "P0",
+     "note": ""
+    },
+    "B4": {
+     "alarm": false,
+     "ic": 0.09646,
+     "baseline": 0.09736,
+     "ratio": 0.991,
+     "priority": "P0",
+     "note": ""
+    },
+    "B5": {
+     "alarm": true,
+     "ic": -0.00341,
+     "baseline": 0.01539,
+     "ratio": -0.222,
+     "priority": "P1",
+     "note": ""
+    },
+    "B6": {
+     "alarm": false,
+     "ic": 0.01203,
+     "baseline": null,
+     "ratio": null,
+     "priority": "P2",
+     "note": "读数不足（块内成员在该窗没有有效 IC）"
+    }
+   },
+   "composite": {
+    "main": {
+     "ic": 0.04741,
+     "baseline": 0.04288,
+     "ratio": 1.106,
+     "alarm": false,
+     "note": ""
+    },
+    "a_unoriented": {
+     "ic": -0.0354,
+     "baseline": -0.02764,
+     "ratio": null,
+     "alarm": false,
+     "note": "基线 -0.0276 ≤ 0 ⇒ 0.5× 判据不适用（如实标注，不按健康处理）"
+    },
+    "b_p0only": {
+     "ic": 0.07615,
+     "baseline": 0.05591,
+     "ratio": 1.362,
+     "alarm": false,
+     "note": ""
+    }
+   }
+  },
+  {
+   "date": "20151130",
+   "n_avail": 23,
+   "blocks": {
+    "B1": {
+     "alarm": false,
+     "ic": 0.0896,
+     "baseline": 0.05775,
+     "ratio": 1.551,
+     "priority": "P0",
+     "note": ""
+    },
+    "B2": {
+     "alarm": false,
+     "ic": 0.04158,
+     "baseline": 0.04391,
+     "ratio": 0.947,
+     "priority": "P0",
+     "note": ""
+    },
+    "B3": {
+     "alarm": false,
+     "ic": 0.12615,
+     "baseline": 0.04296,
+     "ratio": 2.937,
+     "priority": "P0",
+     "note": ""
+    },
+    "B4": {
+     "alarm": false,
+     "ic": 0.11149,
+     "baseline": 0.09178,
+     "ratio": 1.215,
+     "priority": "P0",
+     "note": ""
+    },
+    "B5": {
+     "alarm": true,
+     "ic": 0.00151,
+     "baseline": 0.00912,
+     "ratio": 0.165,
+     "priority": "P1",
+     "note": ""
+    },
+    "B6": {
+     "alarm": false,
+     "ic": 0.00446,
+     "baseline": null,
+     "ratio": null,
+     "priority": "P2",
+     "note": "读数不足（块内成员在该窗没有有效 IC）"
+    }
+   },
+   "composite": {
+    "main": {
+     "ic": 0.05501,
+     "baseline": 0.03739,
+     "ratio": 1.471,
+     "alarm": false,
+     "note": ""
+    },
+    "a_unoriented": {
+     "ic": -0.04181,
+     "baseline": -0.02422,
+     "ratio": null,
+     "alarm": false,
+     "note": "基线 -0.0242 ≤ 0 ⇒ 0.5× 判据不适用（如实标注，不按健康处理）"
+    },
+    "b_p0only": {
+     "ic": 0.08768,
+     "baseline": 0.05078,
+     "ratio": 1.726,
+     "alarm": false,
+     "note": ""
+    }
+   }
+  },
+  {
+   "date": "20151231",
+   "n_avail": 24,
+   "blocks": {
+    "B1": {
+     "alarm": false,
+     "ic": 0.08546,
+     "baseline": 0.05593,
+     "ratio": 1.528,
+     "priority": "P0",
+     "note": ""
+    },
+    "B2": {
+     "alarm": false,
+     "ic": 0.04129,
+     "baseline": 0.04973,
+     "ratio": 0.83,
+     "priority": "P0",
+     "note": ""
+    },
+    "B3": {
+     "alarm": false,
+     "ic": 0.11893,
+     "baseline": 0.05781,
+     "ratio": 2.057,
+     "priority": "P0",
+     "note": ""
+    },
+    "B4": {
+     "alarm": false,
+     "ic": 0.08842,
+     "baseline": 0.10906,
+     "ratio": 0.811,
+     "priority": "P0",
+     "note": ""
+    },
+    "B5": {
+     "alarm": false,
+     "ic": 0.01839,
+     "baseline": 0.00856,
+     "ratio": 2.147,
+     "priority": "P1",
+     "note": ""
+    },
+    "B6": {
+     "alarm": false,
+     "ic": 0.00804,
+     "baseline": null,
+     "ratio": null,
+     "priority": "P2",
+     "note": "读数不足（块内成员在该窗没有有效 IC）"
+    }
+   },
+   "composite": {
+    "main": {
+     "ic": 0.05627,
+     "baseline": 0.04342,
+     "ratio": 1.296,
+     "alarm": false,
+     "note": ""
+    },
+    "a_unoriented": {
+     "ic": -0.03621,
+     "baseline": -0.02993,
+     "ratio": null,
+     "alarm": false,
+     "note": "基线 -0.0299 ≤ 0 ⇒ 0.5× 判据不适用（如实标注，不按健康处理）"
+    },
+    "b_p0only": {
+     "ic": 0.08183,
+     "baseline": 0.05993,
+     "ratio": 1.365,
+     "alarm": false,
+     "note": ""
+    }
+   }
+  },
+  {
+   "date": "20160129",
+   "n_avail": 25,
+   "blocks": {
+    "B1": {
+     "alarm": false,
+     "ic": 0.09379,
+     "baseline": 0.05721,
+     "ratio": 1.639,
+     "priority": "P0",
+     "note": ""
+    },
+    "B2": {
+     "alarm": false,
+     "ic": 0.04095,
+     "baseline": 0.04572,
+     "ratio": 0.896,
+     "priority": "P0",
+     "note": ""
+    },
+    "B3": {
+     "alarm": false,
+     "ic": 0.11681,
+     "baseline": 0.05713,
+     "ratio": 2.045,
+     "priority": "P0",
+     "note": ""
+    },
+    "B4": {
+     "alarm": false,
+     "ic": 0.10999,
+     "baseline": 0.09633,
+     "ratio": 1.142,
+     "priority": "P0",
+     "note": ""
+    },
+    "B5": {
+     "alarm": true,
+     "ic": -0.0015,
+     "baseline": 0.00741,
+     "ratio": -0.202,
+     "priority": "P1",
+     "note": ""
+    },
+    "B6": {
+     "alarm": true,
+     "ic": 0.0146,
+     "baseline": 0.03938,
+     "ratio": 0.371,
+     "priority": "P2",
+     "note": ""
+    }
+   },
+   "composite": {
+    "main": {
+     "ic": 0.05277,
+     "baseline": 0.04109,
+     "ratio": 1.284,
+     "alarm": false,
+     "note": ""
+    },
+    "a_unoriented": {
+     "ic": -0.03621,
+     "baseline": -0.02935,
+     "ratio": null,
+     "alarm": false,
+     "note": "基线 -0.0294 ≤ 0 ⇒ 0.5× 判据不适用（如实标注，不按健康处理）"
+    },
+    "b_p0only": {
+     "ic": 0.08451,
+     "baseline": 0.05706,
+     "ratio": 1.481,
+     "alarm": false,
+     "note": ""
+    }
+   }
+  },
+  {
+   "date": "20160229",
+   "n_avail": 26,
+   "blocks": {
+    "B1": {
+     "alarm": false,
+     "ic": 0.07652,
+     "baseline": 0.07055,
+     "ratio": 1.085,
+     "priority": "P0",
+     "note": ""
+    },
+    "B2": {
+     "alarm": false,
+     "ic": 0.0366,
+     "baseline": 0.05168,
+     "ratio": 0.708,
+     "priority": "P0",
+     "note": ""
+    },
+    "B3": {
+     "alarm": false,
+     "ic": 0.11849,
+     "baseline": 0.06139,
+     "ratio": 1.93,
+     "priority": "P0",
+     "note": ""
+    },
+    "B4": {
+     "alarm": false,
+     "ic": 0.09542,
+     "baseline": 0.09431,
+     "ratio": 1.012,
+     "priority": "P0",
+     "note": ""
+    },
+    "B5": {
+     "alarm": true,
+     "ic": -0.00688,
+     "baseline": 0.01214,
+     "ratio": -0.567,
+     "priority": "P1",
+     "note": ""
+    },
+    "B6": {
+     "alarm": true,
+     "ic": -0.00014,
+     "baseline": 0.01542,
+     "ratio": -0.009,
+     "priority": "P2",
+     "note": ""
+    }
+   },
+   "composite": {
+    "main": {
+     "ic": 0.04657,
+     "baseline": 0.046,
+     "ratio": 1.012,
+     "alarm": false,
+     "note": ""
+    },
+    "a_unoriented": {
+     "ic": -0.03205,
+     "baseline": -0.03389,
+     "ratio": null,
+     "alarm": false,
+     "note": "基线 -0.0339 ≤ 0 ⇒ 0.5× 判据不适用（如实标注，不按健康处理）"
+    },
+    "b_p0only": {
+     "ic": 0.07926,
+     "baseline": 0.06272,
+     "ratio": 1.264,
+     "alarm": false,
+     "note": ""
+    }
+   }
+  },
+  {
+   "date": "20160331",
+   "n_avail": 27,
+   "blocks": {
+    "B1": {
+     "alarm": false,
+     "ic": 0.07581,
+     "baseline": 0.07762,
+     "ratio": 0.977,
+     "priority": "P0",
+     "note": ""
+    },
+    "B2": {
+     "alarm": false,
+     "ic": 0.03954,
+     "baseline": 0.04992,
+     "ratio": 0.792,
+     "priority": "P0",
+     "note": ""
+    },
+    "B3": {
+     "alarm": false,
+     "ic": 0.12701,
+     "baseline": 0.05606,
+     "ratio": 2.265,
+     "priority": "P0",
+     "note": ""
+    },
+    "B4": {
+     "alarm": false,
+     "ic": 0.09791,
+     "baseline": 0.08935,
+     "ratio": 1.096,
+     "priority": "P0",
+     "note": ""
+    },
+    "B5": {
+     "alarm": true,
+     "ic": -0.00701,
+     "baseline": 0.01266,
+     "ratio": -0.554,
+     "priority": "P1",
+     "note": ""
+    },
+    "B6": {
+     "alarm": true,
+     "ic": 0.01082,
+     "baseline": 0.026,
+     "ratio": 0.416,
+     "priority": "P2",
+     "note": ""
+    }
+   },
+   "composite": {
+    "main": {
+     "ic": 0.05027,
+     "baseline": 0.04486,
+     "ratio": 1.121,
+     "alarm": false,
+     "note": ""
+    },
+    "a_unoriented": {
+     "ic": -0.03523,
+     "baseline": -0.03194,
+     "ratio": null,
+     "alarm": false,
+     "note": "基线 -0.0319 ≤ 0 ⇒ 0.5× 判据不适用（如实标注，不按健康处理）"
+    },
+    "b_p0only": {
+     "ic": 0.08364,
+     "baseline": 0.06071,
+     "ratio": 1.378,
+     "alarm": false,
+     "note": ""
+    }
+   }
+  },
+  {
+   "date": "20160429",
+   "n_avail": 28,
+   "blocks": {
+    "B1": {
+     "alarm": false,
+     "ic": 0.05991,
+     "baseline": 0.08244,
+     "ratio": 0.727,
+     "priority": "P0",
+     "note": ""
+    },
+    "B2": {
+     "alarm": false,
+     "ic": 0.049,
+     "baseline": 0.0483,
+     "ratio": 1.015,
+     "priority": "P0",
+     "note": ""
+    },
+    "B3": {
+     "alarm": false,
+     "ic": 0.13023,
+     "baseline": 0.05667,
+     "ratio": 2.298,
+     "priority": "P0",
+     "note": ""
+    },
+    "B4": {
+     "alarm": false,
+     "ic": 0.09518,
+     "baseline": 0.08892,
+     "ratio": 1.071,
+     "priority": "P0",
+     "note": ""
+    },
+    "B5": {
+     "alarm": true,
+     "ic": -0.01331,
+     "baseline": 0.01235,
+     "ratio": -1.077,
+     "priority": "P1",
+     "note": ""
+    },
+    "B6": {
+     "alarm": true,
+     "ic": -0.00262,
+     "baseline": 0.02623,
+     "ratio": -0.1,
+     "priority": "P2",
+     "note": ""
+    }
+   },
+   "composite": {
+    "main": {
+     "ic": 0.04829,
+     "baseline": 0.0449,
+     "ratio": 1.076,
+     "alarm": false,
+     "note": ""
+    },
+    "a_unoriented": {
+     "ic": -0.03461,
+     "baseline": -0.03199,
+     "ratio": null,
+     "alarm": false,
+     "note": "基线 -0.0320 ≤ 0 ⇒ 0.5× 判据不适用（如实标注，不按健康处理）"
+    },
+    "b_p0only": {
+     "ic": 0.08551,
+     "baseline": 0.06105,
+     "ratio": 1.401,
+     "alarm": false,
+     "note": ""
+    }
+   }
+  },
+  {
+   "date": "20160531",
+   "n_avail": 29,
+   "blocks": {
+    "B1": {
+     "alarm": false,
+     "ic": 0.06136,
+     "baseline": 0.08103,
+     "ratio": 0.757,
+     "priority": "P0",
+     "note": ""
+    },
+    "B2": {
+     "alarm": false,
+     "ic": 0.03243,
+     "baseline": 0.05019,
+     "ratio": 0.646,
+     "priority": "P0",
+     "note": ""
+    },
+    "B3": {
+     "alarm": false,
+     "ic": 0.11058,
+     "baseline": 0.06471,
+     "ratio": 1.709,
+     "priority": "P0",
+     "note": ""
+    },
+    "B4": {
+     "alarm": false,
+     "ic": 0.07151,
+     "baseline": 0.10311,
+     "ratio": 0.694,
+     "priority": "P0",
+     "note": ""
+    },
+    "B5": {
+     "alarm": true,
+     "ic": -0.01565,
+     "baseline": 0.01378,
+     "ratio": -1.135,
+     "priority": "P1",
+     "note": ""
+    },
+    "B6": {
+     "alarm": false,
+     "ic": 0.02643,
+     "baseline": 0.02767,
+     "ratio": 0.955,
+     "priority": "P2",
+     "note": ""
+    }
+   },
+   "composite": {
+    "main": {
+     "ic": 0.04086,
+     "baseline": 0.04854,
+     "ratio": 0.842,
+     "alarm": false,
+     "note": ""
+    },
+    "a_unoriented": {
+     "ic": -0.02632,
+     "baseline": -0.03453,
+     "ratio": null,
+     "alarm": false,
+     "note": "基线 -0.0345 ≤ 0 ⇒ 0.5× 判据不适用（如实标注，不按健康处理）"
+    },
+    "b_p0only": {
+     "ic": 0.0699,
+     "baseline": 0.06598,
+     "ratio": 1.059,
+     "alarm": false,
+     "note": ""
+    }
+   }
+  },
+  {
+   "date": "20160630",
+   "n_avail": 30,
+   "blocks": {
+    "B1": {
+     "alarm": false,
+     "ic": 0.07702,
+     "baseline": 0.0692,
+     "ratio": 1.113,
+     "priority": "P0",
+     "note": ""
+    },
+    "B2": {
+     "alarm": false,
+     "ic": 0.03281,
+     "baseline": 0.05102,
+     "ratio": 0.643,
+     "priority": "P0",
+     "note": ""
+    },
+    "B3": {
+     "alarm": false,
+     "ic": 0.10257,
+     "baseline": 0.0692,
+     "ratio": 1.482,
+     "priority": "P0",
+     "note": ""
+    },
+    "B4": {
+     "alarm": false,
+     "ic": 0.09204,
+     "baseline": 0.0902,
+     "ratio": 1.02,
+     "priority": "P0",
+     "note": ""
+    },
+    "B5": {
+     "alarm": false,
+     "ic": 0.01399,
+     "baseline": 0.01295,
+     "ratio": 1.081,
+     "priority": "P1",
+     "note": ""
+    },
+    "B6": {
+     "alarm": true,
+     "ic": 0.00311,
+     "baseline": 0.0334,
+     "ratio": 0.093,
+     "priority": "P2",
+     "note": ""
+    }
+   },
+   "composite": {
+    "main": {
+     "ic": 0.04833,
+     "baseline": 0.04757,
+     "ratio": 1.016,
+     "alarm": false,
+     "note": ""
+    },
+    "a_unoriented": {
+     "ic": -0.03046,
+     "baseline": -0.03042,
+     "ratio": null,
+     "alarm": false,
+     "note": "基线 -0.0304 ≤ 0 ⇒ 0.5× 判据不适用（如实标注，不按健康处理）"
+    },
+    "b_p0only": {
+     "ic": 0.07173,
+     "baseline": 0.06471,
+     "ratio": 1.108,
+     "alarm": false,
+     "note": ""
+    }
+   }
+  },
+  {
+   "date": "20160729",
+   "n_avail": 31,
+   "blocks": {
+    "B1": {
+     "alarm": false,
+     "ic": 0.07933,
+     "baseline": 0.06894,
+     "ratio": 1.151,
+     "priority": "P0",
+     "note": ""
+    },
+    "B2": {
+     "alarm": false,
+     "ic": 0.04419,
+     "baseline": 0.04319,
+     "ratio": 1.023,
+     "priority": "P0",
+     "note": ""
+    },
+    "B3": {
+     "alarm": false,
+     "ic": 0.09054,
+     "baseline": 0.07379,
+     "ratio": 1.227,
+     "priority": "P0",
+     "note": ""
+    },
+    "B4": {
+     "alarm": false,
+     "ic": 0.07455,
+     "baseline": 0.09865,
+     "ratio": 0.756,
+     "priority": "P0",
+     "note": ""
+    },
+    "B5": {
+     "alarm": false,
+     "ic": 0.01085,
+     "baseline": 0.01316,
+     "ratio": 0.825,
+     "priority": "P1",
+     "note": ""
+    },
+    "B6": {
+     "alarm": false,
+     "ic": 0.02322,
+     "baseline": 0.02986,
+     "ratio": 0.778,
+     "priority": "P2",
+     "note": ""
+    }
+   },
+   "composite": {
+    "main": {
+     "ic": 0.04831,
+     "baseline": 0.04722,
+     "ratio": 1.023,
+     "alarm": false,
+     "note": ""
+    },
+    "a_unoriented": {
+     "ic": -0.02812,
+     "baseline": -0.03074,
+     "ratio": null,
+     "alarm": false,
+     "note": "基线 -0.0307 ≤ 0 ⇒ 0.5× 判据不适用（如实标注，不按健康处理）"
+    },
+    "b_p0only": {
+     "ic": 0.07001,
+     "baseline": 0.06437,
+     "ratio": 1.088,
+     "alarm": false,
+     "note": ""
+    }
+   }
+  },
+  {
+   "date": "20160831",
+   "n_avail": 32,
+   "blocks": {
+    "B1": {
+     "alarm": false,
+     "ic": 0.09511,
+     "baseline": 0.06626,
+     "ratio": 1.435,
+     "priority": "P0",
+     "note": ""
+    },
+    "B2": {
+     "alarm": false,
+     "ic": 0.04328,
+     "baseline": 0.04638,
+     "ratio": 0.933,
+     "priority": "P0",
+     "note": ""
+    },
+    "B3": {
+     "alarm": false,
+     "ic": 0.07619,
+     "baseline": 0.08131,
+     "ratio": 0.937,
+     "priority": "P0",
+     "note": ""
+    },
+    "B4": {
+     "alarm": false,
+     "ic": 0.05926,
+     "baseline": 0.0988,
+     "ratio": 0.6,
+     "priority": "P0",
+     "note": ""
+    },
+    "B5": {
+     "alarm": false,
+     "ic": 0.00848,
+     "baseline": 0.01539,
+     "ratio": 0.551,
+     "priority": "P1",
+     "note": ""
+    },
+    "B6": {
+     "alarm": false,
+     "ic": 0.02527,
+     "baseline": 0.03063,
+     "ratio": 0.825,
+     "priority": "P2",
+     "note": ""
+    }
+   },
+   "composite": {
+    "main": {
+     "ic": 0.04497,
+     "baseline": 0.05019,
+     "ratio": 0.896,
+     "alarm": false,
+     "note": ""
+    },
+    "a_unoriented": {
+     "ic": -0.02664,
+     "baseline": -0.03222,
+     "ratio": null,
+     "alarm": false,
+     "note": "基线 -0.0322 ≤ 0 ⇒ 0.5× 判据不适用（如实标注，不按健康处理）"
+    },
+    "b_p0only": {
+     "ic": 0.06527,
+     "baseline": 0.06791,
+     "ratio": 0.961,
+     "alarm": false,
+     "note": ""
+    }
+   }
+  },
+  {
+   "date": "20160930",
+   "n_avail": 33,
+   "blocks": {
+    "B1": {
+     "alarm": false,
+     "ic": 0.09444,
+     "baseline": 0.06801,
+     "ratio": 1.389,
+     "priority": "P0",
+     "note": ""
+    },
+    "B2": {
+     "alarm": false,
+     "ic": 0.05583,
+     "baseline": 0.03998,
+     "ratio": 1.397,
+     "priority": "P0",
+     "note": ""
+    },
+    "B3": {
+     "alarm": false,
+     "ic": 0.06816,
+     "baseline": 0.08403,
+     "ratio": 0.811,
+     "priority": "P0",
+     "note": ""
+    },
+    "B4": {
+     "alarm": false,
+     "ic": 0.06322,
+     "baseline": 0.1013,
+     "ratio": 0.624,
+     "priority": "P0",
+     "note": ""
+    },
+    "B5": {
+     "alarm": false,
+     "ic": 0.00866,
+     "baseline": 0.01362,
+     "ratio": 0.636,
+     "priority": "P1",
+     "note": ""
+    },
+    "B6": {
+     "alarm": false,
+     "ic": 0.03016,
+     "baseline": 0.02378,
+     "ratio": 1.268,
+     "priority": "P2",
+     "note": ""
+    }
+   },
+   "composite": {
+    "main": {
+     "ic": 0.04674,
+     "baseline": 0.04875,
+     "ratio": 0.959,
+     "alarm": false,
+     "note": ""
+    },
+    "a_unoriented": {
+     "ic": -0.02542,
+     "baseline": -0.03224,
+     "ratio": null,
+     "alarm": false,
+     "note": "基线 -0.0322 ≤ 0 ⇒ 0.5× 判据不适用（如实标注，不按健康处理）"
+    },
+    "b_p0only": {
+     "ic": 0.06725,
+     "baseline": 0.06709,
+     "ratio": 1.002,
+     "alarm": false,
+     "note": ""
+    }
+   }
+  },
+  {
+   "date": "20161031",
+   "n_avail": 34,
+   "blocks": {
+    "B1": {
+     "alarm": false,
+     "ic": 0.09426,
+     "baseline": 0.07206,
+     "ratio": 1.308,
+     "priority": "P0",
+     "note": ""
+    },
+    "B2": {
+     "alarm": false,
+     "ic": 0.05122,
+     "baseline": 0.03899,
+     "ratio": 1.314,
+     "priority": "P0",
+     "note": ""
+    },
+    "B3": {
+     "alarm": false,
+     "ic": 0.05753,
+     "baseline": 0.08416,
+     "ratio": 0.684,
+     "priority": "P0",
+     "note": ""
+    },
+    "B4": {
+     "alarm": false,
+     "ic": 0.06236,
+     "baseline": 0.09687,
+     "ratio": 0.644,
+     "priority": "P0",
+     "note": ""
+    },
+    "B5": {
+     "alarm": false,
+     "ic": 0.00692,
+     "baseline": 0.01356,
+     "ratio": 0.511,
+     "priority": "P1",
+     "note": ""
+    },
+    "B6": {
+     "alarm": false,
+     "ic": 0.03015,
+     "baseline": 0.02273,
+     "ratio": 1.326,
+     "priority": "P2",
+     "note": ""
+    }
+   },
+   "composite": {
+    "main": {
+     "ic": 0.04273,
+     "baseline": 0.04853,
+     "ratio": 0.881,
+     "alarm": false,
+     "note": ""
+    },
+    "a_unoriented": {
+     "ic": -0.02281,
+     "baseline": -0.03203,
+     "ratio": null,
+     "alarm": false,
+     "note": "基线 -0.0320 ≤ 0 ⇒ 0.5× 判据不适用（如实标注，不按健康处理）"
+    },
+    "b_p0only": {
+     "ic": 0.06151,
+     "baseline": 0.06695,
+     "ratio": 0.919,
+     "alarm": false,
+     "note": ""
+    }
+   }
+  },
+  {
+   "date": "20161130",
+   "n_avail": 35,
+   "blocks": {
+    "B1": {
+     "alarm": false,
+     "ic": 0.09133,
+     "baseline": 0.07437,
+     "ratio": 1.228,
+     "priority": "P0",
+     "note": ""
+    },
+    "B2": {
+     "alarm": false,
+     "ic": 0.04563,
+     "baseline": 0.04269,
+     "ratio": 1.069,
+     "priority": "P0",
+     "note": ""
+    },
+    "B3": {
+     "alarm": false,
+     "ic": 0.04765,
+     "baseline": 0.08636,
+     "ratio": 0.552,
+     "priority": "P0",
+     "note": ""
+    },
+    "B4": {
+     "alarm": false,
+     "ic": 0.05701,
+     "baseline": 0.10207,
+     "ratio": 0.559,
+     "priority": "P0",
+     "note": ""
+    },
+    "B5": {
+     "alarm": true,
+     "ic": 0.00441,
+     "baseline": 0.0147,
+     "ratio": 0.3,
+     "priority": "P1",
+     "note": ""
+    },
+    "B6": {
+     "alarm": false,
+     "ic": 0.02958,
+     "baseline": 0.02695,
+     "ratio": 1.098,
+     "priority": "P2",
+     "note": ""
+    }
+   },
+   "composite": {
+    "main": {
+     "ic": 0.03781,
+     "baseline": 0.05101,
+     "ratio": 0.741,
+     "alarm": false,
+     "note": ""
+    },
+    "a_unoriented": {
+     "ic": -0.01844,
+     "baseline": -0.0338,
+     "ratio": null,
+     "alarm": false,
+     "note": "基线 -0.0338 ≤ 0 ⇒ 0.5× 判据不适用（如实标注，不按健康处理）"
+    },
+    "b_p0only": {
+     "ic": 0.05479,
+     "baseline": 0.07003,
+     "ratio": 0.782,
+     "alarm": false,
+     "note": ""
+    }
+   }
+  },
+  {
+   "date": "20161230",
+   "n_avail": 36,
+   "blocks": {
+    "B1": {
+     "alarm": false,
+     "ic": 0.09423,
+     "baseline": 0.07069,
+     "ratio": 1.333,
+     "priority": "P0",
+     "note": ""
+    },
+    "B2": {
+     "alarm": false,
+     "ic": 0.03337,
+     "baseline": 0.04588,
+     "ratio": 0.727,
+     "priority": "P0",
+     "note": ""
+    },
+    "B3": {
+     "alarm": true,
+     "ic": 0.03755,
+     "baseline": 0.08837,
+     "ratio": 0.425,
+     "priority": "P0",
+     "note": ""
+    },
+    "B4": {
+     "alarm": false,
+     "ic": 0.06246,
+     "baseline": 0.09874,
+     "ratio": 0.633,
+     "priority": "P0",
+     "note": ""
+    },
+    "B5": {
+     "alarm": true,
+     "ic": 0.00262,
+     "baseline": 0.01479,
+     "ratio": 0.177,
+     "priority": "P1",
+     "note": ""
+    },
+    "B6": {
+     "alarm": false,
+     "ic": 0.0238,
+     "baseline": 0.03029,
+     "ratio": 0.786,
+     "priority": "P2",
+     "note": ""
+    }
+   },
+   "composite": {
+    "main": {
+     "ic": 0.03232,
+     "baseline": 0.05179,
+     "ratio": 0.624,
+     "alarm": false,
+     "note": ""
+    },
+    "a_unoriented": {
+     "ic": -0.01885,
+     "baseline": -0.03323,
+     "ratio": null,
+     "alarm": false,
+     "note": "基线 -0.0332 ≤ 0 ⇒ 0.5× 判据不适用（如实标注，不按健康处理）"
+    },
+    "b_p0only": {
+     "ic": 0.04758,
+     "baseline": 0.07102,
+     "ratio": 0.67,
+     "alarm": false,
+     "note": ""
+    }
+   }
+  },
+  {
+   "date": "20170126",
+   "n_avail": 37,
+   "blocks": {
+    "B1": {
+     "alarm": false,
+     "ic": 0.08621,
+     "baseline": 0.07477,
+     "ratio": 1.153,
+     "priority": "P0",
+     "note": ""
+    },
+    "B2": {
+     "alarm": false,
+     "ic": 0.03368,
+     "baseline": 0.0441,
+     "ratio": 0.764,
+     "priority": "P0",
+     "note": ""
+    },
+    "B3": {
+     "alarm": true,
+     "ic": 0.0416,
+     "baseline": 0.08577,
+     "ratio": 0.485,
+     "priority": "P0",
+     "note": ""
+    },
+    "B4": {
+     "alarm": false,
+     "ic": 0.06424,
+     "baseline": 0.10289,
+     "ratio": 0.624,
+     "priority": "P0",
+     "note": ""
+    },
+    "B5": {
+     "alarm": true,
+     "ic": 4e-05,
+     "baseline": 0.01398,
+     "ratio": 0.003,
+     "priority": "P1",
+     "note": ""
+    },
+    "B6": {
+     "alarm": false,
+     "ic": 0.02469,
+     "baseline": 0.02895,
+     "ratio": 0.853,
+     "priority": "P2",
+     "note": ""
+    }
+   },
+   "composite": {
+    "main": {
+     "ic": 0.03196,
+     "baseline": 0.05109,
+     "ratio": 0.626,
+     "alarm": false,
+     "note": ""
+    },
+    "a_unoriented": {
+     "ic": -0.01779,
+     "baseline": -0.0328,
+     "ratio": null,
+     "alarm": false,
+     "note": "基线 -0.0328 ≤ 0 ⇒ 0.5× 判据不适用（如实标注，不按健康处理）"
+    },
+    "b_p0only": {
+     "ic": 0.04811,
+     "baseline": 0.07048,
+     "ratio": 0.683,
+     "alarm": false,
+     "note": ""
+    }
+   }
+  },
+  {
+   "date": "20170228",
+   "n_avail": 38,
+   "blocks": {
+    "B1": {
+     "alarm": false,
+     "ic": 0.09501,
+     "baseline": 0.0733,
+     "ratio": 1.296,
+     "priority": "P0",
+     "note": ""
+    },
+    "B2": {
+     "alarm": false,
+     "ic": 0.02841,
+     "baseline": 0.04671,
+     "ratio": 0.608,
+     "priority": "P0",
+     "note": ""
+    },
+    "B3": {
+     "alarm": true,
+     "ic": 0.04209,
+     "baseline": 0.08774,
+     "ratio": 0.48,
+     "priority": "P0",
+     "note": ""
+    },
+    "B4": {
+     "alarm": false,
+     "ic": 0.07076,
+     "baseline": 0.09482,
+     "ratio": 0.746,
+     "priority": "P0",
+     "note": ""
+    },
+    "B5": {
+     "alarm": true,
+     "ic": 0.00187,
+     "baseline": 0.01499,
+     "ratio": 0.125,
+     "priority": "P1",
+     "note": ""
+    },
+    "B6": {
+     "alarm": false,
+     "ic": 0.02404,
+     "baseline": 0.0316,
+     "ratio": 0.761,
+     "priority": "P2",
+     "note": ""
+    }
+   },
+   "composite": {
+    "main": {
+     "ic": 0.03267,
+     "baseline": 0.05189,
+     "ratio": 0.63,
+     "alarm": false,
+     "note": ""
+    },
+    "a_unoriented": {
+     "ic": -0.01748,
+     "baseline": -0.033,
+     "ratio": null,
+     "alarm": false,
+     "note": "基线 -0.0330 ≤ 0 ⇒ 0.5× 判据不适用（如实标注，不按健康处理）"
+    },
+    "b_p0only": {
+     "ic": 0.04842,
+     "baseline": 0.07109,
+     "ratio": 0.681,
+     "alarm": false,
+     "note": ""
+    }
+   }
+  },
+  {
+   "date": "20170331",
+   "n_avail": 39,
+   "blocks": {
+    "B1": {
+     "alarm": false,
+     "ic": 0.08399,
+     "baseline": 0.07682,
+     "ratio": 1.093,
+     "priority": "P0",
+     "note": ""
+    },
+    "B2": {
+     "alarm": false,
+     "ic": 0.03614,
+     "baseline": 0.04729,
+     "ratio": 0.764,
+     "priority": "P0",
+     "note": ""
+    },
+    "B3": {
+     "alarm": true,
+     "ic": 0.03939,
+     "baseline": 0.0876,
+     "ratio": 0.45,
+     "priority": "P0",
+     "note": ""
+    },
+    "B4": {
+     "alarm": false,
+     "ic": 0.0559,
+     "baseline": 0.09315,
+     "ratio": 0.6,
+     "priority": "P0",
+     "note": ""
+    },
+    "B5": {
+     "alarm": true,
+     "ic": 0.0066,
+     "baseline": 0.01459,
+     "ratio": 0.452,
+     "priority": "P1",
+     "note": ""
+    },
+    "B6": {
+     "alarm": false,
+     "ic": 0.02303,
+     "baseline": 0.03425,
+     "ratio": 0.672,
+     "priority": "P2",
+     "note": ""
+    }
+   },
+   "composite": {
+    "main": {
+     "ic": 0.0331,
+     "baseline": 0.05223,
+     "ratio": 0.634,
+     "alarm": false,
+     "note": ""
+    },
+    "a_unoriented": {
+     "ic": -0.0177,
+     "baseline": -0.03347,
+     "ratio": null,
+     "alarm": false,
+     "note": "基线 -0.0335 ≤ 0 ⇒ 0.5× 判据不适用（如实标注，不按健康处理）"
+    },
+    "b_p0only": {
+     "ic": 0.04697,
+     "baseline": 0.07163,
+     "ratio": 0.656,
+     "alarm": false,
+     "note": ""
+    }
+   }
+  },
+  {
+   "date": "20170428",
+   "n_avail": 40,
+   "blocks": {
+    "B1": {
+     "alarm": false,
+     "ic": 0.08957,
+     "baseline": 0.07278,
+     "ratio": 1.231,
+     "priority": "P0",
+     "note": ""
+    },
+    "B2": {
+     "alarm": false,
+     "ic": 0.02526,
+     "baseline": 0.0486,
+     "ratio": 0.52,
+     "priority": "P0",
+     "note": ""
+    },
+    "B3": {
+     "alarm": true,
+     "ic": 0.0309,
+     "baseline": 0.0882,
+     "ratio": 0.35,
+     "priority": "P0",
+     "note": ""
+    },
+    "B4": {
+     "alarm": false,
+     "ic": 0.05209,
+     "baseline": 0.0916,
+     "ratio": 0.569,
+     "priority": "P0",
+     "note": ""
+    },
+    "B5": {
+     "alarm": true,
+     "ic": -0.00024,
+     "baseline": 0.0154,
+     "ratio": -0.016,
+     "priority": "P1",
+     "note": ""
+    },
+    "B6": {
+     "alarm": false,
+     "ic": 0.03238,
+     "baseline": 0.0285,
+     "ratio": 1.136,
+     "priority": "P2",
+     "note": ""
+    }
+   },
+   "composite": {
+    "main": {
+     "ic": 0.0277,
+     "baseline": 0.05205,
+     "ratio": 0.532,
+     "alarm": false,
+     "note": ""
+    },
+    "a_unoriented": {
+     "ic": -0.01757,
+     "baseline": -0.03316,
+     "ratio": null,
+     "alarm": false,
+     "note": "基线 -0.0332 ≤ 0 ⇒ 0.5× 判据不适用（如实标注，不按健康处理）"
+    },
+    "b_p0only": {
+     "ic": 0.04032,
+     "baseline": 0.07153,
+     "ratio": 0.564,
+     "alarm": false,
+     "note": ""
+    }
+   }
+  },
+  {
+   "date": "20170531",
+   "n_avail": 41,
+   "blocks": {
+    "B1": {
+     "alarm": false,
+     "ic": 0.08227,
+     "baseline": 0.07289,
+     "ratio": 1.129,
+     "priority": "P0",
+     "note": ""
+    },
+    "B2": {
+     "alarm": false,
+     "ic": 0.04082,
+     "baseline": 0.04441,
+     "ratio": 0.919,
+     "priority": "P0",
+     "note": ""
+    },
+    "B3": {
+     "alarm": true,
+     "ic": 0.04152,
+     "baseline": 0.08369,
+     "ratio": 0.496,
+     "priority": "P0",
+     "note": ""
+    },
+    "B4": {
+     "alarm": false,
+     "ic": 0.05147,
+     "baseline": 0.09003,
+     "ratio": 0.572,
+     "priority": "P0",
+     "note": ""
+    },
+    "B5": {
+     "alarm": true,
+     "ic": 0.00194,
+     "baseline": 0.01473,
+     "ratio": 0.132,
+     "priority": "P1",
+     "note": ""
+    },
+    "B6": {
+     "alarm": false,
+     "ic": 0.03105,
+     "baseline": 0.0268,
+     "ratio": 1.159,
+     "priority": "P2",
+     "note": ""
+    }
+   },
+   "composite": {
+    "main": {
+     "ic": 0.03348,
+     "baseline": 0.04957,
+     "ratio": 0.676,
+     "alarm": false,
+     "note": ""
+    },
+    "a_unoriented": {
+     "ic": -0.02103,
+     "baseline": -0.03099,
+     "ratio": null,
+     "alarm": false,
+     "note": "基线 -0.0310 ≤ 0 ⇒ 0.5× 判据不适用（如实标注，不按健康处理）"
+    },
+    "b_p0only": {
+     "ic": 0.04875,
+     "baseline": 0.06818,
+     "ratio": 0.715,
+     "alarm": false,
+     "note": ""
+    }
+   }
+  },
+  {
+   "date": "20170630",
+   "n_avail": 42,
+   "blocks": {
+    "B1": {
+     "alarm": false,
+     "ic": 0.08875,
+     "baseline": 0.07233,
+     "ratio": 1.227,
+     "priority": "P0",
+     "note": ""
+    },
+    "B2": {
+     "alarm": false,
+     "ic": 0.03609,
+     "baseline": 0.04517,
+     "ratio": 0.799,
+     "priority": "P0",
+     "note": ""
+    },
+    "B3": {
+     "alarm": false,
+     "ic": 0.05166,
+     "baseline": 0.08255,
+     "ratio": 0.626,
+     "priority": "P0",
+     "note": ""
+    },
+    "B4": {
+     "alarm": false,
+     "ic": 0.04689,
+     "baseline": 0.09094,
+     "ratio": 0.516,
+     "priority": "P0",
+     "note": ""
+    },
+    "B5": {
+     "alarm": true,
+     "ic": 0.00281,
+     "baseline": 0.01343,
+     "ratio": 0.21,
+     "priority": "P1",
+     "note": ""
+    },
+    "B6": {
+     "alarm": false,
+     "ic": 0.02942,
+     "baseline": 0.02763,
+     "ratio": 1.065,
+     "priority": "P2",
+     "note": ""
+    }
+   },
+   "composite": {
+    "main": {
+     "ic": 0.0352,
+     "baseline": 0.04911,
+     "ratio": 0.717,
+     "alarm": false,
+     "note": ""
+    },
+    "a_unoriented": {
+     "ic": -0.02321,
+     "baseline": -0.03044,
+     "ratio": null,
+     "alarm": false,
+     "note": "基线 -0.0304 ≤ 0 ⇒ 0.5× 判据不适用（如实标注，不按健康处理）"
+    },
+    "b_p0only": {
+     "ic": 0.05128,
+     "baseline": 0.06805,
+     "ratio": 0.754,
+     "alarm": false,
+     "note": ""
+    }
+   }
+  },
+  {
+   "date": "20170731",
+   "n_avail": 43,
+   "blocks": {
+    "B1": {
+     "alarm": false,
+     "ic": 0.08777,
+     "baseline": 0.07296,
+     "ratio": 1.203,
+     "priority": "P0",
+     "note": ""
+    },
+    "B2": {
+     "alarm": false,
+     "ic": 0.04501,
+     "baseline": 0.04511,
+     "ratio": 0.998,
+     "priority": "P0",
+     "note": ""
+    },
+    "B3": {
+     "alarm": false,
+     "ic": 0.06309,
+     "baseline": 0.08027,
+     "ratio": 0.786,
+     "priority": "P0",
+     "note": ""
+    },
+    "B4": {
+     "alarm": false,
+     "ic": 0.05237,
+     "baseline": 0.08932,
+     "ratio": 0.586,
+     "priority": "P0",
+     "note": ""
+    },
+    "B5": {
+     "alarm": true,
+     "ic": 0.0001,
+     "baseline": 0.01308,
+     "ratio": 0.007,
+     "priority": "P1",
+     "note": ""
+    },
+    "B6": {
+     "alarm": false,
+     "ic": 0.0329,
+     "baseline": 0.02567,
+     "ratio": 1.282,
+     "priority": "P2",
+     "note": ""
+    }
+   },
+   "composite": {
+    "main": {
+     "ic": 0.03964,
+     "baseline": 0.04826,
+     "ratio": 0.821,
+     "alarm": false,
+     "note": ""
+    },
+    "a_unoriented": {
+     "ic": -0.02925,
+     "baseline": -0.02969,
+     "ratio": null,
+     "alarm": false,
+     "note": "基线 -0.0297 ≤ 0 ⇒ 0.5× 判据不适用（如实标注，不按健康处理）"
+    },
+    "b_p0only": {
+     "ic": 0.0592,
+     "baseline": 0.06711,
+     "ratio": 0.882,
+     "alarm": false,
+     "note": ""
+    }
+   }
+  },
+  {
+   "date": "20170831",
+   "n_avail": 44,
+   "blocks": {
+    "B1": {
+     "alarm": false,
+     "ic": 0.07263,
+     "baseline": 0.07708,
+     "ratio": 0.942,
+     "priority": "P0",
+     "note": ""
+    },
+    "B2": {
+     "alarm": false,
+     "ic": 0.04373,
+     "baseline": 0.0468,
+     "ratio": 0.934,
+     "priority": "P0",
+     "note": ""
+    },
+    "B3": {
+     "alarm": false,
+     "ic": 0.06623,
+     "baseline": 0.07939,
+     "ratio": 0.834,
+     "priority": "P0",
+     "note": ""
+    },
+    "B4": {
+     "alarm": false,
+     "ic": 0.07184,
+     "baseline": 0.08397,
+     "ratio": 0.856,
+     "priority": "P0",
+     "note": ""
+    },
+    "B5": {
+     "alarm": true,
+     "ic": 0.00257,
+     "baseline": 0.01284,
+     "ratio": 0.2,
+     "priority": "P1",
+     "note": ""
+    },
+    "B6": {
+     "alarm": false,
+     "ic": 0.02905,
+     "baseline": 0.02745,
+     "ratio": 1.058,
+     "priority": "P2",
+     "note": ""
+    }
+   },
+   "composite": {
+    "main": {
+     "ic": 0.04029,
+     "baseline": 0.04854,
+     "ratio": 0.83,
+     "alarm": false,
+     "note": ""
+    },
+    "a_unoriented": {
+     "ic": -0.02992,
+     "baseline": -0.03005,
+     "ratio": null,
+     "alarm": false,
+     "note": "基线 -0.0300 ≤ 0 ⇒ 0.5× 判据不适用（如实标注，不按健康处理）"
+    },
+    "b_p0only": {
+     "ic": 0.05954,
+     "baseline": 0.0675,
+     "ratio": 0.882,
+     "alarm": false,
+     "note": ""
+    }
+   }
+  },
+  {
+   "date": "20170929",
+   "n_avail": 45,
+   "blocks": {
+    "B1": {
+     "alarm": false,
+     "ic": 0.07627,
+     "baseline": 0.07762,
+     "ratio": 0.983,
+     "priority": "P0",
+     "note": ""
+    },
+    "B2": {
+     "alarm": false,
+     "ic": 0.05186,
+     "baseline": 0.04574,
+     "ratio": 1.134,
+     "priority": "P0",
+     "note": ""
+    },
+    "B3": {
+     "alarm": false,
+     "ic": 0.07599,
+     "baseline": 0.07826,
+     "ratio": 0.971,
+     "priority": "P0",
+     "note": ""
+    },
+    "B4": {
+     "alarm": false,
+     "ic": 0.07286,
+     "baseline": 0.08745,
+     "ratio": 0.833,
+     "priority": "P0",
+     "note": ""
+    },
+    "B5": {
+     "alarm": false,
+     "ic": 0.01226,
+     "baseline": 0.01195,
+     "ratio": 1.026,
+     "priority": "P1",
+     "note": ""
+    },
+    "B6": {
+     "alarm": false,
+     "ic": 0.02517,
+     "baseline": 0.02734,
+     "ratio": 0.921,
+     "priority": "P2",
+     "note": ""
+    }
+   },
+   "composite": {
+    "main": {
+     "ic": 0.04743,
+     "baseline": 0.04804,
+     "ratio": 0.987,
+     "alarm": false,
+     "note": ""
+    },
+    "a_unoriented": {
+     "ic": -0.03429,
+     "baseline": -0.02967,
+     "ratio": null,
+     "alarm": false,
+     "note": "基线 -0.0297 ≤ 0 ⇒ 0.5× 判据不适用（如实标注，不按健康处理）"
+    },
+    "b_p0only": {
+     "ic": 0.06681,
+     "baseline": 0.06715,
+     "ratio": 0.995,
+     "alarm": false,
+     "note": ""
+    }
+   }
+  },
+  {
+   "date": "20171031",
+   "n_avail": 46,
+   "blocks": {
+    "B1": {
+     "alarm": false,
+     "ic": 0.05874,
+     "baseline": 0.0799,
+     "ratio": 0.735,
+     "priority": "P0",
+     "note": ""
+    },
+    "B2": {
+     "alarm": false,
+     "ic": 0.04966,
+     "baseline": 0.04331,
+     "ratio": 1.147,
+     "priority": "P0",
+     "note": ""
+    },
+    "B3": {
+     "alarm": false,
+     "ic": 0.07129,
+     "baseline": 0.07476,
+     "ratio": 0.954,
+     "priority": "P0",
+     "note": ""
+    },
+    "B4": {
+     "alarm": false,
+     "ic": 0.06492,
+     "baseline": 0.08469,
+     "ratio": 0.767,
+     "priority": "P0",
+     "note": ""
+    },
+    "B5": {
+     "alarm": false,
+     "ic": 0.00882,
+     "baseline": 0.01227,
+     "ratio": 0.719,
+     "priority": "P1",
+     "note": ""
+    },
+    "B6": {
+     "alarm": false,
+     "ic": 0.02319,
+     "baseline": 0.02662,
+     "ratio": 0.871,
+     "priority": "P2",
+     "note": ""
+    }
+   },
+   "composite": {
+    "main": {
+     "ic": 0.0424,
+     "baseline": 0.04674,
+     "ratio": 0.907,
+     "alarm": false,
+     "note": ""
+    },
+    "a_unoriented": {
+     "ic": -0.03107,
+     "baseline": -0.02868,
+     "ratio": null,
+     "alarm": false,
+     "note": "基线 -0.0287 ≤ 0 ⇒ 0.5× 判据不适用（如实标注，不按健康处理）"
+    },
+    "b_p0only": {
+     "ic": 0.06067,
+     "baseline": 0.06503,
+     "ratio": 0.933,
+     "alarm": false,
+     "note": ""
+    }
+   }
+  },
+  {
+   "date": "20171130",
+   "n_avail": 47,
+   "blocks": {
+    "B1": {
+     "alarm": false,
+     "ic": 0.04337,
+     "baseline": 0.08018,
+     "ratio": 0.541,
+     "priority": "P0",
+     "note": ""
+    },
+    "B2": {
+     "alarm": false,
+     "ic": 0.04692,
+     "baseline": 0.0437,
+     "ratio": 1.074,
+     "priority": "P0",
+     "note": ""
+    },
+    "B3": {
+     "alarm": false,
+     "ic": 0.05879,
+     "baseline": 0.07309,
+     "ratio": 0.804,
+     "priority": "P0",
+     "note": ""
+    },
+    "B4": {
+     "alarm": false,
+     "ic": 0.0443,
+     "baseline": 0.08662,
+     "ratio": 0.511,
+     "priority": "P0",
+     "note": ""
+    },
+    "B5": {
+     "alarm": false,
+     "ic": 0.00952,
+     "baseline": 0.01183,
+     "ratio": 0.805,
+     "priority": "P1",
+     "note": ""
+    },
+    "B6": {
+     "alarm": false,
+     "ic": 0.01581,
+     "baseline": 0.02825,
+     "ratio": 0.56,
+     "priority": "P2",
+     "note": ""
+    }
+   },
+   "composite": {
+    "main": {
+     "ic": 0.03565,
+     "baseline": 0.04656,
+     "ratio": 0.766,
+     "alarm": false,
+     "note": ""
+    },
+    "a_unoriented": {
+     "ic": -0.02749,
+     "baseline": -0.02839,
+     "ratio": null,
+     "alarm": false,
+     "note": "基线 -0.0284 ≤ 0 ⇒ 0.5× 判据不适用（如实标注，不按健康处理）"
+    },
+    "b_p0only": {
+     "ic": 0.05046,
+     "baseline": 0.06481,
+     "ratio": 0.779,
+     "alarm": false,
+     "note": ""
+    }
+   }
+  },
+  {
+   "date": "20171229",
+   "n_avail": 48,
+   "blocks": {
+    "B1": {
+     "alarm": true,
+     "ic": 0.03553,
+     "baseline": 0.07854,
+     "ratio": 0.452,
+     "priority": "P0",
+     "note": ""
+    },
+    "B2": {
+     "alarm": false,
+     "ic": 0.0467,
+     "baseline": 0.0442,
+     "ratio": 1.057,
+     "priority": "P0",
+     "note": ""
+    },
+    "B3": {
+     "alarm": false,
+     "ic": 0.06186,
+     "baseline": 0.07143,
+     "ratio": 0.866,
+     "priority": "P0",
+     "note": ""
+    },
+    "B4": {
+     "alarm": false,
+     "ic": 0.05101,
+     "baseline": 0.08665,
+     "ratio": 0.589,
+     "priority": "P0",
+     "note": ""
+    },
+    "B5": {
+     "alarm": false,
+     "ic": 0.00716,
+     "baseline": 0.0129,
+     "ratio": 0.555,
+     "priority": "P1",
+     "note": ""
+    },
+    "B6": {
+     "alarm": false,
+     "ic": 0.02034,
+     "baseline": 0.02724,
+     "ratio": 0.747,
+     "priority": "P2",
+     "note": ""
+    }
+   },
+   "composite": {
+    "main": {
+     "ic": 0.03566,
+     "baseline": 0.04637,
+     "ratio": 0.769,
+     "alarm": false,
+     "note": ""
+    },
+    "a_unoriented": {
+     "ic": -0.02557,
+     "baseline": -0.02831,
+     "ratio": null,
+     "alarm": false,
+     "note": "基线 -0.0283 ≤ 0 ⇒ 0.5× 判据不适用（如实标注，不按健康处理）"
+    },
+    "b_p0only": {
+     "ic": 0.05098,
+     "baseline": 0.06412,
+     "ratio": 0.795,
+     "alarm": false,
+     "note": ""
+    }
+   }
+  },
+  {
+   "date": "20180131",
+   "n_avail": 49,
+   "blocks": {
+    "B1": {
+     "alarm": true,
+     "ic": 0.01379,
+     "baseline": 0.07848,
+     "ratio": 0.176,
+     "priority": "P0",
+     "note": ""
+    },
+    "B2": {
+     "alarm": false,
+     "ic": 0.05602,
+     "baseline": 0.04072,
+     "ratio": 1.376,
+     "priority": "P0",
+     "note": ""
+    },
+    "B3": {
+     "alarm": false,
+     "ic": 0.03964,
+     "baseline": 0.07145,
+     "ratio": 0.555,
+     "priority": "P0",
+     "note": ""
+    },
+    "B4": {
+     "alarm": true,
+     "ic": 0.02046,
+     "baseline": 0.09035,
+     "ratio": 0.226,
+     "priority": "P0",
+     "note": ""
+    },
+    "B5": {
+     "alarm": false,
+     "ic": 0.0079,
+     "baseline": 0.01218,
+     "ratio": 0.648,
+     "priority": "P1",
+     "note": ""
+    },
+    "B6": {
+     "alarm": false,
+     "ic": 0.01599,
+     "baseline": 0.02703,
+     "ratio": 0.592,
+     "priority": "P2",
+     "note": ""
+    }
+   },
+   "composite": {
+    "main": {
+     "ic": 0.02843,
+     "baseline": 0.04555,
+     "ratio": 0.624,
+     "alarm": false,
+     "note": ""
+    },
+    "a_unoriented": {
+     "ic": -0.01989,
+     "baseline": -0.02781,
+     "ratio": null,
+     "alarm": false,
+     "note": "基线 -0.0278 ≤ 0 ⇒ 0.5× 判据不适用（如实标注，不按健康处理）"
+    },
+    "b_p0only": {
+     "ic": 0.03957,
+     "baseline": 0.06323,
+     "ratio": 0.626,
+     "alarm": false,
+     "note": ""
+    }
+   }
+  },
+  {
+   "date": "20180228",
+   "n_avail": 50,
+   "blocks": {
+    "B1": {
+     "alarm": true,
+     "ic": 0.00908,
+     "baseline": 0.08016,
+     "ratio": 0.113,
+     "priority": "P0",
+     "note": ""
+    },
+    "B2": {
+     "alarm": false,
+     "ic": 0.04678,
+     "baseline": 0.04093,
+     "ratio": 1.143,
+     "priority": "P0",
+     "note": ""
+    },
+    "B3": {
+     "alarm": false,
+     "ic": 0.04048,
+     "baseline": 0.07333,
+     "ratio": 0.552,
+     "priority": "P0",
+     "note": ""
+    },
+    "B4": {
+     "alarm": true,
+     "ic": 0.02894,
+     "baseline": 0.08722,
+     "ratio": 0.332,
+     "priority": "P0",
+     "note": ""
+    },
+    "B5": {
+     "alarm": false,
+     "ic": 0.00915,
+     "baseline": 0.01085,
+     "ratio": 0.843,
+     "priority": "P1",
+     "note": ""
+    },
+    "B6": {
+     "alarm": true,
+     "ic": 0.00558,
+     "baseline": 0.02839,
+     "ratio": 0.196,
+     "priority": "P2",
+     "note": ""
+    }
+   },
+   "composite": {
+    "main": {
+     "ic": 0.02614,
+     "baseline": 0.04568,
+     "ratio": 0.572,
+     "alarm": false,
+     "note": ""
+    },
+    "a_unoriented": {
+     "ic": -0.01916,
+     "baseline": -0.02799,
+     "ratio": null,
+     "alarm": false,
+     "note": "基线 -0.0280 ≤ 0 ⇒ 0.5× 判据不适用（如实标注，不按健康处理）"
+    },
+    "b_p0only": {
+     "ic": 0.03663,
+     "baseline": 0.06393,
+     "ratio": 0.573,
+     "alarm": false,
+     "note": ""
+    }
+   }
+  },
+  {
+   "date": "20180330",
+   "n_avail": 51,
+   "blocks": {
+    "B1": {
+     "alarm": true,
+     "ic": 0.01011,
+     "baseline": 0.07902,
+     "ratio": 0.128,
+     "priority": "P0",
+     "note": ""
+    },
+    "B2": {
+     "alarm": false,
+     "ic": 0.03934,
+     "baseline": 0.04386,
+     "ratio": 0.897,
+     "priority": "P0",
+     "note": ""
+    },
+    "B3": {
+     "alarm": false,
+     "ic": 0.03779,
+     "baseline": 0.07276,
+     "ratio": 0.519,
+     "priority": "P0",
+     "note": ""
+    },
+    "B4": {
+     "alarm": false,
+     "ic": 0.04203,
+     "baseline": 0.08169,
+     "ratio": 0.514,
+     "priority": "P0",
+     "note": ""
+    },
+    "B5": {
+     "alarm": true,
+     "ic": 0.00282,
+     "baseline": 0.01213,
+     "ratio": 0.232,
+     "priority": "P1",
+     "note": ""
+    },
+    "B6": {
+     "alarm": true,
+     "ic": -0.00097,
+     "baseline": 0.02976,
+     "ratio": -0.032,
+     "priority": "P2",
+     "note": ""
+    }
+   },
+   "composite": {
+    "main": {
+     "ic": 0.0224,
+     "baseline": 0.04623,
+     "ratio": 0.485,
+     "alarm": true,
+     "note": ""
+    },
+    "a_unoriented": {
+     "ic": -0.01647,
+     "baseline": -0.02852,
+     "ratio": null,
+     "alarm": false,
+     "note": "基线 -0.0285 ≤ 0 ⇒ 0.5× 判据不适用（如实标注，不按健康处理）"
+    },
+    "b_p0only": {
+     "ic": 0.03444,
+     "baseline": 0.06404,
+     "ratio": 0.538,
+     "alarm": false,
+     "note": ""
+    }
+   }
+  },
+  {
+   "date": "20180427",
+   "n_avail": 52,
+   "blocks": {
+    "B1": {
+     "alarm": true,
+     "ic": 0.0087,
+     "baseline": 0.07782,
+     "ratio": 0.112,
+     "priority": "P0",
+     "note": ""
+    },
+    "B2": {
+     "alarm": false,
+     "ic": 0.02599,
+     "baseline": 0.04527,
+     "ratio": 0.574,
+     "priority": "P0",
+     "note": ""
+    },
+    "B3": {
+     "alarm": false,
+     "ic": 0.04012,
+     "baseline": 0.07101,
+     "ratio": 0.565,
+     "priority": "P0",
+     "note": ""
+    },
+    "B4": {
+     "alarm": false,
+     "ic": 0.04556,
+     "baseline": 0.07975,
+     "ratio": 0.571,
+     "priority": "P0",
+     "note": ""
+    },
+    "B5": {
+     "alarm": true,
+     "ic": -0.00095,
+     "baseline": 0.01257,
+     "ratio": -0.076,
+     "priority": "P1",
+     "note": ""
+    },
+    "B6": {
+     "alarm": true,
+     "ic": -0.00942,
+     "baseline": 0.03,
+     "ratio": -0.314,
+     "priority": "P2",
+     "note": ""
+    }
+   },
+   "composite": {
+    "main": {
+     "ic": 0.01827,
+     "baseline": 0.04603,
+     "ratio": 0.397,
+     "alarm": true,
+     "note": ""
+    },
+    "a_unoriented": {
+     "ic": -0.01332,
+     "baseline": -0.0284,
+     "ratio": null,
+     "alarm": false,
+     "note": "基线 -0.0284 ≤ 0 ⇒ 0.5× 判据不适用（如实标注，不按健康处理）"
+    },
+    "b_p0only": {
+     "ic": 0.03053,
+     "baseline": 0.06352,
+     "ratio": 0.481,
+     "alarm": true,
+     "note": ""
+    }
+   }
+  },
+  {
+   "date": "20180531",
+   "n_avail": 53,
+   "blocks": {
+    "B1": {
+     "alarm": true,
+     "ic": 0.00591,
+     "baseline": 0.07564,
+     "ratio": 0.078,
+     "priority": "P0",
+     "note": ""
+    },
+    "B2": {
+     "alarm": false,
+     "ic": 0.02827,
+     "baseline": 0.04336,
+     "ratio": 0.652,
+     "priority": "P0",
+     "note": ""
+    },
+    "B3": {
+     "alarm": true,
+     "ic": 0.031,
+     "baseline": 0.07135,
+     "ratio": 0.434,
+     "priority": "P0",
+     "note": ""
+    },
+    "B4": {
+     "alarm": false,
+     "ic": 0.05068,
+     "baseline": 0.07875,
+     "ratio": 0.644,
+     "priority": "P0",
+     "note": ""
+    },
+    "B5": {
+     "alarm": true,
+     "ic": -0.00239,
+     "baseline": 0.01243,
+     "ratio": -0.192,
+     "priority": "P1",
+     "note": ""
+    },
+    "B6": {
+     "alarm": true,
+     "ic": -0.00548,
+     "baseline": 0.02837,
+     "ratio": -0.193,
+     "priority": "P2",
+     "note": ""
+    }
+   },
+   "composite": {
+    "main": {
+     "ic": 0.01666,
+     "baseline": 0.04521,
+     "ratio": 0.368,
+     "alarm": true,
+     "note": ""
+    },
+    "a_unoriented": {
+     "ic": -0.0101,
+     "baseline": -0.02802,
+     "ratio": null,
+     "alarm": false,
+     "note": "基线 -0.0280 ≤ 0 ⇒ 0.5× 判据不适用（如实标注，不按健康处理）"
+    },
+    "b_p0only": {
+     "ic": 0.0281,
+     "baseline": 0.06249,
+     "ratio": 0.45,
+     "alarm": true,
+     "note": ""
+    }
+   }
+  },
+  {
+   "date": "20180629",
+   "n_avail": 54,
+   "blocks": {
+    "B1": {
+     "alarm": true,
+     "ic": 0.00361,
+     "baseline": 0.07702,
+     "ratio": 0.047,
+     "priority": "P0",
+     "note": ""
+    },
+    "B2": {
+     "alarm": false,
+     "ic": 0.03304,
+     "baseline": 0.04257,
+     "ratio": 0.776,
+     "priority": "P0",
+     "note": ""
+    },
+    "B3": {
+     "alarm": true,
+     "ic": 0.0238,
+     "baseline": 0.07372,
+     "ratio": 0.323,
+     "priority": "P0",
+     "note": ""
+    },
+    "B4": {
+     "alarm": false,
+     "ic": 0.04718,
+     "baseline": 0.07835,
+     "ratio": 0.602,
+     "priority": "P0",
+     "note": ""
+    },
+    "B5": {
+     "alarm": true,
+     "ic": -0.00076,
+     "baseline": 0.01205,
+     "ratio": -0.063,
+     "priority": "P1",
+     "note": ""
+    },
+    "B6": {
+     "alarm": true,
+     "ic": -0.01034,
+     "baseline": 0.02825,
+     "ratio": -0.366,
+     "priority": "P2",
+     "note": ""
+    }
+   },
+   "composite": {
+    "main": {
+     "ic": 0.01578,
+     "baseline": 0.04557,
+     "ratio": 0.346,
+     "alarm": true,
+     "note": ""
+    },
+    "a_unoriented": {
+     "ic": -0.01067,
+     "baseline": -0.02834,
+     "ratio": null,
+     "alarm": false,
+     "note": "基线 -0.0283 ≤ 0 ⇒ 0.5× 判据不适用（如实标注，不按健康处理）"
+    },
+    "b_p0only": {
+     "ic": 0.02648,
+     "baseline": 0.06325,
+     "ratio": 0.419,
+     "alarm": true,
+     "note": ""
+    }
+   }
+  },
+  {
+   "date": "20180731",
+   "n_avail": 55,
+   "blocks": {
+    "B1": {
+     "alarm": true,
+     "ic": 0.00643,
+     "baseline": 0.07709,
+     "ratio": 0.083,
+     "priority": "P0",
+     "note": ""
+    },
+    "B2": {
+     "alarm": false,
+     "ic": 0.02618,
+     "baseline": 0.04508,
+     "ratio": 0.581,
+     "priority": "P0",
+     "note": ""
+    },
+    "B3": {
+     "alarm": true,
+     "ic": 0.00564,
+     "baseline": 0.07548,
+     "ratio": 0.075,
+     "priority": "P0",
+     "note": ""
+    },
+    "B4": {
+     "alarm": true,
+     "ic": 0.01896,
+     "baseline": 0.07901,
+     "ratio": 0.24,
+     "priority": "P0",
+     "note": ""
+    },
+    "B5": {
+     "alarm": true,
+     "ic": -0.0002,
+     "baseline": 0.01227,
+     "ratio": -0.016,
+     "priority": "P1",
+     "note": ""
+    },
+    "B6": {
+     "alarm": true,
+     "ic": -0.00721,
+     "baseline": 0.02805,
+     "ratio": -0.257,
+     "priority": "P2",
+     "note": ""
+    }
+   },
+   "composite": {
+    "main": {
+     "ic": 0.00875,
+     "baseline": 0.04667,
+     "ratio": 0.187,
+     "alarm": true,
+     "note": ""
+    },
+    "a_unoriented": {
+     "ic": -0.00437,
+     "baseline": -0.02956,
+     "ratio": null,
+     "alarm": false,
+     "note": "基线 -0.0296 ≤ 0 ⇒ 0.5× 判据不适用（如实标注，不按健康处理）"
+    },
+    "b_p0only": {
+     "ic": 0.01474,
+     "baseline": 0.06491,
+     "ratio": 0.227,
+     "alarm": true,
+     "note": ""
+    }
+   }
+  },
+  {
+   "date": "20180831",
+   "n_avail": 56,
+   "blocks": {
+    "B1": {
+     "alarm": true,
+     "ic": 0.01229,
+     "baseline": 0.07587,
+     "ratio": 0.162,
+     "priority": "P0",
+     "note": ""
+    },
+    "B2": {
+     "alarm": true,
+     "ic": 0.01972,
+     "baseline": 0.04597,
+     "ratio": 0.429,
+     "priority": "P0",
+     "note": ""
+    },
+    "B3": {
+     "alarm": true,
+     "ic": 0.00449,
+     "baseline": 0.0758,
+     "ratio": 0.059,
+     "priority": "P0",
+     "note": ""
+    },
+    "B4": {
+     "alarm": true,
+     "ic": 0.00833,
+     "baseline": 0.08066,
+     "ratio": 0.103,
+     "priority": "P0",
+     "note": ""
+    },
+    "B5": {
+     "alarm": true,
+     "ic": 0.00314,
+     "baseline": 0.01254,
+     "ratio": 0.25,
+     "priority": "P1",
+     "note": ""
+    },
+    "B6": {
+     "alarm": true,
+     "ic": -0.00455,
+     "baseline": 0.02797,
+     "ratio": -0.163,
+     "priority": "P2",
+     "note": ""
+    }
+   },
+   "composite": {
+    "main": {
+     "ic": 0.00804,
+     "baseline": 0.04702,
+     "ratio": 0.171,
+     "alarm": true,
+     "note": ""
+    },
+    "a_unoriented": {
+     "ic": -0.00379,
+     "baseline": -0.03001,
+     "ratio": null,
+     "alarm": false,
+     "note": "基线 -0.0300 ≤ 0 ⇒ 0.5× 判据不适用（如实标注，不按健康处理）"
+    },
+    "b_p0only": {
+     "ic": 0.01174,
+     "baseline": 0.06533,
+     "ratio": 0.18,
+     "alarm": true,
+     "note": ""
+    }
+   }
+  },
+  {
+   "date": "20180928",
+   "n_avail": 57,
+   "blocks": {
+    "B1": {
+     "alarm": true,
+     "ic": -0.00474,
+     "baseline": 0.07726,
+     "ratio": -0.061,
+     "priority": "P0",
+     "note": ""
+    },
+    "B2": {
+     "alarm": true,
+     "ic": 0.00735,
+     "baseline": 0.04737,
+     "ratio": 0.155,
+     "priority": "P0",
+     "note": ""
+    },
+    "B3": {
+     "alarm": true,
+     "ic": -0.02522,
+     "baseline": 0.07765,
+     "ratio": -0.325,
+     "priority": "P0",
+     "note": ""
+    },
+    "B4": {
+     "alarm": true,
+     "ic": -0.0244,
+     "baseline": 0.08356,
+     "ratio": -0.292,
+     "priority": "P0",
+     "note": ""
+    },
+    "B5": {
+     "alarm": true,
+     "ic": -0.00134,
+     "baseline": 0.01225,
+     "ratio": -0.109,
+     "priority": "P1",
+     "note": ""
+    },
+    "B6": {
+     "alarm": true,
+     "ic": -0.00352,
+     "baseline": 0.02666,
+     "ratio": -0.132,
+     "priority": "P2",
+     "note": ""
+    }
+   },
+   "composite": {
+    "main": {
+     "ic": -0.0069,
+     "baseline": 0.04794,
+     "ratio": -0.144,
+     "alarm": true,
+     "note": ""
+    },
+    "a_unoriented": {
+     "ic": 0.00745,
+     "baseline": -0.03092,
+     "ratio": null,
+     "alarm": false,
+     "note": "基线 -0.0309 ≤ 0 ⇒ 0.5× 判据不适用（如实标注，不按健康处理）"
+    },
+    "b_p0only": {
+     "ic": -0.0099,
+     "baseline": 0.06706,
+     "ratio": -0.148,
+     "alarm": true,
+     "note": ""
+    }
+   }
+  },
+  {
+   "date": "20181031",
+   "n_avail": 58,
+   "blocks": {
+    "B1": {
+     "alarm": true,
+     "ic": -0.00173,
+     "baseline": 0.07438,
+     "ratio": -0.023,
+     "priority": "P0",
+     "note": ""
+    },
+    "B2": {
+     "alarm": true,
+     "ic": 0.01334,
+     "baseline": 0.04496,
+     "ratio": 0.297,
+     "priority": "P0",
+     "note": ""
+    },
+    "B3": {
+     "alarm": true,
+     "ic": -6e-05,
+     "baseline": 0.07386,
+     "ratio": -0.001,
+     "priority": "P0",
+     "note": ""
+    },
+    "B4": {
+     "alarm": true,
+     "ic": -0.00151,
+     "baseline": 0.07953,
+     "ratio": -0.019,
+     "priority": "P0",
+     "note": ""
+    },
+    "B5": {
+     "alarm": true,
+     "ic": 0.00362,
+     "baseline": 0.01137,
+     "ratio": 0.318,
+     "priority": "P1",
+     "note": ""
+    },
+    "B6": {
+     "alarm": true,
+     "ic": -0.00465,
+     "baseline": 0.02556,
+     "ratio": -0.182,
+     "priority": "P2",
+     "note": ""
+    }
+   },
+   "composite": {
+    "main": {
+     "ic": 0.00358,
+     "baseline": 0.04559,
+     "ratio": 0.078,
+     "alarm": true,
+     "note": ""
+    },
+    "a_unoriented": {
+     "ic": -0.00066,
+     "baseline": -0.02931,
+     "ratio": null,
+     "alarm": false,
+     "note": "基线 -0.0293 ≤ 0 ⇒ 0.5× 判据不适用（如实标注，不按健康处理）"
+    },
+    "b_p0only": {
+     "ic": 0.00446,
+     "baseline": 0.06389,
+     "ratio": 0.07,
+     "alarm": true,
+     "note": ""
+    }
+   }
+  },
+  {
+   "date": "20181130",
+   "n_avail": 59,
+   "blocks": {
+    "B1": {
+     "alarm": true,
+     "ic": 0.02098,
+     "baseline": 0.07078,
+     "ratio": 0.296,
+     "priority": "P0",
+     "note": ""
+    },
+    "B2": {
+     "alarm": true,
+     "ic": 0.01824,
+     "baseline": 0.04452,
+     "ratio": 0.41,
+     "priority": "P0",
+     "note": ""
+    },
+    "B3": {
+     "alarm": true,
+     "ic": 0.0162,
+     "baseline": 0.06944,
+     "ratio": 0.233,
+     "priority": "P0",
+     "note": ""
+    },
+    "B4": {
+     "alarm": true,
+     "ic": 0.01235,
+     "baseline": 0.07581,
+     "ratio": 0.163,
+     "priority": "P0",
+     "note": ""
+    },
+    "B5": {
+     "alarm": true,
+     "ic": 0.00427,
+     "baseline": 0.01124,
+     "ratio": 0.38,
+     "priority": "P1",
+     "note": ""
+    },
+    "B6": {
+     "alarm": true,
+     "ic": -0.00553,
+     "baseline": 0.02451,
+     "ratio": -0.226,
+     "priority": "P2",
+     "note": ""
+    }
+   },
+   "composite": {
+    "main": {
+     "ic": 0.01182,
+     "baseline": 0.04374,
+     "ratio": 0.27,
+     "alarm": true,
+     "note": ""
+    },
+    "a_unoriented": {
+     "ic": -0.00697,
+     "baseline": -0.02816,
+     "ratio": null,
+     "alarm": false,
+     "note": "基线 -0.0282 ≤ 0 ⇒ 0.5× 判据不适用（如实标注，不按健康处理）"
+    },
+    "b_p0only": {
+     "ic": 0.0173,
+     "baseline": 0.06114,
+     "ratio": 0.283,
+     "alarm": true,
+     "note": ""
+    }
+   }
+  },
+  {
+   "date": "20181228",
+   "n_avail": 60,
+   "blocks": {
+    "B1": {
+     "alarm": false,
+     "ic": 0.04244,
+     "baseline": 0.06779,
+     "ratio": 0.626,
+     "priority": "P0",
+     "note": ""
+    },
+    "B2": {
+     "alarm": true,
+     "ic": 0.01807,
+     "baseline": 0.04482,
+     "ratio": 0.403,
+     "priority": "P0",
+     "note": ""
+    },
+    "B3": {
+     "alarm": true,
+     "ic": 0.02239,
+     "baseline": 0.06904,
+     "ratio": 0.324,
+     "priority": "P0",
+     "note": ""
+    },
+    "B4": {
+     "alarm": true,
+     "ic": 0.01977,
+     "baseline": 0.07774,
+     "ratio": 0.254,
+     "priority": "P0",
+     "note": ""
+    },
+    "B5": {
+     "alarm": false,
+     "ic": 0.00986,
+     "baseline": 0.01147,
+     "ratio": 0.86,
+     "priority": "P1",
+     "note": ""
+    },
+    "B6": {
+     "alarm": true,
+     "ic": -0.00323,
+     "baseline": 0.02528,
+     "ratio": -0.128,
+     "priority": "P2",
+     "note": ""
+    }
+   },
+   "composite": {
+    "main": {
+     "ic": 0.01769,
+     "baseline": 0.04367,
+     "ratio": 0.405,
+     "alarm": true,
+     "note": ""
+    },
+    "a_unoriented": {
+     "ic": -0.01192,
+     "baseline": -0.02762,
+     "ratio": null,
+     "alarm": false,
+     "note": "基线 -0.0276 ≤ 0 ⇒ 0.5× 判据不适用（如实标注，不按健康处理）"
+    },
+    "b_p0only": {
+     "ic": 0.02369,
+     "baseline": 0.06083,
+     "ratio": 0.389,
+     "alarm": true,
+     "note": ""
+    }
+   }
+  },
+  {
+   "date": "20190131",
+   "n_avail": 61,
+   "blocks": {
+    "B1": {
+     "alarm": false,
+     "ic": 0.05811,
+     "baseline": 0.06264,
+     "ratio": 0.928,
+     "priority": "P0",
+     "note": ""
+    },
+    "B2": {
+     "alarm": true,
+     "ic": 0.00769,
+     "baseline": 0.04447,
+     "ratio": 0.173,
+     "priority": "P0",
+     "note": ""
+    },
+    "B3": {
+     "alarm": false,
+     "ic": 0.05844,
+     "baseline": 0.06366,
+     "ratio": 0.918,
+     "priority": "P0",
+     "note": ""
+    },
+    "B4": {
+     "alarm": false,
+     "ic": 0.06793,
+     "baseline": 0.07324,
+     "ratio": 0.928,
+     "priority": "P0",
+     "note": ""
+    },
+    "B5": {
+     "alarm": true,
+     "ic": 0.00351,
+     "baseline": 0.01188,
+     "ratio": 0.295,
+     "priority": "P1",
+     "note": ""
+    },
+    "B6": {
+     "alarm": true,
+     "ic": -0.0028,
+     "baseline": 0.02407,
+     "ratio": -0.116,
+     "priority": "P2",
+     "note": ""
+    }
+   },
+   "composite": {
+    "main": {
+     "ic": 0.02655,
+     "baseline": 0.04155,
+     "ratio": 0.639,
+     "alarm": false,
+     "note": ""
+    },
+    "a_unoriented": {
+     "ic": -0.02004,
+     "baseline": -0.02586,
+     "ratio": null,
+     "alarm": false,
+     "note": "基线 -0.0259 ≤ 0 ⇒ 0.5× 判据不适用（如实标注，不按健康处理）"
+    },
+    "b_p0only": {
+     "ic": 0.04069,
+     "baseline": 0.05743,
+     "ratio": 0.708,
+     "alarm": false,
+     "note": ""
+    }
+   }
+  },
+  {
+   "date": "20190228",
+   "n_avail": 62,
+   "blocks": {
+    "B1": {
+     "alarm": false,
+     "ic": 0.06549,
+     "baseline": 0.0631,
+     "ratio": 1.038,
+     "priority": "P0",
+     "note": ""
+    },
+    "B2": {
+     "alarm": true,
+     "ic": 0.01005,
+     "baseline": 0.04234,
+     "ratio": 0.237,
+     "priority": "P0",
+     "note": ""
+    },
+    "B3": {
+     "alarm": false,
+     "ic": 0.05981,
+     "baseline": 0.06544,
+     "ratio": 0.914,
+     "priority": "P0",
+     "note": ""
+    },
+    "B4": {
+     "alarm": false,
+     "ic": 0.05371,
+     "baseline": 0.07324,
+     "ratio": 0.733,
+     "priority": "P0",
+     "note": ""
+    },
+    "B5": {
+     "alarm": false,
+     "ic": 0.01095,
+     "baseline": 0.01101,
+     "ratio": 0.995,
+     "priority": "P1",
+     "note": ""
+    },
+    "B6": {
+     "alarm": true,
+     "ic": 0.00482,
+     "baseline": 0.02223,
+     "ratio": 0.217,
+     "priority": "P2",
+     "note": ""
+    }
+   },
+   "composite": {
+    "main": {
+     "ic": 0.03004,
+     "baseline": 0.04112,
+     "ratio": 0.73,
+     "alarm": false,
+     "note": ""
+    },
+    "a_unoriented": {
+     "ic": -0.02309,
+     "baseline": -0.02585,
+     "ratio": null,
+     "alarm": false,
+     "note": "基线 -0.0259 ≤ 0 ⇒ 0.5× 判据不适用（如实标注，不按健康处理）"
+    },
+    "b_p0only": {
+     "ic": 0.04173,
+     "baseline": 0.05738,
+     "ratio": 0.727,
+     "alarm": false,
+     "note": ""
+    }
+   }
+  },
+  {
+   "date": "20190329",
+   "n_avail": 63,
+   "blocks": {
+    "B1": {
+     "alarm": false,
+     "ic": 0.06801,
+     "baseline": 0.06281,
+     "ratio": 1.083,
+     "priority": "P0",
+     "note": ""
+    },
+    "B2": {
+     "alarm": true,
+     "ic": 0.00787,
+     "baseline": 0.0428,
+     "ratio": 0.184,
+     "priority": "P0",
+     "note": ""
+    },
+    "B3": {
+     "alarm": false,
+     "ic": 0.06431,
+     "baseline": 0.06454,
+     "ratio": 0.996,
+     "priority": "P0",
+     "note": ""
+    },
+    "B4": {
+     "alarm": false,
+     "ic": 0.05737,
+     "baseline": 0.07236,
+     "ratio": 0.793,
+     "priority": "P0",
+     "note": ""
+    },
+    "B5": {
+     "alarm": false,
+     "ic": 0.00782,
+     "baseline": 0.01076,
+     "ratio": 0.727,
+     "priority": "P1",
+     "note": ""
+    },
+    "B6": {
+     "alarm": true,
+     "ic": 0.00766,
+     "baseline": 0.02163,
+     "ratio": 0.354,
+     "priority": "P2",
+     "note": ""
+    }
+   },
+   "composite": {
+    "main": {
+     "ic": 0.03026,
+     "baseline": 0.04082,
+     "ratio": 0.741,
+     "alarm": false,
+     "note": ""
+    },
+    "a_unoriented": {
+     "ic": -0.02387,
+     "baseline": -0.02566,
+     "ratio": null,
+     "alarm": false,
+     "note": "基线 -0.0257 ≤ 0 ⇒ 0.5× 判据不适用（如实标注，不按健康处理）"
+    },
+    "b_p0only": {
+     "ic": 0.04337,
+     "baseline": 0.05708,
+     "ratio": 0.76,
+     "alarm": false,
+     "note": ""
+    }
+   }
+  },
+  {
+   "date": "20190430",
+   "n_avail": 64,
+   "blocks": {
+    "B1": {
+     "alarm": false,
+     "ic": 0.07293,
+     "baseline": 0.06187,
+     "ratio": 1.179,
+     "priority": "P0",
+     "note": ""
+    },
+    "B2": {
+     "alarm": true,
+     "ic": 0.01163,
+     "baseline": 0.04082,
+     "ratio": 0.285,
+     "priority": "P0",
+     "note": ""
+    },
+    "B3": {
+     "alarm": false,
+     "ic": 0.06144,
+     "baseline": 0.06388,
+     "ratio": 0.962,
+     "priority": "P0",
+     "note": ""
+    },
+    "B4": {
+     "alarm": false,
+     "ic": 0.06021,
+     "baseline": 0.07186,
+     "ratio": 0.838,
+     "priority": "P0",
+     "note": ""
+    },
+    "B5": {
+     "alarm": false,
+     "ic": 0.00663,
+     "baseline": 0.01058,
+     "ratio": 0.627,
+     "priority": "P1",
+     "note": ""
+    },
+    "B6": {
+     "alarm": true,
+     "ic": 0.00975,
+     "baseline": 0.02014,
+     "ratio": 0.484,
+     "priority": "P2",
+     "note": ""
+    }
+   },
+   "composite": {
+    "main": {
+     "ic": 0.03088,
+     "baseline": 0.03992,
+     "ratio": 0.773,
+     "alarm": false,
+     "note": ""
+    },
+    "a_unoriented": {
+     "ic": -0.02495,
+     "baseline": -0.0249,
+     "ratio": null,
+     "alarm": false,
+     "note": "基线 -0.0249 ≤ 0 ⇒ 0.5× 判据不适用（如实标注，不按健康处理）"
+    },
+    "b_p0only": {
+     "ic": 0.04478,
+     "baseline": 0.05591,
+     "ratio": 0.801,
+     "alarm": false,
+     "note": ""
+    }
+   }
+  },
+  {
+   "date": "20190531",
+   "n_avail": 65,
+   "blocks": {
+    "B1": {
+     "alarm": false,
+     "ic": 0.07814,
+     "baseline": 0.05985,
+     "ratio": 1.306,
+     "priority": "P0",
+     "note": ""
+    },
+    "B2": {
+     "alarm": false,
+     "ic": 0.02287,
+     "baseline": 0.03994,
+     "ratio": 0.573,
+     "priority": "P0",
+     "note": ""
+    },
+    "B3": {
+     "alarm": false,
+     "ic": 0.06516,
+     "baseline": 0.06221,
+     "ratio": 1.047,
+     "priority": "P0",
+     "note": ""
+    },
+    "B4": {
+     "alarm": false,
+     "ic": 0.05223,
+     "baseline": 0.07239,
+     "ratio": 0.722,
+     "priority": "P0",
+     "note": ""
+    },
+    "B5": {
+     "alarm": true,
+     "ic": 0.0018,
+     "baseline": 0.01073,
+     "ratio": 0.168,
+     "priority": "P1",
+     "note": ""
+    },
+    "B6": {
+     "alarm": false,
+     "ic": 0.01199,
+     "baseline": 0.02039,
+     "ratio": 0.588,
+     "priority": "P2",
+     "note": ""
+    }
+   },
+   "composite": {
+    "main": {
+     "ic": 0.03306,
+     "baseline": 0.03922,
+     "ratio": 0.843,
+     "alarm": false,
+     "note": ""
+    },
+    "a_unoriented": {
+     "ic": -0.02887,
+     "baseline": -0.02395,
+     "ratio": null,
+     "alarm": false,
+     "note": "基线 -0.0240 ≤ 0 ⇒ 0.5× 判据不适用（如实标注，不按健康处理）"
+    },
+    "b_p0only": {
+     "ic": 0.05027,
+     "baseline": 0.05471,
+     "ratio": 0.919,
+     "alarm": false,
+     "note": ""
+    }
+   }
+  },
+  {
+   "date": "20190628",
+   "n_avail": 66,
+   "blocks": {
+    "B1": {
+     "alarm": false,
+     "ic": 0.07473,
+     "baseline": 0.06071,
+     "ratio": 1.231,
+     "priority": "P0",
+     "note": ""
+    },
+    "B2": {
+     "alarm": false,
+     "ic": 0.02744,
+     "baseline": 0.04045,
+     "ratio": 0.678,
+     "priority": "P0",
+     "note": ""
+    },
+    "B3": {
+     "alarm": false,
+     "ic": 0.06662,
+     "baseline": 0.06263,
+     "ratio": 1.064,
+     "priority": "P0",
+     "note": ""
+    },
+    "B4": {
+     "alarm": false,
+     "ic": 0.05904,
+     "baseline": 0.07142,
+     "ratio": 0.827,
+     "priority": "P0",
+     "note": ""
+    },
+    "B5": {
+     "alarm": true,
+     "ic": 0.00411,
+     "baseline": 0.01089,
+     "ratio": 0.378,
+     "priority": "P1",
+     "note": ""
+    },
+    "B6": {
+     "alarm": false,
+     "ic": 0.01361,
+     "baseline": 0.01932,
+     "ratio": 0.705,
+     "priority": "P2",
+     "note": ""
+    }
+   },
+   "composite": {
+    "main": {
+     "ic": 0.03538,
+     "baseline": 0.03944,
+     "ratio": 0.897,
+     "alarm": false,
+     "note": ""
+    },
+    "a_unoriented": {
+     "ic": -0.0291,
+     "baseline": -0.0244,
+     "ratio": null,
+     "alarm": false,
+     "note": "基线 -0.0244 ≤ 0 ⇒ 0.5× 判据不适用（如实标注，不按健康处理）"
+    },
+    "b_p0only": {
+     "ic": 0.05267,
+     "baseline": 0.05508,
+     "ratio": 0.956,
+     "alarm": false,
+     "note": ""
+    }
+   }
+  },
+  {
+   "date": "20190731",
+   "n_avail": 67,
+   "blocks": {
+    "B1": {
+     "alarm": false,
+     "ic": 0.06082,
+     "baseline": 0.06168,
+     "ratio": 0.986,
+     "priority": "P0",
+     "note": ""
+    },
+    "B2": {
+     "alarm": true,
+     "ic": 0.01746,
+     "baseline": 0.04096,
+     "ratio": 0.426,
+     "priority": "P0",
+     "note": ""
+    },
+    "B3": {
+     "alarm": false,
+     "ic": 0.06387,
+     "baseline": 0.06024,
+     "ratio": 1.06,
+     "priority": "P0",
+     "note": ""
+    },
+    "B4": {
+     "alarm": false,
+     "ic": 0.06801,
+     "baseline": 0.06591,
+     "ratio": 1.032,
+     "priority": "P0",
+     "note": ""
+    },
+    "B5": {
+     "alarm": false,
+     "ic": 0.00767,
+     "baseline": 0.01115,
+     "ratio": 0.688,
+     "priority": "P1",
+     "note": ""
+    },
+    "B6": {
+     "alarm": true,
+     "ic": 0.00176,
+     "baseline": 0.02004,
+     "ratio": 0.088,
+     "priority": "P2",
+     "note": ""
+    }
+   },
+   "composite": {
+    "main": {
+     "ic": 0.03184,
+     "baseline": 0.03885,
+     "ratio": 0.82,
+     "alarm": false,
+     "note": ""
+    },
+    "a_unoriented": {
+     "ic": -0.02659,
+     "baseline": -0.02405,
+     "ratio": null,
+     "alarm": false,
+     "note": "基线 -0.0241 ≤ 0 ⇒ 0.5× 判据不适用（如实标注，不按健康处理）"
+    },
+    "b_p0only": {
+     "ic": 0.04673,
+     "baseline": 0.05396,
+     "ratio": 0.866,
+     "alarm": false,
+     "note": ""
+    }
+   }
+  },
+  {
+   "date": "20190830",
+   "n_avail": 68,
+   "blocks": {
+    "B1": {
+     "alarm": false,
+     "ic": 0.05181,
+     "baseline": 0.06224,
+     "ratio": 0.832,
+     "priority": "P0",
+     "note": ""
+    },
+    "B2": {
+     "alarm": true,
+     "ic": 0.0191,
+     "baseline": 0.04034,
+     "ratio": 0.474,
+     "priority": "P0",
+     "note": ""
+    },
+    "B3": {
+     "alarm": false,
+     "ic": 0.06493,
+     "baseline": 0.06052,
+     "ratio": 1.073,
+     "priority": "P0",
+     "note": ""
+    },
+    "B4": {
+     "alarm": false,
+     "ic": 0.07868,
+     "baseline": 0.06516,
+     "ratio": 1.207,
+     "priority": "P0",
+     "note": ""
+    },
+    "B5": {
+     "alarm": false,
+     "ic": 0.00834,
+     "baseline": 0.011,
+     "ratio": 0.759,
+     "priority": "P1",
+     "note": ""
+    },
+    "B6": {
+     "alarm": true,
+     "ic": 0.00426,
+     "baseline": 0.02071,
+     "ratio": 0.206,
+     "priority": "P2",
+     "note": ""
+    }
+   },
+   "composite": {
+    "main": {
+     "ic": 0.03266,
+     "baseline": 0.03878,
+     "ratio": 0.842,
+     "alarm": false,
+     "note": ""
+    },
+    "a_unoriented": {
+     "ic": -0.02386,
+     "baseline": -0.02438,
+     "ratio": null,
+     "alarm": false,
+     "note": "基线 -0.0244 ≤ 0 ⇒ 0.5× 判据不适用（如实标注，不按健康处理）"
+    },
+    "b_p0only": {
+     "ic": 0.04742,
+     "baseline": 0.05385,
+     "ratio": 0.881,
+     "alarm": false,
+     "note": ""
+    }
+   }
+  },
+  {
+   "date": "20190930",
+   "n_avail": 69,
+   "blocks": {
+    "B1": {
+     "alarm": false,
+     "ic": 0.06348,
+     "baseline": 0.06,
+     "ratio": 1.058,
+     "priority": "P0",
+     "note": ""
+    },
+    "B2": {
+     "alarm": false,
+     "ic": 0.02393,
+     "baseline": 0.03895,
+     "ratio": 0.614,
+     "priority": "P0",
+     "note": ""
+    },
+    "B3": {
+     "alarm": false,
+     "ic": 0.07859,
+     "baseline": 0.056,
+     "ratio": 1.403,
+     "priority": "P0",
+     "note": ""
+    },
+    "B4": {
+     "alarm": false,
+     "ic": 0.10222,
+     "baseline": 0.06083,
+     "ratio": 1.68,
+     "priority": "P0",
+     "note": ""
+    },
+    "B5": {
+     "alarm": false,
+     "ic": 0.01083,
+     "baseline": 0.01092,
+     "ratio": 0.992,
+     "priority": "P1",
+     "note": ""
+    },
+    "B6": {
+     "alarm": true,
+     "ic": 0.00382,
+     "baseline": 0.02004,
+     "ratio": 0.191,
+     "priority": "P2",
+     "note": ""
+    }
+   },
+   "composite": {
+    "main": {
+     "ic": 0.04039,
+     "baseline": 0.03682,
+     "ratio": 1.097,
+     "alarm": false,
+     "note": ""
+    },
+    "a_unoriented": {
+     "ic": -0.02748,
+     "baseline": -0.02282,
+     "ratio": null,
+     "alarm": false,
+     "note": "基线 -0.0228 ≤ 0 ⇒ 0.5× 判据不适用（如实标注，不按健康处理）"
+    },
+    "b_p0only": {
+     "ic": 0.05855,
+     "baseline": 0.05086,
+     "ratio": 1.151,
+     "alarm": false,
+     "note": ""
+    }
+   }
+  },
+  {
+   "date": "20191031",
+   "n_avail": 70,
+   "blocks": {
+    "B1": {
+     "alarm": false,
+     "ic": 0.0523,
+     "baseline": 0.05863,
+     "ratio": 0.892,
+     "priority": "P0",
+     "note": ""
+    },
+    "B2": {
+     "alarm": true,
+     "ic": 0.01829,
+     "baseline": 0.03842,
+     "ratio": 0.476,
+     "priority": "P0",
+     "note": ""
+    },
+    "B3": {
+     "alarm": false,
+     "ic": 0.05337,
+     "baseline": 0.05856,
+     "ratio": 0.911,
+     "priority": "P0",
+     "note": ""
+    },
+    "B4": {
+     "alarm": false,
+     "ic": 0.07915,
+     "baseline": 0.06277,
+     "ratio": 1.261,
+     "priority": "P0",
+     "note": ""
+    },
+    "B5": {
+     "alarm": false,
+     "ic": 0.01251,
+     "baseline": 0.01063,
+     "ratio": 1.177,
+     "priority": "P1",
+     "note": ""
+    },
+    "B6": {
+     "alarm": true,
+     "ic": 0.00439,
+     "baseline": 0.01905,
+     "ratio": 0.23,
+     "priority": "P2",
+     "note": ""
+    }
+   },
+   "composite": {
+    "main": {
+     "ic": 0.03112,
+     "baseline": 0.03714,
+     "ratio": 0.838,
+     "alarm": false,
+     "note": ""
+    },
+    "a_unoriented": {
+     "ic": -0.0178,
+     "baseline": -0.02337,
+     "ratio": null,
+     "alarm": false,
+     "note": "基线 -0.0234 ≤ 0 ⇒ 0.5× 判据不适用（如实标注，不按健康处理）"
+    },
+    "b_p0only": {
+     "ic": 0.04299,
+     "baseline": 0.0516,
+     "ratio": 0.833,
+     "alarm": false,
+     "note": ""
+    }
+   }
+  },
+  {
+   "date": "20191129",
+   "n_avail": 71,
+   "blocks": {
+    "B1": {
+     "alarm": false,
+     "ic": 0.04046,
+     "baseline": 0.06065,
+     "ratio": 0.667,
+     "priority": "P0",
+     "note": ""
+    },
+    "B2": {
+     "alarm": true,
+     "ic": 0.01119,
+     "baseline": 0.03918,
+     "ratio": 0.286,
+     "priority": "P0",
+     "note": ""
+    },
+    "B3": {
+     "alarm": false,
+     "ic": 0.05135,
+     "baseline": 0.05861,
+     "ratio": 0.876,
+     "priority": "P0",
+     "note": ""
+    },
+    "B4": {
+     "alarm": false,
+     "ic": 0.08492,
+     "baseline": 0.06291,
+     "ratio": 1.35,
+     "priority": "P0",
+     "note": ""
+    },
+    "B5": {
+     "alarm": false,
+     "ic": 0.01009,
+     "baseline": 0.01064,
+     "ratio": 0.948,
+     "priority": "P1",
+     "note": ""
+    },
+    "B6": {
+     "alarm": false,
+     "ic": 0.00951,
+     "baseline": 0.01814,
+     "ratio": 0.524,
+     "priority": "P2",
+     "note": ""
+    }
+   },
+   "composite": {
+    "main": {
+     "ic": 0.02786,
+     "baseline": 0.03748,
+     "ratio": 0.743,
+     "alarm": false,
+     "note": ""
+    },
+    "a_unoriented": {
+     "ic": -0.01454,
+     "baseline": -0.02384,
+     "ratio": null,
+     "alarm": false,
+     "note": "基线 -0.0238 ≤ 0 ⇒ 0.5× 判据不适用（如实标注，不按健康处理）"
+    },
+    "b_p0only": {
+     "ic": 0.03837,
+     "baseline": 0.05223,
+     "ratio": 0.735,
+     "alarm": false,
+     "note": ""
+    }
+   }
+  },
+  {
+   "date": "20191231",
+   "n_avail": 72,
+   "blocks": {
+    "B1": {
+     "alarm": true,
+     "ic": 0.0265,
+     "baseline": 0.06272,
+     "ratio": 0.423,
+     "priority": "P0",
+     "note": ""
+    },
+    "B2": {
+     "alarm": true,
+     "ic": 0.00757,
+     "baseline": 0.03947,
+     "ratio": 0.192,
+     "priority": "P0",
+     "note": ""
+    },
+    "B3": {
+     "alarm": false,
+     "ic": 0.04784,
+     "baseline": 0.05971,
+     "ratio": 0.801,
+     "priority": "P0",
+     "note": ""
+    },
+    "B4": {
+     "alarm": false,
+     "ic": 0.07311,
+     "baseline": 0.06614,
+     "ratio": 1.105,
+     "priority": "P0",
+     "note": ""
+    },
+    "B5": {
+     "alarm": false,
+     "ic": 0.00746,
+     "baseline": 0.0112,
+     "ratio": 0.666,
+     "priority": "P1",
+     "note": ""
+    },
+    "B6": {
+     "alarm": true,
+     "ic": 0.00673,
+     "baseline": 0.01934,
+     "ratio": 0.348,
+     "priority": "P2",
+     "note": ""
+    }
+   },
+   "composite": {
+    "main": {
+     "ic": 0.02305,
+     "baseline": 0.03847,
+     "ratio": 0.599,
+     "alarm": false,
+     "note": ""
+    },
+    "a_unoriented": {
+     "ic": -0.01164,
+     "baseline": -0.02447,
+     "ratio": null,
+     "alarm": false,
+     "note": "基线 -0.0245 ≤ 0 ⇒ 0.5× 判据不适用（如实标注，不按健康处理）"
+    },
+    "b_p0only": {
+     "ic": 0.03229,
+     "baseline": 0.05341,
+     "ratio": 0.605,
+     "alarm": false,
+     "note": ""
+    }
+   }
+  },
+  {
+   "date": "20200123",
+   "n_avail": 73,
+   "blocks": {
+    "B1": {
+     "alarm": true,
+     "ic": 0.01057,
+     "baseline": 0.06195,
+     "ratio": 0.171,
+     "priority": "P0",
+     "note": ""
+    },
+    "B2": {
+     "alarm": true,
+     "ic": 0.0085,
+     "baseline": 0.03692,
+     "ratio": 0.23,
+     "priority": "P0",
+     "note": ""
+    },
+    "B3": {
+     "alarm": true,
+     "ic": 0.01553,
+     "baseline": 0.06178,
+     "ratio": 0.251,
+     "priority": "P0",
+     "note": ""
+    },
+    "B4": {
+     "alarm": true,
+     "ic": 0.02724,
+     "baseline": 0.06986,
+     "ratio": 0.39,
+     "priority": "P0",
+     "note": ""
+    },
+    "B5": {
+     "alarm": true,
+     "ic": 0.00152,
+     "baseline": 0.01148,
+     "ratio": 0.133,
+     "priority": "P1",
+     "note": ""
+    },
+    "B6": {
+     "alarm": true,
+     "ic": 0.00817,
+     "baseline": 0.01856,
+     "ratio": 0.44,
+     "priority": "P2",
+     "note": ""
+    }
+   },
+   "composite": {
+    "main": {
+     "ic": 0.00947,
+     "baseline": 0.03854,
+     "ratio": 0.246,
+     "alarm": true,
+     "note": ""
+    },
+    "a_unoriented": {
+     "ic": -0.00112,
+     "baseline": -0.0244,
+     "ratio": null,
+     "alarm": false,
+     "note": "基线 -0.0244 ≤ 0 ⇒ 0.5× 判据不适用（如实标注，不按健康处理）"
+    },
+    "b_p0only": {
+     "ic": 0.01339,
+     "baseline": 0.0535,
+     "ratio": 0.25,
+     "alarm": true,
+     "note": ""
+    }
+   }
+  },
+  {
+   "date": "20200228",
+   "n_avail": 74,
+   "blocks": {
+    "B1": {
+     "alarm": true,
+     "ic": 0.01881,
+     "baseline": 0.06238,
+     "ratio": 0.302,
+     "priority": "P0",
+     "note": ""
+    },
+    "B2": {
+     "alarm": false,
+     "ic": 0.02283,
+     "baseline": 0.03565,
+     "ratio": 0.64,
+     "priority": "P0",
+     "note": ""
+    },
+    "B3": {
+     "alarm": true,
+     "ic": 0.02058,
+     "baseline": 0.06466,
+     "ratio": 0.318,
+     "priority": "P0",
+     "note": ""
+    },
+    "B4": {
+     "alarm": false,
+     "ic": 0.04467,
+     "baseline": 0.06645,
+     "ratio": 0.672,
+     "priority": "P0",
+     "note": ""
+    },
+    "B5": {
+     "alarm": true,
+     "ic": -0.00248,
+     "baseline": 0.01283,
+     "ratio": -0.193,
+     "priority": "P1",
+     "note": ""
+    },
+    "B6": {
+     "alarm": true,
+     "ic": 0.00713,
+     "baseline": 0.01886,
+     "ratio": 0.378,
+     "priority": "P2",
+     "note": ""
+    }
+   },
+   "composite": {
+    "main": {
+     "ic": 0.01464,
+     "baseline": 0.03913,
+     "ratio": 0.374,
+     "alarm": true,
+     "note": ""
+    },
+    "a_unoriented": {
+     "ic": -0.00482,
+     "baseline": -0.02509,
+     "ratio": null,
+     "alarm": false,
+     "note": "基线 -0.0251 ≤ 0 ⇒ 0.5× 判据不适用（如实标注，不按健康处理）"
+    },
+    "b_p0only": {
+     "ic": 0.02366,
+     "baseline": 0.0538,
+     "ratio": 0.44,
+     "alarm": true,
+     "note": ""
+    }
+   }
+  },
+  {
+   "date": "20200331",
+   "n_avail": 75,
+   "blocks": {
+    "B1": {
+     "alarm": true,
+     "ic": 0.0101,
+     "baseline": 0.06454,
+     "ratio": 0.156,
+     "priority": "P0",
+     "note": ""
+    },
+    "B2": {
+     "alarm": true,
+     "ic": 0.01629,
+     "baseline": 0.03616,
+     "ratio": 0.451,
+     "priority": "P0",
+     "note": ""
+    },
+    "B3": {
+     "alarm": true,
+     "ic": 0.01921,
+     "baseline": 0.06506,
+     "ratio": 0.295,
+     "priority": "P0",
+     "note": ""
+    },
+    "B4": {
+     "alarm": false,
+     "ic": 0.05962,
+     "baseline": 0.06561,
+     "ratio": 0.909,
+     "priority": "P0",
+     "note": ""
+    },
+    "B5": {
+     "alarm": true,
+     "ic": -0.00795,
+     "baseline": 0.01409,
+     "ratio": -0.564,
+     "priority": "P1",
+     "note": ""
+    },
+    "B6": {
+     "alarm": true,
+     "ic": 0.00571,
+     "baseline": 0.01888,
+     "ratio": 0.303,
+     "priority": "P2",
+     "note": ""
+    }
+   },
+   "composite": {
+    "main": {
+     "ic": 0.0112,
+     "baseline": 0.03985,
+     "ratio": 0.281,
+     "alarm": true,
+     "note": ""
+    },
+    "a_unoriented": {
+     "ic": -0.00381,
+     "baseline": -0.02558,
+     "ratio": null,
+     "alarm": false,
+     "note": "基线 -0.0256 ≤ 0 ⇒ 0.5× 判据不适用（如实标注，不按健康处理）"
+    },
+    "b_p0only": {
+     "ic": 0.02095,
+     "baseline": 0.05439,
+     "ratio": 0.385,
+     "alarm": true,
+     "note": ""
+    }
+   }
+  },
+  {
+   "date": "20200430",
+   "n_avail": 76,
+   "blocks": {
+    "B1": {
+     "alarm": true,
+     "ic": -0.00127,
+     "baseline": 0.06317,
+     "ratio": -0.02,
+     "priority": "P0",
+     "note": ""
+    },
+    "B2": {
+     "alarm": true,
+     "ic": 0.01321,
+     "baseline": 0.03538,
+     "ratio": 0.373,
+     "priority": "P0",
+     "note": ""
+    },
+    "B3": {
+     "alarm": true,
+     "ic": 0.0152,
+     "baseline": 0.06448,
+     "ratio": 0.236,
+     "priority": "P0",
+     "note": ""
+    },
+    "B4": {
+     "alarm": false,
+     "ic": 0.05386,
+     "baseline": 0.06711,
+     "ratio": 0.803,
+     "priority": "P0",
+     "note": ""
+    },
+    "B5": {
+     "alarm": true,
+     "ic": -0.00804,
+     "baseline": 0.01355,
+     "ratio": -0.593,
+     "priority": "P1",
+     "note": ""
+    },
+    "B6": {
+     "alarm": true,
+     "ic": 0.00548,
+     "baseline": 0.01806,
+     "ratio": 0.303,
+     "priority": "P2",
+     "note": ""
+    }
+   },
+   "composite": {
+    "main": {
+     "ic": 0.00802,
+     "baseline": 0.03924,
+     "ratio": 0.204,
+     "alarm": true,
+     "note": ""
+    },
+    "a_unoriented": {
+     "ic": -0.00129,
+     "baseline": -0.02511,
+     "ratio": null,
+     "alarm": false,
+     "note": "基线 -0.0251 ≤ 0 ⇒ 0.5× 判据不适用（如实标注，不按健康处理）"
+    },
+    "b_p0only": {
+     "ic": 0.01593,
+     "baseline": 0.05383,
+     "ratio": 0.296,
+     "alarm": true,
+     "note": ""
+    }
+   }
+  },
+  {
+   "date": "20200529",
+   "n_avail": 77,
+   "blocks": {
+    "B1": {
+     "alarm": true,
+     "ic": 0.00262,
+     "baseline": 0.06106,
+     "ratio": 0.043,
+     "priority": "P0",
+     "note": ""
+    },
+    "B2": {
+     "alarm": true,
+     "ic": 0.00347,
+     "baseline": 0.03712,
+     "ratio": 0.093,
+     "priority": "P0",
+     "note": ""
+    },
+    "B3": {
+     "alarm": true,
+     "ic": 0.024,
+     "baseline": 0.06483,
+     "ratio": 0.37,
+     "priority": "P0",
+     "note": ""
+    },
+    "B4": {
+     "alarm": false,
+     "ic": 0.06972,
+     "baseline": 0.06586,
+     "ratio": 1.059,
+     "priority": "P0",
+     "note": ""
+    },
+    "B5": {
+     "alarm": true,
+     "ic": -0.00726,
+     "baseline": 0.01363,
+     "ratio": -0.533,
+     "priority": "P1",
+     "note": ""
+    },
+    "B6": {
+     "alarm": true,
+     "ic": 0.00074,
+     "baseline": 0.01873,
+     "ratio": 0.04,
+     "priority": "P2",
+     "note": ""
+    }
+   },
+   "composite": {
+    "main": {
+     "ic": 0.00908,
+     "baseline": 0.03949,
+     "ratio": 0.23,
+     "alarm": true,
+     "note": ""
+    },
+    "a_unoriented": {
+     "ic": -0.00227,
+     "baseline": -0.02509,
+     "ratio": null,
+     "alarm": false,
+     "note": "基线 -0.0251 ≤ 0 ⇒ 0.5× 判据不适用（如实标注，不按健康处理）"
+    },
+    "b_p0only": {
+     "ic": 0.01787,
+     "baseline": 0.05414,
+     "ratio": 0.33,
+     "alarm": true,
+     "note": ""
+    }
+   }
+  },
+  {
+   "date": "20200630",
+   "n_avail": 78,
+   "blocks": {
+    "B1": {
+     "alarm": true,
+     "ic": -0.01478,
+     "baseline": 0.05985,
+     "ratio": -0.247,
+     "priority": "P0",
+     "note": ""
+    },
+    "B2": {
+     "alarm": true,
+     "ic": -0.02731,
+     "baseline": 0.03781,
+     "ratio": -0.722,
+     "priority": "P0",
+     "note": ""
+    },
+    "B3": {
+     "alarm": true,
+     "ic": 0.02451,
+     "baseline": 0.06541,
+     "ratio": 0.375,
+     "priority": "P0",
+     "note": ""
+    },
+    "B4": {
+     "alarm": false,
+     "ic": 0.07467,
+     "baseline": 0.06546,
+     "ratio": 1.141,
+     "priority": "P0",
+     "note": ""
+    },
+    "B5": {
+     "alarm": true,
+     "ic": -0.00462,
+     "baseline": 0.01357,
+     "ratio": -0.34,
+     "priority": "P1",
+     "note": ""
+    },
+    "B6": {
+     "alarm": true,
+     "ic": 0.00869,
+     "baseline": 0.01821,
+     "ratio": 0.477,
+     "priority": "P2",
+     "note": ""
+    }
+   },
+   "composite": {
+    "main": {
+     "ic": 0.00215,
+     "baseline": 0.03955,
+     "ratio": 0.054,
+     "alarm": true,
+     "note": ""
+    },
+    "a_unoriented": {
+     "ic": 0.0012,
+     "baseline": -0.02517,
+     "ratio": null,
+     "alarm": false,
+     "note": "基线 -0.0252 ≤ 0 ⇒ 0.5× 判据不适用（如实标注，不按健康处理）"
+    },
+    "b_p0only": {
+     "ic": 0.00449,
+     "baseline": 0.05437,
+     "ratio": 0.083,
+     "alarm": true,
+     "note": ""
+    }
+   }
+  },
+  {
+   "date": "20200731",
+   "n_avail": 79,
+   "blocks": {
+    "B1": {
+     "alarm": true,
+     "ic": -0.00283,
+     "baseline": 0.05772,
+     "ratio": -0.049,
+     "priority": "P0",
+     "note": ""
+    },
+    "B2": {
+     "alarm": true,
+     "ic": -0.02089,
+     "baseline": 0.03623,
+     "ratio": -0.576,
+     "priority": "P0",
+     "note": ""
+    },
+    "B3": {
+     "alarm": false,
+     "ic": 0.03782,
+     "baseline": 0.06178,
+     "ratio": 0.612,
+     "priority": "P0",
+     "note": ""
+    },
+    "B4": {
+     "alarm": false,
+     "ic": 0.08839,
+     "baseline": 0.06115,
+     "ratio": 1.445,
+     "priority": "P0",
+     "note": ""
+    },
+    "B5": {
+     "alarm": true,
+     "ic": 0.00218,
+     "baseline": 0.01277,
+     "ratio": 0.171,
+     "priority": "P1",
+     "note": ""
+    },
+    "B6": {
+     "alarm": false,
+     "ic": 0.01706,
+     "baseline": 0.01654,
+     "ratio": 1.032,
+     "priority": "P2",
+     "note": ""
+    }
+   },
+   "composite": {
+    "main": {
+     "ic": 0.01146,
+     "baseline": 0.03747,
+     "ratio": 0.306,
+     "alarm": true,
+     "note": ""
+    },
+    "a_unoriented": {
+     "ic": -0.00402,
+     "baseline": -0.02377,
+     "ratio": null,
+     "alarm": false,
+     "note": "基线 -0.0238 ≤ 0 ⇒ 0.5× 判据不适用（如实标注，不按健康处理）"
+    },
+    "b_p0only": {
+     "ic": 0.0151,
+     "baseline": 0.05166,
+     "ratio": 0.292,
+     "alarm": true,
+     "note": ""
+    }
+   }
+  },
+  {
+   "date": "20200831",
+   "n_avail": 80,
+   "blocks": {
+    "B1": {
+     "alarm": true,
+     "ic": 0.01831,
+     "baseline": 0.05571,
+     "ratio": 0.329,
+     "priority": "P0",
+     "note": ""
+    },
+    "B2": {
+     "alarm": true,
+     "ic": 0.00701,
+     "baseline": 0.0356,
+     "ratio": 0.197,
+     "priority": "P0",
+     "note": ""
+    },
+    "B3": {
+     "alarm": false,
+     "ic": 0.04287,
+     "baseline": 0.06392,
+     "ratio": 0.671,
+     "priority": "P0",
+     "note": ""
+    },
+    "B4": {
+     "alarm": false,
+     "ic": 0.06085,
+     "baseline": 0.06187,
+     "ratio": 0.983,
+     "priority": "P0",
+     "note": ""
+    },
+    "B5": {
+     "alarm": false,
+     "ic": 0.0072,
+     "baseline": 0.0131,
+     "ratio": 0.549,
+     "priority": "P1",
+     "note": ""
+    },
+    "B6": {
+     "alarm": false,
+     "ic": 0.01206,
+     "baseline": 0.01761,
+     "ratio": 0.685,
+     "priority": "P2",
+     "note": ""
+    }
+   },
+   "composite": {
+    "main": {
+     "ic": 0.02031,
+     "baseline": 0.03782,
+     "ratio": 0.537,
+     "alarm": false,
+     "note": ""
+    },
+    "a_unoriented": {
+     "ic": -0.00998,
+     "baseline": -0.02391,
+     "ratio": null,
+     "alarm": false,
+     "note": "基线 -0.0239 ≤ 0 ⇒ 0.5× 判据不适用（如实标注，不按健康处理）"
+    },
+    "b_p0only": {
+     "ic": 0.02767,
+     "baseline": 0.05198,
+     "ratio": 0.532,
+     "alarm": false,
+     "note": ""
+    }
+   }
+  },
+  {
+   "date": "20200930",
+   "n_avail": 81,
+   "blocks": {
+    "B1": {
+     "alarm": true,
+     "ic": 0.00992,
+     "baseline": 0.0564,
+     "ratio": 0.176,
+     "priority": "P0",
+     "note": ""
+    },
+    "B2": {
+     "alarm": true,
+     "ic": -0.0003,
+     "baseline": 0.03499,
+     "ratio": -0.009,
+     "priority": "P0",
+     "note": ""
+    },
+    "B3": {
+     "alarm": false,
+     "ic": 0.04088,
+     "baseline": 0.06237,
+     "ratio": 0.656,
+     "priority": "P0",
+     "note": ""
+    },
+    "B4": {
+     "alarm": false,
+     "ic": 0.06221,
+     "baseline": 0.06254,
+     "ratio": 0.995,
+     "priority": "P0",
+     "note": ""
+    },
+    "B5": {
+     "alarm": true,
+     "ic": 0.00229,
+     "baseline": 0.01281,
+     "ratio": 0.179,
+     "priority": "P1",
+     "note": ""
+    },
+    "B6": {
+     "alarm": false,
+     "ic": 0.01138,
+     "baseline": 0.01703,
+     "ratio": 0.668,
+     "priority": "P2",
+     "note": ""
+    }
+   },
+   "composite": {
+    "main": {
+     "ic": 0.01594,
+     "baseline": 0.03728,
+     "ratio": 0.428,
+     "alarm": true,
+     "note": ""
+    },
+    "a_unoriented": {
+     "ic": -0.00896,
+     "baseline": -0.023,
+     "ratio": null,
+     "alarm": false,
+     "note": "基线 -0.0230 ≤ 0 ⇒ 0.5× 判据不适用（如实标注，不按健康处理）"
+    },
+    "b_p0only": {
+     "ic": 0.02306,
+     "baseline": 0.05136,
+     "ratio": 0.449,
+     "alarm": true,
+     "note": ""
+    }
+   }
+  },
+  {
+   "date": "20201030",
+   "n_avail": 82,
+   "blocks": {
+    "B1": {
+     "alarm": true,
+     "ic": 0.01601,
+     "baseline": 0.05185,
+     "ratio": 0.309,
+     "priority": "P0",
+     "note": ""
+    },
+    "B2": {
+     "alarm": true,
+     "ic": 0.00569,
+     "baseline": 0.0336,
+     "ratio": 0.169,
+     "priority": "P0",
+     "note": ""
+    },
+    "B3": {
+     "alarm": false,
+     "ic": 0.04882,
+     "baseline": 0.06038,
+     "ratio": 0.809,
+     "priority": "P0",
+     "note": ""
+    },
+    "B4": {
+     "alarm": false,
+     "ic": 0.07096,
+     "baseline": 0.06028,
+     "ratio": 1.177,
+     "priority": "P0",
+     "note": ""
+    },
+    "B5": {
+     "alarm": true,
+     "ic": -0.00218,
+     "baseline": 0.01258,
+     "ratio": -0.173,
+     "priority": "P1",
+     "note": ""
+    },
+    "B6": {
+     "alarm": false,
+     "ic": 0.01515,
+     "baseline": 0.01637,
+     "ratio": 0.926,
+     "priority": "P2",
+     "note": ""
+    }
+   },
+   "composite": {
+    "main": {
+     "ic": 0.01929,
+     "baseline": 0.03576,
+     "ratio": 0.539,
+     "alarm": false,
+     "note": ""
+    },
+    "a_unoriented": {
+     "ic": -0.01309,
+     "baseline": -0.02161,
+     "ratio": null,
+     "alarm": false,
+     "note": "基线 -0.0216 ≤ 0 ⇒ 0.5× 判据不适用（如实标注，不按健康处理）"
+    },
+    "b_p0only": {
+     "ic": 0.03008,
+     "baseline": 0.04916,
+     "ratio": 0.612,
+     "alarm": false,
+     "note": ""
+    }
+   }
+  },
+  {
+   "date": "20201130",
+   "n_avail": 83,
+   "blocks": {
+    "B1": {
+     "alarm": true,
+     "ic": 0.01199,
+     "baseline": 0.05715,
+     "ratio": 0.21,
+     "priority": "P0",
+     "note": ""
+    },
+    "B2": {
+     "alarm": true,
+     "ic": 0.00923,
+     "baseline": 0.03271,
+     "ratio": 0.282,
+     "priority": "P0",
+     "note": ""
+    },
+    "B3": {
+     "alarm": false,
+     "ic": 0.04884,
+     "baseline": 0.06003,
+     "ratio": 0.814,
+     "priority": "P0",
+     "note": ""
+    },
+    "B4": {
+     "alarm": false,
+     "ic": 0.06558,
+     "baseline": 0.06202,
+     "ratio": 1.057,
+     "priority": "P0",
+     "note": ""
+    },
+    "B5": {
+     "alarm": true,
+     "ic": 0.00147,
+     "baseline": 0.01177,
+     "ratio": 0.125,
+     "priority": "P1",
+     "note": ""
+    },
+    "B6": {
+     "alarm": false,
+     "ic": 0.01376,
+     "baseline": 0.01658,
+     "ratio": 0.83,
+     "priority": "P2",
+     "note": ""
+    }
+   },
+   "composite": {
+    "main": {
+     "ic": 0.02028,
+     "baseline": 0.03587,
+     "ratio": 0.565,
+     "alarm": false,
+     "note": ""
+    },
+    "a_unoriented": {
+     "ic": -0.01388,
+     "baseline": -0.02193,
+     "ratio": null,
+     "alarm": false,
+     "note": "基线 -0.0219 ≤ 0 ⇒ 0.5× 判据不适用（如实标注，不按健康处理）"
+    },
+    "b_p0only": {
+     "ic": 0.03019,
+     "baseline": 0.04972,
+     "ratio": 0.607,
+     "alarm": false,
+     "note": ""
+    }
+   }
+  },
+  {
+   "date": "20201231",
+   "n_avail": 84,
+   "blocks": {
+    "B1": {
+     "alarm": true,
+     "ic": -0.01404,
+     "baseline": 0.05683,
+     "ratio": -0.247,
+     "priority": "P0",
+     "note": ""
+    },
+    "B2": {
+     "alarm": true,
+     "ic": 0.01159,
+     "baseline": 0.03104,
+     "ratio": 0.373,
+     "priority": "P0",
+     "note": ""
+    },
+    "B3": {
+     "alarm": true,
+     "ic": 0.02768,
+     "baseline": 0.05771,
+     "ratio": 0.48,
+     "priority": "P0",
+     "note": ""
+    },
+    "B4": {
+     "alarm": false,
+     "ic": 0.04708,
+     "baseline": 0.05895,
+     "ratio": 0.799,
+     "priority": "P0",
+     "note": ""
+    },
+    "B5": {
+     "alarm": true,
+     "ic": 0.0027,
+     "baseline": 0.01146,
+     "ratio": 0.236,
+     "priority": "P1",
+     "note": ""
+    },
+    "B6": {
+     "alarm": false,
+     "ic": 0.01084,
+     "baseline": 0.01709,
+     "ratio": 0.634,
+     "priority": "P2",
+     "note": ""
+    }
+   },
+   "composite": {
+    "main": {
+     "ic": 0.01238,
+     "baseline": 0.03465,
+     "ratio": 0.357,
+     "alarm": true,
+     "note": ""
+    },
+    "a_unoriented": {
+     "ic": -0.00519,
+     "baseline": -0.02093,
+     "ratio": null,
+     "alarm": false,
+     "note": "基线 -0.0209 ≤ 0 ⇒ 0.5× 判据不适用（如实标注，不按健康处理）"
+    },
+    "b_p0only": {
+     "ic": 0.01721,
+     "baseline": 0.04788,
+     "ratio": 0.359,
+     "alarm": true,
+     "note": ""
+    }
+   }
+  },
+  {
+   "date": "20210129",
+   "n_avail": 85,
+   "blocks": {
+    "B1": {
+     "alarm": true,
+     "ic": -0.00311,
+     "baseline": 0.05249,
+     "ratio": -0.059,
+     "priority": "P0",
+     "note": ""
+    },
+    "B2": {
+     "alarm": false,
+     "ic": 0.02123,
+     "baseline": 0.02976,
+     "ratio": 0.714,
+     "priority": "P0",
+     "note": ""
+    },
+    "B3": {
+     "alarm": false,
+     "ic": 0.032,
+     "baseline": 0.05441,
+     "ratio": 0.588,
+     "priority": "P0",
+     "note": ""
+    },
+    "B4": {
+     "alarm": false,
+     "ic": 0.05288,
+     "baseline": 0.05797,
+     "ratio": 0.912,
+     "priority": "P0",
+     "note": ""
+    },
+    "B5": {
+     "alarm": true,
+     "ic": -0.00095,
+     "baseline": 0.01169,
+     "ratio": -0.081,
+     "priority": "P1",
+     "note": ""
+    },
+    "B6": {
+     "alarm": false,
+     "ic": 0.01214,
+     "baseline": 0.0167,
+     "ratio": 0.727,
+     "priority": "P2",
+     "note": ""
+    }
+   },
+   "composite": {
+    "main": {
+     "ic": 0.01603,
+     "baseline": 0.03314,
+     "ratio": 0.484,
+     "alarm": true,
+     "note": ""
+    },
+    "a_unoriented": {
+     "ic": -0.00964,
+     "baseline": -0.01909,
+     "ratio": null,
+     "alarm": false,
+     "note": "基线 -0.0191 ≤ 0 ⇒ 0.5× 判据不适用（如实标注，不按健康处理）"
+    },
+    "b_p0only": {
+     "ic": 0.02469,
+     "baseline": 0.0454,
+     "ratio": 0.544,
+     "alarm": false,
+     "note": ""
+    }
+   }
+  },
+  {
+   "date": "20210226",
+   "n_avail": 86,
+   "blocks": {
+    "B1": {
+     "alarm": true,
+     "ic": -0.0101,
+     "baseline": 0.05298,
+     "ratio": -0.191,
+     "priority": "P0",
+     "note": ""
+    },
+    "B2": {
+     "alarm": true,
+     "ic": 0.0136,
+     "baseline": 0.03067,
+     "ratio": 0.443,
+     "priority": "P0",
+     "note": ""
+    },
+    "B3": {
+     "alarm": false,
+     "ic": 0.02872,
+     "baseline": 0.05629,
+     "ratio": 0.51,
+     "priority": "P0",
+     "note": ""
+    },
+    "B4": {
+     "alarm": false,
+     "ic": 0.04079,
+     "baseline": 0.0587,
+     "ratio": 0.695,
+     "priority": "P0",
+     "note": ""
+    },
+    "B5": {
+     "alarm": true,
+     "ic": -6e-05,
+     "baseline": 0.01206,
+     "ratio": -0.005,
+     "priority": "P1",
+     "note": ""
+    },
+    "B6": {
+     "alarm": true,
+     "ic": 0.00765,
+     "baseline": 0.01719,
+     "ratio": 0.445,
+     "priority": "P2",
+     "note": ""
+    }
+   },
+   "composite": {
+    "main": {
+     "ic": 0.01193,
+     "baseline": 0.03402,
+     "ratio": 0.351,
+     "alarm": true,
+     "note": ""
+    },
+    "a_unoriented": {
+     "ic": -0.00764,
+     "baseline": -0.01936,
+     "ratio": null,
+     "alarm": false,
+     "note": "基线 -0.0194 ≤ 0 ⇒ 0.5× 判据不适用（如实标注，不按健康处理）"
+    },
+    "b_p0only": {
+     "ic": 0.01829,
+     "baseline": 0.04658,
+     "ratio": 0.393,
+     "alarm": true,
+     "note": ""
+    }
+   }
+  },
+  {
+   "date": "20210331",
+   "n_avail": 87,
+   "blocks": {
+    "B1": {
+     "alarm": true,
+     "ic": -0.00438,
+     "baseline": 0.04961,
+     "ratio": -0.088,
+     "priority": "P0",
+     "note": ""
+    },
+    "B2": {
+     "alarm": false,
+     "ic": 0.01794,
+     "baseline": 0.0299,
+     "ratio": 0.6,
+     "priority": "P0",
+     "note": ""
+    },
+    "B3": {
+     "alarm": false,
+     "ic": 0.02951,
+     "baseline": 0.05754,
+     "ratio": 0.513,
+     "priority": "P0",
+     "note": ""
+    },
+    "B4": {
+     "alarm": true,
+     "ic": 0.0308,
+     "baseline": 0.06256,
+     "ratio": 0.492,
+     "priority": "P0",
+     "note": ""
+    },
+    "B5": {
+     "alarm": true,
+     "ic": 0.00048,
+     "baseline": 0.01141,
+     "ratio": 0.042,
+     "priority": "P1",
+     "note": ""
+    },
+    "B6": {
+     "alarm": true,
+     "ic": 0.00639,
+     "baseline": 0.01618,
+     "ratio": 0.395,
+     "priority": "P2",
+     "note": ""
+    }
+   },
+   "composite": {
+    "main": {
+     "ic": 0.01304,
+     "baseline": 0.03378,
+     "ratio": 0.386,
+     "alarm": true,
+     "note": ""
+    },
+    "a_unoriented": {
+     "ic": -0.00897,
+     "baseline": -0.01948,
+     "ratio": null,
+     "alarm": false,
+     "note": "基线 -0.0195 ≤ 0 ⇒ 0.5× 判据不适用（如实标注，不按健康处理）"
+    },
+    "b_p0only": {
+     "ic": 0.02003,
+     "baseline": 0.04664,
+     "ratio": 0.43,
+     "alarm": true,
+     "note": ""
+    }
+   }
+  },
+  {
+   "date": "20210430",
+   "n_avail": 88,
+   "blocks": {
+    "B1": {
+     "alarm": true,
+     "ic": 0.01597,
+     "baseline": 0.04597,
+     "ratio": 0.348,
+     "priority": "P0",
+     "note": ""
+    },
+    "B2": {
+     "alarm": false,
+     "ic": 0.0153,
+     "baseline": 0.02925,
+     "ratio": 0.523,
+     "priority": "P0",
+     "note": ""
+    },
+    "B3": {
+     "alarm": false,
+     "ic": 0.03562,
+     "baseline": 0.05558,
+     "ratio": 0.641,
+     "priority": "P0",
+     "note": ""
+    },
+    "B4": {
+     "alarm": false,
+     "ic": 0.0362,
+     "baseline": 0.06138,
+     "ratio": 0.59,
+     "priority": "P0",
+     "note": ""
+    },
+    "B5": {
+     "alarm": true,
+     "ic": 0.00305,
+     "baseline": 0.01099,
+     "ratio": 0.278,
+     "priority": "P1",
+     "note": ""
+    },
+    "B6": {
+     "alarm": false,
+     "ic": 0.01124,
+     "baseline": 0.01641,
+     "ratio": 0.685,
+     "priority": "P2",
+     "note": ""
+    }
+   },
+   "composite": {
+    "main": {
+     "ic": 0.01735,
+     "baseline": 0.03264,
+     "ratio": 0.532,
+     "alarm": false,
+     "note": ""
+    },
+    "a_unoriented": {
+     "ic": -0.01299,
+     "baseline": -0.01842,
+     "ratio": null,
+     "alarm": false,
+     "note": "基线 -0.0184 ≤ 0 ⇒ 0.5× 判据不适用（如实标注，不按健康处理）"
+    },
+    "b_p0only": {
+     "ic": 0.02509,
+     "baseline": 0.04497,
+     "ratio": 0.558,
+     "alarm": false,
+     "note": ""
+    }
+   }
+  },
+  {
+   "date": "20210531",
+   "n_avail": 89,
+   "blocks": {
+    "B1": {
+     "alarm": false,
+     "ic": 0.02527,
+     "baseline": 0.04606,
+     "ratio": 0.549,
+     "priority": "P0",
+     "note": ""
+    },
+    "B2": {
+     "alarm": false,
+     "ic": 0.02134,
+     "baseline": 0.02755,
+     "ratio": 0.775,
+     "priority": "P0",
+     "note": ""
+    },
+    "B3": {
+     "alarm": false,
+     "ic": 0.03194,
+     "baseline": 0.05445,
+     "ratio": 0.587,
+     "priority": "P0",
+     "note": ""
+    },
+    "B4": {
+     "alarm": true,
+     "ic": 0.02237,
+     "baseline": 0.05912,
+     "ratio": 0.378,
+     "priority": "P0",
+     "note": ""
+    },
+    "B5": {
+     "alarm": true,
+     "ic": -0.0005,
+     "baseline": 0.01107,
+     "ratio": -0.045,
+     "priority": "P1",
+     "note": ""
+    },
+    "B6": {
+     "alarm": false,
+     "ic": 0.00877,
+     "baseline": 0.01424,
+     "ratio": 0.616,
+     "priority": "P2",
+     "note": ""
+    }
+   },
+   "composite": {
+    "main": {
+     "ic": 0.01662,
+     "baseline": 0.0317,
+     "ratio": 0.524,
+     "alarm": false,
+     "note": ""
+    },
+    "a_unoriented": {
+     "ic": -0.01447,
+     "baseline": -0.01775,
+     "ratio": null,
+     "alarm": false,
+     "note": "基线 -0.0178 ≤ 0 ⇒ 0.5× 判据不适用（如实标注，不按健康处理）"
+    },
+    "b_p0only": {
+     "ic": 0.02597,
+     "baseline": 0.04371,
+     "ratio": 0.594,
+     "alarm": false,
+     "note": ""
+    }
+   }
+  },
+  {
+   "date": "20210630",
+   "n_avail": 90,
+   "blocks": {
+    "B1": {
+     "alarm": false,
+     "ic": 0.04548,
+     "baseline": 0.04587,
+     "ratio": 0.992,
+     "priority": "P0",
+     "note": ""
+    },
+    "B2": {
+     "alarm": false,
+     "ic": 0.01581,
+     "baseline": 0.02692,
+     "ratio": 0.587,
+     "priority": "P0",
+     "note": ""
+    },
+    "B3": {
+     "alarm": true,
+     "ic": 0.02122,
+     "baseline": 0.05383,
+     "ratio": 0.394,
+     "priority": "P0",
+     "note": ""
+    },
+    "B4": {
+     "alarm": true,
+     "ic": 0.01132,
+     "baseline": 0.06397,
+     "ratio": 0.177,
+     "priority": "P0",
+     "note": ""
+    },
+    "B5": {
+     "alarm": false,
+     "ic": 0.01011,
+     "baseline": 0.01012,
+     "ratio": 0.999,
+     "priority": "P1",
+     "note": ""
+    },
+    "B6": {
+     "alarm": true,
+     "ic": 0.00299,
+     "baseline": 0.01439,
+     "ratio": 0.208,
+     "priority": "P2",
+     "note": ""
+    }
+   },
+   "composite": {
+    "main": {
+     "ic": 0.01672,
+     "baseline": 0.03144,
+     "ratio": 0.532,
+     "alarm": false,
+     "note": ""
+    },
+    "a_unoriented": {
+     "ic": -0.01393,
+     "baseline": -0.01848,
+     "ratio": null,
+     "alarm": false,
+     "note": "基线 -0.0185 ≤ 0 ⇒ 0.5× 判据不适用（如实标注，不按健康处理）"
+    },
+    "b_p0only": {
+     "ic": 0.02201,
+     "baseline": 0.04373,
+     "ratio": 0.503,
+     "alarm": false,
+     "note": ""
+    }
+   }
+  },
+  {
+   "date": "20210730",
+   "n_avail": 91,
+   "blocks": {
+    "B1": {
+     "alarm": false,
+     "ic": 0.03695,
+     "baseline": 0.0463,
+     "ratio": 0.798,
+     "priority": "P0",
+     "note": ""
+    },
+    "B2": {
+     "alarm": false,
+     "ic": 0.01471,
+     "baseline": 0.0288,
+     "ratio": 0.511,
+     "priority": "P0",
+     "note": ""
+    },
+    "B3": {
+     "alarm": true,
+     "ic": 0.0173,
+     "baseline": 0.05219,
+     "ratio": 0.331,
+     "priority": "P0",
+     "note": ""
+    },
+    "B4": {
+     "alarm": true,
+     "ic": 0.0126,
+     "baseline": 0.06046,
+     "ratio": 0.208,
+     "priority": "P0",
+     "note": ""
+    },
+    "B5": {
+     "alarm": false,
+     "ic": 0.0078,
+     "baseline": 0.01005,
+     "ratio": 0.776,
+     "priority": "P1",
+     "note": ""
+    },
+    "B6": {
+     "alarm": true,
+     "ic": 0.00379,
+     "baseline": 0.01474,
+     "ratio": 0.257,
+     "priority": "P2",
+     "note": ""
+    }
+   },
+   "composite": {
+    "main": {
+     "ic": 0.01425,
+     "baseline": 0.03132,
+     "ratio": 0.455,
+     "alarm": true,
+     "note": ""
+    },
+    "a_unoriented": {
+     "ic": -0.01212,
+     "baseline": -0.0185,
+     "ratio": null,
+     "alarm": false,
+     "note": "基线 -0.0185 ≤ 0 ⇒ 0.5× 判据不适用（如实标注，不按健康处理）"
+    },
+    "b_p0only": {
+     "ic": 0.01895,
+     "baseline": 0.04351,
+     "ratio": 0.436,
+     "alarm": true,
+     "note": ""
+    }
+   }
+  },
+  {
+   "date": "20210831",
+   "n_avail": 92,
+   "blocks": {
+    "B1": {
+     "alarm": true,
+     "ic": 0.02041,
+     "baseline": 0.05003,
+     "ratio": 0.408,
+     "priority": "P0",
+     "note": ""
+    },
+    "B2": {
+     "alarm": false,
+     "ic": 0.01695,
+     "baseline": 0.02781,
+     "ratio": 0.61,
+     "priority": "P0",
+     "note": ""
+    },
+    "B3": {
+     "alarm": true,
+     "ic": 0.01565,
+     "baseline": 0.05094,
+     "ratio": 0.307,
+     "priority": "P0",
+     "note": ""
+    },
+    "B4": {
+     "alarm": false,
+     "ic": 0.03605,
+     "baseline": 0.05579,
+     "ratio": 0.646,
+     "priority": "P0",
+     "note": ""
+    },
+    "B5": {
+     "alarm": false,
+     "ic": 0.0061,
+     "baseline": 0.0114,
+     "ratio": 0.535,
+     "priority": "P1",
+     "note": ""
+    },
+    "B6": {
+     "alarm": true,
+     "ic": 0.00299,
+     "baseline": 0.01425,
+     "ratio": 0.209,
+     "priority": "P2",
+     "note": ""
+    }
+   },
+   "composite": {
+    "main": {
+     "ic": 0.01372,
+     "baseline": 0.03122,
+     "ratio": 0.439,
+     "alarm": true,
+     "note": ""
+    },
+    "a_unoriented": {
+     "ic": -0.00898,
+     "baseline": -0.01887,
+     "ratio": null,
+     "alarm": false,
+     "note": "基线 -0.0189 ≤ 0 ⇒ 0.5× 判据不适用（如实标注，不按健康处理）"
+    },
+    "b_p0only": {
+     "ic": 0.01903,
+     "baseline": 0.04279,
+     "ratio": 0.445,
+     "alarm": true,
+     "note": ""
+    }
+   }
+  },
+  {
+   "date": "20210930",
+   "n_avail": 93,
+   "blocks": {
+    "B1": {
+     "alarm": false,
+     "ic": 0.03776,
+     "baseline": 0.04787,
+     "ratio": 0.789,
+     "priority": "P0",
+     "note": ""
+    },
+    "B2": {
+     "alarm": false,
+     "ic": 0.0341,
+     "baseline": 0.02774,
+     "ratio": 1.229,
+     "priority": "P0",
+     "note": ""
+    },
+    "B3": {
+     "alarm": false,
+     "ic": 0.03812,
+     "baseline": 0.04768,
+     "ratio": 0.799,
+     "priority": "P0",
+     "note": ""
+    },
+    "B4": {
+     "alarm": false,
+     "ic": 0.03379,
+     "baseline": 0.05522,
+     "ratio": 0.612,
+     "priority": "P0",
+     "note": ""
+    },
+    "B5": {
+     "alarm": false,
+     "ic": 0.01077,
+     "baseline": 0.01072,
+     "ratio": 1.004,
+     "priority": "P1",
+     "note": ""
+    },
+    "B6": {
+     "alarm": true,
+     "ic": 0.00648,
+     "baseline": 0.0145,
+     "ratio": 0.447,
+     "priority": "P2",
+     "note": ""
+    }
+   },
+   "composite": {
+    "main": {
+     "ic": 0.02589,
+     "baseline": 0.03003,
+     "ratio": 0.862,
+     "alarm": false,
+     "note": ""
+    },
+    "a_unoriented": {
+     "ic": -0.02023,
+     "baseline": -0.01777,
+     "ratio": null,
+     "alarm": false,
+     "note": "基线 -0.0178 ≤ 0 ⇒ 0.5× 判据不适用（如实标注，不按健康处理）"
+    },
+    "b_p0only": {
+     "ic": 0.03613,
+     "baseline": 0.04116,
+     "ratio": 0.878,
+     "alarm": false,
+     "note": ""
+    }
+   }
+  },
+  {
+   "date": "20211029",
+   "n_avail": 94,
+   "blocks": {
+    "B1": {
+     "alarm": false,
+     "ic": 0.05324,
+     "baseline": 0.04391,
+     "ratio": 1.212,
+     "priority": "P0",
+     "note": ""
+    },
+    "B2": {
+     "alarm": false,
+     "ic": 0.03742,
+     "baseline": 0.02764,
+     "ratio": 1.354,
+     "priority": "P0",
+     "note": ""
+    },
+    "B3": {
+     "alarm": false,
+     "ic": 0.04845,
+     "baseline": 0.04619,
+     "ratio": 1.049,
+     "priority": "P0",
+     "note": ""
+    },
+    "B4": {
+     "alarm": false,
+     "ic": 0.03793,
+     "baseline": 0.05517,
+     "ratio": 0.687,
+     "priority": "P0",
+     "note": ""
+    },
+    "B5": {
+     "alarm": false,
+     "ic": 0.01397,
+     "baseline": 0.01094,
+     "ratio": 1.278,
+     "priority": "P1",
+     "note": ""
+    },
+    "B6": {
+     "alarm": true,
+     "ic": 0.00484,
+     "baseline": 0.01478,
+     "ratio": 0.328,
+     "priority": "P2",
+     "note": ""
+    }
+   },
+   "composite": {
+    "main": {
+     "ic": 0.03151,
+     "baseline": 0.02935,
+     "ratio": 1.074,
+     "alarm": false,
+     "note": ""
+    },
+    "a_unoriented": {
+     "ic": -0.02559,
+     "baseline": -0.01712,
+     "ratio": null,
+     "alarm": false,
+     "note": "基线 -0.0171 ≤ 0 ⇒ 0.5× 判据不适用（如实标注，不按健康处理）"
+    },
+    "b_p0only": {
+     "ic": 0.04403,
+     "baseline": 0.03994,
+     "ratio": 1.102,
+     "alarm": false,
+     "note": ""
+    }
+   }
+  },
+  {
+   "date": "20211130",
+   "n_avail": 95,
+   "blocks": {
+    "B1": {
+     "alarm": false,
+     "ic": 0.05666,
+     "baseline": 0.04163,
+     "ratio": 1.361,
+     "priority": "P0",
+     "note": ""
+    },
+    "B2": {
+     "alarm": false,
+     "ic": 0.04736,
+     "baseline": 0.02624,
+     "ratio": 1.805,
+     "priority": "P0",
+     "note": ""
+    },
+    "B3": {
+     "alarm": false,
+     "ic": 0.05797,
+     "baseline": 0.04457,
+     "ratio": 1.301,
+     "priority": "P0",
+     "note": ""
+    },
+    "B4": {
+     "alarm": false,
+     "ic": 0.04303,
+     "baseline": 0.05283,
+     "ratio": 0.814,
+     "priority": "P0",
+     "note": ""
+    },
+    "B5": {
+     "alarm": false,
+     "ic": 0.02189,
+     "baseline": 0.00915,
+     "ratio": 2.393,
+     "priority": "P1",
+     "note": ""
+    },
+    "B6": {
+     "alarm": true,
+     "ic": 0.00501,
+     "baseline": 0.01356,
+     "ratio": 0.37,
+     "priority": "P2",
+     "note": ""
+    }
+   },
+   "composite": {
+    "main": {
+     "ic": 0.03889,
+     "baseline": 0.02765,
+     "ratio": 1.406,
+     "alarm": false,
+     "note": ""
+    },
+    "a_unoriented": {
+     "ic": -0.02883,
+     "baseline": -0.01628,
+     "ratio": null,
+     "alarm": false,
+     "note": "基线 -0.0163 ≤ 0 ⇒ 0.5× 判据不适用（如实标注，不按健康处理）"
+    },
+    "b_p0only": {
+     "ic": 0.05228,
+     "baseline": 0.03822,
+     "ratio": 1.368,
+     "alarm": false,
+     "note": ""
+    }
+   }
+  },
+  {
+   "date": "20211231",
+   "n_avail": 96,
+   "blocks": {
+    "B1": {
+     "alarm": false,
+     "ic": 0.09898,
+     "baseline": 0.03693,
+     "ratio": 2.68,
+     "priority": "P0",
+     "note": ""
+    },
+    "B2": {
+     "alarm": false,
+     "ic": 0.0509,
+     "baseline": 0.0251,
+     "ratio": 2.028,
+     "priority": "P0",
+     "note": ""
+    },
+    "B3": {
+     "alarm": false,
+     "ic": 0.08532,
+     "baseline": 0.03946,
+     "ratio": 2.162,
+     "priority": "P0",
+     "note": ""
+    },
+    "B4": {
+     "alarm": false,
+     "ic": 0.05298,
+     "baseline": 0.05068,
+     "ratio": 1.045,
+     "priority": "P0",
+     "note": ""
+    },
+    "B5": {
+     "alarm": false,
+     "ic": 0.0343,
+     "baseline": 0.00802,
+     "ratio": 4.279,
+     "priority": "P1",
+     "note": ""
+    },
+    "B6": {
+     "alarm": false,
+     "ic": 0.00873,
+     "baseline": 0.0123,
+     "ratio": 0.71,
+     "priority": "P2",
+     "note": ""
+    }
+   },
+   "composite": {
+    "main": {
+     "ic": 0.05456,
+     "baseline": 0.02518,
+     "ratio": 2.167,
+     "alarm": false,
+     "note": ""
+    },
+    "a_unoriented": {
+     "ic": -0.04109,
+     "baseline": -0.01461,
+     "ratio": null,
+     "alarm": false,
+     "note": "基线 -0.0146 ≤ 0 ⇒ 0.5× 判据不适用（如实标注，不按健康处理）"
+    },
+    "b_p0only": {
+     "ic": 0.07139,
+     "baseline": 0.03495,
+     "ratio": 2.042,
+     "alarm": false,
+     "note": ""
+    }
+   }
+  },
+  {
+   "date": "20220128",
+   "n_avail": 97,
+   "blocks": {
+    "B1": {
+     "alarm": false,
+     "ic": 0.10765,
+     "baseline": 0.03311,
+     "ratio": 3.251,
+     "priority": "P0",
+     "note": ""
+    },
+    "B2": {
+     "alarm": false,
+     "ic": 0.05251,
+     "baseline": 0.02542,
+     "ratio": 2.065,
+     "priority": "P0",
+     "note": ""
+    },
+    "B3": {
+     "alarm": false,
+     "ic": 0.09094,
+     "baseline": 0.03744,
+     "ratio": 2.429,
+     "priority": "P0",
+     "note": ""
+    },
+    "B4": {
+     "alarm": false,
+     "ic": 0.0558,
+     "baseline": 0.04655,
+     "ratio": 1.199,
+     "priority": "P0",
+     "note": ""
+    },
+    "B5": {
+     "alarm": false,
+     "ic": 0.03288,
+     "baseline": 0.00803,
+     "ratio": 4.095,
+     "priority": "P1",
+     "note": ""
+    },
+    "B6": {
+     "alarm": false,
+     "ic": 0.0101,
+     "baseline": 0.01228,
+     "ratio": 0.822,
+     "priority": "P2",
+     "note": ""
+    }
+   },
+   "composite": {
+    "main": {
+     "ic": 0.05693,
+     "baseline": 0.02414,
+     "ratio": 2.358,
+     "alarm": false,
+     "note": ""
+    },
+    "a_unoriented": {
+     "ic": -0.04398,
+     "baseline": -0.01368,
+     "ratio": null,
+     "alarm": false,
+     "note": "基线 -0.0137 ≤ 0 ⇒ 0.5× 判据不适用（如实标注，不按健康处理）"
+    },
+    "b_p0only": {
+     "ic": 0.07572,
+     "baseline": 0.03329,
+     "ratio": 2.275,
+     "alarm": false,
+     "note": ""
+    }
+   }
+  },
+  {
+   "date": "20220228",
+   "n_avail": 98,
+   "blocks": {
+    "B1": {
+     "alarm": false,
+     "ic": 0.1098,
+     "baseline": 0.03566,
+     "ratio": 3.079,
+     "priority": "P0",
+     "note": ""
+    },
+    "B2": {
+     "alarm": false,
+     "ic": 0.04856,
+     "baseline": 0.02433,
+     "ratio": 1.996,
+     "priority": "P0",
+     "note": ""
+    },
+    "B3": {
+     "alarm": false,
+     "ic": 0.06636,
+     "baseline": 0.03834,
+     "ratio": 1.731,
+     "priority": "P0",
+     "note": ""
+    },
+    "B4": {
+     "alarm": false,
+     "ic": 0.0634,
+     "baseline": 0.04777,
+     "ratio": 1.327,
+     "priority": "P0",
+     "note": ""
+    },
+    "B5": {
+     "alarm": false,
+     "ic": 0.04305,
+     "baseline": 0.00821,
+     "ratio": 5.243,
+     "priority": "P1",
+     "note": ""
+    },
+    "B6": {
+     "alarm": true,
+     "ic": 0.00239,
+     "baseline": 0.01074,
+     "ratio": 0.223,
+     "priority": "P2",
+     "note": ""
+    }
+   },
+   "composite": {
+    "main": {
+     "ic": 0.0534,
+     "baseline": 0.02436,
+     "ratio": 2.192,
+     "alarm": false,
+     "note": ""
+    },
+    "a_unoriented": {
+     "ic": -0.0379,
+     "baseline": -0.01439,
+     "ratio": null,
+     "alarm": false,
+     "note": "基线 -0.0144 ≤ 0 ⇒ 0.5× 判据不适用（如实标注，不按健康处理）"
+    },
+    "b_p0only": {
+     "ic": 0.06635,
+     "baseline": 0.03375,
+     "ratio": 1.966,
+     "alarm": false,
+     "note": ""
+    }
+   }
+  },
+  {
+   "date": "20220331",
+   "n_avail": 99,
+   "blocks": {
+    "B1": {
+     "alarm": false,
+     "ic": 0.11522,
+     "baseline": 0.03357,
+     "ratio": 3.433,
+     "priority": "P0",
+     "note": ""
+    },
+    "B2": {
+     "alarm": false,
+     "ic": 0.05586,
+     "baseline": 0.02352,
+     "ratio": 2.375,
+     "priority": "P0",
+     "note": ""
+    },
+    "B3": {
+     "alarm": false,
+     "ic": 0.05899,
+     "baseline": 0.03804,
+     "ratio": 1.551,
+     "priority": "P0",
+     "note": ""
+    },
+    "B4": {
+     "alarm": false,
+     "ic": 0.04134,
+     "baseline": 0.04914,
+     "ratio": 0.841,
+     "priority": "P0",
+     "note": ""
+    },
+    "B5": {
+     "alarm": false,
+     "ic": 0.04867,
+     "baseline": 0.00801,
+     "ratio": 6.077,
+     "priority": "P1",
+     "note": ""
+    },
+    "B6": {
+     "alarm": false,
+     "ic": 0.00693,
+     "baseline": 0.00918,
+     "ratio": 0.755,
+     "priority": "P2",
+     "note": ""
+    }
+   },
+   "composite": {
+    "main": {
+     "ic": 0.05455,
+     "baseline": 0.0238,
+     "ratio": 2.292,
+     "alarm": false,
+     "note": ""
+    },
+    "a_unoriented": {
+     "ic": -0.03772,
+     "baseline": -0.01413,
+     "ratio": null,
+     "alarm": false,
+     "note": "基线 -0.0141 ≤ 0 ⇒ 0.5× 判据不适用（如实标注，不按健康处理）"
+    },
+    "b_p0only": {
+     "ic": 0.06485,
+     "baseline": 0.03315,
+     "ratio": 1.956,
+     "alarm": false,
+     "note": ""
+    }
+   }
+  },
+  {
+   "date": "20220429",
+   "n_avail": 100,
+   "blocks": {
+    "B1": {
+     "alarm": false,
+     "ic": 0.10461,
+     "baseline": 0.03718,
+     "ratio": 2.814,
+     "priority": "P0",
+     "note": ""
+    },
+    "B2": {
+     "alarm": false,
+     "ic": 0.05505,
+     "baseline": 0.0208,
+     "ratio": 2.647,
+     "priority": "P0",
+     "note": ""
+    },
+    "B3": {
+     "alarm": false,
+     "ic": 0.06641,
+     "baseline": 0.03666,
+     "ratio": 1.812,
+     "priority": "P0",
+     "note": ""
+    },
+    "B4": {
+     "alarm": false,
+     "ic": 0.04072,
+     "baseline": 0.04959,
+     "ratio": 0.821,
+     "priority": "P0",
+     "note": ""
+    },
+    "B5": {
+     "alarm": false,
+     "ic": 0.04026,
+     "baseline": 0.00915,
+     "ratio": 4.402,
+     "priority": "P1",
+     "note": ""
+    },
+    "B6": {
+     "alarm": false,
+     "ic": 0.00972,
+     "baseline": 0.01053,
+     "ratio": 0.923,
+     "priority": "P2",
+     "note": ""
+    }
+   },
+   "composite": {
+    "main": {
+     "ic": 0.05281,
+     "baseline": 0.02369,
+     "ratio": 2.229,
+     "alarm": false,
+     "note": ""
+    },
+    "a_unoriented": {
+     "ic": -0.03789,
+     "baseline": -0.01401,
+     "ratio": null,
+     "alarm": false,
+     "note": "基线 -0.0140 ≤ 0 ⇒ 0.5× 判据不适用（如实标注，不按健康处理）"
+    },
+    "b_p0only": {
+     "ic": 0.06555,
+     "baseline": 0.03226,
+     "ratio": 2.032,
+     "alarm": false,
+     "note": ""
+    }
+   }
+  },
+  {
+   "date": "20220531",
+   "n_avail": 101,
+   "blocks": {
+    "B1": {
+     "alarm": false,
+     "ic": 0.08843,
+     "baseline": 0.03884,
+     "ratio": 2.277,
+     "priority": "P0",
+     "note": ""
+    },
+    "B2": {
+     "alarm": false,
+     "ic": 0.05201,
+     "baseline": 0.02335,
+     "ratio": 2.227,
+     "priority": "P0",
+     "note": ""
+    },
+    "B3": {
+     "alarm": false,
+     "ic": 0.0693,
+     "baseline": 0.03873,
+     "ratio": 1.789,
+     "priority": "P0",
+     "note": ""
+    },
+    "B4": {
+     "alarm": false,
+     "ic": 0.04382,
+     "baseline": 0.04929,
+     "ratio": 0.889,
+     "priority": "P0",
+     "note": ""
+    },
+    "B5": {
+     "alarm": false,
+     "ic": 0.03526,
+     "baseline": 0.0101,
+     "ratio": 3.491,
+     "priority": "P1",
+     "note": ""
+    },
+    "B6": {
+     "alarm": false,
+     "ic": 0.01019,
+     "baseline": 0.00989,
+     "ratio": 1.03,
+     "priority": "P2",
+     "note": ""
+    }
+   },
+   "composite": {
+    "main": {
+     "ic": 0.05,
+     "baseline": 0.02512,
+     "ratio": 1.99,
+     "alarm": false,
+     "note": ""
+    },
+    "a_unoriented": {
+     "ic": -0.03557,
+     "baseline": -0.01534,
+     "ratio": null,
+     "alarm": false,
+     "note": "基线 -0.0153 ≤ 0 ⇒ 0.5× 判据不适用（如实标注，不按健康处理）"
+    },
+    "b_p0only": {
+     "ic": 0.06327,
+     "baseline": 0.03419,
+     "ratio": 1.85,
+     "alarm": false,
+     "note": ""
+    }
+   }
+  },
+  {
+   "date": "20220630",
+   "n_avail": 102,
+   "blocks": {
+    "B1": {
+     "alarm": false,
+     "ic": 0.07546,
+     "baseline": 0.03956,
+     "ratio": 1.907,
+     "priority": "P0",
+     "note": ""
+    },
+    "B2": {
+     "alarm": false,
+     "ic": 0.05512,
+     "baseline": 0.02201,
+     "ratio": 2.505,
+     "priority": "P0",
+     "note": ""
+    },
+    "B3": {
+     "alarm": false,
+     "ic": 0.06435,
+     "baseline": 0.03756,
+     "ratio": 1.713,
+     "priority": "P0",
+     "note": ""
+    },
+    "B4": {
+     "alarm": false,
+     "ic": 0.04893,
+     "baseline": 0.04782,
+     "ratio": 1.023,
+     "priority": "P0",
+     "note": ""
+    },
+    "B5": {
+     "alarm": false,
+     "ic": 0.03236,
+     "baseline": 0.01023,
+     "ratio": 3.163,
+     "priority": "P1",
+     "note": ""
+    },
+    "B6": {
+     "alarm": false,
+     "ic": 0.01106,
+     "baseline": 0.00902,
+     "ratio": 1.227,
+     "priority": "P2",
+     "note": ""
+    }
+   },
+   "composite": {
+    "main": {
+     "ic": 0.0479,
+     "baseline": 0.02449,
+     "ratio": 1.956,
+     "alarm": false,
+     "note": ""
+    },
+    "a_unoriented": {
+     "ic": -0.03344,
+     "baseline": -0.01511,
+     "ratio": null,
+     "alarm": false,
+     "note": "基线 -0.0151 ≤ 0 ⇒ 0.5× 判据不适用（如实标注，不按健康处理）"
+    },
+    "b_p0only": {
+     "ic": 0.06108,
+     "baseline": 0.03323,
+     "ratio": 1.838,
+     "alarm": false,
+     "note": ""
+    }
+   }
+  },
+  {
+   "date": "20220729",
+   "n_avail": 103,
+   "blocks": {
+    "B1": {
+     "alarm": false,
+     "ic": 0.0807,
+     "baseline": 0.03783,
+     "ratio": 2.133,
+     "priority": "P0",
+     "note": ""
+    },
+    "B2": {
+     "alarm": false,
+     "ic": 0.06103,
+     "baseline": 0.02196,
+     "ratio": 2.779,
+     "priority": "P0",
+     "note": ""
+    },
+    "B3": {
+     "alarm": false,
+     "ic": 0.0756,
+     "baseline": 0.03754,
+     "ratio": 2.014,
+     "priority": "P0",
+     "note": ""
+    },
+    "B4": {
+     "alarm": false,
+     "ic": 0.05153,
+     "baseline": 0.04807,
+     "ratio": 1.072,
+     "priority": "P0",
+     "note": ""
+    },
+    "B5": {
+     "alarm": false,
+     "ic": 0.03395,
+     "baseline": 0.01016,
+     "ratio": 3.342,
+     "priority": "P1",
+     "note": ""
+    },
+    "B6": {
+     "alarm": false,
+     "ic": 0.00961,
+     "baseline": 0.00995,
+     "ratio": 0.966,
+     "priority": "P2",
+     "note": ""
+    }
+   },
+   "composite": {
+    "main": {
+     "ic": 0.05277,
+     "baseline": 0.02437,
+     "ratio": 2.165,
+     "alarm": false,
+     "note": ""
+    },
+    "a_unoriented": {
+     "ic": -0.03722,
+     "baseline": -0.01524,
+     "ratio": null,
+     "alarm": false,
+     "note": "基线 -0.0152 ≤ 0 ⇒ 0.5× 判据不适用（如实标注，不按健康处理）"
+    },
+    "b_p0only": {
+     "ic": 0.0685,
+     "baseline": 0.03296,
+     "ratio": 2.079,
+     "alarm": false,
+     "note": ""
+    }
+   }
+  },
+  {
+   "date": "20220831",
+   "n_avail": 104,
+   "blocks": {
+    "B1": {
+     "alarm": false,
+     "ic": 0.07605,
+     "baseline": 0.03509,
+     "ratio": 2.167,
+     "priority": "P0",
+     "note": ""
+    },
+    "B2": {
+     "alarm": false,
+     "ic": 0.04929,
+     "baseline": 0.0213,
+     "ratio": 2.314,
+     "priority": "P0",
+     "note": ""
+    },
+    "B3": {
+     "alarm": false,
+     "ic": 0.05309,
+     "baseline": 0.03884,
+     "ratio": 1.367,
+     "priority": "P0",
+     "note": ""
+    },
+    "B4": {
+     "alarm": false,
+     "ic": 0.05566,
+     "baseline": 0.05115,
+     "ratio": 1.088,
+     "priority": "P0",
+     "note": ""
+    },
+    "B5": {
+     "alarm": false,
+     "ic": 0.02876,
+     "baseline": 0.01039,
+     "ratio": 2.768,
+     "priority": "P1",
+     "note": ""
+    },
+    "B6": {
+     "alarm": false,
+     "ic": 0.00969,
+     "baseline": 0.00887,
+     "ratio": 1.092,
+     "priority": "P2",
+     "note": ""
+    }
+   },
+   "composite": {
+    "main": {
+     "ic": 0.04336,
+     "baseline": 0.02443,
+     "ratio": 1.775,
+     "alarm": false,
+     "note": ""
+    },
+    "a_unoriented": {
+     "ic": -0.02971,
+     "baseline": -0.01528,
+     "ratio": null,
+     "alarm": false,
+     "note": "基线 -0.0153 ≤ 0 ⇒ 0.5× 判据不适用（如实标注，不按健康处理）"
+    },
+    "b_p0only": {
+     "ic": 0.05559,
+     "baseline": 0.03308,
+     "ratio": 1.68,
+     "alarm": false,
+     "note": ""
+    }
+   }
+  },
+  {
+   "date": "20220930",
+   "n_avail": 105,
+   "blocks": {
+    "B1": {
+     "alarm": false,
+     "ic": 0.062,
+     "baseline": 0.03654,
+     "ratio": 1.697,
+     "priority": "P0",
+     "note": ""
+    },
+    "B2": {
+     "alarm": false,
+     "ic": 0.03727,
+     "baseline": 0.02339,
+     "ratio": 1.594,
+     "priority": "P0",
+     "note": ""
+    },
+    "B3": {
+     "alarm": false,
+     "ic": 0.03765,
+     "baseline": 0.04167,
+     "ratio": 0.904,
+     "priority": "P0",
+     "note": ""
+    },
+    "B4": {
+     "alarm": false,
+     "ic": 0.05245,
+     "baseline": 0.04934,
+     "ratio": 1.063,
+     "priority": "P0",
+     "note": ""
+    },
+    "B5": {
+     "alarm": false,
+     "ic": 0.02683,
+     "baseline": 0.01075,
+     "ratio": 2.497,
+     "priority": "P1",
+     "note": ""
+    },
+    "B6": {
+     "alarm": true,
+     "ic": 0.0042,
+     "baseline": 0.00895,
+     "ratio": 0.469,
+     "priority": "P2",
+     "note": ""
+    }
+   },
+   "composite": {
+    "main": {
+     "ic": 0.0345,
+     "baseline": 0.02568,
+     "ratio": 1.343,
+     "alarm": false,
+     "note": ""
+    },
+    "a_unoriented": {
+     "ic": -0.02224,
+     "baseline": -0.01673,
+     "ratio": null,
+     "alarm": false,
+     "note": "基线 -0.0167 ≤ 0 ⇒ 0.5× 判据不适用（如实标注，不按健康处理）"
+    },
+    "b_p0only": {
+     "ic": 0.04291,
+     "baseline": 0.03493,
+     "ratio": 1.228,
+     "alarm": false,
+     "note": ""
+    }
+   }
+  },
+  {
+   "date": "20221031",
+   "n_avail": 106,
+   "blocks": {
+    "B1": {
+     "alarm": false,
+     "ic": 0.0466,
+     "baseline": 0.03571,
+     "ratio": 1.305,
+     "priority": "P0",
+     "note": ""
+    },
+    "B2": {
+     "alarm": false,
+     "ic": 0.03101,
+     "baseline": 0.02488,
+     "ratio": 1.246,
+     "priority": "P0",
+     "note": ""
+    },
+    "B3": {
+     "alarm": false,
+     "ic": 0.04191,
+     "baseline": 0.04437,
+     "ratio": 0.945,
+     "priority": "P0",
+     "note": ""
+    },
+    "B4": {
+     "alarm": false,
+     "ic": 0.07201,
+     "baseline": 0.05029,
+     "ratio": 1.432,
+     "priority": "P0",
+     "note": ""
+    },
+    "B5": {
+     "alarm": false,
+     "ic": 0.02044,
+     "baseline": 0.01113,
+     "ratio": 1.837,
+     "priority": "P1",
+     "note": ""
+    },
+    "B6": {
+     "alarm": true,
+     "ic": 0.00074,
+     "baseline": 0.00897,
+     "ratio": 0.082,
+     "priority": "P2",
+     "note": ""
+    }
+   },
+   "composite": {
+    "main": {
+     "ic": 0.03163,
+     "baseline": 0.02673,
+     "ratio": 1.183,
+     "alarm": false,
+     "note": ""
+    },
+    "a_unoriented": {
+     "ic": -0.02046,
+     "baseline": -0.01769,
+     "ratio": null,
+     "alarm": false,
+     "note": "基线 -0.0177 ≤ 0 ⇒ 0.5× 判据不适用（如实标注，不按健康处理）"
+    },
+    "b_p0only": {
+     "ic": 0.0418,
+     "baseline": 0.03645,
+     "ratio": 1.147,
+     "alarm": false,
+     "note": ""
+    }
+   }
+  },
+  {
+   "date": "20221130",
+   "n_avail": 107,
+   "blocks": {
+    "B1": {
+     "alarm": false,
+     "ic": 0.04746,
+     "baseline": 0.03469,
+     "ratio": 1.368,
+     "priority": "P0",
+     "note": ""
+    },
+    "B2": {
+     "alarm": false,
+     "ic": 0.02301,
+     "baseline": 0.02659,
+     "ratio": 0.865,
+     "priority": "P0",
+     "note": ""
+    },
+    "B3": {
+     "alarm": false,
+     "ic": 0.03656,
+     "baseline": 0.04663,
+     "ratio": 0.784,
+     "priority": "P0",
+     "note": ""
+    },
+    "B4": {
+     "alarm": false,
+     "ic": 0.06723,
+     "baseline": 0.05004,
+     "ratio": 1.344,
+     "priority": "P0",
+     "note": ""
+    },
+    "B5": {
+     "alarm": false,
+     "ic": 0.01742,
+     "baseline": 0.01207,
+     "ratio": 1.444,
+     "priority": "P1",
+     "note": ""
+    },
+    "B6": {
+     "alarm": true,
+     "ic": 0.00125,
+     "baseline": 0.00809,
+     "ratio": 0.154,
+     "priority": "P2",
+     "note": ""
+    }
+   },
+   "composite": {
+    "main": {
+     "ic": 0.02756,
+     "baseline": 0.02772,
+     "ratio": 0.994,
+     "alarm": false,
+     "note": ""
+    },
+    "a_unoriented": {
+     "ic": -0.01867,
+     "baseline": -0.0184,
+     "ratio": null,
+     "alarm": false,
+     "note": "基线 -0.0184 ≤ 0 ⇒ 0.5× 判据不适用（如实标注，不按健康处理）"
+    },
+    "b_p0only": {
+     "ic": 0.03652,
+     "baseline": 0.03772,
+     "ratio": 0.968,
+     "alarm": false,
+     "note": ""
+    }
+   }
+  },
+  {
+   "date": "20221230",
+   "n_avail": 108,
+   "blocks": {
+    "B1": {
+     "alarm": false,
+     "ic": 0.02653,
+     "baseline": 0.03788,
+     "ratio": 0.7,
+     "priority": "P0",
+     "note": ""
+    },
+    "B2": {
+     "alarm": false,
+     "ic": 0.01537,
+     "baseline": 0.02697,
+     "ratio": 0.57,
+     "priority": "P0",
+     "note": ""
+    },
+    "B3": {
+     "alarm": false,
+     "ic": 0.02973,
+     "baseline": 0.04902,
+     "ratio": 0.607,
+     "priority": "P0",
+     "note": ""
+    },
+    "B4": {
+     "alarm": false,
+     "ic": 0.07504,
+     "baseline": 0.04879,
+     "ratio": 1.538,
+     "priority": "P0",
+     "note": ""
+    },
+    "B5": {
+     "alarm": false,
+     "ic": 0.00759,
+     "baseline": 0.01278,
+     "ratio": 0.594,
+     "priority": "P1",
+     "note": ""
+    },
+    "B6": {
+     "alarm": true,
+     "ic": -0.00588,
+     "baseline": 0.00899,
+     "ratio": -0.654,
+     "priority": "P2",
+     "note": ""
+    }
+   },
+   "composite": {
+    "main": {
+     "ic": 0.01923,
+     "baseline": 0.02887,
+     "ratio": 0.666,
+     "alarm": false,
+     "note": ""
+    },
+    "a_unoriented": {
+     "ic": -0.01348,
+     "baseline": -0.01914,
+     "ratio": null,
+     "alarm": false,
+     "note": "基线 -0.0191 ≤ 0 ⇒ 0.5× 判据不适用（如实标注，不按健康处理）"
+    },
+    "b_p0only": {
+     "ic": 0.0287,
+     "baseline": 0.03911,
+     "ratio": 0.734,
+     "alarm": false,
+     "note": ""
+    }
+   }
+  },
+  {
+   "date": "20230131",
+   "n_avail": 109,
+   "blocks": {
+    "B1": {
+     "alarm": false,
+     "ic": 0.03405,
+     "baseline": 0.0374,
+     "ratio": 0.91,
+     "priority": "P0",
+     "note": ""
+    },
+    "B2": {
+     "alarm": true,
+     "ic": 0.01204,
+     "baseline": 0.02928,
+     "ratio": 0.411,
+     "priority": "P0",
+     "note": ""
+    },
+    "B3": {
+     "alarm": false,
+     "ic": 0.04266,
+     "baseline": 0.04731,
+     "ratio": 0.902,
+     "priority": "P0",
+     "note": ""
+    },
+    "B4": {
+     "alarm": false,
+     "ic": 0.07561,
+     "baseline": 0.04486,
+     "ratio": 1.685,
+     "priority": "P0",
+     "note": ""
+    },
+    "B5": {
+     "alarm": true,
+     "ic": 0.00652,
+     "baseline": 0.01423,
+     "ratio": 0.458,
+     "priority": "P1",
+     "note": ""
+    },
+    "B6": {
+     "alarm": true,
+     "ic": -0.00396,
+     "baseline": 0.00912,
+     "ratio": -0.434,
+     "priority": "P2",
+     "note": ""
+    }
+   },
+   "composite": {
+    "main": {
+     "ic": 0.02203,
+     "baseline": 0.02914,
+     "ratio": 0.756,
+     "alarm": false,
+     "note": ""
+    },
+    "a_unoriented": {
+     "ic": -0.01947,
+     "baseline": -0.01901,
+     "ratio": null,
+     "alarm": false,
+     "note": "基线 -0.0190 ≤ 0 ⇒ 0.5× 判据不适用（如实标注，不按健康处理）"
+    },
+    "b_p0only": {
+     "ic": 0.03349,
+     "baseline": 0.03884,
+     "ratio": 0.862,
+     "alarm": false,
+     "note": ""
+    }
+   }
+  },
+  {
+   "date": "20230228",
+   "n_avail": 110,
+   "blocks": {
+    "B1": {
+     "alarm": false,
+     "ic": 0.0214,
+     "baseline": 0.03862,
+     "ratio": 0.554,
+     "priority": "P0",
+     "note": ""
+    },
+    "B2": {
+     "alarm": true,
+     "ic": 0.01246,
+     "baseline": 0.03055,
+     "ratio": 0.408,
+     "priority": "P0",
+     "note": ""
+    },
+    "B3": {
+     "alarm": false,
+     "ic": 0.05445,
+     "baseline": 0.04319,
+     "ratio": 1.261,
+     "priority": "P0",
+     "note": ""
+    },
+    "B4": {
+     "alarm": false,
+     "ic": 0.07321,
+     "baseline": 0.0463,
+     "ratio": 1.581,
+     "priority": "P0",
+     "note": ""
+    },
+    "B5": {
+     "alarm": true,
+     "ic": 0.00039,
+     "baseline": 0.0166,
+     "ratio": 0.023,
+     "priority": "P1",
+     "note": ""
+    },
+    "B6": {
+     "alarm": true,
+     "ic": -0.01034,
+     "baseline": 0.00817,
+     "ratio": -1.265,
+     "priority": "P2",
+     "note": ""
+    }
+   },
+   "composite": {
+    "main": {
+     "ic": 0.02102,
+     "baseline": 0.02931,
+     "ratio": 0.717,
+     "alarm": false,
+     "note": ""
+    },
+    "a_unoriented": {
+     "ic": -0.02062,
+     "baseline": -0.01855,
+     "ratio": null,
+     "alarm": false,
+     "note": "基线 -0.0185 ≤ 0 ⇒ 0.5× 判据不适用（如实标注，不按健康处理）"
+    },
+    "b_p0only": {
+     "ic": 0.03574,
+     "baseline": 0.03814,
+     "ratio": 0.937,
+     "alarm": false,
+     "note": ""
+    }
+   }
+  },
+  {
+   "date": "20230331",
+   "n_avail": 111,
+   "blocks": {
+    "B1": {
+     "alarm": true,
+     "ic": 0.00117,
+     "baseline": 0.03981,
+     "ratio": 0.029,
+     "priority": "P0",
+     "note": ""
+    },
+    "B2": {
+     "alarm": true,
+     "ic": -0.002,
+     "baseline": 0.03046,
+     "ratio": -0.066,
+     "priority": "P0",
+     "note": ""
+    },
+    "B3": {
+     "alarm": false,
+     "ic": 0.05524,
+     "baseline": 0.04196,
+     "ratio": 1.316,
+     "priority": "P0",
+     "note": ""
+    },
+    "B4": {
+     "alarm": false,
+     "ic": 0.08299,
+     "baseline": 0.04623,
+     "ratio": 1.795,
+     "priority": "P0",
+     "note": ""
+    },
+    "B5": {
+     "alarm": true,
+     "ic": -0.0084,
+     "baseline": 0.0165,
+     "ratio": -0.509,
+     "priority": "P1",
+     "note": ""
+    },
+    "B6": {
+     "alarm": true,
+     "ic": -0.0095,
+     "baseline": 0.00712,
+     "ratio": -1.334,
+     "priority": "P2",
+     "note": ""
+    }
+   },
+   "composite": {
+    "main": {
+     "ic": 0.01413,
+     "baseline": 0.029,
+     "ratio": 0.487,
+     "alarm": true,
+     "note": ""
+    },
+    "a_unoriented": {
+     "ic": -0.01542,
+     "baseline": -0.0182,
+     "ratio": null,
+     "alarm": false,
+     "note": "基线 -0.0182 ≤ 0 ⇒ 0.5× 判据不适用（如实标注，不按健康处理）"
+    },
+    "b_p0only": {
+     "ic": 0.02853,
+     "baseline": 0.03783,
+     "ratio": 0.754,
+     "alarm": false,
+     "note": ""
+    }
+   }
+  },
+  {
+   "date": "20230428",
+   "n_avail": 112,
+   "blocks": {
+    "B1": {
+     "alarm": true,
+     "ic": 0.00734,
+     "baseline": 0.04019,
+     "ratio": 0.183,
+     "priority": "P0",
+     "note": ""
+    },
+    "B2": {
+     "alarm": false,
+     "ic": 0.01737,
+     "baseline": 0.0265,
+     "ratio": 0.655,
+     "priority": "P0",
+     "note": ""
+    },
+    "B3": {
+     "alarm": false,
+     "ic": 0.04974,
+     "baseline": 0.04376,
+     "ratio": 1.137,
+     "priority": "P0",
+     "note": ""
+    },
+    "B4": {
+     "alarm": false,
+     "ic": 0.07044,
+     "baseline": 0.04731,
+     "ratio": 1.489,
+     "priority": "P0",
+     "note": ""
+    },
+    "B5": {
+     "alarm": true,
+     "ic": 0.0038,
+     "baseline": 0.01537,
+     "ratio": 0.247,
+     "priority": "P1",
+     "note": ""
+    },
+    "B6": {
+     "alarm": true,
+     "ic": -0.0079,
+     "baseline": 0.00603,
+     "ratio": -1.309,
+     "priority": "P2",
+     "note": ""
+    }
+   },
+   "composite": {
+    "main": {
+     "ic": 0.02075,
+     "baseline": 0.02819,
+     "ratio": 0.736,
+     "alarm": false,
+     "note": ""
+    },
+    "a_unoriented": {
+     "ic": -0.01717,
+     "baseline": -0.01815,
+     "ratio": null,
+     "alarm": false,
+     "note": "基线 -0.0182 ≤ 0 ⇒ 0.5× 判据不适用（如实标注，不按健康处理）"
+    },
+    "b_p0only": {
+     "ic": 0.0333,
+     "baseline": 0.03721,
+     "ratio": 0.895,
+     "alarm": false,
+     "note": ""
+    }
+   }
+  },
+  {
+   "date": "20230531",
+   "n_avail": 113,
+   "blocks": {
+    "B1": {
+     "alarm": true,
+     "ic": 0.01147,
+     "baseline": 0.04007,
+     "ratio": 0.286,
+     "priority": "P0",
+     "note": ""
+    },
+    "B2": {
+     "alarm": false,
+     "ic": 0.01378,
+     "baseline": 0.02694,
+     "ratio": 0.511,
+     "priority": "P0",
+     "note": ""
+    },
+    "B3": {
+     "alarm": false,
+     "ic": 0.04006,
+     "baseline": 0.04428,
+     "ratio": 0.905,
+     "priority": "P0",
+     "note": ""
+    },
+    "B4": {
+     "alarm": false,
+     "ic": 0.07149,
+     "baseline": 0.04776,
+     "ratio": 1.497,
+     "priority": "P0",
+     "note": ""
+    },
+    "B5": {
+     "alarm": true,
+     "ic": 0.00696,
+     "baseline": 0.01484,
+     "ratio": 0.469,
+     "priority": "P1",
+     "note": ""
+    },
+    "B6": {
+     "alarm": true,
+     "ic": -0.00649,
+     "baseline": 0.00578,
+     "ratio": -1.122,
+     "priority": "P2",
+     "note": ""
+    }
+   },
+   "composite": {
+    "main": {
+     "ic": 0.01927,
+     "baseline": 0.02825,
+     "ratio": 0.682,
+     "alarm": false,
+     "note": ""
+    },
+    "a_unoriented": {
+     "ic": -0.01369,
+     "baseline": -0.01831,
+     "ratio": null,
+     "alarm": false,
+     "note": "基线 -0.0183 ≤ 0 ⇒ 0.5× 判据不适用（如实标注，不按健康处理）"
+    },
+    "b_p0only": {
+     "ic": 0.02917,
+     "baseline": 0.03759,
+     "ratio": 0.776,
+     "alarm": false,
+     "note": ""
+    }
+   }
+  },
+  {
+   "date": "20230630",
+   "n_avail": 114,
+   "blocks": {
+    "B1": {
+     "alarm": false,
+     "ic": 0.03229,
+     "baseline": 0.0369,
+     "ratio": 0.875,
+     "priority": "P0",
+     "note": ""
+    },
+    "B2": {
+     "alarm": false,
+     "ic": 0.01829,
+     "baseline": 0.02802,
+     "ratio": 0.653,
+     "priority": "P0",
+     "note": ""
+    },
+    "B3": {
+     "alarm": false,
+     "ic": 0.05433,
+     "baseline": 0.0401,
+     "ratio": 1.355,
+     "priority": "P0",
+     "note": ""
+    },
+    "B4": {
+     "alarm": false,
+     "ic": 0.06539,
+     "baseline": 0.04823,
+     "ratio": 1.356,
+     "priority": "P0",
+     "note": ""
+    },
+    "B5": {
+     "alarm": false,
+     "ic": 0.01247,
+     "baseline": 0.01448,
+     "ratio": 0.861,
+     "priority": "P1",
+     "note": ""
+    },
+    "B6": {
+     "alarm": true,
+     "ic": -0.00339,
+     "baseline": 0.0062,
+     "ratio": -0.547,
+     "priority": "P2",
+     "note": ""
+    }
+   },
+   "composite": {
+    "main": {
+     "ic": 0.02703,
+     "baseline": 0.02717,
+     "ratio": 0.995,
+     "alarm": false,
+     "note": ""
+    },
+    "a_unoriented": {
+     "ic": -0.0195,
+     "baseline": -0.01722,
+     "ratio": null,
+     "alarm": false,
+     "note": "基线 -0.0172 ≤ 0 ⇒ 0.5× 判据不适用（如实标注，不按健康处理）"
+    },
+    "b_p0only": {
+     "ic": 0.03873,
+     "baseline": 0.036,
+     "ratio": 1.076,
+     "alarm": false,
+     "note": ""
+    }
+   }
+  },
+  {
+   "date": "20230731",
+   "n_avail": 115,
+   "blocks": {
+    "B1": {
+     "alarm": false,
+     "ic": 0.02143,
+     "baseline": 0.03641,
+     "ratio": 0.589,
+     "priority": "P0",
+     "note": ""
+    },
+    "B2": {
+     "alarm": true,
+     "ic": 0.01039,
+     "baseline": 0.02777,
+     "ratio": 0.374,
+     "priority": "P0",
+     "note": ""
+    },
+    "B3": {
+     "alarm": false,
+     "ic": 0.04311,
+     "baseline": 0.04005,
+     "ratio": 1.076,
+     "priority": "P0",
+     "note": ""
+    },
+    "B4": {
+     "alarm": false,
+     "ic": 0.06748,
+     "baseline": 0.0479,
+     "ratio": 1.409,
+     "priority": "P0",
+     "note": ""
+    },
+    "B5": {
+     "alarm": false,
+     "ic": 0.01301,
+     "baseline": 0.01421,
+     "ratio": 0.916,
+     "priority": "P1",
+     "note": ""
+    },
+    "B6": {
+     "alarm": true,
+     "ic": -0.01062,
+     "baseline": 0.00569,
+     "ratio": -1.865,
+     "priority": "P2",
+     "note": ""
+    }
+   },
+   "composite": {
+    "main": {
+     "ic": 0.02126,
+     "baseline": 0.0269,
+     "ratio": 0.79,
+     "alarm": false,
+     "note": ""
+    },
+    "a_unoriented": {
+     "ic": -0.01539,
+     "baseline": -0.01692,
+     "ratio": null,
+     "alarm": false,
+     "note": "基线 -0.0169 ≤ 0 ⇒ 0.5× 判据不适用（如实标注，不按健康处理）"
+    },
+    "b_p0only": {
+     "ic": 0.0302,
+     "baseline": 0.03578,
+     "ratio": 0.844,
+     "alarm": false,
+     "note": ""
+    }
+   }
+  },
+  {
+   "date": "20230831",
+   "n_avail": 116,
+   "blocks": {
+    "B1": {
+     "alarm": false,
+     "ic": 0.0361,
+     "baseline": 0.03577,
+     "ratio": 1.009,
+     "priority": "P0",
+     "note": ""
+    },
+    "B2": {
+     "alarm": false,
+     "ic": 0.02566,
+     "baseline": 0.02517,
+     "ratio": 1.019,
+     "priority": "P0",
+     "note": ""
+    },
+    "B3": {
+     "alarm": false,
+     "ic": 0.06195,
+     "baseline": 0.03621,
+     "ratio": 1.711,
+     "priority": "P0",
+     "note": ""
+    },
+    "B4": {
+     "alarm": false,
+     "ic": 0.06333,
+     "baseline": 0.04791,
+     "ratio": 1.322,
+     "priority": "P0",
+     "note": ""
+    },
+    "B5": {
+     "alarm": false,
+     "ic": 0.02031,
+     "baseline": 0.01356,
+     "ratio": 1.498,
+     "priority": "P1",
+     "note": ""
+    },
+    "B6": {
+     "alarm": true,
+     "ic": -0.01254,
+     "baseline": 0.00583,
+     "ratio": -2.152,
+     "priority": "P2",
+     "note": ""
+    }
+   },
+   "composite": {
+    "main": {
+     "ic": 0.03205,
+     "baseline": 0.02517,
+     "ratio": 1.273,
+     "alarm": false,
+     "note": ""
+    },
+    "a_unoriented": {
+     "ic": -0.02453,
+     "baseline": -0.0153,
+     "ratio": null,
+     "alarm": false,
+     "note": "基线 -0.0153 ≤ 0 ⇒ 0.5× 判据不适用（如实标注，不按健康处理）"
+    },
+    "b_p0only": {
+     "ic": 0.04464,
+     "baseline": 0.0333,
+     "ratio": 1.341,
+     "alarm": false,
+     "note": ""
+    }
+   }
+  },
+  {
+   "date": "20230928",
+   "n_avail": 117,
+   "blocks": {
+    "B1": {
+     "alarm": false,
+     "ic": 0.03079,
+     "baseline": 0.03368,
+     "ratio": 0.914,
+     "priority": "P0",
+     "note": ""
+    },
+    "B2": {
+     "alarm": false,
+     "ic": 0.02826,
+     "baseline": 0.02294,
+     "ratio": 1.232,
+     "priority": "P0",
+     "note": ""
+    },
+    "B3": {
+     "alarm": false,
+     "ic": 0.06183,
+     "baseline": 0.034,
+     "ratio": 1.818,
+     "priority": "P0",
+     "note": ""
+    },
+    "B4": {
+     "alarm": false,
+     "ic": 0.06108,
+     "baseline": 0.04525,
+     "ratio": 1.35,
+     "priority": "P0",
+     "note": ""
+    },
+    "B5": {
+     "alarm": false,
+     "ic": 0.0249,
+     "baseline": 0.01345,
+     "ratio": 1.851,
+     "priority": "P1",
+     "note": ""
+    },
+    "B6": {
+     "alarm": true,
+     "ic": -0.00692,
+     "baseline": 0.00534,
+     "ratio": -1.297,
+     "priority": "P2",
+     "note": ""
+    }
+   },
+   "composite": {
+    "main": {
+     "ic": 0.03382,
+     "baseline": 0.0237,
+     "ratio": 1.427,
+     "alarm": false,
+     "note": ""
+    },
+    "a_unoriented": {
+     "ic": -0.02477,
+     "baseline": -0.01436,
+     "ratio": null,
+     "alarm": false,
+     "note": "基线 -0.0144 ≤ 0 ⇒ 0.5× 判据不适用（如实标注，不按健康处理）"
+    },
+    "b_p0only": {
+     "ic": 0.04448,
+     "baseline": 0.03106,
+     "ratio": 1.432,
+     "alarm": false,
+     "note": ""
+    }
+   }
+  },
+  {
+   "date": "20231031",
+   "n_avail": 118,
+   "blocks": {
+    "B1": {
+     "alarm": false,
+     "ic": 0.04031,
+     "baseline": 0.03328,
+     "ratio": 1.211,
+     "priority": "P0",
+     "note": ""
+    },
+    "B2": {
+     "alarm": false,
+     "ic": 0.03386,
+     "baseline": 0.02232,
+     "ratio": 1.517,
+     "priority": "P0",
+     "note": ""
+    },
+    "B3": {
+     "alarm": false,
+     "ic": 0.05406,
+     "baseline": 0.0385,
+     "ratio": 1.404,
+     "priority": "P0",
+     "note": ""
+    },
+    "B4": {
+     "alarm": false,
+     "ic": 0.04863,
+     "baseline": 0.05171,
+     "ratio": 0.94,
+     "priority": "P0",
+     "note": ""
+    },
+    "B5": {
+     "alarm": false,
+     "ic": 0.02849,
+     "baseline": 0.01385,
+     "ratio": 2.057,
+     "priority": "P1",
+     "note": ""
+    },
+    "B6": {
+     "alarm": true,
+     "ic": 0.00011,
+     "baseline": 0.00455,
+     "ratio": 0.023,
+     "priority": "P2",
+     "note": ""
+    }
+   },
+   "composite": {
+    "main": {
+     "ic": 0.03517,
+     "baseline": 0.025,
+     "ratio": 1.407,
+     "alarm": false,
+     "note": ""
+    },
+    "a_unoriented": {
+     "ic": -0.02679,
+     "baseline": -0.0156,
+     "ratio": null,
+     "alarm": false,
+     "note": "基线 -0.0156 ≤ 0 ⇒ 0.5× 判据不适用（如实标注，不按健康处理）"
+    },
+    "b_p0only": {
+     "ic": 0.04388,
+     "baseline": 0.0331,
+     "ratio": 1.325,
+     "alarm": false,
+     "note": ""
+    }
+   }
+  },
+  {
+   "date": "20231130",
+   "n_avail": 119,
+   "blocks": {
+    "B1": {
+     "alarm": false,
+     "ic": 0.05088,
+     "baseline": 0.03551,
+     "ratio": 1.433,
+     "priority": "P0",
+     "note": ""
+    },
+    "B2": {
+     "alarm": false,
+     "ic": 0.02827,
+     "baseline": 0.02195,
+     "ratio": 1.288,
+     "priority": "P0",
+     "note": ""
+    },
+    "B3": {
+     "alarm": false,
+     "ic": 0.03949,
+     "baseline": 0.04218,
+     "ratio": 0.936,
+     "priority": "P0",
+     "note": ""
+    },
+    "B4": {
+     "alarm": false,
+     "ic": 0.03297,
+     "baseline": 0.05462,
+     "ratio": 0.604,
+     "priority": "P0",
+     "note": ""
+    },
+    "B5": {
+     "alarm": false,
+     "ic": 0.03105,
+     "baseline": 0.01382,
+     "ratio": 2.248,
+     "priority": "P1",
+     "note": ""
+    },
+    "B6": {
+     "alarm": true,
+     "ic": -0.00526,
+     "baseline": 0.00525,
+     "ratio": -1.003,
+     "priority": "P2",
+     "note": ""
+    }
+   },
+   "composite": {
+    "main": {
+     "ic": 0.03086,
+     "baseline": 0.02621,
+     "ratio": 1.177,
+     "alarm": false,
+     "note": ""
+    },
+    "a_unoriented": {
+     "ic": -0.02272,
+     "baseline": -0.01665,
+     "ratio": null,
+     "alarm": false,
+     "note": "基线 -0.0167 ≤ 0 ⇒ 0.5× 判据不适用（如实标注，不按健康处理）"
+    },
+    "b_p0only": {
+     "ic": 0.03647,
+     "baseline": 0.03498,
+     "ratio": 1.042,
+     "alarm": false,
+     "note": ""
+    }
+   }
+  },
+  {
+   "date": "20231229",
+   "n_avail": 120,
+   "blocks": {
+    "B1": {
+     "alarm": false,
+     "ic": 0.06978,
+     "baseline": 0.03608,
+     "ratio": 1.934,
+     "priority": "P0",
+     "note": ""
+    },
+    "B2": {
+     "alarm": false,
+     "ic": 0.03612,
+     "baseline": 0.0207,
+     "ratio": 1.745,
+     "priority": "P0",
+     "note": ""
+    },
+    "B3": {
+     "alarm": false,
+     "ic": 0.02596,
+     "baseline": 0.04259,
+     "ratio": 0.609,
+     "priority": "P0",
+     "note": ""
+    },
+    "B4": {
+     "alarm": false,
+     "ic": 0.02971,
+     "baseline": 0.05359,
+     "ratio": 0.554,
+     "priority": "P0",
+     "note": ""
+    },
+    "B5": {
+     "alarm": false,
+     "ic": 0.03722,
+     "baseline": 0.01287,
+     "ratio": 2.892,
+     "priority": "P1",
+     "note": ""
+    },
+    "B6": {
+     "alarm": false,
+     "ic": 0.00283,
+     "baseline": 0.00369,
+     "ratio": 0.767,
+     "priority": "P2",
+     "note": ""
+    }
+   },
+   "composite": {
+    "main": {
+     "ic": 0.03377,
+     "baseline": 0.02558,
+     "ratio": 1.32,
+     "alarm": false,
+     "note": ""
+    },
+    "a_unoriented": {
+     "ic": -0.0227,
+     "baseline": -0.01672,
+     "ratio": null,
+     "alarm": false,
+     "note": "基线 -0.0167 ≤ 0 ⇒ 0.5× 判据不适用（如实标注，不按健康处理）"
+    },
+    "b_p0only": {
+     "ic": 0.03702,
+     "baseline": 0.03466,
+     "ratio": 1.068,
+     "alarm": false,
+     "note": ""
+    }
+   }
+  }
+ ],
+ "model_score_sidecar": {
+  "note": "现役模型回填 ⇒ 含前视，不作判决依据",
+  "ic": {
+   "20220128": -0.01346,
+   "20220228": 0.05248,
+   "20220331": 0.15299,
+   "20220429": -0.14992,
+   "20220531": -0.00341,
+   "20220630": 0.07962,
+   "20220729": 0.09429,
+   "20220831": -0.00114,
+   "20220930": 0.00278,
+   "20221031": -0.12072,
+   "20221130": 0.08823,
+   "20221230": -0.05974,
+   "20230131": 0.16147,
+   "20230228": 0.08948,
+   "20230331": -0.15149,
+   "20230428": 0.16507,
+   "20230531": 0.05044,
+   "20230630": 0.23725,
+   "20230731": -0.03647,
+   "20230831": 0.20607,
+   "20230928": -0.0442,
+   "20231031": 0.11311,
+   "20231130": 0.19115,
+   "20231229": 0.33389
+  }
+ }
+}

@@ -1,0 +1,103 @@
+{
+ "ran_at": "2026-10-01T20:45:41",
+ "nature": "决策支持读数(回填 55% 子集)——非生产门禁(激活条件≥90%未满足)",
+ "n_candidates": 9,
+ "n_events": 93436,
+ "rows": [
+  {
+   "factor": "ef_surprise_mv_21",
+   "sparse_ratio": 0.0907,
+   "DEAD_head": 0.0044,
+   "DEAD_head_t": 1.21,
+   "ACTIVE_head": -0.0045,
+   "p_adj": 1.0,
+   "PASS_gate6": false,
+   "s1_s4_PASS": false
+  },
+  {
+   "factor": "ef_surprise_mv_42",
+   "sparse_ratio": 0.1615,
+   "DEAD_head": 0.0019,
+   "DEAD_head_t": 0.67,
+   "ACTIVE_head": -0.0041,
+   "p_adj": 1.0,
+   "PASS_gate6": false,
+   "s1_s4_PASS": false
+  },
+  {
+   "factor": "ef_surprise_mv_63",
+   "sparse_ratio": 0.2323,
+   "DEAD_head": -0.0001,
+   "DEAD_head_t": -0.04,
+   "ACTIVE_head": 0.0001,
+   "p_adj": 1.0,
+   "PASS_gate6": false,
+   "s1_s4_PASS": false
+  },
+  {
+   "factor": "ef_yoy_21",
+   "sparse_ratio": 0.0688,
+   "DEAD_head": 0.0037,
+   "DEAD_head_t": 1.09,
+   "ACTIVE_head": 0.0014,
+   "p_adj": 1.0,
+   "PASS_gate6": false,
+   "s1_s4_PASS": false
+  },
+  {
+   "factor": "ef_yoy_42",
+   "sparse_ratio": 0.1241,
+   "DEAD_head": 0.0013,
+   "DEAD_head_t": 0.49,
+   "ACTIVE_head": -0.0026,
+   "p_adj": 1.0,
+   "PASS_gate6": false,
+   "s1_s4_PASS": false
+  },
+  {
+   "factor": "ef_yoy_63",
+   "sparse_ratio": 0.1812,
+   "DEAD_head": 0.002,
+   "DEAD_head_t": 0.71,
+   "ACTIVE_head": 0.0014,
+   "p_adj": 1.0,
+   "PASS_gate6": false,
+   "s1_s4_PASS": false
+  },
+  {
+   "factor": "oc_amount_mv_21",
+   "sparse_ratio": 0.0204,
+   "DEAD_head": -0.0004,
+   "DEAD_head_t": -0.13,
+   "ACTIVE_head": -0.0027,
+   "p_adj": 1.0,
+   "PASS_gate6": false,
+   "s1_s4_PASS": false
+  },
+  {
+   "factor": "oc_amount_mv_42",
+   "sparse_ratio": 0.0356,
+   "DEAD_head": -0.0016,
+   "DEAD_head_t": -0.78,
+   "ACTIVE_head": -0.0038,
+   "p_adj": 1.0,
+   "PASS_gate6": false,
+   "s1_s4_PASS": false
+  },
+  {
+   "factor": "oc_amount_mv_63",
+   "sparse_ratio": 0.048,
+   "DEAD_head": -0.0011,
+   "DEAD_head_t": -0.58,
+   "ACTIVE_head": -0.0029,
+   "p_adj": 1.0,
+   "PASS_gate6": false,
+   "s1_s4_PASS": false
+  }
+ ],
+ "verdict": {
+  "n_pass_gate6": 0,
+  "n_pass_s1s4": 0
+ },
+ "runtime_sec": 25.4
+}

@@ -1,0 +1,47 @@
+tushare>=1.4.0
+akshare>=1.14.0
+pandas>=2.0
+numpy>=1.26
+lightgbm>=4.3
+fastapi>=0.110
+uvicorn[standard]>=0.29
+apscheduler>=3.10
+python-dotenv>=1.0
+pyyaml>=6.0
+requests>=2.31
+
+# --- 研究/实验依赖(2026-09-12 审查 P1-08 补录) ---
+# 原先这两条不在任何依赖清单里, 但**测试直接 import**:
+#   deap  → tests/test_factory.py setUpClass 裸 import deap.gp(无 try 保护)
+#   cvxpy → tests/test_optimizer.py 的 method="qp"(只有 cvxpy 才有的求解器路径)
+# 于是 CI(按 requirements-lock.txt 装)必然 ERROR, 这两个模块等同零验证。
+deap>=1.4
+cvxpy>=1.5
+
+# --- 测试关键依赖(2026-09-28 审查补录, 与 deap/cvxpy 同理由; 09-14 已进 lock) ---
+#   httpx2  → tests/test_local_guard.py 在**收集阶段**就 import, 缺库 ⇒ 全量测试跑不起来
+#   pyarrow → 行情面板 parquet 缓存读写(test_market_cache 的 _PARQUET_OK 按真实往返判定)
+httpx2>=2.0
+pyarrow>=14.0
+
+# --- 日志(2026-09-12 审查 P2-13 补录) ---
+# 生产服务常开 logs/app.log, 脚本同时在写; 上游 RotatingFileHandler 在多进程下没有任何
+# 互斥, 轮转时 os.rename 拿不到 Windows 的 FILE_SHARE_DELETE ⇒ PermissionError ⇒
+# 此后每条记录都在同一个异常里丢掉(故障链见 app/logger.py)。本库用锁文件串行化轮转。
+# **不是硬依赖**: app/logger.py 在 ImportError 时退回带兜底的本地实现; 但兜底版只保证
+# "不丢记录", 轮转本身仍可能互相打架 —— 故列为常规依赖。
+concurrent-log-handler>=0.9.25
+
+# --- 配置回写(2026-09-12 审查 P2-17 补录) ---
+# config.yaml 是基线口径的唯一事实源, 里面有 35 行注释(训练起点 vs 评估起点那段血泪史)。
+# 原 save_config 用 yaml.safe_dump 整份重写, 设置页点一次保存注释全没。ruamel 的
+# round-trip 模式能原样保留注释, 只 patch 改动的键。
+# **不是硬依赖**: 缺库时退回 safe_dump 并告警(注释会丢, 功能不中断)。
+ruamel.yaml>=0.18
+
+# --- 可选重型依赖: 序列 die(torch) ---
+# 只在 app/models/seq_die.py 里**惰性** import(函数内), 缺了不影响生产链路;
+# tests/test_seq_die.py 用 skipTest 优雅跳过, 故**不进 requirements-lock.txt** ——
+# 为一个已被判否的实验让 CI 每次多拖 1~2GB 不划算。
+# 本机安装方式(CPU 版): pip install torch --index-url https://download.pytorch.org/whl/cpu
+# torch>=2.2

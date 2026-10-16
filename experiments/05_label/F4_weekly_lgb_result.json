@@ -1,0 +1,64 @@
+{
+ "script_sha": "93fab6f3ec44e2f6",
+ "since": "20140101",
+ "train_months": 36,
+ "embargo": 3,
+ "n_anchor": 651,
+ "n_scored": 608,
+ "ic": {
+  "FULL": {
+   "n": 170,
+   "ic": 0.0911,
+   "t": 11.97
+  },
+  "DEAD": {
+   "n": 170,
+   "ic": 0.0911,
+   "t": 11.97
+  },
+  "ACTIVE": {
+   "n": 137,
+   "ic": 0.0723,
+   "t": 4.88
+  },
+  "ALL": {
+   "n": 606,
+   "ic": 0.0843,
+   "t": 15.08
+  }
+ },
+ "portfolio": {
+  "M5_band8_top100_100w": {
+   "n": 606,
+   "ann": 0.1789,
+   "bench": 0.0849,
+   "excess_pp": 9.4,
+   "mdd": -0.4321,
+   "sharpe": 0.769,
+   "turnover": 0.155,
+   "hit": 0.573,
+   "DEAD": {
+    "n": 169,
+    "ann": 0.1775,
+    "bench": 0.033,
+    "excess_pp": 14.45,
+    "hit": 0.586,
+    "turnover": 0.136
+   },
+   "ACTIVE": {
+    "n": 139,
+    "ann": 0.1411,
+    "bench": 0.1542,
+    "excess_pp": -1.31,
+    "hit": 0.568,
+    "turnover": 0.125
+   }
+  }
+ },
+ "verdict": {
+  "Q2_pass_10pp": null,
+  "Q2_excess_pp": null,
+  "Q2_active_excess_pp": null
+ },
+ "secs": 640.3
+}

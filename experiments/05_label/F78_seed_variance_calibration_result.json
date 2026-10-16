@@ -1,0 +1,947 @@
+{
+ "pilot": {
+  "n_anchors": 3,
+  "elapsed_s": 47.3,
+  "naive_sec_per_model": 3.941,
+  "naive_is_inflated": "pilot 仅 3 锚点 ⇒ 一次性开销（面板/因子，约 72s）被摊薄不当 ⇒ 仅登记不用",
+  "f76b_sec_per_model": 0.8146551724137931,
+  "n_models": {
+   "group_A": 2784,
+   "group_B": 5568
+  },
+  "projection_train_h": 1.89,
+  "projection_fixed_overhead_h": 0.18,
+  "projection_total_h": 2.07,
+  "note": "组A 6臂×K=4 + 组B 3臂×K=16 = 2784 + 5568 次单模型训练"
+ },
+ "updated_at": "2026-09-21 19:06:27",
+ "retrains": {
+  "A1": {
+   "group": "A",
+   "K": 4,
+   "table": "model_score_f78_a1",
+   "n_dates": 116,
+   "seeds": [
+    1000003,
+    1007922,
+    1015841,
+    1023760
+   ],
+   "skipped": true,
+   "seeds_source": "previous_run(F78)",
+   "seed_pool_slice": "pool[0:24] 4 个一组"
+  },
+  "A2": {
+   "group": "A",
+   "K": 4,
+   "table": "model_score_f78_a2",
+   "n_dates": 116,
+   "seeds": [
+    1031679,
+    1039598,
+    1047517,
+    1055436
+   ],
+   "skipped": true,
+   "seeds_source": "previous_run(F78)",
+   "seed_pool_slice": "pool[0:24] 4 个一组"
+  },
+  "A3": {
+   "group": "A",
+   "K": 4,
+   "table": "model_score_f78_a3",
+   "n_dates": 116,
+   "seeds": [
+    1063355,
+    1071274,
+    1079193,
+    1087112
+   ],
+   "skipped": true,
+   "seeds_source": "previous_run(F78)",
+   "seed_pool_slice": "pool[0:24] 4 个一组"
+  },
+  "A4": {
+   "group": "A",
+   "K": 4,
+   "table": "model_score_f78_a4",
+   "n_dates": 116,
+   "seeds": [
+    1095031,
+    1102950,
+    1110869,
+    1118788
+   ],
+   "skipped": true,
+   "seeds_source": "previous_run(F78)",
+   "seed_pool_slice": "pool[0:24] 4 个一组"
+  },
+  "A5": {
+   "group": "A",
+   "K": 4,
+   "table": "model_score_f78_a5",
+   "n_dates": 116,
+   "seeds": [
+    1126707,
+    1134626,
+    1142545,
+    1150464
+   ],
+   "skipped": true,
+   "seeds_source": "previous_run(F78)",
+   "seed_pool_slice": "pool[0:24] 4 个一组"
+  },
+  "A6": {
+   "group": "A",
+   "K": 4,
+   "table": "model_score_f78_a6",
+   "n_dates": 116,
+   "seeds": [
+    1158383,
+    1166302,
+    1174221,
+    1182140
+   ],
+   "skipped": true,
+   "seeds_source": "previous_run(F78)",
+   "seed_pool_slice": "pool[0:24] 4 个一组"
+  },
+  "A7": {
+   "group": "A",
+   "K": 4,
+   "table": "model_score_f78_a7",
+   "n_dates": 116,
+   "trained": 116,
+   "elapsed_min": 6.5,
+   "seeds": [
+    1190059,
+    1197978,
+    1205897,
+    1213816
+   ],
+   "skipped": false,
+   "seeds_source": "this_run(F78b)"
+  },
+  "A8": {
+   "group": "A",
+   "K": 4,
+   "table": "model_score_f78_a8",
+   "n_dates": 116,
+   "trained": 116,
+   "elapsed_min": 6.5,
+   "seeds": [
+    1221735,
+    1229654,
+    1237573,
+    1245492
+   ],
+   "skipped": false,
+   "seeds_source": "this_run(F78b)"
+  },
+  "A9": {
+   "group": "A",
+   "K": 4,
+   "table": "model_score_f78_a9",
+   "n_dates": 116,
+   "trained": 116,
+   "elapsed_min": 6.6,
+   "seeds": [
+    1253411,
+    1261330,
+    1269249,
+    1277168
+   ],
+   "skipped": false,
+   "seeds_source": "this_run(F78b)"
+  },
+  "A10": {
+   "group": "A",
+   "K": 4,
+   "table": "model_score_f78_a10",
+   "n_dates": 116,
+   "trained": 116,
+   "elapsed_min": 6.5,
+   "seeds": [
+    1285087,
+    1293006,
+    1300925,
+    1308844
+   ],
+   "skipped": false,
+   "seeds_source": "this_run(F78b)"
+  },
+  "A11": {
+   "group": "A",
+   "K": 4,
+   "table": "model_score_f78_a11",
+   "n_dates": 116,
+   "trained": 116,
+   "elapsed_min": 6.6,
+   "seeds": [
+    1316763,
+    1324682,
+    1332601,
+    1340520
+   ],
+   "skipped": false,
+   "seeds_source": "this_run(F78b)"
+  },
+  "A12": {
+   "group": "A",
+   "K": 4,
+   "table": "model_score_f78_a12",
+   "n_dates": 116,
+   "trained": 116,
+   "elapsed_min": 6.6,
+   "seeds": [
+    1348439,
+    1356358,
+    1364277,
+    1372196
+   ],
+   "skipped": false,
+   "seeds_source": "this_run(F78b)"
+  },
+  "B1": {
+   "group": "B",
+   "K": 16,
+   "table": "model_score_f78_b1",
+   "n_dates": 116,
+   "seeds": [
+    1190059,
+    1197978,
+    1205897,
+    1213816,
+    1221735,
+    1229654,
+    1237573,
+    1245492,
+    1253411,
+    1261330,
+    1269249,
+    1277168,
+    1285087,
+    1293006,
+    1300925,
+    1308844
+   ],
+   "skipped": true,
+   "seeds_source": "previous_run(F78)",
+   "seed_pool_slice": "pool[24:72]（**F78 时的切片**，F78b 已位移）"
+  },
+  "B2": {
+   "group": "B",
+   "K": 16,
+   "table": "model_score_f78_b2",
+   "n_dates": 116,
+   "seeds": [
+    1316763,
+    1324682,
+    1332601,
+    1340520,
+    1348439,
+    1356358,
+    1364277,
+    1372196,
+    1380115,
+    1388034,
+    1395953,
+    1403872,
+    1411791,
+    1419710,
+    1427629,
+    1435548
+   ],
+   "skipped": true,
+   "seeds_source": "previous_run(F78)",
+   "seed_pool_slice": "pool[24:72]（**F78 时的切片**，F78b 已位移）"
+  },
+  "B3": {
+   "group": "B",
+   "K": 16,
+   "table": "model_score_f78_b3",
+   "n_dates": 116,
+   "seeds": [
+    1443467,
+    1451386,
+    1459305,
+    1467224,
+    1475143,
+    1483062,
+    1490981,
+    1498900,
+    1506819,
+    1514738,
+    1522657,
+    1530576,
+    1538495,
+    1546414,
+    1554333,
+    1562252
+   ],
+   "skipped": true,
+   "seeds_source": "previous_run(F78)",
+   "seed_pool_slice": "pool[24:72]（**F78 时的切片**，F78b 已位移）"
+  },
+  "P1": {
+   "group": "P",
+   "K": 4,
+   "table": "model_score_f78_p1",
+   "n_dates": 116,
+   "trained": 116,
+   "elapsed_min": 6.8,
+   "seeds": [
+    42,
+    7,
+    123,
+    2024
+   ],
+   "skipped": false,
+   "seeds_source": "this_run(F78b)"
+  },
+  "P2": {
+   "group": "P",
+   "K": 4,
+   "table": "model_score_f78_p2",
+   "n_dates": 116,
+   "trained": 116,
+   "elapsed_min": 6.6,
+   "seeds": [
+    7,
+    2024,
+    99,
+    555
+   ],
+   "skipped": false,
+   "seeds_source": "this_run(F78b)"
+  }
+ },
+ "expected_anchors": 116,
+ "seed_overlap_check": "PASS（72 个互异 seed，臂间零重叠，与生产零重叠）",
+ "research": {
+  "protocol": {
+   "top_n": 100,
+   "horizon": 21,
+   "sell_rate_bp": 7.6,
+   "anchors": 116,
+   "window": [
+    "2017-01-26",
+    "2026-08-31"
+   ],
+   "columns_union": 4815
+  },
+  "per_arm": {
+   "A1": {
+    "group": "A",
+    "K": 4,
+    "n": 115,
+    "ann_pp": 8.8656,
+    "ACTIVE_ann_pp": 12.5939,
+    "DEAD_ann_pp": 15.3296
+   },
+   "A2": {
+    "group": "A",
+    "K": 4,
+    "n": 115,
+    "ann_pp": 7.1944,
+    "ACTIVE_ann_pp": 11.7154,
+    "DEAD_ann_pp": 13.3849
+   },
+   "A3": {
+    "group": "A",
+    "K": 4,
+    "n": 115,
+    "ann_pp": 7.6377,
+    "ACTIVE_ann_pp": 13.1419,
+    "DEAD_ann_pp": 15.1488
+   },
+   "A4": {
+    "group": "A",
+    "K": 4,
+    "n": 115,
+    "ann_pp": 8.9596,
+    "ACTIVE_ann_pp": 13.9015,
+    "DEAD_ann_pp": 13.944
+   },
+   "A5": {
+    "group": "A",
+    "K": 4,
+    "n": 115,
+    "ann_pp": 7.8517,
+    "ACTIVE_ann_pp": 11.5621,
+    "DEAD_ann_pp": 13.2752
+   },
+   "A6": {
+    "group": "A",
+    "K": 4,
+    "n": 115,
+    "ann_pp": 6.7736,
+    "ACTIVE_ann_pp": 12.52,
+    "DEAD_ann_pp": 13.4997
+   },
+   "B1": {
+    "group": "B",
+    "K": 16,
+    "n": 115,
+    "ann_pp": 8.0519,
+    "ACTIVE_ann_pp": 10.669,
+    "DEAD_ann_pp": 16.7239
+   },
+   "B2": {
+    "group": "B",
+    "K": 16,
+    "n": 115,
+    "ann_pp": 7.4268,
+    "ACTIVE_ann_pp": 12.5381,
+    "DEAD_ann_pp": 14.6384
+   },
+   "B3": {
+    "group": "B",
+    "K": 16,
+    "n": 115,
+    "ann_pp": 7.6156,
+    "ACTIVE_ann_pp": 13.2527,
+    "DEAD_ann_pp": 14.2248
+   },
+   "A7": {
+    "group": "A",
+    "K": 4,
+    "n": 115,
+    "ann_pp": 7.7407,
+    "ACTIVE_ann_pp": 12.3409,
+    "DEAD_ann_pp": 15.7596
+   },
+   "A8": {
+    "group": "A",
+    "K": 4,
+    "n": 115,
+    "ann_pp": 7.9211,
+    "ACTIVE_ann_pp": 11.3439,
+    "DEAD_ann_pp": 15.1334
+   },
+   "A9": {
+    "group": "A",
+    "K": 4,
+    "n": 115,
+    "ann_pp": 8.2078,
+    "ACTIVE_ann_pp": 11.8938,
+    "DEAD_ann_pp": 14.0074
+   },
+   "A10": {
+    "group": "A",
+    "K": 4,
+    "n": 115,
+    "ann_pp": 6.7688,
+    "ACTIVE_ann_pp": 10.1916,
+    "DEAD_ann_pp": 13.9208
+   },
+   "A11": {
+    "group": "A",
+    "K": 4,
+    "n": 115,
+    "ann_pp": 8.0475,
+    "ACTIVE_ann_pp": 15.2464,
+    "DEAD_ann_pp": 12.8595
+   },
+   "A12": {
+    "group": "A",
+    "K": 4,
+    "n": 115,
+    "ann_pp": 8.8446,
+    "ACTIVE_ann_pp": 14.8739,
+    "DEAD_ann_pp": 14.9558
+   },
+   "P1": {
+    "group": "P",
+    "K": 4,
+    "n": 115,
+    "ann_pp": 7.147,
+    "ACTIVE_ann_pp": 9.8713,
+    "DEAD_ann_pp": 13.3542
+   },
+   "P2": {
+    "group": "P",
+    "K": 4,
+    "n": 115,
+    "ann_pp": 8.6514,
+    "ACTIVE_ann_pp": 15.4599,
+    "DEAD_ann_pp": 14.5122
+   }
+  }
+ },
+ "portfolio": {
+  "window": "20170101",
+  "runs": [
+   {
+    "arm": "A1",
+    "group": "A",
+    "K": 4,
+    "run": "20260921_f78_a1",
+    "n": 115,
+    "sys_ann": 0.0761,
+    "sys_mdd": -0.3351,
+    "sys_mdd_daily": -0.3443,
+    "sharpe": 0.382,
+    "turnover": 0.8961,
+    "idle": 0.3394,
+    "n_avg": 4.69
+   },
+   {
+    "arm": "A2",
+    "group": "A",
+    "K": 4,
+    "run": "20260921_f78_a2",
+    "n": 115,
+    "sys_ann": 0.12,
+    "sys_mdd": -0.3151,
+    "sys_mdd_daily": -0.3289,
+    "sharpe": 0.487,
+    "turnover": 0.9289,
+    "idle": 0.3318,
+    "n_avg": 4.71
+   },
+   {
+    "arm": "A3",
+    "group": "A",
+    "K": 4,
+    "run": "20260921_f78_a3",
+    "n": 115,
+    "sys_ann": 0.0743,
+    "sys_mdd": -0.4357,
+    "sys_mdd_daily": -0.445,
+    "sharpe": 0.275,
+    "turnover": 0.9053,
+    "idle": 0.3315,
+    "n_avg": 4.76
+   },
+   {
+    "arm": "A4",
+    "group": "A",
+    "K": 4,
+    "run": "20260921_f78_a4",
+    "n": 115,
+    "sys_ann": 0.0581,
+    "sys_mdd": -0.4111,
+    "sys_mdd_daily": -0.4248,
+    "sharpe": 0.225,
+    "turnover": 0.9034,
+    "idle": 0.335,
+    "n_avg": 4.69
+   },
+   {
+    "arm": "A5",
+    "group": "A",
+    "K": 4,
+    "run": "20260921_f78_a5",
+    "n": 115,
+    "sys_ann": 0.095,
+    "sys_mdd": -0.3348,
+    "sys_mdd_daily": -0.3399,
+    "sharpe": 0.421,
+    "turnover": 0.9108,
+    "idle": 0.3387,
+    "n_avg": 4.69
+   },
+   {
+    "arm": "A6",
+    "group": "A",
+    "K": 4,
+    "run": "20260921_f78_a6",
+    "n": 115,
+    "sys_ann": 0.0646,
+    "sys_mdd": -0.4482,
+    "sys_mdd_daily": -0.4822,
+    "sharpe": 0.304,
+    "turnover": 0.9137,
+    "idle": 0.3366,
+    "n_avg": 4.68
+   },
+   {
+    "arm": "A7",
+    "group": "A",
+    "K": 4,
+    "run": "20260921_f78_a7",
+    "n": 115,
+    "sys_ann": 0.0513,
+    "sys_mdd": -0.3938,
+    "sys_mdd_daily": -0.4646,
+    "sharpe": 0.159,
+    "turnover": 0.9162,
+    "idle": 0.3228,
+    "n_avg": 4.77
+   },
+   {
+    "arm": "A8",
+    "group": "A",
+    "K": 4,
+    "run": "20260921_f78_a8",
+    "n": 115,
+    "sys_ann": 0.1226,
+    "sys_mdd": -0.2669,
+    "sys_mdd_daily": -0.3943,
+    "sharpe": 0.573,
+    "turnover": 0.8958,
+    "idle": 0.3323,
+    "n_avg": 4.69
+   },
+   {
+    "arm": "A9",
+    "group": "A",
+    "K": 4,
+    "run": "20260921_f78_a9",
+    "n": 115,
+    "sys_ann": 0.1062,
+    "sys_mdd": -0.3901,
+    "sys_mdd_daily": -0.3977,
+    "sharpe": 0.479,
+    "turnover": 0.9009,
+    "idle": 0.342,
+    "n_avg": 4.63
+   },
+   {
+    "arm": "A10",
+    "group": "A",
+    "K": 4,
+    "run": "20260921_f78_a10",
+    "n": 115,
+    "sys_ann": 0.1365,
+    "sys_mdd": -0.2645,
+    "sys_mdd_daily": -0.3353,
+    "sharpe": 0.647,
+    "turnover": 0.9155,
+    "idle": 0.3336,
+    "n_avg": 4.7
+   },
+   {
+    "arm": "A11",
+    "group": "A",
+    "K": 4,
+    "run": "20260921_f78_a11",
+    "n": 115,
+    "sys_ann": 0.0785,
+    "sys_mdd": -0.4074,
+    "sys_mdd_daily": -0.4125,
+    "sharpe": 0.358,
+    "turnover": 0.9026,
+    "idle": 0.3341,
+    "n_avg": 4.71
+   },
+   {
+    "arm": "A12",
+    "group": "A",
+    "K": 4,
+    "run": "20260921_f78_a12",
+    "n": 115,
+    "sys_ann": 0.0876,
+    "sys_mdd": -0.4131,
+    "sys_mdd_daily": -0.4175,
+    "sharpe": 0.351,
+    "turnover": 0.9167,
+    "idle": 0.3338,
+    "n_avg": 4.7
+   },
+   {
+    "arm": "B1",
+    "group": "B",
+    "K": 16,
+    "run": "20260921_f78_b1",
+    "n": 115,
+    "sys_ann": 0.0758,
+    "sys_mdd": -0.3759,
+    "sys_mdd_daily": -0.3895,
+    "sharpe": 0.376,
+    "turnover": 0.8896,
+    "idle": 0.341,
+    "n_avg": 4.65
+   },
+   {
+    "arm": "B2",
+    "group": "B",
+    "K": 16,
+    "run": "20260921_f78_b2",
+    "n": 115,
+    "sys_ann": 0.0764,
+    "sys_mdd": -0.4006,
+    "sys_mdd_daily": -0.4082,
+    "sharpe": 0.391,
+    "turnover": 0.8928,
+    "idle": 0.3378,
+    "n_avg": 4.69
+   },
+   {
+    "arm": "B3",
+    "group": "B",
+    "K": 16,
+    "run": "20260921_f78_b3",
+    "n": 115,
+    "sys_ann": 0.088,
+    "sys_mdd": -0.3452,
+    "sys_mdd_daily": -0.3541,
+    "sharpe": 0.445,
+    "turnover": 0.8905,
+    "idle": 0.338,
+    "n_avg": 4.69
+   },
+   {
+    "arm": "P1",
+    "group": "P",
+    "K": 4,
+    "run": "20260921_f78_p1",
+    "n": 115,
+    "sys_ann": 0.0713,
+    "sys_mdd": -0.421,
+    "sys_mdd_daily": -0.4264,
+    "sharpe": 0.253,
+    "turnover": 0.9015,
+    "idle": 0.3191,
+    "n_avg": 4.78
+   },
+   {
+    "arm": "P2",
+    "group": "P",
+    "K": 4,
+    "run": "20260921_f78_p2",
+    "n": 115,
+    "sys_ann": 0.0426,
+    "sys_mdd": -0.429,
+    "sys_mdd_daily": -0.48,
+    "sharpe": 0.18,
+    "turnover": 0.8959,
+    "idle": 0.3337,
+    "n_avg": 4.7
+   }
+  ]
+ },
+ "analyze": {
+  "layers": {
+   "research_A": {
+    "group": "A",
+    "K": 4,
+    "n_arms": 12,
+    "ann_pp_per_arm": {
+     "A1": 8.8656,
+     "A10": 6.7688,
+     "A11": 8.0475,
+     "A12": 8.8446,
+     "A2": 7.1944,
+     "A3": 7.6377,
+     "A4": 8.9596,
+     "A5": 7.8517,
+     "A6": 6.7736,
+     "A7": 7.7407,
+     "A8": 7.9211,
+     "A9": 8.2078
+    },
+    "mean_ann_pp": 7.901,
+    "sigma_total_pp": 0.751,
+    "sigma_total_ci95": {
+     "lo": 0.532,
+     "hi": 1.275
+    },
+    "sigma_time_diff_pp": 0.984,
+    "sigma_t_pp": 0.696,
+    "sigma_b_pp": 0.284,
+    "b_share_of_var": 0.143,
+    "n_pairs": 66,
+    "note": "研究层（分数面板 top100 等权、21 日 forward_excess）；σ_time 为**实测**"
+   },
+   "research_B": {
+    "group": "B",
+    "K": 16,
+    "n_arms": 3,
+    "ann_pp_per_arm": {
+     "B1": 8.0519,
+     "B2": 7.4268,
+     "B3": 7.6156
+    },
+    "mean_ann_pp": 7.698,
+    "sigma_total_pp": 0.321,
+    "sigma_total_ci95": {
+     "lo": 0.167,
+     "hi": 2.015
+    },
+    "sigma_time_diff_pp": 0.71,
+    "sigma_t_pp": 0.502,
+    "sigma_b_pp": 0.0,
+    "b_share_of_var": 0.0,
+    "n_pairs": 3,
+    "note": "研究层（分数面板 top100 等权、21 日 forward_excess）；σ_time 为**实测**"
+   },
+   "research_K_compare": {
+    "mean_A_pp": 7.901,
+    "mean_B_pp": 7.698,
+    "mean_diff_pp": -0.203,
+    "se_of_diff_pp": 0.285,
+    "t_of_mean_diff": -0.712,
+    "sigma_ratio_B_over_A": 0.427,
+    "note": "研究层（L1）复核 K=16 是否**降低方差**且**不损均值**；组合层因组 B 仅 3 臂证据不足，此处分辨率高 3.6×"
+   },
+   "portfolio_A": {
+    "group": "A",
+    "K": 4,
+    "n_arms": 12,
+    "ann_pp_per_arm": {
+     "A1": 7.61,
+     "A10": 13.65,
+     "A11": 7.85,
+     "A12": 8.76,
+     "A2": 12.0,
+     "A3": 7.43,
+     "A4": 5.81,
+     "A5": 9.5,
+     "A6": 6.46,
+     "A7": 5.13,
+     "A8": 12.26,
+     "A9": 10.62
+    },
+    "mean_ann_pp": 8.923,
+    "sigma_total_pp": 2.721,
+    "sigma_total_ci95": {
+     "lo": 1.927,
+     "hi": 4.62
+    },
+    "sigma_time_diff_pp": 3.212,
+    "sigma_t_pp": 2.271,
+    "sigma_b_pp": 1.498,
+    "b_share_of_var": 0.303,
+    "n_pairs": 66
+   },
+   "portfolio_B": {
+    "group": "B",
+    "K": 16,
+    "n_arms": 3,
+    "ann_pp_per_arm": {
+     "B1": 7.58,
+     "B2": 7.64,
+     "B3": 8.8
+    },
+    "mean_ann_pp": 8.007,
+    "sigma_total_pp": 0.688,
+    "sigma_total_ci95": {
+     "lo": 0.358,
+     "hi": 4.322
+    },
+    "sigma_time_diff_pp": 2.292,
+    "sigma_t_pp": 1.621,
+    "sigma_b_pp": 0.0,
+    "b_share_of_var": 0.0,
+    "n_pairs": 3
+   }
+  },
+  "verdicts": {
+   "J1_sigma_total_4": {
+    "pp": 2.721,
+    "ci95": {
+     "lo": 1.927,
+     "hi": 4.62
+    }
+   },
+   "J2_structure": "mixed",
+   "J4_t_deflation_upper_bound": 1.198,
+   "J4_vs_F76b": {
+    "f76b_observed": 1.77,
+    "consistent": false,
+    "note": "F76b 是共享种子集设计 ⇒ 其 1.77× 应 ≤ 本上界"
+   },
+   "J5_consistency": {
+    "expected_pair_spread_pp": 4.54,
+    "observed_max_minus_min_pp": 8.52
+   },
+   "J3_K_scaling": {
+    "ratio": 0.253,
+    "theory": 0.5,
+    "accept_1_over_sqrtK": false
+   },
+   "B1_sigma_total_12arms": {
+    "pp": 2.721,
+    "ci95": {
+     "lo": 1.927,
+     "hi": 4.62
+    },
+    "vs_f78": "F78(6臂) 2.271pp [1.418, 5.570]"
+   },
+   "B2_structure": {
+    "point": 0.303,
+    "at_ci_low": 0.0,
+    "at_ci_high": 0.758,
+    "class": "mixed",
+    "excludes_persistent": false,
+    "excludes_time": false
+   },
+   "B4_sqrtT_check": {
+    "n_periods": 114,
+    "se_full_pp": 3.212,
+    "se_first_half_pp": 4.22,
+    "se_second_half_pp": 4.829,
+    "ratio_half_over_full": 1.409,
+    "theory_sqrt2": 1.414,
+    "accept_1_over_sqrtT": true
+   },
+   "B5_error_budget": [
+    {
+     "T": 115,
+     "sigma_t_pp": 2.271,
+     "sigma_total_pp": 2.721,
+     "target_delta_pp": 1.0,
+     "seed_sets_needed": 60
+    },
+    {
+     "T": 115,
+     "sigma_t_pp": 2.271,
+     "sigma_total_pp": 2.721,
+     "target_delta_pp": 2.0,
+     "seed_sets_needed": 15
+    },
+    {
+     "T": 115,
+     "sigma_t_pp": 2.271,
+     "sigma_total_pp": 2.721,
+     "target_delta_pp": 3.0,
+     "seed_sets_needed": 7
+    },
+    {
+     "T": 608,
+     "sigma_t_pp": 0.988,
+     "sigma_total_pp": 1.794,
+     "target_delta_pp": 1.0,
+     "seed_sets_needed": 26
+    },
+    {
+     "T": 608,
+     "sigma_t_pp": 0.988,
+     "sigma_total_pp": 1.794,
+     "target_delta_pp": 2.0,
+     "seed_sets_needed": 7
+    },
+    {
+     "T": 608,
+     "sigma_t_pp": 0.988,
+     "sigma_total_pp": 1.794,
+     "target_delta_pp": 3.0,
+     "seed_sets_needed": 3
+    }
+   ],
+   "B3_drift_test": {
+    "A_mean_pp": 8.923,
+    "A_sd_pp": 2.721,
+    "A_min_pp": 5.13,
+    "A_max_pp": 13.65,
+    "P1_prod_seed_set_pp": 7.13,
+    "P1_z": -0.66,
+    "P1_vs_f76b_baseA_10.16pp": -3.03,
+    "P2_f76b_baseB_seed_set_pp": 4.26,
+    "P2_z": -1.71,
+    "P2_vs_f76b_baseB_4.26pp": 0.0,
+    "P2_back_in_distribution": true,
+    "drift_supported": false
+   }
+  }
+ },
+ "seed_metadata_patch": {
+  "defect": "F78b 把组 A 从 6 臂扩到 12 臂 ⇒ _seed_pool 切片整体位移（B 组 24:72 → 48:96） ⇒ 已训臂 B1~B3 的『当前设计种子』≠『上次实际训练的种子』。",
+  "impact": "仅**元数据**失真（B1~B3 记录成新切片）；**训练数据未受影响**（按臂幂等跳过，未重训）。",
+  "fix_code": "stage_retrain 跳过分支改为读取上次实际种子并记 seeds_source；差异时 log.warning。",
+  "fix_data": "本补丁把 A1~A6/B1~B3 的种子还原为 F78 实际值，并给全部臂打 seeds_source。",
+  "note": "副作用（如实登记）：A7~A12 用的是 pool[24:48]，与 B1~B3 实际种子的 pool[24:72] **部分重叠** ⇒ A、B 两组不再互相独立。但 σ_total 是**组内**离散，跨组重叠不污染组内 SD ⇒ 不影响 J1/J3。"
+ }
+}

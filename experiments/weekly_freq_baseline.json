@@ -1,0 +1,44 @@
+{
+ "ran_at": "2026-09-21 13:32:11",
+ "elapsed_sec": 35.4,
+ "archive": "scores_20260918.npz",
+ "score_table": "model_score_weekly_chk",
+ "run_tag": "weekly_chk",
+ "weekly_metrics": {
+  "start": "20141031",
+  "end": "20260731",
+  "periods": 81,
+  "ann_return": 0.055,
+  "bench_ann": 0.1203,
+  "excess_ann": -0.0654,
+  "max_drawdown": -0.3797,
+  "vol_ann": 0.3692,
+  "sharpe": 0.095,
+  "win_rate": 0.5062,
+  "ic_mean": 0.0951,
+  "ic_std": 0.1209,
+  "icir": 0.787,
+  "avg_turnover": 0.9258,
+  "mdd_daily": -0.4785,
+  "sys_ann_return": 0.0831,
+  "avg_stocks": 4.88
+ },
+ "baseline_monthly": {
+  "F52_excess_ann": [
+   17.78,
+   17.47
+  ],
+  "F52_mdd": -36.6,
+  "F52_turnover": 0.137,
+  "F53_monthly_excess": [
+   1.34,
+   1.31
+  ],
+  "F53_holdout_hit": [
+   65.6,
+   65.6
+  ],
+  "F50_ic_mean": 0.0875,
+  "F50_ic_ir": 0.685
+ }
+}

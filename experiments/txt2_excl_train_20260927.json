@@ -1,0 +1,22 @@
+{
+ "ran_at": "2026-09-27T23:39:24",
+ "prereg": "plans/txt2-excl-ab-prereg-20260927.md",
+ "runtime_sec": 609.7,
+ "arm_runtimes_sec": {
+  "txt2_trt_sa": 289.0,
+  "txt2_trt_sb": 290.2
+ },
+ "audit": {
+  "n_base": 26,
+  "s5_flipped": [
+   "bias_60",
+   "high_52w",
+   "lhb_cnt20",
+   "lhb_net20",
+   "rev_5"
+  ],
+  "n_total": 28
+ },
+ "control": "excl_min_sa/sb（excl_pool_train 产物, 26 因子, prod 逐位复现现生产）",
+ "next": "portfolio_admission_gate.py --ctrl excl_min --cand txt2_trt --tag txt2pead"
+}

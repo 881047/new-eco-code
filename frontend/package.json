@@ -1,0 +1,21 @@
+{
+  "name": "neweco-dashboard",
+  "private": true,
+  "version": "2.0.0",
+  "type": "module",
+  "description": "NEW ECO 看板前端 (Vue3 + Vite)。构建产物直接输出到 app/web/static/，由 FastAPI 静态服务。",
+  "scripts": {
+    "dev": "vite",
+    "build": "vite build",
+    "preview": "vite preview"
+  },
+  "dependencies": {
+    "echarts": "^5.6.0",
+    "vue": "^3.5.13",
+    "vue-router": "^4.5.0"
+  },
+  "devDependencies": {
+    "@vitejs/plugin-vue": "^5.2.1",
+    "vite": "^6.0.7"
+  }
+}

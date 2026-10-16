@@ -1,0 +1,150 @@
+{
+ "ran_at": "2026-09-21 14:10:18",
+ "elapsed_sec": 248.7,
+ "baseline": {
+  "F50_ic": 0.0875,
+  "F50_icir": 0.685,
+  "F52_excess": [
+   17.78,
+   17.47
+  ],
+  "F52_mdd": -36.6,
+  "F52_turnover": 0.137
+ },
+ "results": [
+  {
+   "monthly": {
+    "score_table": "model_score",
+    "anchor": "month",
+    "hysteresis": 0,
+    "periods": 115,
+    "periods_per_year": 12,
+    "ann_return": 0.1159,
+    "bench_ann": 0.0531,
+    "excess_ann": 0.0628,
+    "max_drawdown": -0.5126,
+    "win_rate": 0.5391,
+    "ic_mean": 0.0859,
+    "icir": 0.735,
+    "avg_turnover": 0.9061
+   },
+   "weekly": {
+    "score_table": "model_score_weekly_chk",
+    "anchor": "week",
+    "hysteresis": 0,
+    "periods": 608,
+    "periods_per_year": 52,
+    "ann_return": -0.1473,
+    "bench_ann": 0.0688,
+    "excess_ann": -0.2161,
+    "max_drawdown": -0.8855,
+    "win_rate": 0.4539,
+    "ic_mean": 0.1084,
+    "icir": 0.809,
+    "avg_turnover": 0.7552
+   }
+  },
+  {
+   "monthly": {
+    "score_table": "model_score",
+    "anchor": "month",
+    "hysteresis": 8,
+    "periods": 115,
+    "periods_per_year": 12,
+    "ann_return": 0.1111,
+    "bench_ann": 0.0531,
+    "excess_ann": 0.058,
+    "max_drawdown": -0.5282,
+    "win_rate": 0.5391,
+    "ic_mean": 0.0859,
+    "icir": 0.735,
+    "avg_turnover": 0.8462
+   },
+   "weekly": {
+    "score_table": "model_score_weekly_chk",
+    "anchor": "week",
+    "hysteresis": 8,
+    "periods": 608,
+    "periods_per_year": 52,
+    "ann_return": -0.1324,
+    "bench_ann": 0.0688,
+    "excess_ann": -0.2011,
+    "max_drawdown": -0.8641,
+    "win_rate": 0.4589,
+    "ic_mean": 0.1084,
+    "icir": 0.809,
+    "avg_turnover": 0.6158
+   }
+  },
+  {
+   "monthly": {
+    "score_table": "model_score",
+    "anchor": "month",
+    "hysteresis": 16,
+    "periods": 115,
+    "periods_per_year": 12,
+    "ann_return": 0.0875,
+    "bench_ann": 0.0531,
+    "excess_ann": 0.0344,
+    "max_drawdown": -0.535,
+    "win_rate": 0.5304,
+    "ic_mean": 0.0859,
+    "icir": 0.735,
+    "avg_turnover": 0.8039
+   },
+   "weekly": {
+    "score_table": "model_score_weekly_chk",
+    "anchor": "week",
+    "hysteresis": 16,
+    "periods": 608,
+    "periods_per_year": 52,
+    "ann_return": -0.1194,
+    "bench_ann": 0.0688,
+    "excess_ann": -0.1882,
+    "max_drawdown": -0.8519,
+    "win_rate": 0.4523,
+    "ic_mean": 0.1084,
+    "icir": 0.809,
+    "avg_turnover": 0.5468
+   }
+  },
+  {
+   "monthly": {
+    "score_table": "model_score",
+    "anchor": "month",
+    "hysteresis": 24,
+    "periods": 115,
+    "periods_per_year": 12,
+    "ann_return": 0.0906,
+    "bench_ann": 0.0531,
+    "excess_ann": 0.0376,
+    "max_drawdown": -0.5328,
+    "win_rate": 0.5217,
+    "ic_mean": 0.0859,
+    "icir": 0.735,
+    "avg_turnover": 0.7791
+   },
+   "weekly": {
+    "score_table": "model_score_weekly_chk",
+    "anchor": "week",
+    "hysteresis": 24,
+    "periods": 608,
+    "periods_per_year": 52,
+    "ann_return": -0.1001,
+    "bench_ann": 0.0688,
+    "excess_ann": -0.1688,
+    "max_drawdown": -0.8212,
+    "win_rate": 0.4539,
+    "ic_mean": 0.1084,
+    "icir": 0.809,
+    "avg_turnover": 0.5059
+   }
+  }
+ ],
+ "verdict": "**不采纳周频调仓**（净超额劣于月频 ⇒ 按预注册登记证伪，勿重跑）",
+ "checks": {
+  "signal_not_worse": true,
+  "net_excess_not_worse": false,
+  "weekly_minus_monthly_excess": -0.2591
+ }
+}

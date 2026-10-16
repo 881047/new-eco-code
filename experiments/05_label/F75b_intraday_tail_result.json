@@ -1,0 +1,53 @@
+{
+ "script": "f75b_intraday_tail",
+ "date": "2026-09-18 10:29",
+ "note": "附加测量：tail 视角（因子尾部 10% 相对池子），不改 F75 原判决。剔除器语义：tail 超额为负 = 尾部股拖累，剔除它们避免的损失 = |tail| - 费用",
+ "criteria_frozen": {
+  "tail_bar_pp": 0.119,
+  "min_t": 2.0,
+  "both_negative": true
+ },
+ "factors": {
+  "id60_late_vol_share": {
+   "dead_tail": {
+    "n": 170,
+    "tail_pp": -0.312,
+    "t_hac": -3.2
+   },
+   "active_tail": {
+    "n": 137,
+    "tail_pp": -0.2355,
+    "t_hac": -1.71
+   },
+   "tail_meat": false
+  },
+  "id60_late_ret": {
+   "dead_tail": {
+    "n": 170,
+    "tail_pp": -0.0983,
+    "t_hac": -1.07
+   },
+   "active_tail": {
+    "n": 137,
+    "tail_pp": -0.0186,
+    "t_hac": -0.11
+   },
+   "tail_meat": false
+  },
+  "id60_close_vs_dayvwap": {
+   "dead_tail": {
+    "n": 170,
+    "tail_pp": -0.0016,
+    "t_hac": -0.02
+   },
+   "active_tail": {
+    "n": 137,
+    "tail_pp": 0.0615,
+    "t_hac": 0.33
+   },
+   "tail_meat": false
+  }
+ },
+ "summary": "0/3 条基列 tail 视角有料（剔除器素材确认）",
+ "secs": 257.3
+}

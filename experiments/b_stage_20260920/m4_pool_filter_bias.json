@@ -1,0 +1,24 @@
+{
+  "criteria": "plans/ledger-settlement-criteria-20260920.md §M4（跑前冻结；仪器定义见'仪器更正版' —— 第一版把两条尾巴混在一个对照里，方向门抓住后已重做）",
+  "window": [
+    "20170206",
+    "20260907"
+  ],
+  "verdict": "关闭：退市/深跌半边被护栏抬高的量级 < 冻结门槛 0.05pp/月 ⇒ 02 号补限定语",
+  "B_down_channel_pp_per_month": 0.0108,
+  "B_down_abs_max_pp_per_month": 0.2463,
+  "B_down_months_ge_0.05pp": 6,
+  "B_down_annualized_pp": 0.129,
+  "B_up_channel_pp_per_month_for_reference": -0.3862,
+  "n_months": 116,
+  "rows_dropped_deep_le_minus21": 171,
+  "rows_dropped_le_minus30": 135,
+  "rows_dropped_big_pos_gt_21": 1692,
+  "worst_dropped_deep_pct_chg": -96.4431,
+  "pool_domain_cells": 9361805,
+  "clamp_note": "终点跌幅 clamp 到 −99%（SQLite 的 LN(0)=NULL 会被 SUM 跳过）⇒ 测得的下修量是**保守下界**，真实退市那笔是 −100%",
+  "gate_M4a_rerun_identical": true,
+  "gate_M4b_no_zero_rows": true,
+  "gate_M4c_channels_differ": true,
+  "not_measured": []
+}

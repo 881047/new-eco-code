@@ -1,0 +1,2205 @@
+{
+  "ran_at": "2026-09-27T14:37:13",
+  "prereg": "plans/text-factor-llm-labeling-prereg-20260927.md",
+  "n_sample": 300,
+  "judged": 300,
+  "agree": 257,
+  "mismatch": 43,
+  "tier2_missing": 0,
+  "agreement_rate": 0.8567,
+  "high_conf_subset": {
+    "bar": 0.8,
+    "judged": 261,
+    "agree": 230,
+    "agreement_rate": 0.8812
+  },
+  "verdict": "FAIL（迭代 rubric）",
+  "mismatch_samples": [
+    {
+      "i": 16,
+      "title": "2023年度监事会报告",
+      "tier1": "periodic_report",
+      "tier2": "governance_meeting",
+      "confidence": 0.7999999999999999
+    },
+    {
+      "i": 114,
+      "title": "神州高铁技术股份有限公司负责人业绩考核与薪酬管理办法",
+      "tier1": "other",
+      "tier2": "governance_meeting",
+      "confidence": 0.625
+    },
+    {
+      "i": 125,
+      "title": "2021年度业绩说明会投资者关系活动记录表",
+      "tier1": "earnings_forecast",
+      "tier2": "other",
+      "confidence": 0.6499999999999999
+    },
+    {
+      "i": 129,
+      "title": "年度关联方资金占用专项审计报告",
+      "tier1": "related_party_transaction",
+      "tier2": "audit_internal_esg",
+      "confidence": 0.7999999999999999
+    },
+    {
+      "i": 199,
+      "title": "平安银行股份有限公司信息披露事务管理制度",
+      "tier1": "other",
+      "tier2": "governance_meeting",
+      "confidence": 0.7666666666666666
+    },
+    {
+      "i": 207,
+      "title": "股票交易异常波动公告",
+      "tier1": "other",
+      "tier2": "insider_trading",
+      "confidence": 0.6
+    },
+    {
+      "i": 234,
+      "title": "联合资信评估股份有限公司关于康佳集团股份有限公司2023年前三季度亏损的关注公告",
+      "tier1": "other",
+      "tier2": "earnings_forecast",
+      "confidence": 0.61
+    },
+    {
+      "i": 249,
+      "title": "2020年度监事会工作报告",
+      "tier1": "periodic_report",
+      "tier2": "governance_meeting",
+      "confidence": 0.7600000000000001
+    },
+    {
+      "i": 252,
+      "title": "关于公司非公开发行公司债券方案并向华侨城集团提供反担保的公告",
+      "tier1": "financing_capital",
+      "tier2": "guarantee_financial_assistance",
+      "confidence": 0.7333333333333334
+    },
+    {
+      "i": 272,
+      "title": "关于2025年度计提资产减值准备的公告",
+      "tier1": "earnings_forecast",
+      "tier2": "other",
+      "confidence": 0.6000000000000001
+    },
+    {
+      "i": 298,
+      "title": "关于2022年度计提资产减值准备的公告",
+      "tier1": "earnings_forecast",
+      "tier2": "other",
+      "confidence": 0.6000000000000001
+    },
+    {
+      "i": 299,
+      "title": "关于举办2021年度网上业绩说明会并征集相关问题的公告",
+      "tier1": "earnings_forecast",
+      "tier2": "other",
+      "confidence": 0.6666666666666666
+    }
+  ],
+  "records": [
+    {
+      "i": 0,
+      "title": "中天国富证券有限公司关于深圳美丽生态股份有限公司非公开发行股票之上市保荐书",
+      "tier1": "financing_capital",
+      "tier2": "financing_capital",
+      "conf": 0.9333333333333332
+    },
+    {
+      "i": 1,
+      "title": "关于控股股东所持股份新增轮候冻结的公告",
+      "tier1": "litigation_regulatory",
+      "tier2": "litigation_regulatory",
+      "conf": 0.8833333333333333
+    },
+    {
+      "i": 2,
+      "title": "2021年第一次临时股东大会决议公告",
+      "tier1": "governance_meeting",
+      "tier2": "governance_meeting",
+      "conf": 0.9633333333333333
+    },
+    {
+      "i": 3,
+      "title": "关于对外投资的公告",
+      "tier1": "financing_capital",
+      "tier2": "financing_capital",
+      "conf": 0.6499999999999999
+    },
+    {
+      "i": 4,
+      "title": "关于董事会对独立董事独立性评估的专项意见",
+      "tier1": "governance_meeting",
+      "tier2": "governance_meeting",
+      "conf": 0.7833333333333333
+    },
+    {
+      "i": 5,
+      "title": "2025年度权益分派实施公告",
+      "tier1": "dividend",
+      "tier2": "dividend",
+      "conf": 0.9633333333333333
+    },
+    {
+      "i": 6,
+      "title": "2021年非公开发行公司债券（第三期）发行结果公告",
+      "tier1": "financing_capital",
+      "tier2": "financing_capital",
+      "conf": 0.9633333333333333
+    },
+    {
+      "i": 7,
+      "title": "第九届董事会2024年第三次临时会议决议公告",
+      "tier1": "governance_meeting",
+      "tier2": "governance_meeting",
+      "conf": 0.9633333333333333
+    },
+    {
+      "i": 8,
+      "title": "境内同步披露公告",
+      "tier1": "other",
+      "tier2": "other",
+      "conf": 0.7000000000000001
+    },
+    {
+      "i": 9,
+      "title": "关于续聘会计师事务所的公告",
+      "tier1": "governance_meeting",
+      "tier2": "audit_internal_esg",
+      "conf": 0.9266666666666667
+    },
+    {
+      "i": 10,
+      "title": "关于为全资子公司重庆悦鼎房地产开发有限公司提供担保的公告",
+      "tier1": "guarantee_financial_assistance",
+      "tier2": "guarantee_financial_assistance",
+      "conf": 0.9633333333333333
+    },
+    {
+      "i": 11,
+      "title": "2020年半年度财务报告",
+      "tier1": "periodic_report",
+      "tier2": "periodic_report",
+      "conf": 0.9633333333333333
+    },
+    {
+      "i": 12,
+      "title": "关于使用闲置自有资金购买短期理财产品的公告",
+      "tier1": "financing_capital",
+      "tier2": "financing_capital",
+      "conf": 0.7833333333333333
+    },
+    {
+      "i": 13,
+      "title": "关于召开2026年第一次临时股东会的通知",
+      "tier1": "governance_meeting",
+      "tier2": "governance_meeting",
+      "conf": 0.9633333333333333
+    },
+    {
+      "i": 14,
+      "title": "2020年第一次临时股东大会决议公告",
+      "tier1": "governance_meeting",
+      "tier2": "governance_meeting",
+      "conf": 0.9633333333333333
+    },
+    {
+      "i": 15,
+      "title": "2021年第三季度报告",
+      "tier1": "periodic_report",
+      "tier2": "periodic_report",
+      "conf": 0.9633333333333333
+    },
+    {
+      "i": 16,
+      "title": "2023年度监事会报告",
+      "tier1": "periodic_report",
+      "tier2": "governance_meeting",
+      "conf": 0.7999999999999999
+    },
+    {
+      "i": 17,
+      "title": "拟进行商誉减值测试所涉及的北京智游网安科技有限公司资产组可收回价值项目资产评估报告",
+      "tier1": "audit_internal_esg",
+      "tier2": "audit_internal_esg",
+      "conf": 0.7666666666666666
+    },
+    {
+      "i": 18,
+      "title": "关于公司董事辞职的公告",
+      "tier1": "governance_meeting",
+      "tier2": "governance_meeting",
+      "conf": 0.9
+    },
+    {
+      "i": 19,
+      "title": "关于签订麦庙港（机场路-备塘河）清淤及淤泥处置工程合同的公告",
+      "tier1": "operating_contract_data",
+      "tier2": "operating_contract_data",
+      "conf": 0.9633333333333333
+    },
+    {
+      "i": 20,
+      "title": "控股股东及其他关联方非经营性资金占用及其他关联资金往来情况汇总表",
+      "tier1": "related_party_transaction",
+      "tier2": "related_party_transaction",
+      "conf": 0.9633333333333333
+    },
+    {
+      "i": 21,
+      "title": "募集资金使用管理制度（2025年12月修订）",
+      "tier1": "other",
+      "tier2": "financing_capital",
+      "conf": 0.8333333333333334
+    },
+    {
+      "i": 22,
+      "title": "关于按持股比例对烟台康云产业发展有限公司提供财务资助的公告",
+      "tier1": "guarantee_financial_assistance",
+      "tier2": "guarantee_financial_assistance",
+      "conf": 0.9633333333333333
+    },
+    {
+      "i": 23,
+      "title": "关于收到《中国证监会行政许可项目审查一次反馈意见通知书》的公告",
+      "tier1": "litigation_regulatory",
+      "tier2": "litigation_regulatory",
+      "conf": 0.91
+    },
+    {
+      "i": 24,
+      "title": "董事会决议公告",
+      "tier1": "governance_meeting",
+      "tier2": "governance_meeting",
+      "conf": 0.9633333333333333
+    },
+    {
+      "i": 25,
+      "title": "监事会决议公告",
+      "tier1": "governance_meeting",
+      "tier2": "governance_meeting",
+      "conf": 0.9633333333333333
+    },
+    {
+      "i": 26,
+      "title": "董事局决议公告",
+      "tier1": "governance_meeting",
+      "tier2": "governance_meeting",
+      "conf": 0.9633333333333333
+    },
+    {
+      "i": 27,
+      "title": "2019年社会责任报告",
+      "tier1": "audit_internal_esg",
+      "tier2": "audit_internal_esg",
+      "conf": 0.9466666666666667
+    },
+    {
+      "i": 28,
+      "title": "关于重新披露《中国宝安集团股份有限公司及其发行的16宝安01与17宝安02跟踪评级报告》的说明",
+      "tier1": "financing_capital",
+      "tier2": "financing_capital",
+      "conf": 0.8166666666666668
+    },
+    {
+      "i": 29,
+      "title": "关于筹划重大事项停牌的公告",
+      "tier1": "ma_restructuring",
+      "tier2": "ma_restructuring",
+      "conf": 0.7000000000000001
+    },
+    {
+      "i": 30,
+      "title": "2025年年度报告摘要",
+      "tier1": "periodic_report",
+      "tier2": "periodic_report",
+      "conf": 0.9866666666666667
+    },
+    {
+      "i": 31,
+      "title": "2019年年度权益分派实施公告",
+      "tier1": "dividend",
+      "tier2": "dividend",
+      "conf": 0.9666666666666667
+    },
+    {
+      "i": 32,
+      "title": "2024年第四次独立董事专门会议决议",
+      "tier1": "governance_meeting",
+      "tier2": "governance_meeting",
+      "conf": 0.9333333333333332
+    },
+    {
+      "i": 33,
+      "title": "关于回购股份注销完成暨股份变动的公告",
+      "tier1": "buyback",
+      "tier2": "buyback",
+      "conf": 0.9833333333333334
+    },
+    {
+      "i": 34,
+      "title": "关于计提和核销2024年半年度减值准备的公告",
+      "tier1": "other",
+      "tier2": "other",
+      "conf": 0.55
+    },
+    {
+      "i": 35,
+      "title": "2019年非公开发行公司债券（第二期）发行结果公告",
+      "tier1": "financing_capital",
+      "tier2": "financing_capital",
+      "conf": 0.9700000000000001
+    },
+    {
+      "i": 36,
+      "title": "2023年年度股东大会决议公告",
+      "tier1": "governance_meeting",
+      "tier2": "governance_meeting",
+      "conf": 0.9833333333333334
+    },
+    {
+      "i": 37,
+      "title": "关于公司出售资产的进展公告",
+      "tier1": "ma_restructuring",
+      "tier2": "ma_restructuring",
+      "conf": 0.8666666666666667
+    },
+    {
+      "i": 38,
+      "title": "对外提供财务资助管理制度（2025年12月制订）",
+      "tier1": "guarantee_financial_assistance",
+      "tier2": "guarantee_financial_assistance",
+      "conf": 0.9166666666666666
+    },
+    {
+      "i": 39,
+      "title": "2020年半年度业绩预告",
+      "tier1": "earnings_forecast",
+      "tier2": "earnings_forecast",
+      "conf": 0.9866666666666667
+    },
+    {
+      "i": 40,
+      "title": "关于持股5%以上股东减持股份比例达到1%的公告",
+      "tier1": "insider_trading",
+      "tier2": "insider_trading",
+      "conf": 0.9499999999999998
+    },
+    {
+      "i": 41,
+      "title": "国药集团一致药业股份有限公司2020年年度业绩快报",
+      "tier1": "earnings_forecast",
+      "tier2": "earnings_forecast",
+      "conf": 0.96
+    },
+    {
+      "i": 42,
+      "title": "内部控制鉴证报告",
+      "tier1": "audit_internal_esg",
+      "tier2": "audit_internal_esg",
+      "conf": 0.9733333333333333
+    },
+    {
+      "i": 43,
+      "title": "关于召开2024年第二次临时股东大会的通知",
+      "tier1": "governance_meeting",
+      "tier2": "governance_meeting",
+      "conf": 0.9866666666666667
+    },
+    {
+      "i": 44,
+      "title": "2018年度股东大会决议公告",
+      "tier1": "governance_meeting",
+      "tier2": "governance_meeting",
+      "conf": 0.9866666666666667
+    },
+    {
+      "i": 45,
+      "title": "2018年度内部控制自我评价报告",
+      "tier1": "audit_internal_esg",
+      "tier2": "audit_internal_esg",
+      "conf": 0.9766666666666666
+    },
+    {
+      "i": 46,
+      "title": "关于召开2019年度股东大会的通知",
+      "tier1": "governance_meeting",
+      "tier2": "governance_meeting",
+      "conf": 0.9866666666666667
+    },
+    {
+      "i": 47,
+      "title": "《董事会议事规则》（2020年3月）",
+      "tier1": "governance_meeting",
+      "tier2": "governance_meeting",
+      "conf": 0.9266666666666667
+    },
+    {
+      "i": 48,
+      "title": "独立董事关于提名第十四届董事会非独立董事候选人的独立意见",
+      "tier1": "governance_meeting",
+      "tier2": "governance_meeting",
+      "conf": 0.9166666666666666
+    },
+    {
+      "i": 49,
+      "title": "半年报董事会决议公告",
+      "tier1": "periodic_report",
+      "tier2": "governance_meeting",
+      "conf": 0.8833333333333333
+    },
+    {
+      "i": 50,
+      "title": "监事会决议公告",
+      "tier1": "governance_meeting",
+      "tier2": "governance_meeting",
+      "conf": 0.98
+    },
+    {
+      "i": 51,
+      "title": "关于召开2023年第二次临时股东大会的通知",
+      "tier1": "governance_meeting",
+      "tier2": "governance_meeting",
+      "conf": 0.9866666666666667
+    },
+    {
+      "i": 52,
+      "title": "关于重大仲裁的公告",
+      "tier1": "litigation_regulatory",
+      "tier2": "litigation_regulatory",
+      "conf": 0.98
+    },
+    {
+      "i": 53,
+      "title": "林溪郡项目员工跟投管理办法",
+      "tier1": "equity_incentive",
+      "tier2": "equity_incentive",
+      "conf": 0.7399999999999999
+    },
+    {
+      "i": 54,
+      "title": "深圳市深粮控股股份有限公司董事会战略委员会工作条例",
+      "tier1": "governance_meeting",
+      "tier2": "governance_meeting",
+      "conf": 0.9233333333333333
+    },
+    {
+      "i": 55,
+      "title": "第十届董事会2020年第一次临时会议决议公告",
+      "tier1": "governance_meeting",
+      "tier2": "governance_meeting",
+      "conf": 0.9833333333333334
+    },
+    {
+      "i": 56,
+      "title": "关于收到《民事起诉状》及《先行调解通知书》的公告",
+      "tier1": "litigation_regulatory",
+      "tier2": "litigation_regulatory",
+      "conf": 0.9833333333333334
+    },
+    {
+      "i": 57,
+      "title": "2021年第一季度业绩预告",
+      "tier1": "earnings_forecast",
+      "tier2": "earnings_forecast",
+      "conf": 0.9866666666666667
+    },
+    {
+      "i": 58,
+      "title": "关于回购部分境内上市外资股（B股）股份的进展公告",
+      "tier1": "buyback",
+      "tier2": "buyback",
+      "conf": 0.9833333333333334
+    },
+    {
+      "i": 59,
+      "title": "2018年面向合格投资者公开发行住房租赁专项公司债券（第一期）2019年付息公告",
+      "tier1": "financing_capital",
+      "tier2": "financing_capital",
+      "conf": 0.9433333333333334
+    },
+    {
+      "i": 60,
+      "title": "公司章程（自2025年2月7日起生效）",
+      "tier1": "governance_meeting",
+      "tier2": "governance_meeting",
+      "conf": 0.9166666666666666
+    },
+    {
+      "i": 61,
+      "title": "第十届监事会第二次会议决议公告",
+      "tier1": "governance_meeting",
+      "tier2": "governance_meeting",
+      "conf": 0.9499999999999998
+    },
+    {
+      "i": 62,
+      "title": "独立董事候选人声明（康晓岳）",
+      "tier1": "governance_meeting",
+      "tier2": "governance_meeting",
+      "conf": 0.9166666666666666
+    },
+    {
+      "i": 63,
+      "title": "董事局关于本次交易相关主体不存在《上市公司监管指引第7号——上市公司重大资产重组相关股票异常交易监管》第十二条情形的说明",
+      "tier1": "ma_restructuring",
+      "tier2": "ma_restructuring",
+      "conf": 0.9499999999999998
+    },
+    {
+      "i": 64,
+      "title": "2021年半年度财务报告",
+      "tier1": "periodic_report",
+      "tier2": "periodic_report",
+      "conf": 0.9333333333333332
+    },
+    {
+      "i": 65,
+      "title": "第十三届董事会第六次会议决议公告",
+      "tier1": "governance_meeting",
+      "tier2": "governance_meeting",
+      "conf": 0.9499999999999998
+    },
+    {
+      "i": 66,
+      "title": "关于披露重大资产重组预案暨公司股票复牌的提示性公告",
+      "tier1": "ma_restructuring",
+      "tier2": "ma_restructuring",
+      "conf": 0.9499999999999998
+    },
+    {
+      "i": 67,
+      "title": "神州高铁技术股份有限公司董事会授权管理办法",
+      "tier1": "other",
+      "tier2": "governance_meeting",
+      "conf": 0.9166666666666666
+    },
+    {
+      "i": 68,
+      "title": "独立董事关于公司聘任高级管理人员的独立意见",
+      "tier1": "governance_meeting",
+      "tier2": "governance_meeting",
+      "conf": 0.9
+    },
+    {
+      "i": 69,
+      "title": "2025年三季度报告",
+      "tier1": "periodic_report",
+      "tier2": "periodic_report",
+      "conf": 0.9499999999999998
+    },
+    {
+      "i": 70,
+      "title": "董事会决议公告",
+      "tier1": "governance_meeting",
+      "tier2": "governance_meeting",
+      "conf": 0.9499999999999998
+    },
+    {
+      "i": 71,
+      "title": "关于控股子公司为公司从华商银行获得的贷款提供担保的公告",
+      "tier1": "guarantee_financial_assistance",
+      "tier2": "guarantee_financial_assistance",
+      "conf": 0.96
+    },
+    {
+      "i": 72,
+      "title": "2023年年度报告摘要",
+      "tier1": "periodic_report",
+      "tier2": "periodic_report",
+      "conf": 0.9499999999999998
+    },
+    {
+      "i": 73,
+      "title": "股东大会议事规则修正案",
+      "tier1": "governance_meeting",
+      "tier2": "governance_meeting",
+      "conf": 0.9333333333333332
+    },
+    {
+      "i": 74,
+      "title": "年度关联方资金占用专项审计报告",
+      "tier1": "related_party_transaction",
+      "tier2": "related_party_transaction",
+      "conf": 0.875
+    },
+    {
+      "i": 75,
+      "title": "关于公司控股股东减持股份进展暨减持数量过半的公告",
+      "tier1": "insider_trading",
+      "tier2": "insider_trading",
+      "conf": 0.9
+    },
+    {
+      "i": 76,
+      "title": "关于召开2019年第四次临时股东大会的通知",
+      "tier1": "governance_meeting",
+      "tier2": "governance_meeting",
+      "conf": 0.9499999999999998
+    },
+    {
+      "i": 77,
+      "title": "平安银行股份有限公司关于2022年小型微型企业贷款专项金融债券发行完毕的公告",
+      "tier1": "financing_capital",
+      "tier2": "financing_capital",
+      "conf": 0.9499999999999998
+    },
+    {
+      "i": 78,
+      "title": "关于公司及子公司开展应收账款保理业务的公告",
+      "tier1": "other",
+      "tier2": "financing_capital",
+      "conf": 0.85
+    },
+    {
+      "i": 79,
+      "title": "《公司章程》（2022年4月）",
+      "tier1": "governance_meeting",
+      "tier2": "governance_meeting",
+      "conf": 0.9166666666666666
+    },
+    {
+      "i": 80,
+      "title": "公司2018年度内部控制自我评价报告",
+      "tier1": "audit_internal_esg",
+      "tier2": "audit_internal_esg",
+      "conf": 0.9499999999999998
+    },
+    {
+      "i": 81,
+      "title": "2022年半年度报告摘要",
+      "tier1": "periodic_report",
+      "tier2": "periodic_report",
+      "conf": 0.9499999999999998
+    },
+    {
+      "i": 82,
+      "title": "董事会议事规则修订对照表",
+      "tier1": "governance_meeting",
+      "tier2": "governance_meeting",
+      "conf": 0.9333333333333332
+    },
+    {
+      "i": 83,
+      "title": "2019年第一次临时股东大会法律意见书",
+      "tier1": "governance_meeting",
+      "tier2": "governance_meeting",
+      "conf": 0.8666666666666667
+    },
+    {
+      "i": 84,
+      "title": "补充更正公告",
+      "tier1": "other",
+      "tier2": "other",
+      "conf": 0.6
+    },
+    {
+      "i": 85,
+      "title": "监事会决议公告",
+      "tier1": "governance_meeting",
+      "tier2": "governance_meeting",
+      "conf": 0.9499999999999998
+    },
+    {
+      "i": 86,
+      "title": "2023年度董事会工作报告",
+      "tier1": "periodic_report",
+      "tier2": "governance_meeting",
+      "conf": 0.85
+    },
+    {
+      "i": 87,
+      "title": "2022-018 关于增补公司董事的公告",
+      "tier1": "governance_meeting",
+      "tier2": "governance_meeting",
+      "conf": 0.9166666666666666
+    },
+    {
+      "i": 88,
+      "title": "2019年年度报告",
+      "tier1": "periodic_report",
+      "tier2": "periodic_report",
+      "conf": 0.9499999999999998
+    },
+    {
+      "i": 89,
+      "title": "年度股东大会通知",
+      "tier1": "governance_meeting",
+      "tier2": "governance_meeting",
+      "conf": 0.9499999999999998
+    },
+    {
+      "i": 90,
+      "title": "2020年面向专业投资者公开发行公司债券（第一期）发行结果公告",
+      "tier1": "financing_capital",
+      "tier2": "financing_capital",
+      "conf": 0.9666666666666667
+    },
+    {
+      "i": 91,
+      "title": "2018年度股东大会的法律意见",
+      "tier1": "governance_meeting",
+      "tier2": "governance_meeting",
+      "conf": 0.9333333333333332
+    },
+    {
+      "i": 92,
+      "title": "半年报董事会决议公告",
+      "tier1": "periodic_report",
+      "tier2": "governance_meeting",
+      "conf": 0.84
+    },
+    {
+      "i": 93,
+      "title": "2022年年度业绩快报",
+      "tier1": "earnings_forecast",
+      "tier2": "earnings_forecast",
+      "conf": 0.96
+    },
+    {
+      "i": 94,
+      "title": "内部审计工作制度（2025年修订版）",
+      "tier1": "audit_internal_esg",
+      "tier2": "audit_internal_esg",
+      "conf": 0.96
+    },
+    {
+      "i": 95,
+      "title": "关于延长深圳能源集团股份有限公司2024年面向专业投资者公开发行可续期公司债券（第二期）簿记建档时间的公告",
+      "tier1": "financing_capital",
+      "tier2": "financing_capital",
+      "conf": 0.9666666666666667
+    },
+    {
+      "i": 96,
+      "title": "关于参加2020年度股东大会、2021年第一次 A 股类别股东大会及 2021年第一次 H 股类别股东大会相关防疫要求的提示性公告",
+      "tier1": "governance_meeting",
+      "tier2": "governance_meeting",
+      "conf": 0.94
+    },
+    {
+      "i": 97,
+      "title": "董事会审计委员会对会计师事务所2023年度履职情况评估及履行监督职责情况的报告",
+      "tier1": "audit_internal_esg",
+      "tier2": "audit_internal_esg",
+      "conf": 0.96
+    },
+    {
+      "i": 98,
+      "title": "万科企业股份有限公司2021年面向合格投资者公开发行住房租赁专项公司债券（第一期）跟踪评级报告（2021）",
+      "tier1": "financing_capital",
+      "tier2": "financing_capital",
+      "conf": 0.9333333333333332
+    },
+    {
+      "i": 99,
+      "title": "关于收到《仲裁申请书》的公告",
+      "tier1": "litigation_regulatory",
+      "tier2": "litigation_regulatory",
+      "conf": 0.9700000000000001
+    },
+    {
+      "i": 100,
+      "title": "关于为子公司提供担保的公告",
+      "tier1": "guarantee_financial_assistance",
+      "tier2": "guarantee_financial_assistance",
+      "conf": 0.9700000000000001
+    },
+    {
+      "i": 101,
+      "title": "关于对武汉建厂项目投资的公告",
+      "tier1": "operating_contract_data",
+      "tier2": "operating_contract_data",
+      "conf": 0.75
+    },
+    {
+      "i": 102,
+      "title": "董事会八届十七次会议决议公告",
+      "tier1": "governance_meeting",
+      "tier2": "governance_meeting",
+      "conf": 0.9700000000000001
+    },
+    {
+      "i": 103,
+      "title": "2018年度独立董事述职报告（谢韩珠）",
+      "tier1": "governance_meeting",
+      "tier2": "governance_meeting",
+      "conf": 0.8833333333333333
+    },
+    {
+      "i": 104,
+      "title": "2020年第一季度业绩预告",
+      "tier1": "earnings_forecast",
+      "tier2": "earnings_forecast",
+      "conf": 0.9700000000000001
+    },
+    {
+      "i": 105,
+      "title": "关于回购注销部分股权激励对象所持已获授但尚未解锁的限制性股票的公告",
+      "tier1": "equity_incentive",
+      "tier2": "equity_incentive",
+      "conf": 0.9066666666666666
+    },
+    {
+      "i": 106,
+      "title": "关于2018年A股限制性股票激励计划（第一期）第一个解除限售期解除限售股份上市流通的提示性公告",
+      "tier1": "equity_incentive",
+      "tier2": "equity_incentive",
+      "conf": 0.9666666666666667
+    },
+    {
+      "i": 107,
+      "title": "相关签字页",
+      "tier1": "other",
+      "tier2": "other",
+      "conf": 0.6666666666666666
+    },
+    {
+      "i": 108,
+      "title": "2021年第三季度报告",
+      "tier1": "periodic_report",
+      "tier2": "periodic_report",
+      "conf": 0.9700000000000001
+    },
+    {
+      "i": 109,
+      "title": "可转换公司债券持有人会议规则",
+      "tier1": "financing_capital",
+      "tier2": "financing_capital",
+      "conf": 0.8833333333333333
+    },
+    {
+      "i": 110,
+      "title": "关于举办2020年度网上业绩说明会并征集相关问题的公告",
+      "tier1": "earnings_forecast",
+      "tier2": "earnings_forecast",
+      "conf": 0.625
+    },
+    {
+      "i": 111,
+      "title": "关于公司2023年度对控股子公司担保额度预计的公告",
+      "tier1": "guarantee_financial_assistance",
+      "tier2": "guarantee_financial_assistance",
+      "conf": 0.9700000000000001
+    },
+    {
+      "i": 112,
+      "title": "深圳能源集团股份有限公司2022年面向专业投资者公开发行公司债券（第一期）（品种二）在深圳证券交易所上市的公告",
+      "tier1": "financing_capital",
+      "tier2": "financing_capital",
+      "conf": 0.9666666666666667
+    },
+    {
+      "i": 113,
+      "title": "北京市盈科（深圳）律师事务所关于公司2018年A股限制性股票激励计划（第二期）部分限制性股票回购注销相关事项之法律意见书",
+      "tier1": "equity_incentive",
+      "tier2": "equity_incentive",
+      "conf": 0.9333333333333332
+    },
+    {
+      "i": 114,
+      "title": "神州高铁技术股份有限公司负责人业绩考核与薪酬管理办法",
+      "tier1": "other",
+      "tier2": "governance_meeting",
+      "conf": 0.625
+    },
+    {
+      "i": 115,
+      "title": "独立董事候选人声明公告（刘烁）",
+      "tier1": "governance_meeting",
+      "tier2": "governance_meeting",
+      "conf": 0.9333333333333332
+    },
+    {
+      "i": 116,
+      "title": "关于为全资子公司提供担保的进展公告",
+      "tier1": "guarantee_financial_assistance",
+      "tier2": "guarantee_financial_assistance",
+      "conf": 0.9700000000000001
+    },
+    {
+      "i": 117,
+      "title": "关于召开2021年度业绩说明会的公告",
+      "tier1": "earnings_forecast",
+      "tier2": "earnings_forecast",
+      "conf": 0.625
+    },
+    {
+      "i": 118,
+      "title": "2021年第三次临时股东大会决议公告",
+      "tier1": "governance_meeting",
+      "tier2": "governance_meeting",
+      "conf": 0.9700000000000001
+    },
+    {
+      "i": 119,
+      "title": "简式权益变动报告书（二）",
+      "tier1": "insider_trading",
+      "tier2": "insider_trading",
+      "conf": 0.7999999999999999
+    },
+    {
+      "i": 120,
+      "title": "关于2024年度日常关联交易预计的公告",
+      "tier1": "related_party_transaction",
+      "tier2": "related_party_transaction",
+      "conf": 0.9499999999999998
+    },
+    {
+      "i": 121,
+      "title": "第二十九次（2020年度）股东大会法律意见书",
+      "tier1": "governance_meeting",
+      "tier2": "governance_meeting",
+      "conf": 0.96
+    },
+    {
+      "i": 122,
+      "title": "关于计提资产减值准备和预计负债的公告",
+      "tier1": "other",
+      "tier2": "other",
+      "conf": 0.675
+    },
+    {
+      "i": 123,
+      "title": "关于深圳经济特区房地产（集团）股份有限公司2023年度股东大会的法律意见书",
+      "tier1": "governance_meeting",
+      "tier2": "governance_meeting",
+      "conf": 0.96
+    },
+    {
+      "i": 124,
+      "title": "关于董事离任后三年内再次被提名为监事候选人的公告",
+      "tier1": "governance_meeting",
+      "tier2": "governance_meeting",
+      "conf": 0.9166666666666666
+    },
+    {
+      "i": 125,
+      "title": "2021年度业绩说明会投资者关系活动记录表",
+      "tier1": "earnings_forecast",
+      "tier2": "other",
+      "conf": 0.6499999999999999
+    },
+    {
+      "i": 126,
+      "title": "关于筹划重大资产重组事项停牌进展公告",
+      "tier1": "ma_restructuring",
+      "tier2": "ma_restructuring",
+      "conf": 0.9700000000000001
+    },
+    {
+      "i": 127,
+      "title": "2023年第三次临时股东大会决议公告",
+      "tier1": "governance_meeting",
+      "tier2": "governance_meeting",
+      "conf": 0.9700000000000001
+    },
+    {
+      "i": 128,
+      "title": "关于拟续聘会计师事务所的公告",
+      "tier1": "governance_meeting",
+      "tier2": "audit_internal_esg",
+      "conf": 0.9499999999999998
+    },
+    {
+      "i": 129,
+      "title": "年度关联方资金占用专项审计报告",
+      "tier1": "related_party_transaction",
+      "tier2": "audit_internal_esg",
+      "conf": 0.7999999999999999
+    },
+    {
+      "i": 130,
+      "title": "股票交易异常波动公告",
+      "tier1": "other",
+      "tier2": "litigation_regulatory",
+      "conf": 0.8500000000000001
+    },
+    {
+      "i": 131,
+      "title": "为控股子公司提供担保的进展公告",
+      "tier1": "guarantee_financial_assistance",
+      "tier2": "guarantee_financial_assistance",
+      "conf": 0.9700000000000001
+    },
+    {
+      "i": 132,
+      "title": "关于股票交易异常波动的公告",
+      "tier1": "other",
+      "tier2": "litigation_regulatory",
+      "conf": 0.8500000000000001
+    },
+    {
+      "i": 133,
+      "title": "深圳市深粮控股股份有限公司第十届董事会第二十次会议决议公告",
+      "tier1": "governance_meeting",
+      "tier2": "governance_meeting",
+      "conf": 0.9700000000000001
+    },
+    {
+      "i": 134,
+      "title": "独立董事提名人声明与承诺（秦虹）",
+      "tier1": "governance_meeting",
+      "tier2": "governance_meeting",
+      "conf": 0.9333333333333332
+    },
+    {
+      "i": 135,
+      "title": "关于股东减持计划届满暨实施情况的公告",
+      "tier1": "insider_trading",
+      "tier2": "insider_trading",
+      "conf": 0.9499999999999998
+    },
+    {
+      "i": 136,
+      "title": "2023年第一次临时股东大会决议公告",
+      "tier1": "governance_meeting",
+      "tier2": "governance_meeting",
+      "conf": 0.9700000000000001
+    },
+    {
+      "i": 137,
+      "title": "广东旭晨律师事务所关于深圳市全新好股份有限公司2025年第二次临时股东会的法律意见书",
+      "tier1": "governance_meeting",
+      "tier2": "governance_meeting",
+      "conf": 0.9700000000000001
+    },
+    {
+      "i": 138,
+      "title": "董事局决议公告",
+      "tier1": "governance_meeting",
+      "tier2": "governance_meeting",
+      "conf": 0.96
+    },
+    {
+      "i": 139,
+      "title": "第十一届董事会第二十五次会议决议公告",
+      "tier1": "governance_meeting",
+      "tier2": "governance_meeting",
+      "conf": 0.9700000000000001
+    },
+    {
+      "i": 140,
+      "title": "中国国际金融股份有限公司关于本次交易符合《上市公司监管指引第9号——上市公司筹划和实施重大资产重组的监管要求》第四条规定的核查意见",
+      "tier1": "ma_restructuring",
+      "tier2": "ma_restructuring",
+      "conf": 0.9700000000000001
+    },
+    {
+      "i": 141,
+      "title": "深圳市特力（集团）股份有限公司收购报告书摘要",
+      "tier1": "ma_restructuring",
+      "tier2": "ma_restructuring",
+      "conf": 0.9499999999999998
+    },
+    {
+      "i": 142,
+      "title": "半年报董事会决议公告",
+      "tier1": "periodic_report",
+      "tier2": "governance_meeting",
+      "conf": 0.85
+    },
+    {
+      "i": 143,
+      "title": "2019年度（第二次）临时股东大会的法律意见书",
+      "tier1": "governance_meeting",
+      "tier2": "governance_meeting",
+      "conf": 0.9700000000000001
+    },
+    {
+      "i": 144,
+      "title": "2024年第一次临时股东大会决议公告",
+      "tier1": "governance_meeting",
+      "tier2": "governance_meeting",
+      "conf": 0.9700000000000001
+    },
+    {
+      "i": 145,
+      "title": "2018年年度审计报告",
+      "tier1": "audit_internal_esg",
+      "tier2": "audit_internal_esg",
+      "conf": 0.9499999999999998
+    },
+    {
+      "i": 146,
+      "title": "2023年3月销售及近期新增项目情况简报",
+      "tier1": "operating_contract_data",
+      "tier2": "operating_contract_data",
+      "conf": 0.9499999999999998
+    },
+    {
+      "i": 147,
+      "title": "平安银行股份有限公司2021年年度权益分派实施公告",
+      "tier1": "dividend",
+      "tier2": "dividend",
+      "conf": 0.9700000000000001
+    },
+    {
+      "i": 148,
+      "title": "关于持股5%以上股东增持上市公司股份超过1%的公告",
+      "tier1": "insider_trading",
+      "tier2": "insider_trading",
+      "conf": 0.9499999999999998
+    },
+    {
+      "i": 149,
+      "title": "独立董事关于关联交易的专门意见",
+      "tier1": "related_party_transaction",
+      "tier2": "related_party_transaction",
+      "conf": 0.9166666666666666
+    },
+    {
+      "i": 150,
+      "title": "苏亚金诚关于对全新好年报问询函的回复",
+      "tier1": "litigation_regulatory",
+      "tier2": "audit_internal_esg",
+      "conf": 0.875
+    },
+    {
+      "i": 151,
+      "title": "北京市天元律师事务所关于神州高铁2024年第三次临时股东大会的法律意见",
+      "tier1": "governance_meeting",
+      "tier2": "governance_meeting",
+      "conf": 0.9333333333333332
+    },
+    {
+      "i": 152,
+      "title": "第九届董事会第十二次会议决议公告",
+      "tier1": "governance_meeting",
+      "tier2": "governance_meeting",
+      "conf": 0.96
+    },
+    {
+      "i": 153,
+      "title": "关于回购股份事项前十名股东持股信息的公告",
+      "tier1": "buyback",
+      "tier2": "buyback",
+      "conf": 0.9499999999999998
+    },
+    {
+      "i": 154,
+      "title": "2021年年度审计报告",
+      "tier1": "audit_internal_esg",
+      "tier2": "audit_internal_esg",
+      "conf": 0.9333333333333332
+    },
+    {
+      "i": 155,
+      "title": "董事会议事规则",
+      "tier1": "governance_meeting",
+      "tier2": "governance_meeting",
+      "conf": 0.9499999999999998
+    },
+    {
+      "i": 156,
+      "title": "第十八届董事会独立董事关于第十八届董事会第二十七次会议相关事项的独立意见",
+      "tier1": "governance_meeting",
+      "tier2": "governance_meeting",
+      "conf": 0.9333333333333332
+    },
+    {
+      "i": 157,
+      "title": "关于开展金融衍生品交易业务的可行性分析报告",
+      "tier1": "financing_capital",
+      "tier2": "financing_capital",
+      "conf": 0.65
+    },
+    {
+      "i": 158,
+      "title": "深圳东风汽车有限公司审计报告（2019年）",
+      "tier1": "audit_internal_esg",
+      "tier2": "audit_internal_esg",
+      "conf": 0.9499999999999998
+    },
+    {
+      "i": 159,
+      "title": "独立董事候选人声明与承诺（宋少华）",
+      "tier1": "governance_meeting",
+      "tier2": "governance_meeting",
+      "conf": 0.9333333333333332
+    },
+    {
+      "i": 160,
+      "title": "关于按照《香港上市规则》公布2019年6月份证券变动月报表的公告",
+      "tier1": "financing_capital",
+      "tier2": "financing_capital",
+      "conf": 0.7666666666666666
+    },
+    {
+      "i": 161,
+      "title": "股东大会议事规则（2022年修订）",
+      "tier1": "governance_meeting",
+      "tier2": "governance_meeting",
+      "conf": 0.9499999999999998
+    },
+    {
+      "i": 162,
+      "title": "关于提请股东大会给予董事会发行公司H股股份之一般性授权的公告",
+      "tier1": "financing_capital",
+      "tier2": "financing_capital",
+      "conf": 0.9499999999999998
+    },
+    {
+      "i": 163,
+      "title": "关于公司涉及诉讼的进展公告",
+      "tier1": "litigation_regulatory",
+      "tier2": "litigation_regulatory",
+      "conf": 0.96
+    },
+    {
+      "i": 164,
+      "title": "年度关联方资金占用专项审计报告",
+      "tier1": "related_party_transaction",
+      "tier2": "related_party_transaction",
+      "conf": 0.8333333333333334
+    },
+    {
+      "i": 165,
+      "title": "2025年半年度报告摘要",
+      "tier1": "periodic_report",
+      "tier2": "periodic_report",
+      "conf": 0.96
+    },
+    {
+      "i": 166,
+      "title": "第九届董事会2019年第十九次会议决议公告",
+      "tier1": "governance_meeting",
+      "tier2": "governance_meeting",
+      "conf": 0.96
+    },
+    {
+      "i": 167,
+      "title": "大悦城控股集团股份有限公司关于“20大悦01”发行人不行使赎回选择权、票面利率调整及投资者回售实施办法第一次提示性公告",
+      "tier1": "financing_capital",
+      "tier2": "financing_capital",
+      "conf": 0.8833333333333333
+    },
+    {
+      "i": 168,
+      "title": "第十二届董事会2025年第九次临时会议决议公告",
+      "tier1": "governance_meeting",
+      "tier2": "governance_meeting",
+      "conf": 0.96
+    },
+    {
+      "i": 169,
+      "title": "独立董事关于增加董事候选人的独立意见",
+      "tier1": "governance_meeting",
+      "tier2": "governance_meeting",
+      "conf": 0.9333333333333332
+    },
+    {
+      "i": 170,
+      "title": "对一汽财务有限公司的风险评估报告",
+      "tier1": "related_party_transaction",
+      "tier2": "related_party_transaction",
+      "conf": 0.7000000000000001
+    },
+    {
+      "i": 171,
+      "title": "2020年第三季度报告全文",
+      "tier1": "periodic_report",
+      "tier2": "periodic_report",
+      "conf": 0.96
+    },
+    {
+      "i": 172,
+      "title": "内幕信息知情人登记管理制度（2021.08）",
+      "tier1": "other",
+      "tier2": "insider_trading",
+      "conf": 0.9499999999999998
+    },
+    {
+      "i": 173,
+      "title": "2018年A股限制性股票激励计划（第二期）激励对象名单（授予日）",
+      "tier1": "equity_incentive",
+      "tier2": "equity_incentive",
+      "conf": 0.9700000000000001
+    },
+    {
+      "i": 174,
+      "title": "独立董事对第九届董事会第十四次会议相关审议事项的独立意见",
+      "tier1": "governance_meeting",
+      "tier2": "governance_meeting",
+      "conf": 0.9333333333333332
+    },
+    {
+      "i": 175,
+      "title": "“22宝安01”本息兑付暨摘牌公告",
+      "tier1": "financing_capital",
+      "tier2": "financing_capital",
+      "conf": 0.8833333333333333
+    },
+    {
+      "i": 176,
+      "title": "年度股东大会通知",
+      "tier1": "governance_meeting",
+      "tier2": "governance_meeting",
+      "conf": 0.96
+    },
+    {
+      "i": 177,
+      "title": "第九届董事会第六次会议决议公告",
+      "tier1": "governance_meeting",
+      "tier2": "governance_meeting",
+      "conf": 0.96
+    },
+    {
+      "i": 178,
+      "title": "关于2019年度股东大会、2020年第一次A股类别股东大会及2020年第一次H股类别股东大会的第二次提示性公告",
+      "tier1": "governance_meeting",
+      "tier2": "governance_meeting",
+      "conf": 0.9499999999999998
+    },
+    {
+      "i": 179,
+      "title": "2020年半年度报告",
+      "tier1": "periodic_report",
+      "tier2": "periodic_report",
+      "conf": 0.96
+    },
+    {
+      "i": 180,
+      "title": "独立董事对担保等事项的独立意见",
+      "tier1": "guarantee_financial_assistance",
+      "tier2": "guarantee_financial_assistance",
+      "conf": 0.75
+    },
+    {
+      "i": 181,
+      "title": "2020年度监事会工作报告",
+      "tier1": "periodic_report",
+      "tier2": "governance_meeting",
+      "conf": 0.8166666666666668
+    },
+    {
+      "i": 182,
+      "title": "2025年度内部控制审计报告",
+      "tier1": "audit_internal_esg",
+      "tier2": "audit_internal_esg",
+      "conf": 0.9499999999999998
+    },
+    {
+      "i": 183,
+      "title": "2025年度股东会决议公告",
+      "tier1": "governance_meeting",
+      "tier2": "governance_meeting",
+      "conf": 0.9499999999999998
+    },
+    {
+      "i": 184,
+      "title": "董事会决议公告",
+      "tier1": "governance_meeting",
+      "tier2": "governance_meeting",
+      "conf": 0.9499999999999998
+    },
+    {
+      "i": 185,
+      "title": "第九届董事会第三十五次会议决议公告",
+      "tier1": "governance_meeting",
+      "tier2": "governance_meeting",
+      "conf": 0.9499999999999998
+    },
+    {
+      "i": 186,
+      "title": "国盛证券有限责任公司关于深圳美丽生态股份有限公司股权分置改革有限售条件流通股申请上市流通的核查意见",
+      "tier1": "financing_capital",
+      "tier2": "financing_capital",
+      "conf": 0.6
+    },
+    {
+      "i": 187,
+      "title": "2023年度股东大会文件",
+      "tier1": "governance_meeting",
+      "tier2": "governance_meeting",
+      "conf": 0.9333333333333332
+    },
+    {
+      "i": 188,
+      "title": "投资者关系管理办法",
+      "tier1": "governance_meeting",
+      "tier2": "governance_meeting",
+      "conf": 0.7666666666666666
+    },
+    {
+      "i": 189,
+      "title": "2024年半年度报告摘要",
+      "tier1": "periodic_report",
+      "tier2": "periodic_report",
+      "conf": 0.9766666666666666
+    },
+    {
+      "i": 190,
+      "title": "中粮财务有限责任公司2020年6月30日风险管理内部控制审核报告",
+      "tier1": "audit_internal_esg",
+      "tier2": "audit_internal_esg",
+      "conf": 0.9499999999999998
+    },
+    {
+      "i": 191,
+      "title": "关于续聘会计师事务所的公告",
+      "tier1": "governance_meeting",
+      "tier2": "audit_internal_esg",
+      "conf": 0.9166666666666666
+    },
+    {
+      "i": 192,
+      "title": "关于参加2025年度深圳辖区上市公司投资者网上集体接待日活动的公告",
+      "tier1": "other",
+      "tier2": "other",
+      "conf": 0.8
+    },
+    {
+      "i": 193,
+      "title": "深圳市深粮控股股份有限公司拟支付现金购买东莞市深粮物流有限公司股权所涉及该公司股东全部权益价值项目资产评估报告",
+      "tier1": "audit_internal_esg",
+      "tier2": "ma_restructuring",
+      "conf": 0.9333333333333332
+    },
+    {
+      "i": 194,
+      "title": "董事会议事规则（2019年8月）",
+      "tier1": "governance_meeting",
+      "tier2": "governance_meeting",
+      "conf": 0.8833333333333333
+    },
+    {
+      "i": 195,
+      "title": "2020年度（第四次）临时股东大会法律意见书",
+      "tier1": "governance_meeting",
+      "tier2": "governance_meeting",
+      "conf": 0.8833333333333333
+    },
+    {
+      "i": 196,
+      "title": "关于重大仲裁事项的进展公告",
+      "tier1": "litigation_regulatory",
+      "tier2": "litigation_regulatory",
+      "conf": 0.96
+    },
+    {
+      "i": 197,
+      "title": "关于诉讼案件进展公告",
+      "tier1": "litigation_regulatory",
+      "tier2": "litigation_regulatory",
+      "conf": 0.9700000000000001
+    },
+    {
+      "i": 198,
+      "title": "北京市海问律师事务所关于公司公开发行可转换公司债券在深圳证券交易所上市的法律意见书",
+      "tier1": "financing_capital",
+      "tier2": "financing_capital",
+      "conf": 0.9333333333333332
+    },
+    {
+      "i": 199,
+      "title": "平安银行股份有限公司信息披露事务管理制度",
+      "tier1": "other",
+      "tier2": "governance_meeting",
+      "conf": 0.7666666666666666
+    },
+    {
+      "i": 200,
+      "title": "2019年半年度报告（已取消）",
+      "tier1": "periodic_report",
+      "tier2": "periodic_report",
+      "conf": 0.9766666666666666
+    },
+    {
+      "i": 201,
+      "title": "董事会关于2018年度募集资金存放与使用情况的专项报告的鉴证报告",
+      "tier1": "audit_internal_esg",
+      "tier2": "audit_internal_esg",
+      "conf": 0.7
+    },
+    {
+      "i": 202,
+      "title": "关于召开2025年第二次临时股东大会的通知",
+      "tier1": "governance_meeting",
+      "tier2": "governance_meeting",
+      "conf": 0.96
+    },
+    {
+      "i": 203,
+      "title": "关于回购部分境内上市外资股（B股）股份的进展公告",
+      "tier1": "buyback",
+      "tier2": "buyback",
+      "conf": 0.9700000000000001
+    },
+    {
+      "i": 204,
+      "title": "2021年半年度报告摘要",
+      "tier1": "periodic_report",
+      "tier2": "periodic_report",
+      "conf": 0.9766666666666666
+    },
+    {
+      "i": 205,
+      "title": "关于延长深圳能源集团股份有限公司2026年面向专业投资者公开发行可续期公司债券（第一期）簿记建档时间的公告",
+      "tier1": "financing_capital",
+      "tier2": "financing_capital",
+      "conf": 0.9333333333333332
+    },
+    {
+      "i": 206,
+      "title": "关于召开公司2019年第一次临时股东大会的通知",
+      "tier1": "governance_meeting",
+      "tier2": "governance_meeting",
+      "conf": 0.96
+    },
+    {
+      "i": 207,
+      "title": "股票交易异常波动公告",
+      "tier1": "other",
+      "tier2": "insider_trading",
+      "conf": 0.6
+    },
+    {
+      "i": 208,
+      "title": "关于增加2022年第一次临时股东大会临时提案暨股东大会补充通知的公告",
+      "tier1": "governance_meeting",
+      "tier2": "governance_meeting",
+      "conf": 0.9433333333333334
+    },
+    {
+      "i": 209,
+      "title": "监事会决议公告",
+      "tier1": "governance_meeting",
+      "tier2": "governance_meeting",
+      "conf": 0.9499999999999998
+    },
+    {
+      "i": 210,
+      "title": "为控股子公司提供担保的进展公告",
+      "tier1": "guarantee_financial_assistance",
+      "tier2": "guarantee_financial_assistance",
+      "conf": 0.98
+    },
+    {
+      "i": 211,
+      "title": "关于执行董事、行长辞任的公告",
+      "tier1": "litigation_regulatory",
+      "tier2": "governance_meeting",
+      "conf": 0.8033333333333333
+    },
+    {
+      "i": 212,
+      "title": "关于续聘2026年度审计机构的公告",
+      "tier1": "other",
+      "tier2": "audit_internal_esg",
+      "conf": 0.9666666666666667
+    },
+    {
+      "i": 213,
+      "title": "关于下属子公司收到民事裁定书的公告",
+      "tier1": "other",
+      "tier2": "litigation_regulatory",
+      "conf": 0.9766666666666666
+    },
+    {
+      "i": 214,
+      "title": "独立董事年度述职报告",
+      "tier1": "governance_meeting",
+      "tier2": "governance_meeting",
+      "conf": 0.85
+    },
+    {
+      "i": 215,
+      "title": "2025年度（第一次）临时股东大会之法律意见书",
+      "tier1": "governance_meeting",
+      "tier2": "governance_meeting",
+      "conf": 0.9533333333333333
+    },
+    {
+      "i": 216,
+      "title": "收购报告书摘要",
+      "tier1": "ma_restructuring",
+      "tier2": "ma_restructuring",
+      "conf": 0.9366666666666666
+    },
+    {
+      "i": 217,
+      "title": "第九届董事会第十五次临时会议决议公告",
+      "tier1": "governance_meeting",
+      "tier2": "governance_meeting",
+      "conf": 0.9833333333333334
+    },
+    {
+      "i": 218,
+      "title": "2026年一季度业绩快报",
+      "tier1": "earnings_forecast",
+      "tier2": "earnings_forecast",
+      "conf": 0.9633333333333333
+    },
+    {
+      "i": 219,
+      "title": "关于签订《全面金融合作协议》暨关联交易的公告",
+      "tier1": "operating_contract_data",
+      "tier2": "related_party_transaction",
+      "conf": 0.9700000000000001
+    },
+    {
+      "i": 220,
+      "title": "总经理工作细则",
+      "tier1": "governance_meeting",
+      "tier2": "governance_meeting",
+      "conf": 0.9033333333333333
+    },
+    {
+      "i": 221,
+      "title": "关于延长万科企业股份有限公司2022年面向专业投资者公开发行公司债券（第三期）簿记建档时间的公告",
+      "tier1": "financing_capital",
+      "tier2": "financing_capital",
+      "conf": 0.96
+    },
+    {
+      "i": 222,
+      "title": "独立董事年度述职报告",
+      "tier1": "governance_meeting",
+      "tier2": "governance_meeting",
+      "conf": 0.85
+    },
+    {
+      "i": 223,
+      "title": "第十届董事会第十一次会议决议公告",
+      "tier1": "governance_meeting",
+      "tier2": "governance_meeting",
+      "conf": 0.9833333333333334
+    },
+    {
+      "i": 224,
+      "title": "关于筹划公司控制权变更事项进展暨复牌的公告",
+      "tier1": "ma_restructuring",
+      "tier2": "ma_restructuring",
+      "conf": 0.9733333333333333
+    },
+    {
+      "i": 225,
+      "title": "关于2024年度权益分派实施后调整回购价格上限的公告",
+      "tier1": "buyback",
+      "tier2": "buyback",
+      "conf": 0.9066666666666667
+    },
+    {
+      "i": 226,
+      "title": "关于股东股份解除质押暨协议转让过户完成的公告",
+      "tier1": "insider_trading",
+      "tier2": "insider_trading",
+      "conf": 0.7466666666666666
+    },
+    {
+      "i": 227,
+      "title": "关于召开公司2019年第三次临时股东大会的通知",
+      "tier1": "governance_meeting",
+      "tier2": "governance_meeting",
+      "conf": 0.9833333333333334
+    },
+    {
+      "i": 228,
+      "title": "关于为控股公司提供担保的进展公告",
+      "tier1": "guarantee_financial_assistance",
+      "tier2": "guarantee_financial_assistance",
+      "conf": 0.98
+    },
+    {
+      "i": 229,
+      "title": "第十一届董事会第二十七次会议决议公告",
+      "tier1": "governance_meeting",
+      "tier2": "governance_meeting",
+      "conf": 0.9833333333333334
+    },
+    {
+      "i": 230,
+      "title": "2022年年度报告",
+      "tier1": "periodic_report",
+      "tier2": "periodic_report",
+      "conf": 0.9899999999999999
+    },
+    {
+      "i": 231,
+      "title": "关于为子公司提供担保事项的进展公告",
+      "tier1": "guarantee_financial_assistance",
+      "tier2": "guarantee_financial_assistance",
+      "conf": 0.98
+    },
+    {
+      "i": 232,
+      "title": "神州高铁技术股份有限公司董事会议事规则",
+      "tier1": "governance_meeting",
+      "tier2": "governance_meeting",
+      "conf": 0.9500000000000001
+    },
+    {
+      "i": 233,
+      "title": "关于2018年度股东大会的提示性公告",
+      "tier1": "governance_meeting",
+      "tier2": "governance_meeting",
+      "conf": 0.9833333333333334
+    },
+    {
+      "i": 234,
+      "title": "联合资信评估股份有限公司关于康佳集团股份有限公司2023年前三季度亏损的关注公告",
+      "tier1": "other",
+      "tier2": "earnings_forecast",
+      "conf": 0.61
+    },
+    {
+      "i": 235,
+      "title": "关于筹划重大资产重组事项停牌进展公告",
+      "tier1": "ma_restructuring",
+      "tier2": "ma_restructuring",
+      "conf": 0.9766666666666666
+    },
+    {
+      "i": 236,
+      "title": "为控股子公司提供担保的进展公告",
+      "tier1": "guarantee_financial_assistance",
+      "tier2": "guarantee_financial_assistance",
+      "conf": 0.98
+    },
+    {
+      "i": 237,
+      "title": "关于立案调查事项进展暨风险提示性公告",
+      "tier1": "litigation_regulatory",
+      "tier2": "litigation_regulatory",
+      "conf": 0.9766666666666666
+    },
+    {
+      "i": 238,
+      "title": "关于公司持股5%以上股东所持公司股份被司法冻结的公告",
+      "tier1": "litigation_regulatory",
+      "tier2": "litigation_regulatory",
+      "conf": 0.9466666666666667
+    },
+    {
+      "i": 239,
+      "title": "关于召开2019年第六次临时股东大会的提示性公告",
+      "tier1": "governance_meeting",
+      "tier2": "governance_meeting",
+      "conf": 0.9833333333333334
+    },
+    {
+      "i": 240,
+      "title": "关于开展应收账款保理业务的公告",
+      "tier1": "other",
+      "tier2": "financing_capital",
+      "conf": 0.8166666666666668
+    },
+    {
+      "i": 241,
+      "title": "年度关联方资金占用专项审计报告",
+      "tier1": "related_party_transaction",
+      "tier2": "audit_internal_esg",
+      "conf": 0.85
+    },
+    {
+      "i": 242,
+      "title": "关于股东权益变动的提示性公告",
+      "tier1": "insider_trading",
+      "tier2": "insider_trading",
+      "conf": 0.76
+    },
+    {
+      "i": 243,
+      "title": "年度关联方资金占用专项审计报告",
+      "tier1": "related_party_transaction",
+      "tier2": "audit_internal_esg",
+      "conf": 0.85
+    },
+    {
+      "i": 244,
+      "title": "关于最近五年被证券监管部门和交易所采取处罚或监管措施以及整改情况的公告",
+      "tier1": "litigation_regulatory",
+      "tier2": "litigation_regulatory",
+      "conf": 0.9333333333333332
+    },
+    {
+      "i": 245,
+      "title": "《总裁工作细则》修订对照表",
+      "tier1": "governance_meeting",
+      "tier2": "governance_meeting",
+      "conf": 0.85
+    },
+    {
+      "i": 246,
+      "title": "关于回购注销2018年A股限制性股票激励计划（第一期）部分限制性股票的公告",
+      "tier1": "equity_incentive",
+      "tier2": "equity_incentive",
+      "conf": 0.8566666666666666
+    },
+    {
+      "i": 247,
+      "title": "关于与深铁置业共同投资等关联交易事项的公告",
+      "tier1": "related_party_transaction",
+      "tier2": "related_party_transaction",
+      "conf": 0.96
+    },
+    {
+      "i": 248,
+      "title": "关于修订《大悦城控股集团股份有限公司章程》及其附件的公告",
+      "tier1": "governance_meeting",
+      "tier2": "governance_meeting",
+      "conf": 0.9
+    },
+    {
+      "i": 249,
+      "title": "2020年度监事会工作报告",
+      "tier1": "periodic_report",
+      "tier2": "governance_meeting",
+      "conf": 0.7600000000000001
+    },
+    {
+      "i": 250,
+      "title": "关于参加深圳辖区上市公司2022年投资者网上集体接待日活动的公告",
+      "tier1": "other",
+      "tier2": "other",
+      "conf": 0.7666666666666666
+    },
+    {
+      "i": 251,
+      "title": "中兴财光华会计师事务所关于对深交所公司部年报问询函〔2023〕第281号的回复",
+      "tier1": "litigation_regulatory",
+      "tier2": "litigation_regulatory",
+      "conf": 0.7433333333333333
+    },
+    {
+      "i": 252,
+      "title": "关于公司非公开发行公司债券方案并向华侨城集团提供反担保的公告",
+      "tier1": "financing_capital",
+      "tier2": "guarantee_financial_assistance",
+      "conf": 0.7333333333333334
+    },
+    {
+      "i": 253,
+      "title": "关于公司实际控制人发生变更的提示性公告",
+      "tier1": "ma_restructuring",
+      "tier2": "ma_restructuring",
+      "conf": 0.8166666666666668
+    },
+    {
+      "i": 254,
+      "title": "关于2025年度股东会取消部分议案暨补充通知的公告",
+      "tier1": "governance_meeting",
+      "tier2": "governance_meeting",
+      "conf": 0.9333333333333332
+    },
+    {
+      "i": 255,
+      "title": "关于控股子公司大悦城地产有限公司（0207.HK）披露2020年1-3月未经审核营运数据的公告",
+      "tier1": "other",
+      "tier2": "operating_contract_data",
+      "conf": 0.9
+    },
+    {
+      "i": 256,
+      "title": "第十一届董事会第二次（临时）会议决议公告",
+      "tier1": "governance_meeting",
+      "tier2": "governance_meeting",
+      "conf": 0.96
+    },
+    {
+      "i": 257,
+      "title": "关于继续延期回复深圳证券交易所年报问询函的公告",
+      "tier1": "litigation_regulatory",
+      "tier2": "litigation_regulatory",
+      "conf": 0.85
+    },
+    {
+      "i": 258,
+      "title": "关于大股东股权质押的公告",
+      "tier1": "other",
+      "tier2": "insider_trading",
+      "conf": 0.8
+    },
+    {
+      "i": 259,
+      "title": "深圳能源集团股份有限公司2020年面向专业投资者公开发行公司债券（第一期）2023年付息公告",
+      "tier1": "financing_capital",
+      "tier2": "financing_capital",
+      "conf": 0.9
+    },
+    {
+      "i": 260,
+      "title": "关于使用闲置自有资金购买银行理财产品的公告",
+      "tier1": "financing_capital",
+      "tier2": "financing_capital",
+      "conf": 0.7733333333333333
+    },
+    {
+      "i": 261,
+      "title": "平安银行股份有限公司2022年第一次股东大会决议公告",
+      "tier1": "governance_meeting",
+      "tier2": "governance_meeting",
+      "conf": 0.96
+    },
+    {
+      "i": 262,
+      "title": "关于董事会、监事会延期换届选举的提示性公告",
+      "tier1": "governance_meeting",
+      "tier2": "governance_meeting",
+      "conf": 0.9
+    },
+    {
+      "i": 263,
+      "title": "《公司章程》修订案",
+      "tier1": "governance_meeting",
+      "tier2": "governance_meeting",
+      "conf": 0.9
+    },
+    {
+      "i": 264,
+      "title": "2022年半年度业绩预告",
+      "tier1": "earnings_forecast",
+      "tier2": "earnings_forecast",
+      "conf": 0.96
+    },
+    {
+      "i": 265,
+      "title": "中天国富证券有限公司关于深圳美丽生态股份有限公司非公开发行股票会后事项承诺函",
+      "tier1": "financing_capital",
+      "tier2": "financing_capital",
+      "conf": 0.9
+    },
+    {
+      "i": 266,
+      "title": "信息披露事务管理制度",
+      "tier1": "other",
+      "tier2": "governance_meeting",
+      "conf": 0.85
+    },
+    {
+      "i": 267,
+      "title": "信息披露管理制度（2025年12月）",
+      "tier1": "other",
+      "tier2": "governance_meeting",
+      "conf": 0.85
+    },
+    {
+      "i": 268,
+      "title": "关于2026年第二季度订单获取情况的自愿性信息披露公告",
+      "tier1": "operating_contract_data",
+      "tier2": "operating_contract_data",
+      "conf": 0.9499999999999998
+    },
+    {
+      "i": 269,
+      "title": "第九届董事会第九次会议决议公告",
+      "tier1": "governance_meeting",
+      "tier2": "governance_meeting",
+      "conf": 0.96
+    },
+    {
+      "i": 270,
+      "title": "北京市盈科（深圳）律师事务所关于公司2018年A股限制性股票激励计划（第一期）部分限制性股票回购注销相关事项之法律意见书",
+      "tier1": "equity_incentive",
+      "tier2": "equity_incentive",
+      "conf": 0.96
+    },
+    {
+      "i": 271,
+      "title": "2024年半年度报告",
+      "tier1": "periodic_report",
+      "tier2": "periodic_report",
+      "conf": 0.9899999999999999
+    },
+    {
+      "i": 272,
+      "title": "关于2025年度计提资产减值准备的公告",
+      "tier1": "earnings_forecast",
+      "tier2": "other",
+      "conf": 0.6000000000000001
+    },
+    {
+      "i": 273,
+      "title": "公司章程（2020年3月）",
+      "tier1": "governance_meeting",
+      "tier2": "governance_meeting",
+      "conf": 0.85
+    },
+    {
+      "i": 274,
+      "title": "关于富奥泵业分公司机油泵、电动水泵项目投资的公告",
+      "tier1": "operating_contract_data",
+      "tier2": "operating_contract_data",
+      "conf": 0.8166666666666668
+    },
+    {
+      "i": 275,
+      "title": "深圳能源集团股份有限公司2021年面向专业投资者公开发行公司债券(第一期)（品种一）2022年付息公告",
+      "tier1": "financing_capital",
+      "tier2": "financing_capital",
+      "conf": 0.9166666666666666
+    },
+    {
+      "i": 276,
+      "title": "《公司章程》（2023年11月）",
+      "tier1": "governance_meeting",
+      "tier2": "governance_meeting",
+      "conf": 0.85
+    },
+    {
+      "i": 277,
+      "title": "关于聘任2023年度审计机构的公告",
+      "tier1": "other",
+      "tier2": "audit_internal_esg",
+      "conf": 0.9499999999999998
+    },
+    {
+      "i": 278,
+      "title": "2019年第三季度报告全文",
+      "tier1": "periodic_report",
+      "tier2": "periodic_report",
+      "conf": 0.9899999999999999
+    },
+    {
+      "i": 279,
+      "title": "年度股东大会通知",
+      "tier1": "governance_meeting",
+      "tier2": "governance_meeting",
+      "conf": 0.9700000000000001
+    },
+    {
+      "i": 280,
+      "title": "“17宝安02”2021年付息公告",
+      "tier1": "financing_capital",
+      "tier2": "financing_capital",
+      "conf": 0.9166666666666666
+    },
+    {
+      "i": 281,
+      "title": "关于《中国证监会并购重组审核委员会2019年第57次会议审核意见的回复》之核查意见",
+      "tier1": "ma_restructuring",
+      "tier2": "ma_restructuring",
+      "conf": 0.96
+    },
+    {
+      "i": 282,
+      "title": "深圳市深粮控股股份有限公司关于租赁深汕粮食储备库（一期）的公告",
+      "tier1": "other",
+      "tier2": "operating_contract_data",
+      "conf": 0.8166666666666668
+    },
+    {
+      "i": 283,
+      "title": "2020年第一季度报告全文",
+      "tier1": "periodic_report",
+      "tier2": "periodic_report",
+      "conf": 0.9899999999999999
+    },
+    {
+      "i": 284,
+      "title": "董事会决议公告",
+      "tier1": "governance_meeting",
+      "tier2": "governance_meeting",
+      "conf": 0.9700000000000001
+    },
+    {
+      "i": 285,
+      "title": "董事会决议公告",
+      "tier1": "governance_meeting",
+      "tier2": "governance_meeting",
+      "conf": 0.9700000000000001
+    },
+    {
+      "i": 286,
+      "title": "半年报董事会决议公告",
+      "tier1": "periodic_report",
+      "tier2": "governance_meeting",
+      "conf": 0.85
+    },
+    {
+      "i": 287,
+      "title": "2019年年度股东大会决议公告",
+      "tier1": "governance_meeting",
+      "tier2": "governance_meeting",
+      "conf": 0.9700000000000001
+    },
+    {
+      "i": 288,
+      "title": "年度关联方资金占用专项审计报告",
+      "tier1": "related_party_transaction",
+      "tier2": "related_party_transaction",
+      "conf": 0.8166666666666668
+    },
+    {
+      "i": 289,
+      "title": "股东大会法律意见书（深科技2023年第二次临时股东大会）",
+      "tier1": "governance_meeting",
+      "tier2": "governance_meeting",
+      "conf": 0.9166666666666666
+    },
+    {
+      "i": 290,
+      "title": "以募集资金置换预先投入募投项目资金的专项说明鉴证报告",
+      "tier1": "audit_internal_esg",
+      "tier2": "financing_capital",
+      "conf": 0.8666666666666667
+    },
+    {
+      "i": 291,
+      "title": "关于为银行贷款事项提供担保的公告",
+      "tier1": "guarantee_financial_assistance",
+      "tier2": "guarantee_financial_assistance",
+      "conf": 0.9833333333333334
+    },
+    {
+      "i": 292,
+      "title": "2018年度股东大会的法律意见书",
+      "tier1": "governance_meeting",
+      "tier2": "governance_meeting",
+      "conf": 0.9266666666666666
+    },
+    {
+      "i": 293,
+      "title": "关于对特力宝库供应链项目进行投资的公告",
+      "tier1": "operating_contract_data",
+      "tier2": "operating_contract_data",
+      "conf": 0.8166666666666668
+    },
+    {
+      "i": 294,
+      "title": "2021年半年度报告",
+      "tier1": "periodic_report",
+      "tier2": "periodic_report",
+      "conf": 0.9899999999999999
+    },
+    {
+      "i": 295,
+      "title": "关于召开2023年第一次临时股东大会的提示性公告",
+      "tier1": "governance_meeting",
+      "tier2": "governance_meeting",
+      "conf": 0.9700000000000001
+    },
+    {
+      "i": 296,
+      "title": "关于全资子公司转让控股子公司北京中粮万科房地产开发有限公司50%股权的公告",
+      "tier1": "ma_restructuring",
+      "tier2": "ma_restructuring",
+      "conf": 0.9499999999999998
+    },
+    {
+      "i": 297,
+      "title": "关于2020年度第一期超短期融资券发行情况的公告",
+      "tier1": "financing_capital",
+      "tier2": "financing_capital",
+      "conf": 0.96
+    },
+    {
+      "i": 298,
+      "title": "关于2022年度计提资产减值准备的公告",
+      "tier1": "earnings_forecast",
+      "tier2": "other",
+      "conf": 0.6000000000000001
+    },
+    {
+      "i": 299,
+      "title": "关于举办2021年度网上业绩说明会并征集相关问题的公告",
+      "tier1": "earnings_forecast",
+      "tier2": "other",
+      "conf": 0.6666666666666666
+    }
+  ]
+}

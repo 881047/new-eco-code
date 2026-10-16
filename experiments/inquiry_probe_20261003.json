@@ -1,0 +1,499 @@
+{
+ "ran_at": "2026-10-03 17:28:26",
+ "kind": "问询函延迟族语料勘察(只读, 判据冻结前的天花板标定)",
+ "corpus": {
+  "files": 5459,
+  "rows": 4603371
+ },
+ "counts": {
+  "letters_raw": 6990,
+  "letters_excluded": 60,
+  "letters_clean": 6930,
+  "replies_raw": 25373,
+  "replies_excluded": 5878,
+  "replies_clean": 19495,
+  "regulatory_watch_out_of_scope": 8831,
+  "pairs": 3709,
+  "pair_rate_vs_replies": 0.19
+ },
+ "latency_days_stats": {
+  "mean": 23.183068212456188,
+  "median": 16.0,
+  "p90": 52.0,
+  "share_within_30d": 0.7678619574009167
+ },
+ "stocks_with_any_pair": 1666,
+ "yearly_stocks_with_pair": {
+  "2019": 492,
+  "2020": 492,
+  "2021": 379,
+  "2022": 386,
+  "2023": 528,
+  "2024": 151,
+  "2025": 69,
+  "2026": 36
+ },
+ "monthly_coverage_ceiling": {
+  "min": 6,
+  "median": 98.5,
+  "max": 266,
+  "p10": 12.5,
+  "n_anchors_ge_200": 7,
+  "n_anchors": 86
+ },
+ "coverage_sample": [
+  {
+   "anchor": "2019-08-31",
+   "n_stocks_with_latency": 177,
+   "n_pairs": 205
+  },
+  {
+   "anchor": "2019-09-30",
+   "n_stocks_with_latency": 137,
+   "n_pairs": 162
+  },
+  {
+   "anchor": "2019-10-31",
+   "n_stocks_with_latency": 132,
+   "n_pairs": 146
+  },
+  {
+   "anchor": "2019-11-30",
+   "n_stocks_with_latency": 135,
+   "n_pairs": 161
+  },
+  {
+   "anchor": "2019-12-31",
+   "n_stocks_with_latency": 134,
+   "n_pairs": 163
+  },
+  {
+   "anchor": "2020-01-31",
+   "n_stocks_with_latency": 130,
+   "n_pairs": 161
+  },
+  {
+   "anchor": "2020-02-29",
+   "n_stocks_with_latency": 114,
+   "n_pairs": 141
+  },
+  {
+   "anchor": "2020-03-31",
+   "n_stocks_with_latency": 75,
+   "n_pairs": 90
+  },
+  {
+   "anchor": "2020-04-30",
+   "n_stocks_with_latency": 96,
+   "n_pairs": 111
+  },
+  {
+   "anchor": "2020-05-31",
+   "n_stocks_with_latency": 143,
+   "n_pairs": 163
+  },
+  {
+   "anchor": "2020-06-30",
+   "n_stocks_with_latency": 216,
+   "n_pairs": 246
+  },
+  {
+   "anchor": "2020-07-31",
+   "n_stocks_with_latency": 231,
+   "n_pairs": 257
+  },
+  {
+   "anchor": "2020-08-31",
+   "n_stocks_with_latency": 216,
+   "n_pairs": 236
+  },
+  {
+   "anchor": "2020-09-30",
+   "n_stocks_with_latency": 160,
+   "n_pairs": 172
+  },
+  {
+   "anchor": "2020-10-31",
+   "n_stocks_with_latency": 130,
+   "n_pairs": 145
+  },
+  {
+   "anchor": "2020-11-30",
+   "n_stocks_with_latency": 112,
+   "n_pairs": 127
+  },
+  {
+   "anchor": "2020-12-31",
+   "n_stocks_with_latency": 117,
+   "n_pairs": 138
+  },
+  {
+   "anchor": "2021-01-31",
+   "n_stocks_with_latency": 119,
+   "n_pairs": 155
+  },
+  {
+   "anchor": "2021-02-28",
+   "n_stocks_with_latency": 122,
+   "n_pairs": 157
+  },
+  {
+   "anchor": "2021-03-31",
+   "n_stocks_with_latency": 104,
+   "n_pairs": 135
+  },
+  {
+   "anchor": "2021-04-30",
+   "n_stocks_with_latency": 92,
+   "n_pairs": 114
+  },
+  {
+   "anchor": "2021-05-31",
+   "n_stocks_with_latency": 87,
+   "n_pairs": 109
+  },
+  {
+   "anchor": "2021-06-30",
+   "n_stocks_with_latency": 121,
+   "n_pairs": 157
+  },
+  {
+   "anchor": "2021-07-31",
+   "n_stocks_with_latency": 120,
+   "n_pairs": 151
+  },
+  {
+   "anchor": "2021-08-31",
+   "n_stocks_with_latency": 137,
+   "n_pairs": 162
+  },
+  {
+   "anchor": "2021-09-30",
+   "n_stocks_with_latency": 110,
+   "n_pairs": 140
+  },
+  {
+   "anchor": "2021-10-31",
+   "n_stocks_with_latency": 112,
+   "n_pairs": 149
+  },
+  {
+   "anchor": "2021-11-30",
+   "n_stocks_with_latency": 106,
+   "n_pairs": 144
+  },
+  {
+   "anchor": "2021-12-31",
+   "n_stocks_with_latency": 106,
+   "n_pairs": 148
+  },
+  {
+   "anchor": "2022-01-31",
+   "n_stocks_with_latency": 115,
+   "n_pairs": 157
+  },
+  {
+   "anchor": "2022-02-28",
+   "n_stocks_with_latency": 107,
+   "n_pairs": 147
+  },
+  {
+   "anchor": "2022-03-31",
+   "n_stocks_with_latency": 101,
+   "n_pairs": 140
+  },
+  {
+   "anchor": "2022-04-30",
+   "n_stocks_with_latency": 94,
+   "n_pairs": 129
+  },
+  {
+   "anchor": "2022-05-31",
+   "n_stocks_with_latency": 109,
+   "n_pairs": 132
+  },
+  {
+   "anchor": "2022-06-30",
+   "n_stocks_with_latency": 132,
+   "n_pairs": 164
+  },
+  {
+   "anchor": "2022-07-31",
+   "n_stocks_with_latency": 146,
+   "n_pairs": 189
+  },
+  {
+   "anchor": "2022-08-31",
+   "n_stocks_with_latency": 136,
+   "n_pairs": 174
+  },
+  {
+   "anchor": "2022-09-30",
+   "n_stocks_with_latency": 119,
+   "n_pairs": 145
+  },
+  {
+   "anchor": "2022-10-31",
+   "n_stocks_with_latency": 101,
+   "n_pairs": 120
+  },
+  {
+   "anchor": "2022-11-30",
+   "n_stocks_with_latency": 119,
+   "n_pairs": 144
+  },
+  {
+   "anchor": "2022-12-31",
+   "n_stocks_with_latency": 96,
+   "n_pairs": 122
+  },
+  {
+   "anchor": "2023-01-31",
+   "n_stocks_with_latency": 92,
+   "n_pairs": 115
+  },
+  {
+   "anchor": "2023-02-28",
+   "n_stocks_with_latency": 78,
+   "n_pairs": 98
+  },
+  {
+   "anchor": "2023-03-31",
+   "n_stocks_with_latency": 95,
+   "n_pairs": 113
+  },
+  {
+   "anchor": "2023-04-30",
+   "n_stocks_with_latency": 164,
+   "n_pairs": 198
+  },
+  {
+   "anchor": "2023-05-31",
+   "n_stocks_with_latency": 228,
+   "n_pairs": 279
+  },
+  {
+   "anchor": "2023-06-30",
+   "n_stocks_with_latency": 266,
+   "n_pairs": 357
+  },
+  {
+   "anchor": "2023-07-31",
+   "n_stocks_with_latency": 260,
+   "n_pairs": 351
+  },
+  {
+   "anchor": "2023-08-31",
+   "n_stocks_with_latency": 214,
+   "n_pairs": 294
+  },
+  {
+   "anchor": "2023-09-30",
+   "n_stocks_with_latency": 180,
+   "n_pairs": 252
+  },
+  {
+   "anchor": "2023-10-31",
+   "n_stocks_with_latency": 142,
+   "n_pairs": 200
+  },
+  {
+   "anchor": "2023-11-30",
+   "n_stocks_with_latency": 113,
+   "n_pairs": 158
+  },
+  {
+   "anchor": "2023-12-31",
+   "n_stocks_with_latency": 82,
+   "n_pairs": 122
+  },
+  {
+   "anchor": "2024-01-31",
+   "n_stocks_with_latency": 77,
+   "n_pairs": 107
+  },
+  {
+   "anchor": "2024-02-29",
+   "n_stocks_with_latency": 65,
+   "n_pairs": 86
+  },
+  {
+   "anchor": "2024-03-31",
+   "n_stocks_with_latency": 48,
+   "n_pairs": 58
+  },
+  {
+   "anchor": "2024-04-30",
+   "n_stocks_with_latency": 46,
+   "n_pairs": 58
+  },
+  {
+   "anchor": "2024-05-31",
+   "n_stocks_with_latency": 60,
+   "n_pairs": 75
+  },
+  {
+   "anchor": "2024-06-30",
+   "n_stocks_with_latency": 81,
+   "n_pairs": 100
+  },
+  {
+   "anchor": "2024-07-31",
+   "n_stocks_with_latency": 66,
+   "n_pairs": 79
+  },
+  {
+   "anchor": "2024-08-31",
+   "n_stocks_with_latency": 46,
+   "n_pairs": 48
+  },
+  {
+   "anchor": "2024-09-30",
+   "n_stocks_with_latency": 13,
+   "n_pairs": 14
+  },
+  {
+   "anchor": "2024-10-31",
+   "n_stocks_with_latency": 12,
+   "n_pairs": 12
+  },
+  {
+   "anchor": "2024-11-30",
+   "n_stocks_with_latency": 15,
+   "n_pairs": 16
+  },
+  {
+   "anchor": "2024-12-31",
+   "n_stocks_with_latency": 23,
+   "n_pairs": 26
+  },
+  {
+   "anchor": "2025-01-31",
+   "n_stocks_with_latency": 22,
+   "n_pairs": 25
+  },
+  {
+   "anchor": "2025-02-28",
+   "n_stocks_with_latency": 19,
+   "n_pairs": 20
+  },
+  {
+   "anchor": "2025-03-31",
+   "n_stocks_with_latency": 12,
+   "n_pairs": 14
+  },
+  {
+   "anchor": "2025-04-30",
+   "n_stocks_with_latency": 14,
+   "n_pairs": 16
+  },
+  {
+   "anchor": "2025-05-31",
+   "n_stocks_with_latency": 21,
+   "n_pairs": 23
+  },
+  {
+   "anchor": "2025-06-30",
+   "n_stocks_with_latency": 29,
+   "n_pairs": 30
+  },
+  {
+   "anchor": "2025-07-31",
+   "n_stocks_with_latency": 33,
+   "n_pairs": 36
+  },
+  {
+   "anchor": "2025-08-31",
+   "n_stocks_with_latency": 31,
+   "n_pairs": 33
+  },
+  {
+   "anchor": "2025-09-30",
+   "n_stocks_with_latency": 22,
+   "n_pairs": 22
+  },
+  {
+   "anchor": "2025-10-31",
+   "n_stocks_with_latency": 9,
+   "n_pairs": 9
+  },
+  {
+   "anchor": "2025-11-30",
+   "n_stocks_with_latency": 6,
+   "n_pairs": 6
+  },
+  {
+   "anchor": "2025-12-31",
+   "n_stocks_with_latency": 10,
+   "n_pairs": 10
+  },
+  {
+   "anchor": "2026-01-31",
+   "n_stocks_with_latency": 15,
+   "n_pairs": 15
+  },
+  {
+   "anchor": "2026-02-28",
+   "n_stocks_with_latency": 16,
+   "n_pairs": 16
+  },
+  {
+   "anchor": "2026-03-31",
+   "n_stocks_with_latency": 13,
+   "n_pairs": 13
+  },
+  {
+   "anchor": "2026-04-30",
+   "n_stocks_with_latency": 11,
+   "n_pairs": 11
+  },
+  {
+   "anchor": "2026-05-31",
+   "n_stocks_with_latency": 11,
+   "n_pairs": 11
+  },
+  {
+   "anchor": "2026-06-30",
+   "n_stocks_with_latency": 12,
+   "n_pairs": 12
+  },
+  {
+   "anchor": "2026-07-31",
+   "n_stocks_with_latency": 18,
+   "n_pairs": 18
+  },
+  {
+   "anchor": "2026-08-31",
+   "n_stocks_with_latency": 14,
+   "n_pairs": 14
+  },
+  {
+   "anchor": "2026-09-30",
+   "n_stocks_with_latency": 10,
+   "n_pairs": 10
+  }
+ ],
+ "letter_title_samples": [
+  "关于收到深圳证监局问询函的公告",
+  "关于对公司2019年年报问询函核查回函",
+  "关于对公司2019年半年报问询函核查回函",
+  "关于对公司2018年年报问询函核查回函",
+  "关于对公司2018年业绩预告问询函核查回函"
+ ],
+ "reply_title_samples": [
+  "关于对深圳国华网安科技股份有限公司2022年年报问询函的回复",
+  "关于对深圳国华网安科技股份有限公司2021年年报问询函的回复",
+  "关于对深圳国华网安科技股份有限公司2020年年报问询函的回复",
+  "关于对公司的年报问询函的回复",
+  "关于深圳证券交易所《关于对深圳中国农大科技股份有限公司的重组问询函》之回复"
+ ],
+ "excluded_title_samples": [
+  "关于延期提交《年报问询函》的公告",
+  "关于延期提交《年报问询函》的公告",
+  "关于收到深圳证券交易所问询函暨重大资产重组进展的公告",
+  "关于《2021年年报的问询函》相关事项的进展公告",
+  "关于年报问询函回函的公告（已取消）"
+ ],
+ "elapsed_sec": 37.3,
+ "note": "勘察只标定天花板与可行性; 判据在预注册冻结, 本读数不进任何因子判决"
+}

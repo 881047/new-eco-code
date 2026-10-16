@@ -1,0 +1,128 @@
+{
+ "ran_at": "2026-09-22 12:59:24",
+ "elapsed_sec": 495.0,
+ "stage": "A（只读，不复制文件）",
+ "prod": "data\\neweco.db",
+ "backup": "data\\backup\\neweco_20260920.db",
+ "backup_size_gb": 11.849,
+ "prod_probe": {
+  "quick_check": "ok",
+  "tables": {
+   "daily": {
+    "rows": 12832474,
+    "max_trade_date": "20260921"
+   },
+   "daily_basic": {
+    "rows": 12755023
+   },
+   "trade_cal": {
+    "rows": 5478
+   },
+   "model_score": {
+    "rows": 444380,
+    "max_trade_date": "20260831"
+   },
+   "factor": {
+    "rows": 22112900,
+    "max_trade_date": "20260921"
+   },
+   "backtest_summary": {
+    "rows": 208
+   },
+   "paper_nav": {
+    "rows": 6
+   }
+  },
+  "errors": [],
+  "quick_check_sec": 217.9
+ },
+ "backup_probe": {
+  "quick_check": "ok",
+  "tables": {
+   "daily": {
+    "rows": 12826921,
+    "max_trade_date": "20260918"
+   },
+   "daily_basic": {
+    "rows": 12749470
+   },
+   "trade_cal": {
+    "rows": 5478
+   },
+   "model_score": {
+    "rows": 444380,
+    "max_trade_date": "20260831"
+   },
+   "factor": {
+    "rows": 22112697,
+    "max_trade_date": "20260918"
+   },
+   "backtest_summary": {
+    "rows": 170
+   },
+   "paper_nav": {
+    "rows": 5
+   }
+  },
+  "errors": [],
+  "quick_check_sec": 275.6
+ },
+ "table_compare": [
+  {
+   "table": "daily",
+   "prod_rows": 12832474,
+   "backup_rows": 12826921,
+   "row_delta": 5553,
+   "prod_max_date": "20260921",
+   "backup_max_date": "20260918",
+   "date_delta_days": null,
+   "note": "备份落后于生产 ⇒ 正常（备份是过去某一时点的快照）"
+  },
+  {
+   "table": "daily_basic",
+   "prod_rows": 12755023,
+   "backup_rows": 12749470,
+   "row_delta": 5553
+  },
+  {
+   "table": "trade_cal",
+   "prod_rows": 5478,
+   "backup_rows": 5478,
+   "row_delta": 0
+  },
+  {
+   "table": "model_score",
+   "prod_rows": 444380,
+   "backup_rows": 444380,
+   "row_delta": 0,
+   "prod_max_date": "20260831",
+   "backup_max_date": "20260831",
+   "date_delta_days": null,
+   "note": "与生产同一天"
+  },
+  {
+   "table": "factor",
+   "prod_rows": 22112900,
+   "backup_rows": 22112697,
+   "row_delta": 203,
+   "prod_max_date": "20260921",
+   "backup_max_date": "20260918",
+   "date_delta_days": null,
+   "note": "备份落后于生产 ⇒ 正常（备份是过去某一时点的快照）"
+  },
+  {
+   "table": "backtest_summary",
+   "prod_rows": 208,
+   "backup_rows": 170,
+   "row_delta": 38
+  },
+  {
+   "table": "paper_nav",
+   "prod_rows": 6,
+   "backup_rows": 5,
+   "row_delta": 1
+  }
+ ],
+ "ok": true,
+ "verdict": "**恢复演练（段 A）通过**：生产库与备份的 `quick_check` 均为 `ok`，关键表全部可读，备份的最新 `trade_date` 落后于生产 ⇒ 这是一份**停留在过去时点、结构完整**的可用快照。⇒ 结论：备份**可用于恢复**（结构层面）；本演练**不**验证'用备份重建实例后跑通月链'（那是段 B，成本高、按需再做）。"
+}

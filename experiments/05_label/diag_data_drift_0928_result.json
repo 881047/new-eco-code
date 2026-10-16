@@ -1,0 +1,56 @@
+{
+ "date": "2026-09-29 21:5x (0929 复跑)",
+ "baseline_backup": "neweco_20260928.db",
+ "cutoff": "20260929",
+ "note": "2026-09-29 用 09-28 备份复跑 diag_data_drift_0916(原 0916 结果已恢复至 diag_data_drift_0916_result.json)——补充证据: stock_basic 单日 5 行变化(行业重分类持续发生)",
+ "tables": {
+  "daily": {
+   "changed": 0,
+   "deleted": 0,
+   "new_normal": 33307,
+   "top_dates": []
+  },
+  "adj_factor": {
+   "changed": 0,
+   "deleted": 0,
+   "new_normal": 33383,
+   "top_dates": []
+  },
+  "daily_basic": {
+   "changed": 0,
+   "deleted": 0,
+   "new_normal": 33307,
+   "top_dates": []
+  },
+  "fina_indicator": {
+   "changed": 0,
+   "deleted": 1,
+   "new_normal": 0,
+   "top_dates": []
+  },
+  "stock_basic": {
+   "changed": 4,
+   "deleted": 0,
+   "new_normal": 0,
+   "top_dates": []
+  },
+  "index_daily": {
+   "changed": 0,
+   "deleted": 0,
+   "new_normal": 35,
+   "top_dates": []
+  },
+  "trade_cal": {
+   "changed": 0,
+   "deleted": 0,
+   "new_normal": 474,
+   "top_dates": []
+  },
+  "stk_limit": {
+   "changed": 0,
+   "deleted": 0,
+   "new_normal": 0,
+   "top_dates": []
+  }
+ }
+}

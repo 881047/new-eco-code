@@ -1,0 +1,132 @@
+{
+ "source": "experiments/05_label/F76b_uniqueness_ab_result.json",
+ "assumptions": {
+  "K_now": 4,
+  "shared_seeds": 2,
+  "rho_if_shared": 0.5,
+  "model": "A_s = mu + b_s(sigma_b, 持续) + ebar_s(sigma_e/sqrt(T), 逐期)",
+  "sigma_time_is_well_measured": "n=114, 相对标准误 ±6.7%",
+  "sigma_total_is_one_observation": "95%CI = [0.45x, 31.9x] 点估计 (chi2_1)"
+ },
+ "sigma_time_pp": {
+  "portfolio": {
+   "seed_A": 2.97,
+   "seed_B": 2.73
+  },
+  "portfolio_mean": 2.85,
+  "research": {
+   "seed_A": 1.05,
+   "seed_B": 1.1
+  },
+  "research_mean": 1.07,
+  "research_over_portfolio_gain": 2.66
+ },
+ "sigma_total_pp": {
+  "0.0": {
+   "from_base_pair": 4.17,
+   "from_uw_effect": 5.03
+  },
+  "0.5": {
+   "from_base_pair": 5.9,
+   "from_uw_effect": 7.12
+  }
+ },
+ "sigma_b_pp": {
+  "0.0": {
+   "base对": {
+    "sigma_total": 4.17,
+    "sigma_b": 3.04,
+    "b_share_of_var": 0.533
+   },
+   "uw效应": {
+    "sigma_total": 5.03,
+    "sigma_b": 4.14,
+    "b_share_of_var": 0.679
+   }
+  },
+  "0.5": {
+   "base对": {
+    "sigma_total": 5.9,
+    "sigma_b": 5.17,
+    "b_share_of_var": 0.767
+   },
+   "uw效应": {
+    "sigma_total": 7.12,
+    "sigma_b": 6.52,
+    "b_share_of_var": 0.84
+   }
+  }
+ },
+ "levers": {
+  "lever_T": [
+   {
+    "T": 114,
+    "sigma_pp": 5.9,
+    "delta_min_pp": 11.8
+   },
+   {
+    "T": 491,
+    "sigma_pp": 5.35,
+    "delta_min_pp": 10.69
+   },
+   {
+    "T": 608,
+    "sigma_pp": 5.31,
+    "delta_min_pp": 10.62
+   }
+  ],
+  "lever_K": [
+   {
+    "K": 4,
+    "sigma_pp": 5.9,
+    "delta_min_pp": 11.8
+   },
+   {
+    "K": 8,
+    "sigma_pp": 4.17,
+    "delta_min_pp": 8.34
+   },
+   {
+    "K": 16,
+    "sigma_pp": 2.95,
+    "delta_min_pp": 5.9
+   },
+   {
+    "K": 32,
+    "sigma_pp": 2.09,
+    "delta_min_pp": 4.17
+   }
+  ],
+  "lever_N": [
+   {
+    "N": 1,
+    "sigma_pp": 5.9,
+    "delta_min_pp": 11.8
+   },
+   {
+    "N": 2,
+    "sigma_pp": 4.17,
+    "delta_min_pp": 8.34
+   },
+   {
+    "N": 4,
+    "sigma_pp": 2.95,
+    "delta_min_pp": 5.9
+   },
+   {
+    "N": 8,
+    "sigma_pp": 2.09,
+    "delta_min_pp": 4.17
+   }
+  ]
+ },
+ "paired_t_deflation": {
+  "expected_spread_pp": 4.03,
+  "observed_spread_pp": 7.12,
+  "ratio": 1.77,
+  "f76b_seedB_t_reported": 1.894,
+  "f76b_seedB_t_adjusted": 1.07,
+  "note": "双 seed 配对 t 只计入时间抽样；若持续性分量未抵消 ⇒ t 高估至多 ratio 倍。n=2 定不了论。"
+ },
+ "caveat": "σ_total 仅 1 个独立差值 ⇒ 区间跨两个数量级；σ_time 由 n=114 测得准，是 σ 的硬下界。"
+}

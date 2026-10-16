@@ -1,0 +1,52 @@
+{
+ "script_sha": "4e06902a22cd50f2",
+ "w5_scores": "F4_scores_seedB.npz",
+ "trail": 104,
+ "refit": 26,
+ "cap": 0.5,
+ "common_window": 491,
+ "arms": {
+  "A_现役W5+M": {
+   "n": 491,
+   "excess_pp": 11.52,
+   "ann": 0.1696,
+   "mdd": -0.3437,
+   "turnover": 0.092,
+   "ic": 0.0706
+  },
+  "B_全die等权": {
+   "n": 491,
+   "excess_pp": 6.09,
+   "ann": 0.1153,
+   "mdd": -0.3173,
+   "turnover": 0.026,
+   "ic": 0.0475
+  },
+  "C_良率加权": {
+   "n": 491,
+   "excess_pp": 8.77,
+   "ann": 0.1421,
+   "mdd": -0.3582,
+   "turnover": 0.047,
+   "ic": 0.0718
+  },
+  "D_良率加权+Top2": {
+   "n": 491,
+   "excess_pp": 13.11,
+   "ann": 0.1854,
+   "mdd": -0.3015,
+   "turnover": 0.102,
+   "ic": 0.0884
+  }
+ },
+ "verdict": {
+  "baseline_pp": 11.52,
+  "yield_pp": 8.77,
+  "equal_pp": 6.09,
+  "beat_baseline": false,
+  "mdd_ok": true,
+  "beat_equal": true,
+  "adopt": false
+ },
+ "secs": 384.1
+}

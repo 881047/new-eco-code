@@ -1,0 +1,326 @@
+{
+  "experiment_id": "D06_D07",
+  "script_sha": "0d36e9401f29a71c",
+  "verdict": {
+    "P1": "FAIL",
+    "P2_over_buy": 406,
+    "P2_over_sell": 7,
+    "P4": "PASS",
+    "legacy": {
+      "prod": {
+        "tag": "d67_legacy_prod",
+        "start": "20190722",
+        "orders": 1342,
+        "why": {
+          "成交": 1340,
+          "无收盘价": 2
+        },
+        "blocked": {
+          "跌停拒单": 24,
+          "涨停拒单": 9
+        },
+        "fallback": 0,
+        "fallback_pct": 0.0,
+        "ann": 0.2397,
+        "mdd": -0.241,
+        "sys_ann": 0.2064,
+        "sys_mdd": -0.1966,
+        "n": 85,
+        "run": "20260912_d67_legacy_prod"
+      },
+      "full": {
+        "tag": "d67_legacy_full",
+        "start": "20170101",
+        "orders": 1768,
+        "why": {
+          "成交": 1762,
+          "无收盘价": 6
+        },
+        "blocked": {
+          "跌停拒单": 29,
+          "涨停拒单": 11
+        },
+        "fallback": 0,
+        "fallback_pct": 0.0,
+        "ann": 0.1256,
+        "mdd": -0.51,
+        "sys_ann": 0.1105,
+        "sys_mdd": -0.419,
+        "n": 115,
+        "run": "20260912_d67_legacy_full"
+      }
+    },
+    "fixed": {
+      "prod": {
+        "tag": "d67_fixed_prod",
+        "start": "20190722",
+        "orders": 1342,
+        "why": {
+          "成交": 1340,
+          "无收盘价": 2
+        },
+        "blocked": {
+          "跌停拒单": 26,
+          "涨停拒单": 10
+        },
+        "fallback": 0,
+        "fallback_pct": 0.0,
+        "ann": 0.2377,
+        "mdd": -0.241,
+        "sys_ann": 0.2047,
+        "sys_mdd": -0.1966,
+        "n": 85,
+        "run": "20260912_d67_fixed_prod"
+      },
+      "full": {
+        "tag": "d67_fixed_full",
+        "start": "20170101",
+        "orders": 1768,
+        "why": {
+          "成交": 1762,
+          "无收盘价": 6
+        },
+        "blocked": {
+          "跌停拒单": 31,
+          "涨停拒单": 13
+        },
+        "fallback": 0,
+        "fallback_pct": 0.0,
+        "ann": 0.1236,
+        "mdd": -0.5126,
+        "sys_ann": 0.109,
+        "sys_mdd": -0.421,
+        "n": 115,
+        "run": "20260912_d67_fixed_full"
+      }
+    },
+    "truth_prod": {
+      "tag": "d67_truth_prod",
+      "start": "20190722",
+      "orders": 1344,
+      "why": {
+        "成交": 1340,
+        "跌停拒单": 2,
+        "无收盘价": 2
+      },
+      "blocked": {
+        "跌停拒单": 36,
+        "涨停拒单": 10
+      },
+      "fallback": 0,
+      "fallback_pct": 0.0,
+      "ann": 0.2262,
+      "mdd": -0.241,
+      "sys_ann": 0.194,
+      "sys_mdd": -0.1966,
+      "n": 85,
+      "run": "20260912_d67_truth_prod"
+    },
+    "truth_full": {
+      "tag": "d67_truth_full",
+      "start": "20170101",
+      "orders": 1770,
+      "why": {
+        "成交": 1762,
+        "无收盘价": 6,
+        "跌停拒单": 2
+      },
+      "blocked": {
+        "跌停拒单": 41,
+        "涨停拒单": 13
+      },
+      "fallback": 0,
+      "fallback_pct": 0.0,
+      "ann": 0.1159,
+      "mdd": -0.5126,
+      "sys_ann": 0.1016,
+      "sys_mdd": -0.421,
+      "n": 115,
+      "run": "20260912_d67_truth_full"
+    },
+    "P3": "PASS(构造性)"
+  },
+  "l1_l2": {
+    "total": {
+      "cells": 10375520,
+      "only_limit": 261875,
+      "mismatch": 110718,
+      "ok": 10264802
+    },
+    "by_year": [
+      {
+        "year": "2017",
+        "cells": 742995,
+        "only_limit": 55656,
+        "mismatch": 468,
+        "mismatch_pct": 0.06298831082308765,
+        "over_buy": 0,
+        "under_buy": 0,
+        "over_sell": 0,
+        "under_sell": 0,
+        "attrib": {
+          "新股无涨跌幅窗口(回测缺此层, 模拟盘有)": 437,
+          "**无法归因**": 20,
+          "ST 摘戴帽生效日错位": 9,
+          "复牌/退市整理期首日无限制(board.py 已披露近似)": 2
+        },
+        "unknown": 20
+      },
+      {
+        "year": "2018",
+        "cells": 816745,
+        "only_limit": 39844,
+        "mismatch": 119,
+        "mismatch_pct": 0.014570031037839227,
+        "over_buy": 0,
+        "under_buy": 1,
+        "over_sell": 0,
+        "under_sell": 1,
+        "attrib": {
+          "新股无涨跌幅窗口(回测缺此层, 模拟盘有)": 105,
+          "ST 摘戴帽生效日错位": 9,
+          "**无法归因**": 4,
+          "复牌/退市整理期首日无限制(board.py 已披露近似)": 1
+        },
+        "unknown": 4
+      },
+      {
+        "year": "2019",
+        "cells": 884645,
+        "only_limit": 10468,
+        "mismatch": 519,
+        "mismatch_pct": 0.05866760112813615,
+        "over_buy": 0,
+        "under_buy": 74,
+        "over_sell": 0,
+        "under_sell": 3,
+        "attrib": {
+          "新股无涨跌幅窗口(回测缺此层, 模拟盘有)": 132,
+          "ST 摘戴帽生效日错位": 8,
+          "交易所自报无涨跌幅限制(哨兵值 up>=99999/down<=0.02)": 379
+        },
+        "unknown": 0
+      },
+      {
+        "year": "2020",
+        "cells": 945962,
+        "only_limit": 15150,
+        "mismatch": 1226,
+        "mismatch_pct": 0.12960351472892145,
+        "over_buy": 1,
+        "under_buy": 244,
+        "over_sell": 1,
+        "under_sell": 18,
+        "attrib": {
+          "ST 摘戴帽生效日错位": 11,
+          "交易所自报无涨跌幅限制(哨兵值 up>=99999/down<=0.02)": 1029,
+          "新股无涨跌幅窗口(回测缺此层, 模拟盘有)": 186
+        },
+        "unknown": 0
+      },
+      {
+        "year": "2021",
+        "cells": 1061206,
+        "only_limit": 13975,
+        "mismatch": 3069,
+        "mismatch_pct": 0.2891992695103495,
+        "over_buy": 3,
+        "under_buy": 389,
+        "over_sell": 0,
+        "under_sell": 42,
+        "attrib": {
+          "新股无涨跌幅窗口(回测缺此层, 模拟盘有)": 120,
+          "交易所自报无涨跌幅限制(哨兵值 up>=99999/down<=0.02)": 1824,
+          "ST 摘戴帽生效日错位": 5,
+          "北交所取整规则(floor/ceil, 非半进位) —— 对策略零影响": 1120
+        },
+        "unknown": 0
+      },
+      {
+        "year": "2022",
+        "cells": 1166570,
+        "only_limit": 18069,
+        "mismatch": 11385,
+        "mismatch_pct": 0.9759380062919499,
+        "over_buy": 8,
+        "under_buy": 181,
+        "over_sell": 0,
+        "under_sell": 68,
+        "attrib": {
+          "交易所自报无涨跌幅限制(哨兵值 up>=99999/down<=0.02)": 1472,
+          "北交所取整规则(floor/ceil, 非半进位) —— 对策略零影响": 9841,
+          "新股无涨跌幅窗口(回测缺此层, 模拟盘有)": 70,
+          "ST 摘戴帽生效日错位": 2
+        },
+        "unknown": 0
+      },
+      {
+        "year": "2023",
+        "cells": 1249159,
+        "only_limit": 22112,
+        "mismatch": 20515,
+        "mismatch_pct": 1.6423049427654925,
+        "over_buy": 67,
+        "under_buy": 209,
+        "over_sell": 1,
+        "under_sell": 67,
+        "attrib": {
+          "交易所自报无涨跌幅限制(哨兵值 up>=99999/down<=0.02)": 1165,
+          "北交所取整规则(floor/ceil, 非半进位) —— 对策略零影响": 19323,
+          "新股无涨跌幅窗口(回测缺此层, 模拟盘有)": 22,
+          "ST 摘戴帽生效日错位": 5
+        },
+        "unknown": 0
+      },
+      {
+        "year": "2024",
+        "cells": 1283003,
+        "only_limit": 29886,
+        "mismatch": 24689,
+        "mismatch_pct": 1.9243135051126148,
+        "over_buy": 186,
+        "under_buy": 110,
+        "over_sell": 0,
+        "under_sell": 45,
+        "attrib": {
+          "交易所自报无涨跌幅限制(哨兵值 up>=99999/down<=0.02)": 427,
+          "北交所取整规则(floor/ceil, 非半进位) —— 对策略零影响": 24260,
+          "ST 摘戴帽生效日错位": 2
+        },
+        "unknown": 0
+      },
+      {
+        "year": "2025",
+        "cells": 1303186,
+        "only_limit": 33840,
+        "mismatch": 26583,
+        "mismatch_pct": 2.039846959681887,
+        "over_buy": 95,
+        "under_buy": 128,
+        "over_sell": 2,
+        "under_sell": 49,
+        "attrib": {
+          "交易所自报无涨跌幅限制(哨兵值 up>=99999/down<=0.02)": 482,
+          "北交所取整规则(floor/ceil, 非半进位) —— 对策略零影响": 26101
+        },
+        "unknown": 0
+      },
+      {
+        "year": "2026",
+        "cells": 922049,
+        "only_limit": 22875,
+        "mismatch": 22145,
+        "mismatch_pct": 2.401716177773632,
+        "over_buy": 46,
+        "under_buy": 111,
+        "over_sell": 3,
+        "under_sell": 37,
+        "attrib": {
+          "交易所自报无涨跌幅限制(哨兵值 up>=99999/down<=0.02)": 346,
+          "北交所取整规则(floor/ceil, 非半进位) —— 对策略零影响": 21799
+        },
+        "unknown": 0
+      }
+    ]
+  }
+}

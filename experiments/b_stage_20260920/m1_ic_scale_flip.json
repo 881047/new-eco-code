@@ -1,0 +1,81 @@
+{
+  "criteria": "plans/ledger-settlement-criteria-20260920.md §M1（跑前冻结）",
+  "question": "复权尺 vs 未复权尺的 IC，会不会让 health.evaluate() 翻判档",
+  "verdict": "待跑第二步：存在翻档（K≥1），统一尺须另立预注册",
+  "K_flips": 5,
+  "n_anchors": 607,
+  "skipped_anchors": 2,
+  "score_archive": "D:\\NEW ECO\\data\\weekly\\scores_20260918.npz",
+  "frozen_ic": 0.0773,
+  "levels_adj_counts": {
+    "healthy": 545,
+    "warning": 62
+  },
+  "levels_raw_counts": {
+    "healthy": 546,
+    "warning": 61
+  },
+  "flip_anchors": [
+    [
+      "20170609",
+      "healthy",
+      "warning",
+      -0.007235194172281412,
+      0.0004584372887514009
+    ],
+    [
+      "20170623",
+      "healthy",
+      "warning",
+      -0.006938409254202257,
+      0.001367124209430618
+    ],
+    [
+      "20170707",
+      "warning",
+      "healthy",
+      0.037839419124555636,
+      0.046158079200294355
+    ],
+    [
+      "20170804",
+      "warning",
+      "healthy",
+      0.03632175886118209,
+      0.042482176205959066
+    ],
+    [
+      "20230609",
+      "warning",
+      "healthy",
+      0.033858594859170775,
+      0.03942176927764259
+    ]
+  ],
+  "per_anchor_ic_rel_diff": {
+    "mean": 0.0574061698814527,
+    "p95": 0.1902831285096351,
+    "max": 3.4137822887031124,
+    "source": "本脚本逐锚点 |ic_adj-ic_raw|/|ic_adj|（不是引用 F73 的二手量级）"
+  },
+  "self_checks": {
+    "M1a_same_scale_as_production": {
+      "n_checked": 15,
+      "max_abs_diff": 0.0,
+      "gate": "必须为 0.0（复权臂与 health._fwd_excess 同一把尺）"
+    },
+    "M1b_window_shift_changes_reading": true,
+    "M1c_negative_control_pin_at_half_frozen": {
+      "flips_caught": 62,
+      "gate": "必须 ≥ 1，否则这条门是死的"
+    },
+    "M1e_min_names_and_horizon_match_production": {
+      "MIN_NAMES": 200,
+      "HORIZON": 5,
+      "WINDOW": 12
+    }
+  },
+  "runtime_s": 31.6,
+  "not_measured": [],
+  "gates_pass": true
+}

@@ -1,0 +1,21 @@
+{
+ "ran_at": "2026-09-21 12:26:53",
+ "elapsed_sec": 84.7,
+ "common_days": 3331,
+ "state_days": 3082,
+ "flip_days": 264,
+ "flip_rate": 0.085659,
+ "state_counts_guarded": {
+  "attack": 1375,
+  "defense": 1246,
+  "neutral": 461
+ },
+ "state_counts_unguarded": {
+  "attack": 1525,
+  "defense": 1109,
+  "neutral": 448
+ },
+ "daily_rows_blocked_by_guard": 2519,
+ "guard": "ABS(pct_chg) <= 21",
+ "verdict": "翻档率 8.5659% ⇒ 护栏确实改变状态；需按量级决定是否换尺（见 plans/m3-q2-stage-b-prereg 同类代价框架）"
+}

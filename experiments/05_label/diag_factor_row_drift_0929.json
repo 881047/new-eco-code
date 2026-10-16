@@ -1,0 +1,67 @@
+{
+ "asof": "2026-09-29 21:47:20",
+ "backup": "neweco_20260922.db",
+ "hypothesis": "daily_engine 覆盖月末行(逐日单行中性化路径) vs 月度链(整块路径) 漂移",
+ "reading": "20260831 变而 20260731/0630 不变 ⇒ 假说成立; 全不变 ⇒ factor 漂移排除",
+ "month_ends": {
+  "20260831": {
+   "cur_rows": 157817,
+   "bak_rows": 157810,
+   "n_cur_only": 7,
+   "n_bak_only": 0,
+   "n_value_diff": 118041,
+   "n_exact": 39769,
+   "n_finite": 157810,
+   "max_rel_diff": 2890.776285013885,
+   "p99_rel_diff": 0.002956908084834315,
+   "top_factors": {
+    "lhb_cnt20": 5757,
+    "size": 5494,
+    "rev_5": 5488,
+    "mom_20": 5474,
+    "amount_log": 5458,
+    "mom_60": 5458,
+    "turnover_20": 5458,
+    "bias_20": 5457,
+    "vol_20": 5455,
+    "illiq": 5455
+   }
+  },
+  "20260731": {
+   "cur_rows": 157775,
+   "bak_rows": 157775,
+   "n_cur_only": 0,
+   "n_bak_only": 0,
+   "n_value_diff": 0,
+   "n_exact": 157775,
+   "n_finite": 157775,
+   "max_rel_diff": 0.0,
+   "p99_rel_diff": 0.0,
+   "top_factors": {}
+  },
+  "20260630": {
+   "cur_rows": 154896,
+   "bak_rows": 154896,
+   "n_cur_only": 0,
+   "n_bak_only": 0,
+   "n_value_diff": 0,
+   "n_exact": 154896,
+   "n_finite": 154896,
+   "max_rel_diff": 0.0,
+   "p99_rel_diff": 0.0,
+   "top_factors": {}
+  },
+  "20260529": {
+   "cur_rows": 154354,
+   "bak_rows": 154354,
+   "n_cur_only": 0,
+   "n_bak_only": 0,
+   "n_value_diff": 0,
+   "n_exact": 154354,
+   "n_finite": 154354,
+   "max_rel_diff": 0.0,
+   "p99_rel_diff": 0.0,
+   "top_factors": {}
+  }
+ }
+}

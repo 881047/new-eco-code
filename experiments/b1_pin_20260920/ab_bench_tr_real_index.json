@@ -1,0 +1,345 @@
+{
+  "prereg": "plans/b1-real-tr-index-20260919.md",
+  "bench_legs": {
+    "A": "000906.SH 价格指数",
+    "C": "H00906.CSI 全收益(税前)"
+  },
+  "C1_data_parity": {
+    "rows_pr": 3331,
+    "rows_tr": 3331,
+    "n_only_in_pr": 0,
+    "n_only_in_tr": 0,
+    "only_in_pr": [],
+    "only_in_tr": [],
+    "material_drops": 0,
+    "max_drop_pct": -5.894e-05,
+    "coverage_tr_from": "20130104",
+    "coverage_tr_to": "20260918",
+    "endpoint_ann_pct": {
+      "prod_pr": 3.76,
+      "prod_tr": 5.98,
+      "full_pr": 3.08,
+      "full_tr": 5.3
+    },
+    "selfconsistency_pr_max_mismatch_pct": 5e-05,
+    "selfconsistency_tr_max_mismatch_pct": 5e-05,
+    "yearly_tr_minus_pr_pct": {
+      "2013": 2.1,
+      "2014": 2.26,
+      "2015": 1.22,
+      "2016": 1.79,
+      "2017": 1.68,
+      "2018": 1.95,
+      "2019": 2.06,
+      "2020": 1.85,
+      "2021": 1.68,
+      "2022": 2.14,
+      "2023": 2.27,
+      "2024": 2.82,
+      "2025": 2.47,
+      "2026": 1.58
+    },
+    "endpoint_mismatch": {},
+    "yearly_gap_out_of_band": {},
+    "pass": true
+  },
+  "gates": {
+    "C1_pass": true,
+    "C2_magnitude_band_pp": [
+      1.8,
+      2.6
+    ],
+    "C2_delta_excess_pp_per_year": {
+      "prod": 2.22,
+      "full": 2.22
+    },
+    "C2_pass": {
+      "prod": true,
+      "full": true
+    },
+    "C3_invariance_pass": true,
+    "C3_violations": {
+      "prod": [],
+      "full": []
+    }
+  },
+  "expected_to_change": {
+    "prod": {
+      "bench_ann": {
+        "a": 0.038,
+        "b": 0.0602,
+        "delta": -0.0222
+      },
+      "excess_ann": {
+        "a": 0.1882,
+        "b": 0.166,
+        "delta": 0.0222
+      },
+      "win_rate": {
+        "a": 0.6706,
+        "b": 0.6235,
+        "delta": 0.0471
+      }
+    },
+    "full": {
+      "bench_ann": {
+        "a": 0.0309,
+        "b": 0.0531,
+        "delta": -0.0222
+      },
+      "excess_ann": {
+        "a": 0.085,
+        "b": 0.0628,
+        "delta": 0.0222
+      },
+      "win_rate": {
+        "a": 0.5739,
+        "b": 0.5391,
+        "delta": 0.0348
+      }
+    }
+  },
+  "arms": {
+    "prod_A": {
+      "start": "20190731",
+      "end": "20260831",
+      "periods": 85,
+      "top_n": 6,
+      "cost": 0.003,
+      "state_stocks": {
+        "attack": 6,
+        "neutral": 6,
+        "defense": 6
+      },
+      "stocks_target": {
+        "attack": 6,
+        "neutral": 6,
+        "defense": 6
+      },
+      "avg_stocks": 4.94,
+      "avg_cash_idle": 0.2871,
+      "eff_cap_by_state": {
+        "attack": 0.3333,
+        "neutral": 0.3333,
+        "defense": 0.3333
+      },
+      "candidate_top": 0,
+      "stop_loss": null,
+      "hysteresis": 0,
+      "cfg_fingerprint": {
+        "industry_floor_stocks": 2.0,
+        "state_stocks": {
+          "attack": 6,
+          "neutral": 6,
+          "defense": 6
+        },
+        "candidate_top": 0,
+        "cost": 0.003,
+        "slip": 0.001,
+        "ind_cap": 0.25,
+        "size_pctl": 0,
+        "min_amt20": 0,
+        "hysteresis": 0,
+        "st_filter": true
+      },
+      "capital": 20000.0,
+      "lot_modeled": true,
+      "ann_return": 0.2262,
+      "bench_ann": 0.038,
+      "excess_ann": 0.1882,
+      "max_drawdown": -0.241,
+      "vol_ann": 0.2418,
+      "sharpe": 0.853,
+      "win_rate": 0.6706,
+      "avg_turnover": 0.9018,
+      "ic_mean": 0.0959,
+      "ic_std": 0.1116,
+      "icir": 0.86,
+      "sys_ann_return": 0.194,
+      "sys_max_drawdown": -0.1966,
+      "mdd_daily": -0.3812,
+      "sys_mdd_daily": -0.3172
+    },
+    "prod_C": {
+      "start": "20190731",
+      "end": "20260831",
+      "periods": 85,
+      "top_n": 6,
+      "cost": 0.003,
+      "state_stocks": {
+        "attack": 6,
+        "neutral": 6,
+        "defense": 6
+      },
+      "stocks_target": {
+        "attack": 6,
+        "neutral": 6,
+        "defense": 6
+      },
+      "avg_stocks": 4.94,
+      "avg_cash_idle": 0.2871,
+      "eff_cap_by_state": {
+        "attack": 0.3333,
+        "neutral": 0.3333,
+        "defense": 0.3333
+      },
+      "candidate_top": 0,
+      "stop_loss": null,
+      "hysteresis": 0,
+      "cfg_fingerprint": {
+        "industry_floor_stocks": 2.0,
+        "state_stocks": {
+          "attack": 6,
+          "neutral": 6,
+          "defense": 6
+        },
+        "candidate_top": 0,
+        "cost": 0.003,
+        "slip": 0.001,
+        "ind_cap": 0.25,
+        "size_pctl": 0,
+        "min_amt20": 0,
+        "hysteresis": 0,
+        "st_filter": true
+      },
+      "capital": 20000.0,
+      "lot_modeled": true,
+      "ann_return": 0.2262,
+      "bench_ann": 0.0602,
+      "excess_ann": 0.166,
+      "max_drawdown": -0.241,
+      "vol_ann": 0.2418,
+      "sharpe": 0.853,
+      "win_rate": 0.6235,
+      "avg_turnover": 0.9018,
+      "ic_mean": 0.0959,
+      "ic_std": 0.1116,
+      "icir": 0.86,
+      "sys_ann_return": 0.194,
+      "sys_max_drawdown": -0.1966,
+      "mdd_daily": -0.3812,
+      "sys_mdd_daily": -0.3172
+    },
+    "full_A": {
+      "start": "20170126",
+      "end": "20260831",
+      "periods": 115,
+      "top_n": 6,
+      "cost": 0.003,
+      "state_stocks": {
+        "attack": 6,
+        "neutral": 6,
+        "defense": 6
+      },
+      "stocks_target": {
+        "attack": 6,
+        "neutral": 6,
+        "defense": 6
+      },
+      "avg_stocks": 4.74,
+      "avg_cash_idle": 0.324,
+      "eff_cap_by_state": {
+        "attack": 0.3333,
+        "neutral": 0.3333,
+        "defense": 0.3333
+      },
+      "candidate_top": 0,
+      "stop_loss": null,
+      "hysteresis": 0,
+      "cfg_fingerprint": {
+        "industry_floor_stocks": 2.0,
+        "state_stocks": {
+          "attack": 6,
+          "neutral": 6,
+          "defense": 6
+        },
+        "candidate_top": 0,
+        "cost": 0.003,
+        "slip": 0.001,
+        "ind_cap": 0.25,
+        "size_pctl": 0,
+        "min_amt20": 0,
+        "hysteresis": 0,
+        "st_filter": true
+      },
+      "capital": 20000.0,
+      "lot_modeled": true,
+      "ann_return": 0.1159,
+      "bench_ann": 0.0309,
+      "excess_ann": 0.085,
+      "max_drawdown": -0.5126,
+      "vol_ann": 0.2405,
+      "sharpe": 0.399,
+      "win_rate": 0.5739,
+      "avg_turnover": 0.9061,
+      "ic_mean": 0.0859,
+      "ic_std": 0.1168,
+      "icir": 0.735,
+      "sys_ann_return": 0.1016,
+      "sys_max_drawdown": -0.421,
+      "mdd_daily": -0.5186,
+      "sys_mdd_daily": -0.4264
+    },
+    "full_C": {
+      "start": "20170126",
+      "end": "20260831",
+      "periods": 115,
+      "top_n": 6,
+      "cost": 0.003,
+      "state_stocks": {
+        "attack": 6,
+        "neutral": 6,
+        "defense": 6
+      },
+      "stocks_target": {
+        "attack": 6,
+        "neutral": 6,
+        "defense": 6
+      },
+      "avg_stocks": 4.74,
+      "avg_cash_idle": 0.324,
+      "eff_cap_by_state": {
+        "attack": 0.3333,
+        "neutral": 0.3333,
+        "defense": 0.3333
+      },
+      "candidate_top": 0,
+      "stop_loss": null,
+      "hysteresis": 0,
+      "cfg_fingerprint": {
+        "industry_floor_stocks": 2.0,
+        "state_stocks": {
+          "attack": 6,
+          "neutral": 6,
+          "defense": 6
+        },
+        "candidate_top": 0,
+        "cost": 0.003,
+        "slip": 0.001,
+        "ind_cap": 0.25,
+        "size_pctl": 0,
+        "min_amt20": 0,
+        "hysteresis": 0,
+        "st_filter": true
+      },
+      "capital": 20000.0,
+      "lot_modeled": true,
+      "ann_return": 0.1159,
+      "bench_ann": 0.0531,
+      "excess_ann": 0.0628,
+      "max_drawdown": -0.5126,
+      "vol_ann": 0.2405,
+      "sharpe": 0.399,
+      "win_rate": 0.5391,
+      "avg_turnover": 0.9061,
+      "ic_mean": 0.0859,
+      "ic_std": 0.1168,
+      "icir": 0.735,
+      "sys_ann_return": 0.1016,
+      "sys_max_drawdown": -0.421,
+      "mdd_daily": -0.5186,
+      "sys_mdd_daily": -0.4264
+    }
+  },
+  "not_a_pin_change": "本轮只测数；改基准腿 = 换 pin，待用户拍板"
+}

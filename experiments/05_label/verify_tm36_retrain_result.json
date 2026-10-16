@@ -1,0 +1,21 @@
+{
+ "date": "2026-09-16 19:00:21",
+ "purpose": "复核审查结论 C/E：快照漂移诊断 + 训练确定性",
+ "comparisons": {
+  "tm36(09-10 旧快照)": {
+   "n_pairs": 349585,
+   "n_identical": 63217,
+   "identical_rate": 0.180834,
+   "anchors_identical": 18,
+   "anchors_total": 86
+  },
+  "ho6(09-16 新快照)": {
+   "n_pairs": 349585,
+   "n_identical": 349585,
+   "identical_rate": 1.0,
+   "anchors_identical": 86,
+   "anchors_total": 86
+  }
+ },
+ "verdict": "漂移诊断实锤：今天重训与 ho6(今天) 一致、与 tm36(09-10) 不一致 ⇒ 同配置同快照必同模型，tm36 表是旧数据快照的产物 —— 全量重训不可跨日复现成立，ho 实验的臂间比较(同快照)有效"
+}

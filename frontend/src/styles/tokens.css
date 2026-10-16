@@ -1,0 +1,304 @@
+/* ==== 设计 token：对标 DeepSeek 官网（实取值见 KB 06 §五，2026-09-13）====
+   亮色为基准档（契约测试钉了这些实取值），暗色只做语义层覆盖。
+
+   2026-10-08 设计系统补全（批1）：此前全站 18 种字号、191 处硬编码 px、
+   36 处硬编码色、无字重/行高/动效/z-index 阶梯 —— 这是"看着乱"的根因。
+   本文件是**唯一真源**：视图与组件内不得再写裸 px 字号与裸色值。
+   契约钉值（不得改动）：--ds-blue:#3964fe / --r-card:24px / --up:#c0392b /
+   --down:#1f9d55 / tabular-nums / @media(max-width:560px)。 */
+:root{
+  --ds-blue:#3964fe; --ds-blue-450:#5686fe; --ds-blue-100:#e4edfd; --ds-blue-50:#edf3fe;
+  --n-0:#fff; --n-50:#f5f5f5; --n-100:#ededed; --n-150:#dcdcdc; --n-400:#a2a4a6; --n-500:#7f8287;
+  /* 语义色：**A 股惯例红涨绿跌**（与国际市场相反，这里必须本土化）+ 琥珀用于告警 */
+  --up:#c0392b; --down:#1f9d55; --warn:#f59e0b;
+  --r-card:24px; --r-panel:16px; --r-input:10px; --r-sm:8px; --r-pill:100px;
+  --s1:4px; --s2:8px; --s3:12px; --s4:16px; --s5:24px; --s6:32px; --s7:40px;
+  --bg:var(--n-50); --card:var(--n-0); --line:var(--n-100); --text:#111;
+  --muted:var(--n-500); --accent:var(--ds-blue);
+  --shadow:0 1px 2px rgba(17,24,39,.05),0 4px 16px rgba(17,24,39,.04);
+  /* echarts 用（JS 侧读取） */
+  --chart-axis:#7f8287; --chart-split:#ededed;
+  --banner-bg:#fff8e6; --banner-line:#f3d9a4; --banner-text:#8a5a00;
+
+  /* ================= 2026-10-08 批1 新增：设计系统阶梯 ================= */
+  /* 字号 8 档。旧值映射：10/10.5/11/11.5→1，12/12.5→2，13/13.5→3，14/15→4，
+     16→5，18→6，19/20→7，24→8 */
+  --fs-1:11px; --fs-2:12px; --fs-3:13px; --fs-4:14px;
+  --fs-5:16px; --fs-6:18px; --fs-7:20px; --fs-8:24px;
+  --fw-regular:400; --fw-medium:500; --fw-semibold:600; --fw-bold:700;
+  --lh-tight:1.25; --lh-base:1.6; --lh-loose:1.75;
+  --r-chip:10px;
+  --shadow-1:var(--shadow); --shadow-2:0 2px 8px rgba(17,24,39,.10);
+  --shadow-3:0 12px 40px rgba(0,0,0,.25);
+  --z-base:1; --z-sticky:30; --z-overlay:80; --z-panel:90; --z-toast:100;
+  --t-fast:.15s; --t-base:.2s; --ease:ease;
+  --success:var(--down); --info:var(--accent); --danger:var(--up);
+  --focus-color:var(--ds-blue-450); --focus-width:2px;
+  /* 字体：此前写 "DM Sans" 但 index.html 从未加载该字体 ⇒ 一直在静默回退。
+     本机为离线单机应用，外链字体不可用，故显式声明系统栈（消除"写了却没生效"的假象）。 */
+  --font-sans:system-ui,-apple-system,"Segoe UI","Microsoft YaHei","PingFang SC",sans-serif;
+
+  /* 修死 fallback：--card-bg / --amber 此前**全仓未定义**，导致 .acc-card /
+     .stale-badge / StockDetailView 一直在走裸 fallback（暗色下即错色）。 */
+  --card-bg:var(--card); --amber:var(--warn);
+
+  /* echarts 侧补齐（charts.js 改走 cssVar() 读这些，不再各自维护第二套色板） */
+  --chart-blue:#3964fe; --chart-red:var(--up); --chart-green:var(--down);
+  --chart-amber:var(--warn); --chart-gray:#9ca3af;
+  --chart-tooltip-bg:var(--card); --chart-grid:var(--n-100);
+
+  /* 7 个账户序列色（语义 = 账户身份，需主题感知；原 acctCols.SERIES_COLORS 硬编码） */
+  --series-1:#3964fe; --series-2:#8b5cf6; --series-3:#f59e0b; --series-4:#e05a4d;
+  --series-5:#2fae6f; --series-6:#0ea5a5; --series-7:#b8a11f;
+
+  /* 小标签语义（原 .sleeve-chip.ok/.bad 与 CommandPalette 内联 #eaf7ef 的色源） */
+  --tag-ok-bg:#eaf7ef; --tag-ok-fg:#1f7a45; --tag-ok-line:#bfe3cc;
+  --tag-bad-bg:#fdecea; --tag-bad-fg:#a5281a; --tag-bad-line:#f5c2bb;
+}
+html[data-theme="dark"]{
+  --n-0:#16181d; --n-50:#0f1115; --n-100:#262a33; --n-150:#333845; --n-400:#6b7280; --n-500:#9aa1ad;
+  --up:#e05a4d; --down:#2fae6f; --warn:#f5b53f;
+  --bg:#0f1115; --card:#16181d; --line:#262a33; --text:#e6e8ec;
+  --muted:#9aa1ad; --accent:var(--ds-blue-450);
+  --ds-blue-100:#1d2a4d; --ds-blue-50:#182238;
+  --shadow:0 1px 2px rgba(0,0,0,.4),0 4px 16px rgba(0,0,0,.32);
+  --chart-axis:#9aa1ad; --chart-split:#262a33;
+  --banner-bg:#332a14; --banner-line:#5a4a1a; --banner-text:#e8c268;
+  /* 2026-10-08 批1：暗色补漏（此前只覆盖 3 处，亮色底在暗色下刺眼） */
+  --success:#2fae6f;
+  --shadow-2:0 2px 8px rgba(0,0,0,.5); --shadow-3:0 12px 40px rgba(0,0,0,.5);
+  --chart-gray:#5a6170; --chart-tooltip-bg:var(--card); --chart-grid:var(--n-100);
+  --tag-ok-bg:#12291c; --tag-ok-fg:#5fce8f; --tag-ok-line:#1f5c38;
+  --tag-bad-bg:#3a1512; --tag-bad-fg:#ff9a8a; --tag-bad-line:#7a2e24;
+}
+
+*{box-sizing:border-box;margin:0;padding:0}
+/* 看板的第一性需求是"数字对得齐"⇒ 全站表格数字走 tabular-nums（等宽数字） */
+body{font-family:var(--font-sans);
+  background:var(--bg);color:var(--text);font-size:var(--fs-4);line-height:var(--lh-base);
+  font-variant-numeric:tabular-nums}
+
+/* ==== 应用壳：侧边栏 + 顶栏 ==== */
+.shell{display:flex;min-height:100vh}
+.sidebar{width:208px;flex:none;background:var(--card);border-right:1px solid var(--line);
+  display:flex;flex-direction:column;position:sticky;top:0;height:100vh}
+.brand{padding:var(--s4) var(--s4) var(--s3);display:flex;align-items:center;gap:var(--s2)}
+.brand h1{font-size:var(--fs-6);font-weight:var(--fw-bold);letter-spacing:.02em}
+.nav{display:flex;flex-direction:column;gap:2px;padding:0 var(--s2);flex:1;overflow-y:auto}
+.nav-group-label{font-size:var(--fs-1);color:var(--muted);letter-spacing:.12em;
+  padding:12px 12px 3px;user-select:none;opacity:.85}
+.nav-group-label:first-child{padding-top:6px}
+.nav a{display:flex;align-items:center;gap:10px;padding:7px 12px 7px 16px;border-radius:var(--r-input);
+  color:var(--muted);text-decoration:none;font-size:var(--fs-3);font-weight:var(--fw-medium);
+  transition:background var(--t-fast) var(--ease),color var(--t-fast) var(--ease)}
+.nav a:hover{background:var(--n-50);color:var(--text)}
+.nav a.router-link-active{background:var(--ds-blue-50);color:var(--accent);font-weight:var(--fw-semibold);
+  box-shadow:inset 3px 0 0 var(--accent)}
+.nav .nav-ico{width:17px;text-align:center}
+.side-foot{padding:var(--s3) var(--s4);border-top:1px solid var(--line);font-size:var(--fs-2);color:var(--muted);
+  display:flex;flex-direction:column;gap:6px}
+.main{flex:1;min-width:0;display:flex;flex-direction:column}
+.topbar{position:sticky;top:0;z-index:var(--z-sticky);display:flex;align-items:center;gap:var(--s3);
+  padding:10px var(--s5);background:var(--card);border-bottom:1px solid var(--line);flex-wrap:wrap;
+  box-shadow:0 1px 2px rgba(17,24,39,.04)}
+.topbar .spacer{flex:1}
+.content{padding:var(--s5);max-width:1280px;width:100%;margin:0 auto;min-width:0}
+.page-title{font-size:var(--fs-7);font-weight:var(--fw-bold);margin-bottom:var(--s4)}
+.page-sub{color:var(--muted);font-size:var(--fs-3);margin:-10px 0 var(--s4)}
+
+@media(max-width:900px){
+  .shell{flex-direction:column}
+  .sidebar{width:100%;height:auto;position:static;flex-direction:row;align-items:center;
+    border-right:0;border-bottom:1px solid var(--line)}
+  .brand{padding:var(--s3) var(--s4)}
+  /* 分组导航在窄屏退化成一行横滚：组标签隐藏，条目全提为同级 */
+  .nav{flex-direction:row;overflow-x:auto;overflow-y:hidden;padding:0 var(--s2);flex:1}
+  .nav-group-label{display:none}
+  .nav a{white-space:nowrap}
+  .side-foot{display:none}
+  .content{padding:var(--s4)}
+  .topbar{padding:10px var(--s4)}
+}
+
+/* ==== 通用卡片 / KPI ==== */
+.card{background:var(--card);border:1px solid var(--line);border-radius:var(--r-card);
+  padding:var(--s5) var(--s6);box-shadow:var(--shadow-1);min-width:0}
+.card h2{font-size:var(--fs-5);font-weight:var(--fw-semibold);margin-bottom:var(--s3);color:var(--text)}
+.card h2 .muted{font-weight:var(--fw-regular);font-size:var(--fs-2)}
+.card+.card,.stack>.card{margin-top:var(--s5)}
+.grid2{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:var(--s5)}
+.grid2>*,.lhb-grid>*{min-width:0}
+@media(max-width:900px){.grid2{grid-template-columns:minmax(0,1fr)}}
+.kpis{display:grid;grid-template-columns:repeat(auto-fit,minmax(150px,1fr));gap:var(--s4);align-items:stretch}  /* 2026-09-17: start→stretch, 同排卡片等高 */
+.kpi{background:var(--card);border:1px solid var(--line);border-radius:var(--r-card);
+  padding:var(--s5);min-width:0;transition:border-color var(--t-fast) var(--ease),box-shadow var(--t-fast) var(--ease)}
+.kpi:hover{border-color:var(--n-150);box-shadow:var(--shadow-2)}
+.kpi .label{color:var(--muted);font-size:var(--fs-2)}
+.kpi{display:flex;flex-direction:column}
+.kpi .value{font-size:var(--fs-8);font-weight:var(--fw-semibold);letter-spacing:-.01em;margin-top:var(--s1)}
+.kpi .sub{color:var(--muted);font-size:var(--fs-2);overflow-wrap:anywhere}
+.kpi.compact .value{font-size:var(--fs-6)}
+.muted{color:var(--muted);font-size:var(--fs-3)}
+.pos{color:var(--up)}.neg{color:var(--down)}
+
+/* ==== 表格 ==== */
+table{width:100%;border-collapse:collapse;font-size:var(--fs-3)}
+th,td{padding:var(--s2);border-bottom:1px solid var(--line);text-align:left;white-space:nowrap;vertical-align:middle;height:38px}
+td.num{font-variant-numeric:tabular-nums}
+th{color:var(--muted);font-weight:var(--fw-medium);font-size:var(--fs-2);user-select:none}
+th.sortable{cursor:pointer}
+th.sortable:hover{color:var(--text)}
+tr:hover td{background:var(--n-50)}
+.num{text-align:right}
+.tbl-tools{display:flex;gap:var(--s2);align-items:center;margin-bottom:var(--s2);flex-wrap:wrap}
+.tbl-tools input{width:200px;margin-bottom:0}
+.scroll-box{overflow:auto;max-height:460px}
+.scroll-box thead th{position:sticky;top:0;background:var(--card);z-index:2;box-shadow:0 1px 0 var(--line)}
+.lhb-reason{display:inline-block;max-width:220px;overflow:hidden;text-overflow:ellipsis;white-space:nowrap;vertical-align:bottom}
+/* 2026-10-08 批7 断点统一：原为孤立的 700px 断点（全站只有这一处用 700），
+   并入已有的 900px 断点（700 ⊂ 900，行为只会更早生效，不会失效）。
+   全站断点现为 560 / 900 / 1100 三档。 */
+@media(max-width:900px){.card{overflow-x:auto}}
+
+/* ==== 表单 / 按钮 ==== */
+button{background:var(--accent);color:#fff;border:0;border-radius:var(--r-input);
+  padding:9px 18px;font-size:var(--fs-3);cursor:pointer;margin-right:10px}
+button:hover{opacity:.9}
+button.ghost{background:transparent;color:var(--text);border:1px solid var(--line)}
+button.ghost:hover{border-color:var(--accent);color:var(--accent);opacity:1}
+button.mini{padding:4px 10px;font-size:var(--fs-2);margin-right:0}
+button:focus-visible,input:focus-visible,select:focus-visible{outline:var(--focus-width) solid var(--focus-color);outline-offset:2px}
+input,select{width:100%;padding:7px 10px;border:1px solid var(--line);border-radius:var(--r-input);
+  font-size:var(--fs-3);margin-bottom:10px;background:var(--card);color:var(--text)}
+.form-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:0 20px}
+fieldset{border:1px solid var(--line);border-radius:var(--r-panel);padding:var(--s3) var(--s4);margin-top:var(--s3)}
+legend{font-size:var(--fs-3);color:var(--muted);padding:0 6px}
+.msg{color:var(--accent);font-size:var(--fs-3);margin-top:6px;min-height:18px}
+
+/* ==== 小标签：2026-10-08 收敛为 .chip + 修饰符（原 .tag/.chip/.model-chip 三套并存） ==== */
+/* 注意：不加 margin-right —— .chips-row 已用 gap:8px 控间距，加 margin 会变成 12px */
+.chip{display:inline-block;font-size:var(--fs-2);border:1px solid var(--line);
+  border-radius:var(--r-chip);padding:2px 10px;color:var(--muted);
+  font-variant-numeric:tabular-nums;background:transparent}
+.chip--accent{border-color:var(--accent);color:var(--accent)}
+.chip--muted{background:var(--n-50)}
+.chip--ok{background:var(--tag-ok-bg);border-color:var(--tag-ok-line);color:var(--tag-ok-fg)}
+.chip--warn{background:var(--banner-bg);border-color:var(--banner-line);color:var(--banner-text)}
+.chip--bad{background:var(--tag-bad-bg);border-color:var(--tag-bad-line);color:var(--tag-bad-fg)}
+/* .tag 已于 2026-10-08 批2 全部迁移到 .chip 修饰符后删除（避免两套标签写法并存）。
+   .model-chip 保留：账户卡上的盘面键标签语义独立。 */
+.model-chip{font-size:var(--fs-1);color:var(--accent);border:1px solid var(--line);
+  border-radius:var(--r-chip);padding:1px 8px;white-space:nowrap}
+
+/* ==== 徽章 / 状态芯片 ==== */
+.badge{padding:4px 14px;border-radius:var(--r-pill);color:#fff;font-weight:var(--fw-semibold);font-size:var(--fs-3)}
+.badge.attack{background:var(--up)}.badge.neutral{background:var(--n-500)}.badge.defense{background:var(--down)}
+.sleeve-chip{padding:3px 12px;border-radius:var(--r-pill);font-size:var(--fs-2);font-weight:var(--fw-semibold);
+  border:1px solid var(--line);background:var(--n-50);color:var(--muted)}
+.sleeve-chip.ok{background:var(--tag-ok-bg);border-color:var(--tag-ok-line);color:var(--tag-ok-fg)}
+.sleeve-chip.wait{background:var(--banner-bg);border-color:var(--banner-line);color:var(--banner-text)}
+.sleeve-chip.bad{background:var(--tag-bad-bg);border-color:var(--tag-bad-line);color:var(--tag-bad-fg)}
+
+/* ==== 横幅（取数失败等，宁可吵，不许静默空白） ==== */
+.banner{margin:0;padding:10px var(--s5);background:var(--banner-bg);border-bottom:1px solid var(--banner-line);
+  color:var(--banner-text);font-size:var(--fs-3)}
+/* 卡内告警横幅（paper.paused / 风格分歧等）—— 与页首 .banner 同色系的块级圆角形态。
+   2026-10-06 收敛：原为两处逐字重复的 inline style。 */
+.banner-note{padding:8px 12px;border-radius:var(--r-sm);background:var(--banner-bg);
+  border:1px solid var(--banner-line);color:var(--banner-text);font-size:var(--fs-3)}
+
+/* ==== 行动中枢 ==== */
+.act-item{display:flex;gap:var(--s3);align-items:flex-start;padding:10px 12px;border:1px solid var(--line);
+  border-radius:var(--r-panel);margin-top:var(--s2);cursor:pointer;background:var(--card)}
+.act-item:hover{border-color:var(--accent)}
+.act-item .lvl{flex:none;font-size:var(--fs-1);font-weight:var(--fw-bold);padding:2px 8px;border-radius:var(--r-sm);margin-top:2px}
+/* 2026-10-08 批1：原为亮色底硬编码，暗色下刺眼 ⇒ 走语义 token */
+.lvl.p0{background:var(--tag-bad-bg);color:var(--tag-bad-fg)}
+.lvl.p1{background:var(--banner-bg);color:var(--banner-text)}
+.lvl.p2{background:var(--ds-blue-50);color:var(--accent)}
+.act-item .act-text{font-size:var(--fs-3);font-weight:var(--fw-medium)}
+.act-item .act-sub{color:var(--muted);font-size:var(--fs-2);margin-top:2px}
+.act-item .act-jump{margin-left:auto;color:var(--accent);font-size:var(--fs-2);flex:none;align-self:center}
+
+/* ==== 命令面板 / 问答 ==== */
+.overlay{position:fixed;inset:0;background:rgba(15,17,21,.45);z-index:var(--z-overlay);display:flex;
+  justify-content:center;align-items:flex-start;padding-top:12vh}
+.palette{width:min(640px,92vw);background:var(--card);border:1px solid var(--line);
+  border-radius:var(--r-panel);box-shadow:var(--shadow-3);overflow:hidden}
+.palette input{width:100%;border:0;border-bottom:1px solid var(--line);border-radius:0;
+  padding:14px 16px;font-size:var(--fs-4);margin-bottom:0;background:var(--card);color:var(--text)}
+.palette .plist{max-height:46vh;overflow:auto}
+.palette .pitem{display:flex;gap:10px;align-items:center;padding:9px 16px;cursor:pointer;font-size:var(--fs-3)}
+.palette .pitem.sel{background:var(--ds-blue-50)}
+.palette .pitem .pk{margin-left:auto;color:var(--muted);font-size:var(--fs-1)}
+.ask-panel{position:fixed;top:0;right:0;bottom:0;width:min(440px,94vw);background:var(--card);
+  border-left:1px solid var(--line);z-index:var(--z-panel);display:flex;flex-direction:column;
+  box-shadow:-8px 0 30px rgba(0,0,0,.15)}
+.ask-head{display:flex;align-items:center;gap:var(--s2);padding:var(--s4);border-bottom:1px solid var(--line)}
+.ask-body{flex:1;overflow:auto;padding:var(--s4)}
+.ask-msg{max-height:none}
+.ask-msg > div:first-child{max-height:38vh;overflow:auto}
+.ask-msg{border:1px solid var(--line);border-radius:var(--r-panel);padding:10px 12px;
+  margin-bottom:var(--s3);font-size:var(--fs-3);white-space:pre-wrap;overflow-wrap:anywhere}
+.ask-msg.q{background:var(--ds-blue-50)}
+.ask-src{color:var(--muted);font-size:var(--fs-1);margin-top:6px}
+.ask-msg.thinking{color:var(--accent);display:flex;align-items:center;gap:8px;flex-wrap:wrap}
+.tdots i{display:inline-block;width:5px;height:5px;border-radius:50%;background:var(--accent);
+  margin-right:3px;animation:tblink 1.2s infinite}
+.tdots i:nth-child(2){animation-delay:.2s}
+.tdots i:nth-child(3){animation-delay:.4s}
+@keyframes tblink{0%,80%,100%{opacity:.25}40%{opacity:1}}
+.ask-foot{padding:var(--s3) var(--s4);border-top:1px solid var(--line)}
+.chips{display:flex;flex-wrap:wrap;gap:6px;margin-bottom:var(--s3)}
+.chips button{margin-right:0}
+
+footer.foot{padding:var(--s5) var(--s6);color:var(--muted);font-size:var(--fs-2);text-align:center}
+
+/* 窄屏（手机） */
+@media(max-width:560px){
+  .content{padding:var(--s4)}
+  .kpis{grid-template-columns:1fr}
+  .grid2{grid-template-columns:minmax(0,1fr)}
+  .card{padding:var(--s4)}
+  .kpi{padding:var(--s4)}
+  .kpi .value{font-size:var(--fs-8)}
+}
+
+/* ==== 账户卡通用（门户总览 + Final/W2 盘面页共用；2026-10-06 从 AllAccountsView
+   scoped 上移——三个视图同构，留在单视图 scoped 里就得复制三份） ==== */
+.blk-h { font-size: var(--fs-3); color: var(--muted); margin: 18px 0 8px; }
+.blk-inline { font-size: var(--fs-2); color: var(--muted); }
+.chips-row { display: flex; gap: 8px; flex-wrap: wrap; align-items: center; margin: 10px 0 2px; }
+.acc-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(270px, 1fr)); gap: 12px; }
+.acc-card { border: 1px solid var(--line); border-radius: var(--r-sm); padding: 12px 14px; background: var(--card-bg); }
+.acc-card.bad { border-color: var(--banner-line); }
+.acc-head { display: flex; justify-content: space-between; align-items: center; gap: 8px; }
+.acc-name { font-weight: var(--fw-semibold); }
+.acc-eq { font-size: var(--fs-7); font-weight: var(--fw-semibold); margin-top: 4px; font-variant-numeric: tabular-nums; }
+.acc-pct { font-size: var(--fs-3); font-weight: var(--fw-semibold); }
+.acc-row { display: flex; justify-content: space-between; gap: 8px; color: var(--muted); font-size: var(--fs-2); margin-top: 3px; }
+.acc-row b { color: var(--text); font-weight: var(--fw-medium); font-variant-numeric: tabular-nums; }
+.stale-badge { font-size: var(--fs-1); color: var(--amber); border: 1px solid var(--amber); border-radius: var(--r-chip); padding: 0 7px; margin-left: 6px; }
+.stuck-badge { font-size: var(--fs-1); color: var(--down); border: 1px solid var(--down); border-radius: var(--r-sm); padding: 0 5px; margin-left: 5px; }
+
+/* 个股详情链接（全站联动, v-html 注入 ⇒ 必须是全局样式, scoped 管不到） */
+.stock-link { color: inherit; text-decoration: none; border-bottom: 1px dotted currentColor; }
+.stock-link:hover { color: var(--accent); border-bottom-color: var(--accent); }
+
+/* ==== 键盘可达性（2026-10-08 批1 补：此前 nav/router-link/可点行/act-item 全无 focus 样式） ==== */
+a:focus-visible,.nav a:focus-visible,.act-item:focus-visible,
+[tabindex]:focus-visible,.palette .pitem:focus-visible{
+  outline:var(--focus-width) solid var(--focus-color);outline-offset:2px;border-radius:var(--r-sm)}
+
+/* ==== 2026-10-06 视觉打磨（改观感不改行为；契约钉值 --ds-blue/--r-card/--up/--down 与
+   560px/900px 断点全部原样保留） ==== */
+button,.nav a,.ghost{transition:background var(--t-fast) var(--ease),border-color var(--t-fast) var(--ease),color var(--t-fast) var(--ease),opacity var(--t-fast) var(--ease)}
+::-webkit-scrollbar{width:10px;height:10px}
+::-webkit-scrollbar-thumb{background:var(--n-150);border-radius:5px;border:2px solid var(--bg)}
+::-webkit-scrollbar-thumb:hover{background:var(--n-400)}
+::-webkit-scrollbar-track{background:transparent}
+/* 笔记本宽度中断点：卡片留白收一档（901px-1100px 过渡带，手机断点不受影响） */
+@media(max-width:1100px) and (min-width:901px){
+  .content{padding:var(--s4) var(--s5)}
+  .card{padding:var(--s4) var(--s5)}
+}

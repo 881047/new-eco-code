@@ -1,0 +1,166 @@
+{
+ "script_sha": "e5cff801dc8b8ed5",
+ "equity_weight": 1.0,
+ "factor": "holder_chg_4q",
+ "coverage": 0.5071,
+ "windows": {
+  "full": [
+   "2010-01-01",
+   "2030-12-31"
+  ],
+  "dead": [
+   "2020-09-01",
+   "2023-12-31"
+  ],
+  "active": [
+   "2024-01-01",
+   "2026-08-31"
+  ]
+ },
+ "base_reference": {
+  "full_on_491": [
+   18.0,
+   17.3
+  ],
+  "active": [
+   10.38,
+   11.8
+  ]
+ },
+ "arms": {
+  "seedA": {
+   "BASE": {
+    "full": {
+     "n": 479,
+     "excess_pp": 18.47,
+     "mdd": -0.369,
+     "turnover": 0.119
+    },
+    "dead": {
+     "n": 169,
+     "ann": 0.2809,
+     "excess_pp": 24.79,
+     "mdd": -0.1584,
+     "turnover": 0.114
+    },
+    "active": {
+     "n": 138,
+     "ann": 0.2565,
+     "excess_pp": 10.38,
+     "mdd": -0.369,
+     "turnover": 0.092
+    }
+   },
+   "ARM": {
+    "full": {
+     "n": 479,
+     "excess_pp": 15.54,
+     "mdd": -0.3221,
+     "turnover": 0.087
+    },
+    "dead": {
+     "n": 169,
+     "ann": 0.2292,
+     "excess_pp": 19.62,
+     "mdd": -0.1647,
+     "turnover": 0.087
+    },
+    "active": {
+     "n": 138,
+     "ann": 0.276,
+     "excess_pp": 12.34,
+     "mdd": -0.3221,
+     "turnover": 0.078
+    }
+   }
+  },
+  "seedB": {
+   "BASE": {
+    "full": {
+     "n": 479,
+     "excess_pp": 17.76,
+     "mdd": -0.3693,
+     "turnover": 0.117
+    },
+    "dead": {
+     "n": 169,
+     "ann": 0.2756,
+     "excess_pp": 24.26,
+     "mdd": -0.1564,
+     "turnover": 0.112
+    },
+    "active": {
+     "n": 138,
+     "ann": 0.2706,
+     "excess_pp": 11.8,
+     "mdd": -0.3693,
+     "turnover": 0.092
+    }
+   },
+   "ARM": {
+    "full": {
+     "n": 479,
+     "excess_pp": 15.34,
+     "mdd": -0.3251,
+     "turnover": 0.087
+    },
+    "dead": {
+     "n": 169,
+     "ann": 0.2349,
+     "excess_pp": 20.19,
+     "mdd": -0.1844,
+     "turnover": 0.088
+    },
+    "active": {
+     "n": 138,
+     "ann": 0.2768,
+     "excess_pp": 12.42,
+     "mdd": -0.3251,
+     "turnover": 0.077
+    }
+   }
+  }
+ },
+ "increment": {
+  "seedA": {
+   "t_diff_full": -1.69,
+   "active_mean_pp_per_period": 0.014,
+   "t_diff_active": 0.22
+  },
+  "seedB": {
+   "t_diff_full": -1.42,
+   "active_mean_pp_per_period": -0.004,
+   "t_diff_active": -0.07
+  }
+ },
+ "verdict": {
+  "control_ok": true,
+  "adopt": false,
+  "criteria": "两套种子同时: ①全史 ≥ BASE+1.0pp ②ACTIVE ≥ BASE ③全史 MDD ≥ BASE×1.10; ④对照须复现",
+  "note": "ACTIVE 是已开封留出集, 只作方向; 失败只否掉这一种接法, 不等于否掉该因子"
+ },
+ "secs": 344.2,
+ "control": {
+  "ok": true,
+  "detail": {
+   "seedA": {
+    "active_was": 10.38,
+    "active_now": 10.38,
+    "full_on_491_was": 18.0,
+    "full_on_479_now": 18.47,
+    "window_shift_note": "全史差异来自窗口 491→479(ARM 早期锚点无 holder 因子), 非口径漂移",
+    "ok": true
+   },
+   "seedB": {
+    "active_was": 11.8,
+    "active_now": 11.8,
+    "full_on_491_was": 17.3,
+    "full_on_479_now": 17.76,
+    "window_shift_note": "全史差异来自窗口 491→479(ARM 早期锚点无 holder 因子), 非口径漂移",
+    "ok": true
+   }
+  },
+  "n_common": 479,
+  "note": "对照口径修正(2026-09-13): ACTIVE 逐位一致即算通过; 全史不做跨窗口对照"
+ }
+}

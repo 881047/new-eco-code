@@ -1,0 +1,634 @@
+{
+  "stage": "before",
+  "data_max_expectation": "两份 JSON 的 data_max 必须相同才可比",
+  "db": {
+    "backtest_rows": {
+      "20260912_limitquant": {
+        "run_date": "20260912_limitquant",
+        "start": "20190731",
+        "end": "20260831",
+        "periods": 85,
+        "top_n": 6,
+        "cost": 0.003,
+        "state_stocks": {
+          "attack": 6,
+          "neutral": 6,
+          "defense": 6
+        },
+        "stocks_target": {
+          "attack": 6,
+          "neutral": 6,
+          "defense": 6
+        },
+        "avg_stocks": 4.94,
+        "avg_cash_idle": 0.2871,
+        "eff_cap_by_state": {
+          "attack": 0.3333,
+          "neutral": 0.3333,
+          "defense": 0.3333
+        },
+        "candidate_top": 0,
+        "stop_loss": null,
+        "hysteresis": 0,
+        "cfg_fingerprint": {
+          "industry_floor_stocks": 2.0,
+          "state_stocks": {
+            "attack": 6,
+            "neutral": 6,
+            "defense": 6
+          },
+          "candidate_top": 0,
+          "cost": 0.003,
+          "slip": 0.001,
+          "ind_cap": 0.25,
+          "size_pctl": 0,
+          "min_amt20": 0,
+          "hysteresis": 0,
+          "st_filter": true
+        },
+        "capital": 20000.0,
+        "lot_modeled": true,
+        "ann_return": 0.2262,
+        "bench_ann": 0.038,
+        "excess_ann": 0.1882,
+        "max_drawdown": -0.241,
+        "vol_ann": 0.2418,
+        "sharpe": 0.853,
+        "win_rate": 0.6706,
+        "avg_turnover": 0.8912,
+        "ic_mean": 0.0959,
+        "ic_std": 0.1116,
+        "icir": 0.859,
+        "sys_ann_return": 0.194,
+        "sys_max_drawdown": -0.1966,
+        "mdd_daily": -0.3812,
+        "sys_mdd_daily": -0.3172
+      },
+      "20260919_b1real_full_a": {
+        "run_date": "20260919_b1real_full_a",
+        "start": "20170126",
+        "end": "20260831",
+        "periods": 115,
+        "top_n": 6,
+        "cost": 0.003,
+        "state_stocks": {
+          "attack": 6,
+          "neutral": 6,
+          "defense": 6
+        },
+        "stocks_target": {
+          "attack": 6,
+          "neutral": 6,
+          "defense": 6
+        },
+        "avg_stocks": 4.74,
+        "avg_cash_idle": 0.324,
+        "eff_cap_by_state": {
+          "attack": 0.3333,
+          "neutral": 0.3333,
+          "defense": 0.3333
+        },
+        "candidate_top": 0,
+        "stop_loss": null,
+        "hysteresis": 0,
+        "cfg_fingerprint": {
+          "industry_floor_stocks": 2.0,
+          "state_stocks": {
+            "attack": 6,
+            "neutral": 6,
+            "defense": 6
+          },
+          "candidate_top": 0,
+          "cost": 0.003,
+          "slip": 0.001,
+          "ind_cap": 0.25,
+          "size_pctl": 0,
+          "min_amt20": 0,
+          "hysteresis": 0,
+          "st_filter": true
+        },
+        "capital": 20000.0,
+        "lot_modeled": true,
+        "ann_return": 0.1159,
+        "bench_ann": 0.0309,
+        "excess_ann": 0.085,
+        "max_drawdown": -0.5126,
+        "vol_ann": 0.2405,
+        "sharpe": 0.399,
+        "win_rate": 0.5739,
+        "avg_turnover": 0.9061,
+        "ic_mean": 0.0859,
+        "ic_std": 0.1168,
+        "icir": 0.735,
+        "sys_ann_return": 0.1016,
+        "sys_max_drawdown": -0.421,
+        "mdd_daily": -0.5186,
+        "sys_mdd_daily": -0.4264
+      },
+      "20260919_b1real_full_c": {
+        "run_date": "20260919_b1real_full_c",
+        "start": "20170126",
+        "end": "20260831",
+        "periods": 115,
+        "top_n": 6,
+        "cost": 0.003,
+        "state_stocks": {
+          "attack": 6,
+          "neutral": 6,
+          "defense": 6
+        },
+        "stocks_target": {
+          "attack": 6,
+          "neutral": 6,
+          "defense": 6
+        },
+        "avg_stocks": 4.74,
+        "avg_cash_idle": 0.324,
+        "eff_cap_by_state": {
+          "attack": 0.3333,
+          "neutral": 0.3333,
+          "defense": 0.3333
+        },
+        "candidate_top": 0,
+        "stop_loss": null,
+        "hysteresis": 0,
+        "cfg_fingerprint": {
+          "industry_floor_stocks": 2.0,
+          "state_stocks": {
+            "attack": 6,
+            "neutral": 6,
+            "defense": 6
+          },
+          "candidate_top": 0,
+          "cost": 0.003,
+          "slip": 0.001,
+          "ind_cap": 0.25,
+          "size_pctl": 0,
+          "min_amt20": 0,
+          "hysteresis": 0,
+          "st_filter": true
+        },
+        "capital": 20000.0,
+        "lot_modeled": true,
+        "ann_return": 0.1159,
+        "bench_ann": 0.0531,
+        "excess_ann": 0.0628,
+        "max_drawdown": -0.5126,
+        "vol_ann": 0.2405,
+        "sharpe": 0.399,
+        "win_rate": 0.5391,
+        "avg_turnover": 0.9061,
+        "ic_mean": 0.0859,
+        "ic_std": 0.1168,
+        "icir": 0.735,
+        "sys_ann_return": 0.1016,
+        "sys_max_drawdown": -0.421,
+        "mdd_daily": -0.5186,
+        "sys_mdd_daily": -0.4264
+      },
+      "20260919_b1real_prod_a": {
+        "run_date": "20260919_b1real_prod_a",
+        "start": "20190731",
+        "end": "20260831",
+        "periods": 85,
+        "top_n": 6,
+        "cost": 0.003,
+        "state_stocks": {
+          "attack": 6,
+          "neutral": 6,
+          "defense": 6
+        },
+        "stocks_target": {
+          "attack": 6,
+          "neutral": 6,
+          "defense": 6
+        },
+        "avg_stocks": 4.94,
+        "avg_cash_idle": 0.2871,
+        "eff_cap_by_state": {
+          "attack": 0.3333,
+          "neutral": 0.3333,
+          "defense": 0.3333
+        },
+        "candidate_top": 0,
+        "stop_loss": null,
+        "hysteresis": 0,
+        "cfg_fingerprint": {
+          "industry_floor_stocks": 2.0,
+          "state_stocks": {
+            "attack": 6,
+            "neutral": 6,
+            "defense": 6
+          },
+          "candidate_top": 0,
+          "cost": 0.003,
+          "slip": 0.001,
+          "ind_cap": 0.25,
+          "size_pctl": 0,
+          "min_amt20": 0,
+          "hysteresis": 0,
+          "st_filter": true
+        },
+        "capital": 20000.0,
+        "lot_modeled": true,
+        "ann_return": 0.2262,
+        "bench_ann": 0.038,
+        "excess_ann": 0.1882,
+        "max_drawdown": -0.241,
+        "vol_ann": 0.2418,
+        "sharpe": 0.853,
+        "win_rate": 0.6706,
+        "avg_turnover": 0.9018,
+        "ic_mean": 0.0959,
+        "ic_std": 0.1116,
+        "icir": 0.86,
+        "sys_ann_return": 0.194,
+        "sys_max_drawdown": -0.1966,
+        "mdd_daily": -0.3812,
+        "sys_mdd_daily": -0.3172
+      },
+      "20260919_b1real_prod_c": {
+        "run_date": "20260919_b1real_prod_c",
+        "start": "20190731",
+        "end": "20260831",
+        "periods": 85,
+        "top_n": 6,
+        "cost": 0.003,
+        "state_stocks": {
+          "attack": 6,
+          "neutral": 6,
+          "defense": 6
+        },
+        "stocks_target": {
+          "attack": 6,
+          "neutral": 6,
+          "defense": 6
+        },
+        "avg_stocks": 4.94,
+        "avg_cash_idle": 0.2871,
+        "eff_cap_by_state": {
+          "attack": 0.3333,
+          "neutral": 0.3333,
+          "defense": 0.3333
+        },
+        "candidate_top": 0,
+        "stop_loss": null,
+        "hysteresis": 0,
+        "cfg_fingerprint": {
+          "industry_floor_stocks": 2.0,
+          "state_stocks": {
+            "attack": 6,
+            "neutral": 6,
+            "defense": 6
+          },
+          "candidate_top": 0,
+          "cost": 0.003,
+          "slip": 0.001,
+          "ind_cap": 0.25,
+          "size_pctl": 0,
+          "min_amt20": 0,
+          "hysteresis": 0,
+          "st_filter": true
+        },
+        "capital": 20000.0,
+        "lot_modeled": true,
+        "ann_return": 0.2262,
+        "bench_ann": 0.0602,
+        "excess_ann": 0.166,
+        "max_drawdown": -0.241,
+        "vol_ann": 0.2418,
+        "sharpe": 0.853,
+        "win_rate": 0.6235,
+        "avg_turnover": 0.9018,
+        "ic_mean": 0.0959,
+        "ic_std": 0.1116,
+        "icir": 0.86,
+        "sys_ann_return": 0.194,
+        "sys_max_drawdown": -0.1966,
+        "mdd_daily": -0.3812,
+        "sys_mdd_daily": -0.3172
+      }
+    },
+    "missing_pin_rows": [],
+    "data_max": {
+      "daily": "20260918",
+      "daily_basic": "20260918",
+      "adj_factor": "20260918",
+      "index_daily": "20260918"
+    },
+    "bench_coverage": {
+      "000906.SH": {
+        "n": 3331,
+        "first": "20130104",
+        "last": "20260918",
+        "null_close": 0,
+        "null_open": 0
+      },
+      "H00906.CSI": {
+        "n": 3331,
+        "first": "20130104",
+        "last": "20260918",
+        "null_close": 0,
+        "null_open": 3331
+      }
+    },
+    "paper_nav": {
+      "n": 5,
+      "first": "20260914",
+      "last": "20260918",
+      "bmin": 4982.1621,
+      "bmax": 5071.6139
+    },
+    "stage_ledger_running": [
+      {
+        "id": 45,
+        "stage": "daily_sync",
+        "run_date": "20260911",
+        "status": "running"
+      }
+    ]
+  },
+  "panel": {
+    "panel_dates": [
+      "2024-08-28",
+      "2026-09-18"
+    ],
+    "n_codes": 400,
+    "bench_series": {
+      "sha": "dc8c7a8cf04681af",
+      "last": 5071.61377,
+      "nan_in_window": 0
+    },
+    "price_factors": {
+      "amount_log": {
+        "sha": "f64f60312e08ea22",
+        "sample": [
+          null,
+          10.266998247,
+          10.537865532,
+          11.145622378,
+          11.218344432,
+          11.569173696
+        ]
+      },
+      "beta_250": {
+        "sha": "00e42471788cafa8",
+        "sample": [
+          null,
+          null,
+          null,
+          0.766933035,
+          0.392708955,
+          null
+        ]
+      },
+      "bias_20": {
+        "sha": "c8e0af458ef268ff",
+        "sample": [
+          null,
+          -0.015953692,
+          -0.014370938,
+          0.001246839,
+          -0.032730839,
+          -0.062247438
+        ]
+      },
+      "bias_60": {
+        "sha": "b5ff10a727c5fa7e",
+        "sample": [
+          null,
+          -0.082391667,
+          -0.015505457,
+          0.045119254,
+          -0.108152757,
+          0.106283689
+        ]
+      },
+      "bp": {
+        "sha": "dfda778ef783f1a4",
+        "sample": [
+          2.055075884,
+          0.024988443,
+          0.045014225,
+          0.037342694,
+          0.050481852,
+          null
+        ]
+      },
+      "dv_ttm": {
+        "sha": "6205f708470e2e2a",
+        "sample": [
+          6.960299969,
+          null,
+          null,
+          null,
+          null,
+          null
+        ]
+      },
+      "ep": {
+        "sha": "28ef1fec64f4bc78",
+        "sample": [
+          0.234192044,
+          null,
+          0.01003335,
+          0.015634136,
+          0.021135036,
+          null
+        ]
+      },
+      "high_52w": {
+        "sha": "c79227542391b04d",
+        "sample": [
+          null,
+          null,
+          -0.229872822,
+          -0.149364378,
+          -0.322691067,
+          -0.404789161
+        ]
+      },
+      "illiq": {
+        "sha": "8fc5e27982ffbf79",
+        "sample": [
+          null,
+          3.96e-07,
+          1.89e-07,
+          1.74e-07,
+          3.46e-07,
+          3.88e-07
+        ]
+      },
+      "low_52w": {
+        "sha": "f899c1c232ee86f7",
+        "sample": [
+          null,
+          null,
+          0.159489623,
+          0.227828705,
+          0.051327393,
+          0.517441697
+        ]
+      },
+      "mom_120": {
+        "sha": "bb268e152c04b3e3",
+        "sample": [
+          null,
+          null,
+          -0.009602189,
+          0.072559357,
+          -0.256962001,
+          -0.095310152
+        ]
+      },
+      "mom_20": {
+        "sha": "095cf23c2a666581",
+        "sample": [
+          null,
+          -0.017832637,
+          -0.047493398,
+          0.029113889,
+          -0.111951649,
+          0.217922688
+        ]
+      },
+      "mom_250": {
+        "sha": "3fac449866da2ef3",
+        "sample": [
+          null,
+          null,
+          null,
+          0.072559357,
+          -0.206756771,
+          -0.20584327
+        ]
+      },
+      "mom_60": {
+        "sha": "37b5f60b872d09c4",
+        "sample": [
+          null,
+          -0.00555557,
+          0.025568247,
+          0.029113889,
+          -0.232679725,
+          0.656509757
+        ]
+      },
+      "ret_max20": {
+        "sha": "f137d1ef3950807a",
+        "sample": [
+          null,
+          0.024691343,
+          0.010457516,
+          0.026854157,
+          0.064736009,
+          0.100826383
+        ]
+      },
+      "rev_5": {
+        "sha": "79bb5f94074c518d",
+        "sample": [
+          null,
+          0.026536286,
+          -0.006925225,
+          0.012300193,
+          -0.011924982,
+          0.127090394
+        ]
+      },
+      "size": {
+        "sha": "3d3fc185c09b3db8",
+        "sample": [
+          16.813556671,
+          12.539049149,
+          12.581190109,
+          12.680618286,
+          12.379142761,
+          12.249931335
+        ]
+      },
+      "skew_20": {
+        "sha": "0e4afff444b80898",
+        "sample": [
+          null,
+          -1.168458349,
+          -0.732664142,
+          -0.40093069,
+          0.451895744,
+          -0.427187432
+        ]
+      },
+      "turnover_20": {
+        "sha": "60ce281ce0d84b5d",
+        "sample": [
+          null,
+          1.046124992,
+          1.272635001,
+          2.154705012,
+          3.039490008,
+          4.536285001
+        ]
+      },
+      "turnover_chg": {
+        "sha": "9104e563bb596421",
+        "sample": [
+          null,
+          -0.662034102,
+          -0.324543154,
+          0.002214015,
+          -0.116756404,
+          0.742527851
+        ]
+      },
+      "vol_20": {
+        "sha": "57b9e894257c3003",
+        "sample": [
+          null,
+          0.019127688,
+          0.009715301,
+          0.015620931,
+          0.03155723,
+          0.055679154
+        ]
+      },
+      "vol_60": {
+        "sha": "ee04eb0ff7ebd464",
+        "sample": [
+          null,
+          0.029411854,
+          0.021378456,
+          0.015946329,
+          0.033105608,
+          0.041417786
+        ]
+      }
+    },
+    "leg_bench": {
+      "sha": "ddee807d66a3e17c",
+      "nan_in_window": 0
+    }
+  },
+  "api": {
+    "overview": {
+      "pin_missed": false,
+      "run_date": "20260912_limitquant",
+      "excess_ann": 0.1882,
+      "bench_ann": 0.038,
+      "ann_return": 0.2262,
+      "max_drawdown": -0.241,
+      "win_rate": 0.6706
+    },
+    "weekly": {
+      "ann_return": null,
+      "bench_ann": null,
+      "excess_pp": null,
+      "note": "样本仅 4 周, 年化/回撤/超额暂不报(守则: ≥8 周才报年化); 当前只有累计收益 +3.05%",
+      "weeks": 4,
+      "nav": 1040082.87
+    },
+    "paper": {
+      "bench_nav_last": 5071.6139,
+      "nav_last": 20201.62
+    }
+  }
+}

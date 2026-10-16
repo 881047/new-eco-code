@@ -1,0 +1,31 @@
+{
+ "asof": "2026-10-02T16:26:37",
+ "criteria_file": "plans/exec-early-prereg-20261002.md",
+ "windows": {
+  "prod": {
+   "n_months": 86,
+   "port_gap_monthly_mean": 0.00108,
+   "mkt_gap_monthly_mean": 0.00166,
+   "excess_monthly_mean": -0.00058,
+   "excess_ann": -0.007,
+   "t": -0.78,
+   "win_rate": 0.4884,
+   "churn_net_gap_monthly": -0.00123
+  },
+  "full": {
+   "n_months": 116,
+   "port_gap_monthly_mean": 0.00057,
+   "mkt_gap_monthly_mean": 0.00139,
+   "excess_monthly_mean": -0.00081,
+   "excess_ann": -0.0097,
+   "t": -1.3,
+   "win_rate": 0.4569,
+   "churn_net_gap_monthly": null
+  }
+ },
+ "verdict": "NO-GO",
+ "criteria": {
+  "GO_ge_0.10pct_month": null,
+  "verdict": "NO-GO"
+ }
+}

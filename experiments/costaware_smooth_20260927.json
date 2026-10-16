@@ -1,0 +1,93 @@
+{
+ "ran_at": "2026-09-27T19:39:50",
+ "prereg": "plans/costaware-smooth-prereg-20260927.md",
+ "control_pin": "20260927_excl5",
+ "lambdas": {
+  "smooth30": 0.3,
+  "smooth50": 0.5
+ },
+ "criteria": {
+  "p1": "换手 ≤ 对照×0.8",
+  "p2": "excess ≥ 对照-0.015",
+  "p3": "MDD 劣化 ≤2pp"
+ },
+ "runs": {
+  "pin_20260927_excl5": {
+   "prod": {
+    "turnover": 0.8865,
+    "excess_ann": 0.223,
+    "max_drawdown": -0.2584
+   },
+   "full": {
+    "turnover": 0.8778,
+    "excess_ann": 0.1107,
+    "max_drawdown": -0.4336
+   }
+  },
+  "smooth30_prod": {
+   "ann_return": 0.2583,
+   "excess_ann": 0.1981,
+   "max_drawdown": -0.2452,
+   "avg_turnover": 0.6492,
+   "ic_mean": 0.0966,
+   "win_rate": 0.5059,
+   "periods": 85
+  },
+  "smooth30_full": {
+   "ann_return": 0.1833,
+   "excess_ann": 0.1302,
+   "max_drawdown": -0.3257,
+   "avg_turnover": 0.6687,
+   "ic_mean": 0.0855,
+   "win_rate": 0.487,
+   "periods": 115
+  },
+  "smooth50_prod": {
+   "ann_return": 0.2242,
+   "excess_ann": 0.164,
+   "max_drawdown": -0.3044,
+   "avg_turnover": 0.5837,
+   "ic_mean": 0.0918,
+   "win_rate": 0.4941,
+   "periods": 85
+  },
+  "smooth50_full": {
+   "ann_return": 0.1548,
+   "excess_ann": 0.1018,
+   "max_drawdown": -0.3184,
+   "avg_turnover": 0.5969,
+   "ic_mean": 0.0803,
+   "win_rate": 0.4783,
+   "periods": 115
+  }
+ },
+ "verdicts": {
+  "smooth30": {
+   "lambda": 0.3,
+   "checks": {
+    "p1_turnover_prod": true,
+    "p2_excess_prod": false,
+    "p3_mdd_prod": true,
+    "p1_turnover_full": true,
+    "p2_excess_full": true,
+    "p3_mdd_full": true
+   },
+   "PASS_screen": false
+  },
+  "smooth50": {
+   "lambda": 0.5,
+   "checks": {
+    "p1_turnover_prod": true,
+    "p2_excess_prod": false,
+    "p3_mdd_prod": false,
+    "p1_turnover_full": true,
+    "p2_excess_full": true,
+    "p3_mdd_full": true
+   },
+   "PASS_screen": false
+  }
+ },
+ "verdict": "REJECT（线结清，登记勿重测）",
+ "note": "确定性变换无种子噪声; PASS 后生产接线(config score_smooth_lambda DEFAULT 关+重钉)须拍板; 生产 model_score 一字未动",
+ "runtime_sec": 69.0
+}

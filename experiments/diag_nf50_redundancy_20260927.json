@@ -1,0 +1,89 @@
+{
+  "ran_at": "2026-09-27T01:31:22",
+  "n_anchors": 46,
+  "within_50_mean_abs_rho": 0.172,
+  "within_50_max": 1.0,
+  "families": {
+    "candle": {
+      "mean": 0.3,
+      "max": 0.806
+    },
+    "imax_imxd": {
+      "mean": 0.471,
+      "max": 0.832
+    },
+    "cord": {
+      "mean": 0.507,
+      "max": 0.78
+    },
+    "cntd": {
+      "mean": 0.395,
+      "max": 0.395
+    },
+    "sump_vsum": {
+      "mean": 0.37,
+      "max": 1.0
+    },
+    "beta_resi_rsv": {
+      "mean": 0.632,
+      "max": 0.652
+    },
+    "margin_flow": {
+      "mean": 0.337,
+      "max": 0.767
+    },
+    "m60": {
+      "mean": 0.53,
+      "max": 0.99
+    },
+    "llm": {
+      "mean": 0.154,
+      "max": 1.0
+    }
+  },
+  "mean_abs_rho_50_vs_kept8": 0.126,
+  "mean_abs_rho_50_vs_removed23": 0.126,
+  "top_shadows_vs_removed23": [
+    [
+      "BETA10",
+      "bias_20",
+      0.804
+    ],
+    [
+      "SUMP10",
+      "bias_20",
+      0.768
+    ],
+    [
+      "SUMD10",
+      "bias_20",
+      0.768
+    ],
+    [
+      "RESI30",
+      "rev_5",
+      0.704
+    ],
+    [
+      "RSV10",
+      "rev_5",
+      0.692
+    ],
+    [
+      "RSV10",
+      "bias_20",
+      0.689
+    ],
+    [
+      "BETA10",
+      "rev_5",
+      0.688
+    ],
+    [
+      "IMXD20",
+      "mom_20",
+      0.608
+    ]
+  ],
+  "effective_dim_90pct": 25
+}

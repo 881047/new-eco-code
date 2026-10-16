@@ -1,0 +1,17 @@
+{
+  "ran_at": "2026-09-28T08:05:42",
+  "factors_before": 31,
+  "factors_after": 33,
+  "rows": {
+    "text_n1m": {
+      "count": 376819,
+      "min": "20190131",
+      "max": "20260924"
+    },
+    "text_novel3m": {
+      "count": 375737,
+      "min": "20190131",
+      "max": "20260924"
+    }
+  }
+}

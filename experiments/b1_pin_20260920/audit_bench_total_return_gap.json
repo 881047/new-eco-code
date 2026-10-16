@@ -1,0 +1,81 @@
+{
+  "benchmark_code": "000906.SH",
+  "coverage": {
+    "from": "20190131",
+    "to": "20260831",
+    "n_months": 92
+  },
+  "recent_backtest_summary_rows": [
+    {
+      "run_date": "20260919_abg_full_g3_b",
+      "start": "20170126",
+      "end": "20260831",
+      "periods": 115,
+      "ann_return": 0.182,
+      "bench_ann": 0.0309,
+      "excess_ann": 0.1511
+    },
+    {
+      "run_date": "20260919_abg_full_g3_a",
+      "start": "20170126",
+      "end": "20260831",
+      "periods": 115,
+      "ann_return": 0.1383,
+      "bench_ann": 0.0309,
+      "excess_ann": 0.1075
+    },
+    {
+      "run_date": "20260919_abg_full_g2_b",
+      "start": "20170126",
+      "end": "20260831",
+      "periods": 115,
+      "ann_return": 0.1092,
+      "bench_ann": 0.0309,
+      "excess_ann": 0.0783
+    },
+    {
+      "run_date": "20260919_abg_full_g2_a",
+      "start": "20170126",
+      "end": "20260831",
+      "periods": 115,
+      "ann_return": 0.126,
+      "bench_ann": 0.0309,
+      "excess_ann": 0.0951
+    },
+    {
+      "run_date": "20260919_abg_full_g1_b",
+      "start": "20170126",
+      "end": "20260831",
+      "periods": 115,
+      "ann_return": -0.0504,
+      "bench_ann": 0.0309,
+      "excess_ann": -0.0813
+    }
+  ],
+  "bench_price_index": {
+    "code": "000906.SH",
+    "from": "20190131",
+    "to": "20260918",
+    "years": 7.63,
+    "price_total": 0.5116,
+    "price_ann": 0.0556
+  },
+  "bench_dividend_yield_pp_per_year": {
+    "arith_mean_over_years": 2.242,
+    "min_year": 1.742,
+    "max_year": 2.722,
+    "compound_upper_bound": 2.27,
+    "by_year": {
+      "2019": 2.145,
+      "2020": 1.946,
+      "2021": 1.742,
+      "2022": 2.203,
+      "2023": 2.523,
+      "2024": 2.722,
+      "2025": 2.518,
+      "2026": 2.136
+    }
+  },
+  "how_to_read": "抬高量(百分点/年) = 上面的股息率：`excess_ann` 里被基准少算的那一块。占比 = 抬高量 ÷ |excess_ann×100| —— 分母请用 08 号 pin 台账上的生产读数，recent_backtest_summary_rows 只是同表的最近几行(多为实验臂)。注意策略腿的 adj_factor 把**个股**分红全额计入了，所以这不是双边抵消的误差。",
+  "not_a_verdict": "阶段 A 量级实测：未做 A/B、未改口径、未重钉 pin。"
+}

@@ -1,0 +1,71 @@
+{
+  "criteria": "plans/ledger-settlement-criteria-20260920.md §M2（跑前冻结）",
+  "verdict": "关闭：跨月结转占资少计的息 < 0.2pp/年 ⇒ 不值得动回测账务（动它=换 pin）",
+  "U_pp_per_year": 0.0269,
+  "threshold_pp_per_year": 0.2,
+  "stuck_cell_months": 2,
+  "distinct_stuck_codes": 1,
+  "months_with_rollover": 1,
+  "bp_raw_sum_top5_months": {
+    "201703": 4298.0
+  },
+  "idle_rate_source": "repo_rate.overnight 月均/12；缺月份用引擎同一个 FALLBACK_CASH=1.5%（2017~2023-08 全靠它）",
+  "rate_months_from_repo": 37,
+  "windows": [
+    {
+      "window": "prod",
+      "metrics_keys": 32,
+      "ann_return": 0.2262,
+      "max_drawdown": -0.241,
+      "periods": 85,
+      "runtime_s": 11.2,
+      "pin_row": "20260920_trbench"
+    },
+    {
+      "window": "full",
+      "metrics_keys": 32,
+      "ann_return": 0.1159,
+      "max_drawdown": -0.5126,
+      "periods": 115,
+      "runtime_s": 12.7,
+      "pin_row": "20260920_trbench_full"
+    }
+  ],
+  "backtest_error": null,
+  "writes_blocked": [
+    "INSERT OR REPLACE INTO backtest_summary (run_date, metrics) ",
+    "upsert:backtest_nav",
+    "upsert:backtest_nav_daily"
+  ],
+  "gates": {
+    "M2a_zero_write": {
+      "fp_before": "73c2998cc767c567/13082",
+      "fp_after": "73c2998cc767c567/13082",
+      "pass": true
+    },
+    "M2b_parity_with_registered_pin": {
+      "detail": {
+        "prod": {
+          "ann_return_same": true,
+          "max_drawdown_same": true
+        },
+        "full": {
+          "ann_return_same": true,
+          "max_drawdown_same": true
+        }
+      },
+      "pass": true
+    },
+    "M2c_instrument_responds": {
+      "pass": true,
+      "U_zero_when_no_records": 0.0,
+      "U_when_bp_doubled": 0.053725,
+      "U_actual": 0.026863,
+      "rule": "清空必须 0；翻倍必须精确翻倍；有结转记录时 U 必须 > 0"
+    },
+    "M2d_nonzero_guard": {
+      "pass": true
+    }
+  },
+  "not_measured": []
+}

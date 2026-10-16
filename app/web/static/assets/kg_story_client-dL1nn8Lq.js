@@ -1,0 +1,1 @@
+function i(s,n=90){const o=Math.min(3660,Math.max(1,parseInt(n,10)||90));return fetch(`/api/kg/positions_story?days=${o}`,{cache:"no-store"}).then(t=>{if(!t.ok)throw new Error("HTTP "+t.status);return t.json()}).then(t=>(t.positions||[]).find(e=>e.ts_code===s)||{ts_code:s,events:[],summary:"",missing:!0})}export{i as fetchStory};

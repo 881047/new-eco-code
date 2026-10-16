@@ -1,0 +1,128 @@
+{
+  "ran_at": "2026-09-27T22:35:50",
+  "prereg": "plans/text-factor-llm-labeling-prereg-20260927.md",
+  "runtime_sec": 1572.7,
+  "arm_runtimes": {
+    "nfab2_ctrl_sa": 388.9,
+    "nfab2_ctrl_sb": 388.0,
+    "nfab2_trt_sa": 318.3,
+    "nfab2_trt_sb": 319.1
+  },
+  "score_layer": {
+    "readouts": {
+      "ctrl_sa": {
+        "dead_head": 0.0105,
+        "dead_t": 5.21,
+        "active_head": 0.0082,
+        "same_sign": true,
+        "dead_top6": 0.0048
+      },
+      "ctrl_sb": {
+        "dead_head": 0.0098,
+        "dead_t": 4.79,
+        "active_head": 0.0085,
+        "same_sign": true,
+        "dead_top6": 0.0036
+      },
+      "trt_sa": {
+        "dead_head": 0.0104,
+        "dead_t": 4.78,
+        "active_head": 0.0089,
+        "same_sign": true,
+        "dead_top6": 0.0174
+      },
+      "trt_sb": {
+        "dead_head": 0.0108,
+        "dead_t": 4.9,
+        "active_head": 0.0081,
+        "same_sign": true,
+        "dead_top6": 0.0072
+      }
+    },
+    "deltas": {
+      "sa": -0.0001,
+      "sb": 0.001
+    },
+    "mean_delta": 0.0004,
+    "PASS": false
+  },
+  "portfolio_layer": {
+    "runs": {
+      "ctrl_sa_prod": {
+        "sys_ann_return": 0.1704,
+        "sys_max_drawdown": -0.2266,
+        "avg_turnover": 0.8946,
+        "periods": 85
+      },
+      "ctrl_sa_full": {
+        "sys_ann_return": 0.086,
+        "sys_max_drawdown": -0.4188,
+        "avg_turnover": 0.9009,
+        "periods": 115
+      },
+      "ctrl_sb_prod": {
+        "sys_ann_return": 0.1355,
+        "sys_max_drawdown": -0.1846,
+        "avg_turnover": 0.9135,
+        "periods": 85
+      },
+      "ctrl_sb_full": {
+        "sys_ann_return": 0.0992,
+        "sys_max_drawdown": -0.2938,
+        "avg_turnover": 0.9156,
+        "periods": 115
+      },
+      "trt_sa_prod": {
+        "sys_ann_return": 0.1928,
+        "sys_max_drawdown": -0.2111,
+        "avg_turnover": 0.9115,
+        "periods": 85
+      },
+      "trt_sa_full": {
+        "sys_ann_return": 0.1013,
+        "sys_max_drawdown": -0.4188,
+        "avg_turnover": 0.9133,
+        "periods": 115
+      },
+      "trt_sb_prod": {
+        "sys_ann_return": 0.175,
+        "sys_max_drawdown": -0.2209,
+        "avg_turnover": 0.9141,
+        "periods": 85
+      },
+      "trt_sb_full": {
+        "sys_ann_return": 0.1273,
+        "sys_max_drawdown": -0.2938,
+        "avg_turnover": 0.9161,
+        "periods": 115
+      }
+    },
+    "deltas": [
+      {
+        "seed_set": "sa",
+        "sys_ann_prod": 0.0224,
+        "sys_ann_full": 0.0153,
+        "sys_mdd_prod": 0.0155,
+        "sys_mdd_full": 0.0,
+        "turnover": 0.0169
+      },
+      {
+        "seed_set": "sb",
+        "sys_ann_prod": 0.0395,
+        "sys_ann_full": 0.0281,
+        "sys_mdd_prod": -0.0363,
+        "sys_mdd_full": 0.0,
+        "turnover": 0.0006
+      }
+    ],
+    "verdict": {
+      "p1_ann": true,
+      "p2_mdd": true,
+      "p3_turnover": true,
+      "n_seed_sets": 2,
+      "PASS_portfolio": true,
+      "verdict": "PASS"
+    }
+  },
+  "closure": "文本因子线闭环：打分层 FAIL + 组合层 PASS ⇒ 线结清登记（N 预算 +5）"
+}

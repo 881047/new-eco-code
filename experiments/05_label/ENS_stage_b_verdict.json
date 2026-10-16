@@ -1,0 +1,94 @@
+{
+ "script_sha": "715edfd9be1d4204",
+ "candidate_table": "model_score_ens",
+ "tag": "ens_judge_20260913",
+ "baseline_table": "model_score",
+ "coverage": {
+  "candidate": [
+   "20200831",
+   "20260731",
+   72
+  ],
+  "baseline": [
+   "20170126",
+   "20260831",
+   116
+  ],
+  "common_judgement_window": [
+   "20200831",
+   "20260731",
+   72
+  ]
+ },
+ "judgement": {
+  "criteria": "对齐窗 [lo,hi] 上系统年化与系统月回撤两轴都不劣于同窗基线",
+  "base": {
+   "arm": "基线(对齐窗)",
+   "table": "model_score",
+   "tag": "ens_judge_20260913_base_aligned",
+   "run": "20260913_ens_judge_20260913_base_aligned",
+   "n": 72,
+   "sys_ann": 0.1967,
+   "sys_mdd": -0.1966,
+   "sys_mdd_daily": -0.3172,
+   "idle": 0.3041,
+   "n_avg": 4.86,
+   "sharpe": 0.873,
+   "full_ann": 0.2302,
+   "full_mdd": -0.241
+  },
+  "cand": {
+   "arm": "候选(对齐窗)",
+   "table": "model_score_ens",
+   "tag": "ens_judge_20260913_ens_aligned",
+   "run": "20260913_ens_judge_20260913_ens_aligned",
+   "n": 71,
+   "sys_ann": 0.0362,
+   "sys_mdd": -0.3798,
+   "sys_mdd_daily": -0.4388,
+   "idle": 0.266,
+   "n_avg": 5.25,
+   "sharpe": 0.173,
+   "full_ann": 0.0599,
+   "full_mdd": -0.3882
+  },
+  "d_ann_pp": -16.05,
+  "d_mdd_pp": -18.32,
+  "PASS": false
+ },
+ "non_judgement_mismatched_window": {
+  "base_prod": {
+   "arm": "基线(prod全窗)",
+   "table": "model_score",
+   "tag": "ens_judge_20260913_base_prodREF",
+   "run": "20260913_ens_judge_20260913_base_prodREF",
+   "n": 85,
+   "sys_ann": 0.194,
+   "sys_mdd": -0.1966,
+   "sys_mdd_daily": -0.3172,
+   "idle": 0.2871,
+   "n_avg": 4.94,
+   "sharpe": 0.853,
+   "full_ann": 0.2262,
+   "full_mdd": -0.241
+  },
+  "base_full": {
+   "arm": "基线(full全窗)",
+   "table": "model_score",
+   "tag": "ens_judge_20260913_base_fullREF",
+   "run": "20260913_ens_judge_20260913_base_fullREF",
+   "n": 115,
+   "sys_ann": 0.1016,
+   "sys_mdd": -0.421,
+   "sys_mdd_daily": -0.4264,
+   "idle": 0.324,
+   "n_avg": 4.74,
+   "sharpe": 0.399,
+   "full_ann": 0.1159,
+   "full_mdd": -0.5126
+  },
+  "note": "期数不同 ⇒ 假读数, 只用于展示'覆盖不同会改变结论'"
+ },
+ "caveat": "通过 ≠ 可接生产: 有效验证样本只有 24 个月; 且 2 个成员的 stacking 很薄",
+ "secs": 355.2
+}

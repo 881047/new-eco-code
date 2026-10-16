@@ -1,0 +1,308 @@
+{
+  "meta": {
+    "script": "experiments/05_label/F6_independent_m5_check.py",
+    "scores": "experiments/05_label/F4_scores_seedA.npz",
+    "capital": 1000000.0,
+    "equity_frac": 0.873,
+    "n_target": 100,
+    "exit_band": 800,
+    "slippage": 0.001,
+    "since": "20140101",
+    "anchors_finite": 608,
+    "sessions": 607,
+    "first_exec": "2014-11-03",
+    "last_exec": "2026-09-07",
+    "anchors_not_iso_week_last": [],
+    "pool_size_median": 3537,
+    "pool_size_first_last": [
+      2256,
+      4396
+    ],
+    "fee_params": {
+      "commission_rate": 0.00025,
+      "min_commission": 5.0,
+      "stamp_tax": 0.0005,
+      "stamp_tax_before": 0.001,
+      "transfer_fee": 1e-05
+    },
+    "benchmark": "上一锚点 PIT 可交易域等权, 复权开盘对开盘, 不计费用"
+  },
+  "n_periods": 606,
+  "ann_strategy_pct": 24.1998,
+  "ann_benchmark_pct": 8.4865,
+  "excess_pp": 15.7134,
+  "turnover_avg": 0.18,
+  "mdd_pct": -52.3111,
+  "sharpe": 0.8143,
+  "extra": {
+    "total_return_pct": 1148.2493,
+    "final_nav": 12482493.44,
+    "avg_names_held": 123.76,
+    "ann_benchmark_raw_pct": 2.4386,
+    "diagnostics": {
+      "n_buy_limit_block": 246,
+      "n_sell_limit_block": 76,
+      "n_buy_cash_block": 17471,
+      "n_no_price_held": 562,
+      "n_held_missing_rank": 667,
+      "n_maxhold_block": 0,
+      "n_rebal_buy": 0,
+      "n_rebal_sell": 0,
+      "n_rebal_limit_block": 0
+    }
+  },
+  "arms": {
+    "primary_literal": {
+      "n_periods": 606,
+      "ann_strategy_pct": 24.1998,
+      "ann_benchmark_pct": 8.4865,
+      "excess_pp": 15.7134,
+      "turnover_avg": 0.18,
+      "mdd_pct": -52.3111,
+      "sharpe": 0.8143,
+      "avg_names_held": 123.76,
+      "n_periods_bench_ok": 606,
+      "diagnostics": {
+        "n_buy_limit_block": 246,
+        "n_sell_limit_block": 76,
+        "n_buy_cash_block": 17471,
+        "n_no_price_held": 562,
+        "n_held_missing_rank": 667,
+        "n_maxhold_block": 0,
+        "n_rebal_buy": 0,
+        "n_rebal_sell": 0,
+        "n_rebal_limit_block": 0
+      },
+      "ann_benchmark_raw_pct": 2.4386,
+      "excess_pp_raw_bench": 21.7612,
+      "total_return_pct": 1148.2493,
+      "final_nav": 12482493.44
+    },
+    "fill_to_100": {
+      "n_periods": 606,
+      "ann_strategy_pct": 20.5919,
+      "ann_benchmark_pct": 8.4865,
+      "excess_pp": 12.1054,
+      "turnover_avg": 0.1796,
+      "mdd_pct": -43.9192,
+      "sharpe": 0.8317,
+      "avg_names_held": 100.0,
+      "n_periods_bench_ok": 606,
+      "diagnostics": {
+        "n_buy_limit_block": 191,
+        "n_sell_limit_block": 73,
+        "n_buy_cash_block": 0,
+        "n_no_price_held": 460,
+        "n_held_missing_rank": 559,
+        "n_maxhold_block": 24524,
+        "n_rebal_buy": 0,
+        "n_rebal_sell": 0,
+        "n_rebal_limit_block": 0
+      },
+      "ann_benchmark_raw_pct": 2.4386,
+      "excess_pp_raw_bench": 18.1533,
+      "total_return_pct": 785.3184,
+      "final_nav": 8853183.6
+    },
+    "band_eq_target": {
+      "n_periods": 606,
+      "ann_strategy_pct": 17.3073,
+      "ann_benchmark_pct": 8.4865,
+      "excess_pp": 8.8208,
+      "turnover_avg": 0.5112,
+      "mdd_pct": -42.979,
+      "sharpe": 0.707,
+      "avg_names_held": 99.44,
+      "n_periods_bench_ok": 606,
+      "diagnostics": {
+        "n_buy_limit_block": 249,
+        "n_sell_limit_block": 109,
+        "n_buy_cash_block": 0,
+        "n_no_price_held": 428,
+        "n_held_missing_rank": 550,
+        "n_maxhold_block": 101,
+        "n_rebal_buy": 0,
+        "n_rebal_sell": 0,
+        "n_rebal_limit_block": 0
+      },
+      "ann_benchmark_raw_pct": 2.4386,
+      "excess_pp_raw_bench": 14.8687,
+      "total_return_pct": 541.6997,
+      "final_nav": 6416996.7
+    },
+    "fill100_keep_norank": {
+      "n_periods": 606,
+      "ann_strategy_pct": 21.1492,
+      "ann_benchmark_pct": 8.4865,
+      "excess_pp": 12.6627,
+      "turnover_avg": 0.1243,
+      "mdd_pct": -38.7987,
+      "sharpe": 0.9508,
+      "avg_names_held": 100.0,
+      "n_periods_bench_ok": 606,
+      "diagnostics": {
+        "n_buy_limit_block": 157,
+        "n_sell_limit_block": 24,
+        "n_buy_cash_block": 0,
+        "n_no_price_held": 6131,
+        "n_held_missing_rank": 16717,
+        "n_maxhold_block": 33361,
+        "n_rebal_buy": 0,
+        "n_rebal_sell": 0,
+        "n_rebal_limit_block": 0
+      },
+      "ann_benchmark_raw_pct": 2.4386,
+      "excess_pp_raw_bench": 18.7106,
+      "total_return_pct": 834.1872,
+      "final_nav": 9341872.05
+    },
+    "fill100_rebal": {
+      "n_periods": 606,
+      "ann_strategy_pct": 22.1287,
+      "ann_benchmark_pct": 8.4865,
+      "excess_pp": 13.6422,
+      "turnover_avg": 0.1795,
+      "mdd_pct": -42.7879,
+      "sharpe": 0.848,
+      "avg_names_held": 100.0,
+      "n_periods_bench_ok": 606,
+      "diagnostics": {
+        "n_buy_limit_block": 191,
+        "n_sell_limit_block": 73,
+        "n_buy_cash_block": 0,
+        "n_no_price_held": 460,
+        "n_held_missing_rank": 559,
+        "n_maxhold_block": 24533,
+        "n_rebal_buy": 11554,
+        "n_rebal_sell": 3917,
+        "n_rebal_limit_block": 8
+      },
+      "ann_benchmark_raw_pct": 2.4386,
+      "excess_pp_raw_bench": 19.6901,
+      "total_return_pct": 926.1022,
+      "final_nav": 10261021.7
+    },
+    "fill100_rebal_keep_norank": {
+      "n_periods": 606,
+      "ann_strategy_pct": 22.7939,
+      "ann_benchmark_pct": 8.4865,
+      "excess_pp": 14.3075,
+      "turnover_avg": 0.1243,
+      "mdd_pct": -37.6364,
+      "sharpe": 0.9692,
+      "avg_names_held": 100.0,
+      "n_periods_bench_ok": 606,
+      "diagnostics": {
+        "n_buy_limit_block": 157,
+        "n_sell_limit_block": 24,
+        "n_buy_cash_block": 0,
+        "n_no_price_held": 6131,
+        "n_held_missing_rank": 16717,
+        "n_maxhold_block": 33363,
+        "n_rebal_buy": 8530,
+        "n_rebal_sell": 3261,
+        "n_rebal_limit_block": 8
+      },
+      "ann_benchmark_raw_pct": 2.4386,
+      "excess_pp_raw_bench": 20.3553,
+      "total_return_pct": 993.1604,
+      "final_nav": 10931604.06
+    }
+  },
+  "interpretation": {
+    "is_st": "风险警示(ST)含 'ST' 不含 '退' —— 与 app/backtest/engine.py:431 nl.is_st_only 同口径",
+    "held_without_rank": "锚点周无有限评分/不可交易的持仓 ⇒ 视同落在 800 名之外 ⇒ 卖出",
+    "benchmark_price": "复权(总收益)口径为主 —— 策略 NAV 本身含分红再投, 用未复权价格会把分红从基准里抹掉; 未复权值见 extra.ann_benchmark_raw_pct",
+    "target_100": "主口径 = 买入全部未持有的 top100(字面); 宽出带只卖掉出 800 名者 ⇒ 持仓只数膨胀到现金上限(1/0.873≈114.5 只)。诊断臂 fill_to_100 / band_eq_target 把持仓钉在 100 槽位。"
+  },
+  "reference": {
+    "ann_strategy": 18.57,
+    "ann_benchmark": 8.49,
+    "excess_pp": 10.09,
+    "turnover": 0.155,
+    "mdd": -43.3,
+    "sharpe": 0.79,
+    "n_periods": 606
+  },
+  "delta": {
+    "ann_strategy_pp": 5.6298,
+    "ann_benchmark_pp": -0.0035,
+    "excess_pp": 5.6234,
+    "turnover": 0.025,
+    "mdd_pp": -9.0111,
+    "sharpe": 0.0243,
+    "n_periods": 0
+  },
+  "delta_arms_to_reference": {
+    "primary_literal": {
+      "ann_strategy_pp": 5.6298,
+      "ann_benchmark_pp": -0.0035,
+      "excess_pp": 5.6234,
+      "turnover": 0.025,
+      "mdd_pp": -9.0111,
+      "sharpe": 0.0243,
+      "n_periods": 0
+    },
+    "fill_to_100": {
+      "ann_strategy_pp": 2.0219,
+      "ann_benchmark_pp": -0.0035,
+      "excess_pp": 2.0154,
+      "turnover": 0.0246,
+      "mdd_pp": -0.6192,
+      "sharpe": 0.0417,
+      "n_periods": 0
+    },
+    "band_eq_target": {
+      "ann_strategy_pp": -1.2627,
+      "ann_benchmark_pp": -0.0035,
+      "excess_pp": -1.2692,
+      "turnover": 0.3562,
+      "mdd_pp": 0.321,
+      "sharpe": -0.083,
+      "n_periods": 0
+    },
+    "fill100_keep_norank": {
+      "ann_strategy_pp": 2.5792,
+      "ann_benchmark_pp": -0.0035,
+      "excess_pp": 2.5727,
+      "turnover": -0.0307,
+      "mdd_pp": 4.5013,
+      "sharpe": 0.1608,
+      "n_periods": 0
+    },
+    "fill100_rebal": {
+      "ann_strategy_pp": 3.5587,
+      "ann_benchmark_pp": -0.0035,
+      "excess_pp": 3.5522,
+      "turnover": 0.0245,
+      "mdd_pp": 0.5121,
+      "sharpe": 0.058,
+      "n_periods": 0
+    },
+    "fill100_rebal_keep_norank": {
+      "ann_strategy_pp": 4.2239,
+      "ann_benchmark_pp": -0.0035,
+      "excess_pp": 4.2175,
+      "turnover": -0.0307,
+      "mdd_pp": 5.6636,
+      "sharpe": 0.1792,
+      "n_periods": 0
+    }
+  },
+  "diagnosis": {
+    "most_likely_reason": "① 基准的 -6.05pp 差值**全部**来自价格口径: 任务书的'开盘对开盘'若按字面用未复权价 = 2.44%, 而复权(总收益)口径 = 8.49%, 与参考值 8.49% 只差 -0.0035pp —— 即另一份实现的基准是**复权**口径(策略 NAV 走复权滚股数, 基准必须同口径)。② 策略的 +5.63pp 主要来自'目标 100 只'的字面读法: 买入全部未持有的 top100 而出带只卖'掉出 800 名'者 ⇒ 持仓只数单调膨胀到现金上限(实测均 123.8 只 ≈ 1/0.873, 买单被现金挡掉 17471 次)⇒ 组合被动变成 ≈100% 满仓(设计值是 87.3%)。把持仓钉在 100 槽位('fill_to_100')后: 年化 20.59%、回撤 -43.9%、换手 0.180、Sharpe 0.83 —— 与参考的差值收敛到 +2.02pp / -0.62pp / +0.025 / +0.04。③ 残余的 +2.02pp 年化不在本脚本测过的 6 种读法里(诊断臂 D/E/F 至少在 1 个指标上离参考更远), 最可能落在排名域边界或执行细节的微差(涨跌停被挡后的补位、缺价兜底、整手预算是否含 single_side_cost 预留), 量级 ~0.03pp/周。",
+    "matches_reference_best": "fill_to_100",
+    "composite_gap_by_arm": {
+      "fill_to_100": 9.271,
+      "fill100_rebal": 12.321,
+      "primary_literal": 19.571,
+      "fill100_keep_norank": 26.23,
+      "fill100_rebal_keep_norank": 30.877,
+      "band_eq_target": 45.504
+    },
+    "confirmed_reproduced_exactly": [
+      "n_periods = 606(锚点=ISO 周末 651 个, 有评分 608 个, 末尾无次交易日丢 1 个)",
+      "基准复权口径 8.4865% vs 参考 8.49%(差 -0.0035pp)"
+    ]
+  }
+}

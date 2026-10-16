@@ -1,0 +1,85 @@
+{
+ "ran_at": "2026-09-29T10:42:42",
+ "prereg": "plans/head-weight-prereg-20260929.md",
+ "seeds_A": [
+  42,
+  7,
+  123,
+  2024
+ ],
+ "seeds_B": [
+  7,
+  13,
+  99,
+  2024
+ ],
+ "head_weight": 3.0,
+ "windows": {
+  "start": "20190731",
+  "end": "20260831"
+ },
+ "arms": {
+  "ctrl_A": {
+   "run_date": "20260929_20260929_abhw_ctrl_A",
+   "score_table": "model_score",
+   "periods": 85,
+   "ann": 0.3168,
+   "mdd": -0.2363,
+   "sys_ann": 0.2913,
+   "sys_mdd": -0.1817,
+   "sys_mdd_daily": -0.3358,
+   "turnover": 0.8865
+  },
+  "B1_A": {
+   "run_date": "20260929_20260929_abhw_B1_A",
+   "score_table": "model_score_hw3_a",
+   "periods": 85,
+   "ann": 0.012,
+   "mdd": -0.3349,
+   "sys_ann": -0.0087,
+   "sys_mdd": -0.3223,
+   "sys_mdd_daily": -0.4116,
+   "turnover": 0.9353
+  },
+  "ctrl_B": {
+   "run_date": "20260929_20260929_abhw_ctrl_B",
+   "score_table": "model_score_hw_base_b",
+   "periods": 85,
+   "ann": 0.1767,
+   "mdd": -0.1999,
+   "sys_ann": 0.1652,
+   "sys_mdd": -0.1634,
+   "sys_mdd_daily": -0.3391,
+   "turnover": 0.8942
+  },
+  "B1_B": {
+   "run_date": "20260929_20260929_abhw_B1_B",
+   "score_table": "model_score_hw3_b",
+   "periods": 85,
+   "ann": 0.0967,
+   "mdd": -0.271,
+   "sys_ann": 0.0676,
+   "sys_mdd": -0.2665,
+   "sys_mdd_daily": -0.4136,
+   "turnover": 0.9325
+  }
+ },
+ "pin_check": {
+  "ann": true,
+  "mdd": true,
+  "sys_ann": true,
+  "sys_mdd": true
+ },
+ "deltas": {
+  "A": {
+   "sys_ann": -0.3,
+   "sys_mdd": -0.1406
+  },
+  "B": {
+   "sys_ann": -0.0976,
+   "sys_mdd": -0.1031
+  }
+ },
+ "verdict": "REJECT 线结清（双种子同向为负）",
+ "runtime_sec": 1375.9
+}

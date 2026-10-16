@@ -1,0 +1,140 @@
+{
+ "protocol": {
+  "top_n": 100,
+  "tail_q": 0.9,
+  "sell_rate_bp": 7.6,
+  "windows": {
+   "FULL": [
+    "2010-01-01",
+    "2030-12-31"
+   ],
+   "ACTIVE": [
+    "2024-01-01",
+    "2026-08-31"
+   ],
+   "DEAD": [
+    "2020-09-01",
+    "2023-12-31"
+   ]
+  },
+  "max_mdd_worse_pp": 2.0,
+  "max_turnover_ratio": 1.2,
+  "arms": {
+   "BASE": "生产融合分 top100",
+   "X1": "剔除已上榜票里家数前 10%",
+   "X2": "剔除全部被推荐过的票(敏感性, 不判决)"
+  }
+ },
+ "n_periods": 606,
+ "stats": {
+  "BASE": {
+   "FULL": {
+    "n": 606,
+    "mean_pp": 0.559,
+    "excess_pp": 32.24,
+    "sharpe": 0.278,
+    "mdd": -0.2272
+   },
+   "ACTIVE": {
+    "n": 137,
+    "mean_pp": 0.291,
+    "excess_pp": 13.71,
+    "sharpe": 0.098,
+    "mdd": -0.2272
+   },
+   "DEAD": {
+    "n": 170,
+    "mean_pp": 0.427,
+    "excess_pp": 24.26,
+    "sharpe": 0.325,
+    "mdd": -0.1145
+   }
+  },
+  "X1": {
+   "FULL": {
+    "n": 606,
+    "mean_pp": 0.563,
+    "excess_pp": 32.55,
+    "sharpe": 0.281,
+    "mdd": -0.2272
+   },
+   "ACTIVE": {
+    "n": 137,
+    "mean_pp": 0.3,
+    "excess_pp": 14.23,
+    "sharpe": 0.101,
+    "mdd": -0.2272
+   },
+   "DEAD": {
+    "n": 170,
+    "mean_pp": 0.436,
+    "excess_pp": 24.84,
+    "sharpe": 0.338,
+    "mdd": -0.101
+   }
+  },
+  "X2": {
+   "FULL": {
+    "n": 606,
+    "mean_pp": 0.564,
+    "excess_pp": 32.62,
+    "sharpe": 0.281,
+    "mdd": -0.2279
+   },
+   "ACTIVE": {
+    "n": 137,
+    "mean_pp": 0.296,
+    "excess_pp": 13.99,
+    "sharpe": 0.099,
+    "mdd": -0.2279
+   },
+   "DEAD": {
+    "n": 170,
+    "mean_pp": 0.443,
+    "excess_pp": 25.28,
+    "sharpe": 0.341,
+    "mdd": -0.1134
+   }
+  }
+ },
+ "turnover": {
+  "BASE": 1.0123,
+  "X1": 1.0124,
+  "X2": 1.0273
+ },
+ "verdict": {
+  "full_excess_ok": true,
+  "active_excess_ok": true,
+  "mdd_ok": true,
+  "turnover_ok": true,
+  "delta_full_pp": 0.31,
+  "delta_active_pp": 0.52,
+  "adopt": true
+ },
+ "paired_t_X1_minus_BASE": {
+  "FULL": {
+   "n": 606,
+   "mean_pp": 0.004,
+   "t": 1.96,
+   "positive_share": 0.023
+  },
+  "ACTIVE": {
+   "n": 137,
+   "mean_pp": 0.009,
+   "t": 1.67,
+   "positive_share": 0.051
+  },
+  "DEAD": {
+   "n": 170,
+   "mean_pp": 0.009,
+   "t": 1.27,
+   "positive_share": 0.041
+  }
+ },
+ "overlap": {
+  "periods": 606,
+  "mean_top100_in_broker_head": 0.1,
+  "mean_top100_ever_recommended": 0.31,
+  "note": "剔除器只有在「模型 top100 ∩ 券商头部」非空时才会改变持仓"
+ }
+}

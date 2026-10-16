@@ -1,0 +1,81 @@
+{
+ "date": "2026-09-16 18:43:21",
+ "version": "v2（v1 同日作废：重训对照臂未复现旧 pin，根因=全量重训不可跨日复现/数据快照漂移，见 docstring）",
+ "v1_invalid_snapshot": {
+  "ho6_sys_ann": 0.1497,
+  "ho6_sys_mdd": -0.228,
+  "vs_pin_pp": [
+   -4.43,
+   -3.14
+  ],
+  "drift_localized": "2019-07~2020-12 共 18 锚点逐位相同，2021-01 起全变；82% 行不同"
+ },
+ "arms": [
+  {
+   "ho": 6,
+   "run": "20260916_ho6",
+   "periods": 85,
+   "ann": 0.1782,
+   "sys_ann": 0.1497,
+   "sys_mdd": -0.228,
+   "sharpe": 0.617,
+   "ic": 0.0962,
+   "n_avg": 5.0,
+   "idle": 0.2806,
+   "turnover": 0.8954
+  },
+  {
+   "ho": 3,
+   "run": "20260916_ho3",
+   "periods": 85,
+   "ann": 0.2379,
+   "sys_ann": 0.1883,
+   "sys_mdd": -0.1978,
+   "sharpe": 0.777,
+   "ic": 0.101,
+   "n_avg": 4.96,
+   "idle": 0.2925,
+   "turnover": 0.8899
+  },
+  {
+   "ho": 0,
+   "run": "20260916_ho0",
+   "periods": 85,
+   "ann": 0.2083,
+   "sys_ann": 0.1716,
+   "sys_mdd": -0.2319,
+   "sharpe": 0.66,
+   "ic": 0.0989,
+   "n_avg": 4.8,
+   "idle": 0.317,
+   "turnover": 0.8865
+  }
+ ],
+ "criteria": {
+  "p1_gain": 0.03,
+  "full_drop_max": -0.02,
+  "mdd_worse_max": 0.005
+ },
+ "validate": {
+  "sys_ann": 0.194,
+  "sys_mdd": -0.1966
+ },
+ "prod_reproduces_pin": true,
+ "prod_check_run": "20260916_pin_check_ho",
+ "verdicts": {
+  "3": {
+   "d_p1": 0.0991,
+   "d_full": 0.0386,
+   "mdd_worse": -0.0302,
+   "passed": true
+  },
+  "0": {
+   "d_p1": 0.0246,
+   "d_full": 0.0219,
+   "mdd_worse": 0.0039,
+   "passed": false
+  }
+ },
+ "adopt": 3,
+ "note": "判决只落盘; 采纳需用户确认 + 改 trainer 默认 + 全量重训 + 重钉 pin(CLAUDE.md §1)"
+}

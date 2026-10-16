@@ -1,0 +1,103 @@
+.venv/
+__pycache__/
+*.pyc
+.env
+# config.yaml (2026-09-12 体检报告 C4 修正): **重新纳入跟踪**。
+# 反正在 2026-09-04 提交 ec5e1db 把它移出跟踪的原因是「安全加固」, 但密钥实际
+# 全部住在 .env(TUSHARE_TOKEN / HITHINK_FINANCE_API_KEY / EMAIL_AUTH_CODE),
+# 本文件里 auth_code 恒为空串。而它是 **基线唯一事实源** —— 20+ 行注释钉着
+# 20260911_fullhist 等基线的完整口径(评估窗/训练起点/持仓数/费用), 这些一旦丢失
+# 就无从追溯。tests/test_config.py 有守卫断言 auth_code 必须为空, 防未来误提交。
+# 手工备份仍不跟踪(见下), 这是 git 该干的活。
+# 数据库与其运行时文件(data 下任意层级; 原 data/*.db 匹配不到 data/backup/*.db, P3-3)
+data/**/*.db
+data/**/*.db-wal
+data/**/*.db-shm
+data/backup/
+data/cache/
+data/models/
+# 因子值面板缓存(bank.py:34 自述「可复算、可重评」) —— 394MB, 不入库
+data/alpha_pool/
+# framework 阶段运行留痕(每次跑都新写一个 json, 属运行时产物)
+data/framework_runs/
+# 一次性 A/B 的**副本库**落脚处(`scripts/oneoff/ab_fina_pk_ann_date.py` 在这里建
+# `ab_fina_pk_<ts>.db`)。⚠️ 2026-09-24 补: 该脚本的注释自己写过"曾在 data/tmp/ 留下
+# 4.8G 半成品" —— 而此处此前**没有** ignore 规则 ⇒ 跑一次就把仓库弄脏(审计第 1 项会红)。
+data/tmp/
+# 周频终端运行时产物: 打分存档(npz, ~10MB/份)与方案 json —— 可复算, 不入库
+data/weekly/
+# 指数调样群体追踪器运行时产物: ledger.json / 批次候选 json / tushare 快照与指数日线缓存
+# (可由 tushare 重拉再生; ledger 证据链在台账 39 补登记) —— 2026-09-28 卫星线新增
+data/satellite_rebal/
+# 实验里训练出来的打分存档(F4_scores_*.npz 等, 每份 ~10MB): 可由脚本重训再生, 不入库
+experiments/**/*.npz
+# 手工 .bak 副本(体检报告 C3): 正本已入 git, 副本留在磁盘但不跟踪
+*.bak_*
+*.bak_pre*
+# oneoff 诊断脚本直接写在 data/ 下的研究残渣(CSV 读数 / 日志)
+data/*.csv
+data/*.txt
+data/.probe_cache.json
+data/.task.lock
+# 2026-09-18: 服务单实例锁(FileLock) —— 与 .task.lock 同类: 运行时互斥件, 内容=pid+
+# 进程创建滴数, 每次重启都变。它是全仓**唯一**漏进跟踪的运行时文件(同族的 .task.lock
+# 早已忽略), 留着只会让每次重启把仓库变脏、审计"仓库干净"项变红; 且克隆到别的机器时
+# 会捎带一份陈旧 pid(极端情况下 _stale() 判不了 ⇒ 保守视为锁有效 ⇒ 新实例起不来)。
+data/service.lock
+# 2026-09-13: report_rc(第 12 族)补库的断点检查点 —— 9 小时任务的续跑状态, 不进库
+data/.report_rc_backfill.json
+# 2026-09-13: 东财研报(第 12 族主力源)补库的断点检查点
+data/.research_report_backfill.json
+# 2026-09-13: 十大流通股东(第 13 族)补库的断点检查点
+data/.top10_holder_backfill.json
+# 2026-09-15: baostock 60min 全市场补库 —— 产物 ~1GB parquet(可重拉) + 断点检查点
+# (.venv311-bak 那次事故的同类风险: 不 ignore 就会让一次 `git add -A` 把 GB 级二进制拖进索引)
+data/baostock_min60/
+data/.baostock_min60_backfill.json
+# 2026-09-15: baostock 每日全量证券列表(可交易域见证, 2,845 文件/~155MB) 与 Tushare 分红送转补库
+# —— 都是可重拉的证据类产物, 不进库; 检查点同理
+data/baostock_witness/
+data/.baostock_witness_backfill.json
+data/dividend_ts/
+data/.dividend_ts_backfill.json
+logs/
+.idea/
+.vscode/
+# pytest-cov 生成的覆盖率数据（2026-09-13：跑一次 cov 就会污染"仓库干净"审计）
+.coverage
+# 2026-09-14: 外部审查工具（WorkBuddy AI）写进仓库根的工作目录（memory/ 工作日志）。
+# 它不是项目内容也不是证据（报告本体在仓库外、已按 §三补十五 逐条登记进知识库），
+# 但**不忽略就会让审计第 1 项"仓库干净"永远红** —— 审计的绿信号不能用在这种地方。
+.workbuddy-ai/
+# 2026-09-15: Codex 桌面端写进仓库根的运行目录（.codex/environments/*.toml）。
+# 与 .workbuddy-ai/ 同理：不是项目内容，**不忽略就会让审计第 1 项"仓库干净"永远红**。
+.codex/
+# 2026-09-15: Python 3.13 迁移留下的旧 venv 备份（39,532 个文件 / 1.28 GB）。
+# ⚠️ 当天踩过：它没被 ignore，一次 `git add -A` 就把 **27,588 个文件**加进了索引
+# （提交被 amend 掉才没进历史）。任何"整个虚拟环境目录"都不属于仓库内容 ——
+# 需要它时从 `requirements-lock.txt` 重建，而不是提交二进制副本。
+.venv311-bak-20260915/
+.venv*/
+
+# 前端构建链（2026-09-16）：node 依赖不入库；构建产物 app/web/static/assets/ **入库**
+# （CI 无 node，别的机器 checkout 即得可运行看板；重建: cd frontend && npm install && npm run build）
+frontend/node_modules/
+frontend/dist/
+
+# LLM 审读产物（scripts/llm_factor_review.py 生成，可重跑覆盖）
+data/llm/
+data/crash/
+# 2026-09-27: baostock min60 尾部增量回填断点检查点(可重拉, 同族 data/.baostock_min60_backfill.json)
+data/.baostock_min60_tail.json
+# 2026-09-27: 文本语料回填产物(巨潮公告, 可重拉; 回填预注册 plans/text-corpus-backfill-prereg-20260927.md)
+data/text_corpus/
+# 2026-09-27: nf A/B 实验打分存档(trainer.run factors_override 重训再生, 同 experiments/**/*.npz 理由)
+data/ab_fe_scores_*.parquet
+# 低谷加仓 T1 前瞻观察器运行时状态(全量重算幂等可删重建; 证据链在台账五十二补)
+# —— 2026-10-01 观察器新增
+data/trough_tilt_observer/
+data/irm_attention/
+data/text_corpus/tender_offers/
+data/etf_gold/
+# H1 拥挤翻转前瞻纸面运行时账本(状态可由生产库+冻结 CSV 复算;证据链=experiments/h1_crowding_paper_status.json + 台账 68 补)
+data/h1_crowding_paper/

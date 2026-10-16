@@ -1,0 +1,734 @@
+{
+ "ran_at": "2026-09-28T07:38:55",
+ "prereg": "plans/pead-factor-prereg-20260927.md",
+ "n_candidates": 42,
+ "n_events": 3107274,
+ "n_classes": 14,
+ "windows": {
+  "21": 21,
+  "42": 42,
+  "63": 63
+ },
+ "rows": [
+  {
+   "factor": "audit_internal_esg_21",
+   "note": "无有效截面",
+   "sparse_ratio": 0.0
+  },
+  {
+   "factor": "audit_internal_esg_42",
+   "note": "无有效截面",
+   "sparse_ratio": 0.0
+  },
+  {
+   "factor": "audit_internal_esg_63",
+   "note": "无有效截面",
+   "sparse_ratio": 0.0
+  },
+  {
+   "factor": "buyback_21",
+   "sparse_ratio": 0.0673,
+   "DEAD_head": -0.0004,
+   "DEAD_head_t": -0.17,
+   "ACTIVE_head": 0.0021,
+   "p_adj": 1.0,
+   "DEAD_top6": -0.008,
+   "cost_per_month": 0.00124996336996337,
+   "gate6": {
+    "c_same_sign": false,
+    "c_head_size": false,
+    "c_t": false,
+    "c_p_adj": false,
+    "c_top6": false,
+    "c_cost": true,
+    "PASS": false
+   },
+   "s1_s4": {
+    "s1_head": false,
+    "s2_t": false,
+    "s3_same_sign": false,
+    "PASS_single_s1s4": false
+   },
+   "PASS_gate6": false
+  },
+  {
+   "factor": "buyback_42",
+   "sparse_ratio": 0.0882,
+   "DEAD_head": -0.0012,
+   "DEAD_head_t": -0.68,
+   "ACTIVE_head": 0.0032,
+   "p_adj": 1.0,
+   "DEAD_top6": -0.0012,
+   "cost_per_month": 0.0010215942028985508,
+   "gate6": {
+    "c_same_sign": false,
+    "c_head_size": false,
+    "c_t": false,
+    "c_p_adj": false,
+    "c_top6": false,
+    "c_cost": true,
+    "PASS": false
+   },
+   "s1_s4": {
+    "s1_head": false,
+    "s2_t": false,
+    "s3_same_sign": false,
+    "PASS_single_s1s4": false
+   },
+   "PASS_gate6": false
+  },
+  {
+   "factor": "buyback_63",
+   "sparse_ratio": 0.0997,
+   "DEAD_head": -0.0014,
+   "DEAD_head_t": -0.87,
+   "ACTIVE_head": 0.0041,
+   "p_adj": 1.0,
+   "DEAD_top6": -0.0032,
+   "cost_per_month": 0.0008233333333333335,
+   "gate6": {
+    "c_same_sign": false,
+    "c_head_size": false,
+    "c_t": false,
+    "c_p_adj": false,
+    "c_top6": false,
+    "c_cost": true,
+    "PASS": false
+   },
+   "s1_s4": {
+    "s1_head": false,
+    "s2_t": false,
+    "s3_same_sign": false,
+    "PASS_single_s1s4": false
+   },
+   "PASS_gate6": false
+  },
+  {
+   "factor": "dividend_21",
+   "sparse_ratio": 0.1075,
+   "DEAD_head": -0.0014,
+   "DEAD_head_t": -0.57,
+   "ACTIVE_head": -0.0052,
+   "p_adj": 1.0,
+   "DEAD_top6": -0.0164,
+   "cost_per_month": 0.0014675862068965519,
+   "gate6": {
+    "c_same_sign": true,
+    "c_head_size": false,
+    "c_t": false,
+    "c_p_adj": false,
+    "c_top6": false,
+    "c_cost": true,
+    "PASS": false
+   },
+   "s1_s4": {
+    "s1_head": false,
+    "s2_t": false,
+    "s3_same_sign": true,
+    "PASS_single_s1s4": false
+   },
+   "PASS_gate6": false
+  },
+  {
+   "factor": "dividend_42",
+   "sparse_ratio": 0.1857,
+   "DEAD_head": -0.0033,
+   "DEAD_head_t": -1.01,
+   "ACTIVE_head": -0.0023,
+   "p_adj": 1.0,
+   "DEAD_top6": -0.0099,
+   "cost_per_month": 0.001302857142857143,
+   "gate6": {
+    "c_same_sign": true,
+    "c_head_size": false,
+    "c_t": false,
+    "c_p_adj": false,
+    "c_top6": false,
+    "c_cost": true,
+    "PASS": false
+   },
+   "s1_s4": {
+    "s1_head": true,
+    "s2_t": false,
+    "s3_same_sign": true,
+    "PASS_single_s1s4": false
+   },
+   "PASS_gate6": false
+  },
+  {
+   "factor": "dividend_63",
+   "sparse_ratio": 0.245,
+   "DEAD_head": 0.0003,
+   "DEAD_head_t": 0.12,
+   "ACTIVE_head": -0.0008,
+   "p_adj": 1.0,
+   "DEAD_top6": -0.0182,
+   "cost_per_month": 0.001256796536796537,
+   "gate6": {
+    "c_same_sign": false,
+    "c_head_size": false,
+    "c_t": false,
+    "c_p_adj": false,
+    "c_top6": false,
+    "c_cost": true,
+    "PASS": false
+   },
+   "s1_s4": {
+    "s1_head": false,
+    "s2_t": false,
+    "s3_same_sign": false,
+    "PASS_single_s1s4": false
+   },
+   "PASS_gate6": false
+  },
+  {
+   "factor": "earnings_forecast_21",
+   "note": "无有效截面",
+   "sparse_ratio": 0.0
+  },
+  {
+   "factor": "earnings_forecast_42",
+   "note": "无有效截面",
+   "sparse_ratio": 0.0
+  },
+  {
+   "factor": "earnings_forecast_63",
+   "note": "无有效截面",
+   "sparse_ratio": 0.0
+  },
+  {
+   "factor": "equity_incentive_21",
+   "sparse_ratio": 0.0903,
+   "DEAD_head": 0.0007,
+   "DEAD_head_t": 0.24,
+   "ACTIVE_head": 0.0039,
+   "p_adj": 1.0,
+   "DEAD_top6": 0.0019,
+   "cost_per_month": 0.0014181159420289854,
+   "gate6": {
+    "c_same_sign": true,
+    "c_head_size": false,
+    "c_t": false,
+    "c_p_adj": false,
+    "c_top6": true,
+    "c_cost": true,
+    "PASS": false
+   },
+   "s1_s4": {
+    "s1_head": false,
+    "s2_t": false,
+    "s3_same_sign": true,
+    "PASS_single_s1s4": false
+   },
+   "PASS_gate6": false
+  },
+  {
+   "factor": "equity_incentive_42",
+   "sparse_ratio": 0.1418,
+   "DEAD_head": -0.0003,
+   "DEAD_head_t": -0.09,
+   "ACTIVE_head": 0.0085,
+   "p_adj": 1.0,
+   "DEAD_top6": 0.012,
+   "cost_per_month": 0.0011289855072463767,
+   "gate6": {
+    "c_same_sign": false,
+    "c_head_size": false,
+    "c_t": false,
+    "c_p_adj": false,
+    "c_top6": true,
+    "c_cost": true,
+    "PASS": false
+   },
+   "s1_s4": {
+    "s1_head": false,
+    "s2_t": false,
+    "s3_same_sign": false,
+    "PASS_single_s1s4": false
+   },
+   "PASS_gate6": false
+  },
+  {
+   "factor": "equity_incentive_63",
+   "sparse_ratio": 0.1784,
+   "DEAD_head": 0.0,
+   "DEAD_head_t": 0.0,
+   "ACTIVE_head": 0.0084,
+   "p_adj": 1.0,
+   "DEAD_top6": 0.0171,
+   "cost_per_month": 0.0009775362318840582,
+   "gate6": {
+    "c_same_sign": true,
+    "c_head_size": false,
+    "c_t": false,
+    "c_p_adj": false,
+    "c_top6": true,
+    "c_cost": true,
+    "PASS": false
+   },
+   "s1_s4": {
+    "s1_head": false,
+    "s2_t": false,
+    "s3_same_sign": true,
+    "PASS_single_s1s4": false
+   },
+   "PASS_gate6": false
+  },
+  {
+   "factor": "financing_capital_21",
+   "note": "无有效截面",
+   "sparse_ratio": 0.0
+  },
+  {
+   "factor": "financing_capital_42",
+   "note": "无有效截面",
+   "sparse_ratio": 0.0
+  },
+  {
+   "factor": "financing_capital_63",
+   "note": "无有效截面",
+   "sparse_ratio": 0.0
+  },
+  {
+   "factor": "governance_meeting_21",
+   "note": "无有效截面",
+   "sparse_ratio": 0.0
+  },
+  {
+   "factor": "governance_meeting_42",
+   "note": "无有效截面",
+   "sparse_ratio": 0.0
+  },
+  {
+   "factor": "governance_meeting_63",
+   "note": "无有效截面",
+   "sparse_ratio": 0.0
+  },
+  {
+   "factor": "guarantee_financial_assistance_21",
+   "sparse_ratio": 0.1238,
+   "DEAD_head": -0.001,
+   "DEAD_head_t": -0.27,
+   "ACTIVE_head": -0.0081,
+   "p_adj": 1.0,
+   "DEAD_top6": -0.0055,
+   "cost_per_month": 0.001318985507246377,
+   "gate6": {
+    "c_same_sign": true,
+    "c_head_size": false,
+    "c_t": false,
+    "c_p_adj": false,
+    "c_top6": false,
+    "c_cost": true,
+    "PASS": false
+   },
+   "s1_s4": {
+    "s1_head": false,
+    "s2_t": false,
+    "s3_same_sign": true,
+    "PASS_single_s1s4": false
+   },
+   "PASS_gate6": false
+  },
+  {
+   "factor": "guarantee_financial_assistance_42",
+   "sparse_ratio": 0.2036,
+   "DEAD_head": -0.0006,
+   "DEAD_head_t": -0.18,
+   "ACTIVE_head": -0.0032,
+   "p_adj": 1.0,
+   "DEAD_top6": -0.0033,
+   "cost_per_month": 0.0009334782608695652,
+   "gate6": {
+    "c_same_sign": true,
+    "c_head_size": false,
+    "c_t": false,
+    "c_p_adj": false,
+    "c_top6": false,
+    "c_cost": true,
+    "PASS": false
+   },
+   "s1_s4": {
+    "s1_head": false,
+    "s2_t": false,
+    "s3_same_sign": true,
+    "PASS_single_s1s4": false
+   },
+   "PASS_gate6": false
+  },
+  {
+   "factor": "guarantee_financial_assistance_63",
+   "sparse_ratio": 0.2584,
+   "DEAD_head": -0.001,
+   "DEAD_head_t": -0.35,
+   "ACTIVE_head": -0.0048,
+   "p_adj": 1.0,
+   "DEAD_top6": -0.0053,
+   "cost_per_month": 0.0007214492753623189,
+   "gate6": {
+    "c_same_sign": true,
+    "c_head_size": false,
+    "c_t": false,
+    "c_p_adj": false,
+    "c_top6": false,
+    "c_cost": true,
+    "PASS": false
+   },
+   "s1_s4": {
+    "s1_head": false,
+    "s2_t": false,
+    "s3_same_sign": true,
+    "PASS_single_s1s4": false
+   },
+   "PASS_gate6": false
+  },
+  {
+   "factor": "insider_trading_21",
+   "sparse_ratio": 0.173,
+   "DEAD_head": -0.0044,
+   "DEAD_head_t": -1.2,
+   "ACTIVE_head": -0.0001,
+   "p_adj": 1.0,
+   "DEAD_top6": -0.0121,
+   "cost_per_month": 0.0013520289855072465,
+   "gate6": {
+    "c_same_sign": true,
+    "c_head_size": false,
+    "c_t": false,
+    "c_p_adj": false,
+    "c_top6": false,
+    "c_cost": true,
+    "PASS": false
+   },
+   "s1_s4": {
+    "s1_head": true,
+    "s2_t": false,
+    "s3_same_sign": true,
+    "PASS_single_s1s4": false
+   },
+   "PASS_gate6": false
+  },
+  {
+   "factor": "insider_trading_42",
+   "sparse_ratio": 0.2705,
+   "DEAD_head": -0.0018,
+   "DEAD_head_t": -0.6,
+   "ACTIVE_head": -0.0025,
+   "p_adj": 1.0,
+   "DEAD_top6": 0.0046,
+   "cost_per_month": 0.0011097101449275362,
+   "gate6": {
+    "c_same_sign": true,
+    "c_head_size": false,
+    "c_t": false,
+    "c_p_adj": false,
+    "c_top6": true,
+    "c_cost": true,
+    "PASS": false
+   },
+   "s1_s4": {
+    "s1_head": false,
+    "s2_t": false,
+    "s3_same_sign": true,
+    "PASS_single_s1s4": false
+   },
+   "PASS_gate6": false
+  },
+  {
+   "factor": "insider_trading_63",
+   "sparse_ratio": 0.3355,
+   "DEAD_head": -0.0012,
+   "DEAD_head_t": -0.43,
+   "ACTIVE_head": -0.0044,
+   "p_adj": 1.0,
+   "DEAD_top6": -0.012,
+   "cost_per_month": 0.0009665217391304347,
+   "gate6": {
+    "c_same_sign": true,
+    "c_head_size": false,
+    "c_t": false,
+    "c_p_adj": false,
+    "c_top6": false,
+    "c_cost": true,
+    "PASS": false
+   },
+   "s1_s4": {
+    "s1_head": false,
+    "s2_t": false,
+    "s3_same_sign": true,
+    "PASS_single_s1s4": false
+   },
+   "PASS_gate6": false
+  },
+  {
+   "factor": "litigation_regulatory_21",
+   "sparse_ratio": 0.0991,
+   "DEAD_head": -0.0055,
+   "DEAD_head_t": -1.6,
+   "ACTIVE_head": -0.0102,
+   "p_adj": 1.0,
+   "DEAD_top6": -0.0093,
+   "cost_per_month": 0.001374057971014493,
+   "gate6": {
+    "c_same_sign": true,
+    "c_head_size": false,
+    "c_t": false,
+    "c_p_adj": false,
+    "c_top6": false,
+    "c_cost": true,
+    "PASS": false
+   },
+   "s1_s4": {
+    "s1_head": true,
+    "s2_t": false,
+    "s3_same_sign": true,
+    "PASS_single_s1s4": false
+   },
+   "PASS_gate6": false
+  },
+  {
+   "factor": "litigation_regulatory_42",
+   "sparse_ratio": 0.1568,
+   "DEAD_head": -0.0042,
+   "DEAD_head_t": -1.11,
+   "ACTIVE_head": -0.0097,
+   "p_adj": 1.0,
+   "DEAD_top6": -0.0266,
+   "cost_per_month": 0.0010876811594202898,
+   "gate6": {
+    "c_same_sign": true,
+    "c_head_size": false,
+    "c_t": false,
+    "c_p_adj": false,
+    "c_top6": false,
+    "c_cost": true,
+    "PASS": false
+   },
+   "s1_s4": {
+    "s1_head": true,
+    "s2_t": false,
+    "s3_same_sign": true,
+    "PASS_single_s1s4": false
+   },
+   "PASS_gate6": false
+  },
+  {
+   "factor": "litigation_regulatory_63",
+   "sparse_ratio": 0.2013,
+   "DEAD_head": -0.0042,
+   "DEAD_head_t": -1.1,
+   "ACTIVE_head": -0.0102,
+   "p_adj": 1.0,
+   "DEAD_top6": -0.0275,
+   "cost_per_month": 0.001098695652173913,
+   "gate6": {
+    "c_same_sign": true,
+    "c_head_size": false,
+    "c_t": false,
+    "c_p_adj": false,
+    "c_top6": false,
+    "c_cost": true,
+    "PASS": false
+   },
+   "s1_s4": {
+    "s1_head": true,
+    "s2_t": false,
+    "s3_same_sign": true,
+    "PASS_single_s1s4": false
+   },
+   "PASS_gate6": false
+  },
+  {
+   "factor": "ma_restructuring_21",
+   "sparse_ratio": 0.0864,
+   "DEAD_head": 0.0007,
+   "DEAD_head_t": 0.62,
+   "ACTIVE_head": -0.0029,
+   "p_adj": 1.0,
+   "DEAD_top6": 0.0079,
+   "cost_per_month": 0.0013823188405797102,
+   "gate6": {
+    "c_same_sign": false,
+    "c_head_size": false,
+    "c_t": false,
+    "c_p_adj": false,
+    "c_top6": true,
+    "c_cost": true,
+    "PASS": false
+   },
+   "s1_s4": {
+    "s1_head": false,
+    "s2_t": false,
+    "s3_same_sign": false,
+    "PASS_single_s1s4": false
+   },
+   "PASS_gate6": false
+  },
+  {
+   "factor": "ma_restructuring_42",
+   "sparse_ratio": 0.1404,
+   "DEAD_head": -0.0008,
+   "DEAD_head_t": -0.78,
+   "ACTIVE_head": -0.0003,
+   "p_adj": 1.0,
+   "DEAD_top6": 0.0025,
+   "cost_per_month": 0.001032608695652174,
+   "gate6": {
+    "c_same_sign": true,
+    "c_head_size": false,
+    "c_t": false,
+    "c_p_adj": false,
+    "c_top6": true,
+    "c_cost": true,
+    "PASS": false
+   },
+   "s1_s4": {
+    "s1_head": false,
+    "s2_t": false,
+    "s3_same_sign": true,
+    "PASS_single_s1s4": false
+   },
+   "PASS_gate6": false
+  },
+  {
+   "factor": "ma_restructuring_63",
+   "sparse_ratio": 0.1807,
+   "DEAD_head": -0.0015,
+   "DEAD_head_t": -1.96,
+   "ACTIVE_head": -0.0001,
+   "p_adj": 1.0,
+   "DEAD_top6": -0.0187,
+   "cost_per_month": 0.0008095652173913044,
+   "gate6": {
+    "c_same_sign": true,
+    "c_head_size": false,
+    "c_t": false,
+    "c_p_adj": false,
+    "c_top6": false,
+    "c_cost": true,
+    "PASS": false
+   },
+   "s1_s4": {
+    "s1_head": false,
+    "s2_t": false,
+    "s3_same_sign": true,
+    "PASS_single_s1s4": false
+   },
+   "PASS_gate6": false
+  },
+  {
+   "factor": "operating_contract_data_21",
+   "sparse_ratio": 0.1147,
+   "DEAD_head": -0.0034,
+   "DEAD_head_t": -1.98,
+   "ACTIVE_head": -0.0014,
+   "p_adj": 1.0,
+   "DEAD_top6": 0.0035,
+   "cost_per_month": 0.0014456521739130436,
+   "gate6": {
+    "c_same_sign": true,
+    "c_head_size": false,
+    "c_t": false,
+    "c_p_adj": false,
+    "c_top6": true,
+    "c_cost": true,
+    "PASS": false
+   },
+   "s1_s4": {
+    "s1_head": true,
+    "s2_t": false,
+    "s3_same_sign": true,
+    "PASS_single_s1s4": false
+   },
+   "PASS_gate6": false
+  },
+  {
+   "factor": "operating_contract_data_42",
+   "sparse_ratio": 0.194,
+   "DEAD_head": -0.0029,
+   "DEAD_head_t": -1.81,
+   "ACTIVE_head": -0.0002,
+   "p_adj": 1.0,
+   "DEAD_top6": -0.0078,
+   "cost_per_month": 0.0012281159420289853,
+   "gate6": {
+    "c_same_sign": true,
+    "c_head_size": false,
+    "c_t": false,
+    "c_p_adj": false,
+    "c_top6": false,
+    "c_cost": true,
+    "PASS": false
+   },
+   "s1_s4": {
+    "s1_head": false,
+    "s2_t": false,
+    "s3_same_sign": true,
+    "PASS_single_s1s4": false
+   },
+   "PASS_gate6": false
+  },
+  {
+   "factor": "operating_contract_data_63",
+   "sparse_ratio": 0.2531,
+   "DEAD_head": -0.0035,
+   "DEAD_head_t": -2.39,
+   "ACTIVE_head": 0.0001,
+   "p_adj": 0.7041,
+   "DEAD_top6": -0.0126,
+   "cost_per_month": 0.0010133333333333333,
+   "gate6": {
+    "c_same_sign": false,
+    "c_head_size": false,
+    "c_t": false,
+    "c_p_adj": false,
+    "c_top6": false,
+    "c_cost": true,
+    "PASS": false
+   },
+   "s1_s4": {
+    "s1_head": true,
+    "s2_t": true,
+    "s3_same_sign": false,
+    "PASS_single_s1s4": false
+   },
+   "PASS_gate6": false
+  },
+  {
+   "factor": "periodic_report_21",
+   "note": "无有效截面",
+   "sparse_ratio": 0.0
+  },
+  {
+   "factor": "periodic_report_42",
+   "note": "无有效截面",
+   "sparse_ratio": 0.0
+  },
+  {
+   "factor": "periodic_report_63",
+   "note": "无有效截面",
+   "sparse_ratio": 0.0
+  },
+  {
+   "factor": "related_party_transaction_21",
+   "note": "无有效截面",
+   "sparse_ratio": 0.0
+  },
+  {
+   "factor": "related_party_transaction_42",
+   "note": "无有效截面",
+   "sparse_ratio": 0.0
+  },
+  {
+   "factor": "related_party_transaction_63",
+   "note": "无有效截面",
+   "sparse_ratio": 0.0
+  }
+ ],
+ "verdict": {
+  "n_pass_gate6": 0,
+  "n_pass_s1s4": 0,
+  "note": "readings; 组合层档仅在候选过前两层且拍板后另议（26+2 REJECT 先验在册）"
+ },
+ "runtime_sec": 49.8
+}

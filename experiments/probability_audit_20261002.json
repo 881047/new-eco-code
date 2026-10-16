@@ -1,0 +1,49 @@
+{
+ "asof": "2026-10-02T16:34:53",
+ "per_stock_base_rate": {
+  "n_bets": 696,
+  "hit_rate_vs_pool": 0.4698,
+  "binomial_z_vs_50pct": -1.59,
+  "monthly_hit_rate_mean": 0.4698
+ },
+ "windows": {
+  "prod": {
+   "n": 84,
+   "win_rate": 0.5952,
+   "mean_monthly": 0.01712,
+   "median_monthly": 0.01497,
+   "avg_win": 0.05462,
+   "avg_loss": -0.03804,
+   "payoff_ratio": 1.436,
+   "profit_factor": 2.112,
+   "max_consec_losses": 5,
+   "skew": 0.154,
+   "excess_kurtosis": 0.454,
+   "monthly_vol": 0.05999,
+   "hac_t_lag3": 2.68,
+   "ann_excess_ci95": [
+    0.0514,
+    0.3593
+   ]
+  },
+  "full": {
+   "n": 114,
+   "win_rate": 0.5439,
+   "mean_monthly": 0.0107,
+   "median_monthly": 0.00617,
+   "avg_win": 0.05037,
+   "avg_loss": -0.0366,
+   "payoff_ratio": 1.376,
+   "profit_factor": 1.641,
+   "max_consec_losses": 5,
+   "skew": 0.311,
+   "excess_kurtosis": 0.516,
+   "monthly_vol": 0.05702,
+   "hac_t_lag3": 1.98,
+   "ann_excess_ci95": [
+    0.0028,
+    0.254
+   ]
+  }
+ }
+}

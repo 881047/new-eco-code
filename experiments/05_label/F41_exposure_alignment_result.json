@@ -1,0 +1,139 @@
+{
+ "script_sha": "f93b9d0250dd07d0",
+ "weights": [
+  0.873,
+  1.0
+ ],
+ "windows": {
+  "full": [
+   "2010-01-01",
+   "2030-12-31"
+  ],
+  "dead": [
+   "2020-09-01",
+   "2023-12-31"
+  ],
+  "active": [
+   "2024-01-01",
+   "2026-08-31"
+  ]
+ },
+ "note": "测量/对齐, 不是搜索: ACTIVE 是 F28 已开封的留出集, 不产生新的显著性证据",
+ "arms": {
+  "seedA": {
+   "w0.873": {
+    "full": {
+     "n": 491,
+     "excess_pp": 14.91,
+     "mdd": -0.3228,
+     "turnover": 0.118,
+     "t_hac_full": 4.28
+    },
+    "dead": {
+     "n": 169,
+     "ann": 0.2421,
+     "excess_pp": 20.91,
+     "mdd": -0.1383,
+     "turnover": 0.114
+    },
+    "active": {
+     "n": 138,
+     "ann": 0.226,
+     "excess_pp": 7.34,
+     "mdd": -0.3228,
+     "turnover": 0.092,
+     "t_hac_active": 0.78
+    }
+   },
+   "w1.000": {
+    "full": {
+     "n": 491,
+     "excess_pp": 18.0,
+     "mdd": -0.369,
+     "turnover": 0.118,
+     "t_hac_full": 5.08
+    },
+    "dead": {
+     "n": 169,
+     "ann": 0.2809,
+     "excess_pp": 24.79,
+     "mdd": -0.1584,
+     "turnover": 0.114
+    },
+    "active": {
+     "n": 138,
+     "ann": 0.2565,
+     "excess_pp": 10.38,
+     "mdd": -0.369,
+     "turnover": 0.092,
+     "t_hac_active": 1.15
+    }
+   }
+  },
+  "seedB": {
+   "w0.873": {
+    "full": {
+     "n": 491,
+     "excess_pp": 14.3,
+     "mdd": -0.3223,
+     "turnover": 0.116,
+     "t_hac_full": 4.11
+    },
+    "dead": {
+     "n": 169,
+     "ann": 0.238,
+     "excess_pp": 20.5,
+     "mdd": -0.1352,
+     "turnover": 0.112
+    },
+    "active": {
+     "n": 138,
+     "ann": 0.2388,
+     "excess_pp": 8.62,
+     "mdd": -0.3223,
+     "turnover": 0.092,
+     "t_hac_active": 0.91
+    }
+   },
+   "w1.000": {
+    "full": {
+     "n": 491,
+     "excess_pp": 17.3,
+     "mdd": -0.3693,
+     "turnover": 0.116,
+     "t_hac_full": 4.9
+    },
+    "dead": {
+     "n": 169,
+     "ann": 0.2756,
+     "excess_pp": 24.26,
+     "mdd": -0.1564,
+     "turnover": 0.112
+    },
+    "active": {
+     "n": 138,
+     "ann": 0.2706,
+     "excess_pp": 11.8,
+     "mdd": -0.3693,
+     "turnover": 0.092,
+     "t_hac_active": 1.28
+    }
+   }
+  }
+ },
+ "increment": {
+  "seedA": {
+   "t_diff_full": 3.02,
+   "active_mean_pp_per_period": 0.077,
+   "t_diff_active": 1.44,
+   "note": "满仓 − 旧敞口 的逐期差值; t 是 HAC(lag=2)"
+  },
+  "seedB": {
+   "t_diff_full": 2.98,
+   "active_mean_pp_per_period": 0.079,
+   "t_diff_active": 1.45,
+   "note": "满仓 − 旧敞口 的逐期差值; t 是 HAC(lag=2)"
+  }
+ },
+ "secs": 317.0
+}

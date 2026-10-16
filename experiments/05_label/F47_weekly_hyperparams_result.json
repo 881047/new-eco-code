@@ -1,0 +1,305 @@
+{
+ "script_sha": "dc42b56701f52160",
+ "grid": {
+  "C1_small": {
+   "params": {
+    "num_leaves": 15,
+    "min_data_in_leaf": 500
+   },
+   "rounds": 50
+  },
+  "C2_mid": {
+   "params": {
+    "num_leaves": 31,
+    "min_data_in_leaf": 500,
+    "learning_rate": 0.03,
+    "feature_fraction": 0.6,
+    "lambda_l2": 5.0
+   },
+   "rounds": 100
+  },
+  "C3_strong": {
+   "params": {
+    "num_leaves": 15,
+    "min_data_in_leaf": 1000,
+    "learning_rate": 0.03,
+    "feature_fraction": 0.5,
+    "bagging_fraction": 0.7,
+    "lambda_l2": 10.0
+   },
+   "rounds": 150
+  }
+ },
+ "frozen": {
+  "train_months": 36,
+  "embargo": 3,
+  "horizon": 5,
+  "sets": {
+   "SA": [
+    42,
+    7,
+    123,
+    2024
+   ],
+   "SB": [
+    43,
+    8,
+    124,
+    2025
+   ]
+  },
+  "equity_weight": 1.0
+ },
+ "windows": {
+  "full": [
+   "2010-01-01",
+   "2030-12-31"
+  ],
+  "dead": [
+   "2020-09-01",
+   "2023-12-31"
+  ],
+  "active": [
+   "2024-01-01",
+   "2026-08-31"
+  ]
+ },
+ "base_reference": {
+  "full": [
+   18.0,
+   17.3
+  ],
+  "active": [
+   10.38,
+   11.8
+  ],
+  "n_common": 491
+ },
+ "arms": {
+  "SA": {
+   "BASE": {
+    "full": {
+     "n": 491,
+     "excess_pp": 18.0,
+     "mdd": -0.369,
+     "turnover": 0.118
+    },
+    "dead": {
+     "n": 169,
+     "ann": 0.2809,
+     "excess_pp": 24.79,
+     "mdd": -0.1584,
+     "turnover": 0.114
+    },
+    "active": {
+     "n": 138,
+     "ann": 0.2565,
+     "excess_pp": 10.38,
+     "mdd": -0.369,
+     "turnover": 0.092
+    }
+   },
+   "C1_small": {
+    "full": {
+     "n": 491,
+     "excess_pp": 18.04,
+     "mdd": -0.3708,
+     "turnover": 0.122
+    },
+    "dead": {
+     "n": 169,
+     "ann": 0.2842,
+     "excess_pp": 25.12,
+     "mdd": -0.1766,
+     "turnover": 0.117
+    },
+    "active": {
+     "n": 138,
+     "ann": 0.2597,
+     "excess_pp": 10.71,
+     "mdd": -0.3708,
+     "turnover": 0.092
+    }
+   },
+   "C2_mid": {
+    "full": {
+     "n": 491,
+     "excess_pp": 16.81,
+     "mdd": -0.3644,
+     "turnover": 0.111
+    },
+    "dead": {
+     "n": 169,
+     "ann": 0.2671,
+     "excess_pp": 23.41,
+     "mdd": -0.1438,
+     "turnover": 0.106
+    },
+    "active": {
+     "n": 138,
+     "ann": 0.2696,
+     "excess_pp": 11.7,
+     "mdd": -0.3644,
+     "turnover": 0.096
+    }
+   },
+   "C3_strong": {
+    "full": {
+     "n": 491,
+     "excess_pp": 15.84,
+     "mdd": -0.3644,
+     "turnover": 0.107
+    },
+    "dead": {
+     "n": 169,
+     "ann": 0.2652,
+     "excess_pp": 23.22,
+     "mdd": -0.1401,
+     "turnover": 0.105
+    },
+    "active": {
+     "n": 138,
+     "ann": 0.255,
+     "excess_pp": 10.24,
+     "mdd": -0.3644,
+     "turnover": 0.096
+    }
+   }
+  },
+  "SB": {
+   "BASE": {
+    "full": {
+     "n": 491,
+     "excess_pp": 17.3,
+     "mdd": -0.3693,
+     "turnover": 0.116
+    },
+    "dead": {
+     "n": 169,
+     "ann": 0.2756,
+     "excess_pp": 24.26,
+     "mdd": -0.1564,
+     "turnover": 0.112
+    },
+    "active": {
+     "n": 138,
+     "ann": 0.2706,
+     "excess_pp": 11.8,
+     "mdd": -0.3693,
+     "turnover": 0.092
+    }
+   },
+   "C1_small": {
+    "full": {
+     "n": 491,
+     "excess_pp": 17.7,
+     "mdd": -0.3616,
+     "turnover": 0.123
+    },
+    "dead": {
+     "n": 169,
+     "ann": 0.2783,
+     "excess_pp": 24.53,
+     "mdd": -0.1716,
+     "turnover": 0.117
+    },
+    "active": {
+     "n": 138,
+     "ann": 0.2613,
+     "excess_pp": 10.87,
+     "mdd": -0.3616,
+     "turnover": 0.093
+    }
+   },
+   "C2_mid": {
+    "full": {
+     "n": 491,
+     "excess_pp": 16.92,
+     "mdd": -0.3711,
+     "turnover": 0.11
+    },
+    "dead": {
+     "n": 169,
+     "ann": 0.2698,
+     "excess_pp": 23.68,
+     "mdd": -0.1361,
+     "turnover": 0.107
+    },
+    "active": {
+     "n": 138,
+     "ann": 0.2666,
+     "excess_pp": 11.4,
+     "mdd": -0.3711,
+     "turnover": 0.094
+    }
+   },
+   "C3_strong": {
+    "full": {
+     "n": 491,
+     "excess_pp": 16.69,
+     "mdd": -0.3612,
+     "turnover": 0.108
+    },
+    "dead": {
+     "n": 169,
+     "ann": 0.2756,
+     "excess_pp": 24.26,
+     "mdd": -0.1384,
+     "turnover": 0.105
+    },
+    "active": {
+     "n": 138,
+     "ann": 0.2564,
+     "excess_pp": 10.38,
+     "mdd": -0.3612,
+     "turnover": 0.098
+    }
+   }
+  }
+ },
+ "increment": {},
+ "verdict": {
+  "control_ok": true,
+  "adopt": null,
+  "ranking": [
+   {
+    "tag": "C1_small",
+    "passed": false,
+    "mean_full_excess_pp": 17.87
+   },
+   {
+    "tag": "C2_mid",
+    "passed": false,
+    "mean_full_excess_pp": 16.87
+   },
+   {
+    "tag": "C3_strong",
+    "passed": false,
+    "mean_full_excess_pp": 16.27
+   }
+  ],
+  "criteria": "两套种子同时: ①全史 ≥ BASE+1.0pp ②ACTIVE ≥ BASE ③全史 MDD ≥ BASE×1.10; ④对照须复现; 多个通过 ⇒ 取全史均值最高(事前定)",
+  "note": "3 个点是同一段 491 期上的多重比较; 判据与两套种子要求就是为此设的。全部不过 ⇒ 超参不是这根杠杆, 不再扩大网格"
+ },
+ "secs": 2911.7,
+ "control": {
+  "ok": true,
+  "detail": {
+   "SA": {
+    "full_was": 18.0,
+    "full_now": 18.0,
+    "active_was": 10.38,
+    "active_now": 10.38,
+    "ok": true
+   },
+   "SB": {
+    "full_was": 17.3,
+    "full_now": 17.3,
+    "active_was": 11.8,
+    "active_now": 11.8,
+    "ok": true
+   }
+  },
+  "n_common": 491
+ }
+}

@@ -1,0 +1,185 @@
+{
+ "ran_at": "2026-09-28T08:11:18",
+ "prereg": "plans/crowding-cap-prereg-20260928.md",
+ "params": {
+  "long_m": 24,
+  "recent_m": 6,
+  "long_bar": 0.01,
+  "mv_q": 0.2,
+  "block": "B1(size/amount_log/illiq)"
+ },
+ "activate_months": [
+  "2024-06",
+  "2024-07"
+ ],
+ "activity_history_tail": [
+  {
+   "anchor": "2024-08-30",
+   "long": -0.0347,
+   "recent": -0.0191,
+   "cold": false
+  },
+  {
+   "anchor": "2024-09-30",
+   "long": -0.0349,
+   "recent": -0.0061,
+   "cold": false
+  },
+  {
+   "anchor": "2024-10-31",
+   "long": -0.0355,
+   "recent": -0.0234,
+   "cold": false
+  },
+  {
+   "anchor": "2024-11-29",
+   "long": -0.04,
+   "recent": -0.0488,
+   "cold": false
+  },
+  {
+   "anchor": "2024-12-31",
+   "long": -0.0403,
+   "recent": -0.0451,
+   "cold": false
+  },
+  {
+   "anchor": "2025-01-27",
+   "long": -0.0389,
+   "recent": -0.0472,
+   "cold": false
+  },
+  {
+   "anchor": "2025-02-28",
+   "long": -0.0384,
+   "recent": -0.0479,
+   "cold": false
+  },
+  {
+   "anchor": "2025-03-31",
+   "long": -0.0392,
+   "recent": -0.0571,
+   "cold": false
+  },
+  {
+   "anchor": "2025-04-30",
+   "long": -0.0417,
+   "recent": -0.0532,
+   "cold": false
+  },
+  {
+   "anchor": "2025-05-30",
+   "long": -0.0408,
+   "recent": -0.0483,
+   "cold": false
+  },
+  {
+   "anchor": "2025-06-30",
+   "long": -0.0422,
+   "recent": -0.0653,
+   "cold": false
+  },
+  {
+   "anchor": "2025-07-31",
+   "long": -0.0417,
+   "recent": -0.0616,
+   "cold": false
+  },
+  {
+   "anchor": "2025-08-29",
+   "long": -0.0368,
+   "recent": -0.0426,
+   "cold": false
+  },
+  {
+   "anchor": "2025-09-30",
+   "long": -0.0344,
+   "recent": -0.0342,
+   "cold": false
+  },
+  {
+   "anchor": "2025-10-31",
+   "long": -0.0355,
+   "recent": -0.0428,
+   "cold": false
+  },
+  {
+   "anchor": "2025-11-28",
+   "long": -0.0307,
+   "recent": -0.0361,
+   "cold": false
+  },
+  {
+   "anchor": "2025-12-31",
+   "long": -0.0264,
+   "recent": -0.0167,
+   "cold": false
+  },
+  {
+   "anchor": "2026-01-30",
+   "long": -0.0296,
+   "recent": -0.0206,
+   "cold": false
+  },
+  {
+   "anchor": "2026-02-27",
+   "long": -0.0365,
+   "recent": -0.0364,
+   "cold": false
+  },
+  {
+   "anchor": "2026-03-31",
+   "long": -0.034,
+   "recent": -0.0388,
+   "cold": false
+  },
+  {
+   "anchor": "2026-04-30",
+   "long": -0.035,
+   "recent": -0.0208,
+   "cold": false
+  },
+  {
+   "anchor": "2026-05-29",
+   "long": -0.0345,
+   "recent": -0.005,
+   "cold": false
+  },
+  {
+   "anchor": "2026-06-30",
+   "long": -0.0322,
+   "recent": -0.0019,
+   "cold": false
+  },
+  {
+   "anchor": "2026-07-31",
+   "long": -0.0337,
+   "recent": -0.0055,
+   "cold": false
+  }
+ ],
+ "runs": {
+  "prod": {
+   "ann_return": 0.2264,
+   "excess_ann": 0.1662,
+   "max_drawdown": -0.2584,
+   "avg_turnover": 0.8984
+  },
+  "full": {
+   "ann_return": 0.1255,
+   "excess_ann": 0.0724,
+   "max_drawdown": -0.4777,
+   "avg_turnover": 0.8865
+  }
+ },
+ "checks": {
+  "p1_mdd_improve_prod": false,
+  "p2_non_inferior_prod": false,
+  "p1_mdd_improve_full": false,
+  "p2_non_inferior_full": false,
+  "p3_coverage": false
+ },
+ "verdict": "REJECT（线结清）",
+ "note": "评分表层实现(零引擎改动); PASS 后生产接线另走预注册+回放复核",
+ "runtime_sec": 109.5
+}

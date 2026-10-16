@@ -1,0 +1,105 @@
+{
+ "protocol": {
+  "input": [
+   "F52_series_seedA_A0.json",
+   "F52_series_seedB_A0.json"
+  ],
+  "es_q": 0.05,
+  "shape": "生产构型 A0 (hyst=0.0)",
+  "note": "只读 F52 序列；不改任何生产产物"
+ },
+ "seeds": {
+  "seedA": {
+   "stats": {
+    "n": 491,
+    "mean_pp": 0.467,
+    "excess_mean_pp": 0.308,
+    "sd_pp": 3.592,
+    "mdd": -0.366,
+    "es5_pp": -7.955,
+    "cdar5": -0.2702,
+    "worst_periods": [
+     {
+      "date": 1707091200000,
+      "ret_pp": -20.54
+     },
+     {
+      "date": 1708300800000,
+      "ret_pp": -13.95
+     },
+     {
+      "date": 1728864000000,
+      "ret_pp": -13.78
+     },
+     {
+      "date": 1580688000000,
+      "ret_pp": -12.03
+     },
+     {
+      "date": 1517788800000,
+      "ret_pp": -11.03
+     }
+    ],
+    "invested_min": 0.7713,
+    "invested_p10": 0.8537,
+    "invested_median": 0.8987,
+    "n_pos_min": 92,
+    "n_pos_median": 100
+   },
+   "monthly": {
+    "months": 116,
+    "mean_pp": 1.941,
+    "hit": 0.664,
+    "es5_pp": -13.762,
+    "worst_month_pp": -17.94,
+    "best_month_pp": 19.89
+   }
+  },
+  "seedB": {
+   "stats": {
+    "n": 491,
+    "mean_pp": 0.462,
+    "excess_mean_pp": 0.303,
+    "sd_pp": 3.575,
+    "mdd": -0.366,
+    "es5_pp": -7.918,
+    "cdar5": -0.2729,
+    "worst_periods": [
+     {
+      "date": 1707091200000,
+      "ret_pp": -20.75
+     },
+     {
+      "date": 1708300800000,
+      "ret_pp": -14.1
+     },
+     {
+      "date": 1728864000000,
+      "ret_pp": -13.58
+     },
+     {
+      "date": 1580688000000,
+      "ret_pp": -12.0
+     },
+     {
+      "date": 1517788800000,
+      "ret_pp": -10.61
+     }
+    ],
+    "invested_min": 0.7344,
+    "invested_p10": 0.8543,
+    "invested_median": 0.901,
+    "n_pos_min": 90,
+    "n_pos_median": 100
+   },
+   "monthly": {
+    "months": 116,
+    "mean_pp": 1.915,
+    "hit": 0.655,
+    "es5_pp": -13.587,
+    "worst_month_pp": -18.27,
+    "best_month_pp": 19.99
+   }
+  }
+ }
+}

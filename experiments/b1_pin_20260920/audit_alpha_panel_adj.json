@@ -1,0 +1,378 @@
+{
+  "sample": {
+    "n_codes": 300,
+    "since": "20190101",
+    "until": "20260831",
+    "pick": "除权次数最多的 300 只(效应上界, 不是全市场均值)"
+  },
+  "static_price_dependency": {
+    "n_total": 158,
+    "n_price_touching": 133,
+    "n_scale_free": 25,
+    "by_family": {
+      "BETA20": [
+        "close"
+      ],
+      "CORR20": [
+        "close"
+      ],
+      "KLEN": [
+        "high",
+        "low",
+        "open"
+      ],
+      "KMID": [
+        "close",
+        "open"
+      ],
+      "MA20": [
+        "close"
+      ],
+      "MAX20": [
+        "close",
+        "high"
+      ],
+      "MIN20": [
+        "close",
+        "low"
+      ],
+      "QTLD20": [
+        "close"
+      ],
+      "QTLU20": [
+        "close"
+      ],
+      "RANK20": [
+        "close"
+      ],
+      "RESI20": [
+        "close"
+      ],
+      "ROC20": [
+        "close"
+      ],
+      "RSV20": [
+        "close",
+        "high",
+        "low"
+      ],
+      "STD20": [
+        "close"
+      ]
+    }
+  },
+  "per_expression": {
+    "KMID": {
+      "expr": "($close-$open)/$open",
+      "corr_all_dates": {
+        "n_dates": 1859,
+        "mean": 1.0,
+        "p05": 1.0,
+        "below_0p99_share": 0.0
+      },
+      "value_gap": {
+        "n_cells": 487500,
+        "median_bp": 0.0,
+        "p95_bp": 0.0,
+        "max_bp": 0.0
+      },
+      "corr_on_window_with_exdiv": {
+        "n_dates": 511,
+        "mean": 1.0,
+        "p05": 1.0,
+        "below_0p99_share": 0.0
+      }
+    },
+    "KLEN": {
+      "expr": "($high-$low)/$open",
+      "corr_all_dates": {
+        "n_dates": 1859,
+        "mean": 1.0,
+        "p05": 1.0,
+        "below_0p99_share": 0.0
+      },
+      "value_gap": {
+        "n_cells": 503246,
+        "median_bp": 0.0,
+        "p95_bp": 0.0,
+        "max_bp": 0.0
+      },
+      "corr_on_window_with_exdiv": {
+        "n_dates": 511,
+        "mean": 1.0,
+        "p05": 0.99999,
+        "below_0p99_share": 0.0
+      }
+    },
+    "ROC20": {
+      "expr": "Ref($close, 20)/$close",
+      "corr_all_dates": {
+        "n_dates": 1839,
+        "mean": 0.97527,
+        "p05": 0.88248,
+        "below_0p99_share": 0.4214
+      },
+      "value_gap": {
+        "n_cells": 497043,
+        "median_bp": 0.0,
+        "p95_bp": 208.0,
+        "max_bp": 25814.0
+      },
+      "corr_on_window_with_exdiv": {
+        "n_dates": 507,
+        "mean": 0.84957,
+        "p05": 0.60503,
+        "below_0p99_share": 0.8836
+      }
+    },
+    "MA20": {
+      "expr": "Mean($close, 20)/$close",
+      "corr_all_dates": {
+        "n_dates": 1840,
+        "mean": 0.97898,
+        "p05": 0.89875,
+        "below_0p99_share": 0.3739
+      },
+      "value_gap": {
+        "n_cells": 491077,
+        "median_bp": 0.0,
+        "p95_bp": 86.0,
+        "max_bp": 24507.5
+      },
+      "corr_on_window_with_exdiv": {
+        "n_dates": 496,
+        "mean": 0.87018,
+        "p05": 0.64719,
+        "below_0p99_share": 0.8931
+      }
+    },
+    "STD20": {
+      "expr": "Std($close, 20)/$close",
+      "corr_all_dates": {
+        "n_dates": 1840,
+        "mean": 0.97959,
+        "p05": 0.89943,
+        "below_0p99_share": 0.3658
+      },
+      "value_gap": {
+        "n_cells": 491077,
+        "median_bp": 0.0,
+        "p95_bp": 1056.7,
+        "max_bp": 937212.6
+      },
+      "corr_on_window_with_exdiv": {
+        "n_dates": 496,
+        "mean": 0.84701,
+        "p05": 0.65119,
+        "below_0p99_share": 0.8992
+      }
+    },
+    "BETA20": {
+      "expr": "Slope($close, 20)/$close",
+      "corr_all_dates": {
+        "n_dates": 1840,
+        "mean": 0.97738,
+        "p05": 0.89285,
+        "below_0p99_share": 0.3946
+      },
+      "value_gap": {
+        "n_cells": 491051,
+        "median_bp": 0.0,
+        "p95_bp": 3826.1,
+        "max_bp": 212447272.7
+      },
+      "corr_on_window_with_exdiv": {
+        "n_dates": 496,
+        "mean": 0.85764,
+        "p05": 0.61197,
+        "below_0p99_share": 0.8972
+      }
+    },
+    "RESI20": {
+      "expr": "Resi($close, 20)/$close",
+      "corr_all_dates": {
+        "n_dates": 1840,
+        "mean": 0.98058,
+        "p05": 0.90681,
+        "below_0p99_share": 0.3571
+      },
+      "value_gap": {
+        "n_cells": 490972,
+        "median_bp": 0.0,
+        "p95_bp": 2967.6,
+        "max_bp": 84557033.3
+      },
+      "corr_on_window_with_exdiv": {
+        "n_dates": 496,
+        "mean": 0.86293,
+        "p05": 0.66746,
+        "below_0p99_share": 0.9012
+      }
+    },
+    "MAX20": {
+      "expr": "Max($high, 20)/$close",
+      "corr_all_dates": {
+        "n_dates": 1840,
+        "mean": 0.9778,
+        "p05": 0.88602,
+        "below_0p99_share": 0.3755
+      },
+      "value_gap": {
+        "n_cells": 491077,
+        "median_bp": 0.0,
+        "p95_bp": 115.9,
+        "max_bp": 25814.0
+      },
+      "corr_on_window_with_exdiv": {
+        "n_dates": 496,
+        "mean": 0.85006,
+        "p05": 0.62774,
+        "below_0p99_share": 0.9093
+      }
+    },
+    "MIN20": {
+      "expr": "Min($low, 20)/$close",
+      "corr_all_dates": {
+        "n_dates": 1840,
+        "mean": 0.9925,
+        "p05": 0.96566,
+        "below_0p99_share": 0.2359
+      },
+      "value_gap": {
+        "n_cells": 491077,
+        "median_bp": 0.0,
+        "p95_bp": 36.1,
+        "max_bp": 10027.7
+      },
+      "corr_on_window_with_exdiv": {
+        "n_dates": 496,
+        "mean": 0.95498,
+        "p05": 0.88119,
+        "below_0p99_share": 0.8528
+      }
+    },
+    "QTLU20": {
+      "expr": "Quantile($close, 20, 0.8)/$close",
+      "corr_all_dates": {
+        "n_dates": 1840,
+        "mean": 0.9771,
+        "p05": 0.8915,
+        "below_0p99_share": 0.3913
+      },
+      "value_gap": {
+        "n_cells": 491077,
+        "median_bp": 0.0,
+        "p95_bp": 90.2,
+        "max_bp": 25814.0
+      },
+      "corr_on_window_with_exdiv": {
+        "n_dates": 496,
+        "mean": 0.85002,
+        "p05": 0.62369,
+        "below_0p99_share": 0.9093
+      }
+    },
+    "QTLD20": {
+      "expr": "Quantile($close, 20, 0.2)/$close",
+      "corr_all_dates": {
+        "n_dates": 1840,
+        "mean": 0.98675,
+        "p05": 0.93767,
+        "below_0p99_share": 0.3163
+      },
+      "value_gap": {
+        "n_cells": 491077,
+        "median_bp": 0.0,
+        "p95_bp": 58.0,
+        "max_bp": 25233.1
+      },
+      "corr_on_window_with_exdiv": {
+        "n_dates": 496,
+        "mean": 0.91862,
+        "p05": 0.78261,
+        "below_0p99_share": 0.879
+      }
+    },
+    "RANK20": {
+      "expr": "Rank($close, 20)",
+      "corr_all_dates": {
+        "n_dates": 1840,
+        "mean": 0.98337,
+        "p05": 0.92491,
+        "below_0p99_share": 0.3793
+      },
+      "value_gap": {
+        "n_cells": 503301,
+        "median_bp": 0.0,
+        "p95_bp": 0.0,
+        "max_bp": 150000.0
+      },
+      "corr_on_window_with_exdiv": {
+        "n_dates": 511,
+        "mean": 0.89209,
+        "p05": 0.74129,
+        "below_0p99_share": 0.9217
+      }
+    },
+    "RSV20": {
+      "expr": "($close-Min($low, 20))/(Max($high, 20)-Min($low, 20)+1e-12)",
+      "corr_all_dates": {
+        "n_dates": 1840,
+        "mean": 0.98034,
+        "p05": 0.90586,
+        "below_0p99_share": 0.3902
+      },
+      "value_gap": {
+        "n_cells": 487456,
+        "median_bp": 0.0,
+        "p95_bp": 1286.3,
+        "max_bp": 159813.0
+      },
+      "corr_on_window_with_exdiv": {
+        "n_dates": 496,
+        "mean": 0.87875,
+        "p05": 0.69862,
+        "below_0p99_share": 0.9113
+      }
+    },
+    "CORR20": {
+      "expr": "Corr($close, Log($volume+1), 20)",
+      "corr_all_dates": {
+        "n_dates": 1840,
+        "mean": 0.9836,
+        "p05": 0.92339,
+        "below_0p99_share": 0.3565
+      },
+      "value_gap": {
+        "n_cells": 491077,
+        "median_bp": 0.0,
+        "p95_bp": 1127.3,
+        "max_bp": 132240874.4
+      },
+      "corr_on_window_with_exdiv": {
+        "n_dates": 496,
+        "mean": 0.87613,
+        "p05": 0.63068,
+        "below_0p99_share": 0.9093
+      }
+    }
+  },
+  "n_representative_degraded_below_0p99": 12,
+  "degraded": [
+    "BETA20",
+    "CORR20",
+    "MA20",
+    "MAX20",
+    "MIN20",
+    "QTLD20",
+    "QTLU20",
+    "RANK20",
+    "RESI20",
+    "ROC20",
+    "RSV20",
+    "STD20"
+  ],
+  "how_to_read": "秩相关是门禁真正用的信息；数值差只说明「因子值本身错了多少」。两条臂唯一差别 = 价格列是否乘 adj ⇒ 差全部来自除权日。",
+  "not_a_verdict": "阶段 A 量级实测：未重跑门禁、未改 build_panel、未动 alpha_bank。",
+  "next_step": "若要统一尺 = 改研究口径 ⇒ alpha_bank 既有读数不可比, 须预注册 + 全 158 条重跑门禁 A/B(01 号纪律)。"
+}

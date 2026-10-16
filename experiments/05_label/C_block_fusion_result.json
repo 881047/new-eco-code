@@ -1,0 +1,308 @@
+{
+ "train": {
+  "expected_anchors": 145,
+  "retrains": {
+   "cbase_s1": {
+    "skipped": false,
+    "seeds": [
+     1791903,
+     1799822,
+     1807741,
+     1815660
+    ],
+    "secs": 405.4
+   },
+   "cblk_b1_s1": {
+    "skipped": false,
+    "seeds": [
+     1791903,
+     1799822,
+     1807741,
+     1815660
+    ],
+    "factors": [
+     "size",
+     "amount_log",
+     "illiq"
+    ],
+    "secs": 184.2
+   },
+   "cblk_b2_s1": {
+    "skipped": false,
+    "seeds": [
+     1791903,
+     1799822,
+     1807741,
+     1815660
+    ],
+    "factors": [
+     "vol_20",
+     "vol_60",
+     "ret_max20",
+     "turnover_20",
+     "skew_20",
+     "beta_250",
+     "turnover_chg"
+    ],
+    "secs": 205.6
+   },
+   "cblk_b3_s1": {
+    "skipped": false,
+    "seeds": [
+     1791903,
+     1799822,
+     1807741,
+     1815660
+    ],
+    "factors": [
+     "mom_20",
+     "mom_60",
+     "mom_120",
+     "mom_250",
+     "high_52w",
+     "low_52w",
+     "bias_60"
+    ],
+    "secs": 220.3
+   },
+   "cblk_b4_s1": {
+    "skipped": false,
+    "seeds": [
+     1791903,
+     1799822,
+     1807741,
+     1815660
+    ],
+    "factors": [
+     "rev_5",
+     "bias_20"
+    ],
+    "secs": 181.2
+   },
+   "cblk_b5_s1": {
+    "skipped": false,
+    "seeds": [
+     1791903,
+     1799822,
+     1807741,
+     1815660
+    ],
+    "factors": [
+     "ep",
+     "bp",
+     "dv_ttm",
+     "roe",
+     "netprofit_yoy",
+     "or_yoy",
+     "grossprofit_margin",
+     "eps_yoy",
+     "debt_to_assets"
+    ],
+    "secs": 214.7
+   },
+   "cblk_b6_s1": {
+    "skipped": false,
+    "seeds": [
+     1791903,
+     1799822,
+     1807741,
+     1815660
+    ],
+    "factors": [
+     "lhb_net20",
+     "lhb_org_net20",
+     "lhb_cnt20"
+    ],
+    "secs": 188.7
+   },
+   "cbase_s2": {
+    "skipped": false,
+    "seeds": [
+     2583803,
+     2591722,
+     2599641,
+     2607560
+    ],
+    "secs": 399.5
+   },
+   "cblk_b1_s2": {
+    "skipped": false,
+    "seeds": [
+     2583803,
+     2591722,
+     2599641,
+     2607560
+    ],
+    "factors": [
+     "size",
+     "amount_log",
+     "illiq"
+    ],
+    "secs": 187.6
+   },
+   "cblk_b2_s2": {
+    "skipped": false,
+    "seeds": [
+     2583803,
+     2591722,
+     2599641,
+     2607560
+    ],
+    "factors": [
+     "vol_20",
+     "vol_60",
+     "ret_max20",
+     "turnover_20",
+     "skew_20",
+     "beta_250",
+     "turnover_chg"
+    ],
+    "secs": 209.0
+   },
+   "cblk_b3_s2": {
+    "skipped": false,
+    "seeds": [
+     2583803,
+     2591722,
+     2599641,
+     2607560
+    ],
+    "factors": [
+     "mom_20",
+     "mom_60",
+     "mom_120",
+     "mom_250",
+     "high_52w",
+     "low_52w",
+     "bias_60"
+    ],
+    "secs": 206.0
+   },
+   "cblk_b4_s2": {
+    "skipped": false,
+    "seeds": [
+     2583803,
+     2591722,
+     2599641,
+     2607560
+    ],
+    "factors": [
+     "rev_5",
+     "bias_20"
+    ],
+    "secs": 183.5
+   },
+   "cblk_b5_s2": {
+    "skipped": false,
+    "seeds": [
+     2583803,
+     2591722,
+     2599641,
+     2607560
+    ],
+    "factors": [
+     "ep",
+     "bp",
+     "dv_ttm",
+     "roe",
+     "netprofit_yoy",
+     "or_yoy",
+     "grossprofit_margin",
+     "eps_yoy",
+     "debt_to_assets"
+    ],
+    "secs": 215.0
+   },
+   "cblk_b6_s2": {
+    "skipped": false,
+    "seeds": [
+     2583803,
+     2591722,
+     2599641,
+     2607560
+    ],
+    "factors": [
+     "lhb_net20",
+     "lhb_org_net20",
+     "lhb_cnt20"
+    ],
+    "secs": 188.0
+   }
+  }
+ },
+ "fuse": {
+  "method": "per-anchor pct-rank, equal mean across 6 blocks",
+  "files": [
+   "C_block_fusion_fused_s1.csv",
+   "C_block_fusion_fused_s2.csv"
+  ]
+ },
+ "research": {
+  "protocol": {
+   "top_n": 100,
+   "horizon": 21,
+   "sell_rate_bp": 7.6,
+   "anchors": 116,
+   "columns_union": 4815
+  },
+  "per_arm": {
+   "BASE_s1": {
+    "n": 115,
+    "ann_pp": 8.4166,
+    "ic_mean": 0.0862,
+    "ACTIVE_ann_pp": 11.9443,
+    "DEAD_ann_pp": 14.0637
+   },
+   "C_s1": {
+    "n": 115,
+    "ann_pp": 7.6497,
+    "ic_mean": 0.0888,
+    "ACTIVE_ann_pp": 7.8679,
+    "DEAD_ann_pp": 13.6624
+   },
+   "BASE_s2": {
+    "n": 115,
+    "ann_pp": 8.6972,
+    "ic_mean": 0.0867,
+    "ACTIVE_ann_pp": 13.8308,
+    "DEAD_ann_pp": 15.8131
+   },
+   "C_s2": {
+    "n": 115,
+    "ann_pp": 7.0758,
+    "ic_mean": 0.0893,
+    "ACTIVE_ann_pp": 8.9952,
+    "DEAD_ann_pp": 12.4228
+   }
+  }
+ },
+ "analyze": {
+  "g0": {
+   "BASE_s1": {
+    "ann_pp": 8.4166,
+    "in_band": true
+   },
+   "BASE_s2": {
+    "ann_pp": 8.6972,
+    "in_band": true
+   }
+  },
+  "g0_pass": true,
+  "pairs": {
+   "s1": {
+    "delta_ann_pp": -0.7668,
+    "n": 115,
+    "t_paired": -0.276,
+    "pass": false
+   },
+   "s2": {
+    "delta_ann_pp": -1.6215,
+    "n": 115,
+    "t_paired": -0.569,
+    "pass": false
+   }
+  },
+  "verdict": "effect_indistinguishable",
+  "note": "L1 门（预注册）：两套 seed 全部 Δ≥+1.6pp 且配对 t≥1.6 才送组合层；配对 t 的 SE 只含时间抽样，引用时注明可能虚高 ≤1.20×（F78b 标定）"
+ }
+}

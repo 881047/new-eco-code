@@ -1,0 +1,73 @@
+{
+  "ran_at": "2026-09-27T01:55:01",
+  "prereg": "plans/text-corpus-probe-prereg-20260927.md",
+  "versions": {
+    "akshare": "1.18.94",
+    "tushare": "1.4.29"
+  },
+  "sources": {},
+  "stock_news_em": {
+    "error": "ArrowInvalid: Invalid regular expression: invalid escape sequence: \\u"
+  },
+  "stock_notice_report": {
+    "error": "KeyError: '代码'"
+  },
+  "stock_telegraph_cls": {
+    "error": "AttributeError: module 'akshare' has no attribute 'stock_telegraph_cls'"
+  },
+  "stock_zh_a_disclosure_cninfo": {
+    "rows": 256,
+    "columns": [
+      "代码",
+      "简称",
+      "公告标题",
+      "公告时间",
+      "公告链接"
+    ],
+    "time_col": "公告时间",
+    "min": "2023-10-17",
+    "max": "2026-09-22",
+    "window_days": 1100,
+    "latency_s": 3.5,
+    "samples": [
+      {
+        "代码": "000001",
+        "简称": "平安银行",
+        "公告标题": "关于2026年金融债券（第一期）发行完毕的公告",
+        "公告时间": "2026-09-22",
+        "公告链接": "http://www.cninfo.com.cn/new/disclosure/detail?stockCode=000001&announcementId=1225574840&orgId=gssz0000001&announcement"
+      },
+      {
+        "代码": "000001",
+        "简称": "平安银行",
+        "公告标题": "平安银行股份有限公司内部审计章程",
+        "公告时间": "2026-09-17",
+        "公告链接": "http://www.cninfo.com.cn/new/disclosure/detail?stockCode=000001&announcementId=1225568477&orgId=gssz0000001&announcement"
+      }
+    ]
+  },
+  "stock_zh_a_disclosure_cninfo_deep": {
+    "rows_since_2019": 730,
+    "latency_s": 7.8,
+    "time_col": "公告时间",
+    "min": "2019-01-04 00:00:00",
+    "max": "2026-09-22 00:00:00"
+  },
+  "ts_news_sina": {
+    "error": "Exception: 抱歉，您没有接口(news)访问权限，权限的具体详情访问：https://tushare.pro/document/1?doc_id=108。"
+  },
+  "ts_announce_iface_exists": {
+    "notice": true,
+    "anns": true,
+    "report_rc": true,
+    "major_news": true,
+    "news_notice": true
+  },
+  "ts_major_news": {
+    "error": "Exception: 抱歉，您没有接口(major_news)访问权限，权限的具体详情访问：https://tushare.pro/document/1?doc_id=108。"
+  },
+  "ts_notice": {
+    "error": "Exception: 请指定正确的接口名"
+  },
+  "runtime_sec": 15.0
+}

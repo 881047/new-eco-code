@@ -1,0 +1,56 @@
+{
+ "date": "2026-09-21 19:07:53",
+ "baseline_backup": "neweco_20260913.db",
+ "cutoff": "20260914",
+ "note": "只统计日期 < cutoff 的历史行；新增行属正常增量。修订行=同主键值不同；回删=备份有而今无。",
+ "tables": {
+  "daily": {
+   "changed": 0,
+   "deleted": 0,
+   "new_normal": 33307,
+   "top_dates": []
+  },
+  "adj_factor": {
+   "changed": 0,
+   "deleted": 0,
+   "new_normal": 33383,
+   "top_dates": []
+  },
+  "daily_basic": {
+   "changed": 0,
+   "deleted": 0,
+   "new_normal": 33307,
+   "top_dates": []
+  },
+  "fina_indicator": {
+   "changed": 0,
+   "deleted": 1,
+   "new_normal": 0,
+   "top_dates": []
+  },
+  "stock_basic": {
+   "changed": 4,
+   "deleted": 0,
+   "new_normal": 0,
+   "top_dates": []
+  },
+  "index_daily": {
+   "changed": 0,
+   "deleted": 0,
+   "new_normal": 35,
+   "top_dates": []
+  },
+  "trade_cal": {
+   "changed": 0,
+   "deleted": 0,
+   "new_normal": 474,
+   "top_dates": []
+  },
+  "stk_limit": {
+   "changed": 0,
+   "deleted": 0,
+   "new_normal": 0,
+   "top_dates": []
+  }
+ }
+}

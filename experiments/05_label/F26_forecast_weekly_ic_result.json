@@ -1,0 +1,63 @@
+{
+ "script_sha": "f84acfa7532df5ce",
+ "since": "20151101",
+ "horizon": 5,
+ "n_anchor": 555,
+ "n_tested": 3,
+ "n_denom_clusters_used": 33,
+ "coverage": {
+  "fc_chg": 0.3807,
+  "fc_type": 0.392,
+  "fc_cover90": 1.0
+ },
+ "passed": [],
+ "stats": {
+  "fc_chg": {
+   "DEAD": {
+    "n": 170,
+    "ic": -0.0081,
+    "t": -1.26
+   },
+   "ACTIVE": {
+    "n": 137,
+    "ic": 0.0015,
+    "t": 0.18
+   },
+   "n_ic": 553,
+   "coverage": 0.3807
+  },
+  "fc_type": {
+   "DEAD": {
+    "n": 170,
+    "ic": -0.0085,
+    "t": -1.36
+   },
+   "ACTIVE": {
+    "n": 137,
+    "ic": 0.0009,
+    "t": 0.11
+   },
+   "n_ic": 553,
+   "coverage": 0.392
+  },
+  "fc_cover90": {
+   "DEAD": {
+    "n": 170,
+    "ic": -0.0055,
+    "t": -1.37
+   },
+   "ACTIVE": {
+    "n": 137,
+    "ic": -0.0004,
+    "t": -0.07
+   },
+   "n_ic": 553,
+   "coverage": 1.0
+  }
+ },
+ "verdict": {
+  "forecast_route": false,
+  "n_passed": 0
+ },
+ "secs": 328.6
+}

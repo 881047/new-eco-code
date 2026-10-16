@@ -1,0 +1,590 @@
+{
+ "ran_at": "2026-09-27T18:13:09",
+ "prereg": "plans/sleeve-bank-screen-prereg-20260927.md",
+ "pass_list_n": 39,
+ "candidate_domains": {
+  "qlib158": [
+   "KLEN",
+   "KUP",
+   "KLOW",
+   "KSFT",
+   "CORD5",
+   "CNTP5",
+   "BETA10",
+   "IMAX20",
+   "IMAX60",
+   "IMXD20",
+   "IMXD30",
+   "IMXD60",
+   "CORD10",
+   "CORD20",
+   "CORD30",
+   "CORD60",
+   "CNTD10",
+   "SUMP10",
+   "SUMD10",
+   "VSTD10",
+   "VSUMP10",
+   "VSUMP60",
+   "VSUMD10",
+   "VSUMD60"
+  ],
+  "flow": [
+   "margin_buy_share",
+   "margin_net_share",
+   "mf_lg_net",
+   "mf_main_sm_div"
+  ],
+  "deferred": [
+   "kg_broker_rec_3m",
+   "m60_lr10",
+   "m60_lr5",
+   "m60_lvsxlr",
+   "llm_intraday_reversal_turnover",
+   "llm_positive_day_ratio_20",
+   "llm_price_skew_20",
+   "llm_intraday_close_position",
+   "llm_vwap_premium_voladj",
+   "llm_high_low_order_20",
+   "llm_amount_short_long_ratio"
+  ]
+ },
+ "v0": [
+  {
+   "factor": "KLEN",
+   "v0": "PASS",
+   "median_spearman": 1.0,
+   "n_anchors": 93
+  },
+  {
+   "factor": "KUP",
+   "v0": "PASS",
+   "median_spearman": 1.0,
+   "n_anchors": 93
+  },
+  {
+   "factor": "KLOW",
+   "v0": "PASS",
+   "median_spearman": 1.0,
+   "n_anchors": 93
+  },
+  {
+   "factor": "KSFT",
+   "v0": "PASS",
+   "median_spearman": 1.0,
+   "n_anchors": 93
+  },
+  {
+   "factor": "CORD5",
+   "v0": "PASS",
+   "median_spearman": 1.0,
+   "n_anchors": 93
+  },
+  {
+   "factor": "CNTP5",
+   "v0": "PASS",
+   "median_spearman": 0.9998,
+   "n_anchors": 93
+  },
+  {
+   "factor": "BETA10",
+   "v0": "PASS",
+   "median_spearman": 1.0,
+   "n_anchors": 93
+  },
+  {
+   "factor": "IMAX20",
+   "v0": "PASS",
+   "median_spearman": 1.0,
+   "n_anchors": 93
+  },
+  {
+   "factor": "IMAX60",
+   "v0": "PASS",
+   "median_spearman": 1.0,
+   "n_anchors": 93
+  },
+  {
+   "factor": "IMXD20",
+   "v0": "PASS",
+   "median_spearman": 1.0,
+   "n_anchors": 93
+  },
+  {
+   "factor": "IMXD30",
+   "v0": "PASS",
+   "median_spearman": 1.0,
+   "n_anchors": 93
+  },
+  {
+   "factor": "IMXD60",
+   "v0": "PASS",
+   "median_spearman": 1.0,
+   "n_anchors": 93
+  },
+  {
+   "factor": "CORD10",
+   "v0": "PASS",
+   "median_spearman": 1.0,
+   "n_anchors": 93
+  },
+  {
+   "factor": "CORD20",
+   "v0": "PASS",
+   "median_spearman": 1.0,
+   "n_anchors": 93
+  },
+  {
+   "factor": "CORD30",
+   "v0": "PASS",
+   "median_spearman": 1.0,
+   "n_anchors": 93
+  },
+  {
+   "factor": "CORD60",
+   "v0": "PASS",
+   "median_spearman": 1.0,
+   "n_anchors": 93
+  },
+  {
+   "factor": "CNTD10",
+   "v0": "PASS",
+   "median_spearman": 1.0,
+   "n_anchors": 93
+  },
+  {
+   "factor": "SUMP10",
+   "v0": "PASS",
+   "median_spearman": 1.0,
+   "n_anchors": 93
+  },
+  {
+   "factor": "SUMD10",
+   "v0": "PASS",
+   "median_spearman": 1.0,
+   "n_anchors": 93
+  },
+  {
+   "factor": "VSTD10",
+   "v0": "PASS",
+   "median_spearman": 1.0,
+   "n_anchors": 93
+  },
+  {
+   "factor": "VSUMP10",
+   "v0": "PASS",
+   "median_spearman": 1.0,
+   "n_anchors": 93
+  },
+  {
+   "factor": "VSUMP60",
+   "v0": "PASS",
+   "median_spearman": 1.0,
+   "n_anchors": 93
+  },
+  {
+   "factor": "VSUMD10",
+   "v0": "PASS",
+   "median_spearman": 1.0,
+   "n_anchors": 93
+  },
+  {
+   "factor": "VSUMD60",
+   "v0": "PASS",
+   "median_spearman": 1.0,
+   "n_anchors": 93
+  },
+  {
+   "factor": "margin_buy_share",
+   "v0": "PASS",
+   "median_spearman": 1.0,
+   "n_anchors": 92
+  },
+  {
+   "factor": "margin_net_share",
+   "v0": "PASS",
+   "median_spearman": 1.0,
+   "n_anchors": 92
+  },
+  {
+   "factor": "mf_lg_net",
+   "v0": "PASS",
+   "median_spearman": 1.0,
+   "n_anchors": 93
+  },
+  {
+   "factor": "mf_main_sm_div",
+   "v0": "PASS",
+   "median_spearman": 1.0,
+   "n_anchors": 93
+  }
+ ],
+ "n_anchors": 183,
+ "criteria": {
+  "g1": "HL≥2 周锚步或删失",
+  "g2": "|IC0(5d)|≥0.02",
+  "g3": "vs 袖套31 |ρ|max≤0.7"
+ },
+ "rows": [
+  {
+   "factor": "BETA10",
+   "ic0_5d": -0.0413,
+   "hl_weeks": 2.0,
+   "censored": false,
+   "g1_timeliness": true,
+   "g2_strength": true,
+   "g3_max_rho": 0.764,
+   "g3_worst": "bias_20",
+   "g3_increment": false,
+   "PASS_screen": false
+  },
+  {
+   "factor": "CNTD10",
+   "ic0_5d": -0.0225,
+   "hl_weeks": 1.0,
+   "censored": false,
+   "g1_timeliness": false,
+   "g2_strength": true,
+   "g3_max_rho": 0.53,
+   "g3_worst": "bias_20",
+   "g3_increment": true,
+   "PASS_screen": false
+  },
+  {
+   "factor": "CNTP5",
+   "ic0_5d": -0.0208,
+   "hl_weeks": 2.0,
+   "censored": false,
+   "g1_timeliness": true,
+   "g2_strength": true,
+   "g3_max_rho": 0.571,
+   "g3_worst": "rev_5",
+   "g3_increment": true,
+   "PASS_screen": true
+  },
+  {
+   "factor": "CORD10",
+   "ic0_5d": -0.0292,
+   "hl_weeks": 6.0,
+   "censored": true,
+   "g1_timeliness": true,
+   "g2_strength": true,
+   "g3_max_rho": 0.445,
+   "g3_worst": "bias_20",
+   "g3_increment": true,
+   "PASS_screen": true
+  },
+  {
+   "factor": "CORD20",
+   "ic0_5d": -0.0339,
+   "hl_weeks": 6.0,
+   "censored": true,
+   "g1_timeliness": true,
+   "g2_strength": true,
+   "g3_max_rho": 0.514,
+   "g3_worst": "skew_20",
+   "g3_increment": true,
+   "PASS_screen": true
+  },
+  {
+   "factor": "CORD30",
+   "ic0_5d": -0.0348,
+   "hl_weeks": 6.0,
+   "censored": true,
+   "g1_timeliness": true,
+   "g2_strength": true,
+   "g3_max_rho": 0.412,
+   "g3_worst": "skew_20",
+   "g3_increment": true,
+   "PASS_screen": true
+  },
+  {
+   "factor": "CORD5",
+   "ic0_5d": -0.0232,
+   "hl_weeks": 5.0,
+   "censored": false,
+   "g1_timeliness": true,
+   "g2_strength": true,
+   "g3_max_rho": 0.468,
+   "g3_worst": "rev_5",
+   "g3_increment": true,
+   "PASS_screen": true
+  },
+  {
+   "factor": "CORD60",
+   "ic0_5d": -0.0311,
+   "hl_weeks": 6.0,
+   "censored": true,
+   "g1_timeliness": true,
+   "g2_strength": true,
+   "g3_max_rho": 0.325,
+   "g3_worst": "mom_60",
+   "g3_increment": true,
+   "PASS_screen": true
+  },
+  {
+   "factor": "IMAX20",
+   "ic0_5d": -0.0337,
+   "hl_weeks": 4.0,
+   "censored": false,
+   "g1_timeliness": true,
+   "g2_strength": true,
+   "g3_max_rho": 0.548,
+   "g3_worst": "bias_20",
+   "g3_increment": true,
+   "PASS_screen": true
+  },
+  {
+   "factor": "IMAX60",
+   "ic0_5d": -0.0304,
+   "hl_weeks": 4.0,
+   "censored": false,
+   "g1_timeliness": true,
+   "g2_strength": true,
+   "g3_max_rho": 0.588,
+   "g3_worst": "mom_60",
+   "g3_increment": true,
+   "PASS_screen": true
+  },
+  {
+   "factor": "IMXD20",
+   "ic0_5d": -0.0341,
+   "hl_weeks": 5.0,
+   "censored": false,
+   "g1_timeliness": true,
+   "g2_strength": true,
+   "g3_max_rho": 0.64,
+   "g3_worst": "mom_20",
+   "g3_increment": true,
+   "PASS_screen": true
+  },
+  {
+   "factor": "IMXD30",
+   "ic0_5d": -0.0365,
+   "hl_weeks": 5.0,
+   "censored": false,
+   "g1_timeliness": true,
+   "g2_strength": true,
+   "g3_max_rho": 0.638,
+   "g3_worst": "bias_60",
+   "g3_increment": true,
+   "PASS_screen": true
+  },
+  {
+   "factor": "IMXD60",
+   "ic0_5d": -0.0329,
+   "hl_weeks": 5.0,
+   "censored": false,
+   "g1_timeliness": true,
+   "g2_strength": true,
+   "g3_max_rho": 0.701,
+   "g3_worst": "mom_60",
+   "g3_increment": false,
+   "PASS_screen": false
+  },
+  {
+   "factor": "KLEN",
+   "ic0_5d": -0.0716,
+   "hl_weeks": 5.0,
+   "censored": false,
+   "g1_timeliness": true,
+   "g2_strength": true,
+   "g3_max_rho": 0.523,
+   "g3_worst": "vol_20",
+   "g3_increment": true,
+   "PASS_screen": true
+  },
+  {
+   "factor": "KLOW",
+   "ic0_5d": -0.0421,
+   "hl_weeks": 2.0,
+   "censored": false,
+   "g1_timeliness": true,
+   "g2_strength": true,
+   "g3_max_rho": 0.238,
+   "g3_worst": "vol_20",
+   "g3_increment": true,
+   "PASS_screen": true
+  },
+  {
+   "factor": "KSFT",
+   "ic0_5d": -0.028,
+   "hl_weeks": 1.0,
+   "censored": false,
+   "g1_timeliness": false,
+   "g2_strength": true,
+   "g3_max_rho": 0.306,
+   "g3_worst": "rev_5",
+   "g3_increment": true,
+   "PASS_screen": false
+  },
+  {
+   "factor": "KUP",
+   "ic0_5d": -0.0397,
+   "hl_weeks": 6.0,
+   "censored": true,
+   "g1_timeliness": true,
+   "g2_strength": true,
+   "g3_max_rho": 0.307,
+   "g3_worst": "vol_20",
+   "g3_increment": true,
+   "PASS_screen": true
+  },
+  {
+   "factor": "SUMD10",
+   "ic0_5d": -0.0372,
+   "hl_weeks": 1.0,
+   "censored": false,
+   "g1_timeliness": false,
+   "g2_strength": true,
+   "g3_max_rho": 0.793,
+   "g3_worst": "bias_20",
+   "g3_increment": false,
+   "PASS_screen": false
+  },
+  {
+   "factor": "SUMP10",
+   "ic0_5d": -0.0372,
+   "hl_weeks": 1.0,
+   "censored": false,
+   "g1_timeliness": false,
+   "g2_strength": true,
+   "g3_max_rho": 0.793,
+   "g3_worst": "bias_20",
+   "g3_increment": false,
+   "PASS_screen": false
+  },
+  {
+   "factor": "VSTD10",
+   "ic0_5d": -0.0016,
+   "hl_weeks": 6.0,
+   "censored": true,
+   "g1_timeliness": true,
+   "g2_strength": false,
+   "g3_max_rho": 0.222,
+   "g3_worst": "ret_max20",
+   "g3_increment": true,
+   "PASS_screen": false
+  },
+  {
+   "factor": "VSUMD10",
+   "ic0_5d": -0.0263,
+   "hl_weeks": 1.0,
+   "censored": false,
+   "g1_timeliness": false,
+   "g2_strength": true,
+   "g3_max_rho": 0.307,
+   "g3_worst": "bias_20",
+   "g3_increment": true,
+   "PASS_screen": false
+  },
+  {
+   "factor": "VSUMD60",
+   "ic0_5d": -0.0445,
+   "hl_weeks": 2.0,
+   "censored": false,
+   "g1_timeliness": true,
+   "g2_strength": true,
+   "g3_max_rho": 0.479,
+   "g3_worst": "turnover_chg",
+   "g3_increment": true,
+   "PASS_screen": true
+  },
+  {
+   "factor": "VSUMP10",
+   "ic0_5d": -0.0263,
+   "hl_weeks": 1.0,
+   "censored": false,
+   "g1_timeliness": false,
+   "g2_strength": true,
+   "g3_max_rho": 0.307,
+   "g3_worst": "bias_20",
+   "g3_increment": true,
+   "PASS_screen": false
+  },
+  {
+   "factor": "VSUMP60",
+   "ic0_5d": -0.0445,
+   "hl_weeks": 2.0,
+   "censored": false,
+   "g1_timeliness": true,
+   "g2_strength": true,
+   "g3_max_rho": 0.479,
+   "g3_worst": "turnover_chg",
+   "g3_increment": true,
+   "PASS_screen": true
+  },
+  {
+   "factor": "margin_buy_share",
+   "ic0_5d": -0.0025,
+   "hl_weeks": 1.0,
+   "censored": false,
+   "g1_timeliness": false,
+   "g2_strength": false,
+   "g3_max_rho": 0.209,
+   "g3_worst": "bp",
+   "g3_increment": true,
+   "PASS_screen": false
+  },
+  {
+   "factor": "margin_net_share",
+   "ic0_5d": -0.0138,
+   "hl_weeks": 6.0,
+   "censored": true,
+   "g1_timeliness": true,
+   "g2_strength": false,
+   "g3_max_rho": 0.087,
+   "g3_worst": "bias_20",
+   "g3_increment": true,
+   "PASS_screen": false
+  },
+  {
+   "factor": "mf_lg_net",
+   "ic0_5d": -0.0094,
+   "hl_weeks": 1.0,
+   "censored": false,
+   "g1_timeliness": false,
+   "g2_strength": false,
+   "g3_max_rho": 0.171,
+   "g3_worst": "rev_5",
+   "g3_increment": true,
+   "PASS_screen": false
+  },
+  {
+   "factor": "mf_main_sm_div",
+   "ic0_5d": -0.0182,
+   "hl_weeks": 1.0,
+   "censored": false,
+   "g1_timeliness": false,
+   "g2_strength": false,
+   "g3_max_rho": 0.251,
+   "g3_worst": "rev_5",
+   "g3_increment": true,
+   "PASS_screen": false
+  }
+ ],
+ "verdict": {
+  "PASS_screen_n": 15,
+  "candidates": [
+   "CNTP5",
+   "CORD10",
+   "CORD20",
+   "CORD30",
+   "CORD5",
+   "CORD60",
+   "IMAX20",
+   "IMAX60",
+   "IMXD20",
+   "IMXD30",
+   "KLEN",
+   "KLOW",
+   "KUP",
+   "VSUMD60",
+   "VSUMP60"
+  ],
+  "verdict": "CANDIDATES",
+  "next": "袖套级 A/B 预注册(31 vs 31+N, F52 式基线回测)"
+ },
+ "note": "readings 级筛选; 生产变更须袖套 A/B 预注册+拍板; 后置族未测如实列报",
+ "runtime_sec": 153.3
+}

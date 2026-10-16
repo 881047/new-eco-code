@@ -1,0 +1,111 @@
+{
+ "script_sha": "a38070723b34083b",
+ "capital": 1000000.0,
+ "seeds": {
+  "seedA": {
+   "A0_现状(买入时跳过)": {
+    "n": 491,
+    "excess_pp": 14.91,
+    "ann": 0.2035,
+    "mdd": -0.3228,
+    "invested_ratio": 0.7693,
+    "avg_names": 99.8,
+    "turnover": 0.118
+   },
+   "A1_价格上限1.25x": {
+    "n": 491,
+    "excess_pp": 14.99,
+    "ann": 0.2043,
+    "mdd": -0.3231,
+    "invested_ratio": 0.7705,
+    "avg_names": 99.9,
+    "turnover": 0.117
+   },
+   "A2_价格上限1.5x": {
+    "n": 491,
+    "excess_pp": 14.93,
+    "ann": 0.2036,
+    "mdd": -0.3233,
+    "invested_ratio": 0.7702,
+    "avg_names": 99.9,
+    "turnover": 0.117
+   },
+   "A3_价格上限2.0x": {
+    "n": 491,
+    "excess_pp": 15.0,
+    "ann": 0.2043,
+    "mdd": -0.3232,
+    "invested_ratio": 0.7701,
+    "avg_names": 99.9,
+    "turnover": 0.117
+   },
+   "A4_顺延候选": {
+    "n": 491,
+    "excess_pp": 15.19,
+    "ann": 0.2063,
+    "mdd": -0.3237,
+    "invested_ratio": 0.7711,
+    "avg_names": 100.0,
+    "turnover": 0.118
+   }
+  },
+  "seedB": {
+   "A0_现状(买入时跳过)": {
+    "n": 491,
+    "excess_pp": 14.3,
+    "ann": 0.1974,
+    "mdd": -0.3223,
+    "invested_ratio": 0.7653,
+    "avg_names": 99.8,
+    "turnover": 0.116
+   },
+   "A1_价格上限1.25x": {
+    "n": 491,
+    "excess_pp": 14.38,
+    "ann": 0.1982,
+    "mdd": -0.3222,
+    "invested_ratio": 0.7662,
+    "avg_names": 99.9,
+    "turnover": 0.115
+   },
+   "A2_价格上限1.5x": {
+    "n": 491,
+    "excess_pp": 14.24,
+    "ann": 0.1968,
+    "mdd": -0.3226,
+    "invested_ratio": 0.7664,
+    "avg_names": 99.9,
+    "turnover": 0.115
+   },
+   "A3_价格上限2.0x": {
+    "n": 491,
+    "excess_pp": 14.31,
+    "ann": 0.1974,
+    "mdd": -0.3222,
+    "invested_ratio": 0.7658,
+    "avg_names": 99.9,
+    "turnover": 0.115
+   },
+   "A4_顺延候选": {
+    "n": 491,
+    "excess_pp": 14.32,
+    "ann": 0.1976,
+    "mdd": -0.3224,
+    "invested_ratio": 0.7669,
+    "avg_names": 100.0,
+    "turnover": 0.116
+   }
+  }
+ },
+ "verdict": {
+  "baseline": {
+   "seedA_excess": 14.91,
+   "seedB_excess": 14.3,
+   "seedA_invested": 0.7693,
+   "seedB_invested": 0.7653
+  },
+  "candidates": [],
+  "adopt": null
+ },
+ "secs": 383.2
+}
